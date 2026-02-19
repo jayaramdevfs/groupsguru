@@ -1,13 +1,17 @@
 # IDE files
 .idea/
+**/.idea/
 
-# Node modules
+# Maven
+target/
+
+# Node
 node_modules/
 
-# Build outputs
+# Build
 dist/
 build/
 
-# OS files
+# OS
 .DS_Store
 Thumbs.db
