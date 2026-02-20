@@ -3,9 +3,15 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import api from "../../lib/api";
-import { setToken, getUserRole } from "../../lib/auth";
-import { motion } from "framer-motion";
 import AnimatedInput from "../ui/AnimatedInput";
+import { motion } from "framer-motion";
+
+const spring = {
+  type: "spring" as const,
+  stiffness: 420,
+  damping: 24,
+  mass: 0.8,
+};
 
 export default function LoginForm() {
   const router = useRouter();
@@ -24,19 +30,26 @@ export default function LoginForm() {
         password,
       });
 
+      // 🔥 IMPORTANT: token is inside response.data.data
       const token = response.data.data;
-      setToken(token);
 
-      const role = getUserRole();
+      // Store token
+      localStorage.setItem("token", token);
 
+      // Decode JWT payload
+      const payload = JSON.parse(atob(token.split(".")[1]));
+      const role = payload.role;
+
+      // Role-based redirect
       if (role === "ADMIN") {
         router.push("/admin/dashboard");
       } else if (role === "STUDENT") {
         router.push("/student/dashboard");
       } else {
-        router.push("/login");
+        setError("Unknown user role");
       }
-    } catch {
+
+    } catch (err) {
       setError("Invalid credentials");
     }
   };
@@ -66,7 +79,7 @@ export default function LoginForm() {
       <motion.button
         whileHover={{ y: -10 }}
         whileTap={{ scale: 0.95 }}
-        transition={{ type: "spring", stiffness: 420, damping: 24 }}
+        transition={spring}
         type="submit"
         className="w-full py-4 rounded-2xl text-[18px] font-bold text-white bg-gradient-to-r from-[#9333EA] to-[#DB2777] shadow-[0px_30px_70px_rgba(147,51,234,0.6)]"
       >
