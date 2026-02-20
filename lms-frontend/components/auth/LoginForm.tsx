@@ -27,28 +27,21 @@ export default function LoginForm() {
     setError("");
 
     try {
-      const response = await api.post("/api/auth/login", {
+      await api.post("/api/auth/login", {
         email,
         password,
       });
 
-      const token = response.data.data;
-
-      // 🔥 Use AuthContext instead of localStorage directly
-      login(token);
-
-      const payload = JSON.parse(atob(token.split(".")[1]));
-      const role = payload.role;
+      const role = await login();
 
       if (role === "ADMIN") {
         router.push("/admin/dashboard");
       } else if (role === "STUDENT") {
         router.push("/student/dashboard");
       } else {
-        setError("Unknown user role");
+        setError("Unable to resolve user role");
       }
-
-    } catch (err) {
+    } catch {
       setError("Invalid credentials");
     }
   };

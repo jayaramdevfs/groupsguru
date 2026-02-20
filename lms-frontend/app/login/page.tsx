@@ -1,7 +1,10 @@
 "use client";
 
+import { useEffect } from "react";
 import LoginForm from "../../components/auth/LoginForm";
 import { motion } from "framer-motion";
+import { useAuth } from "../context/AuthContext";
+import { useRouter } from "next/navigation";
 
 const spring = {
   type: "spring" as const,
@@ -11,6 +14,32 @@ const spring = {
 };
 
 export default function LoginPage() {
+  const { isAuthenticated, role, loading } = useAuth();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (loading || !isAuthenticated) {
+      return;
+    }
+
+    if (role === "ADMIN") {
+      router.replace("/admin/dashboard");
+      return;
+    }
+
+    if (role === "STUDENT") {
+      router.replace("/student/dashboard");
+    }
+  }, [isAuthenticated, role, loading, router]);
+
+  if (loading) {
+    return null;
+  }
+
+  if (isAuthenticated) {
+    return null;
+  }
+
   return (
     <div className="relative min-h-screen flex items-center justify-center px-6">
       <motion.div

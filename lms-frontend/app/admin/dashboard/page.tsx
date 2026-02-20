@@ -29,7 +29,9 @@ export default function AdminDashboard() {
         </motion.div>
 
         <button
-          onClick={logout}
+          onClick={() => {
+            void logout();
+          }}
           className="px-8 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 font-bold"
         >
           Logout

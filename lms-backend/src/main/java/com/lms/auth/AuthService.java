@@ -1,5 +1,6 @@
 package com.lms.auth;
 
+import com.lms.auth.dto.AuthMeResponse;
 import com.lms.auth.dto.RegisterRequest;
 import com.lms.security.JwtService;
 import lombok.RequiredArgsConstructor;
@@ -45,5 +46,16 @@ public class AuthService {
                 user.getEmail(),
                 user.getRole().name()
         );
+    }
+
+    public AuthMeResponse getMe(String email) {
+
+        User user = userRepository.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+
+        return AuthMeResponse.builder()
+                .email(user.getEmail())
+                .role(user.getRole().name())
+                .build();
     }
 }

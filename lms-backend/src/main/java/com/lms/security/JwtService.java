@@ -44,4 +44,8 @@ public class JwtService {
 
         return claims.getSubject();
     }
+
+    public long getExpirationMs() {
+        return expiration;
+    }
 }
