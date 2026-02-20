@@ -1,34 +1,30 @@
 import axios from "axios";
+import { getToken, removeToken } from "./auth";
 
-// Create axios instance
 const api = axios.create({
-  baseURL: "http://localhost:8080",
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL,
   headers: {
     "Content-Type": "application/json",
   },
 });
 
-// Request interceptor - attach JWT token
 api.interceptors.request.use(
   (config) => {
-    if (typeof window !== "undefined") {
-      const token = localStorage.getItem("token");
-      if (token) {
-        config.headers.Authorization = `Bearer ${token}`;
-      }
+    const token = getToken();
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
     }
     return config;
   },
   (error) => Promise.reject(error)
 );
 
-// Response interceptor - handle 401 globally
 api.interceptors.response.use(
   (response) => response,
   (error) => {
     if (error.response?.status === 401) {
+      removeToken();
       if (typeof window !== "undefined") {
-        localStorage.removeItem("token");
         window.location.href = "/login";
       }
     }

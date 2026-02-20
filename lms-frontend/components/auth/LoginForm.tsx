@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import api from "../../lib/api";
 import AnimatedInput from "../ui/AnimatedInput";
 import { motion } from "framer-motion";
+import { useAuth } from "../../app/context/AuthContext";
 
 const spring = {
   type: "spring" as const,
@@ -15,6 +16,7 @@ const spring = {
 
 export default function LoginForm() {
   const router = useRouter();
+  const { login } = useAuth();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -30,17 +32,14 @@ export default function LoginForm() {
         password,
       });
 
-      // 🔥 IMPORTANT: token is inside response.data.data
       const token = response.data.data;
 
-      // Store token
-      localStorage.setItem("token", token);
+      // 🔥 Use AuthContext instead of localStorage directly
+      login(token);
 
-      // Decode JWT payload
       const payload = JSON.parse(atob(token.split(".")[1]));
       const role = payload.role;
 
-      // Role-based redirect
       if (role === "ADMIN") {
         router.push("/admin/dashboard");
       } else if (role === "STUDENT") {

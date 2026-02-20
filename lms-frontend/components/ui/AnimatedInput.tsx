@@ -38,7 +38,6 @@ export default function AnimatedInput({
     >
       <div className="relative h-16 rounded-2xl bg-black/40 border border-purple-500/40 backdrop-blur-xl px-6 flex items-center overflow-hidden">
 
-        {/* Real Input */}
         <input
           type={type}
           value={value}
@@ -48,7 +47,6 @@ export default function AnimatedInput({
           className="absolute inset-0 px-6 bg-transparent outline-none text-transparent caret-[#EC4899] font-semibold text-lg"
         />
 
-        {/* Overlay Text */}
         <div className="absolute left-6 right-6 flex items-center font-semibold text-lg text-white pointer-events-none">
           {value.split("").map((char, index) => (
             <motion.span
