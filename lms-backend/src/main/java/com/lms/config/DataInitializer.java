@@ -31,8 +31,22 @@ public class DataInitializer implements CommandLineRunner {
                     .build();
 
             userRepository.save(admin);
-
             System.out.println("Default ADMIN user created");
+        }
+
+        String studentEmail = "student@lms.com";
+        String studentPassword = "Student@123";
+
+        if (!userRepository.existsByEmail(studentEmail)) {
+            User student = User.builder()
+                    .name("Jayram (Student)")
+                    .email(studentEmail)
+                    .password(passwordEncoder.encode(studentPassword))
+                    .role(Role.STUDENT)
+                    .build();
+
+            userRepository.save(student);
+            System.out.println("Default STUDENT user created for Jayram.");
         }
     }
 }

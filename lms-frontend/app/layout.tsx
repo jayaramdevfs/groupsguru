@@ -8,9 +8,11 @@ const inter = Inter({
   display: "swap",
 });
 
+import { LanguageProvider } from "./context/LanguageContext";
+
 export const metadata = {
-  title: "Premium LMS",
-  description: "Government Exams Learning Platform",
+  title: "GroupsGuru",
+  description: "Exam Intelligence & Predictive Preparation Engine",
 };
 
 export default function RootLayout({
@@ -27,7 +29,9 @@ export default function RootLayout({
         <div className="absolute bottom-[-150px] left-[-150px] w-[600px] h-[400px] bg-purple-700/35 blur-3xl pointer-events-none" />
         <div className="absolute top-[-150px] right-[-150px] w-[600px] h-[400px] bg-purple-700/35 blur-3xl pointer-events-none" />
 
-        <AuthProvider>{children}</AuthProvider>
+        <LanguageProvider>
+          <AuthProvider>{children}</AuthProvider>
+        </LanguageProvider>
       </body>
     </html>
   );

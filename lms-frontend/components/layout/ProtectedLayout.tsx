@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "../../app/context/AuthContext";
+import { LanguageToggle } from "../ui/LanguageToggle";
 
 interface ProtectedLayoutProps {
   children: React.ReactNode;
@@ -29,8 +30,17 @@ export default function ProtectedLayout({
     }
   }, [isAuthenticated, role, loading, requiredRole, router]);
 
+
   if (loading) return null;
   if (!isAuthenticated || role !== requiredRole) return null;
 
-  return <>{children}</>;
+  return (
+    <>
+      <div className="fixed top-6 right-6 z-[100]">
+        <LanguageToggle />
+      </div>
+      {children}
+    </>
+  );
 }
+

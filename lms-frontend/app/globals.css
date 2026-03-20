@@ -1,26 +1,37 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #0f051d;
+  --foreground: #ffffff;
+  color-scheme: dark; /* Force browser native UI to stay dark */
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* 
+   PROFESSIONAL AUTOFILL OVERRIDE
+   Prevents the "White Out" (Chrome light blue #e8f0fe) 
+*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+    /* Use a large inset shadow to force the background color */
+    -webkit-box-shadow: 0 0 0 1000px #140a24 inset !important;
+    /* Force text to stay white */
+    -webkit-text-fill-color: white !important;
+    /* Smooth transition to prevent the color-flicker on load */
+    transition: background-color 5000000s ease-in-out 0s;
+    caret-color: #8B5CF6 !important;
+}
+
+/* Target specific credential manager highlights */
+input:-internal-autofill-selected {
+    background-color: #140a24 !important;
+    color: white !important;
 }

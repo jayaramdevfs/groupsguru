@@ -5,12 +5,16 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { useAuth } from "../context/AuthContext";
 import LoginScreen from "../screens/LoginScreen";
 import AdminDashboard from "../screens/AdminDashboard";
-import StudentDashboard from "../screens/StudentDashboard";
+import CategoryScreen from "../screens/CategoryScreen";
+import SubCategoryScreen from "../screens/SubCategoryScreen";
+import SectionScreen from "../screens/SectionScreen";
 
 export type RootStackParamList = {
   Login: undefined;
   AdminDashboard: undefined;
-  StudentDashboard: undefined;
+  Category: undefined;
+  SubCategory: { categoryId: number; categoryName: string; categoryNameTe: string };
+  Section: { subCategoryId: number; subCategoryName: string; subCategoryNameTe: string };
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -34,7 +38,11 @@ const AppNavigator = () => {
         ) : user.role === "ADMIN" ? (
           <Stack.Screen name="AdminDashboard" component={AdminDashboard} />
         ) : (
-          <Stack.Screen name="StudentDashboard" component={StudentDashboard} />
+          <>
+            <Stack.Screen name="Category" component={CategoryScreen} />
+            <Stack.Screen name="SubCategory" component={SubCategoryScreen} />
+            <Stack.Screen name="Section" component={SectionScreen} />
+          </>
         )}
       </Stack.Navigator>
     </NavigationContainer>
