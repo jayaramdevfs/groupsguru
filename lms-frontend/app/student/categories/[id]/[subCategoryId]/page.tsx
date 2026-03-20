@@ -109,8 +109,7 @@ export default function StudentSections() {
                 transition={{ ...spring, delay: index * 0.1 }}
                 whileHover={{ y: -10, transition: { duration: 0.2 } }}
               >
-                {/* For now, section is the leaf — Sprint 5 will make this link to topics */}
-                <div className="group relative block h-full p-8 rounded-[32px] bg-white/5 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/5 transition-all duration-300 backdrop-blur-xl overflow-hidden cursor-default">
+                <Link href={`/student/categories/${categoryId}/${subCategoryId}/${sec.id}`} className="group relative block h-full p-8 rounded-[32px] bg-white/5 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/5 transition-all duration-300 backdrop-blur-xl overflow-hidden">
                   {/* Hover Glow */}
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-600/0 via-transparent to-pink-600/0 group-hover:from-purple-600/10 group-hover:to-pink-600/10 transition-all duration-500" />
 
@@ -138,12 +137,23 @@ export default function StudentSections() {
                         : sec.description || "Topics and study material for this section."}
                     </p>
 
-                    {/* Sprint 5 will add a "Browse Topics" link here */}
-                    <div className="mt-8 flex items-center text-indigo-400 font-bold">
-                      <span className="text-white/40">Topics coming soon</span>
+                    <div className="mt-8 flex items-center text-indigo-400 font-bold group/btn">
+                      <span>Browse Topics</span>
+                      <svg
+                        className="ml-2 w-5 h-5 transform group-hover/btn:translate-x-1 transition-transform"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
                     </div>
                   </div>
-                </div>
+                </Link>
               </motion.div>
             ))}
           </div>

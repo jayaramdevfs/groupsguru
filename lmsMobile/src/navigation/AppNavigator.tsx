@@ -9,6 +9,7 @@ import StudentDashboard from "../screens/StudentDashboard";
 import CategoryScreen from "../screens/CategoryScreen";
 import SubCategoryScreen from "../screens/SubCategoryScreen";
 import SectionScreen from "../screens/SectionScreen";
+import TopicScreen from "../screens/TopicScreen";
 
 export type RootStackParamList = {
   Login: undefined;
@@ -17,6 +18,7 @@ export type RootStackParamList = {
   Category: undefined;
   SubCategory: { categoryId: number; categoryName: string; categoryNameTe: string };
   Section: { subCategoryId: number; subCategoryName: string; subCategoryNameTe: string };
+  Topic: { sectionId: number; sectionName: string; sectionNameTe: string };
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -43,6 +45,7 @@ const AppNavigator = () => {
             <Stack.Screen name="Category" component={CategoryScreen} />
             <Stack.Screen name="SubCategory" component={SubCategoryScreen} />
             <Stack.Screen name="Section" component={SectionScreen} />
+            <Stack.Screen name="Topic" component={TopicScreen} />
           </>
         ) : (
           <>
@@ -50,6 +53,7 @@ const AppNavigator = () => {
             <Stack.Screen name="Category" component={CategoryScreen} />
             <Stack.Screen name="SubCategory" component={SubCategoryScreen} />
             <Stack.Screen name="Section" component={SectionScreen} />
+            <Stack.Screen name="Topic" component={TopicScreen} />
           </>
         )}
       </Stack.Navigator>

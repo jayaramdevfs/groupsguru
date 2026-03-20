@@ -46,7 +46,7 @@ C:\LMS PLATFORM\Lms\
 | 2 | Category (L0) | ✅ Done | ✅ Done | ✅ Done |
 | 3 | SubCategory (L1) | ✅ Done | ✅ Done | ✅ Done |
 | 4 | Section (L2) | ✅ Done | ✅ Done | ✅ Done |
-| 5 | Topic (L3) | 📅 Planned | 📅 Planned | 📅 Planned |
+| 5 | Topic (L3) | ✅ Done | ✅ Done | ✅ Done |
 | 6 | MicroTopic (L4) | 📅 Planned | 📅 Planned | 📅 Planned |
 | 7 | Registry Data Migration | 📅 Planned | 📅 Planned | 📅 Planned |
 | 8 | Intelligence Engine | 📅 Planned | 📅 Planned | 📅 Planned |
@@ -56,11 +56,11 @@ C:\LMS PLATFORM\Lms\
 | 12 | Results & Analytics | 📅 Planned | 📅 Planned | 📅 Planned |
 | 13 | Production Readiness | 📅 Planned | 📅 Planned | 📅 Planned |
 
-**Resume Point:** Start Sprint 5 (all 3 platforms).
+**Resume Point:** Start Sprint 6 (all 3 platforms).
 
 ### Execution Order:
 ```
-Sprint 5 (all 3 platforms) -> Sprint 6 -> ... -> Sprint 13
+Sprint 6 (all 3 platforms) -> ... -> Sprint 13
 ```
 
 ---
@@ -265,7 +265,7 @@ export interface Section {
 
 ---
 
-## Sprint 5 — Topic Layer (L3) 📅 FULL VERTICAL SLICE
+## Sprint 5 — Topic Layer (L3) ✅ DONE (Backend + Frontend + Mobile)
 
 > First sprint where all 3 platforms are built together from scratch.
 

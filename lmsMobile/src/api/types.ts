@@ -25,3 +25,13 @@ export interface Section {
   sectionCode: string;
   subCategoryId: number;
 }
+
+export interface Topic {
+  id: number;
+  name: string;
+  nameTe: string;
+  description?: string;
+  descriptionTe?: string;
+  topicCode?: string;
+  sectionId: number;
+}

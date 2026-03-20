@@ -12,8 +12,8 @@ import {
 } from "react-native";
 import { useNavigation, useRoute, RouteProp } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { sectionService } from "../api/sectionService";
-import { Section } from "../api/types";
+import { topicService } from "../api/topicService";
+import { Topic } from "../api/types";
 import { useLanguage } from "../context/LanguageContext";
 import { LanguageToggle } from "../components/LanguageToggle";
 
@@ -24,60 +24,61 @@ type RootStackParamList = {
   Topic: { sectionId: number; sectionName: string; sectionNameTe: string };
 };
 
-type SectionScreenRouteProp = RouteProp<RootStackParamList, 'Section'>;
+type TopicScreenRouteProp = RouteProp<RootStackParamList, 'Topic'>;
 type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
 
-const SectionScreen = () => {
-  const [sections, setSections] = useState<Section[]>([]);
+const TopicScreen = () => {
+  const [topics, setTopics] = useState<Topic[]>([]);
   const [loading, setLoading] = useState(true);
   const { language } = useLanguage();
   const navigation = useNavigation<NavigationProp>();
-  const route = useRoute<SectionScreenRouteProp>();
-  const { subCategoryId, subCategoryName, subCategoryNameTe } = route.params;
+  const route = useRoute<TopicScreenRouteProp>();
+  const { sectionId, sectionName, sectionNameTe } = route.params;
 
-  const fetchSections = useCallback(async () => {
+  const fetchTopics = useCallback(async () => {
     setLoading(true);
     try {
-      const data = await sectionService.getBySubCategoryId(subCategoryId);
-      setSections(data);
+      const data = await topicService.getBySectionId(sectionId);
+      setTopics(data);
     } catch (error) {
       console.error(error);
     } finally {
       setLoading(false);
     }
-  }, [subCategoryId]);
+  }, [sectionId]);
 
   useEffect(() => {
-    fetchSections();
-  }, [fetchSections]);
+    fetchTopics();
+  }, [fetchTopics]);
 
-  const renderSection = ({ item }: { item: Section }) => (
+  const renderTopic = ({ item }: { item: Topic }) => (
     <TouchableOpacity
       activeOpacity={0.8}
       style={styles.card}
       onPress={() => {
-        navigation.navigate("Topic", {
-          sectionId: item.id,
-          sectionName: item.name,
-          sectionNameTe: item.nameTe,
-        });
+        Alert.alert(
+          language === "en" ? "Coming Soon" : "త్వరలో వస్తుంది",
+          language === "en"
+            ? "Micro-topics will be available in Sprint 6."
+            : "మైక్రో-టాపిక్‌లు స్ప్రింట్ 6లో అందుబాటులో ఉంటాయి."
+        );
       }}
     >
       <View style={styles.iconContainer}>
-        <Text style={styles.iconText}>{item.sectionCode || 'S'}</Text>
+        <Text style={styles.iconText}>{item.topicCode || 'T'}</Text>
       </View>
       <View style={styles.content}>
         <Text style={styles.name}>
           {language === 'en' ? item.name : item.nameTe}
         </Text>
-        <Text style={styles.desc} numberOfLines={2}>
+        <Text style={styles.desc} numberOfLines={3}>
           {language === 'en' ? item.description : item.descriptionTe}
         </Text>
         <View style={styles.footer}>
-          <Text style={styles.code}>Code: {item.sectionCode}</Text>
+          <Text style={styles.code}>Code: {item.topicCode}</Text>
           <View style={styles.badge}>
             <Text style={styles.badgeText}>
-              {language === "en" ? "Topics" : "టాపిక్‌లు"}
+              {language === "en" ? "Micro-Topics (S6)" : "మైక్రో-టాపిక్స్ (S6)"}
             </Text>
           </View>
         </View>
@@ -94,10 +95,10 @@ const SectionScreen = () => {
         </TouchableOpacity>
         <View style={styles.headerTitleContainer}>
           <Text style={styles.subtitle}>
-            {language === 'en' ? subCategoryName : subCategoryNameTe}
+            {language === 'en' ? sectionName : sectionNameTe}
           </Text>
           <Text style={styles.title}>
-            {language === 'en' ? "Sections" : "భాగాలు"}
+            {language === 'en' ? "Topics" : "టాపిక్‌లు"}
           </Text>
         </View>
         <LanguageToggle />
@@ -105,28 +106,28 @@ const SectionScreen = () => {
 
       {loading ? (
         <View style={styles.center}>
-          <ActivityIndicator size="large" color="#9333EA" />
+          <ActivityIndicator size="large" color="#10b981" />
         </View>
-      ) : sections.length === 0 ? (
+      ) : topics.length === 0 ? (
         <View style={styles.center}>
-          <Text style={styles.emptyText}>No sections found for this subject.</Text>
+          <Text style={styles.emptyText}>No topics found for this section.</Text>
         </View>
       ) : (
         <FlatList
-          data={sections}
-          renderItem={renderSection}
+          data={topics}
+          renderItem={renderTopic}
           keyExtractor={(item) => item.id.toString()}
           contentContainerStyle={styles.list}
           showsVerticalScrollIndicator={false}
           refreshing={loading}
-          onRefresh={fetchSections}
+          onRefresh={fetchTopics}
         />
       )}
     </SafeAreaView>
   );
 };
 
-export default SectionScreen;
+export default TopicScreen;
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: "#0f051d" },
@@ -137,16 +138,16 @@ const styles = StyleSheet.create({
   subtitle: { fontSize: 14, color: "rgba(255,255,255,0.6)", fontWeight: "600", textTransform: "uppercase" },
   title: { fontSize: 24, fontWeight: "800", color: "#FFFFFF", marginTop: 2 },
   list: { padding: 24, paddingTop: 10 },
-  card: { backgroundColor: "rgba(147, 51, 234, 0.08)", borderRadius: 24, padding: 16, marginBottom: 20, flexDirection: "row", alignItems: "center", borderWidth: 1, borderColor: "rgba(147, 51, 234, 0.2)" },
-  iconContainer: { width: 56, height: 56, borderRadius: 16, backgroundColor: "#2e1065", justifyContent: "center", alignItems: "center", borderWidth: 1, borderColor: "rgba(147, 51, 234, 0.4)" },
-  iconText: { fontSize: 20, fontWeight: "bold", color: "#9333EA" },
+  card: { backgroundColor: "rgba(16, 185, 129, 0.08)", borderRadius: 24, padding: 16, marginBottom: 20, flexDirection: "row", alignItems: "center", borderWidth: 1, borderColor: "rgba(16, 185, 129, 0.2)" },
+  iconContainer: { width: 56, height: 56, borderRadius: 16, backgroundColor: "#064e3b", justifyContent: "center", alignItems: "center", borderWidth: 1, borderColor: "rgba(16, 185, 129, 0.4)" },
+  iconText: { fontSize: 20, fontWeight: "bold", color: "#10b981" },
   content: { flex: 1, marginLeft: 16 },
   name: { fontSize: 18, fontWeight: "700", color: "#FFFFFF", marginBottom: 4 },
   desc: { fontSize: 13, color: "rgba(255,255,255,0.6)", lineHeight: 18, marginBottom: 8 },
   footer: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
   code: { fontSize: 12, color: "rgba(255,255,255,0.4)", fontWeight: "600" },
-  badge: { backgroundColor: "rgba(147, 51, 234, 0.15)", paddingHorizontal: 10, paddingVertical: 3, borderRadius: 6 },
-  badgeText: { color: "#a855f7", fontSize: 11, fontWeight: "700" },
+  badge: { backgroundColor: "rgba(16, 185, 129, 0.15)", paddingHorizontal: 10, paddingVertical: 3, borderRadius: 6 },
+  badgeText: { color: "#10b981", fontSize: 11, fontWeight: "700" },
   center: { flex: 1, justifyContent: "center", alignItems: "center" },
   emptyText: { color: "rgba(255,255,255,0.4)", fontSize: 16, fontWeight: "600" },
 });
