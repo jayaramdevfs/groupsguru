@@ -347,6 +347,8 @@ export interface Section {
 - Update `AppNavigator.tsx`
 
 **Verification:** Full 5-level drill-down works: Category → SubCategory → Section → Topic → MicroTopic. Admin can CRUD micro-topics on web.
+- **UI/UX Polish:** Ensured all admin pages use the `CustomSelect` component with the standard violet/indigo palette (removed all mismatched cyan colors).
+- **Mobile Polish:** Custom high-res GroupsGuru app icon designed (`GG` violet->indigo), replacing default React Native Android icon across all res-buckets.
 
 ---
 

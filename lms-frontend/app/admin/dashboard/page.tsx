@@ -62,8 +62,8 @@ export default function AdminDashboard() {
       descriptionTe: "టాప్-లెవల్ పరీక్షా విభాగాలను నిర్వహించండి.",
       icon: "🎯",
       href: "/admin/categories",
-      color: "from-blue-600 to-cyan-500",
-      shadowColor: "rgba(6, 182, 212, 0.25)",
+      color: "from-indigo-600 to-purple-600",
+      shadowColor: "rgba(99, 102, 241, 0.25)",
       stat: stats.categories,
       statLabel: "Exams",
       disabled: false,
@@ -115,8 +115,8 @@ export default function AdminDashboard() {
       descriptionTe: "మినీ టాపిక్స్",
       icon: "⚛️",
       href: "/admin/micro-topics",
-      color: "from-cyan-500 to-blue-500",
-      shadowColor: "rgba(6, 182, 212, 0.25)",
+      color: "from-purple-600 to-indigo-600",
+      shadowColor: "rgba(147, 51, 234, 0.25)",
       stat: null,
       statLabel: "Intelligence",
       disabled: false,
@@ -154,11 +154,11 @@ export default function AdminDashboard() {
             className="w-full flex flex-wrap justify-center gap-6"
           >
             {[
-              { label: "Exams", labelTe: "పరీక్షలు", value: stats.categories, color: "text-cyan-400" },
+              { label: "Exams", labelTe: "పరీక్షలు", value: stats.categories, color: "text-indigo-400" },
               { label: "Subjects", labelTe: "సబ్జెక్టులు", value: stats.subcategories, color: "text-purple-400" },
-              { label: "Sections", labelTe: "సెక్షన్లు", value: stats.sections, color: "text-indigo-400" },
-              { label: "Topics", labelTe: "టాపిక్‌లు", value: stats.topics, color: "text-emerald-400" },
-              { label: "Micro-Topics", labelTe: "మైక్రో-టాపిక్‌లు", value: "—", color: "text-cyan-400" },
+              { label: "Sections", labelTe: "సెక్షన్లు", value: stats.sections, color: "text-pink-400" },
+              { label: "Topics", labelTe: "టాపిక్‌లు", value: stats.topics, color: "text-violet-400" },
+              { label: "Micro-Topics", labelTe: "మైక్రో-టాపిక్‌లు", value: "—", color: "text-purple-400" },
             ].map((s, i) => (
               <div key={i} className="flex flex-col items-center px-8 py-3 rounded-2xl bg-white/5 border border-white/10">
                 <span className={`text-4xl font-black ${s.color}`}>{s.value}</span>

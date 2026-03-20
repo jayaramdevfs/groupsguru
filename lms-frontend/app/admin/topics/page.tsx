@@ -10,6 +10,7 @@ import { categoryApi } from "@/lib/categories";
 import { Topic, Section, SubCategory, Category, TopicRequest } from "@/lib/types";
 import Modal from "@/components/ui/Modal";
 import AnimatedInput from "@/components/ui/AnimatedInput";
+import CustomSelect from "@/components/ui/CustomSelect";
 import { Multilang } from "@/components/ui/Multilang";
 
 const spring = {
@@ -335,19 +336,12 @@ export default function AdminTopicManagement() {
             {/* Parent Section selector */}
             <div className="flex flex-col gap-3">
               <label className="text-xs font-black text-white/40 uppercase tracking-widest ml-1">Parent Section (L2)</label>
-              <select
-                className="w-full bg-white/5 border border-white/10 rounded-2xl p-5 text-white focus:outline-none focus:border-emerald-500/50 transition-colors appearance-none"
+              <CustomSelect
+                placeholder="Select a Section"
+                options={sections.map((sec) => ({ value: sec.id, label: `${sec.name} (${sec.subCategoryName})` }))}
                 value={formData.sectionId}
-                onChange={(e) => setFormData({ ...formData, sectionId: parseInt(e.target.value) })}
-                required
-              >
-                <option value={0} disabled className="bg-[#1a0b2e]">Select a Section</option>
-                {sections.map((sec) => (
-                  <option key={sec.id} value={sec.id} className="bg-[#1a0b2e]">
-                    {sec.name} ({sec.subCategoryName})
-                  </option>
-                ))}
-              </select>
+                onChange={(val) => setFormData({ ...formData, sectionId: parseInt(val.toString()) })}
+              />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

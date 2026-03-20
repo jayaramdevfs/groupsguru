@@ -73,7 +73,7 @@ export default function StudentMicroTopics() {
           {/* Back Link */}
           <Link
             href={`/student/categories/${categoryId}/${subCategoryId}/${sectionId}`}
-            className="inline-flex items-center gap-2 text-cyan-400 font-semibold mb-6 hover:text-cyan-300 transition-colors"
+            className="inline-flex items-center gap-2 text-purple-400 font-semibold mb-6 hover:text-purple-300 transition-colors"
           >
             <svg
               className="w-5 h-5"
@@ -90,7 +90,7 @@ export default function StudentMicroTopics() {
           </Link>
 
           <div className="flex items-center justify-center gap-4 mb-4">
-            <h1 className="text-[40px] md:text-[56px] font-[800] leading-tight bg-gradient-to-r from-white via-white to-cyan-400 bg-clip-text text-transparent">
+            <h1 className="text-[40px] md:text-[56px] font-[800] leading-tight bg-gradient-to-r from-white via-white to-purple-400 bg-clip-text text-transparent">
               {displayName}
             </h1>
             <LanguageToggle />
@@ -104,7 +104,7 @@ export default function StudentMicroTopics() {
         <div className="grid grid-cols-1 gap-4">
           {isLoading ? (
             <div className="flex items-center justify-center py-20">
-              <div className="w-12 h-12 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin"></div>
+              <div className="w-12 h-12 border-4 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
             </div>
           ) : microTopics.length === 0 ? (
             <div className="text-center py-20 text-white/50 bg-white/5 rounded-[32px] border border-white/10 border-dashed">
@@ -124,15 +124,15 @@ export default function StudentMicroTopics() {
                   transition={{ ...spring, delay: index * 0.05 }}
                   className="w-full flex flex-col md:flex-row items-center gap-6 p-8 rounded-[32px] bg-white/[0.03] border border-white/5 transition-all group relative overflow-hidden"
                 >
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/5 blur-[60px] group-hover:bg-cyan-500/10 transition-all" />
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/5 blur-[60px] group-hover:bg-purple-500/10 transition-all" />
                   
-                  <div className="w-16 h-16 shrink-0 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-white/10 flex items-center justify-center font-black text-xl text-cyan-300">
+                  <div className="w-16 h-16 shrink-0 rounded-2xl bg-gradient-to-br from-purple-500/20 to-indigo-500/20 border border-white/10 flex items-center justify-center font-black text-xl text-purple-300">
                     ⚛️
                   </div>
 
                   <div className="flex-1 w-full relative z-10">
                      <div className="flex flex-wrap items-center gap-2 mb-3">
-                        <span className="text-cyan-400 font-mono text-[10px] font-bold px-2 py-0.5 border border-cyan-400/20 rounded-full">{mt.microTopicId}</span>
+                        <span className="text-purple-400 font-mono text-[10px] font-bold px-2 py-0.5 border border-purple-400/20 rounded-full">{mt.microTopicId}</span>
                         <span className="text-purple-400 text-[10px] font-bold px-2 py-0.5 border border-purple-400/20 rounded-full bg-purple-400/5">{mt.subject}</span>
                         {mt.paper && <span className="text-blue-400 text-[10px] font-bold px-2 py-0.5 border border-blue-400/20 rounded-full bg-blue-400/5">{mt.paper}</span>}
                      </div>

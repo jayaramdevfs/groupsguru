@@ -142,7 +142,7 @@ export default function StudentTopics() {
                   </div>
 
                   <div className="mt-4 md:mt-0 flex items-center">
-                    <div className="flex items-center text-cyan-400 font-bold group/btn">
+                    <div className="flex items-center text-purple-400 font-bold group/btn">
                       <span>Browse Micro-Topics</span>
                       <svg
                         className="ml-2 w-5 h-5 transform group-hover/btn:translate-x-1 transition-transform"

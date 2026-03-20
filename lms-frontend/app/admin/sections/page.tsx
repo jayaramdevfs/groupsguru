@@ -9,6 +9,7 @@ import { categoryApi } from "@/lib/categories";
 import { Section, SubCategory, Category, SectionRequest } from "@/lib/types";
 import Modal from "@/components/ui/Modal";
 import AnimatedInput from "@/components/ui/AnimatedInput";
+import CustomSelect from "@/components/ui/CustomSelect";
 import { Multilang } from "@/components/ui/Multilang";
 
 const spring = {
@@ -299,19 +300,12 @@ export default function AdminSectionManagement() {
           <form onSubmit={handleSubmit} className="flex flex-col gap-6 py-4">
             <div className="flex flex-col gap-3">
               <label className="text-xs font-black text-white/40 uppercase tracking-widest ml-1">Parent Subject (L1)</label>
-              <select 
-                className="w-full bg-white/5 border border-white/10 rounded-2xl p-5 text-white focus:outline-none focus:border-purple-500/50 transition-colors appearance-none scrollbar-hide"
+              <CustomSelect
+                placeholder="Select a Subject"
+                options={subCategories.map(sub => ({ value: sub.id, label: `${sub.name} (${sub.categoryName})` }))}
                 value={formData.subCategoryId}
-                onChange={(e) => setFormData({ ...formData, subCategoryId: parseInt(e.target.value) })}
-                required
-              >
-                <option value={0} disabled className="bg-[#1a0b2e]">Select a Subject</option>
-                {subCategories.map(sub => (
-                  <option key={sub.id} value={sub.id} className="bg-[#1a0b2e]">
-                    {sub.name} ({sub.categoryName})
-                  </option>
-                ))}
-              </select>
+                onChange={(val) => setFormData({ ...formData, subCategoryId: parseInt(val.toString()) })}
+              />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

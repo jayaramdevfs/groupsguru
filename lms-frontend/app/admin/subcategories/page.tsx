@@ -8,6 +8,7 @@ import { categoryApi } from "@/lib/categories";
 import { SubCategory, Category, SubCategoryRequest } from "@/lib/types";
 import Modal from "@/components/ui/Modal";
 import AnimatedInput from "@/components/ui/AnimatedInput";
+import CustomSelect from "@/components/ui/CustomSelect";
 import { Multilang } from "@/components/ui/Multilang";
 
 const spring = {
@@ -234,19 +235,12 @@ export default function AdminSubCategoryManagement() {
           <form onSubmit={handleSubmit} className="flex flex-col gap-5">
             <div className="flex flex-col gap-2">
               <label className="text-sm font-bold text-white/50 ml-1">Parent Exam</label>
-              <select 
-                className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-white focus:outline-none focus:border-purple-500/50 transition-colors appearance-none"
+              <CustomSelect
+                placeholder="Select an Exam"
+                options={categories.map(cat => ({ value: cat.id, label: cat.name }))}
                 value={formData.categoryId}
-                onChange={(e) => setFormData({ ...formData, categoryId: parseInt(e.target.value) })}
-                required
-              >
-                <option value={0} disabled className="bg-[#1a0b2e]">Select an Exam</option>
-                {categories.map(cat => (
-                  <option key={cat.id} value={cat.id} className="bg-[#1a0b2e]">
-                    {cat.name}
-                  </option>
-                ))}
-              </select>
+                onChange={(val) => setFormData({ ...formData, categoryId: parseInt(val.toString()) })}
+              />
             </div>
 
             <AnimatedInput 
