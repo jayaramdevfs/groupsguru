@@ -109,7 +109,7 @@ export default function CustomSelect({
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="absolute z-[99] w-full mt-3 bg-[#0a0514]/90 backdrop-blur-xl border border-white/10 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden"
+            className="absolute z-[999] w-full mt-3 bg-[#0f051d] border border-white/20 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] overflow-hidden"
           >
             {/* Custom generic CSS scrollbar classes added for tailwind via global CSS logic */}
             <div className="max-h-[300px] overflow-y-auto p-2" style={{ scrollbarWidth: "thin", scrollbarColor: "rgba(255,255,255,0.1) transparent" }}>

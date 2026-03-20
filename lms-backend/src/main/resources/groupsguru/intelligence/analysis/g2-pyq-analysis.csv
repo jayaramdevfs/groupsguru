@@ -1,0 +1,224 @@
+pyq_id,commission,year,paper,question_number,subject,micro_topic_id,question_type,cognitive_level,difficulty,recurrence,ca_linked,question_summary
+APPSC-G2-ARC-P2-001,APPSC,archive,paper2,1,AP History,MT-AP_HIST-G2P2-I1-001,MCQ,L2,medium,first_time,false,Lake mentioned in Pithapuram inscription of Prithvisvara of Velanadu
+APPSC-G2-ARC-P2-002,APPSC,archive,paper2,2,AP History,MT-AP_HIST-G2P2-I1-001,MCQ,L2,easy,first_time,false,Raichur Doab formed by confluence of rivers
+APPSC-G2-ARC-P2-003,APPSC,archive,paper2,3,AP History,MT-AP_HIST-G2P2-I1-001,MCQ,L1,easy,first_time,false,Old stone age site identification
+APPSC-G2-ARC-P2-004,APPSC,archive,paper2,4,AP History,MT-AP_HIST-G2P2-I1-001,MCQ,L1,easy,first_time,false,Evidence of Chalcolithic age in Andhra
+APPSC-G2-ARC-P2-005,APPSC,archive,paper2,5,AP History,MT-AP_HIST-G2P2-I1-005,MCQ,L2,medium,first_time,false,Literature referring to Andhras as Andhakaratta
+APPSC-G2-ARC-P2-006,APPSC,archive,paper2,6,AP History,MT-AP_HIST-G2P2-I1-001,MCQ,L2,medium,first_time,false,Who located Satavahanas in Ballari based on Myakadoni inscription
+APPSC-G2-ARC-P2-007,APPSC,archive,paper2,7,AP History,MT-AP_HIST-G2P2-I1-001,MCQ,L2,medium,first_time,false,Capital of Anupa under Goutami Putra Satakarni
+APPSC-G2-ARC-P2-008,APPSC,archive,paper2,8,AP History,MT-AP_HIST-G2P2-I1-001,MCQ,L2,medium,first_time,false,Who issued Junnar Inscription
+APPSC-G2-ARC-P2-009,APPSC,archive,paper2,9,AP History,MT-AP_HIST-G2P2-I1-001,MCQ,L2,medium,first_time,false,Inscription of Chanda Satakarni identification
+APPSC-G2-ARC-P2-010,APPSC,archive,paper2,10,AP History,MT-AP_HIST-G2P2-I1-002,MCQ,L2,medium,first_time,false,Ikshvaku ruler described as Sri Parvatadhipati
+APPSC-G2-ARC-P2-011,APPSC,archive,paper2,11,AP History,MT-AP_HIST-G2P2-I1-002,MCQ,L2,medium,first_time,false,Rudrapurushadatta inscription identification
+APPSC-G2-ARC-P2-012,APPSC,archive,paper2,12,AP History,MT-AP_HIST-G2P2-I1-002,MCQ,L2,medium,first_time,false,Inscription recording multiple gifts to different institutions
+APPSC-G2-ARC-P2-013,APPSC,archive,paper2,13,AP History,MT-AP_HIST-G2P2-I1-001,MCQ,L2,medium,first_time,false,Ushavadatta investing Karshapanas in weavers guild at Govardhana
+APPSC-G2-ARC-P2-014,APPSC,archive,paper2,14,AP History,MT-AP_HIST-G2P2-I1-005,MCQ,L2,medium,first_time,false,Text containing writing by women
+APPSC-G2-ARC-P2-015,APPSC,archive,paper2,15,AP History,MT-AP_HIST-G2P2-I1-005,MCQ,L2,easy,first_time,false,Author of text Yogasara
+APPSC-G2-ARC-P2-016,APPSC,archive,paper2,16,AP History,MT-AP_HIST-G2P2-I1-003,MCQ,L2,medium,first_time,false,Eastern Chalukyan ruler who issued Vipparla inscription
+APPSC-G2-ARC-P2-017,APPSC,archive,paper2,17,AP History,MT-AP_HIST-G2P2-I1-003,MCQ,L2,medium,first_time,false,Ruler who used title Tripura Martya Maheshwara
+APPSC-G2-ARC-P2-018,APPSC,archive,paper2,18,AP History,MT-AP_HIST-G2P2-I1-003,MCQ,L2,medium,first_time,false,Potla cheruvu popular centre during Eastern Chalukyan time
+APPSC-G2-ARC-P2-019,APPSC,archive,paper2,19,AP History,MT-AP_HIST-G2P2-I1-003,MCQ,L2,medium,first_time,false,Person who received Nandampudi village grant from Rajaraja Narendra
+APPSC-G2-ARC-P2-020,APPSC,archive,paper2,20,AP History,MT-AP_HIST-G2P2-I1-004,MCQ,L2,medium,first_time,false,Inscription mentioning Kakatiyas for the first time
+APPSC-G2-ARC-P2-021,APPSC,archive,paper2,21,AP History,MT-AP_HIST-G2P2-I1-004,MCQ,L2,easy,first_time,false,Kakatiyas were subordinates of which dynasty
+APPSC-G2-ARC-P2-022,APPSC,archive,paper2,22,AP History,MT-AP_HIST-G2P2-I1-004,MCQ,L2,medium,first_time,false,Who defeated Ganapatideva in 1263
+APPSC-G2-ARC-P2-023,APPSC,archive,paper2,23,AP History,MT-AP_HIST-G2P2-I1-004,MCQ,L2,medium,first_time,false,Ruler who used title Rayagaja Kesari
+APPSC-G2-ARC-P2-024,APPSC,archive,paper2,24,AP History,MT-AP_HIST-G2P2-I1-002,MCQ,L2,medium,first_time,false,Word Tambaya Danam in Buddhist site district
+APPSC-G2-ARC-P2-025,APPSC,archive,paper2,25,AP History,MT-AP_HIST-G2P2-I1-001,MCQ,L2,medium,first_time,false,Early history of Satavahana family not stated in which work
+APPSC-G2-ARC-P2-026,APPSC,archive,paper2,26,AP History,MT-AP_HIST-G2P2-I1-005,MCQ,L2,medium,first_time,false,Author of Jinendra Kalyanabhyudayam
+APPSC-G2-ARC-P2-027,APPSC,archive,paper2,27,AP History,MT-AP_HIST-G2P2-I1-005,MCQ,L2,medium,first_time,false,Andhra Sabda Chintamani author
+APPSC-G2-ARC-P2-028,APPSC,archive,paper2,28,AP History,MT-AP_HIST-G2P2-I2-001,MCQ,L2,medium,first_time,false,Rekapalli was capital of which dynasty
+APPSC-G2-ARC-P2-029,APPSC,archive,paper2,29,AP History,MT-AP_HIST-G2P2-I2-001,MCQ,L2,medium,first_time,false,Reddy ruler with title Rachur Durgavibhala
+APPSC-G2-ARC-P2-030,APPSC,archive,paper2,30,AP History,MT-AP_HIST-G2P2-I2-001,MCQ,L2,easy,first_time,false,Author of Narasimha Puranam
+APPSC-G2-ARC-P2-031,APPSC,archive,paper2,31,AP History,MT-AP_HIST-G2P2-I2-001,MCQ,L2,easy,first_time,false,Author of A Forgotten Empire
+APPSC-G2-ARC-P2-032,APPSC,archive,paper2,32,AP History,MT-AP_HIST-G2P2-I2-001,MCQ,L2,medium,first_time,false,Vipravinodins were a sect of during Vijayanagar rule
+APPSC-G2-ARC-P2-033,APPSC,archive,paper2,33,AP History,MT-AP_HIST-G2P2-I2-003,MCQ,L2,medium,first_time,false,Who observed prevalence of Sati in Vijayanagar
+APPSC-G2-ARC-P2-034,APPSC,archive,paper2,34,AP History,MT-AP_HIST-G2P2-I2-001,MCQ,L2,medium,first_time,false,Author of Varadambika Parinayam
+APPSC-G2-ARC-P2-035,APPSC,archive,paper2,35,AP History,MT-AP_HIST-G2P2-I2-005,MCQ,L2,easy,first_time,false,Famous huge stone Bull of Vijayanagar period location
+APPSC-G2-ARC-P2-036,APPSC,archive,paper2,36,AP History,MT-AP_HIST-G2P2-I2-003,MCQ,L2,medium,first_time,false,Dutch East India Company first factory in Andhra Desa
+APPSC-G2-ARC-P2-037,APPSC,archive,paper2,37,AP History,MT-AP_HIST-G2P2-I3-004,MCQ,L2,medium,first_time,false,Sub-Collector of Rajahmundry who opened Anglo-vernacular schools
+APPSC-G2-ARC-P2-038,APPSC,archive,paper2,38,AP History,MT-AP_HIST-G2P2-I3-004,MCQ,L2,medium,first_time,false,Year American Baptist Mission established in Andhra
+APPSC-G2-ARC-P2-039,APPSC,archive,paper2,39,AP History,MT-AP_HIST-G2P2-I3-001,MCQ,L2,medium,first_time,false,Founder of Madras Native Association
+APPSC-G2-ARC-P2-040,APPSC,archive,paper2,40,AP History,MT-AP_HIST-G2P2-I3-001,MCQ,L2,medium,first_time,false,Journal started by Veeresalingam
+APPSC-G2-ARC-P2-041,APPSC,archive,paper2,41,AP History,MT-AP_HIST-G2P2-I3-001,MCQ,L2,easy,first_time,false,Year of first widow remarriage by Veereshalingam
+APPSC-G2-ARC-P2-042,APPSC,archive,paper2,42,AP History,MT-AP_HIST-G2P2-I4-002,MCQ,L2,medium,first_time,false,Place where people revolted against English forest policies 1879
+APPSC-G2-ARC-P2-043,APPSC,archive,paper2,43,AP History,MT-AP_HIST-G2P2-I4-002,MCQ,L2,medium,first_time,false,Organization that organized Bipin Chandra Pal tour of Rajahmundry
+APPSC-G2-ARC-P2-044,APPSC,archive,paper2,44,AP History,MT-AP_HIST-G2P2-I4-002,MCQ,L2,medium,first_time,false,Principal of Rajahmundry Training College in 1907
+APPSC-G2-ARC-P2-045,APPSC,archive,paper2,45,AP History,MT-AP_HIST-G2P2-I4-003,MCQ,L2,medium,first_time,false,President of National College at Machilipatnam 1910
+APPSC-G2-ARC-P2-046,APPSC,archive,paper2,46,AP History,MT-AP_HIST-G2P2-I4-002,MCQ,L2,medium,first_time,false,Newspaper supporting Home Rule Movement in Andhra
+APPSC-G2-ARC-P2-047,APPSC,archive,paper2,47,AP History,MT-AP_HIST-G2P2-I4-002,MCQ,L2,medium,first_time,false,Who visited Palnadu area in July 1921 for forest agitation
+APPSC-G2-ARC-P2-048,APPSC,archive,paper2,48,AP History,MT-AP_HIST-G2P2-I4-002,MCQ,L2,medium,first_time,false,Seats won by Justice Party in 1920 Madras Legislative Assembly
+APPSC-G2-ARC-P2-049,APPSC,archive,paper2,49,AP History,MT-AP_HIST-G2P2-I4-003,MCQ,L2,medium,first_time,false,Dictator for Andhra region Salt Satyagraha
+APPSC-G2-ARC-P2-050,APPSC,archive,paper2,50,AP History,MT-AP_HIST-G2P2-I4-002,MCQ,L2,medium,first_time,false,Author of novel Asamarthuni Jeevitha Yatra
+APPSC-G2-ARC-P2-051,APPSC,archive,paper2,51,AP History,MT-AP_HIST-G2P2-I4-002,MCQ,L2,medium,first_time,false,Year socialist party established Andhra branch
+APPSC-G2-ARC-P2-052,APPSC,archive,paper2,52,AP History,MT-AP_HIST-G2P2-I5-005,MCQ,L2,medium,first_time,false,Person from Guntur who wrote articles on Telugu people in Hindu paper
+APPSC-G2-ARC-P2-053,APPSC,archive,paper2,53,AP History,MT-AP_HIST-G2P2-I5-005,MCQ,L2,medium,first_time,false,Telugu newspaper commenting on separate government for Telugu culture
+APPSC-G2-ARC-P2-054,APPSC,archive,paper2,54,AP History,MT-AP_HIST-G2P2-I5-001,MCQ,L2,medium,first_time,false,President of First Andhra Mahasabha at Bapatla 1913
+APPSC-G2-ARC-P2-055,APPSC,archive,paper2,55,AP History,MT-AP_HIST-G2P2-I5-001,MCQ,L2,medium,first_time,false,Year BN Sharma introduced resolution on linguistic reorganization
+APPSC-G2-ARC-P2-056,APPSC,archive,paper2,56,AP History,MT-AP_HIST-G2P2-I5-001,MCQ,L2,medium,first_time,false,Who opposed separate Andhra state as CM of Madras 1932
+APPSC-G2-ARC-P2-057,APPSC,archive,paper2,57,AP History,MT-AP_HIST-G2P2-I5-001,MCQ,L2,medium,first_time,false,Place of second Rayalaseema Mahasabha 1935 opposing separate state
+APPSC-G2-ARC-P2-058,APPSC,archive,paper2,58,AP History,MT-AP_HIST-G2P2-I5-002,MCQ,L2,medium,first_time,false,Sribagh pact location where Andhra Rayalaseema leaders agreement 1937
+APPSC-G2-ARC-P2-059,APPSC,archive,paper2,59,AP History,MT-AP_HIST-G2P2-I5-001,MCQ,L2,medium,first_time,false,1948 Commission report on linguistic states threat to unity
+APPSC-G2-ARC-P2-060,APPSC,archive,paper2,60,AP History,MT-AP_HIST-G2P2-I4-003,MCQ,L2,medium,first_time,false,Who worked with Gandhi in Sabarmati Ashram
+APPSC-G2-ARC-P2-061,APPSC,archive,paper2,61,AP History,MT-AP_HIST-G2P2-I5-002,MCQ,L2,medium,first_time,false,Who supported Vishalandhra at second Mahasabha Hyderabad 1954
+APPSC-G2-ARC-P2-062,APPSC,archive,paper2,62,AP History,MT-AP_HIST-G2P2-I5-001,MCQ,L2,easy,first_time,false,Date States Reorganization Commission set up 1953
+APPSC-G2-ARC-P2-063,APPSC,archive,paper2,63,AP History,MT-AP_HIST-G2P2-I5-002,MCQ,L2,medium,first_time,false,Year Ramakrishna Rao changed stand to support merger with Andhra
+APPSC-G2-ARC-P2-064,APPSC,archive,paper2,64,AP History,MT-AP_HIST-G2P2-I5-005,MCQ,L2,medium,first_time,false,Founder of Vartamana Vyavaaharikandhra Bhasha Parivartaka Samajam
+APPSC-G2-ARC-P2-065,APPSC,archive,paper2,65,AP History,MT-AP_HIST-G2P2-I5-005,MCQ,L2,easy,first_time,false,Year AP Sahitya Academy established
+APPSC-G2-ARC-P2-066,APPSC,archive,paper2,66,AP History,MT-AP_HIST-G2P2-I5-005,MCQ,L2,medium,first_time,false,Who inaugurated Ravindra Bharathi Hyderabad 1961
+APPSC-G2-ARC-P2-067,APPSC,archive,paper2,67,AP History,MT-AP_HIST-G2P2-I5-005,MCQ,L2,easy,first_time,false,Year Telugu made official language of AP
+APPSC-G2-ARC-P2-068,APPSC,archive,paper2,68,AP History,MT-AP_HIST-G2P2-I5-004,MCQ,L2,medium,first_time,false,Srikakulam Armed struggle period
+APPSC-G2-ARC-P2-069,APPSC,archive,paper2,69,AP History,MT-AP_HIST-G2P2-I5-004,MCQ,L2,medium,first_time,false,AP Ministry that passed Land Reforms Bill
+APPSC-G2-ARC-P2-070,APPSC,archive,paper2,70,AP History,MT-AP_HIST-G2P2-I5-005,MCQ,L2,easy,first_time,false,Year first World Telugu Conference held
+APPSC-G2-ARC-P2-071,APPSC,archive,paper2,71,AP History,MT-AP_HIST-G2P2-I5-004,MCQ,L2,medium,first_time,false,First Dhrma Mahamatra under NTR to eradicate corruption
+APPSC-G2-ARC-P2-072,APPSC,archive,paper2,72,AP History,MT-AP_HIST-G2P2-I3-003,MCQ,L2,medium,first_time,false,Place of Anti-arrack agitation by women 1991
+APPSC-G2-ARC-P2-073,APPSC,archive,paper2,73,AP History,MT-AP_HIST-G2P2-I5-005,MCQ,L2,medium,first_time,false,Author of Nallapoddu collection of Dalit writings
+APPSC-G2-ARC-P2-074,APPSC,archive,paper2,74,AP History,MT-AP_HIST-G2P2-I5-005,MCQ,L2,medium,first_time,false,Birth name of artist Sathiraju Lakshminarayana
+APPSC-G2-ARC-P2-075,APPSC,archive,paper2,75,AP History,MT-AP_HIST-G2P2-I5-005,MCQ,L2,medium,first_time,false,Animal used by Jashuva to send message from dalit man to God
+APPSC-G2-ARC-P2-076,APPSC,archive,paper2,76,Polity,MT-POLT-G2P2-II4-003,MCQ,L2,medium,first_time,false,Expenditure not charged on consolidated fund of India
+APPSC-G2-ARC-P2-077,APPSC,archive,paper2,77,Polity,MT-POLT-G2P2-II4-003,MCQ,L2,medium,first_time,false,Money bill incorrect statement identification
+APPSC-G2-ARC-P2-078,APPSC,archive,paper2,78,Polity,MT-POLT-G2P2-II4-003,MCQ,L2,medium,first_time,false,Incorrect statement about Parliament members privileges
+APPSC-G2-ARC-P2-079,APPSC,archive,paper2,79,Polity,MT-POLT-G2P2-II2-001,MCQ,L2,easy,first_time,false,Article 17 and 18 provide what type of equality
+APPSC-G2-ARC-P2-080,APPSC,archive,paper2,80,Polity,MT-POLT-G2P2-II2-002,MCQ,L2,medium,first_time,false,Fundamental right that is also a human right
+APPSC-G2-ARC-P2-081,APPSC,archive,paper2,81,Polity,MT-POLT-G2P2-II4-004,MCQ,L2,medium,first_time,false,SC case directing compulsory registration of marriages
+APPSC-G2-ARC-P2-082,APPSC,archive,paper2,82,Polity,MT-POLT-G2P2-II4-003,MCQ,L2,easy,first_time,false,State with more than one MP in Lok Sabha
+APPSC-G2-ARC-P2-083,APPSC,archive,paper2,83,Polity,MT-POLT-G2P2-II5-003,MCQ,L2,easy,first_time,false,Number of bicameral states in India
+APPSC-G2-ARC-P2-084,APPSC,archive,paper2,84,Polity,MT-POLT-G2P2-II1-004,MCQ,L2,easy,first_time,false,Correct combination of justice words in Preamble
+APPSC-G2-ARC-P2-085,APPSC,archive,paper2,85,Polity,MT-POLT-G2P2-II1-003,MCQ,L2,easy,first_time,false,Power to regulate right of citizenship in India
+APPSC-G2-ARC-P2-086,APPSC,archive,paper2,86,Polity,MT-POLT-G2P2-II2-002,MCQ,L2,medium,first_time,false,Right not guaranteed as fundamental right
+APPSC-G2-ARC-P2-087,APPSC,archive,paper2,87,Polity,MT-POLT-G2P2-II4-005,MCQ,L2,easy,first_time,false,Whose term of office is longest among constitutional officers
+APPSC-G2-ARC-P2-088,APPSC,archive,paper2,88,Polity,MT-POLT-G2P2-II4-003,MCQ,L2,medium,first_time,false,Maximum gap between two sessions of parliament calculation
+APPSC-G2-ARC-P2-089,APPSC,archive,paper2,89,Polity,MT-POLT-G2P2-II4-003,MCQ,L2,easy,first_time,false,State with highest Lok Sabha seats after UP
+APPSC-G2-ARC-P2-090,APPSC,archive,paper2,90,Polity,MT-POLT-G2P2-II4-001,MCQ,L3,medium,first_time,false,Power of pardon President vs Governor under Constitution
+APPSC-G2-ARC-P2-091,APPSC,archive,paper2,91,Polity,MT-POLT-G2P2-II1-002,MCQ,L2,medium,first_time,false,Days British parliament took to pass Indian Independence Bill
+APPSC-G2-ARC-P2-092,APPSC,archive,paper2,92,Polity,MT-POLT-G2P2-II1-002,MCQ,L2,medium,first_time,false,Most outstanding characteristic of Indian Independence Act
+APPSC-G2-ARC-P2-093,APPSC,archive,paper2,93,Polity,MT-POLT-G2P2-II1-003,MCQ,L3,medium,first_time,false,Constitution allows acquiring foreign territories correct statement
+APPSC-G2-ARC-P2-094,APPSC,archive,paper2,94,Polity,MT-POLT-G2P2-II3-001,MCQ,L2,easy,first_time,false,Article providing decent standard of life and leisure
+APPSC-G2-ARC-P2-095,APPSC,archive,paper2,95,Polity,MT-POLT-G2P2-II6-003,MCQ,L2,easy,first_time,false,Number of articles added by 73rd Amendment Act 1993
+APPSC-G2-ARC-P2-096,APPSC,archive,paper2,96,Polity,MT-POLT-G2P2-II4-001,MCQ,L2,easy,first_time,false,Highest majority in Presidential elections
+APPSC-G2-ARC-P2-097,APPSC,archive,paper2,97,Polity,MT-POLT-G2P2-II6-001,MCQ,L3,medium,first_time,false,Doctrine of Paramountcy legal principle explanation
+APPSC-G2-ARC-P2-098,APPSC,archive,paper2,98,Polity,MT-POLT-G2P2-II4-002,MCQ,L3,medium,first_time,false,All India Services officers dismissal correct answer
+APPSC-G2-ARC-P2-099,APPSC,archive,paper2,99,Polity,MT-POLT-G2P2-II1-003,MCQ,L3,hard,first_time,false,Jammu Kashmir wrong answer identification
+APPSC-G2-ARC-P2-100,APPSC,archive,paper2,100,Polity,MT-POLT-G2P2-II7-001,MCQ,L3,medium,first_time,false,Amendment of Constitution incorrect statement
+APPSC-G2-ARC-P2-101,APPSC,archive,paper2,101,Polity,MT-POLT-G2P2-II2-001,MCQ,L2,medium,first_time,false,Fundamental rights incorrect statement regarding aliens
+APPSC-G2-ARC-P2-102,APPSC,archive,paper2,102,Polity,MT-POLT-G2P2-II1-003,MCQ,L2,easy,first_time,false,Articles explaining citizenship in Indian Constitution
+APPSC-G2-ARC-P2-103,APPSC,archive,paper2,103,Polity,MT-POLT-G2P2-II4-003,MCQ,L3,medium,first_time,false,Limitations and prohibitions on Indian Parliament legislation
+APPSC-G2-ARC-P2-104,APPSC,archive,paper2,104,Polity,MT-POLT-G2P2-II2-006,MCQ,L3,hard,first_time,false,Fundamental Rights incorrect statement about limitations
+APPSC-G2-ARC-P2-105,APPSC,archive,paper2,105,Polity,MT-POLT-G2P2-II4-004,MCQ,L3,medium,first_time,false,Not Supreme Courts evolution identification
+APPSC-G2-ARC-P2-106,APPSC,archive,paper2,106,Polity,MT-POLT-G2P2-II7-004,MCQ,L2,medium,first_time,false,Not a Constitutional Body identification
+APPSC-G2-ARC-P2-107,APPSC,archive,paper2,107,Polity,MT-POLT-G2P2-II7-004,MCQ,L3,medium,first_time,false,Backward Classes incorrect statement
+APPSC-G2-ARC-P2-108,APPSC,archive,paper2,108,Polity,MT-POLT-G2P2-II2-002,MCQ,L3,medium,first_time,false,Constitutional protections to citizens incorrect statement
+APPSC-G2-ARC-P2-109,APPSC,archive,paper2,109,Polity,MT-POLT-G2P2-II2-004,MCQ,L2,medium,first_time,false,Religious freedom incorrect statement
+APPSC-G2-ARC-P2-110,APPSC,archive,paper2,110,Polity,MT-POLT-G2P2-II4-001,MCQ,L3,medium,first_time,false,Delay in Presidential election vacancy what happens
+APPSC-G2-ARC-P2-111,APPSC,archive,paper2,111,Polity,MT-POLT-G2P2-II4-001,MCQ,L2,medium,first_time,false,Maximum existence period of ordinance without legislature approval
+APPSC-G2-ARC-P2-112,APPSC,archive,paper2,112,Polity,MT-POLT-G2P2-II4-002,MCQ,L3,medium,first_time,false,Parliamentary form of government incorrect statement
+APPSC-G2-ARC-P2-113,APPSC,archive,paper2,113,Polity,MT-POLT-G2P2-II4-005,MCQ,L2,medium,first_time,false,CAG wrong answer identification
+APPSC-G2-ARC-P2-114,APPSC,archive,paper2,114,Polity,MT-POLT-G2P2-II4-003,MCQ,L2,easy,first_time,false,Period between prorogation and reassembly termed as
+APPSC-G2-ARC-P2-115,APPSC,archive,paper2,115,Polity,MT-POLT-G2P2-II4-003,MCQ,L2,medium,first_time,false,Disqualification under Article 102 seat vacancy
+APPSC-G2-ARC-P2-116,APPSC,archive,paper2,116,Polity,MT-POLT-G2P2-II4-003,MCQ,L3,medium,first_time,false,No-confidence motion for Speaker removal incorrect statement
+APPSC-G2-ARC-P2-117,APPSC,archive,paper2,117,Polity,MT-POLT-G2P2-II4-001,MCQ,L3,medium,first_time,false,National Emergency incorrect statement about finances
+APPSC-G2-ARC-P2-118,APPSC,archive,paper2,118,Polity,MT-POLT-G2P2-II5-005,MCQ,L2,easy,first_time,false,Official corresponding to Attorney General at State level
+APPSC-G2-ARC-P2-119,APPSC,archive,paper2,119,Polity,MT-POLT-G2P2-II5-003,MCQ,L2,medium,first_time,false,Legislative Council composition incorrect statement
+APPSC-G2-ARC-P2-120,APPSC,archive,paper2,120,Polity,MT-POLT-G2P2-II5-001,MCQ,L2,medium,first_time,false,Governor power to nominate Anglo Indian community cessation year
+APPSC-G2-ARC-P2-121,APPSC,archive,paper2,121,Polity,MT-POLT-G2P2-II5-003,MCQ,L2,medium,first_time,false,State Legislature member disqualification referred to whom
+APPSC-G2-ARC-P2-122,APPSC,archive,paper2,122,Polity,MT-POLT-G2P2-II4-003,MCQ,L2,medium,first_time,false,Regional party as largest opposition in 1984 Lok Sabha elections
+APPSC-G2-ARC-P2-123,APPSC,archive,paper2,123,Polity,MT-POLT-G2P2-II4-003,MCQ,L3,hard,first_time,false,President not summoning Joint Sitting what happens to bill
+APPSC-G2-ARC-P2-124,APPSC,archive,paper2,124,Polity,MT-POLT-G2P2-II6-001,MCQ,L3,medium,first_time,false,Administration of Scheduled and Tribal areas incorrect statement
+APPSC-G2-ARC-P2-125,APPSC,archive,paper2,125,Polity,MT-POLT-G2P2-II4-004,MCQ,L3,hard,first_time,false,SC appellate jurisdiction incorrect statement
+APPSC-G2-ARC-P2-126,APPSC,archive,paper2,126,Polity,MT-POLT-G2P2-II6-001,MCQ,L2,easy,first_time,false,Not a federal feature of Indian Constitution
+APPSC-G2-ARC-P2-127,APPSC,archive,paper2,127,Polity,MT-POLT-G2P2-II6-005,MCQ,L2,medium,first_time,false,Finance Commission incorrect statement
+APPSC-G2-ARC-P2-128,APPSC,archive,paper2,128,Polity,MT-POLT-G2P2-II5-004,MCQ,L2,medium,first_time,false,District Judge appointment under Article 233
+APPSC-G2-ARC-P2-129,APPSC,archive,paper2,129,Polity,MT-POLT-G2P2-II7-002,MCQ,L2,easy,first_time,false,Year NOTA introduced in EVMs
+APPSC-G2-ARC-P2-130,APPSC,archive,paper2,130,Polity,MT-POLT-G2P2-II7-002,MCQ,L2,medium,first_time,false,Election Commission incorrect statement
+APPSC-G2-ARC-P2-131,APPSC,archive,paper2,131,Polity,MT-POLT-G2P2-II6-002,MCQ,L3,hard,first_time,false,Punchhi Commission wrong statement identification
+APPSC-G2-ARC-P2-132,APPSC,archive,paper2,132,Polity,MT-POLT-G2P2-II2-002,MCQ,L2,medium,first_time,false,Article restricting FR of Armed Forces members
+APPSC-G2-ARC-P2-133,APPSC,archive,paper2,133,Polity,MT-POLT-G2P2-II1-003,MCQ,L2,easy,first_time,false,Article empowering Parliament to regulate citizen rights
+APPSC-G2-ARC-P2-134,APPSC,archive,paper2,134,Polity,MT-POLT-G2P2-II4-001,MCQ,L1,easy,first_time,false,Correct address for President of India
+APPSC-G2-ARC-P2-135,APPSC,archive,paper2,135,Polity,MT-POLT-G2P2-II6-002,MCQ,L3,medium,first_time,false,Rajmannar Committee not recommended regarding Governor
+APPSC-G2-ARC-P2-136,APPSC,archive,paper2,136,Polity,MT-POLT-G2P2-II4-004,MCQ,L3,medium,first_time,false,Doctrine of Parens Patriae meaning
+APPSC-G2-ARC-P2-137,APPSC,archive,paper2,137,Polity,MT-POLT-G2P2-II1-002,MCQ,L2,medium,first_time,false,British interference in Indian states internal administration
+APPSC-G2-ARC-P2-138,APPSC,archive,paper2,138,Polity,MT-POLT-G2P2-II5-003,MCQ,L3,medium,first_time,false,Procedure to abolish or create Legislative Council
+APPSC-G2-ARC-P2-139,APPSC,archive,paper2,139,Polity,MT-POLT-G2P2-II4-001,MCQ,L3,medium,first_time,false,CM not eligible to vote in Presidential election if
+APPSC-G2-ARC-P2-140,APPSC,archive,paper2,140,Polity,MT-POLT-G2P2-II7-002,MCQ,L2,easy,first_time,false,Election for dissolved legislature before term expiry
+APPSC-G2-ARC-P2-141,APPSC,archive,paper2,141,Polity,MT-POLT-G2P2-II7-002,MCQ,L2,easy,first_time,false,Maximum votes recordable by Electronic Voting Machine
+APPSC-G2-ARC-P2-142,APPSC,archive,paper2,142,Polity,MT-POLT-G2P2-II4-004,MCQ,L3,medium,first_time,false,Government option when disagreeing with SC decision
+APPSC-G2-ARC-P2-143,APPSC,archive,paper2,143,Polity,MT-POLT-G2P2-II7-002,MCQ,L1,easy,first_time,false,National Voters Day date
+APPSC-G2-ARC-P2-144,APPSC,archive,paper2,144,Polity,MT-POLT-G2P2-II5-001,MCQ,L3,medium,first_time,false,Sarkaria Commission not recommended regarding Governor appointment
+APPSC-G2-ARC-P2-145,APPSC,archive,paper2,145,Polity,MT-POLT-G2P2-II7-002,MCQ,L2,easy,first_time,false,Ruling party tool to win voters except which
+APPSC-G2-ARC-P2-146,APPSC,archive,paper2,146,Polity,MT-POLT-G2P2-II6-002,MCQ,L2,medium,first_time,false,Constitutional body concerned with Inter State relations
+APPSC-G2-ARC-P2-147,APPSC,archive,paper2,147,Polity,MT-POLT-G2P2-II1-001,MCQ,L2,easy,first_time,false,Chairman of Union Constitution committee of Constituent Assembly
+APPSC-G2-ARC-P2-148,APPSC,archive,paper2,148,Polity,MT-POLT-G2P2-II4-003,MCQ,L2,medium,first_time,false,Not a tool of legislative control over administration
+APPSC-G2-ARC-P2-149,APPSC,archive,paper2,149,Polity,MT-POLT-G2P2-II1-003,MCQ,L2,easy,first_time,false,Persons may change but rules should not change principle
+APPSC-G2-ARC-P2-150,APPSC,archive,paper2,150,Polity,MT-POLT-G2P2-II3-001,MCQ,L2,medium,first_time,false,Constitutional power enabling central govt to legislate on cow slaughter
+APPSC-G2-2025-P2-001,APPSC,2025,paper2,1,Economy,MT-ECON-G2P3-4-001,MCQ,L2,medium,first_time,true,Primary reason for current account surplus in Q4 2023-24
+APPSC-G2-2025-P2-002,APPSC,2025,paper2,2,Economy,MT-ECON-G2P3-3-001,MCQ,L2,medium,first_time,false,Higher price at one place concept in foreign exchange market
+APPSC-G2-2025-P2-003,APPSC,2025,paper2,3,Economy,MT-ECON-G2P3-3-001,MCQ,L3,medium,first_time,true,RBI temporary I-CRR on banking system August 2023
+APPSC-G2-2025-P2-004,APPSC,2025,paper2,4,Economy,MT-POLT-G2P2-II6-001,MCQ,L2,easy,first_time,false,Article empowering central govt to extend loans to states
+APPSC-G2-2025-P2-005,APPSC,2025,paper2,5,Economy,MT-AP_ECON-G2P3-5-006,MCQ,L3,medium,first_time,false,AP capital expenditure during 2016-21 statements
+APPSC-G2-2025-P2-006,APPSC,2025,paper2,6,Economy,MT-AP_ECON-G2P3-5-002,MCQ,L2,medium,first_time,true,External agency supporting AP Integrated Irrigation project
+APPSC-G2-2025-P2-007,APPSC,2025,paper2,7,Economy,MT-ECON-G2P3-2-003,MCQ,L2,medium,first_time,false,Match monetary trade credit fiscal policy with tools
+APPSC-G2-2025-P2-008,APPSC,2025,paper2,8,Economy,MT-AP_ECON-G2P3-5-002,MCQ,L3,medium,first_time,false,Environmental impacts of agricultural practices statements
+APPSC-G2-2025-P2-009,APPSC,2025,paper2,9,Economy,MT-ECON-G2P3-2-001,MCQ,L3,medium,first_time,true,Indian economy resilience despite global geopolitical challenges
+APPSC-G2-2025-P2-010,APPSC,2025,paper2,10,Economy,MT-ECON-G2P3-3-001,MCQ,L2,easy,first_time,false,SDR is currency of IMF in what form
+APPSC-G2-2025-P2-011,APPSC,2025,paper2,11,Economy,MT-ECON-G2P3-2-003,MCQ,L2,medium,first_time,true,India rank in World Bank Logistic Performance Index 2023
+APPSC-G2-2025-P2-012,APPSC,2025,paper2,12,Economy,MT-ECON-G2P3-4-001,MCQ,L3,medium,first_time,false,Transfer earnings not included in National Income assertion
+APPSC-G2-2025-P2-013,APPSC,2025,paper2,13,Economy,MT-ECON-G2P3-2-003,MCQ,L2,medium,first_time,false,Country simultaneously imports and exports same product
+APPSC-G2-2025-P2-014,APPSC,2025,paper2,14,Economy,MT-ECON-G2P3-3-001,MCQ,L3,hard,first_time,true,GST Council constitutional provisions correct statements
+APPSC-G2-2025-P2-015,APPSC,2025,paper2,15,Economy,MT-ECON-G2P3-2-003,MCQ,L3,medium,first_time,true,New payment settlement framework Foreign Trade Policy 2023
+APPSC-G2-2025-P2-016,APPSC,2025,paper2,16,Economy,MT-AP_ECON-G2P3-5-002,MCQ,L2,easy,first_time,false,India largest producer of milk and fruits vegetables
+APPSC-G2-2025-P2-017,APPSC,2025,paper2,17,Economy,MT-ECON-G2P3-2-001,MCQ,L2,medium,first_time,false,Challenges India faces managing oil consumption
+APPSC-G2-2025-P2-018,APPSC,2025,paper2,18,Economy,MT-ECON-G2P3-4-005,MCQ,L2,medium,first_time,false,Impact of GNP deflator on purchasing power of money
+APPSC-G2-2025-P2-019,APPSC,2025,paper2,19,Economy,MT-AP_ECON-G2P3-5-004,MCQ,L2,medium,first_time,true,Union Budget 2024-25 industrial nodes Visakhapatnam-Chennai corridor
+APPSC-G2-2025-P2-020,APPSC,2025,paper2,20,Economy,MT-ECON-G2P3-1-005,MCQ,L3,medium,first_time,true,PURVODAYA scheme correct statements
+APPSC-G2-2025-P2-021,APPSC,2025,paper2,21,Economy,MT-ECON-G2P3-3-001,MCQ,L3,medium,first_time,true,Purpose of RBI 49 fine-tuning operations FY 2024
+APPSC-G2-2025-P2-022,APPSC,2025,paper2,22,Economy,MT-ECON-G2P3-3-001,MCQ,L2,medium,first_time,false,Components of RBI Foreign Exchange Reserves
+APPSC-G2-2025-P2-023,APPSC,2025,paper2,23,Economy,MT-ECON-G2P3-4-003,MCQ,L2,easy,first_time,false,Organization estimating National MPI
+APPSC-G2-2025-P2-024,APPSC,2025,paper2,24,Economy,MT-ECON-G2P3-2-001,MCQ,L2,medium,first_time,false,1991 BOP crisis characteristics
+APPSC-G2-2025-P2-025,APPSC,2025,paper2,25,Economy,MT-ECON-G2P3-2-002,MCQ,L3,medium,first_time,false,Industrial Policy 1991 mandatory convertible clause
+APPSC-G2-2025-P2-026,APPSC,2025,paper2,26,Economy,MT-ECON-G2P3-4-003,MCQ,L2,easy,first_time,true,Bharat Rice subsidized price per kg
+APPSC-G2-2025-P2-027,APPSC,2025,paper2,27,Economy,MT-AP_ECON-G2P3-5-002,MCQ,L2,medium,first_time,true,Credit Guarantee Scheme for Livestock Sector launched by
+APPSC-G2-2025-P2-028,APPSC,2025,paper2,28,Economy,MT-ECON-G2P3-4-003,MCQ,L2,easy,first_time,true,Jal Jeevan Mission tap water connection rural household
+APPSC-G2-2025-P2-029,APPSC,2025,paper2,29,Economy,MT-ECON-G2P3-2-001,MCQ,L2,easy,first_time,false,Post-reform economy shift towards global integration
+APPSC-G2-2025-P2-030,APPSC,2025,paper2,30,Economy,MT-ECON-G2P3-4-001,MCQ,L3,medium,first_time,true,India real GDP grew 8.2% FY24 assertion reason
+APPSC-G2-2025-P2-031,APPSC,2025,paper2,31,Economy,MT-ECON-G2P3-4-005,MCQ,L3,hard,first_time,false,Factors contributing to stagflation in Indian economy
+APPSC-G2-2025-P2-032,APPSC,2025,paper2,32,Economy,MT-ECON-G2P3-2-004,MCQ,L3,medium,first_time,true,FPI statements 2024-25 correct identification
+APPSC-G2-2025-P2-033,APPSC,2025,paper2,33,Economy,MT-AP_ECON-G2P3-5-001,MCQ,L2,medium,first_time,true,Match AP sectors with GVA growth rates 2023-24
+APPSC-G2-2025-P2-034,APPSC,2025,paper2,34,Economy,MT-ECON-G2P3-3-001,MCQ,L3,medium,first_time,false,RBI mechanism not used for exchange rate volatility
+APPSC-G2-2025-P2-035,APPSC,2025,paper2,35,Economy,MT-AP_ECON-G2P3-5-006,MCQ,L2,medium,first_time,true,AP public debt percentage of GSDP 2024-25
+APPSC-G2-2025-P2-036,APPSC,2025,paper2,36,Economy,MT-ECON-G2P3-3-001,MCQ,L3,medium,first_time,false,High-power money supply measurement by RBI
+APPSC-G2-2025-P2-037,APPSC,2025,paper2,37,Economy,MT-ECON-G2P3-4-001,MCQ,L2,easy,first_time,false,Not a method of National Income measurement
+APPSC-G2-2025-P2-038,APPSC,2025,paper2,38,Economy,MT-ECON-G2P3-3-001,MCQ,L2,medium,first_time,true,No GST on which items
+APPSC-G2-2025-P2-039,APPSC,2025,paper2,39,Economy,MT-ECON-G2P3-2-004,MCQ,L3,medium,first_time,true,FDI trend in India per Economic Survey 2023
+APPSC-G2-2025-P2-040,APPSC,2025,paper2,40,Economy,MT-ECON-G2P3-4-001,MCQ,L2,easy,first_time,false,Balance of payments includes which accounts
+APPSC-G2-2025-P2-041,APPSC,2025,paper2,41,Economy,MT-ECON-G2P3-3-004,MCQ,L3,medium,first_time,true,SEBI T+0 settlement goals
+APPSC-G2-2025-P2-042,APPSC,2025,paper2,42,Economy,MT-AP_ECON-G2P3-5-001,MCQ,L2,medium,first_time,true,All India vs AP per capita income 2023-24
+APPSC-G2-2025-P2-043,APPSC,2025,paper2,43,Economy,MT-AP_ECON-G2P3-5-004,MCQ,L2,medium,first_time,true,Central Institutes under AP Reorganization Act 2014 matching
+APPSC-G2-2025-P2-044,APPSC,2025,paper2,44,Economy,MT-ECON-G2P3-4-001,MCQ,L3,medium,first_time,false,BOP disequilibrium correction measure not typically used
+APPSC-G2-2025-P2-045,APPSC,2025,paper2,45,Economy,MT-ECON-G2P3-3-001,MCQ,L3,hard,first_time,true,Standing Deposit Facility enhances RBI liquidity management
+APPSC-G2-2025-P2-046,APPSC,2025,paper2,46,Economy,MT-AP_ECON-G2P3-5-004,MCQ,L2,medium,first_time,true,Railway project Amaravati incorrect statement
+APPSC-G2-2025-P2-047,APPSC,2025,paper2,47,Economy,MT-ECON-G2P3-2-001,MCQ,L2,medium,first_time,true,Reforms improving Ease of Doing Business in India
+APPSC-G2-2025-P2-048,APPSC,2025,paper2,48,Economy,MT-ECON-G2P3-4-004,MCQ,L2,easy,first_time,false,Unemployment classification correlated with agriculture
+APPSC-G2-2025-P2-049,APPSC,2025,paper2,49,Economy,MT-ECON-G2P3-4-005,MCQ,L2,medium,first_time,false,GDP deflator as measure of inflation ratio
+APPSC-G2-2025-P2-050,APPSC,2025,paper2,50,Economy,MT-AP_ECON-G2P3-5-002,MCQ,L2,medium,first_time,true,Gokul Gram Project cattle breeding farm district
+APPSC-G2-2025-P2-051,APPSC,2025,paper2,51,Economy,MT-ECON-G2P3-2-001,MCQ,L2,medium,first_time,false,Globalization impact on India not true statement
+APPSC-G2-2025-P2-052,APPSC,2025,paper2,52,Economy,MT-AP_ECON-G2P3-5-007,MCQ,L2,medium,first_time,false,Rytu Bazaars in AP incorrect statement
+APPSC-G2-2025-P2-053,APPSC,2025,paper2,53,Economy,MT-ECON-G2P3-4-004,MCQ,L2,medium,first_time,false,NSO methodology for measuring unemployment rate
+APPSC-G2-2025-P2-054,APPSC,2025,paper2,54,Economy,MT-ECON-G2P3-1-002,MCQ,L2,medium,first_time,false,Zero-base budgeting definition
+APPSC-G2-2025-P2-055,APPSC,2025,paper2,55,Economy,MT-AP_ECON-G2P3-5-003,MCQ,L2,medium,first_time,false,Match SEZ production units with locations
+APPSC-G2-2025-P2-056,APPSC,2025,paper2,56,Economy,MT-ECON-G2P3-1-002,MCQ,L2,medium,first_time,false,Non-plan expenditure of central government correct statement
+APPSC-G2-2025-P2-057,APPSC,2025,paper2,57,Economy,MT-AP_ECON-G2P3-5-003,MCQ,L2,medium,first_time,false,Match minerals with AP districts where predominantly available
+APPSC-G2-2025-P2-058,APPSC,2025,paper2,58,Economy,MT-AP_ECON-G2P3-5-002,MCQ,L2,medium,first_time,false,AP ranking in oil palm and mango productivity statements
+APPSC-G2-2025-P2-059,APPSC,2025,paper2,59,Economy,MT-AP_ECON-G2P3-5-003,MCQ,L3,medium,first_time,true,AP Industrial Policy 4.0 2024-29 not a standard incentive
+APPSC-G2-2025-P2-060,APPSC,2025,paper2,60,Economy,MT-AP_ECON-G2P3-5-006,MCQ,L3,medium,first_time,true,GoI fiscal deficit RE 2024-25 vs BE 2025-26
+APPSC-G2-2025-P2-061,APPSC,2025,paper2,61,Economy,MT-ECON-G2P3-2-002,MCQ,L2,easy,first_time,false,Person with ultimate control over factory under Factories Act
+APPSC-G2-2025-P2-062,APPSC,2025,paper2,62,Economy,MT-AP_ECON-G2P3-5-002,MCQ,L2,medium,first_time,false,Match irrigation projects with rivers in AP
+APPSC-G2-2025-P2-063,APPSC,2025,paper2,63,Economy,MT-ECON-G2P3-4-002,MCQ,L3,medium,first_time,true,SDG score India 2023-24 and AP category
+APPSC-G2-2025-P2-064,APPSC,2025,paper2,64,Economy,MT-AP_ECON-G2P3-5-007,MCQ,L2,medium,first_time,true,Number of RBKs established in AP per 2023-24 survey
+APPSC-G2-2025-P2-065,APPSC,2025,paper2,65,Economy,MT-ECON-G2P3-4-001,MCQ,L2,medium,first_time,false,Difference between GDP at factor cost and market prices
+APPSC-G2-2025-P2-066,APPSC,2025,paper2,66,Economy,MT-AP_ECON-G2P3-5-001,MCQ,L2,medium,first_time,true,AP and Telangana shares in National GDP FY 2023-24
+APPSC-G2-2025-P2-067,APPSC,2025,paper2,67,Economy,MT-AP_ECON-G2P3-5-003,MCQ,L3,medium,first_time,true,AP Industrial Policy 4.0 MSME sector incorrect statement
+APPSC-G2-2025-P2-068,APPSC,2025,paper2,68,Economy,MT-ECON-G2P3-3-001,MCQ,L2,medium,first_time,false,Exchange rate false statement identification
+APPSC-G2-2025-P2-069,APPSC,2025,paper2,69,Economy,MT-ECON-G2P3-2-003,MCQ,L3,medium,first_time,false,Devaluation and balance of trade assertion reason
+APPSC-G2-2025-P2-070,APPSC,2025,paper2,70,Economy,MT-AP_ECON-G2P3-5-003,MCQ,L2,medium,first_time,true,AP Electronics Manufacturing Policy 4.0 targets
+APPSC-G2-2025-P2-071,APPSC,2025,paper2,71,Economy,MT-ECON-G2P3-4-001,MCQ,L2,medium,first_time,false,Induced investment due to change in national income
+APPSC-G2-2025-P2-072,APPSC,2025,paper2,72,Economy,MT-AP_ECON-G2P3-5-002,MCQ,L3,medium,first_time,true,AP farmers under PMFBY assertion reason
+APPSC-G2-2025-P2-073,APPSC,2025,paper2,73,Economy,MT-AP_ECON-G2P3-5-001,MCQ,L2,medium,first_time,true,AP GVA sector wise contribution 2022-23

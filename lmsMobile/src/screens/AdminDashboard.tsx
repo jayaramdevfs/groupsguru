@@ -10,6 +10,7 @@ import { categoryService } from "../api/categoryService";
 type RootStackParamList = {
   AdminDashboard: undefined;
   Category: undefined;
+  Intelligence: undefined;
 };
 
 type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
@@ -92,6 +93,21 @@ const AdminDashboard = () => {
             {language === "en"
               ? "Open categories and drill down"
               : "TE Open categories and drill down"}
+          </Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          activeOpacity={0.8}
+          style={styles.navCard}
+          onPress={() => navigation.navigate("Intelligence")}
+        >
+          <Text style={styles.cardTitle}>
+            {language === "en" ? "Intelligence Engine" : "TE Intelligence Engine"}
+          </Text>
+          <Text style={styles.cardDesc}>
+            {language === "en"
+              ? "View AI prediction scores and PYQ analysis"
+              : "TE View AI prediction scores and PYQ analysis"}
           </Text>
         </TouchableOpacity>
       </View>

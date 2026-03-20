@@ -1,0 +1,285 @@
+--- PAGE 1/8 ---
+No. of Printed Pages : 8 SAE-105
+2017
+SCIENCE & TECHNOLOGY
+PAPER IV
+Time : 3 hours Maximum Marks : 150
+Instructions :
+(i) The question paper is in three sections. The candidate has to write answers to
+15 questions with 5 questions compulsorily from each section. Each question
+carries 10 marks.
+(ii) Enough space is available in the Answer Sheet for writing all answers. There is
+no provision for additional Answer Sheets.
+(iii) The candidate has to write his answers in the medium chosen by him only. If
+there is any deviation from paper to paper or part of the paper, the candidature
+would become invalid.
+(iv) Underlining or highlighting or putting special marks in answers would make the
+Answer Sheet invalid. Writing in different inks would also make the paper
+invalid. Candidates must use either blue or black ink only. Otherwise, the paper
+will be treated as invalid.
+(v) Though the paper in English is taken as standard for valuation under normal
+circumstances, if necessary, a balanced view would be taken after comparing
+English and Telugu versions.
+సూచనలు:
+(i) 5
+ప్శ్రన ప్త్రములో మూడు భాగములు ఉన్నవి. అభ్యర్ిధ ప్తిర భాగము న్ ుండి త్ప్పనిసర్ధగా ప్శ్రనలు
+, 15 10
+చొప్పపన్ మొత్తము ప్శ్రనలకు సమాధానాలు వ్ారయవలెన్ . ప్తిర ప్శ్రనకు మార్కులు ఉుంటాయి.
+(ii) .
+సమాధాన్ప్త్మర ులోఅనినజవ్ాబులువ్ారయుటకుత్గధన్సథలముకలద అదన్ప్పసమాధాన్ప్త్మర ు
+.
+ఇచ్ ుసౌకర్యములేద
+(iii) .
+అభ్యర్ిధతాన్ ఎన్ నకొన్నమాధ్యమములోనేజవ్ాబులువ్ారయవలెన్ ఒకప్శ్రనప్త్మర ుమర్ధయు
+,
+ఇుంకొకప్శ్రనప్త్మర ులమధ్యకానీలేకఒకేప్శ్రనప్త్మర ులోకానీ ర్ ుండువ్ేర్కవ్ేర్కభాషలలో
+, .
+వ్ారసిన్టైత్ల ేజవ్ాబుప్త్మర ుమద ుంప్పచేయబడద
+SAE-105 1 P.T.O.
+
+--- PAGE 2/8 ---
+(iv) ,
+జవ్ాబులకుం్రదగీత్గీసినాలేకహ ైలెైట్చేసినాలేకఏద ైనాప్తర ేయకమ ైన్గుర్తకపెటిటనా జవ్ాబుప్త్రము
+. .
+మద ుంప్పచేయబడద అదేవిధ్ముగాజవ్ాబులువ్ేర్కవ్ేర్కర్ుంగులసిర్ాతోకూడావ్ారయర్ాద
+.
+కేవలమునీలిర్ుంగుసిర్ాకానీలేకన్లై సిర్ాకానీమాత్మర ేవ్ాడవలెన్ లేనిచోజవ్ాబుప్త్రము
+మద ుంప్పచేయబడద .
+(v)
+ప్శ్రనప్త్మర ుమద ుంప్పచేయున్ప్పడుఆుంగైములోనిప్త్మర ున్ ప్ారమాణికముగాతీస కొన్నప్పటటకీ,
+అవసర్ుం అయితే ఆుంగైములోని మర్ధయు త లుగు లోని ప్త్మర ులన్ ప్ర్ధశీలిుంచి, సుంత్ులనాత్మక
+నిర్ణయముతీస కొన్బడుత్ుుంద .
+SECTION I
+I
+భాగము
+1. (a) What do you understand by “Big Data” ? Discuss India’s initiatives in
+this regard; name the challenges and constraints.
+OR
+(b) The Internet of Things (IoT) is expected to be the biggest technological
+revolution. Examine its likely impact on India.
+‘‘ ’’ ?
+(అ) బిగ్ డాటా (పెదద దతతాుంశాలు) అుంటే మీర్క ఏమి అర్ిము చేస కొుంటార్క ఈ విషయములో
+, ?
+భార్త్ చేప్టిన్ట చ్ర్యలన్ చ్ర్ధుసతత సవ్ాళ్ైన్ మర్ధయు అవర్ోధాలన్ పేర్ొున్ుండి
+లేక
+‘‘ ’’ ,
+(ఆ) ఇుంటర్ నట్ ఆఫ్ థ ుంగ్్ (వసత వపల అుంత్ర్ాాలము) అతి పెదద సాుంకేతిక విప్ైవముగా
+?
+ఉుండబో త్ున్నద అని అుంచ్నా. భార్త్ పెై అద చ్తప్గల ప్భర ావ్ానిన ప్ర్ధశీలిుంచ్ుండి
+SAE-105 2
+
+--- PAGE 3/8 ---
+2. (a) Explain the background and salient features of “Pradhan Mantri Gramin
+Digital Saksharta Abhiyan”.
+OR
+(b) Cutting-edge developments in nanotechnology offer new ways of
+preventing and treating lifestyle diseases, including cancer. Elaborate.
+‘‘ ’’
+(అ) ప్ధర ాన్ ముంతిర గార మీణ్ డిజిటల్ సాక్షర్తాఅభియాన్ యొకు నేప్ధాయనిన మర్ధయు ముఖ్య
+?
+అుంశాలన్ వివర్ధుంచ్ుండి
+లేక
+,
+(ఆ) నానోట్కానలజీ ర్ుంగములోని విన్తత్న ప్ర్ధణామాలు కాన్్ర్ (ర్ాచ్ ప్పుండు) తో సహా జీవన్
+శ ైలి క్ సుంబుంధ ుంచిన్ వ్ాయధ్ ల నిర్ోధ్ము మర్ధయు చిక్త్్లో కొరత్త మార్ాాలన్ అుంద సతాయి.
+?
+విప్పలీకర్ధుంచ్ుండి
+3. (a) What is GPS ? Explain the recent efforts made by India to create its own
+GPS system.
+OR
+(b) What is the difference between GSLV and PSLV launch vehicles ?
+Examine the advantages of GSLV over PSLV.
+GPS) ? GPS)
+(అ) జిపిఎస్ ( అన్గా నేమి త్న్ సవుంత్ జిపిఎస్ ( వయవసథ నిర్ామణానిక్ భార్త్
+?
+ఇటీవల చేసిన్ ప్యర తానలన్ వివర్ధుంచ్ుండి
+లేక
+GSLV) PSLV)
+(ఆ) జిఎస్ఎల్వి ( మర్ధయు పిఎస్ ఎల్వి ( ప్యోర గ వ్ాహన్ముల మధ్య భేదము
+? PSLV) , GSLV)
+ఏమిటట పిఎస్ ఎల్ వి ( తో ప్ోలిసతే జిఎస్ఎల్వి ( యొకు మ ర్కగ ైన్
+?
+ప్యోర జనాలన్ ప్ర్ధశీలిుంచ్ుండి
+4. (a) Discuss India’s present composition of energy sources and future energy
+security scenario in the context of growing energy demand.
+OR
+(b) What are the benefits of ‘‘Smart Grid’’ ? Examine the challenges and
+strategies for ‘‘Smart Grid’’ operations in India.
+SAE-105 3 P.T.O.
+
+--- PAGE 4/8 ---
+,
+(అ) పెర్కగుత్ున్న శ్కత్ అవసర్ాల సుందర్భములో భార్త్ యొకు ప్సర త త్ శ్కత్ వన్ర్కల కూర్కపన్
+?
+మర్ధయు భ్విషయ శ్కత్ భ్దత్ర సనినవ్ేశానిన చ్ర్ధుుంచ్ుండి
+లేక
+‘‘ ’’ ? ‘‘ ’’
+(ఆ) సామర్ి గధడ్ర వలన్ ప్యోర జనాలు ఏమిటట భార్త్ లో సామర్ి గధడ్ర కార్య కలాప్ాల
+?
+విషయములో సవ్ాళ్ైన్ మర్ధయు వయయహానిన ప్ర్ధశీలిుంచ్ుండి
+5. (a) Why are urban floods a recurrent feature in India ? Discuss the main
+causes of urban floods and measures taken by the Government(s) for
+urban flood control.
+OR
+(b) Critically examine how illegal mining of river sand in various parts of
+India is affecting the ecology of rivers and lives of people in the vicinity of
+these rivers.
+?
+(అ) భార్త్ లో ప్టిణ ప్ారుంత్ వర్దలు త్ర్చ్ గా ఎుంద కు ప్పన్ర్ావృత్ుం అవపత్ునానయి ప్టిణ
+ప్ారుంత్ వర్దలకు ముఖ్య కార్ణాలు మర్ధయు వ్ాటట నియుంత్ణర కు ప్భ్ర ుతావలు తీస కొుంటున్న
+?
+చ్ర్యలు వివర్ధుంచ్ుండి
+లేక
+,
+(ఆ) భార్త్ లోని వివిధ్ ప్ారుంతాలలో న్ద ల ఇస క యొకు అకమర త్వవకాలు న్ద ల
+జీవ్ావర్ణానిన మర్ధయు న్ద ల సమీప్ములో నివశిసత న్న ప్జర ల జీవితాలన్ ఏ విధ్ముగా
+?
+ప్భర ావిత్ము చసే త నానయో విమర్శనాత్మకముగా ప్ర్ధశీలిుంచ్ుండి
+SAE-105 4
+
+--- PAGE 5/8 ---
+SECTION II
+II
+భాగము
+6. (a) Write a brief account of Bentham and Hooker’s classification and discuss
+its demerits.
+OR
+(b) Which hormone regulates blood glucose levels in the body and how is it
+synthesized artificially ?
+, ?
+(అ) బ ుంథామ్ మర్ధయు హుకర్ ల వర్ాకీ ర్ణన్ కైుప్తముగా వివర్ధుంచి దాని లోప్ాలన్ చ్ర్ధుుంచ్ుండి
+లేక
+?
+(ఆ) ర్కతములో ఉుండే గైూకోజ్ సథాయిని నియుంతిరుంచే హార్ోమన్ ఏద దానిక్ కృతిరమముగా ఎలా
+.
+సుంశైషల ిసతార్క
+7. (a) Describe the medicinal qualities of mushrooms.
+OR
+(b) Give an account on chemicals and drugs produced from animals.
+?
+(అ) ప్పటిగొడుగుల ఔషధ్ గుణాలన్ వివర్ధుంచ్ుండి
+లేక
+?
+(ఆ) జుంత్ువపల న్ ుండి ఉత్పతిత అయియయ ర్సాయనాలు మర్ధయు ఔషధాల పెై వివర్ణ ఇవవుండి
+8. (a) Describe the major types of fungus that cause Mycoses in humans.
+OR
+(b) Describe the most common protozoan diseases, causative agents and
+preventive measures.
+?
+(అ) మన్ షుయలలో శిలీుంధ్ ర వ్ాయధ్ లన్ కలిగధుంచే ప్ధర ాన్ శిలీుంధ్ ర ర్కాలన్ వర్ణుంధ చ్ుండి
+లేక
+,
+(ఆ) అతి సాధార్ణముగా వచేు ప్ోరటోజోవ్ా వ్ాయధ్ లు వ్ాటట వ్ాయధ జన్కాలు మర్ధయు నివ్ార్ణ
+?
+చ్ర్యలన్ వివర్ధుంచ్ుండి
+SAE-105 5 P.T.O.
+
+--- PAGE 6/8 ---
+9. (a) Describe the methods of gene transfer in developing Genetically Modified
+crops.
+OR
+(b) What is a Biopesticide ? How are fungal parasites of insects useful in
+Biological control ?
+, ?
+(అ) జన్ య మార్ధపడి ప్ుంటల అభివృదిల ో జన్ యవపల బద లీక్ అవలుంబిుంచే ప్దిత్ులన్ వర్ణుంధ చ్ుండి
+లేక
+?
+(ఆ) జీవకీటక నాశిని అుంటే ఏమిటట కీటకాలపెై ప్ర్ాన్న జీవపలుగా ఉుండే శిలీుంధార లు జీవ
+?
+నియుంత్ణర లో ఎలా ఉప్యోగప్డుత్ునానయి
+10. (a) What is Major Histocompatibility Complex (MHC) ? Describe the role of
+MHC classes.
+OR
+(b) What are monoclonal antibodies ? How are they useful in detecting
+parasitic diseases ?
+?
+(అ) ప్ధర ాన్ అవిర్కది కణజాల సుంకైష్్ ిాలు (ఎ ుంహ చ సి) అుంటే ఏమిటట ఎ ుంహ చ సి త్ర్గత్ుల ప్ాత్న్ర
+?
+వర్ణుంధ చ్ుండి
+లేక
+?
+(ఆ) మోనోకైోన్ల్ ప్తిర ర్క్షకాలు అుంటే ఏమిటట ప్ర్ాన్న జీవ వ్ాయధ్ లన్ గుర్తుంధ చ్దములో అవి ఏ
+?
+విధ్ముగా ఉప్యోగప్డతాయి
+SAE-105 6
+
+--- PAGE 7/8 ---
+SECTION III
+III
+భాగము
+11. (a) Invasive alien species are the second largest threat to biodiversity after
+habitat destruction. Discuss the causes with examples.
+OR
+(b) Describe the carbon and nitrogen biogeochemical cycles. Cite examples in
+the Indian context.
+,
+(అ) దుండ త్తు అసథానీయ (ఎలీన్) జాత్ులు సహజసథల నాశ్న్ము త్ర్కవ్ాత్ జీవ వ్ ైవిధాయనిక్ ర్ ుండవ
+, ?
+అతిపెదద ముప్పప. కార్ణాలన్ ఉదాహర్ణలతో చ్ర్ధుుంచ్ుండి
+లేక
+?
+(ఆ) కర్బన్ మర్ధయు న్త్జర ని జీవభ్ూర్సాయనిక చ్కార లన్ (వలయాలన్ ) వర్ణుంధ చ్ుండి భార్త్
+?
+దేశ్ప్ప సుందర్భములో ఉదాహర్ణలు చ్తప్ుండి
+12. (a) What are the advantages and disadvantages of solar power over other
+renewable energy resources ? Why is the cost of solar energy decreasing ?
+What is its effect on climate change efforts ?
+OR
+(b) ‘‘India’s traditional water management methods are key in the present
+context.’’ Examine the statement with special focus on water harvesting
+and disaster management.
+, , ?
+(అ) ఇత్ర్ సాుంప్దర ాయియత్ర్ శ్కత ్ వన్ర్కలతో ప్ోలిసతే సౌర్ శ్కత్క్ గల అన్ కూల ప్తిర కూలత్లు ఏవి
+సౌర్ శ్కత ్ యొకు ఖ్ర్కు ఎుంద కు త్గాుత్ున్నద మర్ధయు వ్ాతావర్ణ మార్కప చ్ర్యలపెై దాని
+?
+ప్భర ావము ఏమిటట
+లేక
+‘‘ .’’
+(ఆ) ప్సర త త్ సుందర్భములో భార్త్ యొకు సాుంప్దర ాయ నీటట నిర్వహణ ప్దిత్ులు కీలకమ ైన్వి
+,
+ఈ ప్కర టన్న్ నీటట సుంగహర ణ మర్ధయు వినియోగము (హార్ వసిిుంగ్) మర్ధయు విప్త్తు
+?
+నిర్వహణపెై ప్తర ేయక దృషి ి పెటి ట ప్ర్ధశీలిుంచ్ుండి
+SAE-105 7 P.T.O.
+
+--- PAGE 8/8 ---
+13. (a) What effects does PM fine particulate matter have on the health of
+2.5
+individuals in urban regions of India and across the world ? Discuss.
+OR
+(b) Critically discuss the various challenges and issues arising out of waste
+management in Indian towns and cities.
+,
+(అ) భార్త్ లోని ప్టిణ ప్ారుంతాలలో మర్ధయు ప్ప్ర ుంచ్ము అుంత్టా కూడా మాన్వపల ఆర్ోగయముపెై
+PM ? .
+2.5
+సతక్షమ ప్దార్ి ర్ేణువపల ప్భర ావము ఏమిటట చ్ర్ధుుంచ్ుండి
+లేక
+,
+(ఆ) భార్త్ దేశ్ప్ప ప్టిణాలు మర్ధయు న్గర్ాలలో వయర్ిాల నిర్వహణలోని వివిధ్ సవ్ాళ్ళు మర్ధయు
+?
+సమసయలన్ విమర్శనాత్మకముగా చ్ర్ధుుంచ్ుండి
+14. (a) Recent observations have shown that the ozone layer over Antarctic
+shows signs of healing. Critically examine.
+OR
+(b) Describe the role of Information Technology in environmental
+conservation.
+(అ) అుంటార్ధుటటక్ పెై ఉన్న ఓజోన్ ప్ొర్ బాగుప్డుత్ున్నదనే సుంకేతాలు ఇటీవలి ప్ర్ధశీలన్ల వలన్
+?
+కన్ప్డుత్ునానయి. విమర్శనాత్మకముగా ప్ర్ధశీలిుంచ్ుండి
+లేక
+?
+(ఆ) ప్ర్ాయవర్ణ ప్ర్ధర్క్షణలో సమాచార్ సాుంకేతిక విజాాన్ము యొకు ప్ాత్న్ర వర్ణధుంచ్ుండి
+15. (a) Briefly describe the Sendai Framework for Disaster Risk Reduction and
+its adoption in the disaster management policy of India.
+OR
+(b) Examine the role of the National Green Tribunal in providing speedy
+justice in environmental matters by quoting its recent decisions.
+(అ) విప్త్తు ముప్పప త్గాుంధ ప్ప కొర్కు ఏర్పర్ధచిన్ సెుండాయి ్ేరమ్ వర్ు న్ కైుప్తముగా వివర్ధుంచ్ుండి
+.
+మర్ధయు భార్త్ విప్త్తు నిర్వహణ విధాన్ములో దాని సవవకర్ణ గుర్ధుంచి వివర్ధుంచ్ుండి
+లేక
+(ఆ) ప్ర్ాయవర్ణ విషయాలలో సత్వర్ నాయయానిన అుంద చ్డములో జాతీయ హర్ధత్ టబటర ుయన్ల్
+, , ?
+ప్ాత్న్ర ఇటీవల అద వ్ లువర్ధుంచిన్ నిర్ణయాలన్ ఉదహర్ధసతత ప్ర్ధశీలిుంచ్ుండి
+SAE-105 8

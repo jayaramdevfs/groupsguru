@@ -1,0 +1,25 @@
+term,english_definition,telugu_equivalent,example_in_context,scope,priority
+Syllabus Registry,Micro-topic database with unique IDs mapping each concept from all syllabi,సిలబస్ నిఘంటువు,MT-HIST-A1-001,Foundation,P1
+Micro-Topic,Smallest atomic unit of syllabus coverage with explicit mention weight,సూక్ష్మ విషయం,Paleolithic Age characteristics,Foundation,P1
+PYQ,Previous Year Question from actual APPSC/UPSC exams,గత సంవత్సరాల ప్రశ్నలు,2016 History Paper II Q1a,Core,P1
+Commission,Examining body: APPSC or UPSC,పరీక్ష కమిషన్,APPSC Group 1,Core,P1
+Commission Blending,Weighted combination of APPSC vs UPSC data for shared GS topics,కమిషన్ సమ్మిश్రణ,0.6 APPSC + 0.4 UPSC,Core,P2
+Frequency Score,Times asked / Total questions in subject normalized 0-1,ఫ్రీక్వెన్సీ స్కోర్,5/30 = 0.167,Formula,P2
+Depth Score,Mapped from depth level: awareness=0.3, understanding=0.6, analytical=1.0,లోతు స్కోర్,Understanding=0.6,Formula,P2
+Recurrence,Pattern tracking: first_time | repeat_topic | repeat_exact,పునరావృత్తి,repeat_topic,Pattern,P1
+Cognitive Level,Bloom's taxonomy: L1 (recall) to L4 (synthesis+evaluation),జ్ఞాన స్థితి,L3=analytical thinking,Assessment,P1
+Data Confidence,Flag: high | medium | low based on APPSC question availability,డేటా నిశ్చయత,low for topics <5 APPSC Qs,Quality,P2
+AP-Specific,Topics applying to Andhra Pradesh state context only,ఏపీ నిర్దిష్టమైన,AP History civil bifurcation,Context,P1
+Shared GS,General Studies without state-specific constraint,భాగస్వామ్య జీఎస్,Indian history polity,Context,P1
+Prediction Score,Final weighted confidence 0-1 for topic reappearance,భవిష్యద్వాణీ స్కోరు,0.78 for nationalism,Output,P1
+Question Type,ANALYTICAL | STATIC | STMT | ELIM | CA_STATIC | GK | SCHEME | MATCH | AR,ప్రశ్న రకం,ANALYTICAL essay,Category,P1
+Trend Momentum,-1 (declining) | 0 (stable) | +1 (increasing) last 5 years,ట్రెండ్ వేగం,+1 for digital topics,Trend,P2
+Model Stability,Rules + constraints ensuring LLM-agnostic reproducibility,నమూనా స్థిరత్వం,R1-R30 rulebook,Meta,P1
+Keyword Extraction,Identifying searchable terms from question summaries,కీవర్డ్ సంగ్రహణ,Gandhi civil disobedience,Assist,P3
+Normalization,Scaling scores 0-1 for equal weighting in formula,సాధారణీకరణ,divide by max value,Transform,P2
+Explicit Mention,Direct reference in syllabus text (vs implied),స్పష్ట ప్రస్తావన,"Mauryan Empire" in syllabus,Weight,P1
+Commission Weight,Proportion of APPSC vs UPSC in blended prediction,కమిషన్ బరువు,0.6 for shared=case 2,Formula,P2
+Margin of Error,±5% acceptable variance in prediction confidence scores,లోపం యొక్క పరిమితి,±5% acceptable range,Quality,P2
+Candidate Intuition,Expert validation that top-20 and bottom-20 topics make exam sense,అభ్యర్థి స్పృష్టం,Jai's intuition check,Validate,P3
+Schema Mismatch,Question not mapping to any micro-topic (NO_REGISTRY_MATCH_*),స్కీమా అసమతలం,Constitution questions,Issue,P1
+Recency Weight,Recent 5-year PYQ impact >weight on older papers,సమీపకాల బరువు,Last 3 years = 2x weight,Formula,P2

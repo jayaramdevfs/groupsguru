@@ -5,6 +5,8 @@ import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { useAuth } from "../context/AuthContext";
 import { useLanguage } from "../context/LanguageContext";
 import { LanguageToggle } from "../components/LanguageToggle";
+import { registryService } from "../api/registryService";
+import { useEffect, useState } from "react";
 
 type RootStackParamList = {
   StudentDashboard: undefined;
@@ -18,6 +20,19 @@ const StudentDashboard = () => {
   const { language } = useLanguage();
   const navigation = useNavigation<NavigationProp>();
   const name = user?.email?.split("@")[0] ?? "Student";
+  const [mtCount, setMtCount] = useState<number>(0);
+
+  useEffect(() => {
+    const fetchMtCount = async () => {
+      try {
+        const data = await registryService.getPublicMicroTopics();
+        setMtCount(data.totalElements || data.content.length);
+      } catch (e) {
+        console.error(e);
+      }
+    };
+    fetchMtCount();
+  }, []);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -30,6 +45,11 @@ const StudentDashboard = () => {
           <Text style={styles.title}>
             {language === "en" ? `Welcome, ${name}` : `TE Welcome, ${name}`}
           </Text>
+          {mtCount > 0 && (
+            <Text style={styles.mtBadge}>
+              {language === "en" ? `Intelligence Registry loaded: ${mtCount} Micro-topics` : `మైక్రో-టాపిక్స్: ${mtCount}`}
+            </Text>
+          )}
         </View>
         <LanguageToggle />
       </View>
@@ -98,6 +118,18 @@ const styles = StyleSheet.create({
     fontWeight: "800",
     color: "#FFFFFF",
     marginTop: 4,
+  },
+  mtBadge: {
+    color: "#d8b4fe",
+    fontSize: 12,
+    fontWeight: "700",
+    marginTop: 8,
+    backgroundColor: "rgba(147, 51, 234, 0.15)",
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 8,
+    overflow: "hidden",
+    alignSelf: "flex-start",
   },
   grid: {
     marginTop: 24,

@@ -1,0 +1,91 @@
+pyq_id,commission,year,paper,question_number,subject,micro_topic_id,question_type,cognitive_level,difficulty,recurrence,ca_linked,question_summary
+APPSC-G1-2020-P3-Q1a,APPSC,2020,paper3,1a,Polity,MT-POLT-M3-1-002,ANALYTICAL,L3,medium,first_time,false,Formation of Constituent Assembly and critical evaluation of Indian Constitution
+APPSC-G1-2020-P3-Q1b,APPSC,2020,paper3,1b,Polity,MT-POLT-M3-4-006,ANALYTICAL,L3,hard,first_time,false,Judicial Review definition classification by Justice Quadri scope and importance
+APPSC-G1-2020-P3-Q2a,APPSC,2020,paper3,2a,Polity,MT-POLT-M3-5-001,ANALYTICAL,L3,medium,first_time,false,Federalism with strong central government and key provisions enabling it
+APPSC-G1-2020-P3-Q2b,APPSC,2020,paper3,2b,Polity,MT-POLT-M3-4-005,STATIC,L2,medium,first_time,false,Privileges of state legislature defined and classified into two categories
+APPSC-G1-2020-P3-Q3a,APPSC,2020,paper3,3a,Polity,MT-POLT-M3-5-008,STATIC,L2,medium,first_time,false,Main features of 73rd and 74th Constitutional Amendment Acts
+APPSC-G1-2020-P3-Q3b,APPSC,2020,paper3,3b,Polity,MT-POLT-M3-4-005,ANALYTICAL,L3,medium,first_time,false,Role of Governor in states focusing on powers and functions
+APPSC-G1-2020-P3-Q4a,APPSC,2020,paper3,4a,Polity,MT-POLT-M3-4-004,ANALYTICAL,L3,medium,first_time,false,Differentiate Lok Sabha and Rajya Sabha powers functions and election control
+APPSC-G1-2020-P3-Q4b,APPSC,2020,paper3,4b,Polity,MT-POLT-M3-1-003,STATIC,L2,easy,first_time,false,Five salient features of the Indian Constitution explained
+APPSC-G1-2020-P3-Q5a,APPSC,2020,paper3,5a,Polity,MT-POLT-M3-4-006,ANALYTICAL,L3,hard,first_time,false,Judicial activism definition via PIL and SAL and impact on political system
+APPSC-G1-2020-P3-Q5b,APPSC,2020,paper3,5b,Polity,MT-POLT-M3-5-008,STATIC,L2,medium,repeat_topic,false,Salient features of rural and urban local governance under 73rd and 74th Amendments
+APPSC-G1-2020-P3-Q6a,APPSC,2020,paper3,6a,Public Administration,MT-ADMIN-M3-6-001,STATIC,L2,easy,first_time,false,Define public administration and explain its evolution in India
+APPSC-G1-2020-P3-Q6b,APPSC,2020,paper3,6b,Public Administration,MT-ADMIN-M3-7-002,ANALYTICAL,L3,medium,first_time,false,Differentiate administrative ideas in Kautilya Arthashastra and Mughal administration
+APPSC-G1-2020-P3-Q7a,APPSC,2020,paper3,7a,Public Administration,MT-ADMIN-M3-9-001,ANALYTICAL,L3,hard,first_time,false,Amartya Sen definition of development and new development thinking characteristics
+APPSC-G1-2020-P3-Q7b,APPSC,2020,paper3,7b,Public Administration,MT-ADMIN-M3-9-004,ANALYTICAL,L2,medium,first_time,false,Role of NGOs and Civil Services in Democracy
+APPSC-G1-2020-P3-Q8a,APPSC,2020,paper3,8a,Public Administration,MT-ADMIN-M3-9-002,ANALYTICAL,L3,medium,first_time,false,UN partnership with civil society and NGO registration Acts in India
+APPSC-G1-2020-P3-Q8b,APPSC,2020,paper3,8b,Public Administration,MT-ADMIN-M3-10-003,ANALYTICAL,L3,medium,first_time,false,RTI definition rights under RTI Act 2005 and need for Act despite being FR
+APPSC-G1-2020-P3-Q9a,APPSC,2020,paper3,9a,Public Administration,MT-POLT-M3-1-006,STATIC,L2,medium,first_time,false,Statutory bodies work with examples and quasi-judicial bodies in India
+APPSC-G1-2020-P3-Q9b,APPSC,2020,paper3,9b,Public Administration,MT-ADMIN-M3-10-005,STATIC,L2,medium,first_time,false,Social audit definition objectives and advantages explained
+APPSC-G1-2020-P3-Q10a,APPSC,2020,paper3,10a,Public Administration,MT-POLT-M3-1-010,ANALYTICAL,L3,medium,first_time,false,E-governance strategy in India initiatives and government accountability
+APPSC-G1-2020-P3-Q10b,APPSC,2020,paper3,10b,Public Administration,MT-ADMIN-M3-8-001,SCHEME,L2,medium,first_time,true,Government interventions in social sector health and education
+APPSC-G1-2020-P3-Q11a,APPSC,2020,paper3,11a,Ethics & Law,MT-ETHICS-M3-11-001,STATIC,L2,medium,first_time,false,Define ethics in Indian tradition and five principles for public service ethics
+APPSC-G1-2020-P3-Q11b,APPSC,2020,paper3,11b,Ethics & Law,MT-ETHICS-M3-15-004,ANALYTICAL,L3,medium,first_time,false,Necessity and importance of labour laws and whether reforms benefit workers
+APPSC-G1-2020-P3-Q12a,APPSC,2020,paper3,12a,Ethics & Law,MT-ETHICS-M3-12-001,ANALYTICAL,L3,medium,first_time,false,Values of entity value education need and gender inequality recognition in India
+APPSC-G1-2020-P3-Q12b,APPSC,2020,paper3,12b,Ethics & Law,MT-ETHICS-M3-14-006,STATIC,L2,medium,first_time,false,Explain the Lokpal and Lokayukta Act provisions
+APPSC-G1-2020-P3-Q13a,APPSC,2020,paper3,13a,Ethics & Law,MT-ETHICS-M3-13-003,STATIC,L2,medium,first_time,false,Define moral attitude four qualities and factors shaping political attitude
+APPSC-G1-2020-P3-Q13b,APPSC,2020,paper3,13b,Ethics & Law,MT-ETHICS-M3-13-005,ANALYTICAL,L3,hard,first_time,false,Emotional intelligence concept three models and application in governance
+APPSC-G1-2020-P3-Q14a,APPSC,2020,paper3,14a,Ethics & Law,MT-ETHICS-M3-14-001,ANALYTICAL,L3,medium,first_time,false,Public service definition trustworthiness fortitude and corruption prevention measures
+APPSC-G1-2020-P3-Q14b,APPSC,2020,paper3,14b,Ethics & Law,MT-ETHICS-M3-12-004,STATIC,L2,easy,first_time,false,Role of family society and educational institutions in inculcating values
+APPSC-G1-2020-P3-Q15a,APPSC,2020,paper3,15a,Ethics & Law,MT-ETHICS-M3-15-005,STATIC,L2,medium,first_time,false,Different types of cybercrimes and importance of cyber laws in India
+APPSC-G1-2020-P3-Q15b,APPSC,2020,paper3,15b,Ethics & Law,MT-ETHICS-M3-11-004,ANALYTICAL,L3,hard,first_time,false,How time and space affect ethics in private and public relationships
+APPSC-G1-2023-P3-Q1a,APPSC,2023,paper3,1a,Polity,MT-POLT-M3-2-002,ANALYTICAL,L3,hard,first_time,false,Scope of reasonable restrictions and test of reasonableness under Article 19
+APPSC-G1-2023-P3-Q1b,APPSC,2023,paper3,1b,Polity,MT-POLT-M3-5-003,ANALYTICAL,L3,medium,first_time,false,Genesis of Inter-State Council relevance in Centre-State coordination
+APPSC-G1-2023-P3-Q2a,APPSC,2023,paper3,2a,Polity,MT-POLT-M3-4-005,ANALYTICAL,L3,medium,repeat_topic,false,Governor discretionary functions and special responsibilities constitutional provisions
+APPSC-G1-2023-P3-Q2b,APPSC,2023,paper3,2b,Polity,MT-POLT-M3-5-001,ANALYTICAL,L3,hard,first_time,true,NEP 2020 criticism and rationale for State to Concurrent list transfers
+APPSC-G1-2023-P3-Q3a,APPSC,2023,paper3,3a,Polity,MT-POLT-M3-5-008,ANALYTICAL,L3,medium,repeat_topic,false,Political empowerment of women through Panchayat Raj scope and challenges
+APPSC-G1-2023-P3-Q3b,APPSC,2023,paper3,3b,Polity,MT-POLT-M3-5-004,ANALYTICAL,L3,medium,first_time,false,Finance Commission credibility in promoting fiscal democracy in India
+APPSC-G1-2023-P3-Q4a,APPSC,2023,paper3,4a,Polity,MT-POLT-M3-4-004,STATIC,L2,medium,repeat_topic,false,Different kinds of motions used in Parliament and motions vs resolutions
+APPSC-G1-2023-P3-Q4b,APPSC,2023,paper3,4b,Polity,MT-POLT-M3-4-005,ANALYTICAL,L2,medium,first_time,false,Legislative Council equality and inequality with Legislative Assembly matters
+APPSC-G1-2023-P3-Q5a,APPSC,2023,paper3,5a,Polity,MT-POLT-M3-4-006,ANALYTICAL,L3,hard,repeat_topic,false,Scope of judicial review over administrative legislative and judicial actions
+APPSC-G1-2023-P3-Q5b,APPSC,2023,paper3,5b,Polity,MT-POLT-M3-4-006,ANALYTICAL,L3,medium,repeat_topic,false,PIL definition and nature of court orders passed in PIL cases
+APPSC-G1-2023-P3-Q6a,APPSC,2023,paper3,6a,Public Administration,MT-ADMIN-M3-7-002,ANALYTICAL,L3,medium,repeat_topic,false,Kautilya welfare state concept predating Western European welfare vision
+APPSC-G1-2023-P3-Q6b,APPSC,2023,paper3,6b,Public Administration,MT-ADMIN-M3-7-004,ANALYTICAL,L3,medium,first_time,false,British administration legacy shaping present-day Indian bureaucracy evolution
+APPSC-G1-2023-P3-Q7a,APPSC,2023,paper3,7a,Public Administration,MT-ADMIN-M3-8-001,ANALYTICAL,L3,medium,first_time,true,Government intervention in development and Atmanirbhar Bharat mission
+APPSC-G1-2023-P3-Q7b,APPSC,2023,paper3,7b,Public Administration,MT-ADMIN-M3-7-005,ANALYTICAL,L3,medium,first_time,true,Civil service reforms in India and Mission Karmayogi
+APPSC-G1-2023-P3-Q8a,APPSC,2023,paper3,8a,Public Administration,MT-ADMIN-M3-10-003,ANALYTICAL,L3,medium,repeat_topic,false,RTI Act 2005 making attributed to civil society movement success
+APPSC-G1-2023-P3-Q8b,APPSC,2023,paper3,8b,Public Administration,MT-ADMIN-M3-9-002,ANALYTICAL,L3,medium,repeat_topic,false,NGOs role in promoting human rights and defending marginalized in India
+APPSC-G1-2023-P3-Q9a,APPSC,2023,paper3,9a,Public Administration,MT-POLT-M3-1-006,ANALYTICAL,L3,medium,repeat_topic,false,Quasi-judicial nature of Administrative Tribunals writs and appeals
+APPSC-G1-2023-P3-Q9b,APPSC,2023,paper3,9b,Public Administration,MT-ETHICS-M3-11-005,ANALYTICAL,L3,medium,first_time,false,Reasons for decline of integrity in civil services and anti-corruption mechanisms
+APPSC-G1-2023-P3-Q10a,APPSC,2023,paper3,10a,Public Administration,MT-ADMIN-M3-10-002,ANALYTICAL,L3,medium,first_time,false,Indian Citizen Charter movement experience and solutions for impact improvement
+APPSC-G1-2023-P3-Q10b,APPSC,2023,paper3,10b,Public Administration,MT-ADMIN-M3-6-003,STATIC,L2,medium,first_time,false,Different dimensions of governance and administrative dimension key components
+APPSC-G1-2023-P3-Q11a,APPSC,2023,paper3,11a,Ethics & Law,MT-ETHICS-M3-11-001,ANALYTICAL,L3,medium,repeat_topic,false,Ethics in public service as component of parliamentary democracy and Naitik Bharat
+APPSC-G1-2023-P3-Q11b,APPSC,2023,paper3,11b,Ethics & Law,MT-ETHICS-M3-11-005,ANALYTICAL,L3,medium,repeat_topic,false,Define accountability factors weakening it in civil services and improvement ways
+APPSC-G1-2023-P3-Q12a,APPSC,2023,paper3,12a,Ethics & Law,MT-ETHICS-M3-12-001,ANALYTICAL,L3,medium,repeat_topic,false,Significance of values in personality development and hierarchy of values in India
+APPSC-G1-2023-P3-Q12b,APPSC,2023,paper3,12b,Ethics & Law,MT-ETHICS-M3-12-005,ANALYTICAL,L3,medium,first_time,false,Vinoba Bhave reform ideology and relevance in modern ethical public life
+APPSC-G1-2023-P3-Q13a,APPSC,2023,paper3,13a,Ethics & Law,MT-ETHICS-M3-13-003,ANALYTICAL,L3,medium,repeat_topic,false,Attitudes influencing behaviour and polarization of political attitudes in India
+APPSC-G1-2023-P3-Q13b,APPSC,2023,paper3,13b,Ethics & Law,MT-ETHICS-M3-13-004,ANALYTICAL,L3,medium,first_time,false,Persuasion definition constructs and use by civil servants for New India objectives
+APPSC-G1-2023-P3-Q14a,APPSC,2023,paper3,14a,Ethics & Law,MT-ETHICS-M3-14-004,ANALYTICAL,L4,hard,first_time,false,Popular democracy distrust in representatives and ethical leadership in politics
+APPSC-G1-2023-P3-Q14b,APPSC,2023,paper3,14b,Ethics & Law,MT-ETHICS-M3-14-005,ANALYTICAL,L4,very_hard,first_time,false,International ethics significance in dispute resolution and environmental cooperation
+APPSC-G1-2023-P3-Q15a,APPSC,2023,paper3,15a,Ethics & Law,MT-ETHICS-M3-15-003,STATIC,L2,medium,first_time,false,Define substantive law and procedural law and their relationship and differences
+APPSC-G1-2023-P3-Q15b,APPSC,2023,paper3,15b,Ethics & Law,MT-ETHICS-M3-15-006,ANALYTICAL,L3,medium,first_time,true,Direct taxes transferability and recent direct tax reforms in India
+APPSC-G1-2025-P3-Q1a,APPSC,2025,paper3,1a,Polity,MT-POLT-M3-5-006,ANALYTICAL,L3,hard,first_time,false,Emergency functions of Union Government and impact on legislative powers
+APPSC-G1-2025-P3-Q1b,APPSC,2025,paper3,1b,Polity,MT-POLT-M3-5-001,ANALYTICAL,L3,medium,repeat_topic,false,Federal constitution duties on State Governments for smooth national functioning
+APPSC-G1-2025-P3-Q2a,APPSC,2025,paper3,2a,Polity,MT-POLT-M3-5-002,ANALYTICAL,L3,hard,first_time,false,Bill to law procedure differs at Union and State to safeguard Union interests
+APPSC-G1-2025-P3-Q2b,APPSC,2025,paper3,2b,Polity,MT-POLT-M3-5-002,ANALYTICAL,L3,medium,repeat_topic,false,State separate list for law-making not beyond overarching Parliament powers
+APPSC-G1-2025-P3-Q3a,APPSC,2025,paper3,3a,Polity,MT-POLT-M3-5-004,ANALYTICAL,L3,medium,repeat_topic,false,Finance Commission role as backbone of fiscal federalism Union-State balance
+APPSC-G1-2025-P3-Q3b,APPSC,2025,paper3,3b,Polity,MT-POLT-M3-5-008,ANALYTICAL,L3,medium,repeat_topic,false,73rd Amendment significance in strengthening grassroots democracy in India
+APPSC-G1-2025-P3-Q4a,APPSC,2025,paper3,4a,Polity,MT-POLT-M3-4-004,STATIC,L2,medium,repeat_topic,false,Steps followed by Parliament in transforming a Bill into an Act
+APPSC-G1-2025-P3-Q4b,APPSC,2025,paper3,4b,Polity,MT-POLT-M3-4-005,ANALYTICAL,L3,medium,first_time,false,Legislative Council vs Rajya Sabha differences considering state-level role
+APPSC-G1-2025-P3-Q5a,APPSC,2025,paper3,5a,Polity,MT-POLT-M3-2-006,ANALYTICAL,L3,medium,first_time,false,Constitutional rights of citizens and key arrangements for their protection
+APPSC-G1-2025-P3-Q5b,APPSC,2025,paper3,5b,Polity,MT-POLT-M3-4-006,ANALYTICAL,L3,hard,repeat_topic,false,Two constitutional amendments significantly affecting judiciary powers or functioning
+APPSC-G1-2025-P3-Q6a,APPSC,2025,paper3,6a,Public Administration,MT-ADMIN-M3-7-001,ANALYTICAL,L3,medium,first_time,false,Gupta vs Mauryan administrative structures key similarities and differences
+APPSC-G1-2025-P3-Q6b,APPSC,2025,paper3,6b,Public Administration,MT-ADMIN-M3-7-004,STATIC,L2,easy,repeat_topic,false,Features of British administration that influenced Indian administrative system
+APPSC-G1-2025-P3-Q7a,APPSC,2025,paper3,7a,Public Administration,MT-ADMIN-M3-8-001,ANALYTICAL,L3,medium,first_time,true,Education as vital development sector and recent Indian education policy developments
+APPSC-G1-2025-P3-Q7b,APPSC,2025,paper3,7b,Public Administration,MT-ADMIN-M3-8-003,ANALYTICAL,L3,hard,first_time,false,Gap between policy formulation and implementation major issues responsible
+APPSC-G1-2025-P3-Q8a,APPSC,2025,paper3,8a,Public Administration,MT-ADMIN-M3-9-002,ANALYTICAL,L3,medium,repeat_topic,false,Civil society in Indian context key features and limitations in democracy
+APPSC-G1-2025-P3-Q8b,APPSC,2025,paper3,8b,Public Administration,MT-ADMIN-M3-9-002,ANALYTICAL,L3,medium,repeat_topic,false,Enhancing NGOs role in women empowerment and welfare with key challenges
+APPSC-G1-2025-P3-Q9a,APPSC,2025,paper3,9a,Public Administration,MT-POLT-M3-1-007,STATIC,L2,medium,first_time,false,NCW establishment Act main features and limitations described
+APPSC-G1-2025-P3-Q9b,APPSC,2025,paper3,9b,Public Administration,MT-POLT-M3-1-006,ANALYTICAL,L3,medium,repeat_topic,false,Constitutional provisions empowering quasi-judicial authorities with examples
+APPSC-G1-2025-P3-Q10a,APPSC,2025,paper3,10a,Public Administration,MT-ADMIN-M3-10-005,ANALYTICAL,L3,medium,repeat_topic,false,Social audit narrows vision-reality gaps and impediments in institutionalisation
+APPSC-G1-2025-P3-Q10b,APPSC,2025,paper3,10b,Public Administration,MT-POLT-M3-1-008,ANALYTICAL,L3,medium,first_time,false,Define good governance and how RTI Act promotes good governance principles
+APPSC-G1-2025-P3-Q11a,APPSC,2025,paper3,11a,Ethics & Law,MT-ETHICS-M3-11-003,ANALYTICAL,L4,hard,first_time,false,Personal values vs public responsibilities and ethical foundation for dilemmas
+APPSC-G1-2025-P3-Q11b,APPSC,2025,paper3,11b,Ethics & Law,MT-ETHICS-M3-11-005,ANALYTICAL,L3,medium,repeat_topic,false,Whistleblower protection ethical and institutional importance in public service
+APPSC-G1-2025-P3-Q12a,APPSC,2025,paper3,12a,Ethics & Law,MT-ETHICS-M3-12-001,ANALYTICAL,L3,medium,repeat_topic,false,Ethical values essential for peaceful coexistence in diverse society with examples
+APPSC-G1-2025-P3-Q12b,APPSC,2025,paper3,12b,Ethics & Law,MT-ETHICS-M3-12-004,ANALYTICAL,L3,medium,repeat_topic,false,Early family value education influence on ethical decision-making in adulthood
+APPSC-G1-2025-P3-Q13a,APPSC,2025,paper3,13a,Ethics & Law,MT-ETHICS-M3-13-001,ANALYTICAL,L2,medium,repeat_topic,false,Define attitude and how it affects behaviour of public servants
+APPSC-G1-2025-P3-Q13b,APPSC,2025,paper3,13b,Ethics & Law,MT-ETHICS-M3-13-002,ANALYTICAL,L3,medium,first_time,false,Cognitive affective behavioural components of attitude in public service context
+APPSC-G1-2025-P3-Q14a,APPSC,2025,paper3,14a,Ethics & Law,MT-ETHICS-M3-14-003,ANALYTICAL,L3,medium,first_time,false,Code of ethics in public administration resolving conflicts promoting ethical decisions
+APPSC-G1-2025-P3-Q14b,APPSC,2025,paper3,14b,Ethics & Law,MT-ETHICS-M3-14-004,ANALYTICAL,L3,medium,repeat_topic,false,Integrity transparency accountability in leadership and demonstrating values
+APPSC-G1-2025-P3-Q15a,APPSC,2025,paper3,15a,Ethics & Law,MT-ETHICS-M3-15-005,STATIC,L2,medium,repeat_topic,false,Cyberstalking definition and various cyber offences under IT Act 2000
+APPSC-G1-2025-P3-Q15b,APPSC,2025,paper3,15b,Ethics & Law,MT-ETHICS-M3-15-006,ANALYTICAL,L3,medium,repeat_topic,false,GST definition regulatory framework and constitutional provisions applicable

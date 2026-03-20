@@ -1,0 +1,1717 @@
+--- PAGE 1/36 ---
+Print
+APOnline Limited
+Notations :
+1.Options shown in green color and with icon are correct.
+2.Options shown in red color and with icon are incorrect.
+Question Paper Name : General Studies and Mental Ability
+Subject Name : General Studies and Mental Ability
+Creation Date : 2022-10-21 13:15:12
+Duration : 150
+Total Marks : 150
+Display Marks: Yes
+Share Answer Key With Delivery Engine : No
+Actual Answer Key : Yes
+Calculator : None
+Magnifying Glass Required? : No
+Ruler Required? : No
+Eraser Required? : No
+Scratch Pad Required? : No
+Rough Sketch/Notepad Required? : No
+Protractor Required? : No
+Show Watermark on Console? : Yes
+Highlighter : No
+Auto Save on Console? Yes
+Change Font Color : No
+Change Background Color : No
+Change Theme : No
+Help Button : No
+Show Reports : No
+Show Progress Bar : No
+General Studies and Mental Ability
+Group Number : 1
+Group Id : 82778811
+Is this Group for Examiner? : No
+Examiner permission : Cant View
+Show Progress Bar? : No
+General Studies and Mental Ability
+Section Id : 82778812
+Section Number : 1
+Section type : Online
+Enable Mark as Answered Mark for Review and Clear Response : Yes
+Maximum Instruction Time : 0
+Sub-Section Number : 1
+Sub-Section Id : 82778814
+Question Shuffling Allowed : Yes
+Is Section Default? : null
+
+--- PAGE 2/36 ---
+Question Number : 1 Question Id : 8277881453 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+In June 2022, which of the following countries applied to join the BRICS group of countries?
+Options :
+1. South Korea
+2. Turkey
+3. Iran
+4. Afghanistan
+Question Number : 2 Question Id : 8277881454 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+In August 2022, which of the following countries along with the US and Japan kicked off a combined ballistic missile defence exercise in
+waters off Hawaii?
+Options :
+1. Taiwan
+2. India
+3. South Korea
+4. Philippines
+Question Number : 3 Question Id : 8277881455 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+In July 2022, which country in its ambitious space programme launched Wentian, the second of three modules needed to complete its new
+space station?
+Options :
+1. South Korea
+2. China
+3. Germany
+4. Brazil
+Question Number : 4 Question Id : 8277881456 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+In June 2022, which of the following countries conducted its first successful satellite launch using a domestically developed three-stage
+Nuri rocket?
+Options :
+1. North Korea
+2. South Korea
+3. South Africa
+4. Brazil
+Question Number : 5 Question Id : 8277881457 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Since August 2022, which railways customers and passengers of Star Alliance member airlines will be able to start or end their journey
+comfortably on the environment-friendly train and for this the said railway network became the world's first intermodal partner of Star
+Alliance?
+Options :
+
+--- PAGE 3/36 ---
+1. Indian Railways, India
+2. Deutsche Bahn, Germany
+3. Elizabeth Line, UK
+4. Grand Central, UK
+Question Number : 6 Question Id : 8277881458 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+In June 2022, which of the following countries became one of the latest members to join the Commonwealth?
+Options :
+1. Rwanda
+2. Ghana
+3. Gabon
+4. Cameroon
+Question Number : 7 Question Id : 8277881459 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+In July 2022, UN General Assembly adopted a historic resolution declaring access to a clean, healthy and sustainable environment, a
+universal _______.
+Options :
+1. Cultural Right
+2. Human Right
+3. Social Right
+4. Civil Right
+Question Number : 8 Question Id : 8277881460 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+In July 2022, the 30 NATO allies signed off on the accession protocols for which of the following countries?
+Options :
+1. Sweden and Finland
+2. Ukraine and Poland
+3. Albania and Bulgaria
+4. Slovakia and Slovenia
+Question Number : 9 Question Id : 8277881461 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Commonwealth Games 2022 was organised at ______.
+Options :
+1. Birmingham
+2. New Delhi
+3. Glasgow
+4. Gold Coast
+Question Number : 10 Question Id : 8277881462 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+
+--- PAGE 4/36 ---
+Which country’s men's table tennis team retained its Commonwealth Games gold medal at Commonwealth Games 2022?
+Options :
+1. Singapore
+2. India
+3. Canada
+4. Malaysia
+Question Number : 11 Question Id : 8277881463 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Which of the following game events was NOT organised at the Commonwealth Games 2022?
+Options :
+1. Cricket T20
+2. Cycling – Mountain Bike
+3. Shooting
+4. Beach Volleyball
+Question Number : 12 Question Id : 8277881464 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Which country defeated Germany in UEFA Women Euro 2022 final to win its first major women’s soccer title?
+Options :
+1. Netherlands
+2. England
+3. Denmark
+4. Norway
+Question Number : 13 Question Id : 8277881465 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+In August 2022, which country’s Electronics and Information Technology Secretary to the Government was appointed to a high-level UN
+Internet Governance Forum (IGF) Leadership Panel?
+Options :
+1. Bangladesh
+2. Nepal
+3. India
+4. Bhutan
+Question Number : 14 Question Id : 8277881466 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Which government partnered with leading businesses in India to offer 75 scholarships to Indian students in the country's 75th year of
+Independence?
+Options :
+1. USA
+2. Germany
+3. France
+4. United Kingdom
+Question Number : 15 Question Id : 8277881467 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+
+--- PAGE 5/36 ---
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+In July 2022, which of the following scholars was awarded the Indian Council for Cultural Relations (ICCR) Distinguished Indologist for
+2021?
+Options :
+1. Jeffrey Armstrong
+2. William Jones
+3. Henry Thomas Colebrooke
+4. Gerasim Lebedev
+Question Number : 16 Question Id : 8277881468 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+In June 2022, who became the 1st black woman judge of the US Supreme Court?
+Options :
+1. Ketanji Brown Jackson
+2. Charlotte E Ray
+3. Jane Matilda Bolin
+4. Sandra Day O'Connor
+Question Number : 17 Question Id : 8277881469 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+In July 2022, who received the Churchill Leadership Award from the British Prime Minister Boris Johnson?
+Options :
+1. Madeleine Albright
+2. Volodymyr Zelenskyy
+3. Prince Charles
+4. John Major
+Question Number : 18 Question Id : 8277881470 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+In July 2022, who officially became the 14th Prime Minister of Israel?
+Options :
+1. Naftali Benett
+2. Benjamin Netanyahu
+3. Yair Lapid
+4. Benny Gantz
+Question Number : 19 Question Id : 8277881471 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+In July 2022, who become the first Bangladeshi to scale the world’s second highest peak K2?
+Options :
+1. Wasifa Nazreen
+2. Mohammed Khaled Hossain
+3. Musa Ibrahim
+4. Nishat Mazumdar
+
+--- PAGE 6/36 ---
+Question Number : 20 Question Id : 8277881472 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Which Ministry of the Government of India organised the ‘Badhe Chalo’ Movement under Azadi ka Amrit Mahotsav with events
+between 5 August and 11 August 2022 across ten cities of India and a Grand Finale on 12 August 2022 at Talkatora Stadium in New
+Delhi?
+Options :
+1. Ministry of Education
+2. Ministry of Home Affairs
+3. Ministry of Culture
+4. Ministry of Youth Affairs and Sports
+Question Number : 21 Question Id : 8277881473 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+In August 2022, the Kerala Development and Innovation Strategic Council (K-DISC) and the ICT Academy of Kerala (ICTAK) signed a
+Memorandum of Understanding with which of the following as part of the ‘Connect Career to Campus’ campaign under the Kerala
+Knowledge Economy Mission initiative?
+Options :
+1. Microsoft
+2. LinkedIn
+3. Meta
+4. Google
+Question Number : 22 Question Id : 8277881474 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+On the occasions of the 150th Birth Anniversary of Maharshi Aurobindo and the 75th year of Independence, the Ministry of Culture,
+Government of India commemorated the life and philosophy of Shri Aurobindo by undertaking spiritual programmes in 75 prisons across
+the nation between _______.
+Options :
+1. 9 and 15 August 2022
+2. 12 and 15 August 2022
+3. 14 and 15 August 2022
+4. 16 and 20 August 2022
+Question Number : 23 Question Id : 8277881475 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Jharkhand Janjatiya Mahotsav was celebrated on ______ in which artists from tribal-dominated states, including the north-eastern states
+of India participated.
+Options :
+1. 7-8 August 2022
+2. 9-10 August 2022
+3. 11-12 August 2022
+4. 14-15 August 2022
+Question Number : 24 Question Id : 8277881476 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+
+--- PAGE 7/36 ---
+The National Legal Services Authority (NALSA) organised the first-ever national level meet of District Legal Services Authorities
+(DLSAs) on 30-31 July 2022 in which of the following cities?
+Options :
+1. Kolkata
+2. New Delhi
+3. Chennai
+4. Mumbai
+Question Number : 25 Question Id : 8277881477 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+In the Commonwealth Games 2022, who won India’s first-ever singles medal in squash at the Commonwealth Games by winning a
+bronze medal?
+Options :
+1. Saurav Ghosal
+2. Harinderpal Sandhu
+3. Ramit Tandon
+4. Cyrus Poncha
+Question Number : 26 Question Id : 8277881478 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+India finished _______ on the podium at the Commonwealth Games 2022 with an overall medal tally of 61.
+Options :
+1. third
+2. fourth
+3. fifth
+4. sixth
+Question Number : 27 Question Id : 8277881479 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Sports Authority of Andhra Pradesh (SAAP) has decided to conduct competitions for students of all universities of Andhra Pradesh of
+how many disciplines in July – August 2022?
+Options :
+1. 15
+2. 20
+3. 25
+4. 30
+Question Number : 28 Question Id : 8277881480 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+On 14 June 2022, Rajasekhar (24), a State badminton player from Kuppam Municipality of Andhra Pradesh began his journey from
+Kuppam to Ladakh on a road bike. This expedition was for _______.
+Options :
+1. Child Rights Awareness
+2. Environmental Awareness
+3. Educational Awareness
+4. Women’s Rights Awareness
+
+--- PAGE 8/36 ---
+Question Number : 29 Question Id : 8277881481 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+On 31 July 2022, the Vice-President of India, M Venkaiah Naidu presented the ‘President’s Colour Award’ to which State Police?
+Options :
+1. Tamil Nadu
+2. Bihar
+3. West Bengal
+4. Punjab
+Question Number : 30 Question Id : 8277881482 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+In July 2022, which of the following organisations bagged the Microsoft Partner of the Year Award for Healthcare and Life Sciences
+(global winner) and the 2022 UK Microsoft Partner of the Year Award (country winner)?
+Options :
+1. HCL Technologies
+2. Infosys
+3. Tata Consutancy Services
+4. WIPRO
+Question Number : 31 Question Id : 8277881483 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Who has been marked on the 'Heritage Wall of Fame' of the Society for Personality and Social Psychology (SPSP) in the United States,
+becoming the only social psychologist from India to be honoured with this?
+Options :
+1. Ashis Nandy
+2. Vindhya Undurti
+3. Girishwar Misra
+4. Ramadhar Singh
+Question Number : 32 Question Id : 8277881484 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+As announced in August 2022, which political leader in India is set to be conferred with France's highest civilian award Chevalier de la
+Legion d'Honneur?
+Options :
+1. Narendra Modi
+2. Dr Karan Singh
+3. Shashi Tharoor
+4. Kapil Sibal
+Question Number : 33 Question Id : 8277881485 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+In July-August 2022, as per the written response by the Union Culture Minister, G Kishan Reddy to a question in Lok Sabha, how many
+new heritage sites have been identified for the national importance tag?
+Options :
+1. 10
+
+--- PAGE 9/36 ---
+2. 14
+3. 17
+4. 20
+Question Number : 34 Question Id : 8277881486 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+An ancient Buddhist site in which of the following districts was discovered through excavation by the Archaeological Survey of India
+(ASI) between 1994 and 2001 and has now been taken up for conservation work by ASI?
+Options :
+1. Kalaburagi, Karnataka
+2. Hazaribagh, Jharkhand
+3. Lakhisarai, Bihar
+4. Nashik, Maharashtra
+Question Number : 35 Question Id : 8277881487 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Two institutes of Agri Research Body Indian Council of Agricultural Research (ICAR) have developed an indigenous vaccine for Lumpy
+Skin Disease in cattle which has spread across many States in the last few months. What is the name of the vaccine?
+Options :
+1. LumpyVac
+2. Lumpi-ProVacInd
+3. Lumpi-Vatvac
+4. VatVac
+Question Number : 36 Question Id : 8277881488 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+What is the name of the ISRO’s Virtual Space Museum that was launched by the Secretary, Department of Science, GOI / Chairman,
+ISRO on 10 August 2022, for public use, showcasing digital content pertaining to various ISRO missions in an interactive manner?
+Options :
+1. ISRO-MISSION
+2. SPACE-MUSEUM
+3. STARS
+4. SPARK
+Question Number : 37 Question Id : 8277881489 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+On 22 April 2022, Union Minister for Social Justice and Empowerment, Dr. Virendra Kumar launched Dr. Ambedkar Centre of
+Excellence at which University?
+Options :
+1. Banaras Hindu University, Varanasi
+2. Central University of South Bihar, Bodh Gaya
+3. Central University of Jharkhand, Ranchi
+4. North-Eastern Hill University, Shillong
+Question Number : 38 Question Id : 8277881490 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+
+--- PAGE 10/36 ---
+Correct Marks : 1 Wrong Marks : 0.33
+In July 2022, Small Industries Development Bank in India (SIDBI) entered into a partnership with which of the following banks for
+empowering Micro, Small, and Medium Enterprises (MSMEs)?
+Options :
+1. State Bank of India
+2. SVC Co-operative Bank Ltd
+3. Bharat Co-operative Bank
+4. Kalupur Commercial Co-operative Bank
+Question Number : 39 Question Id : 8277881491 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+In April 2022, NITI Aayog and UNICEF India signed a Statement of Intent (SoI) on Sustainable Development Goals (SDGs) with a focus
+on _______.
+Options :
+1. education
+2. children
+3. women
+4. newborn babies
+Question Number : 40 Question Id : 8277881492 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+In June 2022, which of the following districts of Andhra Pradesh was awarded one of the second edition of ‘Awards for Excellence in
+District Skill Development Planning’ (DSDP)?
+Options :
+1. Anantapur
+2. Chittoor
+3. Kurnool
+4. Prakasam
+Question Number : 41 Question Id : 8277881493 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Which institute has bagged the Sardar Patel Outstanding ICAR Institute Award 2021 (in the Large Institute Category) for its overall
+performance?
+Options :
+1. ICAR – National Academy of Agricultural Research Management (NAARM)
+2. ICAR – Central Research Institute for Dryland Agriculture (CRIDA)
+3. ICAR – Indian Institute of Millets Research
+4. ICAR – Indian Institute of Oilseeds Research
+Question Number : 42 Question Id : 8277881494 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+In August 2021, under the Swachh Bharat Mission and Swachh Survekshan assessment awards of the Union Ministry of Housing and
+Urban Affairs, Andhra Pradesh has now become the first state to have more than one 'Water Plus' certified city. How many such certified
+cities are there in Andhra Pradesh?
+Options :
+1. Two
+2. Three
+
+--- PAGE 11/36 ---
+3. Four
+4. Five
+Question Number : 43 Question Id : 8277881495 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+In January 2022, the Andhra Pradesh government announced an increase in the retirement age for its employees from 60 to _______
+years.
+Options :
+1. 62
+2. 63
+3. 64
+4. 65
+Question Number : 44 Question Id : 8277881496 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+As on 1 July 2022, in which of the following places of Andhra Pradesh did a 25MW floating Solar Power Project become operational?
+Options :
+1. Srisailam
+2. Simhadri
+3. Rajamahendravaram
+4. Vijayawada
+Question Number : 45 Question Id : 8277881497 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+In the Andhra Pradesh’s new cabinet formation in April 2022, which of the following Ministers is a first-time legislator?
+Options :
+1. Taneti Vanita
+2. Peddireddy Ramachandra Reddy
+3. Narayana Swamy
+4. Gudivada Amarnath
+Question Number : 46 Question Id : 8277881498 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+In July 2022, who was elected President of the Federation of Andhra Pradesh Chambers of Commerce and Industry (FAPCCI)?
+Options :
+1. Pulla Reddy
+2. Ramoji Rao
+3. Grandhi Mallikarjuna Rao
+4. Karunendra S Jasti
+Question Number : 47 Question Id : 8277881499 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+In July 2022, the Andhra Pradesh Industrial Infrastructure Corporation (APIIC) exchanged a Memorandum of Understanding (MoU) with
+which of the following banks for providing loans to the Micro, Small, and Medium Enterprises (MSMEs) in 39 industrial parks in the first
+phase and other MSMEs in the next phase?
+
+--- PAGE 12/36 ---
+Options :
+1. Union Bank
+2. Small Industries Development Bank of India (SIDBI)
+3. State Bank of India
+4. Punjab National Bank
+Question Number : 48 Question Id : 8277881500 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Who amongst the following from pargana Baraut in Uttar Pradesh mobilised the headmen and cultivators of chaurasee des (eighty-four
+villages) to rebel against the British?
+Options :
+1. Birjis Qadr
+2. Shah Mal
+3. Nawab Wajid Ali Shah
+4. Maulvi Ahmadullah Shah
+Question Number : 49 Question Id : 8277881501 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Calcutta Alipore Zoo was organised or established during the colonial period by which of the following British officials?
+Options :
+1. Lord Wellesley
+2. Dietrich Brandis
+3. Francis Buchanan
+4. Sir George Campbell
+Question Number : 50 Question Id : 8277881502 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+At the time of integration of Hyderabad State to the Union of India, which was the ruling dynasty?
+Options :
+1. Qutub Shahi
+2. Asaf Jahi
+3. Sayyads
+4. Nizam
+Question Number : 51 Question Id : 8277881503 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+In post independent India, in 1953, Andhra State was the first state to be formed on linguistic basis. Which of the following was the
+capital of this Andhra State?
+Options :
+1. Hyderabad
+2. Kurnool
+3. Amravati
+4. Nellore
+Question Number : 52 Question Id : 8277881504 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+
+--- PAGE 13/36 ---
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+What was the name of the operation launched by the Indian Army in September 1948, to integrate Hyderabad State with the Union of
+India?
+Options :
+1. Deccan
+2. Nizam
+3. Polo
+4. Hawk
+Question Number : 53 Question Id : 8277881505 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Under the provision of which Article of the Indian Constitution does the Governor of a state appoint the Chief Minister of the said state?
+Options :
+1. Article 159
+2. Article 160
+3. Article 163
+4. Article 164
+Question Number : 54 Question Id : 8277881506 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Which of the following is the first state in India to apply algorithms and data-science in public policy?
+Options :
+1. Delhi
+2. Andhra Pradesh
+3. Telangana
+4. Tamil Nadu
+Question Number : 55 Question Id : 8277881507 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+The Andhra Pradesh’s Single Desk Policy aims at providing pre-establishment and pre-operations approvals for businesses within how
+many days?
+Options :
+1. 15
+2. 21
+3. 30
+4. 60
+Question Number : 56 Question Id : 8277881508 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+DIGIT e-Governance platform, which is currently operational in Andhra Pradesh is associated with which department of the Government
+of Andhra Pradesh?
+Options :
+1. Energy
+2. Department of Information and Public Relations
+3. Municipal Administration and Urban Development
+4. School Education
+
+--- PAGE 14/36 ---
+Question Number : 57 Question Id : 8277881509 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+MEDHAS is an end-to-end solution provided by the National Informatics Centre – Andhra Pradesh State Centre (NIC – APSC) for which
+of the following sectors?
+Options :
+1. School Education
+2. Agriculture
+3. Medical Education
+4. Industry
+Question Number : 58 Question Id : 8277881510 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+The territories of different states and union territories under the Union of India is specified in which of the following Schedules?
+Options :
+1. First
+2. Second
+3. Third
+4. Fourth
+Question Number : 59 Question Id : 8277881511 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Andhra Pradesh Reorganisation Act, 2014, for bifurcation of Andhra Pradesh received the President's assent on which day?
+Options :
+1. 1 January 2014
+2. 1 March 2014
+3. 2 June 2014
+4. 1 July 2014
+Question Number : 60 Question Id : 8277881512 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+As per India’s Economic Survey 2021-22, as a percent of GDP, what was the gross tax revenue of the Central Government in 2019-20?
+Options :
+1. 6.7
+2. 8.3
+3. 9.9
+4. 13.2
+Question Number : 61 Question Id : 8277881513 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Under the Union Budget 2021-22, the National Monetisation Pipeline (NMP) is envisaged to serve as an essential roadmap for the asset
+monetisation of various brownfield infrastructure assets across various sectors. Which of the following sectors captures the highest share
+of the aggregate pipeline (NMP) value for the period between FY 2022 to FY 2025?
+Options :
+1. Railways
+
+--- PAGE 15/36 ---
+2. Roads
+3. Power
+4. Oil and gas pipelines
+Question Number : 62 Question Id : 8277881514 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+The net borrowing of the States for the year 2021-22 was fixed at what percentage of the Gross State Domestic Product (GSDP) of the
+States?
+Options :
+1. 2%
+2. 3%
+3. 4%
+4. 5%
+Question Number : 63 Question Id : 8277881515 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+The scheme ‘Unnat Bharat Abhiyan’, launched by the Government of India is associated with which sector?
+Options :
+1. School Education
+2. Higher Education
+3. Science and Technology
+4. Sports
+Question Number : 64 Question Id : 8277881516 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+In the year 2019-20, the Centre and States combined, spent how much as a percentage of GDP on the health sector?
+Options :
+1. 1.3
+2. 2.5
+3. 2.8
+4. 6.7
+Question Number : 65 Question Id : 8277881517 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+As per the Socio Economic Survey 2021-22 in Andhra Pradesh, under YSR Rythu Bharosa scheme, financial assistance is being provided
+to land owning farmer families of ______ per year including ₹6,000 from the Government of India under PM KISAN in three
+instalments.
+Options :
+1. ₹10,000
+2. ₹12,000
+3. ₹13,500
+4. ₹15,000
+Question Number : 66 Question Id : 8277881518 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+
+--- PAGE 16/36 ---
+As per Advance Estimates for 2021-22, which sector’s contribution to the Gross Value Added (GVA) at current prices for Andhra Pradesh
+is maximum?
+Options :
+1. Fishing and aquaculture
+2. Manufacturing
+3. Horticulture
+4. Live stock
+Question Number : 67 Question Id : 8277881519 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Kashmir valley is located in which of the following ranges of the Himalayas?
+Options :
+1. Ladakh
+2. Himadri
+3. Himachal
+4. Shiwaliks
+Question Number : 68 Question Id : 8277881520 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Which of the following hills is NOT located in the state of Meghalaya?
+Options :
+1. Miri
+2. Garo
+3. Khasi
+4. Jaintia
+Question Number : 69 Question Id : 8277881521 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Which of the following mountain passes is NOT located in the Western Ghats?
+Options :
+1. Thal ghat
+2. Bhor ghat
+3. Goran ghat
+4. Pal ghat
+Question Number : 70 Question Id : 8277881522 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Which is the largest salt water lake in India?
+Options :
+1. Chilika
+2. Pulicat
+3. Lonar
+4. Pachpadra
+Question Number : 71 Question Id : 8277881523 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+
+--- PAGE 17/36 ---
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+The state of Andhra Pradesh has the _______ largest coast line in the country with a length of 974 km.
+Options :
+1. second
+2. third
+3. fourth
+4. fifth
+Question Number : 72 Question Id : 8277881524 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Which district of Andhra Pradesh contains huge Uranium deposits?
+Options :
+1. Kadapa
+2. Srikakulam
+3. East Godavari
+4. Chittoor
+Question Number : 73 Question Id : 8277881525 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Up to December 2021, which of the following plant areas of plantation raised by the Andhra Pradesh Forest Development Corporation
+(APFDC) is maximum?
+Options :
+1. Coffee
+2. Cashew
+3. Bamboo
+4. Eucalyptus
+Question Number : 74 Question Id : 8277881526 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Which of the following is NOT one of the six agro climatic zones of Andhra Pradesh?
+Options :
+1. North costal zone
+2. Southern zone
+3. Scarce rainfall zone
+4. Low altitude and tribal area zone
+Question Number : 75 Question Id : 8277881527 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Which plants are called naked-seeded plants?
+Options :
+1. Gymnosperms
+2. Angiosperms
+3. Pteridophytes
+4. Bryophytes
+
+--- PAGE 18/36 ---
+Question Number : 76 Question Id : 8277881528 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Which of the following is NOT an example of class Amphibia?
+Options :
+1. Bufo
+2. Clarias
+3. Rana
+4. Hyla
+Question Number : 77 Question Id : 8277881529 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Brucellosis is an infectious disease caused by _______.
+Options :
+1. bacteria
+2. viruses
+3. fungi
+4. parasites
+Question Number : 78 Question Id : 8277881530 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Veterinary Biological and Research Institute in Andhra Pradesh is located at which place?
+Options :
+1. Vijayawada
+2. Visakhapatnam
+3. Nellore
+4. Kurnool
+Question Number : 79 Question Id : 8277881531 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+At which place in Andhra Pradesh was the Integrated Call Center (ICC) established on 30 May 2020, to strengthen the extension services
+and to address the problems and provide solutions to the farmers of the agriculture and allied sectors?
+Options :
+1. Vijayawada
+2. Gannavaram
+3. Kadapa
+4. Guntur
+Question Number : 80 Question Id : 8277881532 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+The National Disaster Management Authority (NDMA) in India is headed by the _______.
+Options :
+1. President
+2. Pime Minister
+3. Home Minister
+4. Chief of Defence Staff
+
+--- PAGE 19/36 ---
+Question Number : 81 Question Id : 8277881533 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Tropical Cyclone (TC), also known as ‘Cyclone’ is the term used globally to cover tropical weather systems in which winds equal or
+exceed the minimum of _____ km/h.
+Options :
+1. 44
+2. 56
+3. 62
+4. 75
+Question Number : 82 Question Id : 8277881534 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Which of the following is NOT one of the current activities of National Remote Sensing Centre to support disaster management support?
+Options :
+1. Near real time flood and cyclone monitoring and mapping in the country
+2. Forest fire alerts
+3. Spatial flood early warning
+4. Earthquake pedictions
+Question Number : 83 Question Id : 8277881535 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Out of 36 states and union territories in India, how many are disaster prone?
+Options :
+1. 18
+2. 24
+3. 27
+4. 29
+Question Number : 84 Question Id : 8277881536 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+In August 2021, the Plastic Waste Management Amendment Rules, 2021, was notified by the Government of India, which is aimed at
+phasing-out single use plastic by ______.
+Options :
+1. 2022
+2. 2023
+3. 2024
+4. 2025
+Question Number : 85 Question Id : 8277881537 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+In 2020, India ranked at which place globally in increasing its forest area between 2010 and 2020?
+Options :
+1. First
+2. Second
+
+--- PAGE 20/36 ---
+3. Third
+4. Fourth
+Question Number : 86 Question Id : 8277881538 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+India’s overall score on the NITI Aayog SDG India Index and Dashboard improved to ________ in 2020-21.
+Options :
+1. 57
+2. 60
+3. 64
+4. 66
+Question Number : 87 Question Id : 8277881539 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Which of the following states achieved the highest score on the NITI Aayog SDG India Index 2020-21?
+Options :
+1. Tamil Nadu
+2. Himachal Pradesh
+3. Kerala
+4. Andhra Pradesh
+Question Number : 88 Question Id : 8277881540 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+As on 31 December 2021, amongst the following, in which state has maximum sewerage infrastructure projects been created under the
+Namami Gange Mission since its inception?
+Options :
+1. Bihar
+2. Uttarakhand
+3. West Bengal
+4. Jharkhand
+Question Number : 89 Question Id : 8277881541 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+In which country was the 2022 Shanghai Cooperation Organization (SCO) Summit organised from 15 to 16 September 2022?
+Options :
+1. Uzbekistan
+2. Qatar
+3. Indonesia
+4. South Korea
+Question Number : 90 Question Id : 8277881542 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Which former president of the United States has won an Emmy Award for his narration in the Netflix documentary ‘Our Great National
+Parks’?
+
+--- PAGE 21/36 ---
+Options :
+1. George W Bush
+2. Bill Clinton
+3. Barack Obama
+4. Donald Trump
+Question Number : 91 Question Id : 8277881543 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+In which state did the Ministry of Ports, Shipping and Waterways announce building of the National Maritime Heritage Complex, in
+September 2022?
+Options :
+1. Andhra Pradesh
+2. Gujarat
+3. West Bengal
+4. Maharashtra
+Question Number : 92 Question Id : 8277881544 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+In September 2022, NITI Aayog and World Resources Institute (WRI), launched India's first National Electric Freight Platform- E-FAST
+India. The full form of E-FAST is:
+Options :
+1. Electric Freight Accelerator for Simulated Transport
+2. Electric Fast Accelerator for Sustainable Transport
+3. Electric Freight Accumulator for Sustainable Transport
+4. Electric Freight Accelerator for Sustainable Transport
+Question Number : 93 Question Id : 8277881545 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+How many drugs have been deleted from the revised National List of Essential Medicines (NLEM) 2022?
+Options :
+1. 46
+2. 36
+3. 26
+4. 56
+Question Number : 94 Question Id : 8277881546 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+According to the new Delhi School Bag Policy, the weight of the school bag of students between Class 1 and Class 10 should not be more
+than _____ of their body weight.
+Options :
+1. 15%
+2. 10%
+3. 20%
+4. 5%
+Question Number : 95 Question Id : 8277881547 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+
+--- PAGE 22/36 ---
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Lovely Choubey, Pinki, Nayanmoni Saikia and Rupa Rani Tirkey were part of which team that bagged gold medals at the Commonwealth
+Games 2022?
+Options :
+1. Field hockey
+2. Net ball
+3. Lawn bowls
+4. Squash
+Question Number : 96 Question Id : 8277881548 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+In which sport/game did Antim Panghal, a 17-year-old girl from Haryana, win the title of Under-20 World Champion in August 2022?
+Options :
+1. Wrestling
+2. Badminton
+3. Lawn tennis
+4. Shooting
+Question Number : 97 Question Id : 8277881549 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Who among the following was one of the flag bearers of India at the closing ceremony of the Commonwealth Games 2022 at
+Birmingham?
+Options :
+1. Nikhat Zareen
+2. Anshu Malik
+3. Sakshi Malik
+4. Vinesh Phogat
+Question Number : 98 Question Id : 8277881550 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+According to the State of Global Air 2020 report, air pollution in India killed more than _______ infants within a month of birth in 2019.
+Options :
+1. 119,000
+2. 118,000
+3. 117,000
+4. 116,000
+Question Number : 99 Question Id : 8277881551 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Which of the following is NOT a part of the human respiratory system?
+Options :
+1. Trachea
+2. Bronchi
+3. Larynx
+4. Schwann cell
+
+--- PAGE 23/36 ---
+Question Number : 100 Question Id : 8277881552 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+In which year was the National Disaster Management Act passed in India?
+Options :
+1. 2007
+2. 2005
+3. 2003
+4. 1999
+Question Number : 101 Question Id : 8277881553 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+To detect unclaimed radioactive materials and save public from its hazardous effects, the National Disaster Management Authority has
+planned to supply MRDS to States and UTs. What is the full form MRDS?
+Options :
+1. Magnetic Radiation Detection Systems
+2. Mobile Radiation Decoding Systems
+3. Mobile Radiation Detection Systems
+4. Mobile Radiation Detection Sources
+Question Number : 102 Question Id : 8277881554 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+By which year are targets set under the Sendai Framework for Disaster Risk Reduction (SFDRR) to be achieved by the Government of
+India?
+Options :
+1. 2030
+2. 2025
+3. 2032
+4. 2035
+Question Number : 103 Question Id : 8277881555 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+As of 31 March 2021, what is the total installed capacity of wind energy in India?
+Options :
+1. 29.25 GW
+2. 39.25 GW
+3. 49.25 GW
+4. 59.25 GW
+Question Number : 104 Question Id : 8277881556 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+What is the rank of India in the Renewable Energy Country Attractive Index 2021?
+Options :
+1. 7th
+
+--- PAGE 24/36 ---
+2. 5th
+3. 3rd
+4. 2nd
+Question Number : 105 Question Id : 8277881557 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+In the 2022 Global Index of Sustainable Development Goals, what is the rank of India out of 163 countries?
+Options :
+1. 111
+2. 131
+3. 121
+4. 141
+Question Number : 106 Question Id : 8277881558 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+The Barbil-Koira Valley, which has the highest number of iron ore mines which produce the largest quantity of India’s richest hematite
+iron deposit, is located in which state?
+Options :
+1. Maharashtra
+2. Gujarat
+3. Goa
+4. Odisha
+Question Number : 107 Question Id : 8277881559 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Which of the following rivers originates at Mahabaleshwar in Maharashtra, passes through Sangli and meets the sea in the Bay of Bengal
+at Hamsaladeevi in Andhra Pradesh?
+Options :
+1. Godavari
+2. Krishna
+3. Cauvery
+4. Mahanadi
+Question Number : 108 Question Id : 8277881560 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+The Rampa Rebellion was fought by Alluri Sitarama Raju against the oppressive Madras Forest Act, which was passed by the British in
+the year ________.
+Options :
+1. 1876
+2. 1878
+3. 1880
+4. 1882
+Question Number : 109 Question Id : 8277881561 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+
+--- PAGE 25/36 ---
+Correct Marks : 1 Wrong Marks : 0.33
+What is the name of the newspaper started by Tanguturi Prakasam?
+Options :
+1. Andhra Geeta
+2. Svarajya
+3. Kesari
+4. Swechha Bharatham
+Question Number : 110 Question Id : 8277881562 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Who among the following established a journal called ‘Viveka Vardhini’ for propagating his reforms in the social and literary fields?
+Options :
+1. Adivi Bapiraju
+2. Gurajada Appa Rao
+3. Kandukuri Veeresalingam
+4. Asavadi Prakasarao
+Question Number : 111 Question Id : 8277881563 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+In which year was the Centre for Good Governance (CGG) established by the Government of Andhra Pradesh?
+Options :
+1. 2003
+2. 2001
+3. 2005
+4. 2007
+Question Number : 112 Question Id : 8277881564 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Under the reign of which Chief Minister was the e-governance initiative ‘e-Pragati’ introduced in Andhra Pradesh?
+Options :
+1. YS Rajasekhara Reddy
+2. N Kiran Kumar Reddy
+3. Chandrababu Naidu
+4. Konijeti Rosaiah
+Question Number : 113 Question Id : 8277881565 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+In which year was the Andhra Pradesh Districts (Formation) Act passed?
+Options :
+1. 1969
+2. 1971
+3. 1974
+4. 1972
+Question Number : 114 Question Id : 8277881566 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+
+--- PAGE 26/36 ---
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+What percentage (approximately) of land area in Andhra Pradesh is occupied by red soil?
+Options :
+1. 56%
+2. 66%
+3. 46%
+4. 36%
+Question Number : 115 Question Id : 8277881567 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+What length of the river Krishna flows through Andhra Pradesh?
+Options :
+1. 385 km
+2. 485 km
+3. 285 km
+4. 185 km
+Question Number : 116 Question Id : 8277881568 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+How many institutions are listed in Schedule X of the Andhra Pradesh Reorganisation Act, 2014?
+Options :
+1. 107
+2. 57
+3. 97
+4. 67
+Question Number : 117 Question Id : 8277881569 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+At the time of bifurcation of Andhra Pradesh under the Andhra Pradesh Reorganisation Act, 2014, a promise was made to increase seats
+in the Legislative Assembly from 175 to ________.
+Options :
+1. 200
+2. 205
+3. 215
+4. 225
+Question Number : 118 Question Id : 8277881570 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+About ________ crore under capital heads is yet to be apportioned by the Centre even after 7 years of bifurcation of Andhra Pradesh.
+Options :
+1. ₹1,51,349
+2. ₹1,41,349
+3. ₹1,31,349
+4. ₹1,21,349
+
+--- PAGE 27/36 ---
+Question Number : 119 Question Id : 8277881571 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+In March 2022, the National Bank for Agriculture and Rural Development (NABARD) presented its annual agriculture credit plan for
+Andhra Pradesh with an increase of ______ per cent for 2022-23.
+Options :
+1. 10
+2. 15
+3. 20
+4. 25
+Question Number : 120 Question Id : 8277881572 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+As of December 2021, what is the state rank of Andhra Pradesh in India in terms of FDI inflows?
+Options :
+1. 10th
+2. 12th
+3. 14th
+4. 18th
+Question Number : 121 Question Id : 8277881573 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+In a sports academy for both boys and girls, the total number of students is 1188. For cricket there are 335 boys and some girls enrolled,
+for basketball the ratio of boys to girls is 9:4, for badminton the ratio of girls to boys is 4:3 and there were 43 more boys in basketball than
+in cricket. There are 112 girls (making up of 7/24th of the total girls in the academy) and 22 boys enrolled for kho-kho. Find the difference
+in the number of girls enrolled for basketball to those enrolled for badminton.
+Options :
+1. 88
+2. 82
+3. 76
+4. 70
+Question Number : 122 Question Id : 8277881574 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+
+--- PAGE 28/36 ---
+Options :
+1. Walk
+2. Car
+3. Bus
+4. Cycle
+Question Number : 123 Question Id : 8277881575 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Options :
+1. 198
+2. 192
+3. 185
+4. 171
+Question Number : 124 Question Id : 8277881576 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+
+--- PAGE 29/36 ---
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Options :
+1. 19:4
+2. 155:81
+3. 6:65
+4. 53:146
+Question Number : 125 Question Id : 8277881577 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Options :
+1. 1.63
+2. 1.67
+3. 1.71
+4. 1.78
+Question Number : 126 Question Id : 8277881578 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+The coefficient of range is 0.632 and the smallest value is 21, find the largest value. (Rounded to nearest whole number)
+Options :
+1. 88
+2. 93
+3. 102
+4. 113
+
+--- PAGE 30/36 ---
+Question Number : 127 Question Id : 8277881579 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+There are 40 students in a class. five students are picked out and their heights (in cm) are 150, 140, 142, 139, 151. calculate the standard
+deviation (approx.) of their heights.
+Options :
+1. 5.89
+2. 5.76
+3. 5.68
+4. 5.51
+Question Number : 128 Question Id : 8277881580 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Options :
+1. 198
+2. 175
+3. 162
+4. 144
+Question Number : 129 Question Id : 8277881581 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Options :
+1. 69
+2. 72
+3. 74
+4. 77
+
+--- PAGE 31/36 ---
+Question Number : 130 Question Id : 8277881582 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Options :
+1. 28.6
+2. 29.1
+3. 30.4
+4. 31.0
+Question Number : 131 Question Id : 8277881583 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+If the difference between Harmonic mean and Arithmetic mean is 40 and quotient of harmonic mean and arithmetic mean is 5.44, find
+Geometric mean (rounded off to whole number).
+Options :
+1. 18
+2. 21
+3. 23
+4. 25
+Question Number : 132 Question Id : 8277881584 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+The sum of Mean and Median is 53.6 and the difference of median and mean is 0.8, find mode.
+Options :
+1. 28.3
+2. 28.6
+3. 28.8
+4. 28.9
+Question Number : 133 Question Id : 8277881585 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Options :
+1. 3
+2. 4
+
+--- PAGE 32/36 ---
+3. 5
+4. 6
+Question Number : 134 Question Id : 8277881586 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Options :
+1. 22.25
+2. 22.71
+3. 23.12
+4. 23.38
+Question Number : 135 Question Id : 8277881587 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Options :
+1. 27500
+2. 28000
+3. 28500
+4. 29000
+Question Number : 136 Question Id : 8277881588 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+O, P, Q, R, S, T, U and V are eight family members, sitting around a square table, facing the centre of the table. Some of them are sitting
+at the corners while some are sitting at the exact centre of the sides.
+U and V are diagonally opposite to each other. P and T are diagonally opposite to each other. Q sits exactly between U and P. O is at the
+immediate right of T. S is second to the left of R. S is at the exact right of P. Who is sitting at the exact left of U?
+Options :
+1. S
+2. T
+3. Q
+4. O
+Question Number : 137 Question Id : 8277881589 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+
+--- PAGE 33/36 ---
+P, Q, R, S, T, U and Z each has an exam on a different day of a week starting from Monday and ending on Sunday of the same week.
+Q has an exam on Tuesday. Only P has an exam between T and U. Z has an exam before Q. Only S has an exam exactly between R and T.
+U doesn’t have an exam on Sunday. Who has an exam on Thursday?
+Options :
+1. S
+2. P
+3. R
+4. T
+Question Number : 138 Question Id : 8277881590 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Read the given statement and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be
+at variance with commonly known facts, decide which of the given conclusions logically follow(s) from the statement.
+Statement:
+“I don’t want to pursue online marriage matchmaking because I fear the platform is unsafe and can invite fraud.” - A told B.
+Conclusions:
+(i) A believes in self-respect and expects the same from his spouse.
+(ii) A wants to pursue marriage.
+Options :
+1. Only conclusion (i) follows
+2. Only conclusion (ii) follows
+3. Both the conclusions follow
+4. Neither conclusion (i) nor (ii) follows
+Question Number : 139 Question Id : 8277881591 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Seven boys K, L, M, N, O, P and Q are sitting in a straight row, facing the north. Q is sitting third to the right of L. O is sitting third to the
+left of M. K is sitting third to the right of N. L is at the immediate left of M. K is sitting at the immediate left of Q. If Q is sitting at the
+extreme right end of the row, who is sitting second from the left end of the row?
+Options :
+1. P
+2. N
+3. O
+4. M
+Question Number : 140 Question Id : 8277881592 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+If
+‘Q Ω T’ means ‘Q is the wife of T’,
+‘Q © T’ means ‘Q is the brother of the wife of T’,
+‘Q ¥ T’ means ‘Q is the father of T’,
+‘Q € T’ means ‘Q is the daughter of T’,
+‘Q = T’ means ‘Q is the son of T’,
+then how is V related to Y in the following expression?
+U ¥ V € W € X = Y
+Options :
+1. Son of the daughter’s son
+2. Son’s daughter
+3. Daughter of the son’s daughter
+4. Daughter
+
+--- PAGE 34/36 ---
+Question Number : 141 Question Id : 8277881593 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Options :
+1.
+2.
+3.
+4.
+Question Number : 142 Question Id : 8277881594 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Which two numbers should be interchanged to make the following equation correct?
+4 × 8 ÷ 2 + 12 – 13 = 3
+Options :
+1. 3, 4
+2. 12, 13
+3. 4, 8
+4. 2, 4
+
+--- PAGE 35/36 ---
+Question Number : 143 Question Id : 8277881595 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+If ‘×’ means ‘ ̶ ’, ‘+’ means ‘ ÷ ’, ‘ ̶ ’ means ‘+’, and ‘÷’ means ‘×’, what will be the value of the following expression?
+[{(6÷4) ̶ (18×12)}+(2-3)]+2
+Options :
+1. 1
+2. 2
+3. 3
+4. 4
+Question Number : 144 Question Id : 8277881596 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Select the number from among the given options that can replace the question mark (?) in the following series.
+4, 6, 8, 9, 16, 12, 32, 15, ?
+Options :
+1. 30
+2. 64
+3. 18
+4. 35
+Question Number : 145 Question Id : 8277881597 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Seven boxes L, M, N, O, P, Q and R are kept one over the other but not necessarily in the same order. R is kept immediately above Q.
+Only L is below O. Only three boxes are kept between Q and M. N is kept immediately above R. How many boxes are between M and O?
+Options :
+1. Two
+2. Three
+3. Four
+4. Five
+Question Number : 146 Question Id : 8277881598 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Select the option in which the letter-clusters share the same relationship as that shared by the given letter-clusters.
+GMT : IQZ
+TEL : VIR
+Options :
+1. GRE : ITG
+2. SAT : UEZ
+3. CAT: EYV
+4. GCE : IGL
+Question Number : 147 Question Id : 8277881599 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+
+--- PAGE 36/36 ---
+Correct Marks : 1 Wrong Marks : 0.33
+K, J, I, H, G and F live on six different floors of the same building. The lowermost floor in the building is numbered 1, the floor above it,
+number 2 and so on till the topmost floor is numbered 6.
+G lives on the floor immediately below I. H lives on floor number 2. Only K lives exactly between the floors occupied by I and J. Who
+lives on the lowermost floor?
+Options :
+1. G
+2. I
+3. F
+4. H
+Question Number : 148 Question Id : 8277881600 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+Read the given statements and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be
+at variance with commonly known facts, decide which of the given conclusions logically follow(s) from the statements.
+Statement:
+All chalks are mobs.
+All mobs are boards.
+All boards are tables.
+Conclusions:
+(I) Some tables are chalks.
+(II) All mobs are chalks.
+(III) No mob is chalk.
+Options :
+1. Only conclusion I follows
+2. Only conclusion II follows
+3. Either conclusion I or conclusion III follows
+4. None of the conclusions follow
+Question Number : 149 Question Id : 8277881601 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+If in a certain coding language ‘MATCH’ is written as ‘NCTDJ’ and ‘TABLE’ is written as ‘UCBMG’, then how will ‘TENIS’ be written
+in that coding language?
+Options :
+1. UGNJT
+2. UGNKU
+3. UGNJU
+4. UFNJU
+Question Number : 150 Question Id : 8277881602 Question Type : MCQ Option Shuffling : Yes Is Question Mandatory : No
+Calculator : None Response Time : N.A Think Time : N.A Minimum Instruction Time : 0 Negative Marks Display Text : 1/3
+Option Orientation : Vertical
+Correct Marks : 1 Wrong Marks : 0.33
+If in a certain coding language ‘HELP’ is written as ‘EHPL’ and ‘THEM’ is written as ‘HTME’, then how will ‘NEED’ be written in that
+coding language?
+Options :
+1. ENED
+2. ENDE
+3. EEND
+4. EDNE

@@ -1,0 +1,1084 @@
+--- PAGE 1/32 ---
+No. of Printed Pages : 32 SAE-106
+2017
+DATA APPRECIATION & INTERPRETATION
+PAPER V
+Time : 3 hours Maximum Marks : 150
+Instructions :
+(i) The question paper is in three sections. The candidate has to write answers to
+14 questions with 5 questions compulsorily from each of Section I and Section II
+and 4 questions from Section III. Each question carries 10 marks in case of
+Section I and Section II. Section III contains 4 passages, each of which contain,
+5 questions and each of them carry 2.5 marks.
+(ii) Enough space is available in the Answer Sheet for writing all answers. There is
+no provision for additional Answer Sheets.
+(iii) The candidate has to write his answers in the medium chosen by him only. If
+there is any deviation from paper to paper or part of the paper, the candidature
+would become invalid.
+(iv) Underlining or highlighting or putting special marks in answers would make the
+Answer Sheet invalid. Writing in different inks would also make the paper
+invalid. Candidates must use either blue or black ink only. Otherwise, the paper
+will be treated as invalid.
+(v) Though the paper in English is taken as standard for valuation under normal
+circumstances, if necessary, a balanced view would be taken after comparing
+English and Telugu versions.
+సూచనలు:
+(i) ,
+ప్శ్రన ప్త్రములో మూడు భాగములు ఉన్నవి. మొదటి ర ెండు భాగముల న్ ెండి అభ్యరి ధప్తిర భాగము
+, ,
+న్ ెండి త్ప్పనిసరధగా ఐద ప్శ్రనలు చొప్పపన్ మరధయు మూడవ భాగము న్ ెండి నాలుగు ప్శ్రనలకు
+14
+అన్గా మొత్తము ప్శ్రనలకు సమాధానాలు వ్ారయవలెన్ . మొదటి ర ెండు భాగములలో ప్తిర ప్శ్రనకు
+10
+మార్కులు ఉెంటాయి. మూడవ భాగములో నాలుగు ప్కరర్ణములు ఉన్నవి. ఒక్కుక ప్కరర్ణములో
+5 2.5
+ప్శ్రనలు ఉన్నవి మరధయు ఒక్కుకు ప్శ్రనకు మార్కులు కలవప.
+(ii) .
+సమాధాన్ప్త్మర ులోఅనినజవ్ాబులువ్ారయుటకుత్గధన్సథలముకలద అదన్ప్పసమాధాన్ప్త్మర ు
+.
+ఇచ్ ుసౌకర్యములేద
+SAE-106 1 P.T.O.
+
+--- PAGE 2/32 ---
+(iii) .
+అభ్యరిధతాన్ ఎన్ నక్కన్నమాధ్యమములోన జవ్ాబులువ్ారయవలెన్ ఒకప్శ్రనప్త్మర ుమరధయు
+,
+ఇెంక్కకప్శ్రనప్త్మర ులమధ్యక్ానీలేకఒక్ేప్శ్రనప్త్మర ులోక్ానీ ర ెండువ్ ర్కవ్ ర్కభాషలలో
+, .
+వ్ారసిన్టైత్ల ేజవ్ాబుప్త్మర ుమద ెంప్పచేయబడద
+(iv) ,
+జవ్ాబులక్ెం్రదగీత్గీసినాలేకహ ైలెైట్చేసినాలేకఏద ైనాప్తర ేయకమ ైన్గుర్తకపెటిినా జవ్ాబుప్త్రము
+. .
+మద ెంప్పచేయబడద అదేవిధ్ముగాజవ్ాబులువ్ ర్కవ్ ర్కర్ెంగులసిరాతోకూడావ్ారయరాద
+.
+క్ేవలమునీలిర్ెంగుసిరాక్ానీలేకన్లై సిరాక్ానీమాత్మర ేవ్ాడవలెన్ లేనిచోజవ్ాబుప్త్రము
+మద ెంప్పచేయబడద .
+(v)
+ప్శ్రనప్త్మర ుమద ెంప్పచేయున్ప్పడుఆెంగైములోనిప్త్మర ున్ ప్ారమాణికముగాతీస క్కన్నప్పటిక్ీ,
+అవసర్ెం అయితే ఆెంగైములోని మరధయు త లుగు లోని ప్త్మర ులన్ ప్రధశీలిెంచి, సెంత్ులనాత్మక
+నిర్ణయముతీస క్కన్బడుత్ుెంద .
+SECTION I
+I
+భాగము
+1. (a) A new right-angled triangle is obtained from an original isosceles
+right-angled triangle by reducing the length of one of the legs by 10%. No
+change is made in the length of the other leg. Determine
+(i) the percentage change in the length of the hypotenuse.
+(ii) the percentage change in the area.
+(iii) the percentage change in the perimeter.
+OR
+(b) The angle of elevation of an aeroplane from a point A on the ground is
+60. After a flight of 15 seconds horizontally, the angle of elevation
+changes to 30. If the aeroplane is flying at a speed of 200 m/s, then find
+the constant height from ground at which the aeroplane is flying.
+SAE-106 2
+
+--- PAGE 3/32 ---
+10
+(అ) ఒక సమద ిబాహు లెంబ క్ోణ తిరభ్ుజము యొకు ఒక ప్ాదము ప్ొడవపన్ శాత్ెం
+,
+త్గగెంధ చ్డము దాిరా (ర ెండవ ప్ాదములో ఏ మార్కప లేకుెండా) ఒక క్కరత్త లెంబ క్ోణ తిరభ్ుజము
+? ?
+ఏర్పడిెంద అప్పపడు ఈ క్ెం్ర ద వ్ాటిని కన్ గొన్ెండి
+(i) ?
+కర్ణము యొకు ప్ొడవపలో ఎెంత్ శాత్ెం మార్కప ఉెంద
+(ii) ?
+వ్ ైశాలయములో ఎెంత్ శాత్ెం మార్కప ఉెంద
+(iii) ?
+చ్ టిటక్కలత్లో ఎెంత్ శాత్ెం మార్కప ఉెంద
+లేక
+A 60
+(ఆ) న లపెై ఉన్న అన్ ఒక బెంద వప న్ ెండి పెైన్ ఎగుర్కత్ున్న విమాన్ము ఊర్ివ
+15 ,
+క్ోణములో ఉన్నద . విమాన్ము సెకెండైు సమాెంత్ర్ముగా ఎగధరధన్ త్ర్కవ్ాత్ ఆ ఊర్ివ
+30 200
+క్ోణము గా మారధెంద . విమాన్ము కన్ క సెకన్ కు మీటర్ై వ్ గముతో
+, ?
+ఎగుర్కత్ున్నటైత్ల ే ఆ విమాన్ము భ్ూమి న్ ెండి ఎెంత్ సథర్ి మ ైన్ ఎత్తులో ఎగుర్కత్ున్నద
+2. (a) Ram borrowed < 1,00,000 which he has to repay over six years in six
+annual installments at a rate of 7% simple interest per annum.
+Immediately he invests this money for the same period, which will earn
+him compound interest of 5% per annum. In a table, write down how
+much he has to repay each year and how much he is earning on the
+invested amount assuming that he does not at any time withdraw any of
+the invested amount or the interest. Also find out, will his earnings from
+this amount be more than the repaid amount in any year.
+OR
+(b) Ayesha, Bindu and Catherine invested amounts in the ratio 4 : 2 : 1
+respectively in a business they have started. The amount of time they
+will spend in running their business is in the ratio 1 : 2 : 8 respectively. It
+was decided that one-third of the profits each year will be divided among
+the three of them in the same ratio as their investments and two-third of
+the profits each year will be divided in the same ratio as the time
+dedicated to the functioning of the business. In a particular year the
+profit their business made was < 6 . 3 crores. Determine the earnings of
+Ayesha, Bindu and Catherine.
+SAE-106 3 P.T.O.
+
+--- PAGE 4/32 ---
+, 7
+(అ) రామ్ ఒక లక్ష ర్ూప్ాయలు సాలుక్్ శాత్ెం బార్క వడీ డ పెై అప్పపగా తీస క్కనానడు. అత్న్
+, ,
+బాక్ీని ఆర్క సెంవత్సరాలలో ఆర్క వ్ారికధ వ్ాయిదాలలో తీరాులి. అప్పప తీస క్కన్న వ్ ెంటన
+, 5
+రామ్ ఆ మొతతానిన అదే క్ాలానిక్్ సాలుక్్ శాత్ెం చ్క ర వడీ డ పెై పెటిటబడి క్్రెంద పెటిాడు.
+,
+అత్న్ పెటిటబడి న్ ెండి అసలు క్ానీ వడీ డ క్ానీ ఏ సమయములోన్ూ తిరధగధ తీస క్కన్డు. ఒక
+ప్టికి లో అత్న్ ప్తిర సెంవత్సర్ము బాక్ీలో ఎెంత్ తిరధగధ చ లిైెంచాలో మరధయు అదే విధ్ముగా
+, ,
+పెటిటబడిపెై అత్న్ ఎెంత్ సెంప్ాద సతాడో వ్ార యెండి. అదే విధ్ముగా ఏ సెంవత్సర్ములోన ైనా
+, ?
+అత్న్ చ లిైెంచిన్ బాక్ీ కెంటే అత్న్ సెంప్ాద ెంచిన్ మొత్తము ఎకుువగా ఉన్నదా కన్ గొన్ెండి
+లేక
+, 4 : 2 : 1
+(ఆ) ఆయిేషా బెంద మరధయు క్ేథరధన్ వ్ార్క ప్ారర్ెంభెంచిన్ ఒక వ్ాయప్ార్ములో వర్కసగా
+నిషపతితలో పెటిటబడి పెటిార్క. వ్ార్క వ్ాయప్ార్ము న్డప్టము క్ోసము వ్ చిుెంచే సమయము
+1 : 2 : 8 ,
+కూడా వర్కసగా నిషపతితలో ఉన్నద . సాలీనా వచేు లాభ్ములో మూడిెంట ఒక వెంత్ు
+,
+వ్ారధ వ్ారధ పెటిటబడుల నిషపతితలో ప్ెంచ్ క్ోవ్ాలని అదే విధ్ముగా సాలీనా లాభ్ములో
+,
+మూడిెంట ర ెండు వెంత్ులు వ్ార్క వ్ాయప్ారానిక్్ వ్ చిుెంచే సమయప్ప నిషపతితలో
+, ,
+ప్ెంచ్ క్ోవ్ాలని వ్ార్క నిర్ణయిెంచార్క. ఒక సెంవత్సర్ములో వ్ారధ వ్ాయప్ార్ము న్ ెండి లాభ్ము
+6.3 , , ?
+క్ోటై ర్ూప్ాయలు అయితే ఆయిేషా బెంద మరధయు క్ేథరధన్ై సెంప్ాదన్ కన్ గొన్ెండి
+3. (a) If a fair coin (a coin which shows heads or tails with equal probabilities
+when tossed) shows heads upon tossing, 4 numbers are selected from
+1, 2, 3, ... 100 (a number once selected is not selected again) and if tails
+shows up, 3 numbers are drawn from 3, 6, 9, 12, ... 99 (a number once
+selected is not selected again). Determine the probability of the event
+that the sum of the selected numbers is even.
+OR
+(b) Iron deficiency is known to exist in 28%, 14% and 5% of the people of
+three different tribes T1, T2 and T3 respectively. All the three tribes
+have equal population. An investigator selects a person from one of the
+tribes randomly, from the total population of the three tribes and
+examines for iron deficiency. It turns out that the selected person does
+not have the deficiency. Determine the probability that this person
+belonged to tribe (i) T1, (ii) T2, (iii) T3.
+SAE-106 4
+
+--- PAGE 5/32 ---
+(అ) ఒక ధ్ర్మ నాణెము (అన్గా ఎగర్వ్ సిన్ప్పపడు బొ మమ లేక బొ ర్కస ప్డుటకు సమాన్
+, 1, 2, 3, ... 100 ,
+సెంభావయత్ ఉన్నద ) బొ మమ కన్ క ప్డిన్టైత్ల ే సెంఖ్యల న్ ెండి నాలుగు
+సెంఖ్యలు (ఎెంపిక చేసిన్వ్ాటిని తిరధగధ ఎెంపిక చేయకుెండా) ఎెంపిక చేయబడతాయి. బొ ర్కస
+3, 6, 9, 12, ... 99
+కన్ క ప్డిన్టైత్ల ే న్ ెండి మూడు సెంఖ్యలు (ఎెంపిక చేసిన్వ్ాటిని తిరధగధ
+ఎెంపిక చేయకుెండా) ఎెంపిక చేయబడతాయి. ఎెంపిక చేయబడిన్ సెంఖ్యల మొత్తము ఒక సరధ
+?
+సెంఖ్య అవటానిక్్ కల సెంభావయత్న్ త లుప్ెండి
+లేక
+T1, T2 T3 , 28%, 14% 5%
+(ఆ) మరధయు అన మూడు త గలలో వర్కసగా మరధయు మెంద క్్
+ఇన్ ము లోప్ము ఉన్నద . మూడు త గల యొకు జనాభా సమాన్ముగా ఉన్నద . ఒక
+,
+ప్రధశోధ్కుడు మూడు త గల మొత్తము జనాభాన్ ెండి ఒక వయక్తని్ యాదృచిుకముగా ఎెంపిక
+, , ?
+చేసి ఇన్ ము లోప్మున్కు ప్రీక్ిెంచ్గా అత్నిక్్ ఇన్ ము లోప్ము లేదని త లిసిన్ద అత్న్
+(i) T1, (ii) T2, (iii) T3 ?
+త గలకు చ ెంద టకు కల సెంభావయత్న్ కన్ గొన్ెండి
+4. (a) The average height of all the 99 boys of a class is 143 cm and the median
+height of the class is 139.5 cm. Further, the height of the first child taller
+than the one with median height is 140.5 cm. Another boy joins this
+class. With this addition, the average height of the class reduces by
+1 mm. Determine
+(i) the height of the new entrant to the class.
+(ii) the median height of the 100 boys.
+OR
+(b) The average height of all the hundred girls of the class is 140 cm. The
+average height of 40% of the girls of the class, whose heights are more
+than the class average is 143 cm, while the heights of the rest of the 60%
+are less than the average. Two girls whose heights are 145 cm and
+144 cm left the class and two girls whose heights are 142 cm and 137 cm
+joined the class.
+Answer the following questions :
+(i) What is the average height of the girls in the present class ?
+(ii) The heights of what percentage of the girls is more than the
+average ?
+SAE-106 5 P.T.O.
+
+--- PAGE 6/32 ---
+99 143
+(అ) ఒక త్ర్గతిలో ఉన్న మొత్తము బాలుర్ సగటట ఎత్తు సెెంటీమీటర్ైక. త్ర్గతి లోని
+139.5
+బాలుర్ ఎత్తుల యొకు మధ్యగత్ము సెెంటీమీటర్ైక. మధ్యగత్ప్ప ఎత్తు ఉన్న బాలుని
+140.5
+ఎత్తు కెంటే ఎకుువ ఎత్తు ఉన్న మొదటి బాలుని ఎత్తు సెెంటీమీటర్ైక. క్కరత్తగా ఇెంక్కక
+,
+బాలుడు త్ర్గతిలో చేరాడు. ఈ చేరధకతో త్ర్గతిలోని బాలుర్ సగటట ఎత్తు ఒక మిలీైమీటర్
+త్గగెంధ ద . క్ెం్ర ద వ్ాటిని కన్ గొన్ెండి
+(i) ?
+క్కరత్తగా చేరధన్ బాలుని ఎత్తు ఎెంత్
+(ii) 100 ?
+మెంద బాలుర్ ఎత్తుల మధ్యగత్ము ఎెంత్
+లేక
+100 140
+(ఆ) ఒక త్ర్గతిలోని మొత్తము మెంద బాలికల సగటట ఎత్తు సెెంటీమీటర్ైక. త్ర్గతిలో
+40 ,
+శాత్ెం బాలికలు త్ర్గతి సగటట కెంటే ఎకుువ ఎత్తుగా ఉనానర్క. వ్ారధ సగటట ఎత్తు
+143 60
+సెెంటీమీటర్ైక. మిగధలిన్ శాత్ెం మెంద బాలికలు సగటట ఎత్తు కెంటే త్కుువ ఎత్తుగా
+145 144
+ఉెంటార్క. సెెంటీమీటర్ైక మరధయు సెెంటీమీటర్ైక ఎత్తు గల ఇదదర్క బాలికలు త్ర్గతిని
+142 137
+వదలి వ్ ళ్ైలర్క మరధయు సెెంటీమీటర్ైక మరధయు సెెంటీమీటర్ైక ఎత్తు గల ఇదదర్క
+బాలికలు త్ర్గతిలో క్కరత్తగా చేరార్క.
+:
+క్ెం్ర ద వ్ాటిక్్ సమాధానాలు కన్ గొన్ెండి
+(i) ?
+ప్సర త త్ెం త్ర్గతిలో ఉన్న బాలికల సగటట ఎత్తు ఎెంత్
+(ii) , ?
+త్ర్గతి లోని బాలికలలో ఎెంత్ శాత్ెం సగటట ఎత్తు కెంటే ఎకుువ ఎత్తుగా ఉనానర్క
+5. (a) 10,000 monkeys are living in a forest and their population grows at a rate
+of 10% per annum. After 3 years, that is just at the beginning of the
+th
+4 year, an epidemic causes deaths at a rate of 2% per month for
+3 months. After that there are no deaths due to the epidemic and the
+growth rate is again 10% per annum. Determine the population size of
+the monkeys in the forest at the end of 4 years and 3 months.
+OR
+(b) The male population of a certain species grows at a rate of 1.3% per
+annum and that of the female population of the species grows at a rate of
+1.2% per annum for the first 3 years, after which the population growth
+rates of both males and females are at 1.25% per annum. After 5 years
+the male population is 1,00,000 and the female population is 1,10,000.
+What were their population sizes in the beginning ?
+SAE-106 6
+
+--- PAGE 7/32 ---
+10,000
+(అ) ఒక అడవిలో క్ోత్ులు నివసిసత నానయి మరధయు వ్ాటి జనాభా సెంవత్సరానిక్్
+10 ,
+శాత్ెం చొప్పపన్ పెర్కగుత్ుెంద . మూడు సెంవత్సర్ముల త్ర్కవ్ాత్ అన్గా సరధగగా నాలుగవ
+, , 2 , 3
+సెంవత్సర్ము మొదటైల ఒక అెంటట వ్ాయధ ప్బర లి న లకు శాత్ెం చొప్పపన్ న లల వర్కు
+క్ోత్ులు చ్నిప్ోయాయి. త్ర్కవ్ాత్ ఆ వ్ాయధ వలన్ ఏ చావప లేద మరధయు జనాభా వృది
+10 ,
+సెంవత్సరానిక్్ శాత్ెం చొప్పపన్ ఉన్నద . నాలుగు సెంవత్సర్ముల మూడు న లల త్ర్కవ్ాత్
+?
+అడవిలో క్ోత్ుల జనాభా ఎెంత్
+ల ేక
+, 1.3%
+(ఆ) ఒక జాతిక్్ చ ెంద న్ మగ జనాభా వ్ారికధ వృది రేటటతో పెర్కగుత్ుెంద . అదే జాతిక్్ చ ెంద న్
+1.2%
+ఆడ జనాభా వ్ారికధ వృది రేటటతో పెర్కగుత్ుెంద . మొదటి మూడు సెంవత్సర్ములు పెై
+,
+వృది రేటైతో జనాభా పెరధగధన్ త్ర్కవ్ాత్ ఆధ్ మరయధ ు మగ జనాభాల వ్ారిధక వృది రేటట
+1.25% 5 , 1,00,000
+గా ఉెంటటెంద . సెంవత్సర్ముల త్ర్కవ్ాత్ మగ జనాభా మరధయు ఆడ
+1,10,000 , ?
+జనాభా అయితే మొదటైల వ్ారధ జనాభాల సెంఖ్య ఎెంత్
+SAE-106 7 P.T.O.
+
+--- PAGE 8/32 ---
+SECTION II
+II
+భాగము
+6. (a) Given below is a pie diagram that represents data of 5,000 students of a
+university. The numbers in the circle are angles of the respective sections
+of circle and the letters denote the following :
+A : Undergraduate female students,
+B : Undergraduate male students,
+C : Male research scholars,
+D : Female research scholars,
+E : Masters’ female students,
+F : Masters’ male students.
+Answer the following questions :
+(i) How many female students are enrolled in this university ?
+(ii) What is the percentage of female research scholars among all the
+research scholars ?
+(iii) What percentage of male students are undergraduate students ?
+(iv) What is the number of female undergraduate students ?
+(v) What percentage of female students are not research scholars ?
+OR
+SAE-106 8
+
+--- PAGE 9/32 ---
+(b) The bars represent the number of male and female cell phone users (on
+Y-axis) in a town in different age groups indicated (on X-axis) in the bar
+chart. Each user has only one cell phone. The age interval includes the
+number in the lower limit and below the number in the upper limit. (For
+example : 15 – 20 means 15 years and above to just less than 20 years).
+Answer the following questions :
+(i) What is the total number of cell phones ?
+(ii) What percentage of the total cell phones are used by females ?
+(iii) In which age group are females the largest proportion of cell phone
+users ?
+(iv) What is the difference in the percentage of female cell phone users
+of age less than 40 years and those of 40 years of age and above ?
+(v) From the given data can we determine the percentage of people in
+the town who own cell phones ? If your answer is yes, determine it,
+and if your answer is no, explain why.
+SAE-106 9 P.T.O.
+
+--- PAGE 10/32 ---
+(pie) 5,000
+(అ) క్ెం్ర ద ఇవిబడిన్ పెై చిత్మర ు ఒక విశ్ి విదాయలయములోని మెంద విదాయర్ికల
+,
+దతతాెంశాలన్ చ్ూపిసత ెంద . వృత్తము లోని సెంఖ్యలు ఆయా వృత్త ఖ్ెండముల యొకు
+:
+క్ోణములన్ త లియచేసతాయి మరధయు అక్షరాలు ఈ క్ెం్ర ద వ్ాటిని త లియచేసతాయి
+A : ,
+అెండర్ గార డుయయిేట్ మహిళ్ల విదాయర్ికలు
+B : ,
+అెండర్ గార డుయయిేట్ ప్పర్కష విదాయర్ికలు
+C : ,
+ప్రధశోధ్న్ విదాయర్ికలలో ప్పర్కషులు
+D : ,
+ప్రధశోధ్న్ విదాయర్ికలలో మహిళలు
+E : ,
+ప్ోస్టి గార డుయయిేట్ మహిళ్ల విదాయర్ికలు
+F : .
+ప్ోస్టి గార డుయయిేట్ ప్పర్కష విదాయర్ికలు
+:
+క్ెం్ర ద ప్శ్ర నలకు జవ్ాబులు వ్ార యెండి
+(i) ?
+విశ్ి విదాయలయములో ఎెంత్ మెంద మహిళ్ల విదాయర్ికలు ఉనానర్క
+(ii) ?
+మొత్తము ప్రధశోధ్న్ విధాయర్ికలలో మహిళ్ల ప్రధశోధ్న్ విదాయర్ికల శాత్ెం ఎెంత్
+(iii) ?
+ప్పర్కష విదాయర్ికలలో ఎెంత్ శాత్ెం అెండర్ గార డుయయిేట్ ప్పర్కష విదాయర్ికలు ఉనానర్క
+(iv) ?
+ఎెంత్ మెంద మహిళ్ల అెండర్ గార డుయయిేట్ విదాయర్ికలు ఉనానర్క
+(v) ?
+మహిళ్ల విదాయర్ికలలో ప్రధశోధ్న్ విదాయర్ికలు క్ాని వ్ారధ శాత్ెం ఎెంత్
+లేక
+SAE-106 10
+
+--- PAGE 11/32 ---
+, X- ,
+(ఆ) క్ెం్ర ద ఇచిున్ బార్ చార్ి లో వయో సమూహాల ప్ర్ముగా ( అక్షముపెై ఇచిున్ద ) ఒక
+ప్టిణములోని ప్పర్కష మరధయు మహిళ్ల చ్ర్వ్ాణి వినియోగదార్కల సెంఖ్య ఉన్నద
+Y-
+( అక్షముపెై ఇచిున్ద ). ఒక వినియోగదార్కని వదద ఒక్ే చ్ర్వ్ాణి ఉన్నద . వయస స
+, , ,
+అెంత్ర్ము క్ెం్ర ద ప్రధమితి సెంఖ్యన్ కలుప్పక్కని పెై ప్రధమితి సెంఖ్య వర్కు ఆ సెంఖ్యన్
+15 – 20 , 15
+కలుప్కుెండా చ్ూపిసత ెంద . (ఉదాహర్ణకు అన్గా సెంవత్సర్ములు మరధయు
+, 20
+అెంత్ కన్న ఎకుువ వయస స న్ ెండి సెంవత్సర్ముల లోప్లి వయస స వర్కు)
+:
+క్ెం్ర ద వ్ాటిక్్ సమాధానాలు వ్ార యెండి
+(i) ?
+మొత్తము చ్ర్వ్ాణుల సెంఖ్య ఎెంత్
+(ii) , ?
+మొత్తము చ్ర్వ్ాణులలో మహిళలు ఎెంత్ శాత్ెం చ్ర్వ్ాణులు వ్ాడతార్క
+(iii)
+ఏ వయో సమూహములో మహిళలు అతి ఎకుువ అన్ ప్ాత్ములో చ్ర్వ్ాణులు
+?
+వినియోగధసత నానర్క
+(iv) 40 40,
+మహిళ్ల చ్ర్వ్ాణి వినియోగదార్కలలో ఏెండై లోప్ప వ్ారధ శాత్ము మరధయు ఆ
+?
+పెై బడిన్ వయస స వ్ారధ శాత్ములలో భేదము ఎెంత్
+(v) , ,
+ఇచిున్ దతతాెంశ్ములన్ ెండి ప్టిణములోని ప్జర లలో ఎెంత్ శాత్ెం మెంద చ్ర్వ్ాణి
+(owners) ? ,
+సిెంత్ దార్కలు ఉనానరో త లుప్గలరా త లుప్గలిగధన్చో ఆ శాతానిన
+? ?
+కన్ గొన్ెండి త లుప్లేనిచో క్ార్ణములు వ్ార యెండి
+SAE-106 11 P.T.O.
+
+--- PAGE 12/32 ---
+7. (a) Given below is data from the 2011 Census of India on number of workers :
+Total Population 1,21,05,69,573
+Males 62,31,21,843
+Females 58,74,47,730
+Total workers in India 48,17,43,311
+Male workers in India 33,18,65,930
+Female workers in India 14,98,77,381
+Total workers in Andhra Pradesh 3,94,22,906
+Male workers in Andhra Pradesh 2,41,85,595
+Female workers in Andhra Pradesh 1,52,37,311
+Answer the following questions :
+(i) What percentage of the population of India are females ?
+(ii) What percentage of workers in the entire country are females ?
+(iii) What is the proportion of female workers among all workers in the
+State of Andhra Pradesh ?
+(iv) Among the female workers in the country, what percent of them
+are from Andhra Pradesh ?
+(v) Among the male workers in the country, what percent of them are
+from Andhra Pradesh ?
+OR
+SAE-106 12
+
+--- PAGE 13/32 ---
+(b) Given below is data of percentages of cultivators and agricultural
+labourers in the total work force in India and in Andhra Pradesh from
+the 2011 Census of India.
+India
+Total Agricultural
+Gender Cultivators
+Workers Labourers
+Male 33,18,65,930 24·92% 18·56%
+Female 14,98,77,381 24·01% 55·21%
+Andhra Pradesh
+Percentage
+Percentage
+Total of
+Gender of
+Workers Agricultural
+Cultivators
+Labourers
+Male 2,41,85,595 18·02% 33·62%
+Female 1,52,37,311 14·01% 58%
+Answer the following questions :
+(i) What is the number of female agricultural labourers in the whole
+country and in Andhra Pradesh ?
+(ii) What is the number of male cultivators in the whole country and
+in Andhra Pradesh ?
+(iii) Among all the female cultivators in the country, what percent are
+from Andhra Pradesh ?
+(iv) Among all the male agricultural labourers in the country, what
+percent are from Andhra Pradesh ?
+(v) How many workers in India are not in the profession of cultivators
+or agricultural labourers ?
+SAE-106 13 P.T.O.
+
+--- PAGE 14/32 ---
+, 2011 :
+(అ) క్ెం్ర ద భార్త్ జన్గణన్ న్ ెండి శార మికుల సెంఖ్యపెై దతతాెంశ్ములు ఇవిబడిన్వి
+1,21,05,69,573
+మొత్తము జనాభా
+62,31,21,843
+ప్పర్కషులు
+58,74,47,730
+సత్లీ ు
+48,17,43,311
+భార్త్ లో మొత్తము శార మికులు
+33,18,65,930
+భార్త్ లో ప్పర్కష శార మికులు
+14,98,77,381
+భార్త్ లో సత్ ీ శార మికులు
+3,94,22,906
+ఆెంధ్ ర ప్దర ేశ్ లో మొత్తము శార మికులు
+2,41,85,595
+ఆెంధ్ ర ప్దర ేశ్ లో ప్పర్కష శార మికులు
+1,52,37,311
+ఆెంధ్ ర ప్దర ేశ్ లో సత్ ీ శార మికులు
+:
+క్ెం్ర ద ప్శ్ర నలకు సమాధానాలు వ్ార యెండి
+(i) .
+భార్త్ జనాభాలో ఎెంత్ శాత్ెం మహిళలు ఉనానర్క
+(ii) , ?
+మొత్తెం దేశ్ెంలో శార మికులలో మహిళల శాత్ెం ఎెంత్
+(iii) .
+ఆెంధ్ ర ప్దర ేశ్ లోని మొత్తము శార మికులలో మహిళ్ల శార మికుల అన్ ప్ాత్ము ఎెంత్
+(iv) , ?
+దేశ్ెం లోని మహిళ్ల శార మికులలో ఆెంధ్ ర ప్దర ేశ్ లోని మహిళ్ల శార మికుల శాత్ెం ఎెంత్
+(v) , ?
+దేశ్ెం లోని ప్పర్కష శార మికులలో ఆెంధ్ ర ప్దర ేశ్ లోని ప్పర్కష శార మికుల శాత్ెం ఎెంత్
+లేక
+SAE-106 14
+
+--- PAGE 15/32 ---
+2011 ,
+(ఆ) క్ెం్ర ద ఇవిబడిన్ ప్టికి లలో జన్ గణన్ ప్క్ర ార్ము భార్త్ లో మరధయు ఆెంధ్ ర ప్దర ేశ్ లో
+,
+ఉన్న మొత్తము శార మికులలో వయవసాయదార్కల మరధయు వయవసాయ కూలీల శాత్ెం
+ఇవిబడిన్ద .
+భార్త్
+లిెంగము మొత్తెం శార మికులు వయవసాయదార్కలు వయవసాయ కూలీలు
+33,18,65,930 24·92% 18·56%
+ప్పర్కషులు
+14,98,77,381 24·01% 55·21%
+మహిళలు
+ఆెంధ్ ర ప్దర ేశ్
+లిెంగము మొత్తెం శార మికులు వయవసాయదార్కలు వయవసాయ కూలీలు
+2,41,85,595 18·02% 33·62%
+ప్పర్కషులు
+1,52,37,311 14·01% 58%
+మహిళలు
+:
+క్ెం్ర ద ప్శ్ర నలకు జవ్ాబులు వ్ార యెండి
+(i)
+మొత్తము దేశ్ెం లోన్ూ మరధయు ఆెంధ్ ర ప్దర ేశ్ లోన్ూ మహిళ్ల వయవసాయ కూలీల
+?
+సెంఖ్య ఎెంత్
+(ii)
+మొత్తము దేశ్ెం లోన్ూ మరధయు ఆెంధ్ ర ప్దర ేశ్ లోన్ూ ప్పర్కష వయవసాయదార్కల
+?
+సెంఖ్య ఎెంత్
+(iii) ,
+మొత్తము దేశ్ెం లోని మహిళ్ల వయవసాయదార్కలలో ఆెంధ్ ర ప్దర ేశ్ లోని మహిళ్ల
+?
+వయవసాయదార్కల శాత్ెం ఎెంత్
+(iv) ,
+మొత్తము దేశ్ెం లోని ప్పర్కష వయవసాయ కూలీలలో ఆెంధ్ ర ప్దర ేశ్ లోని ప్పర్కష
+?
+వయవసాయ కూలీల శాత్ెం ఎెంత్
+(v)
+భార్త్ దేశ్ెంలో వయవసాయదార్కలు లేక వయవసాయ కూలీలు క్ాని శార మికులు ఎెంత్
+?
+మెంద ఉనానర్క
+SAE-106 15 P.T.O.
+
+--- PAGE 16/32 ---
+8. (a) Given below are details of milk produced (in million tons) and number of
+eggs (in millions) during the years 2004 – 05 to 2013 – 14 in India.
+Years Milk Eggs
+2004 – 05 92·5 45201
+2005 – 06 97·1 46235
+2006 – 07 102·6 50663
+2007 – 08 107·99 53583
+2008 – 09 112·2 55562
+2009 – 10 116·6 60267
+2010 – 11 121·8 63024
+2011 – 12 127·9 66450
+2012 – 13 132·4 69731
+2013 – 14 137·7 74752
+Answer the following questions :
+(i) What is the average milk production per annum based on the
+given data ?
+(ii) Find out the rate of increase in milk production from 2006 – 07 to
+2007 – 08 and similarly from 2010 – 11 to 2011 – 12. In which
+period is the rate of increase more ?
+(iii) Find out the rate of increase in egg production from 2006 – 07 to
+2007 – 08 and similarly from 2010 – 11 to 2011 – 12. In which
+period is the rate of increase more ?
+(iv) Between milk and eggs, which commodity showed higher rate of
+increase in production in the period from 2004 – 05 to 2013 – 14 ?
+(v) In which years is the production of eggs less than the average of
+the production for all the years ?
+OR
+SAE-106 16
+
+--- PAGE 17/32 ---
+(b) The table below gives the quantity of rice, wheat, millet and pulses
+produced in million tons in India.
+Year Rice Wheat Millets Pulses
+2010 – 11 96 86·9 43·4 18·2
+2011 – 12 105·3 94·9 42 17·1
+2012 – 13 105·2 93·5 40 18·3
+2013 – 14 106·7 95·9 43·3 19·3
+Answer the following questions :
+(i) Which crops showed increase in production for 2011 – 12 compared
+to the previous year ?
+(ii) For which crop was the rate of increase in production the highest
+during 2012 – 13 to 2013 – 14 ?
+(iii) Between which two consecutive years was the rate of increase in
+rice production the least ?
+(iv) Between which two consecutive years was the rate of increase in
+production of pulses the highest ?
+(v) What are the percentage increases or decreases in the production
+of the 4 crops from 2010 – 11 to 2013 – 14 in case of each crop ?
+SAE-106 17 P.T.O.
+
+--- PAGE 18/32 ---
+2004 – 05 2013 – 14
+(అ) న్ ెండి సెంవత్సరాలలో భార్త్ లో ఉత్పతిత అయిన్ ప్ాల (మిలియన్
+టన్ నలలో) మరధయు గుర డై (మిలియన్ైలో) వివరాలు క్్రెంద ఇవిబడిన్వి.
+సెంవత్సర్ము ప్ాలు గురడైు
+2004 – 05 92·5 45201
+2005 – 06 97·1 46235
+2006 – 07 102·6 50663
+2007 – 08 107·99 53583
+2008 – 09 112·2 55562
+2009 – 10 116·6 60267
+2010 – 11 121·8 63024
+2011 – 12 127·9 66450
+2012 – 13 132·4 69731
+2013 – 14 137·7 74752
+:
+క్ెం్ర ద ప్శ్ర నలకు జవ్ాబులు వ్ార యెండి
+(i) , ?
+ఇచిున్ దతతాెంశ్ముల ప్క్ర ార్ము ప్ాల ఉత్పతితలో వ్ారికధ సగటట ఎెంత్
+(ii) 2006 – 07 2007 – 08 , 2010 – 11 2011 – 12
+న్ ెండి క్్ అదే విధ్ముగా న్ ెండి
+?
+క్్ ప్ాల ఉత్పతితలో వృది రేటట కన్ గొన్ెండి. ర ెండిటిలో ఏద ఎకుువ
+(iii) 2006 – 07 2007 – 08 , 2010 – 11 2011 – 12
+న్ ెండి క్్ అదే విధ్ముగా న్ ెండి
+?
+క్్ గుర డై ఉత్పతితలో వృది రేటట కన్ గొన్ెండి. ర ెండిటిలో ఏద ఎకుువ
+(iv) , 2004 – 05 2013 – 14
+ప్ాలు మరధయు గుర డైలో ఏద న్ ెండి వర్కు గల క్ాలములో
+?
+ఉత్పతితలో అధ క వృది రేటట చ్ూపిెంద
+(v) , ,
+ఏ సెంవత్సరాలలో గుర డై ఉత్పతిత అనిన సెంవత్సర్ముల సగటట కనాన త్కుువ
+?
+ఉన్నద
+లేక
+SAE-106 18
+
+--- PAGE 19/32 ---
+, , ,
+(ఆ) క్ెం్ర ద ప్టికి లో భార్త్ లో ఉత్పతిత అయిన్ బయయము గోధ్ మలు త్ృణ ధానాయలు మరధయు
+.
+ప్ప్పప ధానాయల ఉత్పతిత వివరాలు ఇవిబడిన్వి
+సెంవత్సర్ము బయయము గోధ్ మలు త్ృణ ధానాయలు ప్ప్పప ధానాయల
+2010 – 11 96 86·9 43·4 18·2
+2011 – 12 105·3 94·9 42 17·1
+2012 – 13 105·2 93·5 40 18·3
+2013 – 14 106·7 95·9 43·3 19·3
+:
+క్ెం్ర ద ప్శ్ర నలకు జవ్ాబులు వ్ార యెండి
+(i) , 2011 – 12
+అెంత్కు క్త్్ర ెం సెంవత్సర్ముతో ప్ోలిసతత లో ఏ ప్ెంటలలో పెర్కగుదల
+?
+ఉన్నద
+(ii) 2012 – 13 2013 – 14
+న్ ెండి క్్ ఏ ప్ెంట యొకు ఉత్పతితలో అత్యధ క వృది రేటట
+?
+ఉన్నద
+(iii) ,
+ఏ ర ెండు వర్కస సెంవత్సరాల మధ్య బయయము యొకు ఉత్పతితలో వృది అతి త్కుువ
+?
+ఉన్నద
+(iv) ,
+ఏ ర ెండు వర్కస సెంవత్సరాల మధ్య ప్ప్పప ధానాయల యొకు ఉత్పతితలో వృది అతి
+?
+ఎకుువ ఉన్నద
+(v) 2010 – 11 2013 – 14 ,
+న్ ెండి వర్కు నాలుగు ప్ెంటల ఉత్పతిత లో వృది లేక
+, ?
+త్గగుదల శాత్ములు ఒక్కకు ప్ెంటకు ఎెంత్గా ఉన్నవి
+9. (a) Write down what should come next in the following sequences :
+(i) 1, 5, 14, 30, ?
+(ii) B , C , E , G , ?
+4 9 25 49
+(iii) 5, 13, 25, 41, 61, ?
+(iv) 2, 4, 15, 70, ?
+(v) 1, 4, 27, 256, ?
+OR
+SAE-106 19 P.T.O.
+
+--- PAGE 20/32 ---
+(b) Write down what should come next in the following sequences :
+(i) 1, 9, 25, 49, ?
+(ii) 1, 3, 7, 15, 31, ?
+(iii) A , D , G , J , ?
+1,26 4,23 7,20 10,17
+(iv) 3, 15, 105, 945, ?
+(v) 0, 2, 6, 12, 20, ?
+:
+(అ) క్ెం్ర ద అన్ కరమములలో త్ర్కవ్ాత్ వచ్ ు దానిని కన్ గొన్ెండి
+(i) 1, 5, 14, 30, ?
+(ii) B , C , E , G , ?
+4 9 25 49
+(iii) 5, 13, 25, 41, 61, ?
+(iv) 2, 4, 15, 70, ?
+(v) 1, 4, 27, 256, ?
+లేక
+:
+(ఆ) క్ెం్ర ద అన్ కరమములలో త్ర్కవ్ాత్ వచ్ ు దానిని కన్ గొన్ెండి
+(i) 1, 9, 25, 49, ?
+(ii) 1, 3, 7, 15, 31, ?
+(iii) A D G , J ?
+1,26 , 4,23 , 7,20 10,17 ,
+(iv) 3, 15, 105, 945, ?
+(v) 0, 2, 6, 12, 20, ?
+10. (a) (i) Ashok could solve 12 problems in an assignment while Bharat
+could solve 10. Both of them solved 6 problems, while neither of
+them could solve 6 of them. In total, how many problems were
+there in the assignment ?
+(ii) Which of the following Venn diagrams best represents the
+statement, ‘‘In a village all the people speak Telugu. Some of them
+can speak Hindi, and some can speak English, but none of those
+who can speak English can speak Hindi” ?
+SAE-106 20
+
+--- PAGE 21/32 ---
+(iii) The sum of numbers on opposite faces of a dice add to 7. What are
+the numbers on the other 4 visible faces, if the dice lands in a way
+that the number facing up is 4 ?
+(iv) In a certain code language CRAZY is ETCBA. How should we
+write DRAGON in this code language ?
+(v) The details of ages of patients admitted in a hospital in a year is
+given in the table below. Find out the mean and mode of the age of
+the patients.
+Age of Patients Number of
+in years Patients
+5 – 15 6
+15 – 25 11
+25 – 35 21
+35 – 45 23
+45 – 55 14
+55 – 65 5
+OR
+(b) (i) 60% of the students in a class are boys and 40% are girls. What is
+the average mark of the girls if the average of the entire class is 60
+and the average of the boys is 55 ?
+(ii) Which of the following Venn diagrams best represents the
+statement, ‘‘In a class some students passed in Mathematics and
+some passed in Physics. Everybody who passed in Social Sciences
+passed in both Mathematics and Physics’’ ?
+SAE-106 21 P.T.O.
+
+--- PAGE 22/32 ---
+(iii) In an industry there are 40 workers, 25 of them are men and 15
+are women. To conduct negotiations with the management, they
+wanted to select 2 representatives amongst them through a
+lottery. Names of all the workers were written on chits and
+dropped in a box. From the box, two chits were drawn, one after
+another. Find out the probability of (a) both the representatives
+being male; (b) both the representatives being female and (c) one
+being male and the other being a female representative.
+(iv) If 96534 is 56430, what is 827189 ?
+(v) In the table below, the working life of 225 electrical appliances are
+given in hours. Find out the average and mode of the working life
+of the appliances.
+Working Life Number of
+in hours Appliances
+0 – 20 10
+20 – 40 35
+40 – 60 52
+60 – 80 61
+80 – 100 38
+100 – 120 39
+(i) , 12 10
+(అ) ఇచిున్ నియత్ సమసయలలో అశోక్ సమసయలు సాధ ెంచ్ గలిగాడు. భ్ర్త్
+6 6
+సమసయలు సాధ ెంచ్గలిగాడు. ఇదదర్ూ సమసయలు సాధ ెంచ్గలిగార్క. సమసయలన్
+?
+ఇదదర్ూ సాధ ెంచ్లేకప్ోయినార్క. మొత్తము ఎనిన సమసయలు ఇవిబడినాయి
+(ii) , ?
+క్ెం్ర ద ఇవిబడిన్ వ్ న్ చిత్రములలో ఏ చిత్రము ఈ ప్రకటన్న్ చ్కుగా సూచిసత ెంద
+‘‘
+ఒక గార మములొ ప్జర లెందర్ూ త లుగు మాటైాడతార్క. క్కెంత్మెంద ఆెంగై భాషలో
+మాటైాడగలర్క మరధయు క్కెంత్ మెంద హిెందీలో మాటైాడగలర్క. అయితే ఎవర ైతే ఆెంగై
+, ’’ ?
+భాషలో మాటైాడగలరో వ్ార్క హిెందీలో మాటైాడలేర్క
+SAE-106 22
+
+--- PAGE 23/32 ---
+(iii) 7
+ఒక ప్ాచిక యొకు ఎద ర ద ర్క ముఖ్ాల మీద సెంఖ్యల మొత్తము . ఆ ప్ాచిక
+, ,
+వ్ సిన్ప్పపడు నాలుగు ఉన్న ముఖ్మున్ పెైన్ చ్ూప్పత్ున్నటైత్ల ే కన్బడే మిగతా
+?
+నాలుగు ముఖ్ాల మీద సెంఖ్యలు ఏవి
+(iv) CRAZY ETCBA , DRAGON
+ఒక క్ోడ్ భాషలో కన్ క అయితే ఆ భాషలో
+?
+ఏమవపత్ుెంద
+(v)
+క్ెం్ర ద ఇవిబడిన్ ప్టికి లో ఒక సెంవత్సర్ములో ఒక ఆస ప్తిరలో చేరధన్ రోగుల
+వయస స వివర్ములు ఇవిబడిన్వి. రోగుల వయస స యొకు అెంక మధ్యమము
+.
+మరధయు బాహుళకములన్ కన్ గొన్ెండి
+రోగధ వయస స సెం. లలో రోగుల సెంఖ్య
+5 – 15 6
+15 – 25 11
+25 – 35 21
+35 – 45 23
+45 – 55 14
+55 – 65 5
+లేక
+(i) 60% 40% 60
+(ఆ) ఒక త్ర్గతిలో బాలుర్క మరధయు బాలికలు. త్ర్గతి మార్కుల సగటట
+55 , ?
+మరధయు బాలుర్ మార్కుల సగటట అయితే బాలికల మార్కుల సగటట ఎెంత్
+(ii) , ?
+క్ెం్ర ద ఇవిబడిన్ వ్ న్ చిత్రములలో ఏ చిత్రము ఈ ప్రకటన్న్ చ్కుగా సూచిసత ెంద
+“ఒక త్ర్గతిలో క్కెంత్ మెంద విదాయర్ికలు గణిత్ములోన్ మరధ క్కెంత్మెంద భౌతిక
+శాసతమీ ులోన్ ఉతీతర్ణకలెైనార్క. సాెంకిక శాసతమీ ులో ఉతీతర్ణకలు అయిన్వ్ార్ెందర్ూ
+గణిత్ము మరధయు భౌతిక శాసతమీ ులో కూడా ఉతీతర్ణకలెైనార్క”
+SAE-106 23 P.T.O.
+
+--- PAGE 24/32 ---
+(iii) 40 25
+ఒక ప్రధశ్మర లో మెంద క్ారధమకులు ఉనానర్క. వ్ారధలో మెంద ప్పర్కషులు
+15
+మరధయు మెంద మహిళలు. యజమాన్యముతో చ్ర్ులు జర్ప్డానిక్్ వ్ారధ న్ ెండి
+ఇదదర్క ప్తిర నిధ్ లన్ లాటరీ ప్దితి దాిరా ఎన్ నక్కన్ టకు వ్ారధ పతర్ైన్ చీటీల పెై వ్ార సి
+ఒక పెటిల్ ో వ్ శార్క. త్ర్కవ్ాత్ ఆ పెటి ్ న్ ెండి ర ెండు చీటీలు ఒక దాని త్ర్కవ్ాత్ ఒకటి
+? , ( ) ?
+తీశార్క ప్తిర నిధ్ లలో అ ఇదదర్ూ మగ వ్ార్క అయిేయ సెంభావయత్ ఎెంత్
+( ) ? ( ) ,
+ఆ ఇదదర్ూ మహిళలు అయిేయ సెంభావయత్ ఎెంత్ ఇ ఒక సత్ీ ఒక ప్పర్కషుడు ఉెండే
+?
+సెంభావయత్ ఎెంత్
+(iv) 96534 56430 , 827189 ?
+కన్ క అయితే ఏమవపత్ుెంద
+(v) 225
+క్ెం్ర ద ఇవిబడిన్ ప్టికి లో విద యత్ ప్రధకర్ముల ప్ని చేయు జీవిత్ క్ాలము
+గెంటలలో ఇవిబడిెంద . ప్రధకర్ముల యొకు ప్ని చేయు జీవిత్ క్ాలప్ప అెంక
+.
+మధ్యమము మరధయు బాహుళకములన్ కన్ గొన్ెండి
+ప్ని చేయు జీవిత్ ప్రధకర్ముల
+క్ాలము (గెంటలలో) సెంఖ్య
+0 – 20 10
+20 – 40 35
+40 – 60 52
+60 – 80 61
+80 – 100 38
+100 – 120 39
+SAE-106 24
+
+--- PAGE 25/32 ---
+SECTION III
+III
+భాగము
+Read each of the four passages given below and answer all five questions at the end of
+each passage.
+4
+క్ెం్రద ప్కరర్ణములన్ చ్ద వి, ప్తిర ప్కరర్ణము చివర్ ఇవిబడిన్ ఐద ప్శ్రనలకు త్ప్పనిసరధగా జవ్ాబులు
+వ్ారయెండి.
+11. Ageing in India
+India, like many other developing countries in the world, is presently
+witnessing rapid ageing of its population. Though majority of India lives in
+rural areas, urbanization, modernization and globalization have led to changes
+in economic structure, erosion of societal values and the weakening of social
+institutions such as the joint family. In this changing economic and social
+milieu, the younger generation is searching for new identities encompassing
+economic independence and redefined social roles within, as well as outside, the
+family. The changing economic structure has reduced the dependence of rural
+families on land, which had provided strength to bonds between generations.
+The traditional sense of duty and obligation of the younger generation towards
+their older generation is being eroded. The older generation is caught between
+the decline in traditional values on the one hand and the absence of an
+adequate social security system, on the other. It is desired to explore the nature
+and extent of the social and economic pressures that are impinging on
+intergenerational relationships and the implications for policy towards
+1 1
+improving the wellbeing of India’s senior citizens. 5 2 =12 marks
+2 2
+(i) Do you concur with the argument that more financial resources are made
+available for development, then with rising family income, the aged
+persons would be taken care of ? Justify your answer.
+(ii) Examine the present status of joint family system.
+(iii) After a lifetime of working, raising families and contributing to nation
+building, don’t you think that senior citizens deserve to retire with
+dignity ? Substantiate your answer.
+(iv) Explain the consequences of the problem of unemployment on the care of
+aged persons.
+(v) Examine the effect of rural – urban disparities on ageing population.
+SAE-106 25 P.T.O.
+
+--- PAGE 26/32 ---
+భారతదేశంలో వృదాధప్యం
+ప్ప్ర ెంచ్ెంలోని ఎననన అభవృది చ ెంద త్ున్న దేశాలలో లాగే భార్త్దేశ్ జనాభా విషయెంలో కూడా
+వృదిాప్యము పెర్గడానిన గమనిెంచ్వచ్ ు. ఎకుువ శాత్ెం ప్జర ానీకము గార మాలలో నివసిసత న్నప్పటిక్ీ,
+ప్టిణీకర్ణ, ఆధ్ నీకర్ణ మరధయు ప్ప్ర ెంచీకర్ణ వలై ఆరికధ నిరామణెంలో మార్కపలు సెంభ్విసత నానయి,
+సామాజిక విలువలు క్డణిసత నానయి. ఉమమడి కుటటెంబము వెంటి సామాజిక సెంసథలు నిరీిర్యము
+అవపత్ునానయి. మార్కత్ున్న ఆరథకధ , సామాజిక వ్ాతావర్ణము వలన్ యువత్ క్కత్త క్కత్త ప్తర ేయకత్ల
+క్ోసెం, గురతెంధ ప్ప క్ోసెం తాప్త్యర ప్డుత్ునానర్క. వ్ార్క కుటటెంబము లోప్ల మరధయు బ ైట ఆరికధ
+సాిత్ెంత్యర ము మరధయు ప్పన్రధిచిెంచిన్ సామాజిక ప్ాత్రల క్ోసెం వ్ త్ుకుత్ునానర్క. మార్కత్ున్న ఆరథకధ
+నిరామణాల వలై, గార మీణ కుటటెంబాలు భ్ూమిపెై ఆధార్ప్డడెం త్గగుత్ున్నద . భ్ూమి వలన్ త్రాల మధ్య
+అన్ బెంధ్ెం ప్టిషిముగా ఉెండేద . ప్ాత్ త్రానిన యువత్ర్ెం బాగా చ్ూస క్ోవ్ాలన సాెంప్దర ాయ
+విలువలు ప్సర త త్ెం క్డణిసత నానయి సాెంప్దర ాయ విలువలు అడుగెంటిప్ోత్ున్న ఈ త్ర్ెంలో సర ైన్.
+సామాజిక భ్దత్ర వయవసథ కూడా లేకప్ోవడెం, ర ెండిెంటి మధ్య చికుుకు ప్ోయిన్ ప్ాత్ త్ర్ెం వ్ారధక్్ అెంటే
+వృదిాప్యెంలో ఉన్నవ్ారధక్్ బాధాకర్ెం, విచార్కర్ెం బార్త్దేశ్ప్ప వరధషఠ ప్ౌర్కల క్ేమము, శయరర స స,
+భ్దత్ర లన్ ; అెంత్ర్ త్రాల సెంబెంధ్ బాెంధ్వ్ాయలన్ మ ర్కగుప్రధచే కమర ెంలో ఎద ర్యిేయ సామాజిక, ఆరథకధ
+?
+ఒతితళైన్ త్టిటక్ోవ్ాలిసన్ అవసరాలన్ గురతెంధ చి సర ైన్ మారగాలు అన ిపిెంచ్వలసిన్ అవసర్ము ఉెంద
+(i) , ,
+ఎకుువ ఆరికధ వన్ర్కలు కన్ క అభవృదిక్ ్ లభ్యమ ైతే కుటటెంబ ఆదాయము పెర్గడము వలన్
+?
+వృది లన్ సరధగా చ్ూస కుెంటార్న వ్ాదన్తో మీర్క ఏక్ీభ్విసతారా మీ జవ్ాబున్
+?
+సమరిెంధ చ్ క్ోెండి
+(ii) ?
+ఉమమడి కుటటెంబ వయవసథ యొకు ప్సర త త్ సథతిి ని ప్రధశీలిెంచ్ెండి
+(iii) , ,
+జీవిత్ క్ాలెం ప్నిచేసిన్ త్ర్కవ్ాత్ కుటటెంబ ప్ోషణలో జాతి నిరామణెంలో త్న్ వెంత్ు ప్ాత్న్ర
+,
+ప్ోషిెంచిన్ త్ర్కవ్ాత్ వరధషఠ ప్ౌర్కలు గౌర్వమ ైన్ విశార ెంత్ జీవిత్ము ప్ొెందాలని మీర్క
+? ?
+భావిసత నానరా మీ జవ్ాబున్ సమరిెంధ చ్ క్ోెండి
+(iv) ?
+వృది ల విషయములో శ్దర ి పెై నిర్కదోయగ సమసయ వలన్ కలిగే ప్రధణామాలన్ వివరధెంచ్ెండి
+(v) – ?
+వృది ల పెై గార మీణ ప్టిణ అెంత్రాల ప్భర ావ్ానిన ప్రధశీలిెంచ్ెండి
+SAE-106 26
+
+--- PAGE 27/32 ---
+12. Nature of Environmental Economics
+Economics is a well-developed discipline of social sciences with an
+extensive body of laws and theories on how an economic system works.
+Economics as a discipline is usually explained in its four dimensions. Firstly,
+how to create and distribute wealth. Secondly, how to use this wealth for
+improving the welfare of the people. And thirdly, if welfare promotion is the end
+of economics why is it that all needs of the people cannot be met. The discipline
+of Economics here focuses on the basic premise of scarcity of resources. Every
+economic decision is based on making choices and trade-offs. This decision
+includes what is produced, how it is produced, how much will be produced, and
+how it will be distributed. The fourth dimension of Economics is about how an
+economy works and grows to increasingly meet the needs of the people over
+time. All these dimensions are in many ways related to the use of natural
+resources, both presently available and that will be used in future. Economists
+study how incentives affect people’s behaviour. Though the classical and
+neoclassical economists made specific comments about the significance of
+nature and environment, they did not include them in their theories. The
+Economics, which does not take into account environment is incomplete and
+dangerous. Today, the subject of Environmental Economics fills this gap in
+1 1
+economic analysis. 5 2 =12 marks
+2 2
+(i) Is there any necessity of having a separate branch of study on
+Environmental Economics ?
+(ii) What are the inter-linkages between economy and environmental
+protection ?
+(iii) Examine the nature of environmental problems in the context of
+sustainable development.
+(iv) What is the right balance between use of natural resources and
+environmental protection ? Cite major environmental cases.
+(v) Examine the poverty – environment nexus.
+SAE-106 27 P.T.O.
+
+--- PAGE 28/32 ---
+ప్ర్యయవరణ అరథ శయస్రప్ు సవభావము
+.
+సామాజిక శాసతాాలలో అర్థశాసతెంీ ఎెంతో అభవృదద చ ెంద ెంద ఒక ఆరథకధ విధాన్ెం ఏ విధ్ెంగా
+ప్నిచేసత ెందో. త లియచేసత చ్టిాలతో, సిదిాెంతాలతో కూడుకున్న అర్థ శాసతాానిన. సహజెంగా నాలుగు
+క్ోణాలలో విశైరషిెంచ్వచ్ ున్ . మొదటిద , సెంప్దన్ ఎటైా సృషిిెంచాలి, ఎటైా ప్ెంచాలి అన ద . ర ెండవద ఈ
+సెంప్దన్ ప్జర ా సెంక్ేమాభవృదిక్ ్ ఏ విధ్ెంగా ఉప్యోగధెంచాలి. మూడవద, ప్జర ా సెంక్ేమాభవృదియి ే
+?
+అర్థ శాసతప్ీ ప దేయయమ ైన్టై్లతే ప్జర ావసరాలు ఎెంద కు తీర్డెం లేద ఇకుడ వన్ర్కల క్కర్త్
+ప్ధర ానాెంశ్ెంగా అర్ి శాసతెంీ దృషిి సారధసత ెంద . ప్తిర ఆరథధక నిర్ణయెం ఎెంపికల ఆధార్ెంగా జర్కగుత్ుెంద ఏయిే
+? ? ?
+వసత వపలన్ ఉత్పతిత చేయాలి ఏ విధ్ెంగా ఉత్పతిత చేయాలి ఎెంత్ మొత్తెంలో ఉత్పతిత చ యాలి అన
+,
+విషయాలపెై ఆధార్ప్డి ఆరథకధ నిర్ణయాలు జర్కగుతాయి అర్థ శాసతెంీ లోని నాలుగవ క్ోణెం క్ాలకమర ేణా
+పెరధగే ప్జర ల అవసరాలన్ తీర్పడానిక్్ ఆరథకధ వయవసథ ఏ విధ్ెంగా ప్నిచేయాలో, ఏ విధ్ెంగా అభవృది
+,
+చ ెందాలో త లియజేసత ెంద . పెై నాలుగు క్ోణాలు ప్సర త త్ెం సహజ వన్ర్కలన్ ఏ విధ్ెంగా ఉప్యోగధెంచాలి
+అలాగే భ్విషయత్ లో ఏ విధ్ెంగా వ్ాడాలి అన వ్ాటిక్్ సెంబెంధ ెంచిన్వి. ప్వర ర్తన్కు ప్ోరతాసహక్ాలు ప్జర లన్
+ఏ విధ్ెంగా ప్భర ావిత్ెం చేసతాయో అర్థ శాసతవ్ీ త్తలు. అధ్యయన్ెం చేసతార్క. ఇప్పటివర్కు సెంప్దర ాయ, న్వయ
+సెంప్దర ాయ అర్ి శాసతవ్ీ త్తలు ప్కర ృతి, ప్రాయవర్ణాలపెై ప్తర ేయకెంగా వ్ాయఖ్ాయనిెంచిన్ప్పటిక్ీ, వ్ారధ వ్ారధ
+సిదిాెంతాలలో వ్ాటిని ప్రవ్ శ్పెటిలేద . ప్రాయవర్ణానిన ప్రధగణన్లోక్్ తీస క్కన్ని అర్థ శాసతమీ ు
+అసెంప్ూర్ణము మరధయు ప్రమాదకర్ము అవపత్ుెంద . ఆరథకధ విశైషర ణలోని ఈ అెంత్రానిన ప్రాయవర్ణ అర్థ
+శాసతెంీ ప్సర త త్ెం ప్ూరధసత ెంద .
+(i)
+ప్రాయవర్ణ అర్థ శాసతాానిన అధ్యయన్ెం చేయడానిక్్ ఒక ప్తర ేయక శాఖ్ ఉెండాలిసన్ అవసర్ెం
+?
+ఉెందా వ్ాయఖ్ాయనిెంచ్ెండి.
+(ii) ?
+ఆరథకధ వయవసథ – ప్రాయవర్ణ ప్రధర్క్షణల మధ్య గల అెంత్ర్ సెంబెంధాలు ఏమిటి
+(iii) .
+స సథర్ి అభవృది సెందర్భములో ప్రాయవర్ణ సమసయల సిభావ్ానిన ప్రధశీలిెంచ్ెండి
+(iv) ,
+సహజ వన్ర్కల ఉప్యోగధత్కు ప్రాయవర్ణ ప్రధర్క్షణకు సర ైన్ సమత్ులయత్ ఏ విధ్ెంగా
+?
+ఉెండాలి ప్ధర ాన్ ప్రాయవర్ణ క్ేస లన్ వ్ాయజయములన్ వివరధెంచ్ెండి.
+(v) .
+పతదరధకెం – ప్రాయవర్ణెం మధ్య సెంబెంధానిన ప్రధశీలిెంచ్ెండి
+SAE-106 28
+
+--- PAGE 29/32 ---
+13. National Integration
+From time immemorial, it has been seen that different races fought
+battles against each other on Indian soil and got themselves firmly entrenched
+but India has assimilated them all into her blood. The conflicting cultures were
+at last modeled by this country to her own genesis and pattern.
+India has witnessed a great diversity of faith and religion from the
+earliest times, but this has not interfered with the peaceful pursuit of the ways
+of life of different sections. Christians and Jews who came to India in the first
+century of the Christian era found hospitable reception here. After several
+centuries, the Parsees and Muslims received equal reception. Ever since then,
+India has been marked by the prosperity of communities belonging to different
+religions. The people of India value the importance of natural integration.
+The dictum of catholicity of Indian culture of ‘live and let live’, has
+forged through ages, different religious races and cultures of the vast country,
+into a united concept of oneness that is India. It was this inherent unity and
+communal harmony which enabled India to fight against the British might as
+1 1
+one body for freedom. 5 2 =12 marks
+2 2
+(i) What does the Indian Constitution say in its Preamble and through
+different Articles about National Integration directly or indirectly ?
+(ii) What are the challenges to National Integration in India ?
+(iii) “Integration arises from intimacy with our emotions and our bodies, as
+well as with our thoughts.’’ Comment.
+(iv) Explain the factors promoting National Integration.
+(v) “India presents a spectacle of museum of tongues.” Comment.
+SAE-106 29 P.T.O.
+
+--- PAGE 30/32 ---
+జాతీయ సమ ైక్యత
+ఈ భార్త్దేశ్ గడీ మీద అనాద క్ాలెం న్ ెంచి అన క జాత్ుల మధ్య యుదదాలు జరధగాయి
+ఇకుడకు వచిున్ ప్తిర జాతి ఈ భ్ూమి, న లలో వ్ ళైలన్ కునానయి. భార్త్ వ్ారధని త్న్లో
+ఇముడుుకుెంద . భన్న సెంసుృత్ుల. సమేమళన్ెంగా ఉెంటూన , త్న్ సెంప్దర ాయానిన, త్న్ ప్దితిని
+భార్త్దేశ్ెం క్ాప్ాడుకుెంటూ వసత ెంద .
+ప్ూర్ిక్ాలెం న్ ెంచి భార్త్దేశ్ెంలో విశాిసాలకు, మతాల మధ్య వ్ ైర్కధాయలు ఉెంటూన ఉనానయి
+క్ానీ. ఈ వ్ ైర్కధాయలు ఎప్పపడు కూడా మాన్వపల ప్రశాెంత్ జీవనానిక్్ భ్ెంగెం కలిగధెంచ్లేద మొదటి
+శ్తాబదెంలో వచిున్ క్స్ర ియి న్ై , యూద లు మొదలెైన్ వ్ారధని సాిగతిెంచార్క భార్తీయులు ఇకుడ.
+వ్ారధక్్ ఆతీమయ ఆతిదాయనిన ఇచాుర్క. ఆ త్రాిత్ చాలా శ్తాబదాల త్రాిత్ వచిున్ ముసైిములన్ ,
+ప్ారీీలన్ కూడా అదే విధ్ముగా ఆహాినిెంచార్క నివసిెంచ్డములో ఏరధక్్ ఎప్పపడు ఏ సమసయలూ
+రాలేద . అప్పటి న్ ెండి ఇప్పటి వర్కు భన్న మతాలతో, విభన్న సమూహలలో భార్త్ దేశ్ెం
+స సెంప్న్నముగా విలసిలైత్ూన ఉన్నద . భార్త్ ప్జర లు జాతీయ సమ ైకయతా భావ్ానిక్ే ప్ార ముఖ్యత్న్ ,
+విలువన్ ఇచాుర్క, ఇసతూన ఉనానర్క.
+‘ ’
+భార్త్దేశ్ సెంసుృతి గొప్పదన్మే బత్ుకు, బతిక్్ెంచ్ . త్ర్త్రాలన్ ెంచి భన్న మతాల, జాత్ుల
+సమేమళన్ెంగా అెందరధని త్న్లో కలుప్పకుని దేశ్మెంతా ఒకట ే అన భావన్తో నిలిచిెంద . అెంతేక్ాద ,
+బటర ిష్ కు వయతిరేకెంగా ఒకు తాటిపెై ప్ోరాడటానిక్్, భార్త్దేశ్ెం సాిత్ెంత్యర ెం సాధ ెంచ్డానిక్్ కూడా
+మత్సామర్సయెం ఎెంత్గానన తోడపడిెంద . భార్త్దేశ్ెం ఒకుటే, భార్తీయులెందర్ూ ఒకుటే అని చాటి
+చ పిపెంద .
+(i)
+భార్త్ రాజాయెంగెం త్న్ ప్వ్ర శిక దాిరా మరధయు వివిధ్ ఆధ కర్ణాల దాిరా జాతీయ సమ ైకయత్పెై
+, ?
+ప్త్ర యక్షెంగా క్ానీ ప్రోక్షెంగా క్ానీ ఏమి త లియజేసత ెంద
+(ii) ?
+భార్త్దేశ్ెంలో జాతీయ సమ ైకయత్ ఎద రొున సవ్ాళళు ఏమిటి
+(iii) ‘‘ , ,
+మన్ భావ్ోదేిగాలతో శ్రీరాలతో మరధయు ఆలోచ్న్లతో కూడిన్ సానినహిత్యెం అననయన్యత్ల
+.’’ .
+న్ ెండి సమ ైకయత్ ఉదభవిసత ెంద వ్ాయఖ్ాయనిెంచ్ెండి
+(iv) .
+జాతీయ సమీకయత్న్ పెెంప్ొెంద ెంచే క్ార్క్ాలన్ వివరధెంచ్ెండి
+(v) ‘‘ .’’ .
+భార్త్దేశ్ెం భాషల సెంగహార లయాలన్ెంద ెంచే దృశాయనిన ప్దర రధీసత ెంద వ్ాయఖ్ాయనిెంచ్ెండి
+SAE-106 30
+
+--- PAGE 31/32 ---
+14. Economic Infrastructure
+Infrastructure of an economy can be classified into economic and social
+infrastructures. Economic infrastructure includes energy, transportation,
+communications, banking, insurance, finance and science & technology.
+It has been mentioned in the World Development Report that the
+adequacy of infrastructure helps determine one country’s success to another
+country’s failure in diversifying production, expanding trade, coping with
+population growth, reducing poverty and improving environmental conditions.
+Good infrastructure raises productivity and lowers production cost. It should
+not only develop rapidly, rather its development should precede the
+development of other sectors. In the recent decades, development of basic
+infrastructure provided a fertile ground for development of the tertiary sector
+1 1
+which contributes the maximum value to the GDP. 5 2 =12 marks
+2 2
+(i) Examine the importance of tertiary sector in the India economy.
+(ii) Identify the infrastructural problems of transport sector in India.
+(iii) What are the major sources of energy in India ?
+(iv) Discuss the structure of banking in India.
+(v) Write a note on infrastructure needed by the Information Technology
+sector.
+ఆర్థథక్ అవస్థయప్నధ వనరులు
+ఒక ఆరథకధ వయవసథ యొకు అవసథాప్నా వన్ర్కలన్ ఆరథకధ మరధయు సామాజిక అవసథాప్నా
+, , , ,
+సౌకరాయలుగా విభ్జిెంచ్వచ్ ు. విద యత్ ర్వ్ాణా కమూయనిక్ేషన్ై (సమాచారాలు), బాయెంక్్ెంగ్ బీమా
+విత్తెం మరధయు సాెంక్ేతిక శాసత ీ ర్ెంగాలు ఆరథధక అవసథాప్న్ సౌకరాయలలో భాగెంగా ఉెంటాయి .
+వర్ల్డీ డ వలప్ మ ెంట్ రధప్ోర్ి (ప్ప్ర ెంచ్ అభవృది నివ్ ద క) ప్క్ర ార్ముగా చ్ూసతత అవసథాప్నా
+,
+వన్ర్కలు సమృదిగ ా ఉన్న దేశ్ము అభవృది సాధ సత ెంద . ఉత్పతితలో వ్ ైవిధ్య సాధ్న్కు వ్ాణిజాయనిన
+, , ,
+విసతరధెంచ్డానిక్్ జనాభా వృదిని త్టిటక్కన్డానిక్్ పతదరధక నిర్ూమలన్కు ప్రాయవర్ణ ప్రధసథత్ి ులన్
+, ,
+మ ర్కగు ప్ర్చ్డానిక్్ అవసథాప్నా వన్ర్కలు సహాయము చేసతాయి. ఈ అెంశాలే ఒక దేశ్ప్ప విజయానిన
+మరో దేశ్ప్ప ఓటమిని నిరిారధసతాయి. అవసథాప్నా వన్ర్కలు అధ కముగా ఉన్న ఆరికధ వయవసథలో
+SAE-106 31 P.T.O.
+
+--- PAGE 32/32 ---
+ఉతాపదకత్ పెర్కగుత్ుెంద మరధయు ఉతాపదక వయయము త్గగుత్ుెంద . అవసథాప్నా సౌకరాయల వలన్
+ఆరిక్ధ ాభవృది వ్ గముగా జర్గడమే క్ాక ఇత్ర్ ర్ెంగాలలో కూడా ఆరిక్ధ ాభవృది సమకూర్కత్ుెంద . ఇటీవలి
+,
+దశ్క్ాలలో మౌలిక అవసథాప్నా వన్ర్కలు త్ృతీయ ర్ెంగ అభవృదిక్ ్ ఫలవెంత్మ ైన్ క్ేతార నిన
+.
+సమకూరాుయి అెంద చేత్ త్ృతీయ ర్ెంగము సథూల దేశీయ ఉత్పతితక్్ అత్యధ క విలువని
+సమకూర్కసత న్నద .
+(i) .
+భార్త్దేశ్ ఆరికధ వయవసథలో త్ృతీయర్ెంగప్ార ముఖ్యత్న్ ప్రధశీలిెంచ్ెండి
+(ii)
+ర్వ్ాణా ర్ెంగెంలో అవసథాప్నా వన్ర్కల విషయములో భార్త్దేశ్ెం ఎద రొుెంటటన్న సమసయలన్
+.
+గురతెంధ చ్ెండి
+(iii) ?
+భార్త్ లో ప్ధర ాన్ ఇెంధ్న్ వన్ర్కలు ఏవి
+(iv) .
+భార్త్దేశ్ెంలోబాయెంక్్ెంగ్ వయవసథ నిరామణానినచ్రధుెంచ్ెండి
+(v) .
+సమాచార్ సాెంక్ేతిక ర్ెంగానిక్్ అవసర్మ ైన్ అవసథాప్నా వన్ర్కల ఫెై ఒక వ్ాయఖ్యరాయెండి
+SAE-106 32

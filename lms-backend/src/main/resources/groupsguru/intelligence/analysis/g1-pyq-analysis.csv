@@ -1,0 +1,188 @@
+pyq_id,commission,year,paper,question_number,subject,micro_topic_id,question_type,cognitive_level,difficulty,recurrence,ca_linked,question_summary
+APPSC-G1-2016-P2-001a,APPSC,2016,paper2,1a,History,MT-HIST-M2-2-016,ANALYTICAL,L3,medium,first_time,false,Compare Hinayana and Mahayana Buddhism and reasons for rise and decline
+APPSC-G1-2016-P2-001b,APPSC,2016,paper2,1b,History,MT-HIST-M2-3-012,ANALYTICAL,L2,medium,first_time,false,Major schools of art in post-Mauryan period and their features
+APPSC-G1-2016-P2-002a,APPSC,2016,paper2,2a,History,MT-HIST-M2-4-028,ANALYTICAL,L2,medium,first_time,false,Contributions of Great Mughals to Indian architecture
+APPSC-G1-2016-P2-002b,APPSC,2016,paper2,2b,History,MT-HIST-M2-4-015,ANALYTICAL,L2,medium,first_time,false,Cultural contribution of Vijayanagar Empire
+APPSC-G1-2016-P2-003a,APPSC,2016,paper2,3a,History,MT-HIST-M2-5-019,ANALYTICAL,L3,medium,first_time,false,Period 1885-1905 moderates contribution in organizing national movement
+APPSC-G1-2016-P2-003b,APPSC,2016,paper2,3b,History,MT-HIST-M2-5-006,ANALYTICAL,L3,medium,first_time,false,Nature and significance of 1857 revolt as First War of Independence
+APPSC-G1-2016-P2-004a,APPSC,2016,paper2,4a,History,MT-HIST-M2-5-021,ANALYTICAL,L3,hard,first_time,false,Effectiveness of Gandhis methods to mobilize masses
+APPSC-G1-2016-P2-004b,APPSC,2016,paper2,4b,History,MT-HIST-M2-5-015,ANALYTICAL,L4,hard,first_time,false,Ambedkars statement on constitutional methods and protecting democracy
+APPSC-G1-2016-P2-005a,APPSC,2016,paper2,5a,History,MT-HIST-M2-5-022,ANALYTICAL,L3,medium,first_time,false,Contribution of peasant movements in freedom struggle
+APPSC-G1-2016-P2-005b,APPSC,2016,paper2,5b,History,MT-HIST-M2-5-023,ANALYTICAL,L3,hard,first_time,false,Role of communalism in partition of the country
+APPSC-G1-2016-P2-006a,APPSC,2016,paper2,6a,AP History,MT-AP_HIST-M2-6-002,ANALYTICAL,L2,medium,first_time,false,Political fortunes and cultural contribution of Ikshvakus
+APPSC-G1-2016-P2-006b,APPSC,2016,paper2,6b,AP History,MT-AP_HIST-M2-6-006,ANALYTICAL,L2,medium,first_time,false,Eastern Chalukyas contribution to literature art and architecture
+APPSC-G1-2016-P2-007a,APPSC,2016,paper2,7a,AP History,MT-AP_HIST-M2-7-005,ANALYTICAL,L2,medium,first_time,false,Qutubshahis contribution to Telugu language and literature
+APPSC-G1-2016-P2-007b,APPSC,2016,paper2,7b,AP History,MT-AP_HIST-M2-7-007,ANALYTICAL,L2,medium,first_time,false,Poet Molla her work and literary style
+APPSC-G1-2016-P2-008a,APPSC,2016,paper2,8a,AP History,MT-AP_HIST-M2-9-004,ANALYTICAL,L2,medium,first_time,false,Gurram Jashuvas literary works contribution to social reform
+APPSC-G1-2016-P2-008b,APPSC,2016,paper2,8b,AP History,MT-AP_HIST-M2-9-004,ANALYTICAL,L2,medium,first_time,false,Salient features of Dr Boyi Bhimannas literary works
+APPSC-G1-2016-P2-009a,APPSC,2016,paper2,9a,AP History,MT-AP_HIST-M2-9-006,ANALYTICAL,L2,medium,first_time,false,Andhra Mahasabha contribution in socio-cultural development
+APPSC-G1-2016-P2-009b,APPSC,2016,paper2,9b,AP History,MT-AP_HIST-M2-9-002,ANALYTICAL,L2,medium,first_time,false,Vandemataram movement and its impact on AP freedom struggle
+APPSC-G1-2016-P2-010a,APPSC,2016,paper2,10a,AP History,MT-AP_HIST-M2-10-004,ANALYTICAL,L3,hard,first_time,false,Reasons for success and failure of Telangana armed struggle
+APPSC-G1-2016-P2-010b,APPSC,2016,paper2,10b,AP History,MT-AP_HIST-M2-10-004,ANALYTICAL,L2,medium,first_time,false,Razakars and their role in resisting Hyderabad integration into India
+APPSC-G1-2016-P2-011a,APPSC,2016,paper2,11a,History,NO_REGISTRY_MATCH_CONSTITUTION,ANALYTICAL,L3,medium,first_time,false,Indian constitution federal in form but unitary in spirit - discuss
+APPSC-G1-2016-P2-011b,APPSC,2016,paper2,11b,History,NO_REGISTRY_MATCH_CONSTITUTION,ANALYTICAL,L3,hard,first_time,false,Effectiveness of Directive Principles implementation and improvements
+APPSC-G1-2016-P2-012a,APPSC,2016,paper2,12a,History,NO_REGISTRY_MATCH_CONSTITUTION,ANALYTICAL,L3,medium,first_time,false,Concept of cooperative federalism and its existence in Indian polity
+APPSC-G1-2016-P2-012b,APPSC,2016,paper2,12b,History,NO_REGISTRY_MATCH_CONSTITUTION,ANALYTICAL,L2,medium,first_time,false,Financial relations between Union and States and irritants encountered
+APPSC-G1-2016-P2-013a,APPSC,2016,paper2,13a,History,NO_REGISTRY_MATCH_CONSTITUTION,ANALYTICAL,L3,medium,first_time,false,Judicial activism meaning and its impact on Indian polity
+APPSC-G1-2016-P2-013b,APPSC,2016,paper2,13b,History,NO_REGISTRY_MATCH_CONSTITUTION,ANALYTICAL,L2,medium,first_time,false,Relative position of Rajya Sabha compared to Lok Sabha
+APPSC-G1-2016-P2-014a,APPSC,2016,paper2,14a,History,NO_REGISTRY_MATCH_CONSTITUTION,ANALYTICAL,L2,medium,first_time,false,Procedure for amending constitution and criticism against it
+APPSC-G1-2016-P2-014b,APPSC,2016,paper2,14b,History,NO_REGISTRY_MATCH_CONSTITUTION,ANALYTICAL,L2,hard,first_time,false,Basic structure doctrine of constitution with important Supreme Court judgements
+APPSC-G1-2016-P2-015a,APPSC,2016,paper2,15a,History,NO_REGISTRY_MATCH_CONSTITUTION,ANALYTICAL,L2,medium,first_time,false,Special constitutional provisions for SCs STs backward classes Anglo-Indians
+APPSC-G1-2016-P2-015b,APPSC,2016,paper2,15b,History,NO_REGISTRY_MATCH_CONSTITUTION,ANALYTICAL,L2,medium,first_time,false,Concept of minorities in Indian constitution and safeguards for their rights
+APPSC-G1-2016-P3-1A,APPSC,2016,paper3,1A,Economy,MT-ECON-M4-1-003,ANALYTICAL,L3,hard,first_time,false,Difficulties in measuring economic development level and Indian methods
+APPSC-G1-2016-P3-1B,APPSC,2016,paper3,1B,Economy,MT-ECON-M4-1-003,ANALYTICAL,L3,medium,first_time,false,Recent base year revision and national income accounting changes
+APPSC-G1-2016-P3-2A,APPSC,2016,paper3,2A,Economy,MT-ECON-M4-2-002,ANALYTICAL,L3,medium,first_time,false,Employment weaknesses during reform period per 11th Plan
+APPSC-G1-2016-P3-2B,APPSC,2016,paper3,2B,Economy,MT-ECON-M4-1-002,ANALYTICAL,L2,medium,first_time,false,Guiding principles in setting up NITI Aayog
+APPSC-G1-2016-P3-3A,APPSC,2016,paper3,3A,Economy,MT-ECON-M4-6-002,ANALYTICAL,L3,medium,first_time,false,Limitations in India poverty alleviation strategy
+APPSC-G1-2016-P3-3B,APPSC,2016,paper3,3B,Economy,MT-ECON-M4-2-002,ANALYTICAL,L3,hard,first_time,false,Consequences of rural unemployment on society with remedies
+APPSC-G1-2016-P3-4A,APPSC,2016,paper3,4A,Economy,MT-ECON-M4-3-001,ANALYTICAL,L3,hard,first_time,false,Expert committee recommendations to revise monetary policy framework
+APPSC-G1-2016-P3-4B,APPSC,2016,paper3,4B,Economy,MT-ECON-M4-7-004,ANALYTICAL,L3,medium,first_time,false,Need for Regional Rural Banks and their problems and revisions
+APPSC-G1-2016-P3-5A,APPSC,2016,paper3,5A,Economy,MT-ECON-M4-5-004,STATIC,L2,medium,first_time,false,Highlights of FRBM Act 2003
+APPSC-G1-2016-P3-5B,APPSC,2016,paper3,5B,Economy,MT-ECON-M4-4-003,ANALYTICAL,L3,hard,first_time,false,Revenue deficit vs effective revenue deficit concept and Union Budget targets
+APPSC-G1-2016-P3-6A,APPSC,2016,paper3,6A,Economy,MT-ECON-M4-7-006,ANALYTICAL,L3,medium,first_time,false,Reasons for land ceiling and its disadvantages to economy
+APPSC-G1-2016-P3-6B,APPSC,2016,paper3,6B,Economy,MT-ECON-M4-7-006,ANALYTICAL,L3,hard,first_time,false,AP Land Licensed Cultivators Act 2011 need and implementation problems
+APPSC-G1-2016-P3-7A,APPSC,2016,paper3,7A,Economy,MT-ECON-M4-8-001,ANALYTICAL,L2,medium,first_time,false,AP strategies for agriculture extension program mission
+APPSC-G1-2016-P3-7B,APPSC,2016,paper3,7B,Economy,MT-ECON-M4-6-014,ANALYTICAL,L3,hard,first_time,false,AP Rural Inclusive Growth Project pillars and key result indicators
+APPSC-G1-2016-P3-8A,APPSC,2016,paper3,8A,Economy,MT-ECON-M4-2-003,STATIC,L2,medium,first_time,false,Trends in literacy rates in Andhra Pradesh
+APPSC-G1-2016-P3-8B,APPSC,2016,paper3,8B,Economy,MT-ECON-M4-1-011,SCHEME,L2,medium,first_time,false,Employment through Jawahar Knowledge Centres in AP
+APPSC-G1-2016-P3-9A,APPSC,2016,paper3,9A,Economy,MT-ECON-M4-5-001,ANALYTICAL,L3,hard,first_time,true,AP Budget 2016-17 distinct aspects and revenue/fiscal deficit causes
+APPSC-G1-2016-P3-9B,APPSC,2016,paper3,9B,Economy,MT-ECON-M4-5-001,ANALYTICAL,L3,hard,first_time,false,Revenue receipts as % of GSDP trends 2002-2014 in AP
+APPSC-G1-2016-P3-10A,APPSC,2016,paper3,10A,Economy,MT-ECON-M4-8-001,ANALYTICAL,L3,medium,first_time,false,AP agriculture sector performance during 11th Plan period
+APPSC-G1-2016-P3-10B,APPSC,2016,paper3,10B,Economy,MT-ECON-M4-6-002,STATIC,L2,medium,first_time,false,Central flagship programmes implemented in AP during 11th Plan
+APPSC-G1-2016-P3-11A,APPSC,2016,paper3,11A,Economy,MT-ECON-M4-10-001,STATIC,L2,medium,first_time,false,AP Industrial Investment Promotion Policy 2015-20 salient features
+APPSC-G1-2016-P3-11B,APPSC,2016,paper3,11B,Economy,MT-ECON-M4-12-003,ANALYTICAL,L2,medium,first_time,false,AP Capital Region Development Authority Bill 2014 need and features
+APPSC-G1-2016-P3-12A,APPSC,2016,paper3,12A,Economy,MT-ECON-M4-7-003,ANALYTICAL,L2,medium,first_time,false,Recent initiatives to help farmers increase agricultural productivity
+APPSC-G1-2016-P3-12B,APPSC,2016,paper3,12B,Economy,MT-ECON-M4-6-005,ANALYTICAL,L3,medium,first_time,false,Fair Price Shop automation and portability in PDS
+APPSC-G1-2016-P3-13A,APPSC,2016,paper3,13A,Economy,MT-ECON-M4-12-004,STATIC,L2,medium,first_time,false,Polavaram irrigation project salient features and benefits
+APPSC-G1-2016-P3-13B,APPSC,2016,paper3,13B,Economy,MT-ECON-M4-6-003,SCHEME,L2,medium,first_time,false,PPP model health services under Dr NTR Vaidya Seva programme
+APPSC-G1-2016-P3-14A,APPSC,2016,paper3,14A,Economy,MT-ECON-M4-7-006,SCHEME,L2,medium,first_time,false,AP farmers debt redemption scheme highlights and benefits
+APPSC-G1-2016-P3-14B,APPSC,2016,paper3,14B,Economy,MT-ECON-M4-7-004,ANALYTICAL,L4,hard,first_time,false,Rural debt trap from institutional and non-institutional sources in AP
+APPSC-G1-2016-P3-15A,APPSC,2016,paper3,15A,Economy,MT-ECON-M4-11-003,SCHEME,L2,medium,first_time,false,AP e-Pragati initiative and its benefits
+APPSC-G1-2016-P3-15B,APPSC,2016,paper3,15B,Economy,MT-ECON-M4-11-004,ANALYTICAL,L2,medium,first_time,false,Smart Village Smart Ward towards Smart AP - explain
+APPSC-G1-2020-P3-Q1a,APPSC,2020,paper3,1a,Polity,MT-POLT-M3-1-002,ANALYTICAL,L3,medium,first_time,false,Formation of Constituent Assembly and critical evaluation of Indian Constitution
+APPSC-G1-2020-P3-Q1b,APPSC,2020,paper3,1b,Polity,MT-POLT-M3-4-006,ANALYTICAL,L3,hard,first_time,false,Judicial Review definition classification by Justice Quadri scope and importance
+APPSC-G1-2020-P3-Q2a,APPSC,2020,paper3,2a,Polity,MT-POLT-M3-5-001,ANALYTICAL,L3,medium,first_time,false,Federalism with strong central government and key provisions enabling it
+APPSC-G1-2020-P3-Q2b,APPSC,2020,paper3,2b,Polity,MT-POLT-M3-4-005,STATIC,L2,medium,first_time,false,Privileges of state legislature defined and classified into two categories
+APPSC-G1-2020-P3-Q3a,APPSC,2020,paper3,3a,Polity,MT-POLT-M3-5-008,STATIC,L2,medium,first_time,false,Main features of 73rd and 74th Constitutional Amendment Acts
+APPSC-G1-2020-P3-Q3b,APPSC,2020,paper3,3b,Polity,MT-POLT-M3-4-005,ANALYTICAL,L3,medium,first_time,false,Role of Governor in states focusing on powers and functions
+APPSC-G1-2020-P3-Q4a,APPSC,2020,paper3,4a,Polity,MT-POLT-M3-4-004,ANALYTICAL,L3,medium,first_time,false,Differentiate Lok Sabha and Rajya Sabha powers functions and election control
+APPSC-G1-2020-P3-Q4b,APPSC,2020,paper3,4b,Polity,MT-POLT-M3-1-003,STATIC,L2,easy,first_time,false,Five salient features of the Indian Constitution explained
+APPSC-G1-2020-P3-Q5a,APPSC,2020,paper3,5a,Polity,MT-POLT-M3-4-006,ANALYTICAL,L3,hard,first_time,false,Judicial activism definition via PIL and SAL and impact on political system
+APPSC-G1-2020-P3-Q5b,APPSC,2020,paper3,5b,Polity,MT-POLT-M3-5-008,STATIC,L2,medium,repeat_topic,false,Salient features of rural and urban local governance under 73rd and 74th Amendments
+APPSC-G1-2020-P3-Q6a,APPSC,2020,paper3,6a,Public Administration,MT-ADMIN-M3-6-001,STATIC,L2,easy,first_time,false,Define public administration and explain its evolution in India
+APPSC-G1-2020-P3-Q6b,APPSC,2020,paper3,6b,Public Administration,MT-ADMIN-M3-7-002,ANALYTICAL,L3,medium,first_time,false,Differentiate administrative ideas in Kautilya Arthashastra and Mughal administration
+APPSC-G1-2020-P3-Q7a,APPSC,2020,paper3,7a,Public Administration,MT-ADMIN-M3-9-001,ANALYTICAL,L3,hard,first_time,false,Amartya Sen definition of development and new development thinking characteristics
+APPSC-G1-2020-P3-Q7b,APPSC,2020,paper3,7b,Public Administration,MT-ADMIN-M3-9-004,ANALYTICAL,L2,medium,first_time,false,Role of NGOs and Civil Services in Democracy
+APPSC-G1-2020-P3-Q8a,APPSC,2020,paper3,8a,Public Administration,MT-ADMIN-M3-9-002,ANALYTICAL,L3,medium,first_time,false,UN partnership with civil society and NGO registration Acts in India
+APPSC-G1-2020-P3-Q8b,APPSC,2020,paper3,8b,Public Administration,MT-ADMIN-M3-10-003,ANALYTICAL,L3,medium,first_time,false,RTI definition rights under RTI Act 2005 and need for Act despite being FR
+APPSC-G1-2020-P3-Q9a,APPSC,2020,paper3,9a,Public Administration,MT-POLT-M3-1-006,STATIC,L2,medium,first_time,false,Statutory bodies work with examples and quasi-judicial bodies in India
+APPSC-G1-2020-P3-Q9b,APPSC,2020,paper3,9b,Public Administration,MT-ADMIN-M3-10-005,STATIC,L2,medium,first_time,false,Social audit definition objectives and advantages explained
+APPSC-G1-2020-P3-Q10a,APPSC,2020,paper3,10a,Public Administration,MT-POLT-M3-1-010,ANALYTICAL,L3,medium,first_time,false,E-governance strategy in India initiatives and government accountability
+APPSC-G1-2020-P3-Q10b,APPSC,2020,paper3,10b,Public Administration,MT-ADMIN-M3-8-001,SCHEME,L2,medium,first_time,true,Government interventions in social sector health and education
+APPSC-G1-2020-P3-Q11a,APPSC,2020,paper3,11a,Ethics & Law,MT-ETHICS-M3-11-001,STATIC,L2,medium,first_time,false,Define ethics in Indian tradition and five principles for public service ethics
+APPSC-G1-2020-P3-Q11b,APPSC,2020,paper3,11b,Ethics & Law,MT-ETHICS-M3-15-004,ANALYTICAL,L3,medium,first_time,false,Necessity and importance of labour laws and whether reforms benefit workers
+APPSC-G1-2020-P3-Q12a,APPSC,2020,paper3,12a,Ethics & Law,MT-ETHICS-M3-12-001,ANALYTICAL,L3,medium,first_time,false,Values of entity value education need and gender inequality recognition in India
+APPSC-G1-2020-P3-Q12b,APPSC,2020,paper3,12b,Ethics & Law,MT-ETHICS-M3-14-006,STATIC,L2,medium,first_time,false,Explain the Lokpal and Lokayukta Act provisions
+APPSC-G1-2020-P3-Q13a,APPSC,2020,paper3,13a,Ethics & Law,MT-ETHICS-M3-13-003,STATIC,L2,medium,first_time,false,Define moral attitude four qualities and factors shaping political attitude
+APPSC-G1-2020-P3-Q13b,APPSC,2020,paper3,13b,Ethics & Law,MT-ETHICS-M3-13-005,ANALYTICAL,L3,hard,first_time,false,Emotional intelligence concept three models and application in governance
+APPSC-G1-2020-P3-Q14a,APPSC,2020,paper3,14a,Ethics & Law,MT-ETHICS-M3-14-001,ANALYTICAL,L3,medium,first_time,false,Public service definition trustworthiness fortitude and corruption prevention measures
+APPSC-G1-2020-P3-Q14b,APPSC,2020,paper3,14b,Ethics & Law,MT-ETHICS-M3-12-004,STATIC,L2,easy,first_time,false,Role of family society and educational institutions in inculcating values
+APPSC-G1-2020-P3-Q15a,APPSC,2020,paper3,15a,Ethics & Law,MT-ETHICS-M3-15-005,STATIC,L2,medium,first_time,false,Different types of cybercrimes and importance of cyber laws in India
+APPSC-G1-2020-P3-Q15b,APPSC,2020,paper3,15b,Ethics & Law,MT-ETHICS-M3-11-004,ANALYTICAL,L3,hard,first_time,false,How time and space affect ethics in private and public relationships
+APPSC-G1-2016-P5-Q1a,APPSC,2016,paper5,1a,Science & Technology,MT-SCI-M5-1-002,ANALYTICAL,L3,medium,first_time,false,Salient features of National Data Sharing and Accessibility Policy 2012
+APPSC-G1-2016-P5-Q1b-i,APPSC,2016,paper5,1b-i,Science & Technology,MT-SCI-M5-1-003,STATIC,L2,easy,first_time,false,Short note on Indian Science Congress Association (ISCA)
+APPSC-G1-2016-P5-Q1b-ii,APPSC,2016,paper5,1b-ii,Science & Technology,MT-SCI-M5-1-003,STATIC,L2,easy,first_time,false,Short note on Council of Scientific and Industrial Research (CSIR)
+APPSC-G1-2016-P5-Q1c,APPSC,2016,paper5,1c,Science & Technology,MT-SCI-M5-1-002,ANALYTICAL,L3,medium,first_time,false,Main objectives of Science Technology and Innovation Policy 2013
+APPSC-G1-2016-P5-Q1d-i,APPSC,2016,paper5,1d-i,Science & Technology,MT-SCI-M5-7-008,STATIC,L2,easy,first_time,false,Short note on Post Harvest Technology (PHT)
+APPSC-G1-2016-P5-Q1d-ii,APPSC,2016,paper5,1d-ii,Science & Technology,MT-SCI-M5-7-008,STATIC,L2,easy,first_time,false,Short note on Oilseeds Production Programme (OPP)
+APPSC-G1-2016-P5-Q2a,APPSC,2016,paper5,2a,Science & Technology,MT-SCI-M5-3-001,ANALYTICAL,L3,medium,first_time,false,Describe Mars Orbiter Mission Mangalyaan and its features
+APPSC-G1-2016-P5-Q2b-i,APPSC,2016,paper5,2b-i,Science & Technology,MT-SCI-M5-2-001,STATIC,L2,easy,first_time,false,Short note on broadband digital communication
+APPSC-G1-2016-P5-Q2b-ii,APPSC,2016,paper5,2b-ii,Science & Technology,MT-SCI-M5-3-001,STATIC,L2,easy,first_time,false,Short note on Fixed-Satellite Services (FSS)
+APPSC-G1-2016-P5-Q2c,APPSC,2016,paper5,2c,Science & Technology,MT-SCI-M5-3-001,ANALYTICAL,L3,medium,first_time,false,Applications of Remote Sensing technology in agriculture
+APPSC-G1-2016-P5-Q2d-i,APPSC,2016,paper5,2d-i,Science & Technology,MT-SCI-M5-3-001,STATIC,L2,easy,first_time,false,Short note on Mobile Satellite Services (MSS)
+APPSC-G1-2016-P5-Q2d-ii,APPSC,2016,paper5,2d-ii,Environment,MT-ENV-M5-5-007,STATIC,L2,easy,first_time,false,Short note on environmental monitoring
+APPSC-G1-2016-P5-Q3a,APPSC,2016,paper5,3a,Science & Technology,MT-SCI-M5-2-002,ANALYTICAL,L3,medium,first_time,false,Cloud computing definition and AP Cloud Initiative
+APPSC-G1-2016-P5-Q3b,APPSC,2016,paper5,3b,Science & Technology,MT-SCI-M5-2-002,ANALYTICAL,L3,medium,first_time,false,Fiber Grid Project of Andhra Pradesh
+APPSC-G1-2016-P5-Q3c,APPSC,2016,paper5,3c,Science & Technology,MT-SCI-M5-2-001,ANALYTICAL,L3,medium,first_time,false,ERP definition and critical issues in ERP project execution
+APPSC-G1-2016-P5-Q3d,APPSC,2016,paper5,3d,Science & Technology,MT-SCI-M5-2-001,STATIC,L2,easy,first_time,false,Note on Local Area Network (LAN)
+APPSC-G1-2016-P5-Q4a,APPSC,2016,paper5,4a,Science & Technology,MT-SCI-M5-4-002,ANALYTICAL,L3,medium,first_time,false,Short note on Shale Gas Revolution
+APPSC-G1-2016-P5-Q4b,APPSC,2016,paper5,4b,Science & Technology,MT-SCI-M5-4-002,ANALYTICAL,L3,hard,first_time,false,Nuclear power growth in India and nuclear fuel reserves
+APPSC-G1-2016-P5-Q4c,APPSC,2016,paper5,4c,Science & Technology,MT-SCI-M5-4-003,ANALYTICAL,L3,medium,first_time,false,Scope of renewable energy in energy crisis scenario
+APPSC-G1-2016-P5-Q4d,APPSC,2016,paper5,4d,Science & Technology,MT-SCI-M5-4-003,ANALYTICAL,L2,medium,first_time,false,Detailed list of barriers to renewable energy
+APPSC-G1-2016-P5-Q5a,APPSC,2016,paper5,5a,Environment,MT-ENV-M5-5-008,ANALYTICAL,L3,medium,first_time,false,Hazard vs disaster and types of coastal natural disasters
+APPSC-G1-2016-P5-Q5b,APPSC,2016,paper5,5b,Environment,MT-ENV-M5-5-008,STATIC,L2,medium,first_time,false,Tsunami Warning System of India details
+APPSC-G1-2016-P5-Q5c,APPSC,2016,paper5,5c,Environment,MT-ENV-M5-5-008,ANALYTICAL,L3,medium,first_time,false,Common challenges in disaster management plans
+APPSC-G1-2016-P5-Q5d,APPSC,2016,paper5,5d,Environment,MT-ENV-M5-5-005,CA_STATIC,L3,hard,first_time,true,COP21 Paris Agreement main points and India's stand
+APPSC-G1-2016-P5-Q6a,APPSC,2016,paper5,6a,Science & Technology,MT-SCI-M5-7-003,STATIC,L2,easy,first_time,false,Vitamins classification functions and sources
+APPSC-G1-2016-P5-Q6b,APPSC,2016,paper5,6b,Science & Technology,MT-SCI-M5-7-001,ANALYTICAL,L3,medium,first_time,false,Yeast fermentation and industrial use in product making
+APPSC-G1-2016-P5-Q6c,APPSC,2016,paper5,6c,Science & Technology,MT-SCI-M5-7-001,ANALYTICAL,L3,medium,first_time,false,Phytohormones groups and commercial use in fruit ripening
+APPSC-G1-2016-P5-Q6d,APPSC,2016,paper5,6d,Science & Technology,MT-SCI-M5-7-001,ANALYTICAL,L2,medium,first_time,false,Lactic acid fermentation and milk product making
+APPSC-G1-2016-P5-Q7a,APPSC,2016,paper5,7a,Science & Technology,MT-SCI-M5-7-001,STATIC,L2,easy,first_time,false,Essential oils definition and important uses
+APPSC-G1-2016-P5-Q7b-i,APPSC,2016,paper5,7b-i,Science & Technology,MT-SCI-M5-7-001,STATIC,L2,easy,first_time,false,Autotrophic vs heterotrophic plants
+APPSC-G1-2016-P5-Q7b-ii,APPSC,2016,paper5,7b-ii,Science & Technology,MT-SCI-M5-7-001,STATIC,L2,easy,first_time,false,Symbiosis definition and explanation
+APPSC-G1-2016-P5-Q7c-i,APPSC,2016,paper5,7c-i,Science & Technology,MT-SCI-M5-7-001,STATIC,L2,easy,first_time,false,Lichens definition and economic importance
+APPSC-G1-2016-P5-Q7c-ii,APPSC,2016,paper5,7c-ii,Science & Technology,MT-SCI-M5-7-001,STATIC,L2,easy,first_time,false,How insects are useful to human beings
+APPSC-G1-2016-P5-Q7d-i,APPSC,2016,paper5,7d-i,Science & Technology,MT-SCI-M5-7-003,STATIC,L2,medium,first_time,false,Short note on homeostasis
+APPSC-G1-2016-P5-Q7d-ii,APPSC,2016,paper5,7d-ii,Science & Technology,MT-SCI-M5-7-003,STATIC,L2,medium,first_time,false,Animal response to osmotic conditions of medium
+APPSC-G1-2016-P5-Q8a,APPSC,2016,paper5,8a,Science & Technology,MT-SCI-M5-7-007,ANALYTICAL,L3,medium,first_time,false,Plant tissue culture and applications in agriculture
+APPSC-G1-2016-P5-Q8b,APPSC,2016,paper5,8b,Science & Technology,MT-SCI-M5-7-001,ANALYTICAL,L3,medium,first_time,false,Golden Rice description and advantages
+APPSC-G1-2016-P5-Q8c,APPSC,2016,paper5,8c,Science & Technology,MT-SCI-M5-7-008,ANALYTICAL,L3,medium,first_time,false,Biofertilizers types and advantages
+APPSC-G1-2016-P5-Q8d,APPSC,2016,paper5,8d,Science & Technology,MT-SCI-M5-7-005,ANALYTICAL,L3,hard,first_time,false,DNA fingerprinting technique and forensic applications
+APPSC-G1-2016-P5-Q9a,APPSC,2016,paper5,9a,Science & Technology,MT-SCI-M5-8-007,ANALYTICAL,L3,medium,first_time,false,Disease outbreak patterns epidemic vs endemic diseases
+APPSC-G1-2016-P5-Q9b,APPSC,2016,paper5,9b,Science & Technology,MT-SCI-M5-8-009,ANALYTICAL,L3,medium,first_time,false,Chikungunya cause prevention and comparison with Dengue
+APPSC-G1-2016-P5-Q9c,APPSC,2016,paper5,9c,Science & Technology,MT-SCI-M5-8-010,ANALYTICAL,L3,medium,first_time,false,Malaria parasite aetiology spread symptoms treatment
+APPSC-G1-2016-P5-Q9d,APPSC,2016,paper5,9d,Science & Technology,MT-SCI-M5-8-012,STATIC,L2,easy,first_time,false,Preventive measures to avoid common infections
+APPSC-G1-2016-P5-Q10a,APPSC,2016,paper5,10a,Science & Technology,MT-SCI-M5-8-004,ANALYTICAL,L3,medium,first_time,false,Immunisation definition and history of vaccine development
+APPSC-G1-2016-P5-Q10b-i,APPSC,2016,paper5,10b-i,Science & Technology,MT-SCI-M5-7-010,STATIC,L2,medium,first_time,false,Short note on edible vaccines
+APPSC-G1-2016-P5-Q10b-ii,APPSC,2016,paper5,10b-ii,Science & Technology,MT-SCI-M5-7-003,STATIC,L2,medium,first_time,false,Short note on ELISA test
+APPSC-G1-2016-P5-Q10b-iii,APPSC,2016,paper5,10b-iii,Science & Technology,MT-SCI-M5-8-001,STATIC,L2,medium,first_time,false,Short note on autoimmune diseases
+APPSC-G1-2016-P5-Q10c,APPSC,2016,paper5,10c,Science & Technology,MT-SCI-M5-8-004,ANALYTICAL,L3,medium,first_time,false,Detailed note on Triple Vaccination
+APPSC-G1-2016-P5-Q10d,APPSC,2016,paper5,10d,Science & Technology,MT-SCI-M5-7-010,ANALYTICAL,L4,hard,first_time,false,Biotechnological intervention transforming vaccination technology
+APPSC-G1-2016-P5-Q11a,APPSC,2016,paper5,11a,Environment,MT-ENV-M5-5-006,STATIC,L2,medium,first_time,false,Functions of State Pollution Control Board
+APPSC-G1-2016-P5-Q11b,APPSC,2016,paper5,11b,Environment,MT-ENV-M5-6-004,ANALYTICAL,L3,hard,first_time,false,Environmental Clearance procedure under EIA Notification 2006
+APPSC-G1-2016-P5-Q11c,APPSC,2016,paper5,11c,Environment,MT-ENV-M5-5-009,ANALYTICAL,L3,medium,first_time,false,Environmentalism and planetary problems with solutions
+APPSC-G1-2016-P5-Q11d,APPSC,2016,paper5,11d,Environment,MT-ENV-M5-6-004,STATIC,L2,hard,first_time,false,Projects not requiring public consultation for Environmental Clearance
+APPSC-G1-2016-P5-Q12a,APPSC,2016,paper5,12a,Environment,MT-ENV-M5-5-008,STATIC,L2,medium,first_time,false,Classification of dams based on structure and design
+APPSC-G1-2016-P5-Q12b,APPSC,2016,paper5,12b,Environment,MT-ENV-M5-5-008,CA_STATIC,L2,medium,first_time,true,AP Sand Mining Policy 2016
+APPSC-G1-2016-P5-Q12c,APPSC,2016,paper5,12c,Environment,MT-ENV-M5-5-008,ANALYTICAL,L3,medium,first_time,false,Suitability basis for crop and cropping pattern
+APPSC-G1-2016-P5-Q12d,APPSC,2016,paper5,12d,Environment,MT-ENV-M5-5-008,STATIC,L2,easy,first_time,false,Mineral resources definition formation and types
+APPSC-G1-2016-P5-Q13a,APPSC,2016,paper5,13a,Environment,MT-ENV-M5-5-001,STATIC,L2,easy,first_time,false,Ecosystem definition and food chain system
+APPSC-G1-2016-P5-Q13b,APPSC,2016,paper5,13b,Environment,MT-ENV-M5-5-002,ANALYTICAL,L3,medium,first_time,false,Impact of urbanisation on biodiversity
+APPSC-G1-2016-P5-Q13c,APPSC,2016,paper5,13c,Environment,MT-ENV-M5-5-002,ANALYTICAL,L3,medium,first_time,false,Major threats to biodiversity and types of biodiversities
+APPSC-G1-2016-P5-Q13d-i,APPSC,2016,paper5,13d-i,Environment,MT-ENV-M5-5-002,STATIC,L2,medium,first_time,false,National Bureau of Plant Genetic Resources (NBPGR)
+APPSC-G1-2016-P5-Q13d-ii,APPSC,2016,paper5,13d-ii,Environment,MT-ENV-M5-5-003,STATIC,L2,easy,first_time,false,Wildlife sanctuaries note
+APPSC-G1-2016-P5-Q14a,APPSC,2016,paper5,14a,Environment,MT-ENV-M5-5-007,STATIC,L2,medium,first_time,false,Types and characteristics of solid waste
+APPSC-G1-2016-P5-Q14b-i,APPSC,2016,paper5,14b-i,Environment,MT-ENV-M5-5-007,STATIC,L2,medium,first_time,false,Short note on pyrolysis
+APPSC-G1-2016-P5-Q14b-ii,APPSC,2016,paper5,14b-ii,Environment,MT-ENV-M5-5-007,STATIC,L2,medium,first_time,false,Short note on incineration
+APPSC-G1-2016-P5-Q14c,APPSC,2016,paper5,14c,Environment,MT-ENV-M5-5-007,STATIC,L2,easy,first_time,false,Soil pollution definition and causes
+APPSC-G1-2016-P5-Q14d,APPSC,2016,paper5,14d,Environment,MT-ENV-M5-5-007,ANALYTICAL,L3,medium,first_time,false,Noise pollution control and preventive measures
+APPSC-G1-2016-P5-Q15a,APPSC,2016,paper5,15a,Environment,MT-ENV-M5-5-004,ANALYTICAL,L3,hard,first_time,false,El Nino causes and impact on global agriculture
+APPSC-G1-2016-P5-Q15b,APPSC,2016,paper5,15b,Environment,MT-ENV-M5-5-004,ANALYTICAL,L3,medium,first_time,false,Impact of ozone layer depletion on living organisms
+APPSC-G1-2016-P5-Q15c,APPSC,2016,paper5,15c,Environment,MT-ENV-M5-5-008,ANALYTICAL,L3,medium,first_time,false,Impact of human beings on water resources
+APPSC-G1-2016-P5-Q15d-i,APPSC,2016,paper5,15d-i,Environment,MT-ENV-M5-5-009,STATIC,L2,easy,first_time,false,Short note on sustainable agriculture
+APPSC-G1-2016-P5-Q15d-ii,APPSC,2016,paper5,15d-ii,Environment,MT-ENV-M5-5-007,STATIC,L2,easy,first_time,false,Short note on acid rain
+APPSC-G1-2023-P3-Q1a,APPSC,2023,paper3,1a,Polity,MT-POLT-M3-2-002,ANALYTICAL,L3,hard,first_time,false,Scope of reasonable restrictions and test of reasonableness under Article 19
+APPSC-G1-2023-P3-Q1b,APPSC,2023,paper3,1b,Polity,MT-POLT-M3-5-003,ANALYTICAL,L3,medium,first_time,false,Genesis of Inter-State Council relevance in Centre-State coordination
+APPSC-G1-2023-P3-Q2a,APPSC,2023,paper3,2a,Polity,MT-POLT-M3-4-005,ANALYTICAL,L3,medium,repeat_topic,false,Governor discretionary functions and special responsibilities constitutional provisions
+APPSC-G1-2023-P3-Q2b,APPSC,2023,paper3,2b,Polity,MT-POLT-M3-5-001,ANALYTICAL,L3,hard,first_time,true,NEP 2020 criticism and rationale for State to Concurrent list transfers
+APPSC-G1-2023-P3-Q3a,APPSC,2023,paper3,3a,Polity,MT-POLT-M3-5-008,ANALYTICAL,L3,medium,repeat_topic,false,Political empowerment of women through Panchayat Raj scope and challenges
+APPSC-G1-2023-P3-Q3b,APPSC,2023,paper3,3b,Polity,MT-POLT-M3-5-004,ANALYTICAL,L3,medium,first_time,false,Finance Commission credibility in promoting fiscal democracy in India
+APPSC-G1-2023-P4-1A,APPSC,2023,paper4,1A,Economy,MT-ECON-M4-9-002,ANALYTICAL,L4,hard,first_time,true,Impact of New Age reforms on Indian economy in last 8 years and growth 2023-30
+APPSC-G1-2023-P4-1B,APPSC,2023,paper4,1B,Economy,MT-ECON-M4-1-016,ANALYTICAL,L3,hard,first_time,true,Exchange rate determination of Indian Rupee and RBI role in defending it
+APPSC-G1-2023-P4-2A,APPSC,2023,paper4,2A,Economy,MT-ECON-M4-3-001,ANALYTICAL,L3,hard,first_time,false,Monetary Policy Transmission issues and steps to overcome them
+APPSC-G1-2023-P4-2B,APPSC,2023,paper4,2B,Economy,MT-ECON-M4-4-004,ANALYTICAL,L3,medium,first_time,false,Fiscal policy tools and customs/excise as flexible tools for revenue and inflation
+APPSC-G1-2023-P5-Q1a,APPSC,2023,paper5,1a,Science & Technology,MT-SCI-M5-1-001,ANALYTICAL,L4,hard,first_time,false,Scientific Social Responsibility knowledge creation vs consumption India
+APPSC-G1-2023-P5-Q1b,APPSC,2023,paper5,1b,Science & Technology,MT-SCI-M5-1-001,ANALYTICAL,L3,medium,first_time,false,Technology role in transforming healthcare sector India challenges
+APPSC-G1-2023-P5-Q2a,APPSC,2023,paper5,2a,Science & Technology,MT-SCI-M5-2-002,ANALYTICAL,L3,medium,repeat_topic,false,Digital platforms public service accountability e-governance bottlenecks
+APPSC-G1-2023-P5-Q2b,APPSC,2023,paper5,2b,Science & Technology,MT-SCI-M5-2-001,ANALYTICAL,L3,medium,first_time,true,Atmanirbhar Bharat impact on India IT sector global tech hub
+APPSC-G1-2023-P5-Q3a,APPSC,2023,paper5,3a,Science & Technology,MT-SCI-M5-3-001,ANALYTICAL,L3,medium,first_time,true,Space junk challenges risks and Project NETRA
+APPSC-G1-2023-P5-Q3b,APPSC,2023,paper5,3b,Science & Technology,MT-SCI-M5-3-001,ANALYTICAL,L3,medium,first_time,true,India space industry private sector investment despite ISRO success
+APPSC-G1-2025-P2-001a,APPSC,2025,paper2,1a,History,MT-HIST-M2-2-003,ANALYTICAL,L2,medium,repeat_topic,false,Origin and expansion of Indus Valley Civilization
+APPSC-G1-2025-P2-001b,APPSC,2025,paper2,1b,History,MT-HIST-M2-2-016,ANALYTICAL,L2,medium,repeat_topic,false,Teachings of Buddha and Mahavira - brief analysis
+APPSC-G1-2025-P2-002a,APPSC,2025,paper2,2a,History,MT-HIST-M2-3-023,ANALYTICAL,L2,medium,first_time,false,Chalukya rulers of Kalyani contributions in sculpture architecture literature
+APPSC-G1-2025-P4-1A,APPSC,2025,paper4,1A,Economy,MT-ECON-M4-1-015,ANALYTICAL,L4,very_hard,first_time,true,India Current Account Deficit and Balance of Payments factors and implications
+APPSC-G1-2025-P4-1B,APPSC,2025,paper4,1B,Economy,MT-ECON-M4-1-005,ANALYTICAL,L3,hard,first_time,false,Infrastructure bottlenecks hindering manufacturing sector growth in India
+APPSC-G1-2025-P5-Q1a,APPSC,2025,paper5,1a,Science & Technology,MT-SCI-M5-1-003,ANALYTICAL,L3,medium,first_time,false,NIRCA Rajamahendravaram research focus support to agriculture
+APPSC-G1-2025-P5-Q1b,APPSC,2025,paper5,1b,Science & Technology,MT-SCI-M5-2-001,ANALYTICAL,L3,medium,repeat_topic,true,IoT technologies impact on household automation everyday tasks
+APPSC-G1-2025-P5-Q2a,APPSC,2025,paper5,2a,Science & Technology,MT-SCI-M5-1-004,ANALYTICAL,L3,medium,first_time,false,C.V. Raman discovery of Raman Effect impact on global science
+APPSC-G1-2025-P5-Q2b,APPSC,2025,paper5,2b,Science & Technology,MT-SCI-M5-1-003,ANALYTICAL,L3,medium,first_time,false,Major scientific institutes in AP and IISER Tirupati role

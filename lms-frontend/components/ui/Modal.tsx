@@ -29,7 +29,7 @@ export default function Modal({ isOpen, onClose, title, children }: ModalProps) 
             initial={{ scale: 0.9, opacity: 0, y: 20 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.9, opacity: 0, y: 20 }}
-            className="relative w-full max-w-lg overflow-hidden rounded-[24px] bg-[#1a0b2e] border border-[rgba(147,51,234,0.3)] shadow-[0_25px_80px_rgba(0,0,0,0.5)] flex flex-col"
+            className="relative w-full max-w-lg rounded-[24px] bg-[#1a0b2e] border border-[rgba(147,51,234,0.3)] shadow-[0_25px_80px_rgba(0,0,0,0.5)] flex flex-col"
           >
             {/* Header */}
             <div className="flex items-center justify-between p-6 border-b border-[rgba(147,51,234,0.1)]">
@@ -48,7 +48,7 @@ export default function Modal({ isOpen, onClose, title, children }: ModalProps) 
             </div>
 
             {/* Body */}
-            <div className="p-6">
+            <div className="p-6 overflow-visible">
               {children}
             </div>
           </motion.div>

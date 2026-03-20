@@ -1,0 +1,163 @@
+micro_topic_id,subject,frequency_score,depth_score,recurrence_score,ca_linked_boost,syllabus_priority,trend_momentum,commission_blend_appsc,commission_blend_upsc,data_confidence,prediction_confidence,priority_rank,notes
+MT-ECON-M4-5-001,Economy,0.80,0.85,0.75,0.15,0.90,0.75,1.00,0.00,high,0.82,VERY_HIGH,AP Budget CA-linked 3x
+MT-ECON-M4-8-001,Economy,0.70,0.75,0.65,0.00,0.90,0.75,1.00,0.00,high,0.77,VERY_HIGH,AP agriculture strategy AP-specific
+MT-SCI-M5-7-001,Science,0.80,0.75,0.75,0.00,0.50,0.80,0.60,0.40,high,0.72,VERY_HIGH,Biotechnology genetics 10+ occurrences
+MT-ECON-G2P3-3-001,Economy,0.76,0.7,0.5,0.07,0.5,0.55,0.85,0.15,high,0.72,HIGH,"RBI – Functions, monetary policy tools - shared_gs - 11x G2 PYQ"
+MT-ECON-M4-7-006,Economy,0.80,0.85,0.70,0.00,0.50,0.80,0.60,0.40,high,0.70,VERY_HIGH,Land ceiling AP - 3x repeat
+MT-AP_ECON-G2P3-5-002,Economy,0.62,0.68,0.5,0.08,0.6,0.6,0.85,0.15,high,0.7,HIGH,"AP Agriculture – Major crops, irrigation, mar - ap_specific - 8x G2 PYQ"
+MT-AP_ECON-G2P3-5-001,Economy,0.43,0.65,0.5,0.15,0.6,0.6,0.85,0.15,medium,0.7,HIGH,AP GSDP – Sectoral composition and growth - ap_specific - 4x G2 PYQ
+MT-AP_HIST-M2-10-004,History,0.50,0.70,0.55,0.00,0.90,0.60,1.00,0.00,high,0.69,VERY_HIGH,Telangana struggle AP-specific - repeat analysis
+MT-POLT-M3-5-001,Polity,0.65,0.85,0.65,0.15,0.50,0.70,0.60,0.40,high,0.68,HIGH,Federalism CA-linked 2023
+MT-ENV-M5-5-008,Environment,0.70,0.75,0.70,0.15,0.50,0.70,0.60,0.40,high,0.68,HIGH,Natural disaster coastal CA-linked
+MT-POLT-G2P2-II4-003,Polity,0.85,0.67,0.5,0,0.5,0.55,0.85,0.15,high,0.68,HIGH,"Parliament – Lok Sabha, Rajya Sabha, procedur - shared_gs - 13x G2 PYQ"
+MT-AP_ECON-G2P3-5-004,Economy,0.39,0.65,0.5,0.15,0.6,0.6,0.85,0.15,low,0.68,HIGH,"AP Infrastructure – Ports, airports, highways - ap_specific - 3x G2 PYQ"
+MT-SCI-M5-2-002,Science,0.70,0.85,0.70,0.00,0.50,0.70,0.60,0.40,high,0.67,HIGH,Digital platforms e-governance tech
+MT-ECON-G2P3-2-004,Economy,0.34,0.75,0.5,0.15,0.5,0.55,0.85,0.15,low,0.67,HIGH,"FDI policy – Sectors, limits, automatic route - shared_gs - 2x G2 PYQ"
+MT-AP_HIST-M2-9-004,History,0.50,0.60,0.50,0.00,0.90,0.55,1.00,0.00,high,0.66,VERY_HIGH,Gurram Jashuvha social reform AP - repeat twice
+MT-POLT-M3-4-006,Polity,0.70,0.85,0.70,0.00,0.50,0.70,0.60,0.40,high,0.66,HIGH,Judicial Review repeat
+MT-POLT-M3-4-005,Polity,0.70,0.70,0.70,0.00,0.50,0.70,0.60,0.40,high,0.66,HIGH,Privileges state legislature repeat
+MT-POLT-M3-5-008,Polity,0.70,0.67,0.70,0.00,0.50,0.70,0.60,0.40,high,0.66,HIGH,73rd 74th CAA repeat
+MT-AP_ECON-G2P3-5-003,Economy,0.48,0.69,0.5,0.09,0.6,0.6,0.85,0.15,medium,0.66,HIGH,"AP Industry – Key sectors, corridors, special - ap_specific - 5x G2 PYQ"
+MT-SCI-M5-4-002,Science,0.70,0.85,0.65,0.00,0.50,0.70,0.60,0.40,high,0.65,HIGH,Shale gas nuclear energy repeat
+MT-ENV-M5-5-007,Environment,0.70,0.72,0.68,0.00,0.50,0.70,0.60,0.40,high,0.65,HIGH,Solid waste pollution management repeat
+MT-AP_HIST-G2P2-I5-005,AP History,0.71,0.65,0.5,0,0.6,0.6,0.85,0.15,high,0.65,HIGH,AP cultural identity and heritage preservatio - ap_specific - 10x G2 PYQ
+MT-AP_ECON-G2P3-5-006,Economy,0.39,0.72,0.5,0.1,0.6,0.6,0.85,0.15,low,0.65,HIGH,AP Post-bifurcation fiscal challenges - ap_specific - 3x G2 PYQ
+MT-ECON-G2P3-1-005,Economy,0.3,0.75,0.5,0.15,0.5,0.55,0.85,0.15,low,0.65,HIGH,Regional planning and balanced development - shared_gs - 1x G2 PYQ
+MT-ECON-G2P3-3-004,Economy,0.3,0.75,0.5,0.15,0.5,0.55,0.85,0.15,low,0.65,HIGH,"Capital market – SEBI, stock exchanges - shared_gs - 1x G2 PYQ"
+MT-ECON-G2P3-4-002,Economy,0.3,0.75,0.5,0.15,0.5,0.55,0.85,0.15,low,0.65,HIGH,Per capita income and human development index - shared_gs - 1x G2 PYQ
+MT-HIST-M2-2-016,History,0.70,0.85,0.65,0.00,0.50,0.55,0.60,0.40,high,0.64,HIGH,Buddhism topics - shared_gs - repeat presence in 2016 2025
+NO_REGISTRY_MATCH_CONSTITUTION,Constitution,0.80,0.85,0.70,0.00,0.30,0.70,0.30,0.70,low,0.64,CRITICAL,BLOCKER - 15 questions lack registry entries
+MT-SCI-M5-3-001,Science,0.70,0.75,0.65,0.00,0.50,0.70,0.60,0.40,high,0.64,HIGH,Remote sensing Mars Orbiter space
+MT-AP_HIST-G2P2-I1-001,AP History,0.71,0.62,0.5,0,0.6,0.6,0.85,0.15,high,0.64,MEDIUM,Satavahana contributions to AP culture - ap_specific - 10x G2 PYQ
+MT-ECON-G2P3-4-001,Economy,0.62,0.69,0.5,0.04,0.5,0.55,0.85,0.15,high,0.64,MEDIUM,"National Income – Concepts, measurement, GDP, - shared_gs - 8x G2 PYQ"
+MT-ECON-M4-7-004,Economy,0.65,0.85,0.65,0.00,0.50,0.70,0.60,0.40,high,0.63,HIGH,Regional Rural Banks repeat
+MT-SCI-M5-2-001,Science,0.60,0.85,0.60,0.15,0.50,0.65,0.60,0.40,high,0.63,HIGH,IT cloud computing CA-linked
+MT-POLT-M3-4-004,Polity,0.60,0.85,0.65,0.00,0.50,0.65,0.60,0.40,high,0.62,HIGH,Lok Sabha Rajya Sabha
+MT-ECON-G2P3-2-001,Economy,0.53,0.67,0.5,0.05,0.5,0.55,0.85,0.15,medium,0.62,MEDIUM,"LPG reforms – Liberalization, Privatization,  - shared_gs - 6x G2 PYQ"
+MT-ECON-M4-1-003,Economy,0.65,0.85,0.60,0.00,0.50,0.65,0.60,0.40,high,0.61,HIGH,Economic development measurement - repeat
+MT-ECON-M4-6-014,Economy,0.35,0.85,0.50,0.00,0.90,0.45,1.00,0.00,high,0.61,HIGH,AP Rural Inclusive Growth
+MT-SCI-M5-4-003,Science,0.60,0.75,0.65,0.00,0.50,0.65,0.60,0.40,high,0.61,HIGH,Renewable energy barriers repeat
+MT-AP_HIST-G2P2-I4-002,AP History,0.62,0.65,0.5,0,0.6,0.6,0.85,0.15,high,0.61,MEDIUM,Role of AP in freedom struggle - ap_specific - 8x G2 PYQ
+MT-ECON-G2P3-2-003,Economy,0.48,0.69,0.5,0.06,0.5,0.55,0.85,0.15,medium,0.61,MEDIUM,Trade Policy – Import substitution to export  - shared_gs - 5x G2 PYQ
+MT-ECON-G2P3-4-003,Economy,0.39,0.65,0.5,0.1,0.5,0.55,0.85,0.15,low,0.61,MEDIUM,"Poverty – Definitions, trends, BPL methodolog - shared_gs - 3x G2 PYQ"
+MT-ECON-M4-6-002,Economy,0.60,0.85,0.60,0.00,0.50,0.65,0.60,0.40,high,0.60,HIGH,Poverty alleviation repeat
+MT-AP_ECON-G2P3-5-007,Economy,0.34,0.65,0.5,0.08,0.6,0.6,0.85,0.15,low,0.6,MEDIUM,AP flagship schemes and programmes - ap_specific - 2x G2 PYQ
+MT-POLT-M3-1-002,Polity,0.55,0.85,0.60,0.00,0.50,0.60,0.60,0.40,high,0.59,MEDIUM,Constituent Assembly analytical
+MT-POLT-G2P2-II4-001,Polity,0.57,0.69,0.5,0,0.5,0.55,0.85,0.15,medium,0.59,MEDIUM,"President – Election, powers, emergency power - shared_gs - 7x G2 PYQ"
+MT-ECON-M4-2-002,Economy,0.55,0.85,0.55,0.00,0.50,0.60,0.60,0.40,high,0.58,MEDIUM,Employment rural issues - shared_gs
+MT-ENV-M5-6-004,Environment,0.50,0.85,0.60,0.00,0.50,0.55,0.60,0.40,high,0.58,MEDIUM,Environmental Clearance EIA analytical
+MT-AP_HIST-G2P2-I2-001,AP History,0.53,0.65,0.5,0,0.6,0.6,0.85,0.15,medium,0.58,MEDIUM,Vijayanagar influence on AP culture - ap_specific - 6x G2 PYQ
+MT-AP_HIST-G2P2-I5-001,AP History,0.53,0.65,0.5,0,0.6,0.6,0.85,0.15,medium,0.58,MEDIUM,States Reorganization Act 1956 - ap_specific - 6x G2 PYQ
+MT-SCI-M5-1-002,Science,0.50,0.85,0.60,0.00,0.50,0.55,0.60,0.40,high,0.57,MEDIUM,Data Sharing NDSAP analytical
+MT-SCI-M5-1-001,Science,0.50,0.85,0.60,0.00,0.50,0.55,0.60,0.40,high,0.57,MEDIUM,Scientific Social Responsibility L4
+MT-SCI-M5-7-003,Science,0.50,0.70,0.60,0.00,0.50,0.55,0.60,0.40,high,0.57,MEDIUM,Vitamins ELISA health repeat
+MT-AP_HIST-G2P2-I1-005,AP History,0.48,0.65,0.5,0,0.6,0.6,0.85,0.15,medium,0.57,MEDIUM,Language and literary developments in ancient - ap_specific - 5x G2 PYQ
+MT-POLT-G2P2-II1-003,Polity,0.53,0.68,0.5,0,0.5,0.55,0.85,0.15,medium,0.57,MEDIUM,"Salient features – Written, federal, secular, - shared_gs - 6x G2 PYQ"
+MT-ECON-M4-3-001,Economy,0.50,0.85,0.55,0.00,0.50,0.55,0.60,0.40,high,0.56,MEDIUM,Monetary policy framework
+MT-ECON-M4-10-001,Economy,0.40,0.60,0.50,0.00,0.90,0.45,1.00,0.00,medium,0.56,MEDIUM,AP Industrial policy
+MT-SCI-M5-1-003,Science,0.50,0.67,0.60,0.00,0.50,0.55,0.60,0.40,high,0.56,MEDIUM,ISCA CSIR research repeat
+MT-POLT-G2P2-II4-004,Polity,0.48,0.73,0.5,0,0.5,0.55,0.85,0.15,medium,0.56,MEDIUM,"Supreme Court – Composition, jurisdiction, ju - shared_gs - 5x G2 PYQ"
+MT-POLT-G2P2-II7-002,Polity,0.53,0.63,0.5,0,0.5,0.55,0.85,0.15,medium,0.56,MEDIUM,Election Commission of India - shared_gs - 6x G2 PYQ
+MT-ECON-M4-6-005,Economy,0.25,0.85,0.50,0.00,0.90,0.35,1.00,0.00,medium,0.55,MEDIUM,PDS Fair Price Shop analytical
+MT-AP_HIST-G2P2-I1-002,AP History,0.43,0.65,0.5,0,0.6,0.6,0.85,0.15,medium,0.55,MEDIUM,Ikshvaku dynasty – Buddhist influence - ap_specific - 4x G2 PYQ
+MT-AP_HIST-G2P2-I1-003,AP History,0.43,0.65,0.5,0,0.6,0.6,0.85,0.15,medium,0.55,MEDIUM,Eastern Chalukya – Art and architecture - ap_specific - 4x G2 PYQ
+MT-AP_HIST-G2P2-I1-004,AP History,0.43,0.65,0.5,0,0.6,0.6,0.85,0.15,medium,0.55,MEDIUM,Kakatiya dynasty – Administration and culture - ap_specific - 4x G2 PYQ
+MT-SCI-M5-7-008,Science,0.50,0.60,0.60,0.00,0.50,0.55,0.60,0.40,high,0.54,MEDIUM,PHT Oilseeds Post Harvest repeat
+MT-SCI-M5-7-007,Science,0.40,0.85,0.55,0.00,0.50,0.50,0.60,0.40,high,0.54,MEDIUM,Plant tissue culture biotech
+MT-POLT-G2P2-II6-001,Polity,0.43,0.7,0.5,0,0.5,0.55,0.85,0.15,medium,0.54,LOW,"Legislative, Administrative, Financial relati - shared_gs - 4x G2 PYQ"
+MT-HIST-M2-5-019,History,0.40,0.85,0.60,0.00,0.50,0.50,0.60,0.40,medium,0.53,MEDIUM,Pre-independence moderates - shared_gs - analytical L3
+MT-AP_HIST-M2-6-002,History,0.30,0.60,0.50,0.00,0.90,0.40,1.00,0.00,high,0.53,HIGH,Ikshvaku AP-specific - single occurrence
+MT-POLT-M3-1-003,Polity,0.50,0.60,0.55,0.00,0.50,0.55,0.60,0.40,high,0.53,MEDIUM,Constitution features static
+MT-SCI-M5-7-010,Science,0.40,0.70,0.55,0.00,0.50,0.50,0.60,0.40,high,0.53,MEDIUM,Edible vaccines biotech repeat
+MT-ENV-M5-5-005,Environment,0.35,0.85,0.55,0.15,0.50,0.45,0.60,0.40,medium,0.53,MEDIUM,Climate change El Nino CA-linked
+MT-AP_HIST-G2P2-I3-001,AP History,0.39,0.65,0.5,0,0.6,0.6,0.85,0.15,low,0.53,LOW,Veeresalingam and social reform - ap_specific - 3x G2 PYQ
+MT-AP_HIST-G2P2-I4-003,AP History,0.39,0.65,0.5,0,0.6,0.6,0.85,0.15,low,0.53,LOW,"Important leaders of AP – Tanguturi Prakasam, - ap_specific - 3x G2 PYQ"
+MT-AP_HIST-G2P2-I5-002,AP History,0.39,0.65,0.5,0,0.6,0.6,0.85,0.15,low,0.53,LOW,Formation of Andhra Pradesh – Merger with Hyd - ap_specific - 3x G2 PYQ
+MT-AP_HIST-G2P2-I5-004,AP History,0.39,0.65,0.5,0,0.6,0.6,0.85,0.15,low,0.53,LOW,Post-bifurcation challenges and development - ap_specific - 3x G2 PYQ
+MT-POLT-G2P2-II2-002,Polity,0.43,0.68,0.5,0,0.5,0.55,0.85,0.15,medium,0.53,LOW,Right to Freedom – Articles 19-22 - shared_gs - 4x G2 PYQ
+MT-POLT-G2P2-II5-003,Polity,0.43,0.68,0.5,0,0.5,0.55,0.85,0.15,medium,0.53,LOW,"State Legislature – Structure, procedures - shared_gs - 4x G2 PYQ"
+MT-POLT-G2P2-II6-002,Polity,0.39,0.72,0.5,0,0.5,0.55,0.85,0.15,low,0.53,LOW,Inter-State Council and Zonal Councils - shared_gs - 3x G2 PYQ
+MT-HIST-M2-5-021,History,0.45,0.85,0.55,0.00,0.50,0.50,0.60,0.40,medium,0.52,MEDIUM,Gandhi methods - shared_gs - L3 analytical
+MT-ECON-M4-4-003,Economy,0.45,0.85,0.55,0.00,0.50,0.50,0.60,0.40,medium,0.52,MEDIUM,Budget revenue deficit
+MT-ECON-M4-2-003,Economy,0.30,0.60,0.45,0.00,0.90,0.35,1.00,0.00,medium,0.52,MEDIUM,AP literacy trends
+MT-POLT-M3-2-002,Polity,0.40,0.85,0.55,0.00,0.50,0.50,0.60,0.40,medium,0.52,MEDIUM,Article 19 restrictions
+MT-SCI-M5-8-004,Science,0.40,0.85,0.55,0.00,0.50,0.50,0.60,0.40,medium,0.52,MEDIUM,Immunisation vaccination analytical
+MT-ENV-M5-5-002,Environment,0.40,0.85,0.55,0.00,0.50,0.50,0.60,0.40,medium,0.52,MEDIUM,Urbanisation biodiversity analytical
+MT-AP_HIST-G2P2-I2-003,AP History,0.34,0.65,0.5,0,0.6,0.6,0.85,0.15,low,0.52,LOW,Social conditions under medieval rulers - ap_specific - 2x G2 PYQ
+MT-AP_HIST-G2P2-I3-004,AP History,0.34,0.65,0.5,0,0.6,0.6,0.85,0.15,low,0.52,LOW,Education reform and modern thought - ap_specific - 2x G2 PYQ
+MT-POLT-G2P2-II4-002,Polity,0.34,0.75,0.5,0,0.5,0.55,0.85,0.15,low,0.52,LOW,Prime Minister and Council of Ministers - shared_gs - 2x G2 PYQ
+MT-ECON-G2P3-4-005,Economy,0.39,0.68,0.5,0,0.5,0.55,0.85,0.15,low,0.52,LOW,"Inflation – Types, measurement, WPI, CPI - shared_gs - 3x G2 PYQ"
+MT-HIST-M2-5-015,History,0.35,1.00,0.50,0.00,0.50,0.45,0.60,0.40,medium,0.51,MEDIUM,Ambedkar constitutional - shared_gs - L4 synthesis
+MT-AP_HIST-M2-9-006,History,0.25,0.60,0.50,0.00,0.90,0.40,1.00,0.00,high,0.51,HIGH,Andhra Mahasabha AP-specific - single occurrence
+MT-ECON-M4-12-004,Economy,0.25,0.60,0.50,0.00,0.90,0.35,1.00,0.00,medium,0.51,MEDIUM,Polavaram project
+MT-POLT-M3-5-003,Polity,0.35,0.85,0.55,0.00,0.50,0.45,0.60,0.40,medium,0.51,MEDIUM,Inter-State Council analytical
+MT-POLT-G2P2-II1-002,Polity,0.39,0.65,0.5,0,0.5,0.55,0.85,0.15,low,0.51,LOW,"Sources of the Constitution – British, US, Ir - shared_gs - 3x G2 PYQ"
+MT-POLT-G2P2-II7-004,Polity,0.34,0.7,0.5,0,0.5,0.55,0.85,0.15,low,0.51,LOW,"National Commissions – SC, ST, Women, Minorit - shared_gs - 2x G2 PYQ"
+MT-POLT-G2P2-II5-001,Polity,0.34,0.7,0.5,0,0.5,0.55,0.85,0.15,low,0.51,LOW,"Governor – Appointment, powers, discretion - shared_gs - 2x G2 PYQ"
+MT-ECON-G2P3-2-002,Economy,0.34,0.7,0.5,0,0.5,0.55,0.85,0.15,low,0.51,LOW,"Industrial Policy – 1948, 1956, 1991 and afte - shared_gs - 2x G2 PYQ"
+MT-HIST-M2-5-006,History,0.35,0.85,0.50,0.00,0.50,0.45,0.60,0.40,medium,0.50,MEDIUM,1857 Revolt - shared_gs - analytical
+MT-AP_HIST-M2-6-006,History,0.25,0.60,0.45,0.00,0.90,0.35,1.00,0.00,high,0.50,HIGH,Eastern Chalukya AP-specific - single occurrence
+MT-AP_HIST-M2-7-005,History,0.25,0.60,0.45,0.00,0.90,0.35,1.00,0.00,high,0.50,HIGH,Qutubshahi Telugu - AP-specific - single occurrence
+MT-AP_HIST-M2-9-002,History,0.25,0.60,0.45,0.00,0.90,0.35,1.00,0.00,high,0.50,HIGH,Vandemataram movement AP - single occurrence
+MT-ECON-M4-1-011,Economy,0.25,0.60,0.45,0.00,0.90,0.30,1.00,0.00,medium,0.50,MEDIUM,AP employment schemes
+MT-ECON-M4-12-003,Economy,0.25,0.60,0.45,0.00,0.90,0.30,1.00,0.00,medium,0.50,MEDIUM,AP Capital Region Dev Authority
+MT-ECON-M4-7-003,Economy,0.30,0.60,0.45,0.00,0.90,0.35,1.00,0.00,medium,0.50,MEDIUM,AP farmer productivity
+MT-ETHICS-M3-13-005,Ethics,0.25,0.85,0.60,0.00,0.50,0.35,0.60,0.40,medium,0.50,MEDIUM,Emotional intelligence analytical
+MT-ETHICS-M3-14-001,Ethics,0.30,0.85,0.55,0.00,0.50,0.40,0.60,0.40,medium,0.50,MEDIUM,Public service trustworthiness
+MT-ETHICS-M3-11-004,Ethics,0.25,0.85,0.60,0.00,0.50,0.35,0.60,0.40,medium,0.50,MEDIUM,Time space affect ethics analytical
+MT-ENV-M5-5-009,Environment,0.30,0.85,0.55,0.00,0.50,0.40,0.60,0.40,medium,0.50,MEDIUM,Environmentalism sustainability analytical
+MT-ENV-M5-5-004,Environment,0.30,0.85,0.55,0.00,0.50,0.40,0.60,0.40,medium,0.50,MEDIUM,Ozone depletion climate analytical
+MT-AP_HIST-G2P2-I2-005,AP History,0.3,0.65,0.5,0,0.6,0.6,0.85,0.15,low,0.5,LOW,Architecture and art of medieval AP - ap_specific - 1x G2 PYQ
+MT-AP_HIST-G2P2-I3-003,AP History,0.3,0.65,0.5,0,0.6,0.6,0.85,0.15,low,0.5,LOW,Women's reform movements - ap_specific - 1x G2 PYQ
+MT-POLT-G2P2-II2-001,Polity,0.34,0.65,0.5,0,0.5,0.55,0.85,0.15,low,0.5,LOW,Right to Equality – Articles 14-18 - shared_gs - 2x G2 PYQ
+MT-POLT-G2P2-II4-005,Polity,0.34,0.65,0.5,0,0.5,0.55,0.85,0.15,low,0.5,LOW,"Attorney General, Comptroller and Auditor Gen - shared_gs - 2x G2 PYQ"
+MT-POLT-G2P2-II3-001,Polity,0.34,0.65,0.5,0,0.5,0.55,0.85,0.15,low,0.5,LOW,Nature and significance of DPSPs - shared_gs - 2x G2 PYQ
+MT-POLT-G2P2-II7-001,Polity,0.3,0.75,0.5,0,0.5,0.55,0.85,0.15,low,0.5,LOW,Important Constitutional Amendments - shared_gs - 1x G2 PYQ
+MT-POLT-G2P2-II2-006,Polity,0.3,0.75,0.5,0,0.5,0.55,0.85,0.15,low,0.5,LOW,Right to Constitutional Remedies – Article 32 - shared_gs - 1x G2 PYQ
+MT-ECON-G2P3-4-004,Economy,0.34,0.65,0.5,0,0.5,0.55,0.85,0.15,low,0.5,LOW,"Unemployment – Types, measurement, CMIE data - shared_gs - 2x G2 PYQ"
+MT-ECON-G2P3-1-002,Economy,0.34,0.65,0.5,0,0.5,0.55,0.85,0.15,low,0.5,LOW,"NITI Aayog – Structure, functions, role - shared_gs - 2x G2 PYQ"
+MT-HIST-M2-3-012,History,0.40,0.60,0.50,0.00,0.50,0.45,0.60,0.40,medium,0.49,MEDIUM,Post-Mauryan art - shared_gs - single occurrence
+MT-HIST-M2-5-023,History,0.30,0.85,0.60,0.00,0.50,0.40,0.60,0.40,medium,0.48,MEDIUM,Partition communalism - shared_gs - hard difficulty
+MT-AP_HIST-M2-7-007,History,0.20,0.60,0.45,0.00,0.90,0.30,1.00,0.00,high,0.48,HIGH,Poet Molla - AP-specific - single occurrence
+MT-ADMIN-M3-9-001,Administration,0.30,0.85,0.55,0.00,0.50,0.40,0.60,0.40,medium,0.48,MEDIUM,Amartya Sen development
+MT-ETHICS-M3-15-004,Ethics,0.25,0.85,0.55,0.00,0.50,0.35,0.60,0.40,medium,0.48,MEDIUM,Labour laws reforms analytical
+MT-SCI-M5-8-009,Science,0.25,0.85,0.55,0.00,0.50,0.35,0.60,0.40,medium,0.48,MEDIUM,Chikungunya dengue disease analytical
+MT-POLT-G2P2-II1-004,Polity,0.3,0.65,0.5,0,0.5,0.55,0.85,0.15,low,0.48,LOW,Preamble – Significance and amendments - shared_gs - 1x G2 PYQ
+MT-POLT-G2P2-II6-003,Polity,0.3,0.65,0.5,0,0.5,0.55,0.85,0.15,low,0.48,LOW,73rd Amendment – Panchayati Raj system - shared_gs - 1x G2 PYQ
+MT-POLT-G2P2-II2-004,Polity,0.3,0.65,0.5,0,0.5,0.55,0.85,0.15,low,0.48,LOW,Right to Freedom of Religion – Articles 25-28 - shared_gs - 1x G2 PYQ
+MT-POLT-G2P2-II5-005,Polity,0.3,0.65,0.5,0,0.5,0.55,0.85,0.15,low,0.48,LOW,"Advocate General, State Election Commission - shared_gs - 1x G2 PYQ"
+MT-POLT-G2P2-II6-005,Polity,0.3,0.65,0.5,0,0.5,0.55,0.85,0.15,low,0.48,LOW,Finance Commission and fiscal federalism - shared_gs - 1x G2 PYQ
+MT-POLT-G2P2-II5-004,Polity,0.3,0.65,0.5,0,0.5,0.55,0.85,0.15,low,0.48,LOW,High Court – Jurisdiction and powers - shared_gs - 1x G2 PYQ
+MT-POLT-G2P2-II1-001,Polity,0.3,0.65,0.5,0,0.5,0.55,0.85,0.15,low,0.48,LOW,Constituent Assembly – Composition and proces - shared_gs - 1x G2 PYQ
+MT-HIST-M2-5-022,History,0.30,0.85,0.55,0.00,0.50,0.40,0.60,0.40,medium,0.47,MEDIUM,Peasant movements - shared_gs - analytical
+MT-ECON-M4-6-003,Economy,0.20,0.60,0.45,0.00,0.90,0.25,1.00,0.00,medium,0.47,MEDIUM,Dr NTR Vaidya Seva scheme
+MT-ECON-M4-11-003,Economy,0.20,0.60,0.45,0.00,0.90,0.25,1.00,0.00,medium,0.47,MEDIUM,AP e-Pragati initiative
+MT-ECON-M4-11-004,Economy,0.20,0.60,0.45,0.00,0.90,0.25,1.00,0.00,medium,0.47,MEDIUM,Smart Village Smart AP
+MT-POLT-M3-1-010,Polity,0.25,0.85,0.50,0.00,0.50,0.35,0.60,0.40,medium,0.47,MEDIUM,E-governance strategy analytical
+MT-ADMIN-M3-8-001,Administration,0.30,0.60,0.50,0.15,0.50,0.40,0.60,0.40,medium,0.47,MEDIUM,Health education CA-linked
+MT-SCI-M5-1-004,Science,0.25,0.85,0.50,0.00,0.50,0.35,0.60,0.40,medium,0.47,MEDIUM,C.V. Raman Raman Effect analytical
+MT-SCI-M5-7-005,Science,0.30,0.85,0.50,0.00,0.50,0.40,0.60,0.40,medium,0.47,MEDIUM,DNA fingerprinting forensic analytical
+MT-ECON-M4-5-004,Economy,0.40,0.60,0.50,0.00,0.50,0.45,0.60,0.40,medium,0.46,MEDIUM,FRBM Act shared_gs
+MT-ADMIN-M3-7-002,Administration,0.25,0.85,0.50,0.00,0.50,0.35,0.60,0.40,medium,0.46,MEDIUM,Kautilya Arthashastra analytical
+MT-ADMIN-M3-9-002,Administration,0.25,0.85,0.50,0.00,0.50,0.35,0.60,0.40,medium,0.46,MEDIUM,UN NGO registration analytical
+MT-ADMIN-M3-10-003,Administration,0.25,0.85,0.50,0.00,0.50,0.35,0.60,0.40,medium,0.46,MEDIUM,RTI rights Act 2005
+MT-ETHICS-M3-12-001,Ethics,0.25,0.85,0.50,0.00,0.50,0.35,0.60,0.40,medium,0.46,MEDIUM,Values education analytical
+MT-SCI-M5-8-007,Science,0.25,0.85,0.50,0.00,0.50,0.35,0.60,0.40,medium,0.46,MEDIUM,Disease epidemic endemic analytical
+MT-SCI-M5-8-010,Science,0.25,0.85,0.50,0.00,0.50,0.35,0.60,0.40,medium,0.46,MEDIUM,Malaria parasite aetiology analytical
+MT-POLT-M3-1-006,Polity,0.35,0.60,0.50,0.00,0.50,0.40,0.60,0.40,medium,0.45,MEDIUM,Statutory bodies quasi-judicial
+MT-HIST-M2-4-015,History,0.30,0.60,0.50,0.00,0.50,0.40,0.60,0.40,medium,0.44,MEDIUM,Vijayanagar culture - shared_gs - single occurrence
+MT-ENV-M5-5-001,Environment,0.30,0.60,0.50,0.00,0.50,0.35,0.60,0.40,medium,0.44,MEDIUM,Ecosystem food chain biodiversity static
+MT-HIST-M2-4-028,History,0.30,0.60,0.45,0.00,0.50,0.35,0.60,0.40,medium,0.43,MEDIUM,Mughal architecture - shared_gs - single occurrence
+MT-ECON-M4-1-002,Economy,0.30,0.60,0.45,0.00,0.50,0.35,0.60,0.40,medium,0.43,MEDIUM,NITI Aayog single occurrence
+MT-ADMIN-M3-6-001,Administration,0.25,0.60,0.50,0.00,0.50,0.30,0.60,0.40,medium,0.42,MEDIUM,Public administration evolution
+MT-ADMIN-M3-9-004,Administration,0.25,0.60,0.50,0.00,0.50,0.30,0.60,0.40,medium,0.42,MEDIUM,NGOs civil services static
+MT-ETHICS-M3-11-001,Ethics,0.25,0.60,0.50,0.00,0.50,0.30,0.60,0.40,medium,0.42,MEDIUM,Ethics Indian tradition static
+MT-ENV-M5-5-006,Environment,0.25,0.60,0.50,0.00,0.50,0.30,0.60,0.40,medium,0.42,MEDIUM,Pollution Control Board functions static
+MT-ADMIN-M3-10-005,Administration,0.20,0.60,0.50,0.00,0.50,0.25,0.60,0.40,medium,0.41,MEDIUM,Social audit definition static
+MT-ETHICS-M3-14-006,Ethics,0.20,0.60,0.50,0.00,0.50,0.25,0.60,0.40,medium,0.41,MEDIUM,Lokpal Lokayukta Act static
+MT-ETHICS-M3-13-003,Ethics,0.20,0.60,0.50,0.00,0.50,0.25,0.60,0.40,medium,0.41,MEDIUM,Moral attitude political static
+MT-ETHICS-M3-12-004,Ethics,0.20,0.60,0.50,0.00,0.50,0.25,0.60,0.40,medium,0.41,MEDIUM,Family society education static
+MT-ETHICS-M3-15-005,Ethics,0.20,0.60,0.50,0.00,0.50,0.25,0.60,0.40,medium,0.41,MEDIUM,Cybercrimes cyber laws static
+MT-SCI-M5-8-012,Science,0.20,0.60,0.50,0.00,0.50,0.25,0.60,0.40,medium,0.41,MEDIUM,Preventive health measures static
+MT-SCI-M5-8-001,Science,0.20,0.60,0.50,0.00,0.50,0.25,0.60,0.40,medium,0.41,MEDIUM,Autoimmune diseases health static
+MT-ENV-M5-5-003,Environment,0.20,0.60,0.50,0.00,0.50,0.25,0.60,0.40,medium,0.41,MEDIUM,Wildlife sanctuaries static

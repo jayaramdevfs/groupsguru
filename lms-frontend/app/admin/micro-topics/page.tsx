@@ -26,6 +26,7 @@ const GROUPS = ["ALL_GROUPS", "G3_PLUS", "G2_PLUS", "G1_ONLY"];
 export default function AdminMicroTopicManagement() {
   const [microTopics, setMicroTopics] = useState<MicroTopic[]>([]);
   const [topics, setTopics] = useState<Topic[]>([]);
+  const [totalElements, setTotalElements] = useState<number>(0);
   const [isLoading, setIsLoading] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingMt, setEditingMt] = useState<MicroTopic | null>(null);
@@ -50,12 +51,13 @@ export default function AdminMicroTopicManagement() {
   const fetchData = useCallback(async () => {
     setIsLoading(true);
     try {
-      // Use standard pagination size 100 for now. Advanced tables can paginate further.
+      // Use size 1000 to load all registry items.
       const [mtData, topData] = await Promise.all([
-        registryApi.getMicroTopics(0, 100, selectedSubject !== "all" ? selectedSubject : undefined, selectedPaper !== "all" ? selectedPaper : undefined, selectedGroup !== "all" ? selectedGroup : undefined),
+        registryApi.getMicroTopics(0, 1000, selectedSubject !== "all" ? selectedSubject : undefined, selectedPaper !== "all" ? selectedPaper : undefined, selectedGroup !== "all" ? selectedGroup : undefined),
         topicApi.adminGetAll(),
       ]);
       setMicroTopics(mtData.content);
+      setTotalElements(mtData.totalElements || mtData.content.length);
       setTopics(topData);
     } catch (error) {
       console.error("Failed to fetch data:", error);
@@ -156,6 +158,11 @@ export default function AdminMicroTopicManagement() {
             <div className="px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-[10px] font-black uppercase tracking-[0.3em] mb-4 inline-block">
               Level 4 Registry (Atomic)
             </div>
+            {totalElements > 0 && (
+              <div className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-black uppercase tracking-[0.3em] mb-4 inline-block ml-4">
+                Registry loaded: {totalElements} micro-topics
+              </div>
+            )}
             <h1 className="text-[36px] md:text-[48px] font-[800] leading-tight mb-2">
               Micro-Topics
             </h1>

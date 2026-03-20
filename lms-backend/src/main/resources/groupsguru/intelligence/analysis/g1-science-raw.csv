@@ -1,0 +1,193 @@
+pyq_id,commission,year,paper,question_number,subject,micro_topic_id,question_type,cognitive_level,difficulty,recurrence,ca_linked,question_summary
+APPSC-G1-2016-P5-Q1a,APPSC,2016,paper5,1a,Science & Technology,MT-SCI-M5-1-002,ANALYTICAL,L3,medium,first_time,false,Salient features of National Data Sharing and Accessibility Policy 2012
+APPSC-G1-2016-P5-Q1b-i,APPSC,2016,paper5,1b-i,Science & Technology,MT-SCI-M5-1-003,STATIC,L2,easy,first_time,false,Short note on Indian Science Congress Association (ISCA)
+APPSC-G1-2016-P5-Q1b-ii,APPSC,2016,paper5,1b-ii,Science & Technology,MT-SCI-M5-1-003,STATIC,L2,easy,first_time,false,Short note on Council of Scientific and Industrial Research (CSIR)
+APPSC-G1-2016-P5-Q1c,APPSC,2016,paper5,1c,Science & Technology,MT-SCI-M5-1-002,ANALYTICAL,L3,medium,first_time,false,Main objectives of Science Technology and Innovation Policy 2013
+APPSC-G1-2016-P5-Q1d-i,APPSC,2016,paper5,1d-i,Science & Technology,MT-SCI-M5-7-008,STATIC,L2,easy,first_time,false,Short note on Post Harvest Technology (PHT)
+APPSC-G1-2016-P5-Q1d-ii,APPSC,2016,paper5,1d-ii,Science & Technology,MT-SCI-M5-7-008,STATIC,L2,easy,first_time,false,Short note on Oilseeds Production Programme (OPP)
+APPSC-G1-2016-P5-Q2a,APPSC,2016,paper5,2a,Science & Technology,MT-SCI-M5-3-001,ANALYTICAL,L3,medium,first_time,false,Describe Mars Orbiter Mission Mangalyaan and its features
+APPSC-G1-2016-P5-Q2b-i,APPSC,2016,paper5,2b-i,Science & Technology,MT-SCI-M5-2-001,STATIC,L2,easy,first_time,false,Short note on broadband digital communication
+APPSC-G1-2016-P5-Q2b-ii,APPSC,2016,paper5,2b-ii,Science & Technology,MT-SCI-M5-3-001,STATIC,L2,easy,first_time,false,Short note on Fixed-Satellite Services (FSS)
+APPSC-G1-2016-P5-Q2c,APPSC,2016,paper5,2c,Science & Technology,MT-SCI-M5-3-001,ANALYTICAL,L3,medium,first_time,false,Applications of Remote Sensing technology in agriculture
+APPSC-G1-2016-P5-Q2d-i,APPSC,2016,paper5,2d-i,Science & Technology,MT-SCI-M5-3-001,STATIC,L2,easy,first_time,false,Short note on Mobile Satellite Services (MSS)
+APPSC-G1-2016-P5-Q2d-ii,APPSC,2016,paper5,2d-ii,Environment,MT-ENV-M5-5-007,STATIC,L2,easy,first_time,false,Short note on environmental monitoring
+APPSC-G1-2016-P5-Q3a,APPSC,2016,paper5,3a,Science & Technology,MT-SCI-M5-2-002,ANALYTICAL,L3,medium,first_time,false,Cloud computing definition and AP Cloud Initiative
+APPSC-G1-2016-P5-Q3b,APPSC,2016,paper5,3b,Science & Technology,MT-SCI-M5-2-002,ANALYTICAL,L3,medium,first_time,false,Fiber Grid Project of Andhra Pradesh
+APPSC-G1-2016-P5-Q3c,APPSC,2016,paper5,3c,Science & Technology,MT-SCI-M5-2-001,ANALYTICAL,L3,medium,first_time,false,ERP definition and critical issues in ERP project execution
+APPSC-G1-2016-P5-Q3d,APPSC,2016,paper5,3d,Science & Technology,MT-SCI-M5-2-001,STATIC,L2,easy,first_time,false,Note on Local Area Network (LAN)
+APPSC-G1-2016-P5-Q4a,APPSC,2016,paper5,4a,Science & Technology,MT-SCI-M5-4-002,ANALYTICAL,L3,medium,first_time,false,Short note on Shale Gas Revolution
+APPSC-G1-2016-P5-Q4b,APPSC,2016,paper5,4b,Science & Technology,MT-SCI-M5-4-002,ANALYTICAL,L3,hard,first_time,false,Nuclear power growth in India and nuclear fuel reserves
+APPSC-G1-2016-P5-Q4c,APPSC,2016,paper5,4c,Science & Technology,MT-SCI-M5-4-003,ANALYTICAL,L3,medium,first_time,false,Scope of renewable energy in energy crisis scenario
+APPSC-G1-2016-P5-Q4d,APPSC,2016,paper5,4d,Science & Technology,MT-SCI-M5-4-003,ANALYTICAL,L2,medium,first_time,false,Detailed list of barriers to renewable energy
+APPSC-G1-2016-P5-Q5a,APPSC,2016,paper5,5a,Environment,MT-ENV-M5-5-008,ANALYTICAL,L3,medium,first_time,false,Hazard vs disaster and types of coastal natural disasters
+APPSC-G1-2016-P5-Q5b,APPSC,2016,paper5,5b,Environment,MT-ENV-M5-5-008,STATIC,L2,medium,first_time,false,Tsunami Warning System of India details
+APPSC-G1-2016-P5-Q5c,APPSC,2016,paper5,5c,Environment,MT-ENV-M5-5-008,ANALYTICAL,L3,medium,first_time,false,Common challenges in disaster management plans
+APPSC-G1-2016-P5-Q5d,APPSC,2016,paper5,5d,Environment,MT-ENV-M5-5-005,CA_STATIC,L3,hard,first_time,true,COP21 Paris Agreement main points and India's stand
+APPSC-G1-2016-P5-Q6a,APPSC,2016,paper5,6a,Science & Technology,MT-SCI-M5-7-003,STATIC,L2,easy,first_time,false,Vitamins classification functions and sources
+APPSC-G1-2016-P5-Q6b,APPSC,2016,paper5,6b,Science & Technology,MT-SCI-M5-7-001,ANALYTICAL,L3,medium,first_time,false,Yeast fermentation and industrial use in product making
+APPSC-G1-2016-P5-Q6c,APPSC,2016,paper5,6c,Science & Technology,MT-SCI-M5-7-001,ANALYTICAL,L3,medium,first_time,false,Phytohormones groups and commercial use in fruit ripening
+APPSC-G1-2016-P5-Q6d,APPSC,2016,paper5,6d,Science & Technology,MT-SCI-M5-7-001,ANALYTICAL,L2,medium,first_time,false,Lactic acid fermentation and milk product making
+APPSC-G1-2016-P5-Q7a,APPSC,2016,paper5,7a,Science & Technology,MT-SCI-M5-7-001,STATIC,L2,easy,first_time,false,Essential oils definition and important uses
+APPSC-G1-2016-P5-Q7b-i,APPSC,2016,paper5,7b-i,Science & Technology,MT-SCI-M5-7-001,STATIC,L2,easy,first_time,false,Autotrophic vs heterotrophic plants
+APPSC-G1-2016-P5-Q7b-ii,APPSC,2016,paper5,7b-ii,Science & Technology,MT-SCI-M5-7-001,STATIC,L2,easy,first_time,false,Symbiosis definition and explanation
+APPSC-G1-2016-P5-Q7c-i,APPSC,2016,paper5,7c-i,Science & Technology,MT-SCI-M5-7-001,STATIC,L2,easy,first_time,false,Lichens definition and economic importance
+APPSC-G1-2016-P5-Q7c-ii,APPSC,2016,paper5,7c-ii,Science & Technology,MT-SCI-M5-7-001,STATIC,L2,easy,first_time,false,How insects are useful to human beings
+APPSC-G1-2016-P5-Q7d-i,APPSC,2016,paper5,7d-i,Science & Technology,MT-SCI-M5-7-003,STATIC,L2,medium,first_time,false,Short note on homeostasis
+APPSC-G1-2016-P5-Q7d-ii,APPSC,2016,paper5,7d-ii,Science & Technology,MT-SCI-M5-7-003,STATIC,L2,medium,first_time,false,Animal response to osmotic conditions of medium
+APPSC-G1-2016-P5-Q8a,APPSC,2016,paper5,8a,Science & Technology,MT-SCI-M5-7-007,ANALYTICAL,L3,medium,first_time,false,Plant tissue culture and applications in agriculture
+APPSC-G1-2016-P5-Q8b,APPSC,2016,paper5,8b,Science & Technology,MT-SCI-M5-7-001,ANALYTICAL,L3,medium,first_time,false,Golden Rice description and advantages
+APPSC-G1-2016-P5-Q8c,APPSC,2016,paper5,8c,Science & Technology,MT-SCI-M5-7-008,ANALYTICAL,L3,medium,first_time,false,Biofertilizers types and advantages
+APPSC-G1-2016-P5-Q8d,APPSC,2016,paper5,8d,Science & Technology,MT-SCI-M5-7-005,ANALYTICAL,L3,hard,first_time,false,DNA fingerprinting technique and forensic applications
+APPSC-G1-2016-P5-Q9a,APPSC,2016,paper5,9a,Science & Technology,MT-SCI-M5-8-007,ANALYTICAL,L3,medium,first_time,false,Disease outbreak patterns epidemic vs endemic diseases
+APPSC-G1-2016-P5-Q9b,APPSC,2016,paper5,9b,Science & Technology,MT-SCI-M5-8-009,ANALYTICAL,L3,medium,first_time,false,Chikungunya cause prevention and comparison with Dengue
+APPSC-G1-2016-P5-Q9c,APPSC,2016,paper5,9c,Science & Technology,MT-SCI-M5-8-010,ANALYTICAL,L3,medium,first_time,false,Malaria parasite aetiology spread symptoms treatment
+APPSC-G1-2016-P5-Q9d,APPSC,2016,paper5,9d,Science & Technology,MT-SCI-M5-8-012,STATIC,L2,easy,first_time,false,Preventive measures to avoid common infections
+APPSC-G1-2016-P5-Q10a,APPSC,2016,paper5,10a,Science & Technology,MT-SCI-M5-8-004,ANALYTICAL,L3,medium,first_time,false,Immunisation definition and history of vaccine development
+APPSC-G1-2016-P5-Q10b-i,APPSC,2016,paper5,10b-i,Science & Technology,MT-SCI-M5-7-010,STATIC,L2,medium,first_time,false,Short note on edible vaccines
+APPSC-G1-2016-P5-Q10b-ii,APPSC,2016,paper5,10b-ii,Science & Technology,MT-SCI-M5-7-003,STATIC,L2,medium,first_time,false,Short note on ELISA test
+APPSC-G1-2016-P5-Q10b-iii,APPSC,2016,paper5,10b-iii,Science & Technology,MT-SCI-M5-8-001,STATIC,L2,medium,first_time,false,Short note on autoimmune diseases
+APPSC-G1-2016-P5-Q10c,APPSC,2016,paper5,10c,Science & Technology,MT-SCI-M5-8-004,ANALYTICAL,L3,medium,first_time,false,Detailed note on Triple Vaccination
+APPSC-G1-2016-P5-Q10d,APPSC,2016,paper5,10d,Science & Technology,MT-SCI-M5-7-010,ANALYTICAL,L4,hard,first_time,false,Biotechnological intervention transforming vaccination technology
+APPSC-G1-2016-P5-Q11a,APPSC,2016,paper5,11a,Environment,MT-ENV-M5-5-006,STATIC,L2,medium,first_time,false,Functions of State Pollution Control Board
+APPSC-G1-2016-P5-Q11b,APPSC,2016,paper5,11b,Environment,MT-ENV-M5-6-004,ANALYTICAL,L3,hard,first_time,false,Environmental Clearance procedure under EIA Notification 2006
+APPSC-G1-2016-P5-Q11c,APPSC,2016,paper5,11c,Environment,MT-ENV-M5-5-009,ANALYTICAL,L3,medium,first_time,false,Environmentalism and planetary problems with solutions
+APPSC-G1-2016-P5-Q11d,APPSC,2016,paper5,11d,Environment,MT-ENV-M5-6-004,STATIC,L2,hard,first_time,false,Projects not requiring public consultation for Environmental Clearance
+APPSC-G1-2016-P5-Q12a,APPSC,2016,paper5,12a,Environment,MT-ENV-M5-5-008,STATIC,L2,medium,first_time,false,Classification of dams based on structure and design
+APPSC-G1-2016-P5-Q12b,APPSC,2016,paper5,12b,Environment,MT-ENV-M5-5-008,CA_STATIC,L2,medium,first_time,true,AP Sand Mining Policy 2016
+APPSC-G1-2016-P5-Q12c,APPSC,2016,paper5,12c,Environment,MT-ENV-M5-5-008,ANALYTICAL,L3,medium,first_time,false,Suitability basis for crop and cropping pattern
+APPSC-G1-2016-P5-Q12d,APPSC,2016,paper5,12d,Environment,MT-ENV-M5-5-008,STATIC,L2,easy,first_time,false,Mineral resources definition formation and types
+APPSC-G1-2016-P5-Q13a,APPSC,2016,paper5,13a,Environment,MT-ENV-M5-5-001,STATIC,L2,easy,first_time,false,Ecosystem definition and food chain system
+APPSC-G1-2016-P5-Q13b,APPSC,2016,paper5,13b,Environment,MT-ENV-M5-5-002,ANALYTICAL,L3,medium,first_time,false,Impact of urbanisation on biodiversity
+APPSC-G1-2016-P5-Q13c,APPSC,2016,paper5,13c,Environment,MT-ENV-M5-5-002,ANALYTICAL,L3,medium,first_time,false,Major threats to biodiversity and types of biodiversities
+APPSC-G1-2016-P5-Q13d-i,APPSC,2016,paper5,13d-i,Environment,MT-ENV-M5-5-002,STATIC,L2,medium,first_time,false,National Bureau of Plant Genetic Resources (NBPGR)
+APPSC-G1-2016-P5-Q13d-ii,APPSC,2016,paper5,13d-ii,Environment,MT-ENV-M5-5-003,STATIC,L2,easy,first_time,false,Wildlife sanctuaries note
+APPSC-G1-2016-P5-Q14a,APPSC,2016,paper5,14a,Environment,MT-ENV-M5-5-007,STATIC,L2,medium,first_time,false,Types and characteristics of solid waste
+APPSC-G1-2016-P5-Q14b-i,APPSC,2016,paper5,14b-i,Environment,MT-ENV-M5-5-007,STATIC,L2,medium,first_time,false,Short note on pyrolysis
+APPSC-G1-2016-P5-Q14b-ii,APPSC,2016,paper5,14b-ii,Environment,MT-ENV-M5-5-007,STATIC,L2,medium,first_time,false,Short note on incineration
+APPSC-G1-2016-P5-Q14c,APPSC,2016,paper5,14c,Environment,MT-ENV-M5-5-007,STATIC,L2,easy,first_time,false,Soil pollution definition and causes
+APPSC-G1-2016-P5-Q14d,APPSC,2016,paper5,14d,Environment,MT-ENV-M5-5-007,ANALYTICAL,L3,medium,first_time,false,Noise pollution control and preventive measures
+APPSC-G1-2016-P5-Q15a,APPSC,2016,paper5,15a,Environment,MT-ENV-M5-5-004,ANALYTICAL,L3,hard,first_time,false,El Nino causes and impact on global agriculture
+APPSC-G1-2016-P5-Q15b,APPSC,2016,paper5,15b,Environment,MT-ENV-M5-5-004,ANALYTICAL,L3,medium,first_time,false,Impact of ozone layer depletion on living organisms
+APPSC-G1-2016-P5-Q15c,APPSC,2016,paper5,15c,Environment,MT-ENV-M5-5-008,ANALYTICAL,L3,medium,first_time,false,Impact of human beings on water resources
+APPSC-G1-2016-P5-Q15d-i,APPSC,2016,paper5,15d-i,Environment,MT-ENV-M5-5-009,STATIC,L2,easy,first_time,false,Short note on sustainable agriculture
+APPSC-G1-2016-P5-Q15d-ii,APPSC,2016,paper5,15d-ii,Environment,MT-ENV-M5-5-007,STATIC,L2,easy,first_time,false,Short note on acid rain
+APPSC-G1-2017-P5-Q1a,APPSC,2017,paper5,1a,Science & Technology,MT-SCI-M5-2-001,ANALYTICAL,L3,hard,first_time,true,Big Data definition India initiatives challenges constraints
+APPSC-G1-2017-P5-Q1b,APPSC,2017,paper5,1b,Science & Technology,MT-SCI-M5-2-001,ANALYTICAL,L4,hard,first_time,true,Internet of Things (IoT) technological revolution impact on India
+APPSC-G1-2017-P5-Q2a,APPSC,2017,paper5,2a,Science & Technology,MT-SCI-M5-2-002,ANALYTICAL,L3,medium,first_time,true,Pradhan Mantri Gramin Digital Saksharta Abhiyan features
+APPSC-G1-2017-P5-Q2b,APPSC,2017,paper5,2b,Science & Technology,MT-SCI-M5-7-002,ANALYTICAL,L3,hard,first_time,false,Nanotechnology in preventing treating lifestyle diseases and cancer
+APPSC-G1-2017-P5-Q3a,APPSC,2017,paper5,3a,Science & Technology,MT-SCI-M5-3-001,ANALYTICAL,L3,medium,first_time,false,GPS definition and India efforts to create own GPS (NavIC)
+APPSC-G1-2017-P5-Q3b,APPSC,2017,paper5,3b,Science & Technology,MT-SCI-M5-3-001,ANALYTICAL,L3,medium,first_time,false,Difference between GSLV and PSLV advantages of GSLV
+APPSC-G1-2017-P5-Q4a,APPSC,2017,paper5,4a,Science & Technology,MT-SCI-M5-4-001,ANALYTICAL,L4,hard,first_time,false,India energy sources composition and future energy security
+APPSC-G1-2017-P5-Q4b,APPSC,2017,paper5,4b,Science & Technology,MT-SCI-M5-4-004,ANALYTICAL,L3,hard,first_time,true,Smart Grid benefits challenges and strategies in India
+APPSC-G1-2017-P5-Q5a,APPSC,2017,paper5,5a,Environment,MT-ENV-M5-5-008,ANALYTICAL,L3,medium,first_time,false,Urban floods causes and government measures for control
+APPSC-G1-2017-P5-Q5b,APPSC,2017,paper5,5b,Environment,MT-ENV-M5-5-008,ANALYTICAL,L4,hard,first_time,false,Illegal river sand mining affecting ecology and lives
+APPSC-G1-2017-P5-Q6a,APPSC,2017,paper5,6a,Science & Technology,MT-SCI-M5-7-001,STATIC,L2,medium,first_time,false,Bentham and Hooker classification and its demerits
+APPSC-G1-2017-P5-Q6b,APPSC,2017,paper5,6b,Science & Technology,MT-SCI-M5-7-001,ANALYTICAL,L3,medium,first_time,false,Hormone regulating blood glucose and artificial synthesis
+APPSC-G1-2017-P5-Q7a,APPSC,2017,paper5,7a,Science & Technology,MT-SCI-M5-7-001,STATIC,L2,medium,first_time,false,Medicinal qualities of mushrooms
+APPSC-G1-2017-P5-Q7b,APPSC,2017,paper5,7b,Science & Technology,MT-SCI-M5-7-001,STATIC,L2,medium,first_time,false,Chemicals and drugs produced from animals
+APPSC-G1-2017-P5-Q8a,APPSC,2017,paper5,8a,Science & Technology,MT-SCI-M5-8-011,STATIC,L2,medium,first_time,false,Major fungus types causing mycoses in humans
+APPSC-G1-2017-P5-Q8b,APPSC,2017,paper5,8b,Science & Technology,MT-SCI-M5-8-010,ANALYTICAL,L3,medium,first_time,false,Common protozoan diseases causative agents and prevention
+APPSC-G1-2017-P5-Q9a,APPSC,2017,paper5,9a,Science & Technology,MT-SCI-M5-8-005,ANALYTICAL,L3,hard,first_time,false,Gene transfer methods in developing GM crops
+APPSC-G1-2017-P5-Q9b,APPSC,2017,paper5,9b,Science & Technology,MT-SCI-M5-7-008,ANALYTICAL,L3,medium,first_time,false,Biopesticide definition and fungal parasites in biocontrol
+APPSC-G1-2017-P5-Q10a,APPSC,2017,paper5,10a,Science & Technology,MT-SCI-M5-7-003,ANALYTICAL,L3,hard,first_time,false,Major Histocompatibility Complex MHC and role of classes
+APPSC-G1-2017-P5-Q10b,APPSC,2017,paper5,10b,Science & Technology,MT-SCI-M5-7-003,ANALYTICAL,L3,hard,first_time,false,Monoclonal antibodies and use in detecting parasitic diseases
+APPSC-G1-2017-P5-Q11a,APPSC,2017,paper5,11a,Environment,MT-ENV-M5-5-002,ANALYTICAL,L3,hard,first_time,false,Invasive alien species second largest threat to biodiversity
+APPSC-G1-2017-P5-Q11b,APPSC,2017,paper5,11b,Environment,MT-ENV-M5-5-001,ANALYTICAL,L3,hard,first_time,false,Carbon and nitrogen biogeochemical cycles Indian context
+APPSC-G1-2017-P5-Q12a,APPSC,2017,paper5,12a,Science & Technology,MT-SCI-M5-4-003,ANALYTICAL,L4,medium,first_time,false,Solar power advantages over other renewables cost and climate impact
+APPSC-G1-2017-P5-Q12b,APPSC,2017,paper5,12b,Environment,MT-ENV-M5-5-008,ANALYTICAL,L3,medium,first_time,false,India traditional water management harvesting and disaster mgmt
+APPSC-G1-2017-P5-Q13a,APPSC,2017,paper5,13a,Environment,MT-ENV-M5-5-007,ANALYTICAL,L3,hard,first_time,true,PM2.5 fine particulate matter health effects in urban India
+APPSC-G1-2017-P5-Q13b,APPSC,2017,paper5,13b,Environment,MT-ENV-M5-5-007,ANALYTICAL,L3,hard,first_time,false,Waste management challenges in Indian towns and cities
+APPSC-G1-2017-P5-Q14a,APPSC,2017,paper5,14a,Environment,MT-ENV-M5-5-004,CA_STATIC,L3,medium,first_time,true,Ozone layer over Antarctic showing signs of healing
+APPSC-G1-2017-P5-Q14b,APPSC,2017,paper5,14b,Environment,MT-ENV-M5-5-008,ANALYTICAL,L3,medium,first_time,false,Role of IT in environmental conservation
+APPSC-G1-2017-P5-Q15a,APPSC,2017,paper5,15a,Environment,MT-ENV-M5-5-008,ANALYTICAL,L3,hard,first_time,true,Sendai Framework for DRR and India disaster management policy
+APPSC-G1-2017-P5-Q15b,APPSC,2017,paper5,15b,Environment,MT-ENV-M5-5-006,ANALYTICAL,L3,hard,first_time,true,National Green Tribunal role in environmental justice recent decisions
+APPSC-G1-2020-P5-Q1a,APPSC,2020,paper5,1a,Science & Technology,MT-SCI-M5-8-007,ANALYTICAL,L3,medium,first_time,false,Life expectancy at birth factors improving global life expectancy
+APPSC-G1-2020-P5-Q1b,APPSC,2020,paper5,1b,Science & Technology,MT-SCI-M5-1-003,ANALYTICAL,L3,medium,first_time,false,Central research institutions in Telangana contributions to education
+APPSC-G1-2020-P5-Q2a,APPSC,2020,paper5,2a,Science & Technology,MT-SCI-M5-2-002,ANALYTICAL,L3,medium,first_time,true,UIDAI Aadhaar IT for Direct Benefit Transfer financial transactions
+APPSC-G1-2020-P5-Q2b,APPSC,2020,paper5,2b,Science & Technology,MT-SCI-M5-2-003,ANALYTICAL,L3,medium,first_time,false,Cybercrime types bullying stalking phishing ransomware
+APPSC-G1-2020-P5-Q3a,APPSC,2020,paper5,3a,Science & Technology,MT-SCI-M5-3-001,ANALYTICAL,L3,medium,repeat_topic,false,ISRO history centres Mangalyaan or Chandrayaan missions
+APPSC-G1-2020-P5-Q3b,APPSC,2020,paper5,3b,Science & Technology,MT-SCI-M5-3-001,ANALYTICAL,L3,hard,repeat_topic,false,Satellite orbits GEO LEO MEO SSO and GSLV PSLV launches
+APPSC-G1-2020-P5-Q4a,APPSC,2020,paper5,4a,Science & Technology,MT-SCI-M5-4-002,ANALYTICAL,L4,hard,repeat_topic,true,Nuclear energy reactors NPT impact on India non-member
+APPSC-G1-2020-P5-Q4b,APPSC,2020,paper5,4b,Science & Technology,MT-SCI-M5-4-003,ANALYTICAL,L3,medium,repeat_topic,false,Clean energy sources how they work which used in India
+APPSC-G1-2020-P5-Q5a,APPSC,2020,paper5,5a,Environment,MT-ENV-M5-6-005,ANALYTICAL,L3,hard,first_time,true,UN SDGs 2030 name four goals and India pathway to reach them
+APPSC-G1-2020-P5-Q5b,APPSC,2020,paper5,5b,Environment,MT-ENV-M5-5-008,ANALYTICAL,L3,medium,repeat_topic,false,Earthquake causes prediction and relief agency actions
+APPSC-G1-2020-P5-Q6a,APPSC,2020,paper5,6a,Environment,MT-ENV-M5-5-007,ANALYTICAL,L3,medium,repeat_topic,false,Solid waste classification steps to manage landfill pros cons
+APPSC-G1-2020-P5-Q6b,APPSC,2020,paper5,6b,Environment,MT-ENV-M5-5-007,ANALYTICAL,L3,medium,first_time,false,Soil erosion agents stages effects factors conservation measures
+APPSC-G1-2020-P5-Q7a,APPSC,2020,paper5,7a,Science & Technology,MT-SCI-M5-8-005,ANALYTICAL,L4,very_hard,first_time,false,Gene therapy transgenic organisms genome editing ethical concerns
+APPSC-G1-2020-P5-Q7b,APPSC,2020,paper5,7b,Science & Technology,MT-SCI-M5-8-005,ANALYTICAL,L3,hard,first_time,true,CRISPR Nobel Prize 2020 function in nature research clinical use
+APPSC-G1-2020-P5-Q8a,APPSC,2020,paper5,8a,Science & Technology,MT-SCI-M5-7-003,ANALYTICAL,L3,medium,repeat_topic,false,Cholera malaria encephalitis TB avian flu causes treatment prevention
+APPSC-G1-2020-P5-Q8b,APPSC,2020,paper5,8b,Science & Technology,MT-SCI-M5-7-006,ANALYTICAL,L3,hard,first_time,false,Recombinant DNA process restriction enzymes vectors example
+APPSC-G1-2020-P5-Q9a,APPSC,2020,paper5,9a,Science & Technology,MT-SCI-M5-9-001,ANALYTICAL,L3,hard,first_time,false,Intellectual property copyrights patents trademarks inventor rights
+APPSC-G1-2020-P5-Q9b,APPSC,2020,paper5,9b,Science & Technology,MT-SCI-M5-9-008,ANALYTICAL,L3,hard,first_time,false,Patent definition process vs product patents GI tags relation
+APPSC-G1-2020-P5-Q10a,APPSC,2020,paper5,10a,Science & Technology,MT-SCI-M5-4-003,ANALYTICAL,L3,medium,repeat_topic,true,Solar energy utilization status India and world hindering factors
+APPSC-G1-2020-P5-Q10b,APPSC,2020,paper5,10b,Science & Technology,MT-SCI-M5-3-001,ANALYTICAL,L4,hard,first_time,true,India Space Program helping restore expand education during COVID
+APPSC-G1-2020-P5-Q11a,APPSC,2020,paper5,11a,Science & Technology,MT-SCI-M5-2-002,ANALYTICAL,L3,hard,repeat_topic,true,NeGP Digital India Jan Dhan Digital Locker BharatNet
+APPSC-G1-2020-P5-Q11b,APPSC,2020,paper5,11b,Science & Technology,MT-SCI-M5-4-003,ANALYTICAL,L3,medium,first_time,false,Biofuels importance to India economy national biofuel policy
+APPSC-G1-2020-P5-Q12a,APPSC,2020,paper5,12a,Science & Technology,MT-SCI-M5-1-001,ANALYTICAL,L4,very_hard,first_time,true,S&E publication data interpretation India science state policy measure
+APPSC-G1-2020-P5-Q12b,APPSC,2020,paper5,12b,Environment,MT-ENV-M5-5-008,ANALYTICAL,L3,medium,first_time,false,Forest cover vs forest area graph interpretation
+APPSC-G1-2020-P5-Q13a,APPSC,2020,paper5,13a,Environment,MT-ENV-M5-5-005,ANALYTICAL,L3,hard,first_time,true,Climate Justice media coverage and two aligned measures
+APPSC-G1-2020-P5-Q13b,APPSC,2020,paper5,13b,Environment,MT-ENV-M5-5-007,ANALYTICAL,L3,medium,first_time,false,Graphic showing substance human activity effect on health
+APPSC-G1-2020-P5-Q14a,APPSC,2020,paper5,14a,Environment,MT-ENV-M5-5-007,ANALYTICAL,L3,medium,repeat_topic,false,Common hazardous outdoor indoor air pollutants AQI PM contribution
+APPSC-G1-2020-P5-Q14b,APPSC,2020,paper5,14b,Science & Technology,MT-SCI-M5-8-002,CA_STATIC,L3,hard,first_time,true,COVID-19 spread and immunodiagnostic methods in pandemic
+APPSC-G1-2020-P5-Q15a,APPSC,2020,paper5,15a,Science & Technology,MT-SCI-M5-8-004,ANALYTICAL,L3,hard,repeat_topic,true,Vaccine mechanism diseases eradicated Mission Indradhanush GVAP
+APPSC-G1-2020-P5-Q15b,APPSC,2020,paper5,15b,Science & Technology,MT-SCI-M5-8-002,CA_STATIC,L3,hard,first_time,true,HCV Nobel 2020 virus disease vaccine availability
+APPSC-G1-2023-P5-Q1a,APPSC,2023,paper5,1a,Science & Technology,MT-SCI-M5-1-001,ANALYTICAL,L4,hard,first_time,false,Scientific Social Responsibility knowledge creation vs consumption India
+APPSC-G1-2023-P5-Q1b,APPSC,2023,paper5,1b,Science & Technology,MT-SCI-M5-1-001,ANALYTICAL,L3,medium,first_time,false,Technology role in transforming healthcare sector India challenges
+APPSC-G1-2023-P5-Q2a,APPSC,2023,paper5,2a,Science & Technology,MT-SCI-M5-2-002,ANALYTICAL,L3,medium,repeat_topic,false,Digital platforms public service accountability e-governance bottlenecks
+APPSC-G1-2023-P5-Q2b,APPSC,2023,paper5,2b,Science & Technology,MT-SCI-M5-2-001,ANALYTICAL,L3,medium,first_time,true,Atmanirbhar Bharat impact on India IT sector global tech hub
+APPSC-G1-2023-P5-Q3a,APPSC,2023,paper5,3a,Science & Technology,MT-SCI-M5-3-001,ANALYTICAL,L3,medium,first_time,true,Space junk challenges risks and Project NETRA
+APPSC-G1-2023-P5-Q3b,APPSC,2023,paper5,3b,Science & Technology,MT-SCI-M5-3-001,ANALYTICAL,L3,medium,first_time,true,India space industry private sector investment despite ISRO success
+APPSC-G1-2023-P5-Q4a,APPSC,2023,paper5,4a,Science & Technology,MT-SCI-M5-3-002,ANALYTICAL,L4,hard,first_time,false,India No First Use nuclear doctrine commitment despite pressures
+APPSC-G1-2023-P5-Q4b,APPSC,2023,paper5,4b,Science & Technology,MT-SCI-M5-4-003,ANALYTICAL,L3,medium,repeat_topic,true,Green Energy definition corridors and need in India
+APPSC-G1-2023-P5-Q5a,APPSC,2023,paper5,5a,Environment,MT-ENV-M5-6-001,ANALYTICAL,L4,hard,repeat_topic,true,Climate change global concern and climate smart agriculture mitigation
+APPSC-G1-2023-P5-Q5b,APPSC,2023,paper5,5b,Environment,MT-ENV-M5-5-008,ANALYTICAL,L3,hard,first_time,false,Open cast mining impacts on environment and post mining reclamation
+APPSC-G1-2023-P5-Q6a,APPSC,2023,paper5,6a,Environment,MT-ENV-M5-6-006,ANALYTICAL,L3,hard,first_time,true,India CO2 mitigation for carbon credit trading under Paris Agreement
+APPSC-G1-2023-P5-Q6b,APPSC,2023,paper5,6b,Environment,MT-ENV-M5-5-007,ANALYTICAL,L3,hard,repeat_topic,false,Municipal solid waste disposal challenges action plan 800 tonnes cities
+APPSC-G1-2023-P5-Q7a,APPSC,2023,paper5,7a,Science & Technology,MT-SCI-M5-7-001,ANALYTICAL,L3,medium,first_time,false,Biotechnology blessings and curses risks to human life
+APPSC-G1-2023-P5-Q7b,APPSC,2023,paper5,7b,Environment,MT-ENV-M5-5-003,ANALYTICAL,L3,medium,first_time,false,Ecotourism as tool for conservation of natural heritage challenges
+APPSC-G1-2023-P5-Q8a,APPSC,2023,paper5,8a,Science & Technology,MT-SCI-M5-7-003,ANALYTICAL,L3,hard,first_time,true,Antibiotic resistance worsening in India strategies action plans
+APPSC-G1-2023-P5-Q8b,APPSC,2023,paper5,8b,Science & Technology,MT-SCI-M5-7-008,ANALYTICAL,L3,medium,repeat_topic,false,Bio-pesticides slower action but need to shift towards them
+APPSC-G1-2023-P5-Q9a,APPSC,2023,paper5,9a,Science & Technology,MT-SCI-M5-9-002,ANALYTICAL,L4,hard,repeat_topic,false,India patents fraction compared to China US despite rising innovation
+APPSC-G1-2023-P5-Q9b,APPSC,2023,paper5,9b,Science & Technology,MT-SCI-M5-9-001,ANALYTICAL,L3,hard,first_time,false,Tools for IPR commercialization and CIPAM role in India
+APPSC-G1-2023-P5-Q10a,APPSC,2023,paper5,10a,Science & Technology,MT-SCI-M5-7-001,ANALYTICAL,L4,hard,first_time,false,Inefficient farming GM crops bad answer to wrong food problem
+APPSC-G1-2023-P5-Q10b,APPSC,2023,paper5,10b,Science & Technology,MT-SCI-M5-3-001,ANALYTICAL,L3,hard,first_time,true,Weather forecasting ISRO role disaster management Mission NISAR
+APPSC-G1-2023-P5-Q11a,APPSC,2023,paper5,11a,Science & Technology,MT-SCI-M5-2-003,ANALYTICAL,L4,very_hard,first_time,true,AI manipulated digital media impact privacy democracy national security
+APPSC-G1-2023-P5-Q11b,APPSC,2023,paper5,11b,Science & Technology,MT-SCI-M5-4-003,ANALYTICAL,L3,medium,repeat_topic,true,Current scenario renewable power generation India growing focus shift
+APPSC-G1-2023-P5-Q12a,APPSC,2023,paper5,12a,Environment,MT-ENV-M5-5-008,ANALYTICAL,L3,hard,first_time,false,Coastal erosion factors Eastern vs Western coast India
+APPSC-G1-2023-P5-Q12b,APPSC,2023,paper5,12b,Environment,MT-ENV-M5-5-008,ANALYTICAL,L3,medium,first_time,false,Technology as medium for environmental destruction through exploitation
+APPSC-G1-2023-P5-Q13a,APPSC,2023,paper5,13a,Environment,MT-ENV-M5-5-004,ANALYTICAL,L4,hard,repeat_topic,true,1.5C climate threshold what happens if world passes it
+APPSC-G1-2023-P5-Q13b,APPSC,2023,paper5,13b,Science & Technology,MT-SCI-M5-2-001,ANALYTICAL,L3,hard,first_time,true,Blockchain technology transforming agriculture sector in India
+APPSC-G1-2023-P5-Q14a,APPSC,2023,paper5,14a,Science & Technology,MT-SCI-M5-4-002,ANALYTICAL,L4,hard,repeat_topic,false,India opposition to NPT and civil nuclear agreement NSG impact
+APPSC-G1-2023-P5-Q14b,APPSC,2023,paper5,14b,Environment,MT-ENV-M5-5-007,CA_STATIC,L3,hard,first_time,true,E-waste recycling practices India new e-waste rules 2022
+APPSC-G1-2023-P5-Q15a,APPSC,2023,paper5,15a,Environment,MT-ENV-M5-5-005,CA_STATIC,L4,hard,first_time,true,India not signing COP26 pledge deforestation methane by 2030
+APPSC-G1-2023-P5-Q15b,APPSC,2023,paper5,15b,Environment,MT-ENV-M5-5-002,ANALYTICAL,L3,medium,first_time,false,Gene sanctuaries protecting genetic diversity of plants in India
+APPSC-G1-2025-P5-Q1a,APPSC,2025,paper5,1a,Science & Technology,MT-SCI-M5-1-003,ANALYTICAL,L3,medium,first_time,false,NIRCA Rajamahendravaram research focus support to agriculture
+APPSC-G1-2025-P5-Q1b,APPSC,2025,paper5,1b,Science & Technology,MT-SCI-M5-2-001,ANALYTICAL,L3,medium,repeat_topic,true,IoT technologies impact on household automation everyday tasks
+APPSC-G1-2025-P5-Q2a,APPSC,2025,paper5,2a,Science & Technology,MT-SCI-M5-1-004,ANALYTICAL,L3,medium,first_time,false,C.V. Raman discovery of Raman Effect impact on global science
+APPSC-G1-2025-P5-Q2b,APPSC,2025,paper5,2b,Science & Technology,MT-SCI-M5-1-003,ANALYTICAL,L3,medium,first_time,false,Major scientific institutes in AP and IISER Tirupati role
+APPSC-G1-2025-P5-Q3a,APPSC,2025,paper5,3a,Science & Technology,MT-SCI-M5-2-002,ANALYTICAL,L3,medium,repeat_topic,false,Evolution of e-governance in India key initiatives public service
+APPSC-G1-2025-P5-Q3b,APPSC,2025,paper5,3b,Science & Technology,MT-SCI-M5-2-003,ANALYTICAL,L3,medium,repeat_topic,false,Cybercrime definition major types prevalent in India today
+APPSC-G1-2025-P5-Q4a,APPSC,2025,paper5,4a,Science & Technology,MT-SCI-M5-2-002,ANALYTICAL,L3,medium,first_time,false,National Policy on Information Technology 2012 digital empowerment
+APPSC-G1-2025-P5-Q4b,APPSC,2025,paper5,4b,Science & Technology,MT-SCI-M5-3-002,ANALYTICAL,L3,medium,first_time,false,DRDO vision mission and role in national development
+APPSC-G1-2025-P5-Q5a,APPSC,2025,paper5,5a,Science & Technology,MT-SCI-M5-3-001,ANALYTICAL,L3,medium,repeat_topic,false,Indian Remote Sensing IRS satellite programme natural resource mgmt
+APPSC-G1-2025-P5-Q5b,APPSC,2025,paper5,5b,Environment,MT-ENV-M5-5-008,ANALYTICAL,L3,medium,first_time,false,Primary reasons for deforestation in AP past two decades
+APPSC-G1-2025-P5-Q6a,APPSC,2025,paper5,6a,Environment,MT-ENV-M5-5-008,ANALYTICAL,L4,hard,first_time,false,Mining activities and earthquakes regulation to minimize seismic risk
+APPSC-G1-2025-P5-Q6b,APPSC,2025,paper5,6b,Environment,MT-ENV-M5-5-009,ANALYTICAL,L4,hard,first_time,false,Sustainable development definition relevance modern industrialization
+APPSC-G1-2025-P5-Q7a,APPSC,2025,paper5,7a,Science & Technology,MT-SCI-M5-8-007,ANALYTICAL,L3,hard,first_time,false,Deforestation and emergence of infectious diseases relationship
+APPSC-G1-2025-P5-Q7b,APPSC,2025,paper5,7b,Environment,MT-ENV-M5-6-004,ANALYTICAL,L3,medium,repeat_topic,false,Environmental Impact Assessment EIA definition key stages
+APPSC-G1-2025-P5-Q8a,APPSC,2025,paper5,8a,Environment,MT-ENV-M5-5-008,ANALYTICAL,L3,medium,repeat_topic,false,Types of natural resources in India government conservation initiatives
+APPSC-G1-2025-P5-Q8b,APPSC,2025,paper5,8b,Environment,MT-ENV-M5-5-007,ANALYTICAL,L3,medium,repeat_topic,false,Integrated Solid Waste Management ISWM principles waste hierarchy
+APPSC-G1-2025-P5-Q9a,APPSC,2025,paper5,9a,Science & Technology,MT-SCI-M5-7-014,ANALYTICAL,L4,hard,first_time,false,Plant biopharmaceuticals sustainable healthcare green pharmacy principles
+APPSC-G1-2025-P5-Q9b,APPSC,2025,paper5,9b,Science & Technology,MT-SCI-M5-4-001,ANALYTICAL,L3,medium,repeat_topic,false,Conventional vs non-conventional energy resources relevance India
+APPSC-G1-2025-P5-Q10a,APPSC,2025,paper5,10a,Environment,MT-ENV-M5-5-008,ANALYTICAL,L4,hard,repeat_topic,true,Disaster management initiatives since DM Act 2005 effectiveness
+APPSC-G1-2025-P5-Q10b,APPSC,2025,paper5,10b,Environment,MT-ENV-M5-5-006,ANALYTICAL,L3,hard,repeat_topic,false,Legislative framework air water pollution key provisions limitations
+APPSC-G1-2025-P5-Q11a,APPSC,2025,paper5,11a,Environment,MT-ENV-M5-5-004,ANALYTICAL,L3,medium,repeat_topic,false,Global warming vs climate change natural human-induced causes
+APPSC-G1-2025-P5-Q11b,APPSC,2025,paper5,11b,Environment,MT-ENV-M5-5-007,ANALYTICAL,L4,hard,first_time,false,Remote sensing tracking environmental pollutants health implications
+APPSC-G1-2025-P5-Q12a,APPSC,2025,paper5,12a,Science & Technology,MT-SCI-M5-7-001,ANALYTICAL,L3,hard,first_time,false,Regulatory framework governing GMOs in India modern challenges
+APPSC-G1-2025-P5-Q12b,APPSC,2025,paper5,12b,Science & Technology,MT-SCI-M5-7-001,ANALYTICAL,L3,hard,first_time,true,National Biotechnology Development Strategy evolution objectives impact
+APPSC-G1-2025-P5-Q13a,APPSC,2025,paper5,13a,Science & Technology,MT-SCI-M5-7-010,STATIC,L2,medium,repeat_topic,false,Vaccine components and functioning described
+APPSC-G1-2025-P5-Q13b,APPSC,2025,paper5,13b,Science & Technology,MT-SCI-M5-8-005,ANALYTICAL,L3,medium,repeat_topic,false,Genetic engineering definition applications agriculture medicine
+APPSC-G1-2025-P5-Q14a,APPSC,2025,paper5,14a,Science & Technology,MT-SCI-M5-7-003,ANALYTICAL,L4,hard,first_time,false,Biotech strategies monitoring controlling bacterial diseases poultry
+APPSC-G1-2025-P5-Q14b,APPSC,2025,paper5,14b,Science & Technology,MT-SCI-M5-8-012,ANALYTICAL,L4,hard,first_time,false,Urban infrastructure influence on preventive measures disease outbreaks
+APPSC-G1-2025-P5-Q15a,APPSC,2025,paper5,15a,Science & Technology,MT-SCI-M5-8-007,ANALYTICAL,L4,hard,first_time,false,Respiratory tract infection transmission in dense urban settings
+APPSC-G1-2025-P5-Q15b,APPSC,2025,paper5,15b,Science & Technology,MT-SCI-M5-9-001,ANALYTICAL,L3,medium,repeat_topic,false,IPR importance in academic and industrial research collaborations

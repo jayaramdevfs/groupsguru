@@ -1,0 +1,1907 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Sprint 11.1 | History: Ancient + Medieval | 50 MCQs | R1-R30 Compliant -->
+<!-- Topics: Buddhism, Ikshvakus/Ancient Andhra, Post-Mauryan Art, Vijayanagar, Mughal Architecture -->
+<!-- Difficulty: 15 easy, 20 medium, 12 hard, 3 very_hard -->
+<!-- Generated: 2026-03-20 -->
+<quiz>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q01</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Where was Gautama Buddha born?</span><span lang="te" class="multilang">గౌతమ బుద్ధుడు ఎక్కడ జన్మించాడు?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Lumbini (present-day Nepal)</span><span lang="te" class="multilang">లుంబిని (నేటి నేపాల్)</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Bodh Gaya, Bihar</span><span lang="te" class="multilang">బోధ్ గయ, బీహార్</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Kushinagar, Uttar Pradesh</span><span lang="te" class="multilang">కుశీనగర్, ఉత్తర ప్రదేశ్</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Sarnath, Varanasi</span><span lang="te" class="multilang">సారనాథ్, వారణాసి</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-2-016</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:easy</text></tag>
+      <tag><text>cognitive_level:L1</text></tag>
+      <tag><text>question_type:STATIC</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q02</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">What is the name of the first sermon delivered by Gautama Buddha at Sarnath?</span><span lang="te" class="multilang">గౌతమ బుద్ధుడు సారనాథ్‌లో ఇచ్చిన మొదటి ప్రసంగానికి ఏ పేరు?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Dhammacakkappavattana Sutta (Setting in Motion the Wheel of Dharma)</span><span lang="te" class="multilang">ధమ్మచక్కప్పవత్తన సుత్త (ధర్మచక్ర ప్రవర్తన సూత్రం)</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Mahaparinibbana Sutta</span><span lang="te" class="multilang">మహాపరినిబ్బాన సుత్త</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Anapanasati Sutta</span><span lang="te" class="multilang">ఆనాపానసతి సుత్త</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Metta Sutta</span><span lang="te" class="multilang">మెత్త సుత్త</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-2-016</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:easy</text></tag>
+      <tag><text>cognitive_level:L1</text></tag>
+      <tag><text>question_type:STATIC</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q03</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Which of the following correctly describes the Second Buddhist Council?</span><span lang="te" class="multilang">రెండవ బౌద్ధ సంగీతి గురించి క్రింది వాటిలో ఏది సరైంది?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">It was held at Vaishali about 100 years after the Buddha's death under King Kalashoka</span><span lang="te" class="multilang">బుద్ధుని మరణానంతరం సుమారు 100 సంవత్సరాల తర్వాత కాలాశోక రాజు కాలంలో వైశాలిలో జరిగింది</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">It was held at Rajagriha under King Ajatashatru immediately after Buddha's death</span><span lang="te" class="multilang">బుద్ధుని మరణానంతరం వెంటనే అజాతశత్రు రాజు ఆధ్వర్యంలో రాజగృహలో జరిగింది</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">It was convened by Emperor Ashoka at Pataliputra</span><span lang="te" class="multilang">చక్రవర్తి అశోకుడు పాటలీపుత్రంలో నిర్వహించాడు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">It was held at Kundalavana in Kashmir under King Kanishka</span><span lang="te" class="multilang">కనిష్క రాజు ఆధ్వర్యంలో కశ్మీర్‌లోని కుండలవనంలో జరిగింది</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-2-016</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:medium</text></tag>
+      <tag><text>cognitive_level:L2</text></tag>
+      <tag><text>question_type:STMT</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q04</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">The Noble Eightfold Path of Buddhism is grouped into three categories. Which of the following is one of those three?</span><span lang="te" class="multilang">బౌద్ధమతంలో అష్టాంగ మార్గం మూడు వర్గాలుగా విభజించబడింది. ఆ మూడింటిలో ఒకటి ఏది?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Prajna (Wisdom)</span><span lang="te" class="multilang">ప్రజ్ఞ (జ్ఞానం)</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Tanha (Craving)</span><span lang="te" class="multilang">తృష్ణ (కోరిక)</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Samsara (Cycle of rebirth)</span><span lang="te" class="multilang">సంసారం (పునర్జన్మ చక్రం)</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Karma (Action)</span><span lang="te" class="multilang">కర్మ (చర్య)</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-2-016</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:medium</text></tag>
+      <tag><text>cognitive_level:L2</text></tag>
+      <tag><text>question_type:STATIC</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q05</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Which of the following is NOT one of the Three Jewels (Triratna) of Buddhism?</span><span lang="te" class="multilang">బౌద్ధమతంలో త్రిరత్నాలలో భాగం కానిది ఏది?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Tanha (Craving)</span><span lang="te" class="multilang">తృష్ణ (కోరిక)</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Buddha</span><span lang="te" class="multilang">బుద్ధుడు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Dharma (Teaching)</span><span lang="te" class="multilang">ధర్మం (బోధన)</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Sangha (Community)</span><span lang="te" class="multilang">సంఘం (భిక్షు సమూహం)</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-2-016</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:medium</text></tag>
+      <tag><text>cognitive_level:L2</text></tag>
+      <tag><text>question_type:ELIM</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q06</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Which statement about Emperor Ashoka's Dhamma is most accurate?</span><span lang="te" class="multilang">చక్రవర్తి అశోకుని ధమ్మం గురించి అత్యంత సరైన వాక్యం ఏది?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">It was a personal code of moral conduct and governance — not identical to formal Buddhist doctrine</span><span lang="te" class="multilang">ఇది వ్యక్తిగత నైతిక నియమావళి మరియు పాలనా సూత్రం — అధికారిక బౌద్ధ సిద్ధాంతానికి సమానం కాదు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">It formally declared Buddhism the state religion of the Mauryan Empire</span><span lang="te" class="multilang">ఇది మౌర్య సామ్రాజ్యంలో బౌద్ధమతాన్ని అధికారికంగా రాష్ట్ర మతంగా ప్రకటించింది</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">It exclusively focused on Buddhist monasticism and renunciation of worldly life</span><span lang="te" class="multilang">ఇది ప్రత్యేకంగా బౌద్ధ మఠ జీవితానికి మరియు లౌకిక జీవిత త్యాగానికి సంబంధించింది</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">It rejected all Brahmanical and Jain traditions in the empire</span><span lang="te" class="multilang">ఇది సామ్రాజ్యంలోని అన్ని బ్రాహ్మణ మరియు జైన సంప్రదాయాలను తిరస్కరించింది</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-2-016</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:medium</text></tag>
+      <tag><text>cognitive_level:L2</text></tag>
+      <tag><text>question_type:STMT</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q07</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Assertion: The Fourth Buddhist Council held under Kanishka led to the final schism between Hinayana and Mahayana Buddhism. Reason: The council, held in Kashmir, produced the Mahavibhasha — a commentary on the Tripitaka.</span><span lang="te" class="multilang">వాదన: కనిష్కుడి ఆధ్వర్యంలో జరిగిన నాల్గవ బౌద్ధ సంగీతి హీనయాన మరియు మహాయాన బౌద్ధమతాల చివరి విభజనకు దారితీసింది. కారణం: కశ్మీర్‌లో జరిగిన ఈ సంగీతి మహావిభాష అనే ట్రిపిటక వ్యాఖ్యానాన్ని రూపొందించింది.</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Both Assertion and Reason are true, but Reason does not correctly explain the Assertion</span><span lang="te" class="multilang">వాదన మరియు కారణం రెండూ నిజమే, కానీ కారణం వాదనను సరిగ్గా వివరించడం లేదు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Both Assertion and Reason are true, and Reason correctly explains the Assertion</span><span lang="te" class="multilang">వాదన మరియు కారణం రెండూ నిజమే, మరియు కారణం వాదనను సరిగ్గా వివరిస్తుంది</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Assertion is true but Reason is false</span><span lang="te" class="multilang">వాదన నిజమే కానీ కారణం తప్పు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Assertion is false but Reason is true</span><span lang="te" class="multilang">వాదన తప్పు కానీ కారణం నిజమే</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-2-016</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:hard</text></tag>
+      <tag><text>cognitive_level:L3</text></tag>
+      <tag><text>question_type:AR</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q08</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Match the following Buddhist terms with their correct meanings — 1. Dukkha  2. Tanha  3. Nirvana  4. Sangha — A. Craving/Desire  B. Suffering  C. Liberation from the cycle of rebirth  D. Community of monks and nuns</span><span lang="te" class="multilang">క్రింది బౌద్ధ పదాలను వాటి అర్థాలతో జతపరచండి — 1. దుఃఖ  2. తృష్ణ  3. నిర్వాణం  4. సంఘం — A. కోరిక/వాంఛ  B. బాధ/కష్టం  C. పునర్జన్మ చక్రం నుండి విముక్తి  D. భిక్షు-భిక్షుణి సమూహం</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1-B, 2-A, 3-C, 4-D</span><span lang="te" class="multilang">1-B, 2-A, 3-C, 4-D</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1-A, 2-B, 3-D, 4-C</span><span lang="te" class="multilang">1-A, 2-B, 3-D, 4-C</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1-B, 2-C, 3-A, 4-D</span><span lang="te" class="multilang">1-B, 2-C, 3-A, 4-D</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1-C, 2-A, 3-B, 4-D</span><span lang="te" class="multilang">1-C, 2-A, 3-B, 4-D</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-2-016</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:hard</text></tag>
+      <tag><text>cognitive_level:L3</text></tag>
+      <tag><text>question_type:MATCH</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q09</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Consider the following statements about Mahayana Buddhism: 1. Nagarjuna propounded the Sunyavada (doctrine of emptiness) philosophy. 2. The Bodhisattva ideal — delaying personal nirvana to help all beings — distinguishes it from Theravada. 3. Mahayana scriptures are primarily preserved in the Pali language. Which of the above are correct?</span><span lang="te" class="multilang">మహాయాన బౌద్ధమతం గురించి కింది వాక్యాలను పరిశీలించండి: 1. నాగార్జునుడు శూన్యవాద తత్త్వశాస్త్రాన్ని ప్రతిపాదించాడు. 2. బోధిసత్వ ఆదర్శం — అన్ని జీవులకు సహాయపడటానికి స్వీయ నిర్వాణాన్ని వాయిదా వేయడం — థేరవాద నుండి దీన్ని వేరు చేస్తుంది. 3. మహాయాన గ్రంథాలు ప్రధానంగా పాళీ భాషలో భద్రపరచబడ్డాయి. పైన ఏవి సరైనవి?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1 and 2 only</span><span lang="te" class="multilang">1 మరియు 2 మాత్రమే</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1, 2, and 3</span><span lang="te" class="multilang">1, 2, మరియు 3 అన్నీ</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">2 and 3 only</span><span lang="te" class="multilang">2 మరియు 3 మాత్రమే</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1 and 3 only</span><span lang="te" class="multilang">1 మరియు 3 మాత్రమే</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-2-016</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:hard</text></tag>
+      <tag><text>cognitive_level:L3</text></tag>
+      <tag><text>question_type:STMT</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q10</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">The Gandhara school produced the first anthropomorphic images of the Buddha. Which historical confluence best explains this artistic shift?</span><span lang="te" class="multilang">గాంధార శాల బుద్ధుని మొదటి మానవరూప చిత్రాలను రూపొందించింది. ఈ కళారీతి మార్పును ఏ చారిత్రక సంగమం అత్యుత్తమంగా వివరిస్తుంది?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Kushana patronage fused Greek artistic conventions with Buddhist iconography, replacing the earlier aniconic tradition (symbols: footprint, Bodhi tree, empty throne)</span><span lang="te" class="multilang">కుషాణుల పోషణలో గ్రీకు కళా సంప్రదాయాలు బౌద్ధ చిత్రాంకనంతో విలీనమై పూర్వపు అప్రతిమ సంప్రదాయాన్ని (చిహ్నాలు: పాదముద్ర, బోధి వృక్షం, ఖాళీ సింహాసనం) తొలగించాయి</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">The Third Buddhist Council under Ashoka formally ordered the creation of Buddha images for missionary purposes</span><span lang="te" class="multilang">అశోకుడి ఆధ్వర్యంలో మూడవ బౌద్ధ సంగీతి మిషనరీ ప్రయోజనాల కోసం బుద్ధ చిత్రాలు నిర్మించాలని అధికారికంగా ఆదేశించింది</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Vijayanagar kings revived earlier Buddhist sculpture traditions and blended them with Greek forms</span><span lang="te" class="multilang">విజయనగర రాజులు పూర్వపు బౌద్ధ శిల్పకళా సంప్రదాయాలను పునరుద్ధరించి గ్రీకు రూపాలతో మేళవించారు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">The Satavahana dynasty commissioned Greek sculptors to create Buddha images for diplomatic purposes</span><span lang="te" class="multilang">శాతవాహన వంశం దౌత్య ప్రయోజనాల కోసం బుద్ధ చిత్రాలు నిర్మించడానికి గ్రీకు శిల్పులను నియమించింది</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-2-016</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:very_hard</text></tag>
+      <tag><text>cognitive_level:L4</text></tag>
+      <tag><text>question_type:ANALYTICAL</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q11</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">What was the capital of the Ikshvaku dynasty in ancient Andhra?</span><span lang="te" class="multilang">ప్రాచీన ఆంధ్రలో ఇక్ష్వాకు రాజవంశం రాజధాని ఏది?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Vijayapuri (Nagarjunakonda)</span><span lang="te" class="multilang">విజయపురి (నాగార్జునకొండ)</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Amaravati (Dhanyakataka)</span><span lang="te" class="multilang">అమరావతి (ధాన్యకటకం)</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Vengi</span><span lang="te" class="multilang">వేంగి</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Pratishthana (Paithan)</span><span lang="te" class="multilang">ప్రతిష్ఠాన (పైఠాన్)</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-AP_HIST-M2-6-002</text></tag>
+      <tag><text>subject:AP History</text></tag>
+      <tag><text>difficulty:easy</text></tag>
+      <tag><text>cognitive_level:L1</text></tag>
+      <tag><text>question_type:STATIC</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q12</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">What was the original capital of the Satavahana dynasty?</span><span lang="te" class="multilang">శాతవాహన రాజవంశం యొక్క మూల రాజధాని ఏది?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Pratishthana (Paithan, Maharashtra)</span><span lang="te" class="multilang">ప్రతిష్ఠాన (పైఠాన్, మహారాష్ట్ర)</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Amaravati, Andhra</span><span lang="te" class="multilang">అమరావతి, ఆంధ్ర</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Vijayapuri, Krishna district</span><span lang="te" class="multilang">విజయపురి, కృష్ణా జిల్లా</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Vengi, East Godavari</span><span lang="te" class="multilang">వేంగి, తూర్పు గోదావరి</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-AP_HIST-M2-6-002</text></tag>
+      <tag><text>subject:AP History</text></tag>
+      <tag><text>difficulty:easy</text></tag>
+      <tag><text>cognitive_level:L1</text></tag>
+      <tag><text>question_type:STATIC</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q13</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Which of the following correctly describes the Satavahana contribution to Buddhism?</span><span lang="te" class="multilang">బౌద్ధమతానికి శాతవాహనుల సహకారాన్ని క్రింది వాటిలో ఏది సరిగ్గా వివరిస్తుంది?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">They patronized the construction and expansion of the Amaravati Mahachaitya (Great Stupa)</span><span lang="te" class="multilang">వారు అమరావతి మహాచైత్యం (మహాస్థూపం) నిర్మాణాన్ని మరియు విస్తరణను పోషించారు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">They built the Nagarjunakonda Buddhist complex, which is credited to the Ikshvaku rulers</span><span lang="te" class="multilang">నాగార్జునకొండ బౌద్ధ సముదాయాన్ని నిర్మించారు, దానికి ఇక్ష్వాకు పాలకులు గుర్తింపు పొందారు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">They exclusively followed Hinayana Buddhism and banned Mahayana practices</span><span lang="te" class="multilang">వారు ప్రత్యేకంగా హీనయాన బౌద్ధమతాన్ని అనుసరించారు మరియు మహాయాన పద్ధతులను నిషేధించారు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">They commissioned the Gandhara school of art for Buddhist image-making</span><span lang="te" class="multilang">బౌద్ధ చిత్రాల నిర్మాణం కోసం గాంధార కళాశాలను నిర్వహించారు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-AP_HIST-M2-6-002</text></tag>
+      <tag><text>subject:AP History</text></tag>
+      <tag><text>difficulty:medium</text></tag>
+      <tag><text>cognitive_level:L2</text></tag>
+      <tag><text>question_type:STMT</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q14</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">The Buddhist philosopher Nagarjuna, founder of the Madhyamaka school, is primarily associated with which dynasty or region?</span><span lang="te" class="multilang">మాధ్యమక శాలను స్థాపించిన బౌద్ధ తత్త్వవేత్త నాగార్జునుడు ప్రధానంగా ఏ రాజవంశం లేదా ప్రాంతంతో సంబంధం కలిగి ఉన్నాడు?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Ikshvaku patronage — associated with Nagarjunakonda in the Krishna-Guntur region</span><span lang="te" class="multilang">ఇక్ష్వాకుల ఆశ్రయం — కృష్ణా-గుంటూరు ప్రాంతంలోని నాగార్జునకొండతో సంబంధం కలిగి ఉన్నాడు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Vijayanagar Empire — patronized by Krishnadevaraya</span><span lang="te" class="multilang">విజయనగర సామ్రాజ్యం — కృష్ణదేవరాయుని పోషణలో</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Eastern Chalukya kingdom of Vengi</span><span lang="te" class="multilang">వేంగి తూర్పు చాళుక్య రాజ్యం</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Kakatiya dynasty of Warangal</span><span lang="te" class="multilang">వరంగల్ కాకతీయ రాజవంశం</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-AP_HIST-M2-6-002</text></tag>
+      <tag><text>subject:AP History</text></tag>
+      <tag><text>difficulty:medium</text></tag>
+      <tag><text>cognitive_level:L2</text></tag>
+      <tag><text>question_type:STATIC</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q15</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Which of the following dynasties did NOT rule over any part of ancient Andhra Pradesh?</span><span lang="te" class="multilang">క్రింది రాజవంశాలలో ఏది ప్రాచీన ఆంధ్రప్రదేశ్‌లో ఏ భాగాన్నీ పాలించలేదు?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Vardhana dynasty (Harsha's dynasty)</span><span lang="te" class="multilang">వర్ధన రాజవంశం (హర్షుని రాజవంశం)</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Satavahanas</span><span lang="te" class="multilang">శాతవాహనులు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Ikshvakus</span><span lang="te" class="multilang">ఇక్ష్వాకులు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Eastern Chalukyas</span><span lang="te" class="multilang">తూర్పు చాళుక్యులు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-AP_HIST-M2-6-002</text></tag>
+      <tag><text>subject:AP History</text></tag>
+      <tag><text>difficulty:medium</text></tag>
+      <tag><text>cognitive_level:L2</text></tag>
+      <tag><text>question_type:ELIM</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q16</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">The Vengi region of present-day Andhra Pradesh was the seat of power for which dynasty?</span><span lang="te" class="multilang">నేటి ఆంధ్రప్రదేశ్‌లోని వేంగి ప్రాంతం ఏ రాజవంశానికి అధికార కేంద్రంగా ఉంది?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Eastern Chalukyas</span><span lang="te" class="multilang">తూర్పు చాళుక్యులు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Western Chalukyas of Badami</span><span lang="te" class="multilang">బాదామి పశ్చిమ చాళుక్యులు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Ikshvakus</span><span lang="te" class="multilang">ఇక్ష్వాకులు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Kalyani Chalukyas</span><span lang="te" class="multilang">కళ్యాణి చాళుక్యులు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-AP_HIST-M2-6-002</text></tag>
+      <tag><text>subject:AP History</text></tag>
+      <tag><text>difficulty:medium</text></tag>
+      <tag><text>cognitive_level:L2</text></tag>
+      <tag><text>question_type:STATIC</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q17</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Assertion: The Amaravati school of art developed a distinctive style different from the Gandhara and Mathura schools. Reason: Amaravati art used white limestone, depicted the Buddha in human form with flowing drapery, and showed a uniquely dynamic narrative style.</span><span lang="te" class="multilang">వాదన: అమరావతి కళాశాల గాంధార మరియు మధుర కళాశాలల కంటే విభిన్నమైన శైలిని అభివృద్ధి చేసింది. కారణం: అమరావతి కళ తెల్లని సున్నపురాయిని ఉపయోగించింది, బుద్ధుడిని మానవ రూపంలో ప్రవహించే వస్త్రాలతో చిత్రించింది, మరియు విశిష్టమైన చలనాత్మక కథనాత్మక శైలిని చూపింది.</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Both Assertion and Reason are true, and Reason correctly explains the Assertion</span><span lang="te" class="multilang">వాదన మరియు కారణం రెండూ నిజమే, మరియు కారణం వాదనను సరిగ్గా వివరిస్తుంది</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Both are true but Reason does not correctly explain the Assertion</span><span lang="te" class="multilang">రెండూ నిజమే కానీ కారణం వాదనను సరిగ్గా వివరించడం లేదు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Assertion is true but Reason is false</span><span lang="te" class="multilang">వాదన నిజమే కానీ కారణం తప్పు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Assertion is false but Reason is true</span><span lang="te" class="multilang">వాదన తప్పు కానీ కారణం నిజమే</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-AP_HIST-M2-6-002</text></tag>
+      <tag><text>subject:AP History</text></tag>
+      <tag><text>difficulty:hard</text></tag>
+      <tag><text>cognitive_level:L3</text></tag>
+      <tag><text>question_type:AR</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q18</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Consider the following about Satavahana rulers: 1. Gautamiputra Satakarni defeated the Sakas and reclaimed lost territories. 2. The Hathigumpha inscription records the achievements of a Satavahana king. 3. Vasisthiputra Pulamayi's reign saw the zenith of Satavahana power. Which are correct?</span><span lang="te" class="multilang">శాతవాహన పాలకుల గురించి కింది వాటిని పరిశీలించండి: 1. గౌతమీపుత్ర శాతకర్ణి శకులను ఓడించి కోల్పోయిన భూభాగాలను తిరిగి పొందాడు. 2. హాతీగుంఫ శిలాశాసనం ఒక శాతవాహన రాజు విజయాలను నమోదు చేస్తుంది. 3. వాసిష్ఠీపుత్ర పులమావి పాలన శాతవాహన అధికారానికి పరాకాష్ఠను సూచిస్తుంది. ఏవి సరైనవి?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1 and 3 only</span><span lang="te" class="multilang">1 మరియు 3 మాత్రమే</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1, 2, and 3</span><span lang="te" class="multilang">1, 2, మరియు 3 అన్నీ</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">2 and 3 only</span><span lang="te" class="multilang">2 మరియు 3 మాత్రమే</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1 and 2 only</span><span lang="te" class="multilang">1 మరియు 2 మాత్రమే</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-AP_HIST-M2-6-002</text></tag>
+      <tag><text>subject:AP History</text></tag>
+      <tag><text>difficulty:hard</text></tag>
+      <tag><text>cognitive_level:L3</text></tag>
+      <tag><text>question_type:STMT</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q19</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Match the following ancient Andhra sites with their historical significance — 1. Nagarjunakonda  2. Amaravati  3. Vengi  4. Jaggayyapeta — A. Earliest carved Buddhist stupa railings in Andhra  B. Capital of Ikshvakus, major Buddhist monastic complex  C. Site of the Mahachaitya — Great Stupa of the Satavahanas  D. Capital of the Eastern Chalukya kingdom</span><span lang="te" class="multilang">క్రింది ప్రాచీన ఆంధ్ర స్థలాలను వాటి చారిత్రక ప్రాముఖ్యతతో జతపరచండి — 1. నాగార్జునకొండ  2. అమరావతి  3. వేంగి  4. జగ్గయ్యపేట — A. ఆంధ్రలో అతి పురాతనమైన చెక్కిన బౌద్ధ స్థూప రైలింగ్‌లు  B. ఇక్ష్వాకుల రాజధాని, ప్రధాన బౌద్ధ మఠ సముదాయం  C. శాతవాహనుల మహాచైత్యం — మహాస్థూపం ఉన్న స్థలం  D. తూర్పు చాళుక్య రాజ్యం యొక్క రాజధాని</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1-B, 2-C, 3-D, 4-A</span><span lang="te" class="multilang">1-B, 2-C, 3-D, 4-A</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1-C, 2-B, 3-A, 4-D</span><span lang="te" class="multilang">1-C, 2-B, 3-A, 4-D</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1-B, 2-A, 3-C, 4-D</span><span lang="te" class="multilang">1-B, 2-A, 3-C, 4-D</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1-D, 2-C, 3-B, 4-A</span><span lang="te" class="multilang">1-D, 2-C, 3-B, 4-A</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-AP_HIST-M2-6-002</text></tag>
+      <tag><text>subject:AP History</text></tag>
+      <tag><text>difficulty:hard</text></tag>
+      <tag><text>cognitive_level:L3</text></tag>
+      <tag><text>question_type:MATCH</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q20</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">How did the Ikshvaku dynasty's religious patronage differ most significantly from the preceding Satavahana rulers of the same region?</span><span lang="te" class="multilang">ఇక్ష్వాకు రాజవంశం యొక్క మతపరమైన పోషణ అదే ప్రాంతం యొక్క పూర్వపు శాతవాహన పాలకుల నుండి అత్యంత ముఖ్యంగా ఎలా భిన్నంగా ఉంది?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Ikshvakus concentrated patronage on Hinayana Buddhism — especially Nagarjunakonda's monasteries — while Satavahanas supported both Buddhism and Brahmanical traditions simultaneously</span><span lang="te" class="multilang">ఇక్ష్వాకులు హీనయాన బౌద్ధమతంపై — ముఖ్యంగా నాగార్జునకొండ మఠాలపై — పోషణను కేంద్రీకరించారు, అయితే శాతవాహనులు బౌద్ధమతం మరియు బ్రాహ్మణ సంప్రదాయాలు రెండింటినీ ఏకకాలంలో ఆదరించారు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Satavahanas were strict Jains while Ikshvakus exclusively patronized Buddhism</span><span lang="te" class="multilang">శాతవాహనులు కఠోర జైనులు, అయితే ఇక్ష్వాకులు ప్రత్యేకంగా బౌద్ధమతాన్ని పోషించారు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Both dynasties equally patronized all three religions — Hinduism, Buddhism, and Jainism</span><span lang="te" class="multilang">రెండు రాజవంశాలూ మూడు మతాలను — హిందూమతం, బౌద్ధమతం, జైనమతం — సమానంగా పోషించాయి</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Ikshvakus patronized Islam while Satavahanas supported indigenous Vedic traditions</span><span lang="te" class="multilang">ఇక్ష్వాకులు ఇస్లాంను పోషించారు, అయితే శాతవాహనులు స్వదేశీ వేద సంప్రదాయాలకు మద్దతు ఇచ్చారు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-AP_HIST-M2-6-002</text></tag>
+      <tag><text>subject:AP History</text></tag>
+      <tag><text>difficulty:very_hard</text></tag>
+      <tag><text>cognitive_level:L4</text></tag>
+      <tag><text>question_type:ANALYTICAL</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q21</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">The Gandhara school of art is primarily characterized by which cultural influence?</span><span lang="te" class="multilang">గాంధార కళాశాల ప్రధానంగా ఏ సాంస్కృతిక ప్రభావంతో వర్గీకరించబడింది?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Greco-Roman (Hellenistic) influence on Buddhist art</span><span lang="te" class="multilang">బౌద్ధ కళపై గ్రీకో-రోమన్ (హెలెనిస్టిక్) ప్రభావం</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Persian influence on Brahmanical temple architecture</span><span lang="te" class="multilang">బ్రాహ్మణ దేవాలయ వాస్తుకళపై పర్షియన్ ప్రభావం</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Chinese influence on Jain sculpture</span><span lang="te" class="multilang">జైన శిల్పకళపై చైనీయుల ప్రభావం</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Egyptian influence on Mauryan pillar art</span><span lang="te" class="multilang">మౌర్య స్తంభ కళపై ఈజిప్షియన్ ప్రభావం</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-3-012</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:easy</text></tag>
+      <tag><text>cognitive_level:L1</text></tag>
+      <tag><text>question_type:STATIC</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q22</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Which dynasty was primarily responsible for patronizing and developing the Gandhara school of art?</span><span lang="te" class="multilang">గాంధార కళాశాలను పోషించడానికి మరియు అభివృద్ధి చేయడానికి ప్రధానంగా ఏ రాజవంశం బాధ్యత వహించింది?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Kushanas</span><span lang="te" class="multilang">కుషాణులు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Mauryas</span><span lang="te" class="multilang">మౌర్యులు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Sungas</span><span lang="te" class="multilang">శుంగులు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Guptas</span><span lang="te" class="multilang">గుప్తులు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-3-012</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:easy</text></tag>
+      <tag><text>cognitive_level:L1</text></tag>
+      <tag><text>question_type:STATIC</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q23</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Which of the following correctly distinguishes the Mathura school of art from the Gandhara school?</span><span lang="te" class="multilang">మధుర కళాశాలను గాంధార కళాశాల నుండి ఏది సరిగ్గా వేరు చేస్తుంది?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Mathura art depicted the Buddha with Indian features using spotted red sandstone; Gandhara used grey schist with Hellenistic drapery and features</span><span lang="te" class="multilang">మధుర కళ బుద్ధుడిని భారతీయ లక్షణాలతో మచ్చల ఎర్ర ఇసుకరాయిలో చిత్రించింది; గాంధార హెలెనిస్టిక్ వస్త్రాలు మరియు లక్షణాలతో బూడిద రాయిని ఉపయోగించింది</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Mathura art was patronized by the Guptas while Gandhara was supported by the Kushanas</span><span lang="te" class="multilang">మధుర కళకు గుప్తులు పోషణ అందించారు, గాంధారకు కుషాణులు మద్దతు ఇచ్చారు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Mathura art originated in the Gandhara region while the Gandhara school developed in Mathura</span><span lang="te" class="multilang">మధుర కళ గాంధార ప్రాంతంలో పుట్టింది, గాంధార శాల మధురలో అభివృద్ధి చెందింది</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Mathura art exclusively depicted Hindu deities while Gandhara depicted only Buddhist themes</span><span lang="te" class="multilang">మధుర కళ ప్రత్యేకంగా హిందూ దేవతలను చిత్రించింది, గాంధార మాత్రమే బౌద్ధ విషయాలను చిత్రించింది</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-3-012</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:medium</text></tag>
+      <tag><text>cognitive_level:L2</text></tag>
+      <tag><text>question_type:STMT</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q24</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">The Indo-Greek king Menander (Milinda) is celebrated in Buddhist tradition primarily for which reason?</span><span lang="te" class="multilang">ఇండో-గ్రీకు రాజు మెనాండర్ (మిలిందుడు) బౌద్ధ సంప్రదాయంలో ప్రధానంగా ఏ కారణంగా ప్రసిద్ధుడు?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">His philosophical dialogues with Buddhist monk Nagasena, recorded in the text "Milindapanha"</span><span lang="te" class="multilang">బౌద్ధ సన్యాసి నాగసేనతో జరిపిన తాత్విక సంభాషణలు "మిలిందపాన్హ" గ్రంథంలో నమోదు చేయబడ్డాయి</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">His conversion to Buddhism after the Kalinga War and renunciation of conquests</span><span lang="te" class="multilang">కళింగ యుద్ధం తర్వాత బౌద్ధమతంలోకి మారడం మరియు విజయాలను విడిచిపెట్టడం</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">His construction of the Sanchi Stupa and Buddhist monasteries</span><span lang="te" class="multilang">సాంచి స్థూపం మరియు బౌద్ధ మఠాల నిర్మాణం</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">His patronage of the Amaravati Mahachaitya in Andhra</span><span lang="te" class="multilang">ఆంధ్రలో అమరావతి మహాచైత్యానికి పోషణ అందించడం</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-3-012</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:medium</text></tag>
+      <tag><text>cognitive_level:L2</text></tag>
+      <tag><text>question_type:STATIC</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q25</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Which of the following is NOT a characteristic feature of Gandhara Buddhist sculpture?</span><span lang="te" class="multilang">గాంధార బౌద్ధ శిల్పం యొక్క లక్షణం కానిది ఏది?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Exclusive use of terracotta (baked clay) as the primary medium</span><span lang="te" class="multilang">ప్రాథమిక మాధ్యమంగా కాల్చిన మట్టిని మాత్రమే ఉపయోగించడం</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">First anthropomorphic (human) depiction of the Buddha</span><span lang="te" class="multilang">బుద్ధుని మొదటి మానవరూప చిత్రణ</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Greco-Roman style drapery (toga-like robes) in Buddha figures</span><span lang="te" class="multilang">బుద్ధ చిత్రాలలో గ్రీకో-రోమన్ శైలి వస్త్రాలు (తోగా వంటి వస్త్రాలు)</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Wave-like (Greek-style) curly hair on Buddha images</span><span lang="te" class="multilang">బుద్ధ చిత్రాలపై అలల వంటి (గ్రీకు శైలి) మెలికల జుట్టు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-3-012</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:medium</text></tag>
+      <tag><text>cognitive_level:L2</text></tag>
+      <tag><text>question_type:ELIM</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q26</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">The contribution of Kushana king Kanishka to Buddhism is best described by which statement?</span><span lang="te" class="multilang">బౌద్ధమతానికి కుషాణ రాజు కనిష్కుడి సహకారాన్ని ఏ వాక్యం అత్యుత్తమంగా వివరిస్తుంది?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">He convened the Fourth Buddhist Council in Kashmir and actively promoted Buddhism across Central Asia along the Silk Route</span><span lang="te" class="multilang">అతను కశ్మీర్‌లో నాల్గవ బౌద్ధ సంగీతిని నిర్వహించాడు మరియు సిల్క్ రూట్ వెంట మధ్య ఆసియాలో బౌద్ధమతాన్ని చురుకుగా ప్రచారం చేశాడు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">He built the original Bodh Gaya temple at the site of Buddha's enlightenment</span><span lang="te" class="multilang">అతను బుద్ధుడి జ్ఞానోదయ స్థలంలో బోధ్ గయ దేవాలయాన్ని నిర్మించాడు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">He compiled the Pali Canon at the Third Buddhist Council</span><span lang="te" class="multilang">అతను మూడవ బౌద్ధ సంగీతిలో పాళీ కానన్‌ను సంకలనం చేశాడు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">He sent Buddhist missionaries to Sri Lanka, which resulted in the establishment of Theravada Buddhism there</span><span lang="te" class="multilang">అతను శ్రీలంకకు బౌద్ధ మిషనరీలను పంపాడు, దాని ఫలితంగా అక్కడ థేరవాద బౌద్ధమతం స్థాపించబడింది</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-3-012</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:medium</text></tag>
+      <tag><text>cognitive_level:L2</text></tag>
+      <tag><text>question_type:STMT</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q27</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Assertion: The Saka and Kushana invasions ultimately had a net positive impact on Indian culture. Reason: These foreign rulers assimilated into Indian society, introduced the Gandhara art style, improved gold coinage systems, and acted as important patrons of Buddhism.</span><span lang="te" class="multilang">వాదన: శక మరియు కుషాణ దండయాత్రలు చివరికి భారతీయ సంస్కృతిపై మొత్తం సానుకూల ప్రభావాన్ని చూపాయి. కారణం: ఈ విదేశీ పాలకులు భారతీయ సమాజంలో విలీనమయ్యారు, గాంధార కళాశైలిని ప్రవేశపెట్టారు, బంగారు నాణేల వ్యవస్థలను మెరుగుపరిచారు, మరియు బౌద్ధమతానికి ముఖ్యమైన పోషకులుగా వ్యవహరించారు.</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Both Assertion and Reason are true, and Reason correctly explains the Assertion</span><span lang="te" class="multilang">వాదన మరియు కారణం రెండూ నిజమే, మరియు కారణం వాదనను సరిగ్గా వివరిస్తుంది</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Both are true but Reason does not correctly explain the Assertion</span><span lang="te" class="multilang">రెండూ నిజమే కానీ కారణం వాదనను సరిగ్గా వివరించడం లేదు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Assertion is true but Reason is false</span><span lang="te" class="multilang">వాదన నిజమే కానీ కారణం తప్పు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Both Assertion and Reason are false</span><span lang="te" class="multilang">వాదన మరియు కారణం రెండూ తప్పే</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-3-012</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:hard</text></tag>
+      <tag><text>cognitive_level:L3</text></tag>
+      <tag><text>question_type:AR</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q28</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Match the post-Mauryan foreign dynasties with their primary areas of control in India — 1. Indo-Greeks  2. Sakas  3. Kushanas  4. Parthians (Pahlavas) — A. Western India — Gujarat and upper Deccan  B. Northwest India — Bactria to Punjab  C. Sindh and lower Indus valley  D. Northwest to North India — Gandhara to Mathura</span><span lang="te" class="multilang">మౌర్యానంతర విదేశీ రాజవంశాలను భారతదేశంలో వాటి ప్రాథమిక నియంత్రణ ప్రాంతాలతో జతపరచండి — 1. ఇండో-గ్రీకులు  2. శకులు  3. కుషాణులు  4. పార్థియన్లు (పహ్లవులు) — A. పశ్చిమ భారతదేశం — గుజరాత్ మరియు ఎగువ డెక్కన్  B. వాయవ్య భారతదేశం — బాక్ట్రియా నుండి పంజాబ్  C. సింధ్ మరియు దిగువ సింధు లోయ  D. వాయవ్యం నుండి ఉత్తర భారతదేశం — గాంధార నుండి మధుర</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1-B, 2-A, 3-D, 4-C</span><span lang="te" class="multilang">1-B, 2-A, 3-D, 4-C</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1-A, 2-B, 3-C, 4-D</span><span lang="te" class="multilang">1-A, 2-B, 3-C, 4-D</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1-B, 2-D, 3-A, 4-C</span><span lang="te" class="multilang">1-B, 2-D, 3-A, 4-C</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1-D, 2-A, 3-B, 4-C</span><span lang="te" class="multilang">1-D, 2-A, 3-B, 4-C</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-3-012</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:hard</text></tag>
+      <tag><text>cognitive_level:L3</text></tag>
+      <tag><text>question_type:MATCH</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q29</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Consider the following about coinage developments due to post-Mauryan foreign dynasties: 1. Indo-Greeks introduced bilingual coins with Greek script on one side and Kharosthi/Brahmi on the other. 2. Kushanas issued gold coins (dinars) bearing portraits of the ruler. 3. Saka silver coins bore the title "Kshatrapa." Which of the above are correct?</span><span lang="te" class="multilang">మౌర్యానంతర విదేశీ రాజవంశాల కారణంగా నాణేల అభివృద్ధి గురించి కింది వాటిని పరిశీలించండి: 1. ఇండో-గ్రీకులు ఒక వైపు గ్రీకు లిపిలో మరియు మరోవైపు ఖరోష్ఠి/బ్రాహ్మి లిపిలో ద్విభాషా నాణేలను ప్రవేశపెట్టారు. 2. కుషాణులు పాలకుని చిత్రంతో బంగారు నాణేలు (దీనార్లు) జారీ చేశారు. 3. శక వెండి నాణేలపై "క్షత్రప" బిరుదు ఉంది. పైన ఏవి సరైనవి?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1, 2, and 3</span><span lang="te" class="multilang">1, 2, మరియు 3 అన్నీ</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1 and 2 only</span><span lang="te" class="multilang">1 మరియు 2 మాత్రమే</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">2 and 3 only</span><span lang="te" class="multilang">2 మరియు 3 మాత్రమే</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1 and 3 only</span><span lang="te" class="multilang">1 మరియు 3 మాత్రమే</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-3-012</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:hard</text></tag>
+      <tag><text>cognitive_level:L3</text></tag>
+      <tag><text>question_type:STMT</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q30</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">The Gandhara tradition replaced the earlier aniconic Buddhist art conventions. What does this shift reveal about the theological evolution within Buddhism between the 2nd century BCE and 2nd century CE?</span><span lang="te" class="multilang">గాంధార పరంపర పూర్వపు అప్రతిమ బౌద్ధ కళా సంప్రదాయాలను భర్తీ చేసింది. క్రీపూ 2వ శతాబ్దం మరియు క్రీశ 2వ శతాబ్దం మధ్య బౌద్ధమతంలో వేదాంత పరిణామం గురించి ఈ మార్పు ఏమి వెల్లడిస్తుంది?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">It reflects the Mahayana theological shift toward a transcendent, devotional Buddha — the Bodhisattva ideal — contrasting with the earlier Theravada emphasis on the historical Buddha's absence after nirvana</span><span lang="te" class="multilang">ఇది అతీంద్రియ, భక్తి బుద్ధుని వైపు మహాయాన వేదాంత మార్పును ప్రతిఫలిస్తుంది — బోధిసత్వ ఆదర్శం — నిర్వాణం తర్వాత చారిత్రక బుద్ధుని అనుపస్థితిపై పూర్వపు థేరవాద దృష్టితో విభేదిస్తుంది</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">It reflects only an aesthetic preference change with no theological significance whatsoever</span><span lang="te" class="multilang">ఇది ఎటువంటి వేదాంత ప్రాముఖ్యత లేకుండా కేవలం సౌందర్య ప్రాధాన్యత మార్పును మాత్రమే ప్రతిఫలిస్తుంది</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">It represents the defeat of Buddhism by Brahmanical forces who imposed anthropomorphic imagery on Buddhist art</span><span lang="te" class="multilang">ఇది బ్రాహ్మణ శక్తులచే బౌద్ధమత పతనాన్ని సూచిస్తుంది, వారు బౌద్ధ కళపై మానవరూప చిత్రణను విధించారు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">It shows the complete Hellenization of Indian Buddhism, making it indistinguishable from Greek religion</span><span lang="te" class="multilang">ఇది భారతీయ బౌద్ధమతం యొక్క పూర్తి హెలెనీకరణను చూపిస్తుంది, దాన్ని గ్రీకు మతం నుండి వేరు చేయలేనిదిగా చేస్తుంది</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-3-012</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:very_hard</text></tag>
+      <tag><text>cognitive_level:L4</text></tag>
+      <tag><text>question_type:ANALYTICAL</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q31</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Who founded the Vijayanagar Empire in 1336 CE?</span><span lang="te" class="multilang">విజయనగర సామ్రాజ్యాన్ని 1336 సంవత్సరంలో ఎవరు స్థాపించారు?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Harihara I and Bukka Raya I (brothers)</span><span lang="te" class="multilang">హరిహర I మరియు బుక్కరాయ I (సోదరులు)</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Krishnadevaraya and Achyutadevaraya</span><span lang="te" class="multilang">కృష్ణదేవరాయలు మరియు అచ్యుతదేవరాయలు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Deva Raya I and Deva Raya II</span><span lang="te" class="multilang">దేవరాయ I మరియు దేవరాయ II</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Saluva Narasimha and Vira Narasimha</span><span lang="te" class="multilang">సాళువ నరసింహ మరియు వీర నరసింహ</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-4-015</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:easy</text></tag>
+      <tag><text>cognitive_level:L1</text></tag>
+      <tag><text>question_type:STATIC</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q32</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">The Telugu poet Allasani Peddana, honored as "Andhra Kavita Pitamaha" (Grandfather of Telugu Poetry), was a court poet of which Vijayanagar ruler?</span><span lang="te" class="multilang">"ఆంధ్ర కవితా పితామహ" అని గౌరవించబడిన తెలుగు కవి అల్లసాని పెద్దన ఏ విజయనగర పాలకుని ఆస్థాన కవి?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Krishnadevaraya</span><span lang="te" class="multilang">కృష్ణదేవరాయలు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Deva Raya II</span><span lang="te" class="multilang">దేవరాయ II</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Harihara II</span><span lang="te" class="multilang">హరిహర II</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Achyutadevaraya</span><span lang="te" class="multilang">అచ్యుతదేవరాయలు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-4-015</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:easy</text></tag>
+      <tag><text>cognitive_level:L1</text></tag>
+      <tag><text>question_type:STATIC</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q33</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Which of the following best describes the role of temples in the Vijayanagar Empire?</span><span lang="te" class="multilang">విజయనగర సామ్రాజ్యంలో దేవాలయాల పాత్రను క్రింది వాటిలో ఏది అత్యుత్తమంగా వివరిస్తుంది?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Temples served as centers of social, economic, and cultural life — employing artisans, managing agricultural lands, and financing long-distance trade</span><span lang="te" class="multilang">దేవాలయాలు సామాజిక, ఆర్థిక మరియు సాంస్కృతిక జీవిత కేంద్రాలుగా పనిచేశాయి — కళాకారులను నియమించాయి, వ్యవసాయ భూములను నిర్వహించాయి, దీర్ఘ దూర వ్యాపారానికి నిధులు సమకూర్చాయి</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Temples were exclusively religious institutions with no economic or administrative functions</span><span lang="te" class="multilang">దేవాలయాలు ఆర్థిక లేదా పరిపాలనా విధులు లేకుండా ప్రత్యేకంగా మతపరమైన సంస్థలు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Vijayanagar rulers restricted temple construction to prevent conflict with the neighboring Deccan Sultanates</span><span lang="te" class="multilang">విజయనగర పాలకులు పొరుగు డెక్కన్ సుల్తానేట్‌లతో సంఘర్షణను నివారించడానికి దేవాలయ నిర్మాణాన్ని పరిమితం చేశారు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Only Shaivite temples were built while Vaishnavite temple construction was prohibited</span><span lang="te" class="multilang">శైవ దేవాలయాలు మాత్రమే నిర్మించబడ్డాయి, వైష్ణవ దేవాలయ నిర్మాణం నిషేధించబడింది</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-4-015</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:medium</text></tag>
+      <tag><text>cognitive_level:L2</text></tag>
+      <tag><text>question_type:STMT</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q34</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">The Vittala Temple at Hampi, famous for its musical pillars that produce distinct musical notes when struck, belongs to which architectural style?</span><span lang="te" class="multilang">కొట్టినప్పుడు విభిన్న సంగీత స్వరాలు వెలువరించే సంగీత స్తంభాలకు ప్రసిద్ధమైన హంపిలోని విఠ్ఠల దేవాలయం ఏ వాస్తుశిల్పానికి చెందినది?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Dravidian (South Indian) style</span><span lang="te" class="multilang">ద్రావిడ (దక్షిణ భారతీయ) శైలి</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Nagara (North Indian) style</span><span lang="te" class="multilang">నాగర (ఉత్తర భారతీయ) శైలి</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Vesara (mixed) style</span><span lang="te" class="multilang">వేసర (మిశ్రమ) శైలి</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Indo-Islamic style</span><span lang="te" class="multilang">ఇండో-ఇస్లామిక్ శైలి</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-4-015</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:medium</text></tag>
+      <tag><text>cognitive_level:L2</text></tag>
+      <tag><text>question_type:STATIC</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q35</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Which of the following saints was NOT associated with the Bhakti movement during the Vijayanagar period?</span><span lang="te" class="multilang">విజయనగర కాలంలో భక్తి ఉద్యమంతో సంబంధం లేని సాధువు ఎవరు?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Tukaram</span><span lang="te" class="multilang">తుకారాం</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Purandaradasa</span><span lang="te" class="multilang">పురందరదాసు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Kanakadasa</span><span lang="te" class="multilang">కనకదాసు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Tallapaka Annamacharya</span><span lang="te" class="multilang">తాళ్ళపాక అన్నమాచార్య</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-4-015</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:medium</text></tag>
+      <tag><text>cognitive_level:L2</text></tag>
+      <tag><text>question_type:ELIM</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q36</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">The term "Ashtadiggajas" at the court of Krishnadevaraya refers to which group?</span><span lang="te" class="multilang">కృష్ణదేవరాయలు ఆస్థానంలో "అష్టదిగ్గజాలు" అనే పదం ఏ సమూహాన్ని సూచిస్తుంది?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Eight celebrated Telugu poets who adorned his royal court</span><span lang="te" class="multilang">అతని రాజదర్బారును అలంకరించిన ఎనిమిది ప్రముఖ తెలుగు కవులు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Eight military generals who commanded the Vijayanagar army</span><span lang="te" class="multilang">విజయనగర సేనను నిర్వహించిన ఎనిమిది సైనిక సేనాపతులు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Eight Shaivite saints who served as the king's spiritual advisors</span><span lang="te" class="multilang">రాజుకు ఆధ్యాత్మిక సలహాదారులుగా పనిచేసిన ఎనిమిది శైవ సాధువులు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Eight administrative divisions (mandalas) of the Vijayanagar kingdom</span><span lang="te" class="multilang">విజయనగర రాజ్యం యొక్క ఎనిమిది పరిపాలనా విభాగాలు (మండలాలు)</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-4-015</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:medium</text></tag>
+      <tag><text>cognitive_level:L2</text></tag>
+      <tag><text>question_type:STATIC</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q37</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Assertion: The destruction of Hampi following the Battle of Talikota (1565 CE) ended the golden age of the Vijayanagar Empire. Reason: A coalition of Bijapur, Ahmadnagar, Golconda, and Bidar defeated Ramadevaraya at Rakkasatangadi and subsequently sacked and destroyed Hampi.</span><span lang="te" class="multilang">వాదన: 1565 సంవత్సరంలో తాళీకోట యుద్ధం తర్వాత హంపి నాశనం విజయనగర సామ్రాజ్యం యొక్క స్వర్ణయుగాన్ని ముగించింది. కారణం: బీజాపూర్, అహ్మద్‌నగర్, గోల్కొండ మరియు బీదర్ కూటమి రక్కసతంగడి వద్ద రామదేవరాయలను ఓడించి తదనంతరం హంపిని దోచుకుని నాశనం చేసింది.</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Both Assertion and Reason are true, and Reason correctly explains the Assertion</span><span lang="te" class="multilang">వాదన మరియు కారణం రెండూ నిజమే, మరియు కారణం వాదనను సరిగ్గా వివరిస్తుంది</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Both are true but Reason does not correctly explain the Assertion</span><span lang="te" class="multilang">రెండూ నిజమే కానీ కారణం వాదనను సరిగ్గా వివరించడం లేదు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Assertion is true but Reason is false — only two sultanates participated in the battle</span><span lang="te" class="multilang">వాదన నిజమే కానీ కారణం తప్పు — కేవలం రెండు సుల్తానేట్‌లు యుద్ధంలో పాల్గొన్నాయి</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Assertion is false — the empire flourished for another 200 years after Talikota</span><span lang="te" class="multilang">వాదన తప్పు — తాళీకోట తర్వాత సామ్రాజ్యం మరో 200 సంవత్సరాలు వర్ధిల్లింది</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-4-015</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:hard</text></tag>
+      <tag><text>cognitive_level:L3</text></tag>
+      <tag><text>question_type:AR</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q38</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Match the Vijayanagar rulers with their notable contributions — 1. Krishnadevaraya  2. Deva Raya II  3. Harihara I  4. Venkata II — A. Co-founder of Vijayanagar with his brother Bukka  B. Author of the Telugu epic Amuktamalyada  C. Last significant Vijayanagar ruler — capital at Chandragiri  D. Employed African (Abyssinian) soldiers, expanded empire eastward</span><span lang="te" class="multilang">విజయనగర పాలకులను వారి ముఖ్యమైన సహకారాలతో జతపరచండి — 1. కృష్ణదేవరాయలు  2. దేవరాయ II  3. హరిహర I  4. వేంకట II — A. తన సోదరుడు బుక్కతో కలిసి విజయనగరాన్ని స్థాపించాడు  B. తెలుగు మహాకావ్యం అముక్తమాల్యద రచయిత  C. చంద్రగిరి రాజధానిగా చివరి ముఖ్యమైన విజయనగర పాలకుడు  D. ఆఫ్రికన్ (అబిసీనియన్) సైనికులను నియమించాడు, సామ్రాజ్యాన్ని తూర్పుకు విస్తరించాడు</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1-B, 2-D, 3-A, 4-C</span><span lang="te" class="multilang">1-B, 2-D, 3-A, 4-C</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1-A, 2-B, 3-D, 4-C</span><span lang="te" class="multilang">1-A, 2-B, 3-D, 4-C</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1-B, 2-C, 3-A, 4-D</span><span lang="te" class="multilang">1-B, 2-C, 3-A, 4-D</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1-D, 2-B, 3-C, 4-A</span><span lang="te" class="multilang">1-D, 2-B, 3-C, 4-A</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-4-015</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:hard</text></tag>
+      <tag><text>cognitive_level:L3</text></tag>
+      <tag><text>question_type:MATCH</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q39</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Consider the following about the Nayankara system of the Vijayanagar Empire: 1. Nayakas held land grants in return for providing military contingents to the king. 2. The system was structurally similar to the iqta system of the Delhi Sultanate. 3. Nayakas were completely sovereign rulers with no obligations to Vijayanagar. Which are correct?</span><span lang="te" class="multilang">విజయనగర సామ్రాజ్యం యొక్క నాయంకార వ్యవస్థ గురించి కింది వాటిని పరిశీలించండి: 1. నాయకులు రాజుకు సైనిక దళాలను అందించడానికి బదులుగా భూమి అనుదానాలు కలిగి ఉన్నారు. 2. ఈ వ్యవస్థ నిర్మాణాత్మకంగా ఢిల్లీ సుల్తానేట్ యొక్క ఇక్తా వ్యవస్థకు సమానంగా ఉంది. 3. నాయకులు విజయనగరానికి ఎటువంటి బాధ్యతలు లేకుండా పూర్తిగా సార్వభౌమ పాలకులు. ఏవి సరైనవి?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1 and 2 only</span><span lang="te" class="multilang">1 మరియు 2 మాత్రమే</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1, 2, and 3</span><span lang="te" class="multilang">1, 2, మరియు 3 అన్నీ</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">2 and 3 only</span><span lang="te" class="multilang">2 మరియు 3 మాత్రమే</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1 and 3 only</span><span lang="te" class="multilang">1 మరియు 3 మాత్రమే</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-4-015</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:hard</text></tag>
+      <tag><text>cognitive_level:L3</text></tag>
+      <tag><text>question_type:STMT</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q40</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">The Vijayanagar Empire's religious policy is often described as "syncretic pragmatism." Which combination of evidence best supports this characterization?</span><span lang="te" class="multilang">విజయనగర సామ్రాజ్యం యొక్క మతపరమైన విధానాన్ని తరచుగా "సమకాలీన ఆచరణవాదం" అని వర్ణిస్తారు. ఈ వర్గీకరణకు మద్దతు ఇచ్చే సాక్ష్యాల కలయిక ఏది?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Personal Vaishnava-Shaiva devotion of kings combined with employment of Muslim cavalry commanders, Portuguese firearms traders, and inscriptions showing patronage of Jain and Shaiva institutions</span><span lang="te" class="multilang">రాజుల వ్యక్తిగత వైష్ణవ-శైవ భక్తి, ముస్లిం అశ్వదళ నాయకుల నియామకం, పోర్చుగీసు ఆయుధ వర్తకులు మరియు జైన మరియు శైవ సంస్థలకు పోషణ చూపించే శిలాశాసనాలతో కలిపి</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Forcible conversion of all subjects to Vaishnavism combined with destruction of Muslim mosques and Jain temples</span><span lang="te" class="multilang">అన్ని ప్రజలను వైష్ణవమతంలోకి బలవంతంగా మార్చడం మరియు ముస్లిం మసీదులు మరియు జైన దేవాలయాల నాశనంతో కలిపి</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Adoption of Islamic administrative terminology alongside exclusive Hindu ritual practices within the palace</span><span lang="te" class="multilang">రాజభవనంలో ప్రత్యేక హిందూ ఆచార పద్ధతులతో పాటు ఇస్లామిక్ పరిపాలనా పరిభాషను స్వీకరించడం</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Declaration of Buddhism as the state religion to unite diverse populations under a single non-sectarian faith</span><span lang="te" class="multilang">విభిన్న జనాభాను ఒకే తటస్థ విశ్వాసం కింద ఐక్యం చేయడానికి బౌద్ధమతాన్ని రాష్ట్ర మతంగా ప్రకటించడం</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-4-015</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:very_hard</text></tag>
+      <tag><text>cognitive_level:L4</text></tag>
+      <tag><text>question_type:ANALYTICAL</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q41</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">The Taj Mahal was built by which Mughal emperor, and in whose memory was it constructed?</span><span lang="te" class="multilang">తాజ్ మహల్ ఏ మొఘల్ చక్రవర్తి నిర్మించాడు, మరియు ఎవరి స్మారకార్థం నిర్మించబడింది?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Shah Jahan, in memory of his wife Mumtaz Mahal</span><span lang="te" class="multilang">షాజహాన్, తన భార్య ముంతాజ్ మహల్ స్మారకార్థం</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Akbar, in memory of his spiritual guide Salim Chishti</span><span lang="te" class="multilang">అక్బర్, తన ఆధ్యాత్మిక గురువు సలీమ్ చిష్టీ స్మారకార్థం</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Jahangir, in memory of his wife Nur Jahan</span><span lang="te" class="multilang">జహంగీర్, తన భార్య నూర్జహాన్ స్మారకార్థం</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Aurangzeb, in memory of his mother Mumtaz Mahal</span><span lang="te" class="multilang">ఔరంగజేబు, తన తల్లి ముంతాజ్ మహల్ స్మారకార్థం</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-4-028</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:easy</text></tag>
+      <tag><text>cognitive_level:L1</text></tag>
+      <tag><text>question_type:STATIC</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q42</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Which magnificent gateway built by Akbar at Fatehpur Sikri commemorates his victory over Gujarat?</span><span lang="te" class="multilang">గుజరాత్‌పై తన విజయాన్ని స్మరించుకోవడానికి అక్బర్ ఫతెహ్‌పూర్ సిక్రీలో నిర్మించిన ఏ అద్భుతమైన ద్వారం?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Buland Darwaza</span><span lang="te" class="multilang">బులంద్ దర్వాజా</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Lahori Gate</span><span lang="te" class="multilang">లాహోరీ గేట్</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Delhi Gate</span><span lang="te" class="multilang">ఢిల్లీ గేట్</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Darwaza-i-Rauza</span><span lang="te" class="multilang">దర్వాజా-ఇ-రౌజా</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-4-028</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:easy</text></tag>
+      <tag><text>cognitive_level:L1</text></tag>
+      <tag><text>question_type:STATIC</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q43</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Which of the following correctly describes the architectural style of Mughal monuments?</span><span lang="te" class="multilang">మొఘల్ స్మారకాల వాస్తుశిల్ప శైలిని క్రింది వాటిలో ఏది సరిగ్గా వివరిస్తుంది?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">An Indo-Islamic synthesis blending Persian, Central Asian, and indigenous Indian architectural traditions</span><span lang="te" class="multilang">పర్షియన్, మధ్య ఆసియా మరియు స్వదేశీ భారతీయ వాస్తుశిల్ప సంప్రదాయాలను మేళవించిన ఇండో-ఇస్లామిక్ సమ్మేళనం</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Pure Persian architecture transplanted unchanged from Iran to the Indian subcontinent</span><span lang="te" class="multilang">ఇరాన్ నుండి భారత ఉపఖండానికి మారుమాటలేకుండా మార్పులు చేయకుండా తీసుకొచ్చిన స్వచ్ఛమైన పర్షియన్ వాస్తుశిల్పం</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">A style exclusively based on Dravidian temple architecture of South India</span><span lang="te" class="multilang">దక్షిణ భారతదేశంలోని ద్రావిడ దేవాలయ వాస్తుశిల్పం ఆధారంగా మాత్రమే ఒక శైలి</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">A combination of Arab and Chinese architectural traditions brought via maritime trade routes</span><span lang="te" class="multilang">సముద్ర వ్యాపార మార్గాల ద్వారా తీసుకొచ్చిన అరబ్ మరియు చైనీయ వాస్తుశిల్ప సంప్రదాయాల సమ్మేళనం</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-4-028</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:medium</text></tag>
+      <tag><text>cognitive_level:L2</text></tag>
+      <tag><text>question_type:STMT</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q44</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">What was the primary purpose of the five-storeyed "Panch Mahal" built by Akbar at Fatehpur Sikri?</span><span lang="te" class="multilang">అక్బర్ ఫతెహ్‌పూర్ సిక్రీలో నిర్మించిన ఐదంతస్తుల "పంచ్ మహల్" యొక్క ప్రాధమిక ఉద్దేశ్యం ఏమిటి?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">A recreational palace for royal ladies — used for relaxation, music, and dance performances</span><span lang="te" class="multilang">రాజవంశ మహిళలకు వినోద భవనం — విశ్రాంతి, సంగీతం మరియు నృత్య ప్రదర్శనలకు ఉపయోగించబడింది</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">A five-vaulted treasury for storing Mughal gold and precious gems</span><span lang="te" class="multilang">మొఘల్ బంగారం మరియు విలువైన రత్నాలను నిల్వ చేయడానికి ఐదు వాల్టులు గల ఖజానా</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">A mosque with five prayer halls for different sects of Islam</span><span lang="te" class="multilang">ఇస్లాం యొక్క వివిధ వర్గాల కోసం ఐదు ప్రార్థన హాళ్ళతో మసీదు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">A court of justice with five chambers for different categories of civil cases</span><span lang="te" class="multilang">వేర్వేరు వర్గాల పౌర వ్యాజ్యాల కోసం ఐదు గదులతో న్యాయ దర్బారు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-4-028</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:medium</text></tag>
+      <tag><text>cognitive_level:L2</text></tag>
+      <tag><text>question_type:STATIC</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q45</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Which of the following monuments was NOT built by Emperor Shah Jahan?</span><span lang="te" class="multilang">క్రింది స్మారకాలలో చక్రవర్తి షాజహాన్ నిర్మించనిది ఏది?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Buland Darwaza at Fatehpur Sikri</span><span lang="te" class="multilang">ఫతెహ్‌పూర్ సిక్రీలో బులంద్ దర్వాజా</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Taj Mahal at Agra</span><span lang="te" class="multilang">ఆగ్రాలో తాజ్ మహల్</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Red Fort (Lal Qila) in Delhi</span><span lang="te" class="multilang">ఢిల్లీలో ఎర్రకోట (లాల్ ఖిలా)</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Jama Masjid in Delhi</span><span lang="te" class="multilang">ఢిల్లీలో జామా మసీదు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-4-028</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:medium</text></tag>
+      <tag><text>cognitive_level:L2</text></tag>
+      <tag><text>question_type:ELIM</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q46</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Mughal miniature painting reached its zenith under which emperor, and which foreign influence was deliberately incorporated?</span><span lang="te" class="multilang">మొఘల్ లఘుచిత్రకళ ఏ చక్రవర్తి కాలంలో పరాకాష్ఠకు చేరింది, మరియు ఏ విదేశీ ప్రభావం ఉద్దేశపూర్వకంగా చేర్చబడింది?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Jahangir — European (Flemish and Italian) painting techniques, particularly naturalistic portraiture and the use of perspective</span><span lang="te" class="multilang">జహంగీర్ — యూరోపియన్ (ఫ్లెమిష్ మరియు ఇటాలియన్) చిత్రకళా పద్ధతులు, ముఖ్యంగా సహజవాద చిత్రాంకనం మరియు దృక్కోణం వాడకం</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Akbar — Chinese painting techniques, particularly ink wash painting and landscape traditions</span><span lang="te" class="multilang">అక్బర్ — చైనీయ చిత్రకళా పద్ధతులు, ముఖ్యంగా సిరా కడిగే చిత్రాలు మరియు ప్రకృతి దృశ్య సంప్రదాయాలు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Shah Jahan — Byzantine iconographic traditions blended with Mughal court scenes</span><span lang="te" class="multilang">షాజహాన్ — మొఘల్ దర్బారు దృశ్యాలతో మేళవించిన బైజాంటైన్ చిత్రకళా సంప్రదాయాలు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Aurangzeb — Ottoman Turkish miniature traditions introduced via diplomatic exchanges</span><span lang="te" class="multilang">ఔరంగజేబు — దౌత్య మార్పిడి ద్వారా ప్రవేశపెట్టిన ఒట్టోమన్ టర్కిష్ లఘుచిత్ర సంప్రదాయాలు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-4-028</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:medium</text></tag>
+      <tag><text>cognitive_level:L2</text></tag>
+      <tag><text>question_type:STMT</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q47</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Assertion: Akbar's monuments at Fatehpur Sikri use red sandstone predominantly, while Shah Jahan's structures favour white marble. Reason: This shift reflects the maturation of the Indo-Islamic synthesis — Shah Jahan's preference for white marble symbolizes Persian ideals of purity and a more orthodox Mughal aesthetic identity.</span><span lang="te" class="multilang">వాదన: అక్బర్ యొక్క ఫతెహ్‌పూర్ సిక్రీ స్మారకాలు ప్రధానంగా ఎర్ర ఇసుకరాయిని ఉపయోగిస్తాయి, అయితే షాజహాన్ నిర్మాణాలు తెల్లని పాలరాయిని ఇష్టపడతాయి. కారణం: ఈ మార్పు ఇండో-ఇస్లామిక్ సమ్మేళనం పక్వం చెందడాన్ని ప్రతిఫలిస్తుంది — తెల్లని పాలరాయి పట్ల షాజహాన్ ఆసక్తి పవిత్రత యొక్క పర్షియన్ ఆదర్శాలను మరియు మరింత సంప్రదాయ మొఘల్ సౌందర్యశాస్త్ర గుర్తింపును సూచిస్తుంది.</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Both Assertion and Reason are true, and Reason correctly explains the Assertion</span><span lang="te" class="multilang">వాదన మరియు కారణం రెండూ నిజమే, మరియు కారణం వాదనను సరిగ్గా వివరిస్తుంది</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Both are true but Reason does not correctly explain the Assertion</span><span lang="te" class="multilang">రెండూ నిజమే కానీ కారణం వాదనను సరిగ్గా వివరించడం లేదు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Assertion is false — Akbar preferred white marble, not red sandstone</span><span lang="te" class="multilang">వాదన తప్పు — అక్బర్ ఎర్ర ఇసుకరాయి కాదు తెల్లని పాలరాయిని ఇష్టపడ్డాడు</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Assertion is true but Reason is false — the shift was purely economic, not aesthetic</span><span lang="te" class="multilang">వాదన నిజమే కానీ కారణం తప్పు — మార్పు సౌందర్యపరంగా కాదు, పూర్తిగా ఆర్థికపరంగా ఉంది</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-4-028</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:hard</text></tag>
+      <tag><text>cognitive_level:L3</text></tag>
+      <tag><text>question_type:AR</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q48</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Match the Mughal emperors with their specific architectural contributions — 1. Babur  2. Akbar  3. Jahangir  4. Shah Jahan — A. Itmad-ud-Daulah's Tomb (Agra) — first all-marble Mughal structure  B. Taj Mahal, Red Fort (Delhi), Jama Masjid  C. Agra Fort and Fatehpur Sikri (Buland Darwaza, Panch Mahal)  D. Kabuli Bagh Mosque (Panipat) — first Mughal mosque in India</span><span lang="te" class="multilang">మొఘల్ చక్రవర్తులను వారి నిర్దిష్ట వాస్తుశిల్ప సహకారాలతో జతపరచండి — 1. బాబర్  2. అక్బర్  3. జహంగీర్  4. షాజహాన్ — A. ఇతిమాద్-ఉద్-దౌలా సమాధి (ఆగ్రా) — మొదటి పూర్తి పాలరాయి మొఘల్ నిర్మాణం  B. తాజ్ మహల్, ఎర్రకోట (ఢిల్లీ), జామా మసీదు  C. ఆగ్రా కోట మరియు ఫతెహ్‌పూర్ సిక్రీ (బులంద్ దర్వాజా, పంచ్ మహల్)  D. కాబులీ బాగ్ మసీదు (పానిపట్) — భారతదేశంలో మొదటి మొఘల్ మసీదు</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1-D, 2-C, 3-A, 4-B</span><span lang="te" class="multilang">1-D, 2-C, 3-A, 4-B</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1-A, 2-C, 3-D, 4-B</span><span lang="te" class="multilang">1-A, 2-C, 3-D, 4-B</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1-D, 2-A, 3-C, 4-B</span><span lang="te" class="multilang">1-D, 2-A, 3-C, 4-B</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1-C, 2-D, 3-A, 4-B</span><span lang="te" class="multilang">1-C, 2-D, 3-A, 4-B</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-4-028</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:hard</text></tag>
+      <tag><text>cognitive_level:L3</text></tag>
+      <tag><text>question_type:MATCH</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q49</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Consider the following about Akbar's policy of Sulh-i-Kul (Universal Peace): 1. It was Akbar's policy of equal respect for all religions forming the basis of his governance. 2. It directly inspired the formation of Din-i-Ilahi — a syncretic religion. 3. Under this policy, Akbar abolished the Jizya tax on non-Muslims. Which are correct?</span><span lang="te" class="multilang">అక్బర్ యొక్క సుల్హ్-ఇ-కుల్ (సార్వత్రిక శాంతి) విధానం గురించి కింది వాటిని పరిశీలించండి: 1. ఇది అక్బర్ యొక్క అన్ని మతాలకు సమాన గౌరవం ఇచ్చే విధానం, అతని పాలనకు ఆధారమైంది. 2. ఇది దీన్-ఇ-ఇలాహీ — ఒక సమన్వయ మతం — ఏర్పడటాన్ని నేరుగా ప్రేరేపించింది. 3. ఈ విధానం ప్రకారం, అక్బర్ ముస్లిమేతరులపై జిజియా పన్నును రద్దు చేశాడు. ఏవి సరైనవి?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1, 2, and 3</span><span lang="te" class="multilang">1, 2, మరియు 3 అన్నీ</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1 and 2 only</span><span lang="te" class="multilang">1 మరియు 2 మాత్రమే</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">2 and 3 only</span><span lang="te" class="multilang">2 మరియు 3 మాత్రమే</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1 and 3 only</span><span lang="te" class="multilang">1 మరియు 3 మాత్రమే</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-4-028</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:hard</text></tag>
+      <tag><text>cognitive_level:L3</text></tag>
+      <tag><text>question_type:STMT</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S11.1-Q50</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">How does the architectural evolution from Akbar's Fatehpur Sikri to Shah Jahan's Taj Mahal best reflect the broader political and cultural transformation of the Mughal Empire?</span><span lang="te" class="multilang">అక్బర్ ఫతెహ్‌పూర్ సిక్రీ నుండి షాజహాన్ తాజ్ మహల్ వరకు వాస్తుశిల్ప పరిణామం మొఘల్ సామ్రాజ్యం యొక్క విస్తృత రాజకీయ మరియు సాంస్కృతిక పరివర్తనను అత్యుత్తమంగా ఎలా ప్రతిఫలిస్తుంది?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Fatehpur Sikri's syncretic red-sandstone complex (blending Hindu, Jain, Islamic motifs) reflects Akbar's inclusive empire-building; the Taj's pure white marble with Quranic calligraphy reflects Shah Jahan's assertion of a more formal, Persian-inflected Mughal identity</span><span lang="te" class="multilang">ఫతెహ్‌పూర్ సిక్రీ యొక్క సమన్వయ ఎర్ర-ఇసుకరాయి సముదాయం (హిందూ, జైన, ఇస్లామిక్ రూపాంకనాలను కలిపి) అక్బర్ యొక్క సమ్మిళిత సామ్రాజ్య నిర్మాణాన్ని ప్రతిఫలిస్తుంది; ఖురానిక్ అలంకరణతో తాజ్ యొక్క స్వచ్ఛమైన తెల్లని పాలరాయి మరింత అధికారిక, పర్షియన్-ప్రభావిత మొఘల్ గుర్తింపు యొక్క షాజహాన్ ప్రకటనను ప్రతిఫలిస్తుంది</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct!</span><span lang="te" class="multilang">సరైంది!</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Both represent identical styles — the only difference being the building material used due to regional availability</span><span lang="te" class="multilang">రెండూ ఒకే శైలిని సూచిస్తాయి — ప్రాంతీయ లభ్యత కారణంగా ఉపయోగించిన నిర్మాణ సామగ్రి మాత్రమే తేడా</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Fatehpur Sikri was militarily functional while the Taj Mahal represents purely decorative art with no deeper cultural meaning</span><span lang="te" class="multilang">ఫతెహ్‌పూర్ సిక్రీ సైనికపరంగా క్రియాత్మకమైంది, తాజ్ మహల్ లోతైన సాంస్కృతిక అర్థం లేకుండా పూర్తిగా అలంకారిక కళను సూచిస్తుంది</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Shah Jahan's shift to white marble indicates a rejection of Mughal heritage and an attempt to align with indigenous Hindu architectural traditions</span><span lang="te" class="multilang">తెల్లని పాలరాయి వైపు షాజహాన్ మారడం మొఘల్ వారసత్వాన్ని తిరస్కరించడాన్ని మరియు స్వదేశీ హిందూ వాస్తుశిల్ప సంప్రదాయాలతో అనుసంధానించే ప్రయత్నాన్ని సూచిస్తుంది</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect. Review the topic.</span><span lang="te" class="multilang">తప్పు. అంశాన్ని పునఃపరిశీలించండి.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-HIST-M2-4-028</text></tag>
+      <tag><text>subject:History</text></tag>
+      <tag><text>difficulty:very_hard</text></tag>
+      <tag><text>cognitive_level:L4</text></tag>
+      <tag><text>question_type:ANALYTICAL</text></tag>
+      <tag><text>sprint:S11.1</text></tag>
+    </tags>
+  </question>
+</quiz>

@@ -1,0 +1,30 @@
+micro_topic_id,subject,section,topic,micro_topic,syllabus_ref,group_applicability,depth_level,content_type,topic_category,pyq_frequency,difficulty_trend,prediction_priority,data_confidence,prelims_or_mains,paper
+MT-ECON-G2P3-1-001,Economy,G2 Paper-III (G2P3-1),Planning in India,Five Year Plans – Objectives and achievements,Planning in India,G2_PLUS,understanding,static+dynamic,shared_gs,,,,,mains,paper3
+MT-ECON-G2P3-1-002,Economy,G2 Paper-III (G2P3-1),Planning in India,"NITI Aayog – Structure, functions, role",Planning in India,G2_PLUS,understanding,static+dynamic,shared_gs,,,,,mains,paper3
+MT-ECON-G2P3-1-003,Economy,G2 Paper-III (G2P3-1),Planning in India,Planning Commission vs NITI Aayog,Planning in India,G2_PLUS,understanding,static+dynamic,shared_gs,,,,,mains,paper3
+MT-ECON-G2P3-1-004,Economy,G2 Paper-III (G2P3-1),Planning in India,"Sectoral planning – Agriculture, Industry, Services",Planning in India,G2_PLUS,understanding,static+dynamic,shared_gs,,,,,mains,paper3
+MT-ECON-G2P3-1-005,Economy,G2 Paper-III (G2P3-1),Planning in India,Regional planning and balanced development,Planning in India,G2_PLUS,understanding,static+dynamic,shared_gs,,,,,mains,paper3
+MT-ECON-G2P3-2-001,Economy,G2 Paper-III (G2P3-2),Economic Policies and Reforms,"LPG reforms – Liberalization, Privatization, Globalization",Economic Policies and Reforms,G2_PLUS,understanding,dynamic,shared_gs,,,,,mains,paper3
+MT-ECON-G2P3-2-002,Economy,G2 Paper-III (G2P3-2),Economic Policies and Reforms,"Industrial Policy – 1948, 1956, 1991 and after",Economic Policies and Reforms,G2_PLUS,understanding,dynamic,shared_gs,,,,,mains,paper3
+MT-ECON-G2P3-2-003,Economy,G2 Paper-III (G2P3-2),Economic Policies and Reforms,Trade Policy – Import substitution to export promotion,Economic Policies and Reforms,G2_PLUS,understanding,dynamic,shared_gs,,,,,mains,paper3
+MT-ECON-G2P3-2-004,Economy,G2 Paper-III (G2P3-2),Economic Policies and Reforms,"FDI policy – Sectors, limits, automatic route",Economic Policies and Reforms,G2_PLUS,understanding,dynamic,shared_gs,,,,,mains,paper3
+MT-ECON-G2P3-2-005,Economy,G2 Paper-III (G2P3-2),Economic Policies and Reforms,Disinvestment policy and privatization,Economic Policies and Reforms,G2_PLUS,understanding,dynamic,shared_gs,,,,,mains,paper3
+MT-ECON-G2P3-3-001,Economy,G2 Paper-III (G2P3-3),"Money, Banking and Finance","RBI – Functions, monetary policy tools","Money, Banking and Finance",G2_PLUS,understanding,dynamic,shared_gs,,,,,mains,paper3
+MT-ECON-G2P3-3-002,Economy,G2 Paper-III (G2P3-3),"Money, Banking and Finance","Commercial Banking – Structure, NPA crisis","Money, Banking and Finance",G2_PLUS,understanding,static+dynamic,shared_gs,,,,,mains,paper3
+MT-ECON-G2P3-3-003,Economy,G2 Paper-III (G2P3-3),"Money, Banking and Finance","Financial inclusion – Jan Dhan, MUDRA, SHGs","Money, Banking and Finance",G2_PLUS,understanding,static+dynamic,shared_gs,,,,,mains,paper3
+MT-ECON-G2P3-3-004,Economy,G2 Paper-III (G2P3-3),"Money, Banking and Finance","Capital market – SEBI, stock exchanges","Money, Banking and Finance",G2_PLUS,understanding,static+dynamic,shared_gs,,,,,mains,paper3
+MT-ECON-G2P3-3-005,Economy,G2 Paper-III (G2P3-3),"Money, Banking and Finance",Insurance sector and pension reforms,"Money, Banking and Finance",G2_PLUS,understanding,dynamic,shared_gs,,,,,mains,paper3
+MT-ECON-G2P3-3-006,Economy,G2 Paper-III (G2P3-3),"Money, Banking and Finance",Digital payments and fintech,"Money, Banking and Finance",G2_PLUS,understanding,dynamic,shared_gs,,,,,mains,paper3
+MT-ECON-G2P3-4-001,Economy,G2 Paper-III (G2P3-4),Economic Growth and Development,"National Income – Concepts, measurement, GDP, GNP",Economic Growth and Development,G2_PLUS,understanding,static+dynamic,shared_gs,,,,,mains,paper3
+MT-ECON-G2P3-4-002,Economy,G2 Paper-III (G2P3-4),Economic Growth and Development,Per capita income and human development index,Economic Growth and Development,G2_PLUS,understanding,static+dynamic,shared_gs,,,,,mains,paper3
+MT-ECON-G2P3-4-003,Economy,G2 Paper-III (G2P3-4),Economic Growth and Development,"Poverty – Definitions, trends, BPL methodology",Economic Growth and Development,G2_PLUS,understanding,static+dynamic,shared_gs,,,,,mains,paper3
+MT-ECON-G2P3-4-004,Economy,G2 Paper-III (G2P3-4),Economic Growth and Development,"Unemployment – Types, measurement, CMIE data",Economic Growth and Development,G2_PLUS,understanding,static+dynamic,shared_gs,,,,,mains,paper3
+MT-ECON-G2P3-4-005,Economy,G2 Paper-III (G2P3-4),Economic Growth and Development,"Inflation – Types, measurement, WPI, CPI",Economic Growth and Development,G2_PLUS,understanding,static+dynamic,shared_gs,,,,,mains,paper3
+MT-ECON-G2P3-4-006,Economy,G2 Paper-III (G2P3-4),Economic Growth and Development,Demographic dividend and population policy,Economic Growth and Development,G2_PLUS,understanding,dynamic,shared_gs,,,,,mains,paper3
+MT-AP_ECON-G2P3-5-001,Economy,G2 Paper-III (G2P3-5),AP Economy,AP GSDP – Sectoral composition and growth,AP Economy,G2_PLUS,understanding,static+dynamic,ap_specific,,,,,mains,paper3
+MT-AP_ECON-G2P3-5-002,Economy,G2 Paper-III (G2P3-5),AP Economy,"AP Agriculture – Major crops, irrigation, market reforms",AP Economy,G2_PLUS,understanding,dynamic,ap_specific,,,,,mains,paper3
+MT-AP_ECON-G2P3-5-003,Economy,G2 Paper-III (G2P3-5),AP Economy,"AP Industry – Key sectors, corridors, special zones",AP Economy,G2_PLUS,understanding,static+dynamic,ap_specific,,,,,mains,paper3
+MT-AP_ECON-G2P3-5-004,Economy,G2 Paper-III (G2P3-5),AP Economy,"AP Infrastructure – Ports, airports, highways, power",AP Economy,G2_PLUS,understanding,static+dynamic,ap_specific,,,,,mains,paper3
+MT-AP_ECON-G2P3-5-005,Economy,G2 Paper-III (G2P3-5),AP Economy,"AP Social development – Education, health indicators",AP Economy,G2_PLUS,understanding,static+dynamic,ap_specific,,,,,mains,paper3
+MT-AP_ECON-G2P3-5-006,Economy,G2 Paper-III (G2P3-5),AP Economy,AP Post-bifurcation fiscal challenges,AP Economy,G2_PLUS,understanding,static+dynamic,ap_specific,,,,,mains,paper3
+MT-AP_ECON-G2P3-5-007,Economy,G2 Paper-III (G2P3-5),AP Economy,AP flagship schemes and programmes,AP Economy,G2_PLUS,understanding,dynamic,ap_specific,,,,,mains,paper3

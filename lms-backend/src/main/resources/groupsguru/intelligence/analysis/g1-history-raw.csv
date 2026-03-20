@@ -1,0 +1,152 @@
+pyq_id,commission,year,paper,question_number,subject,micro_topic_id,question_type,cognitive_level,difficulty,recurrence,ca_linked,question_summary
+APPSC-G1-2016-P2-001a,APPSC,2016,paper2,1a,History,MT-HIST-M2-2-016,ANALYTICAL,L3,medium,first_time,false,Compare Hinayana and Mahayana Buddhism and reasons for rise and decline
+APPSC-G1-2016-P2-001b,APPSC,2016,paper2,1b,History,MT-HIST-M2-3-012,ANALYTICAL,L2,medium,first_time,false,Major schools of art in post-Mauryan period and their features
+APPSC-G1-2016-P2-002a,APPSC,2016,paper2,2a,History,MT-HIST-M2-4-028,ANALYTICAL,L2,medium,first_time,false,Contributions of Great Mughals to Indian architecture
+APPSC-G1-2016-P2-002b,APPSC,2016,paper2,2b,History,MT-HIST-M2-4-015,ANALYTICAL,L2,medium,first_time,false,Cultural contribution of Vijayanagar Empire
+APPSC-G1-2016-P2-003a,APPSC,2016,paper2,3a,History,MT-HIST-M2-5-019,ANALYTICAL,L3,medium,first_time,false,Period 1885-1905 moderates contribution in organizing national movement
+APPSC-G1-2016-P2-003b,APPSC,2016,paper2,3b,History,MT-HIST-M2-5-006,ANALYTICAL,L3,medium,first_time,false,Nature and significance of 1857 revolt as First War of Independence
+APPSC-G1-2016-P2-004a,APPSC,2016,paper2,4a,History,MT-HIST-M2-5-021,ANALYTICAL,L3,hard,first_time,false,Effectiveness of Gandhis methods to mobilize masses
+APPSC-G1-2016-P2-004b,APPSC,2016,paper2,4b,History,MT-HIST-M2-5-015,ANALYTICAL,L4,hard,first_time,false,Ambedkars statement on constitutional methods and protecting democracy
+APPSC-G1-2016-P2-005a,APPSC,2016,paper2,5a,History,MT-HIST-M2-5-022,ANALYTICAL,L3,medium,first_time,false,Contribution of peasant movements in freedom struggle
+APPSC-G1-2016-P2-005b,APPSC,2016,paper2,5b,History,MT-HIST-M2-5-023,ANALYTICAL,L3,hard,first_time,false,Role of communalism in partition of the country
+APPSC-G1-2016-P2-006a,APPSC,2016,paper2,6a,AP History,MT-AP_HIST-M2-6-002,ANALYTICAL,L2,medium,first_time,false,Political fortunes and cultural contribution of Ikshvakus
+APPSC-G1-2016-P2-006b,APPSC,2016,paper2,6b,AP History,MT-AP_HIST-M2-6-006,ANALYTICAL,L2,medium,first_time,false,Eastern Chalukyas contribution to literature art and architecture
+APPSC-G1-2016-P2-007a,APPSC,2016,paper2,7a,AP History,MT-AP_HIST-M2-7-005,ANALYTICAL,L2,medium,first_time,false,Qutubshahis contribution to Telugu language and literature
+APPSC-G1-2016-P2-007b,APPSC,2016,paper2,7b,AP History,MT-AP_HIST-M2-7-007,ANALYTICAL,L2,medium,first_time,false,Poet Molla her work and literary style
+APPSC-G1-2016-P2-008a,APPSC,2016,paper2,8a,AP History,MT-AP_HIST-M2-9-004,ANALYTICAL,L2,medium,first_time,false,Gurram Jashuvas literary works contribution to social reform
+APPSC-G1-2016-P2-008b,APPSC,2016,paper2,8b,AP History,MT-AP_HIST-M2-9-004,ANALYTICAL,L2,medium,first_time,false,Salient features of Dr Boyi Bhimannas literary works
+APPSC-G1-2016-P2-009a,APPSC,2016,paper2,9a,AP History,MT-AP_HIST-M2-9-006,ANALYTICAL,L2,medium,first_time,false,Andhra Mahasabha contribution in socio-cultural development
+APPSC-G1-2016-P2-009b,APPSC,2016,paper2,9b,AP History,MT-AP_HIST-M2-9-002,ANALYTICAL,L2,medium,first_time,false,Vandemataram movement and its impact on AP freedom struggle
+APPSC-G1-2016-P2-010a,APPSC,2016,paper2,10a,AP History,MT-AP_HIST-M2-10-004,ANALYTICAL,L3,hard,first_time,false,Reasons for success and failure of Telangana armed struggle
+APPSC-G1-2016-P2-010b,APPSC,2016,paper2,10b,AP History,MT-AP_HIST-M2-10-004,ANALYTICAL,L2,medium,first_time,false,Razakars and their role in resisting Hyderabad integration into India
+APPSC-G1-2016-P2-011a,APPSC,2016,paper2,11a,History,NO_REGISTRY_MATCH_CONSTITUTION,ANALYTICAL,L3,medium,first_time,false,Indian constitution federal in form but unitary in spirit - discuss
+APPSC-G1-2016-P2-011b,APPSC,2016,paper2,11b,History,NO_REGISTRY_MATCH_CONSTITUTION,ANALYTICAL,L3,hard,first_time,false,Effectiveness of Directive Principles implementation and improvements
+APPSC-G1-2016-P2-012a,APPSC,2016,paper2,12a,History,NO_REGISTRY_MATCH_CONSTITUTION,ANALYTICAL,L3,medium,first_time,false,Concept of cooperative federalism and its existence in Indian polity
+APPSC-G1-2016-P2-012b,APPSC,2016,paper2,12b,History,NO_REGISTRY_MATCH_CONSTITUTION,ANALYTICAL,L2,medium,first_time,false,Financial relations between Union and States and irritants encountered
+APPSC-G1-2016-P2-013a,APPSC,2016,paper2,13a,History,NO_REGISTRY_MATCH_CONSTITUTION,ANALYTICAL,L3,medium,first_time,false,Judicial activism meaning and its impact on Indian polity
+APPSC-G1-2016-P2-013b,APPSC,2016,paper2,13b,History,NO_REGISTRY_MATCH_CONSTITUTION,ANALYTICAL,L2,medium,first_time,false,Relative position of Rajya Sabha compared to Lok Sabha
+APPSC-G1-2016-P2-014a,APPSC,2016,paper2,14a,History,NO_REGISTRY_MATCH_CONSTITUTION,ANALYTICAL,L2,medium,first_time,false,Procedure for amending constitution and criticism against it
+APPSC-G1-2016-P2-014b,APPSC,2016,paper2,14b,History,NO_REGISTRY_MATCH_CONSTITUTION,ANALYTICAL,L2,hard,first_time,false,Basic structure doctrine of constitution with important Supreme Court judgements
+APPSC-G1-2016-P2-015a,APPSC,2016,paper2,15a,History,NO_REGISTRY_MATCH_CONSTITUTION,ANALYTICAL,L2,medium,first_time,false,Special constitutional provisions for SCs STs backward classes Anglo-Indians
+APPSC-G1-2016-P2-015b,APPSC,2016,paper2,15b,History,NO_REGISTRY_MATCH_CONSTITUTION,ANALYTICAL,L2,medium,first_time,false,Concept of minorities in Indian constitution and safeguards for their rights
+APPSC-G1-2017-P2-001a,APPSC,2017,paper2,1a,History,MT-HIST-M2-2-003,ANALYTICAL,L3,medium,first_time,false,How Harappan civilization differed from later Vedic civilization
+APPSC-G1-2017-P2-001b,APPSC,2017,paper2,1b,History,MT-HIST-M2-3-014,ANALYTICAL,L2,medium,first_time,false,Sangam age literature and political cultural life of that age
+APPSC-G1-2017-P2-002a,APPSC,2017,paper2,2a,History,MT-HIST-M2-3-024,ANALYTICAL,L3,medium,first_time,false,Cholas cultural contribution and expansion in South East Asia
+APPSC-G1-2017-P2-002b,APPSC,2017,paper2,2b,History,MT-HIST-M2-4-030,ANALYTICAL,L2,medium,first_time,false,Sufism main principles important orders and influence on Indian society
+APPSC-G1-2017-P2-003a,APPSC,2017,paper2,3a,History,MT-HIST-M2-4-031,ANALYTICAL,L2,medium,first_time,false,Rise of Shivaji and his administrative military and revenue systems
+APPSC-G1-2017-P2-003b,APPSC,2017,paper2,3b,History,MT-HIST-M2-5-010,ANALYTICAL,L3,medium,first_time,false,Impact of 1857 revolt on British rule and major policy changes after revolt
+APPSC-G1-2017-P2-004a,APPSC,2017,paper2,4a,History,MT-HIST-M2-5-012,ANALYTICAL,L3,medium,first_time,false,Swami Vivekanandas teachings in arousing nationalism and service spirit
+APPSC-G1-2017-P2-004b,APPSC,2017,paper2,4b,History,MT-HIST-M2-5-012,ANALYTICAL,L2,medium,first_time,false,Narayana Gurus contribution in social awakening and impact of teachings
+APPSC-G1-2017-P2-005a,APPSC,2017,paper2,5a,History,MT-HIST-M2-5-020,ANALYTICAL,L3,medium,first_time,false,Revolutionary nationalists contribution to freedom movement and British impact
+APPSC-G1-2017-P2-005b,APPSC,2017,paper2,5b,History,MT-HIST-M2-5-021,ANALYTICAL,L4,hard,first_time,false,Gandhi as politician among saints and saint among politicians - discuss
+APPSC-G1-2017-P2-006a,APPSC,2017,paper2,6a,AP History,MT-AP_HIST-M2-6-001,ANALYTICAL,L2,medium,first_time,false,Origin expansion of Satavahana power and contribution to religion literature
+APPSC-G1-2017-P2-006b,APPSC,2017,paper2,6b,AP History,MT-AP_HIST-M2-6-006,ANALYTICAL,L2,medium,repeat_topic,false,Vengi Chalukyas political significance and role in moulding Andhra culture
+APPSC-G1-2017-P2-007a,APPSC,2017,paper2,7a,AP History,MT-AP_HIST-M2-7-007,ANALYTICAL,L3,medium,first_time,false,Growth of Telugu language and literature between 1000 AD and 1500 AD
+APPSC-G1-2017-P2-007b,APPSC,2017,paper2,7b,AP History,MT-HIST-M2-4-016,ANALYTICAL,L2,medium,first_time,false,Characteristics of Vijayanagara architecture
+APPSC-G1-2017-P2-008a,APPSC,2017,paper2,8a,AP History,MT-AP_HIST-M2-8-005,ANALYTICAL,L3,medium,first_time,false,Brahma Samaj Movement influence on Andhra social reformers and writings
+APPSC-G1-2017-P2-008b,APPSC,2017,paper2,8b,AP History,MT-AP_HIST-M2-8-003,ANALYTICAL,L3,medium,first_time,false,Western education and Christian missionaries role in Andhra socio-cultural awakening
+APPSC-G1-2017-P2-009a,APPSC,2017,paper2,9a,AP History,MT-AP_HIST-M2-8-005,ANALYTICAL,L3,medium,first_time,false,Tripuraneni Ramaswamy Chowdary movement objectives and results
+APPSC-G1-2017-P2-009b,APPSC,2017,paper2,9b,AP History,MT-AP_HIST-M2-10-003,ANALYTICAL,L2,medium,first_time,false,Reasons and events leading to formation of Andhra Pradesh State in 1956
+APPSC-G1-2017-P2-010a,APPSC,2017,paper2,10a,AP History,MT-AP_HIST-M2-10-005,ANALYTICAL,L3,hard,first_time,false,Problems in AP reorganisation and financial position after reorganisation
+APPSC-G1-2017-P2-010b,APPSC,2017,paper2,10b,AP History,MT-AP_HIST-M2-10-005,ANALYTICAL,L3,hard,false,false,Problems in bifurcation of assets under Schedule IX and X of AP Act 2014
+APPSC-G1-2017-P2-011a,APPSC,2017,paper2,11a,History,NO_REGISTRY_MATCH_CONSTITUTION,ANALYTICAL,L3,medium,first_time,false,Constitutional provisions on tyranny of majority and minority appeasement
+APPSC-G1-2017-P2-011b,APPSC,2017,paper2,11b,History,NO_REGISTRY_MATCH_CONSTITUTION,ANALYTICAL,L3,medium,first_time,false,Federalism survived in India despite unitary features of Constitution
+APPSC-G1-2017-P2-012a,APPSC,2017,paper2,12a,History,NO_REGISTRY_MATCH_CONSTITUTION,ANALYTICAL,L2,medium,first_time,false,Office of profit concept and developments in India on this issue
+APPSC-G1-2017-P2-012b,APPSC,2017,paper2,12b,History,NO_REGISTRY_MATCH_CONSTITUTION,ANALYTICAL,L3,hard,first_time,false,Distinguish judicial review and judicial activism with Supreme Court decisions
+APPSC-G1-2017-P2-013a,APPSC,2017,paper2,13a,History,NO_REGISTRY_MATCH_CONSTITUTION,ANALYTICAL,L2,medium,first_time,false,Inter-State Council formation functions and important decisions in last 3 years
+APPSC-G1-2017-P2-013b,APPSC,2017,paper2,13b,History,NO_REGISTRY_MATCH_CONSTITUTION,ANALYTICAL,L3,hard,true,false,14th Finance Commission recommendations on devolution to Panchayati Raj
+APPSC-G1-2017-P2-014a,APPSC,2017,paper2,14a,History,NO_REGISTRY_MATCH_CONSTITUTION,ANALYTICAL,L2,medium,first_time,false,National party vs regional party features of Indian party system
+APPSC-G1-2017-P2-014b,APPSC,2017,paper2,14b,History,NO_REGISTRY_MATCH_CONSTITUTION,ANALYTICAL,L3,medium,true,false,EVM usage in elections recent tampering allegations and solutions
+APPSC-G1-2017-P2-015a,APPSC,2017,paper2,15a,History,NO_REGISTRY_MATCH_CONSTITUTION,ANALYTICAL,L3,medium,false,false,RTI Act meant only for information not grievance redressal - comment
+APPSC-G1-2017-P2-015b,APPSC,2017,paper2,15b,History,NO_REGISTRY_MATCH_CONSTITUTION,ANALYTICAL,L2,easy,false,false,Functions of the National Commission for Women
+APPSC-G1-2020-P2-001a,APPSC,2020,paper2,1a,History,MT-HIST-M2-2-003,ANALYTICAL,L3,medium,repeat_topic,false,Salient features of urban planning of Harappan Civilization
+APPSC-G1-2020-P2-001b,APPSC,2020,paper2,1b,History,MT-HIST-M2-2-016,ANALYTICAL,L2,medium,repeat_topic,false,Causes of emergence of Buddhism in ancient India
+APPSC-G1-2020-P2-002a,APPSC,2020,paper2,2a,AP History,MT-AP_HIST-M2-6-006,ANALYTICAL,L2,medium,repeat_topic,false,Society under the Eastern Chalukyas - outline
+APPSC-G1-2020-P2-002b,APPSC,2020,paper2,2b,History,MT-HIST-M2-4-029,ANALYTICAL,L3,medium,first_time,false,Impact of Bhakti Movement during medieval India
+APPSC-G1-2020-P2-003a,APPSC,2020,paper2,3a,History,MT-HIST-M2-4-021,ANALYTICAL,L3,medium,first_time,false,Central administration under Akbar - critical evaluation
+APPSC-G1-2020-P2-003b,APPSC,2020,paper2,3b,History,MT-HIST-M2-4-031,ANALYTICAL,L2,medium,repeat_topic,false,Rise of Maratha Empire with reference to Shivajis contribution
+APPSC-G1-2020-P2-004a,APPSC,2020,paper2,4a,History,MT-HIST-M2-5-004,ANALYTICAL,L3,medium,first_time,false,Subsidiary Alliance system role in rise of British Raj in India
+APPSC-G1-2020-P2-004b,APPSC,2020,paper2,4b,History,MT-HIST-M2-5-015,ANALYTICAL,L3,medium,repeat_topic,false,Ambedkars contribution for untouchables and labourers in colonial India
+APPSC-G1-2020-P2-005a,APPSC,2020,paper2,5a,History,MT-HIST-M2-5-023,ANALYTICAL,L2,medium,first_time,false,Recommendations of the Cabinet Mission plan
+APPSC-G1-2020-P2-005b,APPSC,2020,paper2,5b,History,MT-HIST-M2-5-021,ANALYTICAL,L3,medium,first_time,false,Impact of Quit India Movement of 1942 - critical evaluation
+APPSC-G1-2020-P2-006a,APPSC,2020,paper2,6a,AP History,MT-AP_HIST-M2-6-001,ANALYTICAL,L2,medium,repeat_topic,false,Salient features of agrarian system under the Satavahanas
+APPSC-G1-2020-P2-006b,APPSC,2020,paper2,6b,AP History,MT-AP_HIST-M2-6-004,ANALYTICAL,L2,medium,first_time,false,Art and architecture under the Pallavas
+APPSC-G1-2020-P2-007a,APPSC,2020,paper2,7a,AP History,MT-HIST-M2-4-016,ANALYTICAL,L2,medium,repeat_topic,false,Architecture during Vijayanagar Empire period - brief note
+APPSC-G1-2020-P2-007b,APPSC,2020,paper2,7b,AP History,MT-AP_HIST-M2-7-007,ANALYTICAL,L3,medium,repeat_topic,false,Vijayanagara Empire foundation coincided with literary movement in South India
+APPSC-G1-2020-P2-008a,APPSC,2020,paper2,8a,AP History,MT-AP_HIST-M2-8-006,ANALYTICAL,L2,medium,first_time,false,Library movement in Andhra Pradesh - brief account
+APPSC-G1-2020-P2-008b,APPSC,2020,paper2,8b,AP History,MT-AP_HIST-M2-8-005,ANALYTICAL,L3,medium,repeat_topic,false,Kandukari Veeresalingam contribution in social reform movement in AP
+APPSC-G1-2020-P2-009a,APPSC,2020,paper2,9a,AP History,MT-AP_HIST-M2-9-001,ANALYTICAL,L2,medium,first_time,false,Circumstances leading to formation of Justice Party
+APPSC-G1-2020-P2-009b,APPSC,2020,paper2,9b,AP History,MT-AP_HIST-M2-10-003,ANALYTICAL,L2,medium,repeat_topic,false,Circumstances leading to formation of Andhra Pradesh in 1950s
+APPSC-G1-2020-P2-010a,APPSC,2020,paper2,10a,AP History,MT-AP_HIST-M2-10-005,ANALYTICAL,L3,hard,repeat_topic,true,Revenue and infrastructure challenges for new AP after bifurcation 2014
+APPSC-G1-2020-P2-010b,APPSC,2020,paper2,10b,AP History,MT-AP_HIST-M2-10-005,ANALYTICAL,L3,hard,repeat_topic,true,Impact of AP bifurcation 2014 on trade and commerce
+APPSC-G1-2020-P2-011a,APPSC,2020,paper2,11a,Geography,MT-GEOG-M2-11-008,STATIC,L2,easy,first_time,false,Geographical features of Andhra Pradesh - brief account
+APPSC-G1-2020-P2-011b,APPSC,2020,paper2,11b,Geography,MT-GEOG-M2-11-008,STATIC,L2,easy,first_time,false,Drainage system of Andhra Pradesh - brief account
+APPSC-G1-2020-P2-012a,APPSC,2020,paper2,12a,Geography,MT-GEOG-M2-13-001,ANALYTICAL,L3,medium,first_time,false,Components and impacts of Green Revolution in India
+APPSC-G1-2020-P2-012b,APPSC,2020,paper2,12b,Geography,MT-GEOG-M2-13-001,STATIC,L2,medium,first_time,false,Fisheries management and development in India
+APPSC-G1-2020-P2-013a,APPSC,2020,paper2,13a,Geography,MT-GEOG-M2-13-002,STATIC,L2,medium,first_time,false,Rural and urban population of AP in light of Census 2011
+APPSC-G1-2020-P2-013b,APPSC,2020,paper2,13b,Geography,MT-GEOG-M2-13-002,STATIC,L2,medium,first_time,false,Tribal population of Andhra Pradesh in context of Census 2011
+APPSC-G1-2020-P2-014a,APPSC,2020,paper2,14a,Geography,MT-GEOG-M2-14-003,ANALYTICAL,L3,medium,true,false,Project Tiger evaluation in light of Tiger Estimation Report 2018
+APPSC-G1-2020-P2-014b,APPSC,2020,paper2,14b,Geography,MT-GEOG-M2-14-004,STATIC,L2,easy,first_time,false,Flora and fauna of National Parks in Andhra Pradesh
+APPSC-G1-2020-P2-015a,APPSC,2020,paper2,15a,Geography,MT-GEOG-M2-13-003,STATIC,L2,easy,first_time,false,Factors responsible for environmental pollution - brief account
+APPSC-G1-2020-P2-015b,APPSC,2020,paper2,15b,Geography,MT-GEOG-M2-13-003,ANALYTICAL,L2,easy,first_time,false,Concept and importance of Sustainable Development
+APPSC-G1-2023-P2-001a,APPSC,2023,paper2,1a,History,MT-HIST-M2-2-003,ANALYTICAL,L3,hard,repeat_topic,false,Survival and continuity of Harappan culture in present times
+APPSC-G1-2023-P2-001b,APPSC,2023,paper2,1b,History,MT-HIST-M2-3-016,ANALYTICAL,L3,hard,first_time,false,Socio-religious life and administration via Chinese travellers Fa-Hien Hiuen-Tsang
+APPSC-G1-2023-P2-002a,APPSC,2023,paper2,2a,History,MT-HIST-M2-3-024,ANALYTICAL,L3,medium,repeat_topic,false,Chola village administration and autonomy via Uttaramerur inscriptions
+APPSC-G1-2023-P2-002b,APPSC,2023,paper2,2b,History,MT-HIST-M2-4-003,ANALYTICAL,L3,medium,first_time,false,Alauddin Khiljis market regulations and their impact
+APPSC-G1-2023-P2-003a,APPSC,2023,paper2,3a,History,MT-HIST-M2-4-028,ANALYTICAL,L3,medium,repeat_topic,false,Mughal architecture features and Hindu elements influence on it
+APPSC-G1-2023-P2-003b,APPSC,2023,paper2,3b,History,MT-HIST-M2-4-031,ANALYTICAL,L4,hard,repeat_topic,false,Shivaji state as egalitarian and welfare state - examine
+APPSC-G1-2023-P2-004a,APPSC,2023,paper2,4a,History,MT-HIST-M2-5-005,ANALYTICAL,L3,medium,first_time,false,British land revenue systems and impact on Indian economy
+APPSC-G1-2023-P2-004b,APPSC,2023,paper2,4b,History,MT-HIST-M2-5-013,ANALYTICAL,L3,medium,first_time,false,Muslim socio-religious reforms 19th century and Sayyid Ahmad Khan contributions
+APPSC-G1-2023-P2-005a,APPSC,2023,paper2,5a,History,MT-HIST-M2-5-022,ANALYTICAL,L3,medium,repeat_topic,false,Factors leading to peasant movement and impact on national movement
+APPSC-G1-2023-P2-005b,APPSC,2023,paper2,5b,History,MT-HIST-M2-5-023,ANALYTICAL,L4,hard,repeat_topic,false,Communalism helping British perpetuate control - communalist traits impact
+APPSC-G1-2023-P2-006a,APPSC,2023,paper2,6a,AP History,MT-AP_HIST-M2-6-001,ANALYTICAL,L2,medium,repeat_topic,false,Socio-religious conditions during Satavahana period with women prominence
+APPSC-G1-2023-P2-006b,APPSC,2023,paper2,6b,AP History,MT-AP_HIST-M2-6-006,ANALYTICAL,L3,hard,repeat_topic,false,Eastern Chalukyas socio-religious restructuring via immigration caste mobility
+APPSC-G1-2023-P2-007a,APPSC,2023,paper2,7a,AP History,MT-AP_HIST-M2-7-004,ANALYTICAL,L3,medium,first_time,false,Vijayanagara socio-religious cultural life via foreign travellers Conti Paes Barbosa
+APPSC-G1-2023-P2-007b,APPSC,2023,paper2,7b,AP History,MT-AP_HIST-M2-7-002,ANALYTICAL,L2,medium,first_time,false,Reddi kingdoms socio-cultural religious conditions and Telugu literature
+APPSC-G1-2023-P2-008a,APPSC,2023,paper2,8a,AP History,MT-AP_HIST-M2-8-005,ANALYTICAL,L2,medium,first_time,false,Gurajada Apparao social reform contribution through literature
+APPSC-G1-2023-P2-008a2,APPSC,2023,paper2,8a-ii,AP History,MT-AP_HIST-M2-7-007,ANALYTICAL,L2,medium,first_time,false,Gidugu Ramamurthy efforts to strengthen Vyavaharika Bhasha movement
+APPSC-G1-2023-P2-008b,APPSC,2023,paper2,8b,AP History,MT-AP_HIST-M2-8-002,ANALYTICAL,L2,medium,first_time,false,East India Company officials Thomas Munro Arthur Cotton CP Brown contributions
+APPSC-G1-2023-P2-009a,APPSC,2023,paper2,9a,AP History,MT-AP_HIST-M2-9-003,ANALYTICAL,L3,medium,first_time,false,Alluri Sitarama Raju as leader of Rampa Rebellion
+APPSC-G1-2023-P2-009b,APPSC,2023,paper2,9b,AP History,MT-AP_HIST-M2-9-004,ANALYTICAL,L3,hard,first_time,false,Telugu Dalit literature evolution and Dalit poets contributions
+APPSC-G1-2023-P2-010a,APPSC,2023,paper2,10a,AP History,MT-AP_HIST-M2-10-005,ANALYTICAL,L3,hard,repeat_topic,false,AP Reorganization Act 2014 inconsistencies on assets and liabilities
+APPSC-G1-2023-P2-010b,APPSC,2023,paper2,10b,AP History,MT-AP_HIST-M2-10-005,ANALYTICAL,L3,hard,repeat_topic,false,Schedule Eleven principles of AP Act 2014 on river management boards
+APPSC-G1-2023-P2-011a,APPSC,2023,paper2,11a,Geography,MT-GEOG-M2-11-005,ANALYTICAL,L2,medium,first_time,false,Climatic controls and their influence on Indias climate
+APPSC-G1-2023-P2-011b,APPSC,2023,paper2,11b,Geography,MT-GEOG-M2-11-008,STATIC,L2,medium,repeat_topic,false,Characteristics of black and alluvial soils of Andhra Pradesh
+APPSC-G1-2023-P2-012a,APPSC,2023,paper2,12a,Geography,MT-GEOG-M2-13-001,ANALYTICAL,L2,medium,first_time,true,Sagarmala Project objectives key features and importance
+APPSC-G1-2023-P2-012b,APPSC,2023,paper2,12b,Geography,MT-GEOG-M2-13-001,ANALYTICAL,L3,medium,first_time,false,Role of sea-ports in economic development of Andhra Pradesh
+APPSC-G1-2023-P2-013a,APPSC,2023,paper2,13a,Geography,MT-GEOG-M2-13-002,ANALYTICAL,L2,medium,first_time,false,Demographic dividend in the Indian context
+APPSC-G1-2023-P2-013b,APPSC,2023,paper2,13b,Geography,MT-GEOG-M2-13-002,STATIC,L2,medium,first_time,false,Types of rural settlements factors and settlement patterns in India
+APPSC-G1-2023-P2-014a,APPSC,2023,paper2,14a,Geography,MT-GEOG-M2-14-003,ANALYTICAL,L2,medium,first_time,false,Various forest conservation strategies in India
+APPSC-G1-2023-P2-014b,APPSC,2023,paper2,14b,Geography,MT-GEOG-M2-14-004,ANALYTICAL,L2,medium,first_time,false,In situ conservation strategies of biodiversity in Andhra Pradesh
+APPSC-G1-2023-P2-015a,APPSC,2023,paper2,15a,Geography,MT-GEOG-M2-13-003,ANALYTICAL,L3,medium,first_time,false,Environment Impact Assessment meaning evaluation and suggestions
+APPSC-G1-2023-P2-015b,APPSC,2023,paper2,15b,Geography,MT-GEOG-M2-13-003,STATIC,L2,medium,first_time,false,Drought definition types and drought prone areas in India
+APPSC-G1-2025-P2-001a,APPSC,2025,paper2,1a,History,MT-HIST-M2-2-003,ANALYTICAL,L2,medium,repeat_topic,false,Origin and expansion of Indus Valley Civilization
+APPSC-G1-2025-P2-001b,APPSC,2025,paper2,1b,History,MT-HIST-M2-2-016,ANALYTICAL,L2,medium,repeat_topic,false,Teachings of Buddha and Mahavira - brief analysis
+APPSC-G1-2025-P2-002a,APPSC,2025,paper2,2a,History,MT-HIST-M2-3-023,ANALYTICAL,L2,medium,first_time,false,Chalukya rulers of Kalyani contributions in sculpture architecture literature
+APPSC-G1-2025-P2-002b,APPSC,2025,paper2,2b,History,MT-HIST-M2-4-030,ANALYTICAL,L3,medium,repeat_topic,false,Sufi movement characteristics and impact on Indian culture
+APPSC-G1-2025-P2-003a,APPSC,2025,paper2,3a,History,MT-HIST-M2-5-001,ANALYTICAL,L2,medium,first_time,false,East India Company establishment and early operations in India
+APPSC-G1-2025-P2-003b,APPSC,2025,paper2,3b,History,MT-HIST-M2-5-012,ANALYTICAL,L3,medium,first_time,false,Impact of Christian missionaries on Indian society and culture
+APPSC-G1-2025-P2-004a,APPSC,2025,paper2,4a,History,MT-HIST-M2-5-005,ANALYTICAL,L3,medium,repeat_topic,false,Permanent Settlement and its impact on Indian society
+APPSC-G1-2025-P2-004b,APPSC,2025,paper2,4b,History,MT-HIST-M2-5-018,ANALYTICAL,L3,medium,first_time,false,Safety valve theory in context of Indian National Congress
+APPSC-G1-2025-P2-005a,APPSC,2025,paper2,5a,History,MT-HIST-M2-5-019,ANALYTICAL,L2,medium,repeat_topic,false,Moderate leaders of Congress 1885 to 1905 role and contributions
+APPSC-G1-2025-P2-005b,APPSC,2025,paper2,5b,History,MT-HIST-M2-5-021,ANALYTICAL,L2,medium,repeat_topic,false,Major movements led by Mahatma Gandhi between 1920 and 1947
+APPSC-G1-2025-P2-006a,APPSC,2025,paper2,6a,AP History,MT-AP_HIST-M2-10-005,ANALYTICAL,L4,very_hard,repeat_topic,true,Impact of losing Hyderabad as capital on post-bifurcation AP
+APPSC-G1-2025-P2-006b,APPSC,2025,paper2,6b,AP History,MT-AP_HIST-M2-10-005,ANALYTICAL,L4,very_hard,repeat_topic,true,Vision behind Amaravati capital and financial implications of planning
+APPSC-G1-2025-P2-007a,APPSC,2025,paper2,7a,AP History,MT-AP_HIST-M2-6-001,ANALYTICAL,L2,medium,repeat_topic,false,Origins of Andhra people and Andhra language - various stories
+APPSC-G1-2025-P2-007b,APPSC,2025,paper2,7b,AP History,MT-AP_HIST-M2-6-001,ANALYTICAL,L3,medium,first_time,false,Trade routes contributing to exchange of Buddhist ideas in ancient Andhra
+APPSC-G1-2025-P2-008a,APPSC,2025,paper2,8a,AP History,MT-AP_HIST-M2-7-001,ANALYTICAL,L2,medium,first_time,false,Growth of various Saivite sects during Kakatiya rule
+APPSC-G1-2025-P2-008b,APPSC,2025,paper2,8b,AP History,MT-AP_HIST-M2-7-001,ANALYTICAL,L2,medium,first_time,false,Significance of Warangal Fort complex as historical monument
+APPSC-G1-2025-P2-009a,APPSC,2025,paper2,9a,AP History,MT-AP_HIST-M2-8-003,ANALYTICAL,L2,medium,repeat_topic,false,Role of missionaries in growth and spread of education in Andhra
+APPSC-G1-2025-P2-009b,APPSC,2025,paper2,9b,AP History,MT-AP_HIST-M2-8-005,ANALYTICAL,L3,medium,repeat_topic,false,Factors for social awakening in Andhra in second half of 19th century
+APPSC-G1-2025-P2-010a,APPSC,2025,paper2,10a,AP History,MT-AP_HIST-M2-10-003,ANALYTICAL,L2,medium,repeat_topic,false,Provisions of Gentlemens Agreement 1956 and Telangana apprehensions
+APPSC-G1-2025-P2-010b,APPSC,2025,paper2,10b,AP History,MT-AP_HIST-M2-10-004,ANALYTICAL,L3,medium,first_time,false,Students role in 1969 Telangana agitation raising major issues
+APPSC-G1-2025-P2-011a,APPSC,2025,paper2,11a,Geography,MT-GEOG-M2-11-007,STATIC,L2,easy,first_time,false,Physical features of India and AP major landforms and geographical characteristics
+APPSC-G1-2025-P2-011b,APPSC,2025,paper2,11b,Geography,MT-GEOG-M2-11-008,ANALYTICAL,L2,medium,repeat_topic,false,Major landforms of AP - Coastal Plains Eastern Ghats Deccan Plateau
+APPSC-G1-2025-P2-012a,APPSC,2025,paper2,12a,Geography,MT-GEOG-M2-13-001,ANALYTICAL,L4,hard,first_time,true,AP agriculture background and climate change impact on key inputs
+APPSC-G1-2025-P2-012b,APPSC,2025,paper2,12b,Geography,MT-GEOG-M2-13-001,STATIC,L2,medium,first_time,false,Industrial importance and major manufacturing sectors of Andhra Pradesh
+APPSC-G1-2025-P2-013a,APPSC,2025,paper2,13a,Geography,MT-GEOG-M2-13-002,ANALYTICAL,L2,medium,repeat_topic,false,Spatial patterns of population distribution and urbanisation in AP
+APPSC-G1-2025-P2-013b,APPSC,2025,paper2,13b,Geography,MT-GEOG-M2-13-002,ANALYTICAL,L2,medium,repeat_topic,false,SCs STs religious communities composition and distribution in AP Census 2011
+APPSC-G1-2025-P2-014a,APPSC,2025,paper2,14a,Geography,MT-GEOG-M2-14-003,ANALYTICAL,L2,medium,repeat_topic,false,Wildlife conservation and biodiversity key aspects in Andhra Pradesh
+APPSC-G1-2025-P2-014b,APPSC,2025,paper2,14b,Geography,MT-GEOG-M2-13-003,ANALYTICAL,L3,medium,first_time,false,AP vulnerability to cyclones and floods causes patterns and impacts
+APPSC-G1-2025-P2-015a,APPSC,2025,paper2,15a,Geography,MT-GEOG-M2-13-003,ANALYTICAL,L3,hard,first_time,false,Disaster vulnerability of Rayalaseema droughts and socio-economic consequences
+APPSC-G1-2025-P2-015b,APPSC,2025,paper2,15b,Geography,MT-GEOG-M2-13-003,ANALYTICAL,L3,medium,first_time,true,AP Pollution Control Board role in post-disaster pollution management

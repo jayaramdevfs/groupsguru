@@ -34,7 +34,6 @@ export default function AnimatedInput({
   required,
 }: AnimatedInputProps) {
   const [focused, setFocused] = useState(false);
-  const isPassword = type === "password";
 
   return (
     <div className="flex flex-col gap-2 w-full">
@@ -59,7 +58,8 @@ export default function AnimatedInput({
             name={name}
             value={value}
             required={required}
-            autoComplete="off"
+            autoComplete="on"
+            placeholder=" "
             onChange={(e) => onChange(e.target.value)}
             onFocus={() => {
               setFocused(true);
@@ -69,27 +69,11 @@ export default function AnimatedInput({
               setFocused(false);
               onBlur?.();
             }}
-            className="absolute inset-0 px-6 bg-[#0f071a] outline-none text-transparent caret-[#EC4899] font-semibold text-lg"
+            className="floating-input peer w-full h-full px-6 pt-4 bg-transparent outline-none text-white caret-[#EC4899] font-semibold text-lg"
           />
-
-          <div className="absolute left-6 right-6 flex items-center font-semibold text-lg text-white pointer-events-none">
-            {(value || "").split("").map((char, index) => (
-              <motion.span
-                key={index}
-                initial={{ scale: 0, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={spring}
-                style={{
-                  transformOrigin: "center",
-                }}
-              >
-                {isPassword ? "•" : char}
-              </motion.span>
-            ))}
-          </div>
-
-          {!value && (
-            <span className="absolute left-6 text-purple-300/60 font-semibold text-lg pointer-events-none">
+          {/* Floating label — uses pure CSS peer selectors for autofill detection */}
+          {!label && (
+            <span className="floating-label absolute left-6 top-1/2 -translate-y-1/2 text-lg text-purple-300/60 transition-all duration-200 pointer-events-none font-semibold peer-focus:top-1.5 peer-focus:translate-y-0 peer-focus:text-[11px] peer-focus:text-purple-400">
               {placeholder}
             </span>
           )}

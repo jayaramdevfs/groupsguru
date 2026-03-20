@@ -1,6 +1,6 @@
 # GroupsGuru LMS — Master Sprint Plan (Vertical Slices)
 
-**Updated**: 2026-03-20
+**Updated**: 2026-03-21
 **Architecture**: Vertical Slicing — each sprint delivers Backend + Frontend + Mobile together
 
 ---
@@ -48,19 +48,19 @@ C:\LMS PLATFORM\Lms\
 | 4 | Section (L2) | ✅ Done | ✅ Done | ✅ Done |
 | 5 | Topic (L3) | ✅ Done | ✅ Done | ✅ Done |
 | 6 | MicroTopic (L4) | ✅ Done | ✅ Done | ✅ Done |
-| 7 | Registry Data Migration | 📅 Planned | 📅 Planned | 📅 Planned |
-| 8 | Intelligence Engine | 📅 Planned | 📅 Planned | 📅 Planned |
+| 7 | Registry Data Migration | ✅ Done | ✅ Done | ✅ Done |
+| 8 | Intelligence Engine | ✅ Done | ✅ Done | ✅ Done |
 | 9 | Question Bank | 📅 Planned | 📅 Planned | 📅 Planned |
 | 10 | Exam Structure | 📅 Planned | 📅 Planned | 📅 Planned |
 | 11 | Student Exam Flow | 📅 Planned | 📅 Planned | 📅 Planned |
 | 12 | Results & Analytics | 📅 Planned | 📅 Planned | 📅 Planned |
 | 13 | Production Readiness | 📅 Planned | 📅 Planned | 📅 Planned |
 
-**Resume Point:** Start Sprint 7 (Data Migration)
+**Resume Point:** Start Sprint 9 (Question Bank)
 
 ### Execution Order:
 ```
-Sprint 7 (Data Migration) -> ... -> Sprint 13
+Sprint 8 (Intelligence Engine) -> ... -> Sprint 13
 ```
 
 ---
@@ -352,7 +352,7 @@ export interface Section {
 
 ---
 
-## Sprint 7 — Registry Data Migration 📅 FULL VERTICAL SLICE
+## Sprint 7 — Registry Data Migration ✅ DONE (Backend + Frontend + Mobile)
 
 > Loads all 875 micro-topics from Groups Guru registry CSVs into the database. Frontend/mobile get data display enhancements.
 
@@ -404,7 +404,7 @@ questions/             → the XML file(s)
 
 ---
 
-## Sprint 8 — Intelligence Engine (PYQ Analysis + Prediction Engine) 📅 FULL VERTICAL SLICE
+## Sprint 8 — Intelligence Engine (PYQ Analysis + Prediction Engine) 📅 FULL VERTICAL SLICE ✅ Done
 
 > Creates PYQ analysis and prediction score entities, loads historical data, implements the prediction formula, and builds the admin intelligence dashboard.
 
@@ -493,7 +493,26 @@ Methods: `recalculateAllScores()`, `getTopPredictions(subject, limit)`, `getPred
 - Shows top predictions by subject with priority badges
 - FlatList with prediction cards
 
-**Verification:** `SELECT COUNT(*) FROM prediction_score` = **162**, `SELECT COUNT(*) FROM pyq_analysis` = **412**. `recalculateAllScores()` output matches original CSV.
+**Verification:** `SELECT COUNT(*) FROM prediction_score` = **162**, `SELECT COUNT(*) FROM pyq_analysis` = **410**. `recalculateAllScores()` output matches original CSV.
+
+### Post-Sprint 8 Bug Fixes (2026-03-21):
+
+**8f. Backend: `IntelligenceDataLoader` crash fix:**
+- `g2-pyq-analysis.csv` contains `"archive"` in the `year` column for some rows (archive PYQs with no specific year)
+- `Integer.parseInt("archive")` threw `NumberFormatException`, crashing the entire backend at startup
+- **Fix:** Wrapped year parsing in try-catch; sets `year = null` for non-numeric values
+- File: `IntelligenceDataLoader.java:120`
+
+**8g. Frontend: Modal dropdown clipping fix:**
+- `Modal.tsx` had `overflow-hidden` on the modal content wrapper
+- This clipped the `CustomSelect` dropdown (z-index doesn't escape `overflow-hidden` parents)
+- **Fix:** Removed `overflow-hidden` from modal wrapper, set body to `overflow-visible`
+
+**8h. Frontend: Login placeholder overlap fix:**
+- Browser autofill placed saved credentials over the placeholder text (both visible simultaneously)
+- **Fix:** Replaced native `placeholder` with a floating label pattern in `AnimatedInput.tsx`
+- Uses pure CSS `:not(:placeholder-shown)` and `:-webkit-autofill` sibling selectors to detect both typed and autofilled values
+- Label floats above input text; no overlap regardless of autofill state
 
 ---
 

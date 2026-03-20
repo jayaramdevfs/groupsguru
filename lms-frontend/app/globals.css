@@ -35,3 +35,12 @@ input:-internal-autofill-selected {
     background-color: #140a24 !important;
     color: white !important;
 }
+
+/* Floating label: float up when input has content (typed or autofilled) */
+.floating-input:not(:placeholder-shown) ~ .floating-label,
+.floating-input:-webkit-autofill ~ .floating-label {
+    top: 6px !important;
+    transform: translateY(0) !important;
+    font-size: 11px !important;
+    color: rgb(192 132 252) !important; /* purple-400 */
+}

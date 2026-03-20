@@ -127,7 +127,7 @@ const MicroTopicScreen = () => {
 
       {loading ? (
         <View style={styles.center}>
-          <ActivityIndicator size="large" color="#06b6d4" />
+          <ActivityIndicator size="large" color="#9333ea" />
         </View>
       ) : filteredTopics.length === 0 ? (
         <View style={styles.center}>
@@ -161,15 +161,15 @@ const styles = StyleSheet.create({
   searchContainer: { paddingHorizontal: 24, paddingBottom: 10 },
   searchInput: { backgroundColor: "rgba(255,255,255,0.05)", borderRadius: 12, padding: 14, color: "#fff", fontSize: 16, borderWidth: 1, borderColor: "rgba(255,255,255,0.1)" },
   list: { padding: 24, paddingTop: 10 },
-  card: { backgroundColor: "rgba(6, 182, 212, 0.05)", borderRadius: 24, padding: 16, marginBottom: 20, flexDirection: "row", alignItems: "flex-start", borderWidth: 1, borderColor: "rgba(6, 182, 212, 0.2)" },
-  iconContainer: { width: 48, height: 48, borderRadius: 12, backgroundColor: "rgba(6, 182, 212, 0.1)", justifyContent: "center", alignItems: "center", borderWidth: 1, borderColor: "rgba(6, 182, 212, 0.3)" },
+  card: { backgroundColor: "rgba(147, 51, 234, 0.05)", borderRadius: 24, padding: 16, marginBottom: 20, flexDirection: "row", alignItems: "flex-start", borderWidth: 1, borderColor: "rgba(147, 51, 234, 0.2)" },
+  iconContainer: { width: 48, height: 48, borderRadius: 12, backgroundColor: "rgba(147, 51, 234, 0.1)", justifyContent: "center", alignItems: "center", borderWidth: 1, borderColor: "rgba(147, 51, 234, 0.3)" },
   iconText: { fontSize: 24 },
   content: { flex: 1, marginLeft: 16 },
   badges: { flexDirection: "row", flexWrap: "wrap", gap: 6, marginBottom: 8 },
   badge: { backgroundColor: "rgba(168, 85, 247, 0.15)", paddingHorizontal: 8, paddingVertical: 3, borderRadius: 6, borderWidth: 1, borderColor: "rgba(168, 85, 247, 0.3)" },
   badgeText: { color: "#c084fc", fontSize: 10, fontWeight: "700" },
-  idBadge: { backgroundColor: "rgba(6, 182, 212, 0.15)", borderColor: "rgba(6, 182, 212, 0.3)" },
-  idBadgeText: { color: "#22d3ee", fontSize: 10, fontWeight: "bold" },
+  idBadge: { backgroundColor: "rgba(147, 51, 234, 0.15)", borderColor: "rgba(147, 51, 234, 0.3)" },
+  idBadgeText: { color: "#d8b4fe", fontSize: 10, fontWeight: "bold" },
   paperBadge: { backgroundColor: "rgba(59, 130, 246, 0.15)", borderColor: "rgba(59, 130, 246, 0.3)" },
   paperBadgeText: { color: "#60a5fa", fontSize: 10, fontWeight: "bold" },
   name: { fontSize: 18, fontWeight: "700", color: "#FFFFFF", marginBottom: 6 },
