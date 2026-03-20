@@ -45,7 +45,7 @@ C:\LMS PLATFORM\Lms\
 | 1 | Authentication | ✅ Done | ✅ Done | ✅ Done |
 | 2 | Category (L0) | ✅ Done | ✅ Done | ✅ Done |
 | 3 | SubCategory (L1) | ✅ Done | ✅ Done | ✅ Done |
-| 4 | Section (L2) | ✅ Done | 🚧 In Progress | ❌ Not Done |
+| 4 | Section (L2) | ✅ Done | ✅ Done | ✅ Done |
 | 5 | Topic (L3) | 📅 Planned | 📅 Planned | 📅 Planned |
 | 6 | MicroTopic (L4) | 📅 Planned | 📅 Planned | 📅 Planned |
 | 7 | Registry Data Migration | 📅 Planned | 📅 Planned | 📅 Planned |
@@ -56,7 +56,12 @@ C:\LMS PLATFORM\Lms\
 | 12 | Results & Analytics | 📅 Planned | 📅 Planned | 📅 Planned |
 | 13 | Production Readiness | 📅 Planned | 📅 Planned | 📅 Planned |
 
-**Resume Point:** Complete Sprint 3 (mobile) + Sprint 4 (frontend + mobile), then proceed with Sprint 5 onwards as full vertical slices.
+**Resume Point:** Start Sprint 5 (all 3 platforms).
+
+### Execution Order:
+```
+Sprint 5 (all 3 platforms) -> Sprint 6 -> ... -> Sprint 13
+```
 
 ---
 
@@ -142,19 +147,24 @@ All user-facing content supports English + Telugu.
 
 ---
 
-## Sprint 2 — Category Management (L0) ✅ DONE (All Platforms)
+## Sprint 2 — Category Management (L0) ✅ DONE (Backend + Frontend + Mobile)
 
 **Backend:** `Category` entity + Repository + Service + Controller. Public GET + Admin CRUD.
-**Frontend:** Admin category management page + Student category browse page
-**Mobile:** `CategoryScreen` with FlatList, pull-to-refresh, image/icon support
+**Frontend:** Admin category management page + Student category browse page.
+**Closure Date:** March 20, 2026
+**Mobile:** Sprint 2 mobile blockers are resolved:
+- AdminDashboard now has navigation cards to CategoryScreen.
+- StudentDashboard navigates to CategoryScreen via Exam Categories.
+- Category cards navigate onward (no dead-end behavior).
+**Sprint 2 Closure Statement:** Category (L0) is fully functional across Backend, Frontend, and Mobile.
 
 ---
 
-## Sprint 3 — SubCategory Management (L1) ⚠️ MOBILE CATCH-UP NEEDED
+## Sprint 3 — SubCategory Management (L1) ✅ DONE (Backend + Frontend + Mobile)
 
 **Backend:** ✅ Done — `SubCategory` entity + full CRUD
 **Frontend:** ✅ Done — Admin subcategory management + Student browse
-**Mobile:** ❌ **TO DO**
+**Mobile:** ✅ Done
 
 ### Mobile Sprint 3 Deliverables:
 
@@ -208,11 +218,11 @@ export interface SubCategory {
 
 ---
 
-## Sprint 4 — Section Management (L2) ⚠️ FRONTEND WIP + MOBILE CATCH-UP
+## Sprint 4 — Section Management (L2) ✅ DONE (Backend + Frontend + Mobile)
 
 **Backend:** ✅ Done — `Section` entity + full CRUD
-**Frontend:** 🚧 In Progress — finish admin section management page
-**Mobile:** ❌ **TO DO**
+**Frontend:** ✅ Done — Admin section management + Student browse
+**Mobile:** ✅ Done
 
 ### Frontend Sprint 4 — Finish:
 - Complete `app/admin/sections/page.tsx` — CRUD table with modal forms

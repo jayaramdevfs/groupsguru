@@ -34,7 +34,7 @@ const LoginScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>LMS Mobile Login</Text>
+      <Text style={styles.title}>GroupsGuru</Text>
 
       <TextInput
         style={styles.input}

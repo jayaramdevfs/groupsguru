@@ -1,4 +1,4 @@
-# GroupsGuru — LMS Mobile
+# GroupsGuru — Mobile App
 
 **Version**: Sprint 2 (Category done, SubCategory next)
 **Stack**: React Native 0.84 · React 19 · React Navigation 7 · TypeScript · Axios

@@ -1,6 +1,6 @@
-# GroupsGuru — LMS Frontend
+# GroupsGuru — Web Frontend
 
-**Version**: Sprint 4 (In Progress)
+**Version**: Sprint 4 (Complete)
 **Stack**: Next.js 16 · React 19 · TypeScript · Tailwind CSS 4 · Framer Motion · GSAP
 **Updated**: 2026-03-20
 
@@ -191,7 +191,7 @@ import { Multilang } from "@/components/ui/Multilang";
 | Sprint 1 | Auth UI (Login/Register) | ✅ Done |
 | Sprint 2 | Category Management UI (L0) | ✅ Done |
 | Sprint 3 | SubCategory Management UI (L1) | ✅ Done |
-| Sprint 4 | Section Management UI (L2) | 🚧 In Progress |
+| Sprint 4 | Section Management UI (L2) + Student Drill-Down | ✅ Done |
 | Sprint 5–12 | See [`../SPRINTS.md`](../SPRINTS.md) | 📅 |
 
 ---

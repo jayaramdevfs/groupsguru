@@ -16,3 +16,12 @@ export interface SubCategory {
   syllabusCode: string;
   categoryId: number;
 }
+export interface Section {
+  id: number;
+  name: string;
+  nameTe: string;
+  description: string;
+  descriptionTe: string;
+  sectionCode: string;
+  subCategoryId: number;
+}

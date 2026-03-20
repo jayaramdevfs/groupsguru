@@ -1,18 +1,75 @@
 import React from "react";
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet, SafeAreaView, StatusBar } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { useAuth } from "../context/AuthContext";
+import { useLanguage } from "../context/LanguageContext";
+import { LanguageToggle } from "../components/LanguageToggle";
+
+type RootStackParamList = {
+  StudentDashboard: undefined;
+  Category: undefined;
+};
+
+type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
 
 const StudentDashboard = () => {
-  const { logout } = useAuth();
+  const { logout, user } = useAuth();
+  const { language } = useLanguage();
+  const navigation = useNavigation<NavigationProp>();
+  const name = user?.email?.split("@")[0] ?? "Student";
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Student Dashboard</Text>
+    <SafeAreaView style={styles.container}>
+      <StatusBar barStyle="light-content" />
+      <View style={styles.header}>
+        <View>
+          <Text style={styles.subtitle}>
+            {language === "en" ? "Student Space" : "TE Student Space"}
+          </Text>
+          <Text style={styles.title}>
+            {language === "en" ? `Welcome, ${name}` : `TE Welcome, ${name}`}
+          </Text>
+        </View>
+        <LanguageToggle />
+      </View>
 
-      <TouchableOpacity style={styles.logoutButton} onPress={logout}>
-        <Text style={styles.buttonText}>Logout</Text>
-      </TouchableOpacity>
-    </View>
+      <View style={styles.grid}>
+        <TouchableOpacity
+          activeOpacity={0.8}
+          style={styles.navCard}
+          onPress={() => navigation.navigate("Category")}
+        >
+          <Text style={styles.cardTitle}>
+            {language === "en" ? "Exam Categories" : "TE Exam Categories"}
+          </Text>
+          <Text style={styles.cardDesc}>
+            {language === "en"
+              ? "Start your preparation path"
+              : "TE Start your preparation path"}
+          </Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity activeOpacity={0.8} style={[styles.navCard, styles.disabledCard]}>
+          <Text style={styles.cardTitle}>
+            {language === "en" ? "My Progress" : "TE My Progress"}
+          </Text>
+          <Text style={styles.cardDesc}>
+            {language === "en"
+              ? "Progress analytics coming soon"
+              : "TE Progress analytics coming soon"}
+          </Text>
+        </TouchableOpacity>
+      </View>
+
+      <View style={styles.footer}>
+        <TouchableOpacity style={styles.logoutButton} onPress={logout}>
+          <Text style={styles.buttonText}>
+            {language === "en" ? "Logout" : "TE Logout"}
+          </Text>
+        </TouchableOpacity>
+      </View>
+    </SafeAreaView>
   );
 };
 
@@ -22,21 +79,60 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#0f051d",
-    justifyContent: "center",
-    alignItems: "center",
     padding: 24,
   },
+  header: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  subtitle: {
+    fontSize: 14,
+    color: "rgba(255,255,255,0.6)",
+    fontWeight: "700",
+    textTransform: "uppercase",
+    letterSpacing: 1,
+  },
   title: {
-    fontSize: 24,
+    fontSize: 28,
     fontWeight: "800",
     color: "#FFFFFF",
-    marginBottom: 40,
+    marginTop: 4,
+  },
+  grid: {
+    marginTop: 24,
+    gap: 14,
+  },
+  navCard: {
+    backgroundColor: "rgba(147, 51, 234, 0.08)",
+    borderRadius: 24,
+    borderWidth: 1,
+    borderColor: "rgba(147, 51, 234, 0.2)",
+    padding: 20,
+  },
+  disabledCard: {
+    opacity: 0.7,
+  },
+  cardTitle: {
+    color: "#FFFFFF",
+    fontWeight: "800",
+    fontSize: 20,
+  },
+  cardDesc: {
+    color: "rgba(255,255,255,0.65)",
+    marginTop: 8,
+    fontSize: 14,
+    fontWeight: "600",
+    lineHeight: 20,
+  },
+  footer: {
+    marginTop: "auto",
   },
   logoutButton: {
     backgroundColor: "#9333EA",
     paddingVertical: 14,
-    paddingHorizontal: 40,
     borderRadius: 16,
+    alignItems: "center",
   },
   buttonText: {
     color: "#FFFFFF",

@@ -127,7 +127,7 @@ export default function DesignPreview() {
       >
         <div className="text-center space-y-6">
           <h1 className="text-5xl font-extrabold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            PREMIUM LMS
+            GROUPSGURU
           </h1>
           <p className="text-purple-200/80 text-lg font-bold">
             Refined Interactive System

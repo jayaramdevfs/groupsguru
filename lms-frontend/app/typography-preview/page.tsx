@@ -20,7 +20,7 @@ export default function TypographyPreview() {
         </h2>
         <div className={`${inter.className} space-y-2`}>
           <h1 className="text-4xl font-extrabold">
-            PREMIUM LMS PLATFORM
+            GROUPSGURU
           </h1>
           <p className="text-lg font-semibold">
             Smooth, modern, clean interface for enterprise systems.
@@ -35,7 +35,7 @@ export default function TypographyPreview() {
         </h2>
         <div className={`${robotoMono.className} space-y-2`}>
           <h1 className="text-4xl font-bold">
-            PREMIUM LMS PLATFORM
+            GROUPSGURU
           </h1>
           <p className="text-lg">
             Clean technical terminal-like appearance.
@@ -50,7 +50,7 @@ export default function TypographyPreview() {
         </h2>
         <div className="space-y-2 font-semibold">
           <h1 className="text-4xl">
-            PREMIUM LMS PLATFORM
+            GROUPSGURU
           </h1>
           <p className="text-lg">
             Apple-style clean modern typography feel.
