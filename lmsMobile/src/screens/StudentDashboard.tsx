@@ -11,6 +11,7 @@ import { useEffect, useState } from "react";
 type RootStackParamList = {
   StudentDashboard: undefined;
   Category: undefined;
+  ExamList: undefined;
 };
 
 type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
@@ -70,14 +71,29 @@ const StudentDashboard = () => {
           </Text>
         </TouchableOpacity>
 
+        <TouchableOpacity 
+          activeOpacity={0.8} 
+          style={styles.navCard}
+          onPress={() => navigation.navigate("ExamList")}
+        >
+          <Text style={styles.cardTitle}>
+            {language === "en" ? "Practice Exams" : "ప్రాక్టీస్ పరీక్షలు"}
+          </Text>
+          <Text style={styles.cardDesc}>
+            {language === "en"
+              ? "Take topic-wise, section-wise & full-length tests"
+              : "టాపిక్ వారీగా మరియు పూర్తి స్థాయి పరీక్షలు రాయండి"}
+          </Text>
+        </TouchableOpacity>
+
         <TouchableOpacity activeOpacity={0.8} style={[styles.navCard, styles.disabledCard]}>
           <Text style={styles.cardTitle}>
-            {language === "en" ? "My Progress" : "TE My Progress"}
+            {language === "en" ? "My Progress" : "నా ప్రగతి"}
           </Text>
           <Text style={styles.cardDesc}>
             {language === "en"
               ? "Progress analytics coming soon"
-              : "TE Progress analytics coming soon"}
+              : "విశ్లేషణలు త్వరలో అందుబాటులోకి వస్తాయి"}
           </Text>
         </TouchableOpacity>
       </View>

@@ -5,7 +5,8 @@ import React, {
   ReactNode,
   useEffect,
 } from "react";
-import { api } from "../api/api";
+import { api, setAuthToken, getAuthToken } from "../api/api";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 interface User {
   role: "ADMIN" | "STUDENT";
@@ -19,32 +20,37 @@ interface AuthContextType {
   logout: () => Promise<void>;
 }
 
+const TOKEN_KEY = "lms_auth_token";
+
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
 
-  // 🔥 Auto session restore on app start
+  // Auto session restore on app start
   useEffect(() => {
     const restoreSession = async () => {
       try {
-        const response = await api.get("/api/auth/me");
-
-        const backendUser = response.data.data;
-
-        let normalizedRole: "ADMIN" | "STUDENT" = "STUDENT";
-
-        if (backendUser.role === "ADMIN") {
-          normalizedRole = "ADMIN";
+        const savedToken = await AsyncStorage.getItem(TOKEN_KEY);
+        if (!savedToken) {
+          setLoading(false);
+          return;
         }
 
+        setAuthToken(savedToken);
+        const response = await api.get("/api/auth/me");
+        const backendUser = response.data.data;
+
         setUser({
-          role: normalizedRole,
+          role: backendUser.role === "ADMIN" ? "ADMIN" : "STUDENT",
           email: backendUser.email,
         });
       } catch (error) {
-        setUser(null); // Not logged in
+        // Token expired or invalid — clear it
+        setAuthToken(null);
+        await AsyncStorage.removeItem(TOKEN_KEY);
+        setUser(null);
       } finally {
         setLoading(false);
       }
@@ -54,20 +60,18 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   }, []);
 
   const login = async (email: string, password: string) => {
-    await api.post("/api/auth/login", { email, password });
+    const loginResponse = await api.post("/api/auth/login", { email, password });
+
+    // Backend now returns token in response body for mobile clients
+    const token = loginResponse.data.data;
+    setAuthToken(token);
+    await AsyncStorage.setItem(TOKEN_KEY, token);
 
     const response = await api.get("/api/auth/me");
-
     const backendUser = response.data.data;
 
-    let normalizedRole: "ADMIN" | "STUDENT" = "STUDENT";
-
-    if (backendUser.role === "ADMIN") {
-      normalizedRole = "ADMIN";
-    }
-
     setUser({
-      role: normalizedRole,
+      role: backendUser.role === "ADMIN" ? "ADMIN" : "STUDENT",
       email: backendUser.email,
     });
   };
@@ -76,6 +80,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     try {
       await api.post("/api/auth/logout");
     } finally {
+      setAuthToken(null);
+      await AsyncStorage.removeItem(TOKEN_KEY);
       setUser(null);
     }
   };

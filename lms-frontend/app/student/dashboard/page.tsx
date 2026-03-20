@@ -33,11 +33,10 @@ const navCards = [
   {
     title: "Practice Exams",
     description: "Take topic-wise, section-wise, and full-length mock tests.",
-    href: "#",
+    href: "/student/exams",
     icon: "📝",
     gradient: "from-indigo-500 to-blue-500",
     shadow: "shadow-indigo-500/20",
-    comingSoon: true,
   },
 ];
 

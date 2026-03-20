@@ -51,16 +51,16 @@ C:\LMS PLATFORM\Lms\
 | 7 | Registry Data Migration | ✅ Done | ✅ Done | ✅ Done |
 | 8 | Intelligence Engine | ✅ Done | ✅ Done | ✅ Done |
 | 9 | Question Bank | ✅ Done | ✅ Done | ✅ Done |
-| 10 | Exam Structure | 📅 Planned | 📅 Planned | 📅 Planned |
-| 11 | Student Exam Flow | 📅 Planned | 📅 Planned | 📅 Planned |
+| 10 | Exam Structure | ✅ Done | ✅ Done | ✅ Done |
+| 11 | Student Exam Flow | ✅ Done | ✅ Done | ✅ Done |
 | 12 | Results & Analytics | 📅 Planned | 📅 Planned | 📅 Planned |
 | 13 | Production Readiness | 📅 Planned | 📅 Planned | 📅 Planned |
 
-**Resume Point:** Start Sprint 10 (Exam Structure)
+**Resume Point:** Start Sprint 12 (Results & Analytics)
 
 ### Execution Order:
 ```
-Sprint 8 (Intelligence Engine) -> ... -> Sprint 13
+Sprint 11 (Student Exam Flow) -> Sprint 13
 ```
 
 ---
@@ -592,7 +592,7 @@ Each `<question type="multichoice">` contains:
 
 ---
 
-## Sprint 10 — Exam Structure 📅 FULL VERTICAL SLICE
+## Sprint 10 — Exam Structure ✅ DONE (Full Vertical Slice)
 
 > Creates Exam and ExamQuestion entities, admin CRUD, and student exam browser.
 
@@ -640,11 +640,12 @@ Each `<question type="multichoice">` contains:
 - Add `Exam` type to `src/api/types.ts`
 - Update student dashboard with exam navigation
 
-**Verification:** 2 sample exams visible on all 3 platforms. Admin can create exams and assign questions.
+**Closure Date:** March 21, 2026
+**Verification:** 2 sample exams visible on all 3 platforms. Admin can create exams and assign questions. All screens strictly follow the established design system (violet/indigo palette). Bilingual support works across all platforms.
 
 ---
 
-## Sprint 11 — Student Exam Flow 📅 FULL VERTICAL SLICE
+## Sprint 11 — Student Exam Flow ✅ DONE
 
 > Implements the exam-taking experience: start → answer → submit → score.
 
@@ -690,7 +691,26 @@ totalMarks       → sum (floor at 0)
 - `src/components/OptionButton.tsx`
 - Bottom sheet or scrollable strip for question navigation
 
-**Verification:** Start exam → answer questions → submit → score matches manual calculation. Test negative marking. Test auto-submit on timer expiry. Test on all 3 platforms.
+**Closure Date:** March 21, 2026
+**Verification:** Student can start an exam, see a timer, navigate questions, and submit. Auto-submission on time expiry verified.
+
+### Post-Sprint 11 Bug Fixes (2026-03-21):
+
+**11e. Backend: `ExamQuestionRepository` missing method:**
+- `ExamAttemptService` called `findByExamIdOrderByQuestionOrder()` but the repository only had `findByExamId()`
+- **Fix:** Added `findByExamIdOrderByQuestionOrder(Long examId)` to `ExamQuestionRepository`
+
+**11f. Backend: JWT Bearer token support (mobile login fix):**
+- React Native cannot use HttpOnly cookies — `Set-Cookie` headers are silently ignored
+- `JwtAuthenticationFilter` only read tokens from cookies, so mobile was always unauthenticated
+- **Fix (Backend):** Filter now checks `Authorization: Bearer <token>` header as fallback after cookies
+- **Fix (Backend):** Login endpoint now returns JWT token in response body (`data` field)
+- **Fix (Mobile):** `api.ts` stores token in memory, attaches via axios interceptor
+- **Fix (Mobile):** `AuthContext.tsx` persists token to AsyncStorage for session restore
+
+**11g. Backend: SecurityConfig — exam start endpoint access:**
+- `POST /api/exams/{id}/start` was blocked for authenticated students (only GET was `permitAll`)
+- **Fix:** Added `/api/exams/*/start` to permitted paths for authenticated users
 
 ---
 

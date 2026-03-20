@@ -174,3 +174,77 @@ export interface QuestionRequest {
   sprintId: string;
   penalty?: number;
 }
+
+export type ExamType = 'TOPIC_WISE' | 'SECTION_WISE' | 'SUBJECT_WISE' | 'FULL_LENGTH_TEST';
+
+export interface Exam {
+  id: number;
+  name: string;
+  nameTe: string;
+  description?: string;
+  descriptionTe?: string;
+  examType: ExamType;
+  subject?: string;
+  totalQuestions: number;
+  durationMinutes: number;
+  negativeMarking: boolean;
+  penaltyPerWrong: number;
+  marksPerQuestion: number;
+  isActive: boolean;
+  createdAt?: string;
+  updatedAt?: string;
+}
+
+export interface ExamRequest {
+  name: string;
+  nameTe: string;
+  description?: string;
+  descriptionTe?: string;
+  examType: ExamType;
+  subject?: string;
+  totalQuestions?: number;
+  durationMinutes?: number;
+  negativeMarking?: boolean;
+  penaltyPerWrong?: number;
+  marksPerQuestion?: number;
+  isActive?: boolean;
+}
+
+export type AttemptStatus = 'IN_PROGRESS' | 'SUBMITTED' | 'EVALUATED';
+
+export interface ExamAttempt {
+  id: number;
+  examId: number;
+  userId: number;
+  startedAt: string;
+  submittedAt?: string;
+  totalMarks?: number;
+  correctCount?: number;
+  wrongCount?: number;
+  unattemptedCount?: number;
+  status: AttemptStatus;
+}
+
+export interface AttemptAnswer {
+  id: number;
+  attemptId: number;
+  questionId: number;
+  selectedOption?: string;
+  isCorrect?: boolean;
+  marks?: number;
+}
+
+export interface AttemptStartResponse {
+  attemptId: number;
+  examId: number;
+  examName: string;
+  durationMinutes: number;
+  questions: Question[];
+}
+
+export interface SubmitAttemptRequest {
+  answers: {
+    questionId: number;
+    selectedOption: string | null;
+  }[];
+}

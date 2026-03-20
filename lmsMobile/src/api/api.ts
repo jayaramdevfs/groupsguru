@@ -5,10 +5,25 @@ import axios from "axios";
 // For emulator, use 10.0.2.2 instead
 const API_BASE_URL = "http://localhost:8080";
 
+let authToken: string | null = null;
+
+export const setAuthToken = (token: string | null) => {
+  authToken = token;
+};
+
+export const getAuthToken = () => authToken;
+
 export const api = axios.create({
   baseURL: API_BASE_URL,
-  withCredentials: true, // important for HttpOnly cookie
   headers: {
     "Content-Type": "application/json",
   },
+});
+
+// Attach Bearer token to every request (mobile can't use HttpOnly cookies)
+api.interceptors.request.use((config) => {
+  if (authToken) {
+    config.headers.Authorization = `Bearer ${authToken}`;
+  }
+  return config;
 });

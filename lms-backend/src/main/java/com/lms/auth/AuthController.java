@@ -48,7 +48,7 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public ApiResponse<Void> login(
+    public ApiResponse<String> login(
             @Valid @RequestBody LoginRequest request,
             HttpServletResponse response
     ) {
@@ -56,10 +56,11 @@ public class AuthController {
         String token = authService.login(request.getEmail(), request.getPassword());
         response.addHeader(HttpHeaders.SET_COOKIE, buildAccessTokenCookie(token).toString());
 
-        return ApiResponse.<Void>builder()
+        // Return token in body for mobile clients (React Native can't use HttpOnly cookies)
+        return ApiResponse.<String>builder()
                 .success(true)
                 .message("Login successful")
-                .data(null)
+                .data(token)
                 .build();
     }
 
