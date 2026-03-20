@@ -5,6 +5,16 @@
 
 ---
 
+## Mandatory Sprint Closure (MANDATORY)
+
+Every sprint **MUST** conclude with the following steps BEFORE being marked as done:
+1. **Doc Update**: Update `SPRINTS.md` status table.
+2. **Post-Implementation Documentation**: Detail any architectural changes in sprint deliverables if they differ from initial plans.
+3. **Git Commit & Push**: Commit all files with the message: `Sprint X complete: [Key feature]`.
+4. **Final Verification**: Ensure the vertical slice (Backend + Frontend + Mobile) is functional.
+
+---
+
 ## Platform Stack
 
 | Platform | Stack | Port |
@@ -34,7 +44,7 @@ C:\LMS PLATFORM\Lms\
 |--------|---------|---------|----------|--------|
 | 1 | Authentication | ✅ Done | ✅ Done | ✅ Done |
 | 2 | Category (L0) | ✅ Done | ✅ Done | ✅ Done |
-| 3 | SubCategory (L1) | ✅ Done | ✅ Done | ❌ Not Done |
+| 3 | SubCategory (L1) | ✅ Done | ✅ Done | ✅ Done |
 | 4 | Section (L2) | ✅ Done | 🚧 In Progress | ❌ Not Done |
 | 5 | Topic (L3) | 📅 Planned | 📅 Planned | 📅 Planned |
 | 6 | MicroTopic (L4) | 📅 Planned | 📅 Planned | 📅 Planned |
