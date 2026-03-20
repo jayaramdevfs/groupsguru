@@ -11,6 +11,7 @@ import { subCategoryApi } from "@/lib/subcategories";
 import { sectionApi } from "@/lib/sections";
 import { topicApi } from "@/lib/topics";
 import { registryApi } from "@/lib/registry";
+import { questionsApi } from "@/lib/questions";
 
 const spring = {
   type: "spring" as const,
@@ -25,22 +26,24 @@ interface DashboardStats {
   sections: number;
   topics: number;
   microTopics: number;
+  questions: number;
 }
 
 export default function AdminDashboard() {
   const { logout } = useAuth();
-  const [stats, setStats] = useState<DashboardStats>({ categories: 0, subcategories: 0, sections: 0, topics: 0, microTopics: 0 });
+  const [stats, setStats] = useState<DashboardStats>({ categories: 0, subcategories: 0, sections: 0, topics: 0, microTopics: 0, questions: 0 });
   const [statsLoaded, setStatsLoaded] = useState(false);
 
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const [cats, subs, secs, tops, mts] = await Promise.all([
+        const [cats, subs, secs, tops, mts, qCount] = await Promise.all([
           categoryApi.getAll(),
           subCategoryApi.getAll(),
           sectionApi.getAll(),
           topicApi.getAll(),
           registryApi.getMicroTopics(0, 1),
+          questionsApi.getCount(),
         ]);
         setStats({
           categories: cats.length,
@@ -48,6 +51,7 @@ export default function AdminDashboard() {
           sections: secs.length,
           topics: tops.length,
           microTopics: mts.totalElements,
+          questions: qCount,
         });
       } catch (e) {
         console.error("Failed to load stats", e);
@@ -125,6 +129,19 @@ export default function AdminDashboard() {
       statLabel: "Intelligence",
       disabled: false,
     },
+    {
+      title: "Question Bank",
+      titleTe: "ప్రశ్న బ్యాంక్",
+      description: "Manage bilingual MCQs parsed from Moodle XML — filterable by subject, difficulty, type.",
+      descriptionTe: "ద్విభాషా MCQలను నిర్వహించండి — సబ్జెక్ట్, కఠినత, రకం ద్వారా ఫిల్టర్ చేయండి.",
+      icon: "❓",
+      href: "/admin/questions",
+      color: "from-violet-600 to-fuchsia-500",
+      shadowColor: "rgba(139, 92, 246, 0.25)",
+      stat: stats.questions,
+      statLabel: "MCQs",
+      disabled: false,
+    },
   ];
 
   return (
@@ -163,6 +180,7 @@ export default function AdminDashboard() {
               { label: "Sections", labelTe: "సెక్షన్లు", value: stats.sections, color: "text-pink-400" },
               { label: "Topics", labelTe: "టాపిక్‌లు", value: stats.topics, color: "text-violet-400" },
               { label: "Micro-Topics", labelTe: "మైక్రో-టాపిక్‌లు", value: stats.microTopics, color: "text-purple-400" },
+              { label: "Questions", labelTe: "ప్రశ్నలు", value: stats.questions, color: "text-violet-400" },
             ].map((s, i) => (
               <div key={i} className="flex flex-col items-center px-8 py-3 rounded-2xl bg-white/5 border border-white/10">
                 <span className={`text-4xl font-black ${s.color}`}>{s.value}</span>

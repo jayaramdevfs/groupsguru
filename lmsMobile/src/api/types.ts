@@ -47,3 +47,28 @@ export interface MicroTopic {
   dataConfidence: string;
   topicId?: number;
 }
+
+export interface Question {
+  id: number;
+  questionCode: string;
+  questionTextEn: string;
+  questionTextTe: string;
+  optionAEn: string;
+  optionATe: string;
+  optionBEn: string;
+  optionBTe: string;
+  optionCEn: string;
+  optionCTe: string;
+  optionDEn: string;
+  optionDTe: string;
+  correctOption: string;
+  explanationEn?: string;
+  explanationTe?: string;
+  microTopicId: string;
+  subject: string;
+  difficulty: string;
+  cognitiveLevel: string;
+  questionType: string;
+  sprintId: string;
+  penalty: number;
+}

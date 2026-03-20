@@ -50,13 +50,13 @@ C:\LMS PLATFORM\Lms\
 | 6 | MicroTopic (L4) | ✅ Done | ✅ Done | ✅ Done |
 | 7 | Registry Data Migration | ✅ Done | ✅ Done | ✅ Done |
 | 8 | Intelligence Engine | ✅ Done | ✅ Done | ✅ Done |
-| 9 | Question Bank | 📅 Planned | 📅 Planned | 📅 Planned |
+| 9 | Question Bank | ✅ Done | ✅ Done | ✅ Done |
 | 10 | Exam Structure | 📅 Planned | 📅 Planned | 📅 Planned |
 | 11 | Student Exam Flow | 📅 Planned | 📅 Planned | 📅 Planned |
 | 12 | Results & Analytics | 📅 Planned | 📅 Planned | 📅 Planned |
 | 13 | Production Readiness | 📅 Planned | 📅 Planned | 📅 Planned |
 
-**Resume Point:** Start Sprint 9 (Question Bank)
+**Resume Point:** Start Sprint 10 (Exam Structure)
 
 ### Execution Order:
 ```
@@ -132,6 +132,17 @@ All user-facing content supports English + Telugu.
 - Frontend: `AuthContext` + `ProtectedLayout` wrapper
 - Mobile: `AuthContext` + conditional navigation in `AppNavigator`
 - All HTTP clients use `withCredentials: true`
+
+---
+
+## Test Credentials (Seeded by `DataInitializer.java`)
+
+| Role | Email | Password |
+|------|-------|----------|
+| **Admin** | `admin@lms.com` | `Admin@123` |
+| **Student** | `student@lms.com` | `Student@123` |
+
+> **CRITICAL:** These are the ONLY valid credentials. Do NOT use any other email/password combinations.
 
 ---
 

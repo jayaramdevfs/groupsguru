@@ -1,0 +1,320 @@
+"use client";
+
+import ProtectedLayout from "@/components/layout/ProtectedLayout";
+import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState, useCallback } from "react";
+import { questionsApi } from "@/lib/questions";
+import { Question } from "@/lib/types";
+import CustomSelect from "@/components/ui/CustomSelect";
+
+const spring = { type: "spring" as const, stiffness: 420, damping: 24, mass: 0.8 };
+
+const SUBJECTS = ["All Subjects", "History", "AP History", "Polity", "Economy", "Geography", "Science", "Mental Ability", "Environment", "Ethics", "Administration"];
+const DIFFICULTIES = ["All Difficulties", "easy", "medium", "hard", "very_hard"];
+const TYPES = ["All Types", "STATIC", "ANALYTICAL", "STMT", "ELIM", "MATCH", "AR", "CA_STATIC", "GK", "SCHEME"];
+
+export default function AdminQuestionBank() {
+  const [questions, setQuestions] = useState<Question[]>([]);
+  const [totalElements, setTotalElements] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const [selectedSubject, setSelectedSubject] = useState("All Subjects");
+  const [selectedDifficulty, setSelectedDifficulty] = useState("All Difficulties");
+  const [selectedType, setSelectedType] = useState("All Types");
+  const [searchQuery, setSearchQuery] = useState("");
+  const [expandedId, setExpandedId] = useState<number | null>(null);
+
+  const fetchData = useCallback(async () => {
+    setIsLoading(true);
+    try {
+      const subj = selectedSubject === "All Subjects" ? undefined : selectedSubject;
+      const diff = selectedDifficulty === "All Difficulties" ? undefined : selectedDifficulty;
+      const qtype = selectedType === "All Types" ? undefined : selectedType;
+      const search = searchQuery.trim() || undefined;
+
+      const data = await questionsApi.getAll(0, 100, subj, diff, qtype, undefined, search);
+      setQuestions(data.content);
+      setTotalElements(data.totalElements);
+    } catch (error) {
+      console.error("Failed to fetch questions", error);
+    } finally {
+      setIsLoading(false);
+    }
+  }, [selectedSubject, selectedDifficulty, selectedType, searchQuery]);
+
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
+
+  const getDifficultyBadge = (difficulty: string) => {
+    switch (difficulty) {
+      case "easy": return { bg: "bg-emerald-500/20", border: "border-emerald-500/30", text: "text-emerald-400" };
+      case "medium": return { bg: "bg-yellow-500/20", border: "border-yellow-500/30", text: "text-yellow-400" };
+      case "hard": return { bg: "bg-orange-500/20", border: "border-orange-500/30", text: "text-orange-400" };
+      case "very_hard": return { bg: "bg-red-500/20", border: "border-red-500/30", text: "text-red-400" };
+      default: return { bg: "bg-gray-500/20", border: "border-gray-500/30", text: "text-gray-400" };
+    }
+  };
+
+  const getTypeBadge = (type: string) => {
+    switch (type) {
+      case "STATIC": return { bg: "bg-blue-500/20", text: "text-blue-400" };
+      case "ANALYTICAL": return { bg: "bg-purple-500/20", text: "text-purple-400" };
+      case "STMT": return { bg: "bg-indigo-500/20", text: "text-indigo-400" };
+      case "ELIM": return { bg: "bg-pink-500/20", text: "text-pink-400" };
+      case "MATCH": return { bg: "bg-teal-500/20", text: "text-teal-400" };
+      case "AR": return { bg: "bg-amber-500/20", text: "text-amber-400" };
+      default: return { bg: "bg-gray-500/20", text: "text-gray-400" };
+    }
+  };
+
+  const getCognitiveBadge = (level: string) => {
+    switch (level) {
+      case "L1": return "text-emerald-400";
+      case "L2": return "text-blue-400";
+      case "L3": return "text-orange-400";
+      case "L4": return "text-red-400";
+      default: return "text-white/60";
+    }
+  };
+
+  const diffCounts = {
+    easy: questions.filter(q => q.difficulty === "easy").length,
+    medium: questions.filter(q => q.difficulty === "medium").length,
+    hard: questions.filter(q => q.difficulty === "hard").length,
+    very_hard: questions.filter(q => q.difficulty === "very_hard").length,
+  };
+
+  return (
+    <ProtectedLayout requiredRole="ADMIN">
+      <div className="min-h-screen py-24 px-6 md:px-12 w-full max-w-7xl mx-auto text-white">
+
+        {/* Header */}
+        <motion.div
+          className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12"
+          initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={spring}
+        >
+          <div>
+            <div className="px-3 py-1 rounded-full bg-violet-500/10 border border-violet-500/20 text-violet-400 text-[10px] font-black uppercase tracking-[0.3em] mb-4 inline-block">
+              Sprint 9 — Question Bank
+            </div>
+            <h1 className="text-[36px] md:text-[48px] font-[800] leading-tight mb-2">
+              Question Bank
+            </h1>
+            <p className="text-[18px] text-white/70 font-[600]">
+              {totalElements} bilingual MCQs parsed from Moodle XML.
+            </p>
+          </div>
+        </motion.div>
+
+        {/* Stats Row */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+          {[
+            { label: "Total Questions", value: totalElements, color: "text-purple-400" },
+            { label: "Easy", value: diffCounts.easy, color: "text-emerald-400" },
+            { label: "Medium", value: diffCounts.medium, color: "text-yellow-400" },
+            { label: "Hard / Very Hard", value: diffCounts.hard + diffCounts.very_hard, color: "text-orange-400" },
+          ].map((s, i) => (
+            <motion.div key={i} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ ...spring, delay: i * 0.08 }} className="bg-white/5 border border-white/10 rounded-[24px] p-6 backdrop-blur-md">
+              <div className={`text-4xl font-black ${s.color} mb-1`}>{s.value}</div>
+              <div className="text-white/40 text-xs font-bold uppercase tracking-widest">{s.label}</div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Filters */}
+        <motion.div
+          className="mb-8 p-6 rounded-[24px] bg-white/5 border border-white/10 backdrop-blur-xl"
+          initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ ...spring, delay: 0.2 }}
+        >
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div className="flex flex-col gap-2">
+              <span className="text-white/40 font-bold uppercase text-[10px] tracking-widest ml-1">Subject</span>
+              <CustomSelect
+                options={SUBJECTS.map(s => ({ value: s, label: s }))}
+                value={selectedSubject}
+                onChange={(val) => setSelectedSubject(val.toString())}
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <span className="text-white/40 font-bold uppercase text-[10px] tracking-widest ml-1">Difficulty</span>
+              <CustomSelect
+                options={DIFFICULTIES.map(d => ({ value: d, label: d === "very_hard" ? "Very Hard" : d.charAt(0).toUpperCase() + d.slice(1) }))}
+                value={selectedDifficulty}
+                onChange={(val) => setSelectedDifficulty(val.toString())}
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <span className="text-white/40 font-bold uppercase text-[10px] tracking-widest ml-1">Type</span>
+              <CustomSelect
+                options={TYPES.map(t => ({ value: t, label: t.replace("All Types", "All Types") }))}
+                value={selectedType}
+                onChange={(val) => setSelectedType(val.toString())}
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <span className="text-white/40 font-bold uppercase text-[10px] tracking-widest ml-1">Search</span>
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search question text..."
+                className="bg-[#0f071a] border border-white/10 rounded-2xl px-4 py-3 text-sm text-white placeholder:text-white/30 focus:border-violet-500/50 focus:outline-none transition-colors"
+              />
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Questions Table */}
+        <div className="bg-white/[0.02] border border-white/10 rounded-[32px] overflow-hidden">
+          {isLoading ? (
+            <div className="p-20 text-center text-indigo-400 font-semibold">Loading questions...</div>
+          ) : questions.length === 0 ? (
+            <div className="p-20 text-center text-white/40 font-semibold">No questions found.</div>
+          ) : (
+            <div className="overflow-x-auto">
+              <table className="w-full text-left border-collapse">
+                <thead>
+                  <tr className="border-b border-white/10 bg-white/5">
+                    <th className="p-5 text-xs font-bold uppercase tracking-widest text-white/40">Code</th>
+                    <th className="p-5 text-xs font-bold uppercase tracking-widest text-white/40">Subject</th>
+                    <th className="p-5 text-xs font-bold uppercase tracking-widest text-white/40">Difficulty</th>
+                    <th className="p-5 text-xs font-bold uppercase tracking-widest text-white/40">Type</th>
+                    <th className="p-5 text-xs font-bold uppercase tracking-widest text-white/40">Level</th>
+                    <th className="p-5 text-xs font-bold uppercase tracking-widest text-white/40">Micro-Topic</th>
+                    <th className="p-5 text-xs font-bold uppercase tracking-widest text-white/40 text-right">Details</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <AnimatePresence>
+                    {questions.map((q) => {
+                      const dc = getDifficultyBadge(q.difficulty);
+                      const tc = getTypeBadge(q.questionType);
+                      const isExpanded = expandedId === q.id;
+
+                      return (
+                        <motion.tr
+                          key={q.id}
+                          layout
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          className={`border-b border-white/5 transition-colors ${isExpanded ? "bg-white/[0.04]" : "hover:bg-white/5"}`}
+                          onClick={() => setExpandedId(isExpanded ? null : q.id)}
+                          style={{ cursor: "pointer" }}
+                        >
+                          <td className="p-5 font-mono text-sm text-violet-300 font-bold">{q.questionCode}</td>
+                          <td className="p-5 text-sm font-semibold">{q.subject}</td>
+                          <td className="p-5">
+                            <span className={`px-3 py-1 rounded-md text-xs font-bold ${dc.bg} ${dc.text} ${dc.border} border`}>
+                              {q.difficulty === "very_hard" ? "VERY HARD" : q.difficulty.toUpperCase()}
+                            </span>
+                          </td>
+                          <td className="p-5">
+                            <span className={`px-3 py-1 rounded-md text-xs font-bold ${tc.bg} ${tc.text}`}>
+                              {q.questionType}
+                            </span>
+                          </td>
+                          <td className={`p-5 font-bold text-sm ${getCognitiveBadge(q.cognitiveLevel)}`}>{q.cognitiveLevel}</td>
+                          <td className="p-5 font-mono text-xs text-white/50">{q.microTopicId}</td>
+                          <td className="p-5 text-right">
+                            <button
+                              onClick={(e) => { e.stopPropagation(); setExpandedId(isExpanded ? null : q.id); }}
+                              className="px-4 py-2 bg-white/5 rounded-xl hover:bg-violet-500/20 text-xs font-bold uppercase tracking-widest transition-colors"
+                            >
+                              {isExpanded ? "Close" : "View"}
+                            </button>
+                          </td>
+                        </motion.tr>
+                      );
+                    })}
+                  </AnimatePresence>
+                </tbody>
+              </table>
+
+              {/* Expanded Question Detail - rendered separately */}
+              {expandedId && (() => {
+                const q = questions.find(q => q.id === expandedId);
+                if (!q) return null;
+                return (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    className="border-t border-white/10 p-8 bg-white/[0.03]"
+                  >
+                    {/* Question Text */}
+                    <div className="mb-6">
+                      <span className="text-white/40 text-[10px] font-black uppercase tracking-widest block mb-2">Question (English)</span>
+                      <p className="text-white/90 text-base font-semibold leading-relaxed">{q.questionTextEn}</p>
+                    </div>
+                    <div className="mb-8">
+                      <span className="text-white/40 text-[10px] font-black uppercase tracking-widest block mb-2">Question (Telugu)</span>
+                      <p className="text-white/70 text-base font-medium leading-relaxed">{q.questionTextTe}</p>
+                    </div>
+
+                    {/* Options */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                      {[
+                        { letter: "A", en: q.optionAEn, te: q.optionATe },
+                        { letter: "B", en: q.optionBEn, te: q.optionBTe },
+                        { letter: "C", en: q.optionCEn, te: q.optionCTe },
+                        { letter: "D", en: q.optionDEn, te: q.optionDTe },
+                      ].map((opt) => {
+                        const isCorrect = q.correctOption === opt.letter;
+                        return (
+                          <div
+                            key={opt.letter}
+                            className={`p-4 rounded-2xl border transition-all ${
+                              isCorrect
+                                ? "bg-emerald-500/10 border-emerald-500/30"
+                                : "bg-white/5 border-white/10"
+                            }`}
+                          >
+                            <div className="flex items-start gap-3">
+                              <span className={`flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center font-black text-sm ${
+                                isCorrect ? "bg-emerald-500/30 text-emerald-400" : "bg-white/10 text-white/60"
+                              }`}>
+                                {opt.letter}
+                              </span>
+                              <div className="flex-1">
+                                <p className={`text-sm font-semibold ${isCorrect ? "text-emerald-300" : "text-white/90"}`}>{opt.en}</p>
+                                <p className="text-xs text-white/40 mt-1">{opt.te}</p>
+                              </div>
+                              {isCorrect && (
+                                <span className="text-emerald-400 text-lg">✓</span>
+                              )}
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+
+                    {/* Meta */}
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                      <div className="p-4 bg-white/5 rounded-2xl border border-white/10">
+                        <span className="text-white/40 text-[10px] font-black uppercase tracking-widest">Sprint</span>
+                        <p className="text-lg font-bold mt-1 text-indigo-300">{q.sprintId}</p>
+                      </div>
+                      <div className="p-4 bg-white/5 rounded-2xl border border-white/10">
+                        <span className="text-white/40 text-[10px] font-black uppercase tracking-widest">Penalty</span>
+                        <p className="text-lg font-bold mt-1">{q.penalty}</p>
+                      </div>
+                      <div className="p-4 bg-white/5 rounded-2xl border border-white/10">
+                        <span className="text-white/40 text-[10px] font-black uppercase tracking-widest">Cognitive</span>
+                        <p className={`text-lg font-bold mt-1 ${getCognitiveBadge(q.cognitiveLevel)}`}>{q.cognitiveLevel}</p>
+                      </div>
+                      <div className="p-4 bg-white/5 rounded-2xl border border-white/10">
+                        <span className="text-white/40 text-[10px] font-black uppercase tracking-widest">Micro-Topic</span>
+                        <p className="text-sm font-mono font-bold mt-1 text-violet-300">{q.microTopicId}</p>
+                      </div>
+                    </div>
+                  </motion.div>
+                );
+              })()}
+            </div>
+          )}
+        </div>
+      </div>
+    </ProtectedLayout>
+  );
+}

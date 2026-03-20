@@ -12,6 +12,7 @@ import SectionScreen from "../screens/SectionScreen";
 import TopicScreen from "../screens/TopicScreen";
 import MicroTopicScreen from "../screens/MicroTopicScreen";
 import IntelligenceScreen from "../screens/IntelligenceScreen";
+import QuestionListScreen from "../screens/QuestionListScreen";
 
 export type RootStackParamList = {
   Login: undefined;
@@ -23,6 +24,7 @@ export type RootStackParamList = {
   Topic: { sectionId: number; sectionName: string; sectionNameTe: string };
   MicroTopic: { topicId: number; topicName: string; topicNameTe: string };
   Intelligence: undefined;
+  QuestionList: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -52,6 +54,7 @@ const AppNavigator = () => {
             <Stack.Screen name="Topic" component={TopicScreen} />
             <Stack.Screen name="MicroTopic" component={MicroTopicScreen} />
             <Stack.Screen name="Intelligence" component={IntelligenceScreen} />
+            <Stack.Screen name="QuestionList" component={QuestionListScreen} />
           </>
         ) : (
           <>

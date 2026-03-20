@@ -11,6 +11,7 @@ type RootStackParamList = {
   AdminDashboard: undefined;
   Category: undefined;
   Intelligence: undefined;
+  QuestionList: undefined;
 };
 
 type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
@@ -108,6 +109,21 @@ const AdminDashboard = () => {
             {language === "en"
               ? "View AI prediction scores and PYQ analysis"
               : "TE View AI prediction scores and PYQ analysis"}
+          </Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          activeOpacity={0.8}
+          style={styles.navCard}
+          onPress={() => navigation.navigate("QuestionList")}
+        >
+          <Text style={styles.cardTitle}>
+            {language === "en" ? "Question Bank" : "ప్రశ్న బ్యాంక్"}
+          </Text>
+          <Text style={styles.cardDesc}>
+            {language === "en"
+              ? "Browse and search bilingual MCQs"
+              : "ద్విభాషా MCQలను బ్రౌజ్ చేయండి"}
           </Text>
         </TouchableOpacity>
       </View>
