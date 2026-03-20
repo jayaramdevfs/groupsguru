@@ -118,8 +118,9 @@ export default function StudentTopics() {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ ...spring, delay: index * 0.05 }}
-                  className="w-full flex flex-col md:flex-row items-center gap-6 p-8 rounded-[32px] bg-white/[0.03] border border-white/5 hover:border-emerald-500/30 transition-all group relative overflow-hidden"
+                  className="w-full relative"
                 >
+                <Link href={`/student/categories/${categoryId}/${subCategoryId}/${sectionId}/${top.id}`} className="w-full flex flex-col md:flex-row items-center gap-6 p-8 rounded-[32px] bg-white/[0.03] border border-white/5 hover:border-emerald-500/30 transition-all group relative overflow-hidden">
                   {/* Background Glow on Hover */}
                   <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 blur-[60px] group-hover:bg-emerald-500/10 transition-all" />
 
@@ -141,12 +142,24 @@ export default function StudentTopics() {
                   </div>
 
                   <div className="mt-4 md:mt-0 flex items-center">
-                    {/* MicroTopics coming in Sprint 6 */}
-                    <div className="flex items-center text-emerald-400 font-bold group/btn">
-                      <span className="text-white/40">Micro-Topics (Sprint 6)</span>
+                    <div className="flex items-center text-cyan-400 font-bold group/btn">
+                      <span>Browse Micro-Topics</span>
+                      <svg
+                        className="ml-2 w-5 h-5 transform group-hover/btn:translate-x-1 transition-transform"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
                     </div>
                   </div>
-                </motion.div>
+                </Link>
+              </motion.div>
               ))}
             </AnimatePresence>
           )}

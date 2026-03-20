@@ -107,6 +107,20 @@ export default function AdminDashboard() {
       statLabel: "Topics",
       disabled: false,
     },
+    {
+      title: "Micro-Topics",
+      titleTe: "మైక్రో-టాపిక్‌లు",
+      level: "L4",
+      description: "Manage Level 4: Atomic targets for Guru intelligence.",
+      descriptionTe: "మినీ టాపిక్స్",
+      icon: "⚛️",
+      href: "/admin/micro-topics",
+      color: "from-cyan-500 to-blue-500",
+      shadowColor: "rgba(6, 182, 212, 0.25)",
+      stat: null,
+      statLabel: "Intelligence",
+      disabled: false,
+    },
   ];
 
   return (
@@ -144,6 +158,7 @@ export default function AdminDashboard() {
               { label: "Subjects", labelTe: "సబ్జెక్టులు", value: stats.subcategories, color: "text-purple-400" },
               { label: "Sections", labelTe: "సెక్షన్లు", value: stats.sections, color: "text-indigo-400" },
               { label: "Topics", labelTe: "టాపిక్‌లు", value: stats.topics, color: "text-emerald-400" },
+              { label: "Micro-Topics", labelTe: "మైక్రో-టాపిక్‌లు", value: "—", color: "text-cyan-400" },
             ].map((s, i) => (
               <div key={i} className="flex flex-col items-center px-8 py-3 rounded-2xl bg-white/5 border border-white/10">
                 <span className={`text-4xl font-black ${s.color}`}>{s.value}</span>

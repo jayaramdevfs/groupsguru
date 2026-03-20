@@ -35,3 +35,15 @@ export interface Topic {
   topicCode?: string;
   sectionId: number;
 }
+
+export interface MicroTopic {
+  id: number;
+  microTopicId: string;
+  subject: string;
+  topicName?: string;
+  microTopicText?: string;
+  groupApplicability?: string;
+  paper?: string;
+  dataConfidence: string;
+  topicId?: number;
+}

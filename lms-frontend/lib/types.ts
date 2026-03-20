@@ -80,3 +80,46 @@ export interface TopicRequest {
   topicCode?: string;
   sectionId: number;
 }
+
+export interface MicroTopic {
+  id: number;
+  microTopicId: string;
+  subject: string;
+  sectionName?: string;
+  topicName?: string;
+  microTopicText?: string;
+  syllabusRef?: string;
+  groupApplicability?: string;
+  depthLevel?: string;
+  contentType?: string;
+  topicCategory?: string;
+  pyqFrequency?: string;
+  difficultyTrend?: string;
+  predictionPriority?: string;
+  dataConfidence: string;
+  prelimsOrMains?: string;
+  paper?: string;
+  topicId?: number;
+  createdAt?: string;
+  updatedAt?: string;
+}
+
+export interface MicroTopicRequest {
+  microTopicId: string;
+  subject: string;
+  sectionName?: string;
+  topicName?: string;
+  microTopicText?: string;
+  syllabusRef?: string;
+  groupApplicability?: string;
+  depthLevel?: string;
+  contentType?: string;
+  topicCategory?: string;
+  pyqFrequency?: string;
+  difficultyTrend?: string;
+  predictionPriority?: string;
+  dataConfidence: string;
+  prelimsOrMains?: string;
+  paper?: string;
+  topicId?: number;
+}

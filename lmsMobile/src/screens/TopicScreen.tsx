@@ -22,6 +22,7 @@ type RootStackParamList = {
   SubCategory: { categoryId: number; categoryName: string; categoryNameTe: string };
   Section: { subCategoryId: number; subCategoryName: string; subCategoryNameTe: string };
   Topic: { sectionId: number; sectionName: string; sectionNameTe: string };
+  MicroTopic: { topicId: number; topicName: string; topicNameTe: string };
 };
 
 type TopicScreenRouteProp = RouteProp<RootStackParamList, 'Topic'>;
@@ -56,12 +57,11 @@ const TopicScreen = () => {
       activeOpacity={0.8}
       style={styles.card}
       onPress={() => {
-        Alert.alert(
-          language === "en" ? "Coming Soon" : "త్వరలో వస్తుంది",
-          language === "en"
-            ? "Micro-topics will be available in Sprint 6."
-            : "మైక్రో-టాపిక్‌లు స్ప్రింట్ 6లో అందుబాటులో ఉంటాయి."
-        );
+        navigation.navigate("MicroTopic", {
+          topicId: item.id,
+          topicName: item.name,
+          topicNameTe: item.nameTe,
+        });
       }}
     >
       <View style={styles.iconContainer}>
@@ -78,7 +78,7 @@ const TopicScreen = () => {
           <Text style={styles.code}>Code: {item.topicCode}</Text>
           <View style={styles.badge}>
             <Text style={styles.badgeText}>
-              {language === "en" ? "Micro-Topics (S6)" : "మైక్రో-టాపిక్స్ (S6)"}
+              {language === "en" ? "Micro-Topics" : "మైక్రో-టాపిక్స్"}
             </Text>
           </View>
         </View>

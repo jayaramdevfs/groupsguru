@@ -47,7 +47,7 @@ C:\LMS PLATFORM\Lms\
 | 3 | SubCategory (L1) | ✅ Done | ✅ Done | ✅ Done |
 | 4 | Section (L2) | ✅ Done | ✅ Done | ✅ Done |
 | 5 | Topic (L3) | ✅ Done | ✅ Done | ✅ Done |
-| 6 | MicroTopic (L4) | 📅 Planned | 📅 Planned | 📅 Planned |
+| 6 | MicroTopic (L4) | ✅ Done | ✅ Done | ✅ Done |
 | 7 | Registry Data Migration | 📅 Planned | 📅 Planned | 📅 Planned |
 | 8 | Intelligence Engine | 📅 Planned | 📅 Planned | 📅 Planned |
 | 9 | Question Bank | 📅 Planned | 📅 Planned | 📅 Planned |
@@ -56,11 +56,11 @@ C:\LMS PLATFORM\Lms\
 | 12 | Results & Analytics | 📅 Planned | 📅 Planned | 📅 Planned |
 | 13 | Production Readiness | 📅 Planned | 📅 Planned | 📅 Planned |
 
-**Resume Point:** Start Sprint 6 (all 3 platforms).
+**Resume Point:** Start Sprint 7 (Data Migration)
 
 ### Execution Order:
 ```
-Sprint 6 (all 3 platforms) -> ... -> Sprint 13
+Sprint 7 (Data Migration) -> ... -> Sprint 13
 ```
 
 ---
@@ -295,7 +295,7 @@ export interface Section {
 
 ---
 
-## Sprint 6 — MicroTopic Entity & CRUD (L4) 📅 FULL VERTICAL SLICE
+## Sprint 6 — MicroTopic Entity & CRUD (L4) ✅ DONE (Backend + Frontend + Mobile)
 
 > Creates the MicroTopic entity — the atomic unit that the Groups Guru intelligence system maps to. This sprint builds the entity and UI only; data loading happens in Sprint 7.
 
