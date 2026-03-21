@@ -79,8 +79,9 @@ public class ExamAttemptService {
         int unattemptedCount = 0;
         double totalMarks = 0.0;
 
-        // Map request answers for easier access
+        // Map request answers for easier access (filter out null selectedOption — those are unanswered)
         Map<Long, String> submissionMap = request.getAnswers().stream()
+                .filter(a -> a.getSelectedOption() != null)
                 .collect(Collectors.toMap(SubmitAttemptRequest.AnswerDTO::getQuestionId, SubmitAttemptRequest.AnswerDTO::getSelectedOption));
 
         for (Long questionId : qIds) {

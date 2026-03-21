@@ -1,7 +1,9 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL,
+  // Uses Next.js rewrites proxy — /api/* → localhost:8080/api/*
+  // This keeps cookies same-origin (no cross-origin cookie issues)
+  baseURL: "",
   withCredentials: true,
   headers: {
     "Content-Type": "application/json",

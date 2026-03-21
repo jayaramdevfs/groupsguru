@@ -26,7 +26,7 @@ const LoginScreen = () => {
       setLoading(true);
       await login(email, password);
     } catch (error: any) {
-      Alert.alert("Login Failed", "Invalid credentials or server error");
+      Alert.alert("Login Failed", error.message || "Unknown error occurred");
     } finally {
       setLoading(false);
     }

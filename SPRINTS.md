@@ -712,6 +712,48 @@ totalMarks       → sum (floor at 0)
 - `POST /api/exams/{id}/start` was blocked for authenticated students (only GET was `permitAll`)
 - **Fix:** Added `/api/exams/*/start` to permitted paths for authenticated users
 
+**11h. Diagnostic error messages (replacing "Invalid credentials or server error"):**
+- Mobile showed the same generic error for ALL failures: network, auth, server, token
+- **Fix (Mobile):** `AuthContext.tsx` now throws specific errors for each failure mode:
+  - `ERR_NETWORK` → "Cannot reach server" + adb reverse instructions
+  - HTTP 401/403 → "Invalid email or password"
+  - No token in response → "Backend may need to be updated"
+  - `/me` fails after login → "JWT Bearer token not working"
+- **Fix (Mobile):** `LoginScreen.tsx` now displays `error.message` instead of hardcoded string
+- **Fix (Backend):** `GlobalExceptionHandler.java` returns proper HTTP status codes:
+  - "Invalid credentials" → 401, "not found" → 404, "already" → 409, "unauthorized" → 403
+
+---
+
+## Known Issue: "Invalid Credentials" — Root Cause Analysis
+
+This error has **3 distinct causes** that previously all showed the same message:
+
+### Cause 1: Mobile cannot use HttpOnly cookies (FIXED)
+- **Why:** React Native doesn't have a browser cookie jar. `Set-Cookie` headers are silently ignored.
+- **Symptom:** Login POST returns 200 (success), but the follow-up `GET /api/auth/me` fails because no cookie is sent → app catches exception → shows "Invalid credentials"
+- **Fix:** Backend returns JWT in response body. Mobile stores in AsyncStorage. Axios interceptor sends `Authorization: Bearer <token>` header. Backend `JwtAuthenticationFilter` reads Bearer header as fallback.
+- **How to verify:** `curl -X POST localhost:8080/api/auth/login ...` → response body has `"data": "<jwt>"` (not `null`)
+
+### Cause 2: H2 in-memory database resets on restart
+- **Why:** `ddl-auto: create-drop` + `jdbc:h2:mem:lms_db` means every backend restart wipes all data. `DataInitializer` re-seeds admin/student users, but if it fails silently, users won't exist.
+- **Symptom:** Credentials are correct but user doesn't exist in DB → 401
+- **How to verify:** Check backend startup logs for `"Default ADMIN user created"` and `"Default STUDENT user created for Jayram."`
+- **Will be resolved in Sprint 13:** PostgreSQL migration with persistent storage
+
+### Cause 3: ADB reverse not active (mobile only)
+- **Why:** Physical Android device can't reach `localhost:8080` without USB port forwarding
+- **Symptom:** `ERR_NETWORK` — request never reaches backend
+- **Fix:** Run `adb reverse tcp:8080 tcp:8080` before launching the mobile app
+- **How to verify:** From device, the login request should appear in backend logs
+
+### Developer Checklist (before debugging login):
+1. Is backend running? → `curl http://localhost:8080/api/auth/login -X POST -H "Content-Type: application/json" -d '{"email":"admin@lms.com","password":"Admin@123"}'`
+2. Did DataInitializer run? → Check logs for "Default ADMIN user created"
+3. For mobile: is ADB bridge active? → `adb reverse tcp:8080 tcp:8080`
+4. Is token in login response body? → Response should have `"data": "eyJ..."`
+5. Does Bearer auth work? → `curl localhost:8080/api/auth/me -H "Authorization: Bearer <token>"`
+
 ---
 
 ## Sprint 12 — Results & Analytics 📅 FULL VERTICAL SLICE
