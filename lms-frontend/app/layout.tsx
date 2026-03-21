@@ -23,11 +23,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} relative min-h-screen bg-gradient-to-br from-[#0f051d] via-[#12081f] to-[#0a0114] text-white`}
+        className={`${inter.className} relative min-h-screen bg-[#0c051a] text-white overflow-x-hidden`}
       >
-        {/* Global Purple Glow Background */}
-        <div className="absolute bottom-[-150px] left-[-150px] w-[600px] h-[400px] bg-purple-700/35 blur-3xl pointer-events-none" />
-        <div className="absolute top-[-150px] right-[-150px] w-[600px] h-[400px] bg-purple-700/35 blur-3xl pointer-events-none" />
+        {/* Global Cinematic Glows */}
+        <div className="absolute bottom-[-150px] left-[-150px] w-[800px] h-[600px] bg-purple-600/30 blur-[130px] pointer-events-none" />
+        <div className="absolute top-[-150px] right-[-150px] w-[800px] h-[600px] bg-indigo-600/20 blur-[130px] pointer-events-none" />
 
         <LanguageProvider>
           <AuthProvider>{children}</AuthProvider>

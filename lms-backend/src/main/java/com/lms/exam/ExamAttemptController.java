@@ -3,6 +3,7 @@ package com.lms.exam;
 import com.lms.auth.User;
 import com.lms.auth.UserRepository;
 import com.lms.exam.dto.AttemptStartResponse;
+import com.lms.exam.dto.ExamResultDTO;
 import com.lms.exam.dto.SubmitAttemptRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -41,12 +42,12 @@ public class ExamAttemptController {
         return ResponseEntity.ok(attemptService.getMyAttempts(user.getId()));
     }
 
-    @GetMapping("/attempts/{attemptId}")
-    public ResponseEntity<ExamAttempt> getAttempt(
+    @GetMapping("/attempts/{attemptId}/result")
+    public ResponseEntity<ExamResultDTO> getAttemptResult(
             @PathVariable Long attemptId,
             Authentication authentication) {
         User user = resolveUser(authentication);
-        return ResponseEntity.ok(attemptService.getAttempt(attemptId, user.getId()));
+        return ResponseEntity.ok(attemptService.getAttemptResult(attemptId, user.getId()));
     }
 
     private User resolveUser(Authentication authentication) {

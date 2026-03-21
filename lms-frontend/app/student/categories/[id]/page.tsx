@@ -49,10 +49,10 @@ export default function StudentSubCategories() {
 
   return (
     <ProtectedLayout requiredRole="STUDENT">
-      <div className="min-h-screen py-24 px-6 md:px-12 w-full max-w-7xl mx-auto text-white">
+      <div className="min-h-screen py-10 px-6 md:px-12 w-full max-w-[95%] mx-auto text-white">
         {/* Header */}
         <motion.div
-          className="mb-16 text-center"
+          className="mb-8 text-center"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={spring}
@@ -60,10 +60,10 @@ export default function StudentSubCategories() {
           {/* Back Link */}
           <Link
             href="/student/categories"
-            className="inline-flex items-center gap-2 text-purple-400 font-semibold mb-6 hover:text-purple-300 transition-colors"
+            className="inline-flex items-center gap-2 text-purple-400 font-semibold mb-4 hover:text-purple-300 transition-colors text-sm"
           >
             <svg
-              className="w-5 h-5"
+              className="w-4 h-4"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -75,14 +75,14 @@ export default function StudentSubCategories() {
             </svg>
             Back to Categories
           </Link>
-
-          <div className="flex items-center justify-center gap-4 mb-4">
-            <h1 className="text-[40px] md:text-[56px] font-[800] leading-tight bg-gradient-to-r from-white via-white to-purple-400 bg-clip-text text-transparent">
+ 
+          <div className="flex items-center justify-center gap-4 mb-3">
+            <h1 className="text-[32px] md:text-[48px] font-[800] leading-tight bg-gradient-to-r from-white via-white to-purple-400 bg-clip-text text-transparent italic">
               {category?.name || "Subjects"}
             </h1>
             <LanguageToggle />
           </div>
-          <p className="text-[18px] text-white/70 font-[600] max-w-2xl mx-auto">
+          <p className="text-base text-white/70 font-[600] max-w-2xl mx-auto">
             Choose a subject to dive into sections and topics.
           </p>
         </motion.div>
@@ -104,7 +104,7 @@ export default function StudentSubCategories() {
               >
                 <Link
                   href={`/student/categories/${categoryId}/${sub.id}`}
-                  className="group relative block h-full p-8 rounded-[32px] bg-white/5 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/5 transition-all duration-300 backdrop-blur-xl overflow-hidden"
+                  className="group relative block h-full p-6 rounded-[24px] bg-white/5 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/5 transition-all duration-300 backdrop-blur-xl overflow-hidden"
                 >
                   {/* Hover Glow */}
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-600/0 via-transparent to-pink-600/0 group-hover:from-purple-600/10 group-hover:to-pink-600/10 transition-all duration-500" />

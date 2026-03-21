@@ -146,7 +146,7 @@ export default function AdminDashboard() {
 
   return (
     <ProtectedLayout requiredRole="ADMIN">
-      <div className="min-h-screen py-24 px-6 md:px-12 w-full max-w-7xl mx-auto flex flex-col items-center gap-16">
+      <div className="min-h-screen py-10 px-6 md:px-12 w-full max-w-[92%] mx-auto flex flex-col items-center gap-8">
 
         {/* Hero Header */}
         <motion.div
@@ -155,13 +155,13 @@ export default function AdminDashboard() {
           transition={spring}
           className="text-center"
         >
-          <div className="px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-[10px] font-black uppercase tracking-[0.3em] mb-6 inline-block">
+          <div className="px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-[9px] font-black uppercase tracking-[0.2em] mb-4 inline-block">
             Intelligence Command
           </div>
-          <h1 className="text-5xl md:text-7xl font-black tracking-tighter leading-none bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-white/20">
+          <h1 className="text-4xl md:text-6xl font-black tracking-tighter leading-none bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-white/20">
             GroupsGuru<span className="text-purple-500">.</span>
           </h1>
-          <p className="mt-4 text-white/40 text-lg font-medium">
+          <p className="mt-2 text-white/40 text-base font-medium">
             <Multilang en="APPSC Exam Intelligence Engine — Admin Console" te="APPSC పరీక్షా ఇంటెలిజెన్స్ ఇంజిన్ — అడ్మిన్ కన్సోల్" />
           </p>
         </motion.div>
@@ -182,9 +182,9 @@ export default function AdminDashboard() {
               { label: "Micro-Topics", labelTe: "మైక్రో-టాపిక్‌లు", value: stats.microTopics, color: "text-purple-400" },
               { label: "Questions", labelTe: "ప్రశ్నలు", value: stats.questions, color: "text-violet-400" },
             ].map((s, i) => (
-              <div key={i} className="flex flex-col items-center px-8 py-3 rounded-2xl bg-white/5 border border-white/10">
-                <span className={`text-4xl font-black ${s.color}`}>{s.value}</span>
-                <span className="text-white/40 text-xs font-bold uppercase tracking-widest mt-1">
+              <div key={i} className="flex flex-col items-center px-6 py-2 rounded-xl bg-white/5 border border-white/10 shrink-0">
+                <span className={`text-2xl font-black ${s.color}`}>{s.value}</span>
+                <span className="text-white/40 text-[9px] font-bold uppercase tracking-widest mt-0.5">
                   <Multilang en={s.label} te={s.labelTe} />
                 </span>
               </div>
@@ -261,15 +261,6 @@ export default function AdminDashboard() {
           ))}
         </div>
 
-        <motion.button
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-          onClick={() => void logout()}
-          className="mt-4 px-10 py-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-red-500/10 hover:border-red-500/30 text-white/40 hover:text-red-400 font-bold transition-all text-sm uppercase tracking-widest"
-        >
-          Logout Securely
-        </motion.button>
       </div>
     </ProtectedLayout>
   );

@@ -110,6 +110,7 @@ export interface AttemptStartResponse {
   attemptId: number;
   examId: number;
   examName: string;
+  examNameTe: string;
   durationMinutes: number;
   questions: Question[];
 }
@@ -121,3 +122,24 @@ export interface SubmitAttemptRequest {
   }[];
 }
 
+export interface TopicAnalytics {
+  topicName: string;
+  totalQuestions: number;
+  correctCount: number;
+  wrongCount: number;
+  unattemptedCount: number;
+  hitRate: number;
+}
+
+export interface QuestionResult {
+  question: Question;
+  selectedOption?: string;
+  isCorrect?: boolean;
+  marks: number;
+}
+
+export interface ExamResult {
+  attempt: ExamAttempt;
+  questions: QuestionResult[];
+  topicAnalytics: TopicAnalytics[];
+}

@@ -5,11 +5,15 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
 
 @Repository
 public interface MicroTopicRepository extends JpaRepository<MicroTopic, Long> {
     Optional<MicroTopic> findByMicroTopicIdAndIsDeletedFalse(String microTopicId);
+
+    List<MicroTopic> findAllByMicroTopicIdIn(Collection<String> microTopicIds);
 
     Page<MicroTopic> findByIsDeletedFalse(Pageable pageable);
 

@@ -53,11 +53,11 @@ C:\LMS PLATFORM\Lms\
 | 9 | Question Bank | ✅ Done | ✅ Done | ✅ Done |
 | 10 | Exam Structure | ✅ Done | ✅ Done | ✅ Done |
 | 11 | Student Exam Flow | ✅ Done | ✅ Done | ✅ Done |
-| 12 | Results & Analytics | 📅 Planned | 📅 Planned | 📅 Planned |
-| 12a | UX Polish (Exam UI) | — | 📅 Planned | 📅 Planned |
+| 12 | Results & Analytics | ✅ Done | ✅ Done | ✅ Done |
+| 12a | UX Polish (Exam UI) | ✅ Done | ✅ Done | ✅ Done |
 | 13 | Production Readiness | 📅 Planned | 📅 Planned | 📅 Planned |
 
-**Resume Point:** Start Sprint 12 (Results & Analytics)
+**Resume Point:** Start Sprint 13 (Production Readiness)
 
 ### Execution Order:
 ```
@@ -782,7 +782,8 @@ This error has **3 distinct causes** that previously all showed the same message
   - Color-coded answer cards
 - `src/components/CircularProgress.tsx`
 
-**Verification:** Results display correctly on all platforms. Scores match. Topic breakdown is accurate.
+**Closure Date:** March 21, 2026
+**Verification:** Results display correctly on all platforms. Scores match. Topic breakdown is accurate. Per-question review shows explanations and highlights correct/incorrect selections.
 
 ---
 

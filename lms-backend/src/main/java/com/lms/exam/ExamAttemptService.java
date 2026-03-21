@@ -2,16 +2,19 @@ package com.lms.exam;
 
 import com.lms.exam.dto.AttemptStartResponse;
 import com.lms.exam.dto.SubmitAttemptRequest;
+import com.lms.exam.dto.ExamResultDTO;
+import com.lms.exam.dto.QuestionResultDTO;
+import com.lms.exam.dto.TopicAnalyticsDTO;
 import com.lms.question.Question;
 import com.lms.question.QuestionRepository;
+import com.lms.registry.MicroTopic;
+import com.lms.registry.MicroTopicRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
@@ -22,6 +25,7 @@ public class ExamAttemptService {
     private final QuestionRepository questionRepository;
     private final ExamAttemptRepository examAttemptRepository;
     private final AttemptAnswerRepository attemptAnswerRepository;
+    private final MicroTopicRepository microTopicRepository;
 
     @Transactional
     public AttemptStartResponse startAttempt(Long examId, Long userId) {
@@ -50,6 +54,7 @@ public class ExamAttemptService {
                 .attemptId(attempt.getId())
                 .examId(examId)
                 .examName(exam.getName())
+                .examNameTe(exam.getNameTe())
                 .durationMinutes(exam.getDurationMinutes())
                 .questions(questions)
                 .build();
@@ -133,5 +138,70 @@ public class ExamAttemptService {
     public ExamAttempt getAttempt(Long attemptId, Long userId) {
         return examAttemptRepository.findByIdAndUserId(attemptId, userId)
                 .orElseThrow(() -> new RuntimeException("Attempt not found"));
+    }
+
+    public ExamResultDTO getAttemptResult(Long attemptId, Long userId) {
+        ExamAttempt attempt = examAttemptRepository.findByIdAndUserId(attemptId, userId)
+                .orElseThrow(() -> new RuntimeException("Attempt not found"));
+
+        if (attempt.getStatus() == AttemptStatus.IN_PROGRESS) {
+            throw new RuntimeException("Attempt not yet submitted");
+        }
+
+        List<AttemptAnswer> answers = attemptAnswerRepository.findByAttemptId(attemptId);
+        List<Long> qIds = answers.stream().map(AttemptAnswer::getQuestionId).toList();
+        Map<Long, Question> questionMap = questionRepository.findAllById(qIds).stream()
+                .collect(Collectors.toMap(Question::getId, q -> q));
+
+        // Get MicroTopics to group by topic name
+        Set<String> microTopicIds = questionMap.values().stream()
+                .map(Question::getMicroTopicId)
+                .filter(Objects::nonNull)
+                .collect(Collectors.toSet());
+        
+        Map<String, MicroTopic> microTopicMap = microTopicRepository.findAllByMicroTopicIdIn(microTopicIds).stream()
+                .collect(Collectors.toMap(MicroTopic::getMicroTopicId, mt -> mt));
+
+        List<QuestionResultDTO> questionResults = answers.stream().map(a -> {
+            Question q = questionMap.get(a.getQuestionId());
+            return QuestionResultDTO.builder()
+                    .question(q)
+                    .selectedOption(a.getSelectedOption())
+                    .isCorrect(a.getIsCorrect())
+                    .marks(a.getMarks())
+                    .build();
+        }).collect(Collectors.toList());
+
+        // Group by topic name
+        Map<String, List<QuestionResultDTO>> groupedByTopic = questionResults.stream()
+                .collect(Collectors.groupingBy(qr -> {
+                    String mtId = qr.getQuestion().getMicroTopicId();
+                    MicroTopic mt = microTopicMap.get(mtId);
+                    return (mt != null && mt.getTopicName() != null) ? mt.getTopicName() : "General";
+                }));
+
+        List<TopicAnalyticsDTO> topicAnalytics = groupedByTopic.entrySet().stream().map(entry -> {
+            String topicName = entry.getKey();
+            List<QuestionResultDTO> qResults = entry.getValue();
+            int total = qResults.size();
+            long correct = qResults.stream().filter(qr -> qr.getIsCorrect() != null && qr.getIsCorrect()).count();
+            long wrong = qResults.stream().filter(qr -> qr.getIsCorrect() != null && !qr.getIsCorrect()).count();
+            long unattempted = qResults.stream().filter(qr -> qr.getIsCorrect() == null).count();
+            
+            return TopicAnalyticsDTO.builder()
+                    .topicName(topicName)
+                    .totalQuestions(total)
+                    .correctCount((int) correct)
+                    .wrongCount((int) wrong)
+                    .unattemptedCount((int) unattempted)
+                    .hitRate(total > 0 ? (correct * 100.0 / total) : 0.0)
+                    .build();
+        }).collect(Collectors.toList());
+
+        return ExamResultDTO.builder()
+                .attempt(attempt)
+                .questions(questionResults)
+                .topicAnalytics(topicAnalytics)
+                .build();
     }
 }

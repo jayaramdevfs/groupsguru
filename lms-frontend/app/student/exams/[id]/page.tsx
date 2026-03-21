@@ -62,11 +62,11 @@ export default function ExamDetail({ params }: { params: Promise<{ id: string }>
 
   return (
     <ProtectedLayout requiredRole="STUDENT">
-      <div className="min-h-screen py-24 px-6 md:px-12 w-full max-w-4xl mx-auto text-white">
+      <div className="min-h-screen py-10 px-6 md:px-12 w-full max-w-[95%] mx-auto text-white">
         
         {/* Exam Header */}
         <motion.div 
-          className="mb-12"
+          className="mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={spring}
@@ -75,7 +75,7 @@ export default function ExamDetail({ params }: { params: Promise<{ id: string }>
             {exam.examType.replace('_', ' ')}
           </div>
           
-          <h1 className="text-[40px] md:text-[56px] font-[800] leading-tight mb-6 bg-gradient-to-r from-white via-white to-purple-400 bg-clip-text text-transparent italic">
+          <h1 className="text-[32px] md:text-[48px] font-[800] leading-tight mb-4 bg-gradient-to-r from-white via-white to-purple-400 bg-clip-text text-transparent italic">
             <Multilang en={exam.name} te={exam.nameTe} />
           </h1>
           
@@ -85,7 +85,7 @@ export default function ExamDetail({ params }: { params: Promise<{ id: string }>
         </motion.div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
           {[
             { label: "Questions", value: exam.totalQuestions, en: "Questions", te: "ప్రశ్నలు" },
             { label: "Duration", value: `${exam.durationMinutes}m`, en: "Duration", te: "సమయం" },
@@ -111,32 +111,32 @@ export default function ExamDetail({ params }: { params: Promise<{ id: string }>
 
         {/* Rules Section */}
         <motion.div
-          className="p-8 md:p-12 rounded-[32px] bg-white/5 border border-white/10 backdrop-blur-3xl mb-12 shadow-2xl shadow-purple-500/5"
+          className="p-6 md:p-8 rounded-[32px] bg-white/5 border border-white/10 backdrop-blur-3xl mb-8 shadow-2xl shadow-purple-500/5"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ ...spring, delay: 0.4 }}
         >
-          <h3 className="text-2xl font-bold mb-8 flex items-center italic">
+          <h3 className="text-xl font-bold mb-4 flex items-center italic">
             <span className="w-8 h-8 rounded-lg bg-red-500/20 text-red-400 flex items-center justify-center mr-3 text-sm">!</span>
             <Multilang en="Exam Rules" te="పరీక్ష నిబంధనలు" />
           </h3>
           
-          <ul className="space-y-6 text-white/70 font-[600]">
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-white/70 font-[600]">
             <li className="flex items-start">
               <span className="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center mr-4 mt-0.5 text-xs">1</span>
-              <p><Multilang en="Once you start, the timer cannot be paused." te="మొదలు పెట్టిన తర్వాత టైమర్ ఆగదు." /></p>
+              <p className="text-sm"><Multilang en="Once you start, the timer cannot be paused." te="మొదలు పెట్టిన తర్వాత టైమర్ ఆగదు." /></p>
             </li>
             <li className="flex items-start">
               <span className="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center mr-4 mt-0.5 text-xs">2</span>
-              <p><Multilang en="Each correct answer gives 1.0 mark." te="ప్రతి సరైన సమాధానానికి 1.0 మార్కు లభిస్తుంది." /></p>
+              <p className="text-sm"><Multilang en="Each correct answer gives 1.0 mark." te="ప్రతి సరైన సమాధానానికి 1.0 మార్కు లభిస్తుంది." /></p>
             </li>
             <li className="flex items-start">
               <span className="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center mr-4 mt-0.5 text-xs">3</span>
-              <p><Multilang en="Negative marking applies for incorrect attempts." te="తప్పు సమాధానాలకు నెగటివ్ మార్కింగ్ ఉంటుంది." /></p>
+              <p className="text-sm"><Multilang en="Negative marking applies for incorrect attempts." te="తప్పు సమాధానాలకు నెగటివ్ మార్కింగ్ ఉంటుంది." /></p>
             </li>
             <li className="flex items-start">
               <span className="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center mr-4 mt-0.5 text-xs">4</span>
-              <p><Multilang en="The exam will auto-submit when the time expires." te="సమయం ముగిసినప్పుడు పరీక్ష ఆటోమేటిక్ గా సబ్మిట్ అవుతుంది." /></p>
+              <p className="text-sm"><Multilang en="The exam will auto-submit when the time expires." te="సమయం ముగిసినప్పుడు పరీక్ష ఆటోమేటిక్ గా సబ్మిట్ అవుతుంది." /></p>
             </li>
           </ul>
         </motion.div>
@@ -163,7 +163,7 @@ export default function ExamDetail({ params }: { params: Promise<{ id: string }>
           </button>
         </motion.div>
         
-        <p className="text-center mt-6 text-white/40 font-bold italic">
+        <p className="text-center mt-3 text-white/40 font-bold italic text-sm">
           <Multilang en="Timer will start on next page" te="తదుపరి పేజీలో టైమర్ ప్రారంభమవుతుంది" />
         </p>
 

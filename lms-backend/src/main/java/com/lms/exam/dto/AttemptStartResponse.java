@@ -11,6 +11,7 @@ public class AttemptStartResponse {
     private Long attemptId;
     private Long examId;
     private String examName;
+    private String examNameTe;
     private Integer durationMinutes;
     private List<Question> questions; // Note: Frontend will use this, but we should strip correct answers later for production.
 }

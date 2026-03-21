@@ -16,6 +16,7 @@ import QuestionListScreen from "../screens/QuestionListScreen";
 import ExamListScreen from "../screens/ExamListScreen";
 import ExamDetailScreen from "../screens/ExamDetailScreen";
 import ExamAttemptScreen from "../screens/ExamAttemptScreen";
+import ExamResultScreen from "../screens/ExamResultScreen";
 
 export type RootStackParamList = {
   Login: undefined;
@@ -31,6 +32,7 @@ export type RootStackParamList = {
   ExamList: undefined;
   ExamDetail: { examId: number };
   ExamAttempt: { examId: number };
+  ExamResult: { attemptId: number; examId: number };
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -73,6 +75,7 @@ const AppNavigator = () => {
             <Stack.Screen name="ExamList" component={ExamListScreen} />
             <Stack.Screen name="ExamDetail" component={ExamDetailScreen} />
             <Stack.Screen name="ExamAttempt" component={ExamAttemptScreen} />
+            <Stack.Screen name="ExamResult" component={ExamResultScreen} />
           </>
         )}
       </Stack.Navigator>

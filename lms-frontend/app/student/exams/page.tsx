@@ -51,19 +51,18 @@ export default function StudentExams() {
 
   return (
     <ProtectedLayout requiredRole="STUDENT">
-      <div className="min-h-screen py-24 px-6 md:px-12 w-full max-w-7xl mx-auto text-white">
+      <div className="min-h-screen py-10 px-6 md:px-12 w-full max-w-[92%] mx-auto text-white text-center">
         
-        {/* Header Section */}
         <motion.div 
-          className="mb-12 text-center"
+          className="mb-8 text-center"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={spring}
         >
-          <h1 className="text-[40px] md:text-[56px] font-[800] leading-tight mb-4 bg-gradient-to-r from-white via-white to-purple-400 bg-clip-text text-transparent">
+          <h1 className="text-[32px] md:text-[48px] font-[800] leading-tight mb-3 bg-gradient-to-r from-white via-white to-purple-400 bg-clip-text text-transparent italic">
             <Multilang en="Available Exams" te="అందుబాటులో ఉన్న పరీక్షలు" />
           </h1>
-          <p className="text-[18px] text-white/70 font-[600] max-w-2xl mx-auto">
+          <p className="text-base text-white/70 font-[600] max-w-2xl mx-auto italic">
             <Multilang 
               en="Challenge yourself with our curated tests. Practice makes perfect." 
               te="మా రూపొందించిన పరీక్షలతో మిమ్మల్ని మీరు సవాలు చేసుకోండి. సాధన మనిషిని పరిపూర్ణుడిని చేస్తుంది." 
@@ -72,12 +71,12 @@ export default function StudentExams() {
         </motion.div>
 
         {/* Tabs */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12">
+        <div className="flex flex-wrap justify-center gap-2 mb-8">
           {EXAM_TYPES.map((type) => (
             <button
               key={type.id}
               onClick={() => setActiveTab(type.id)}
-              className={`px-6 py-2.5 rounded-full font-bold transition-all duration-300 ${
+              className={`px-5 py-2 rounded-full font-bold transition-all duration-300 text-sm ${
                 activeTab === type.id
                   ? "bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg shadow-purple-500/20 scale-105"
                   : "bg-white/5 text-white/60 hover:bg-white/10"
@@ -108,7 +107,7 @@ export default function StudentExams() {
                 >
                   <Link 
                     href={`/student/exams/${exam.id}`}
-                    className="group relative block h-full p-8 rounded-[32px] bg-white/5 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/5 transition-all duration-300 backdrop-blur-xl overflow-hidden"
+                    className="group relative block h-full p-6 rounded-[24px] bg-white/5 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/5 transition-all duration-300 backdrop-blur-xl overflow-hidden"
                   >
                     <div className="absolute top-0 right-0 p-6">
                       <div className="px-3 py-1 rounded-full bg-purple-500/20 text-purple-400 text-xs font-bold border border-purple-500/30 uppercase tracking-wider">

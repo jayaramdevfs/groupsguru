@@ -72,9 +72,9 @@ const ExamAttemptScreen = () => {
           selectedOption: answers[q.id] || null
         }))
       };
-      await attemptService.submit(data.attemptId, payload);
+      const res = await attemptService.submit(data.attemptId, payload);
       Alert.alert("Success", "Exam submitted successfully!", [
-        { text: "OK", onPress: () => navigation.navigate("StudentDashboard") }
+        { text: "View Results", onPress: () => navigation.navigate("ExamResult", { attemptId: data.attemptId, examId }) }
       ]);
     } catch (error) {
       console.error(error);
@@ -108,7 +108,7 @@ const ExamAttemptScreen = () => {
       {/* Timer Bar */}
       <View style={styles.header}>
         <View>
-          <Text style={styles.examName}>{data.examName}</Text>
+          <Text style={styles.examName}>{language === 'en' ? data.examName : data.examNameTe}</Text>
           <Text style={styles.qCount}>Question {currentIdx + 1} of {data.questions.length}</Text>
         </View>
         <View style={[styles.timer, timeLeft < 300 && styles.timerCritical]}>
@@ -266,10 +266,10 @@ const styles = StyleSheet.create({
   },
   questionText: {
     color: "#FFFFFF",
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: "700",
-    lineHeight: 28,
-    marginBottom: 32,
+    lineHeight: 24,
+    marginBottom: 24,
   },
   optionsGrid: {
     gap: 12,
@@ -312,11 +312,11 @@ const styles = StyleSheet.create({
   optEn: {
     color: "#FFFFFF",
     fontWeight: "600",
-    fontSize: 16,
+    fontSize: 14,
   },
   optTe: {
     color: "rgba(255,255,255,0.4)",
-    fontSize: 12,
+    fontSize: 10,
     fontWeight: "600",
     marginTop: 2,
   },

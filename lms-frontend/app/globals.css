@@ -36,6 +36,34 @@ input:-internal-autofill-selected {
     color: white !important;
 }
 
+/* Custom Professional Scrollbar (Thin & Indigo) */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.3); /* purple-500 */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.5);
+}
+
+/* Hide scrollbar for specific elements if needed */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 /* Floating label: float up when input has content (typed or autofilled) */
 .floating-input:not(:placeholder-shown) ~ .floating-label,
 .floating-input:-webkit-autofill ~ .floating-label {

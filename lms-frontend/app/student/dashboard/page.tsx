@@ -45,18 +45,18 @@ export default function StudentDashboard() {
 
   return (
     <ProtectedLayout requiredRole="STUDENT">
-      <div className="min-h-screen py-24 px-6 md:px-12 w-full max-w-7xl mx-auto text-white">
+      <div className="min-h-screen py-10 px-6 md:px-12 w-full max-w-[92%] mx-auto text-white text-center">
         {/* Header */}
         <motion.div
-          className="mb-16 text-center"
+          className="mb-8 text-center"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={spring}
         >
-          <h1 className="text-[40px] md:text-[56px] font-[800] leading-tight mb-4 bg-gradient-to-r from-white via-white to-purple-400 bg-clip-text text-transparent">
+          <h1 className="text-[32px] md:text-[48px] font-[800] leading-tight mb-3 bg-gradient-to-r from-white via-white to-purple-400 bg-clip-text text-transparent">
             Welcome Back
           </h1>
-          <p className="text-[18px] text-white/70 font-[600] max-w-2xl mx-auto">
+          <p className="text-base text-white/70 font-[600] max-w-2xl mx-auto">
             Your intelligent exam preparation journey starts here.
           </p>
         </motion.div>
@@ -130,17 +130,6 @@ export default function StudentDashboard() {
           ))}
         </div>
 
-        {/* Logout */}
-        <div className="text-center">
-          <button
-            onClick={() => {
-              void logout();
-            }}
-            className="px-8 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 font-bold hover:shadow-lg hover:shadow-purple-500/30 transition-all"
-          >
-            Logout
-          </button>
-        </div>
       </div>
     </ProtectedLayout>
   );
