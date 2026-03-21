@@ -16,6 +16,7 @@ import { registryService } from "../api/registryService";
 import { MicroTopic } from "../api/types";
 import { useLanguage } from "../context/LanguageContext";
 import { LanguageToggle } from "../components/LanguageToggle";
+import { PriceBadge } from "../components/PriceBadge";
 
 type RootStackParamList = {
   Category: undefined;
@@ -83,9 +84,12 @@ const MicroTopicScreen = () => {
           <View style={styles.badge}><Text style={styles.badgeText}>{item.subject}</Text></View>
           {item.paper && <View style={[styles.badge, styles.paperBadge]}><Text style={styles.paperBadgeText}>{item.paper}</Text></View>}
         </View>
-        <Text style={styles.name}>
-          {item.topicName || "Atomic Topic"}
-        </Text>
+        <View style={{flexDirection: 'row', alignItems: 'center', marginBottom: 6}}>
+          <Text style={styles.name}>
+            {item.topicName || "Atomic Topic"}
+          </Text>
+          <PriceBadge accessType={item.accessType} priceInr={item.priceInr} />
+        </View>
         <Text style={styles.desc}>
           {item.microTopicText}
         </Text>

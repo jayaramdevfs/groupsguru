@@ -90,6 +90,8 @@ public class SectionService {
                 .sectionCode(section.getSectionCode())
                 .subCategoryId(section.getSubCategory().getId())
                 .subCategoryName(section.getSubCategory().getName())
+                .accessType(section.getAccessType())
+                .priceInr(section.getPriceInr())
                 .createdAt(section.getCreatedAt())
                 .updatedAt(section.getUpdatedAt())
                 .build();

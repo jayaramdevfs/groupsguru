@@ -38,6 +38,13 @@ public class Section {
     @JoinColumn(name = "subcategory_id", nullable = false)
     private SubCategory subCategory;
 
+    @Column(name = "access_type", length = 10)
+    @Builder.Default
+    private String accessType = "FREE";
+
+    @Column(name = "price_inr")
+    private Double priceInr;
+
     @Column(name = "is_deleted", nullable = false)
     @Builder.Default
     private boolean isDeleted = false;

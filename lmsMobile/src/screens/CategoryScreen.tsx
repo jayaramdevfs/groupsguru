@@ -17,6 +17,7 @@ import { Category } from "../api/types";
 import { useAuth } from "../context/AuthContext";
 import { useLanguage } from "../context/LanguageContext";
 import { LanguageToggle } from "../components/LanguageToggle";
+import { PriceBadge } from "../components/PriceBadge";
 
 type RootStackParamList = {
   Category: { commissionId?: number; commissionName?: string };
@@ -70,9 +71,12 @@ const CategoryScreen = () => {
         )}
       </View>
       <View style={styles.content}>
-        <Text style={styles.categoryName}>
-          {language === 'en' ? item.name : item.nameTe}
-        </Text>
+        <View style={{flexDirection: 'row', alignItems: 'center', marginBottom: 4}}>
+          <Text style={styles.categoryName}>
+            {language === 'en' ? item.name : item.nameTe}
+          </Text>
+          <PriceBadge accessType={item.accessType} priceInr={item.priceInr} />
+        </View>
         <Text style={styles.categoryDesc} numberOfLines={2}>
           {language === 'en' ? item.description : item.descriptionTe}
         </Text>

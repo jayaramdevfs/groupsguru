@@ -91,6 +91,8 @@ public class TopicService {
                 .sectionName(section.getName())
                 .subCategoryId(section.getSubCategory().getId())
                 .subCategoryName(section.getSubCategory().getName())
+                .accessType(topic.getAccessType())
+                .priceInr(topic.getPriceInr())
                 .createdAt(topic.getCreatedAt())
                 .updatedAt(topic.getUpdatedAt())
                 .build();

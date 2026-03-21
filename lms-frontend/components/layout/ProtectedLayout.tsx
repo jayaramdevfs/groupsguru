@@ -19,14 +19,18 @@ export default function ProtectedLayout({
   const router = useRouter();
 
   useEffect(() => {
+    // If we're still loading the initial auth state, do nothing
     if (loading) return;
 
+    // We only redirect if we are definitely not loading and:
+    // 1. We are not authenticated
+    // 2. We are authenticated but have the wrong role
     if (!isAuthenticated) {
       router.replace("/login");
       return;
     }
 
-    if (role !== requiredRole) {
+    if (role && role !== requiredRole) {
       router.replace("/login");
     }
   }, [isAuthenticated, role, loading, requiredRole, router]);

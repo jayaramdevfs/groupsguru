@@ -18,6 +18,8 @@ public class CategoryResponse {
     private String descriptionTe;
     private String imageUrl;
     private Long commissionId;
+    private String accessType;
+    private Double priceInr;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
@@ -30,6 +32,8 @@ public class CategoryResponse {
                 .descriptionTe(category.getDescriptionTe())
                 .imageUrl(category.getImageUrl())
                 .commissionId(category.getCommissionId())
+                .accessType(category.getAccessType())
+                .priceInr(category.getPriceInr())
                 .createdAt(category.getCreatedAt())
                 .updatedAt(category.getUpdatedAt())
                 .build();

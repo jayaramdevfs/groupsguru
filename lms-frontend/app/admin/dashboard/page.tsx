@@ -142,6 +142,19 @@ export default function AdminDashboard() {
       statLabel: "MCQs",
       disabled: false,
     },
+    {
+      title: "Pricing & Access Control",
+      titleTe: "ధర & యాక్సెస్ కంట్రోల్",
+      description: "Manage Level 0-5 Node Pricing: Set free/paid content layers securely.",
+      descriptionTe: "ధరలను మరియు యూజర్ యాక్సెస్ నిర్వహించండి.",
+      icon: "💰",
+      href: "/admin/pricing",
+      color: "from-amber-500 to-orange-500",
+      shadowColor: "rgba(245, 158, 11, 0.25)",
+      stat: null,
+      statLabel: "Paywall",
+      disabled: false,
+    },
   ];
 
   return (

@@ -43,7 +43,7 @@ public class Commission {
     @Builder.Default
     private String accessType = "FREE";
 
-    @Column(name = "price_inr", precision = 10, scale = 2)
+    @Column(name = "price_inr")
     private Double priceInr;
 
     @Column(name = "is_active", nullable = false)

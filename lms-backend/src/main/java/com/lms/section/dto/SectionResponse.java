@@ -20,6 +20,8 @@ public class SectionResponse {
     private String sectionCode;
     private Long subCategoryId;
     private String subCategoryName;
+    private String accessType;
+    private Double priceInr;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 }

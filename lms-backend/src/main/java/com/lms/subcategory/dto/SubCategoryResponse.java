@@ -18,4 +18,6 @@ public class SubCategoryResponse {
     private String syllabusCode;
     private Long categoryId;
     private String categoryName;
+    private String accessType;
+    private Double priceInr;
 }

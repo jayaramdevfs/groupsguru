@@ -42,6 +42,18 @@ public class Exam {
 
     private Boolean isDeleted = false;
 
+    @Column(name = "category_id")
+    private Long categoryId;
+
+    @Column(name = "sub_category_id")
+    private Long subCategoryId;
+
+    @Column(name = "section_id")
+    private Long sectionId;
+
+    @Column(name = "topic_id")
+    private Long topicId;
+
     private LocalDateTime createdAt = LocalDateTime.now();
     private LocalDateTime updatedAt = LocalDateTime.now();
 

@@ -7,6 +7,7 @@ import { useLanguage } from "../context/LanguageContext";
 import { ProfessionalLogo } from "../components/ProfessionalLogo";
 import { LanguageToggle } from "../components/LanguageToggle";
 import { BackgroundGlow } from "../components/BackgroundGlow";
+import { PriceBadge } from "../components/PriceBadge";
 import { commissionService } from "../api/commissionService";
 import { Commission } from "../api/types";
 import { RootStackParamList } from "../navigation/AppNavigator";
@@ -73,7 +74,10 @@ const StudentDashboard = () => {
                     <Text style={styles.iconText}>{comm.code.charAt(0)}</Text>
                   </View>
                 </View>
-                <Text style={styles.cardTitle}>{comm.name}</Text>
+                <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                  <Text style={styles.cardTitle}>{comm.name}</Text>
+                  <PriceBadge accessType={comm.accessType} priceInr={comm.priceInr} />
+                </View>
                 <Text style={styles.cardDesc}>
                   {language === "en" ? comm.description : (comm.descriptionTe || comm.description)}
                 </Text>

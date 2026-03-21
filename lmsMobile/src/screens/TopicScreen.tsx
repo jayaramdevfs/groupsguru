@@ -16,6 +16,10 @@ import { topicService } from "../api/topicService";
 import { Topic } from "../api/types";
 import { useLanguage } from "../context/LanguageContext";
 import { LanguageToggle } from "../components/LanguageToggle";
+import { PriceBadge } from "../components/PriceBadge";
+import { accessService } from "../api/accessService";
+import { AccessCheckResponse } from "../api/accessTypes";
+import { PaywallModal } from "../components/PaywallModal";
 
 type RootStackParamList = {
   Category: undefined;
@@ -31,6 +35,8 @@ type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
 const TopicScreen = () => {
   const [topics, setTopics] = useState<Topic[]>([]);
   const [loading, setLoading] = useState(true);
+  const [paywallVisible, setPaywallVisible] = useState(false);
+  const [accessData, setAccessData] = useState<AccessCheckResponse | null>(null);
   const { language } = useLanguage();
   const navigation = useNavigation<NavigationProp>();
   const route = useRoute<TopicScreenRouteProp>();
@@ -52,25 +58,43 @@ const TopicScreen = () => {
     fetchTopics();
   }, [fetchTopics]);
 
-  const renderTopic = ({ item }: { item: Topic }) => (
-    <TouchableOpacity
-      activeOpacity={0.8}
-      style={styles.card}
-      onPress={() => {
+  const handleTopicPress = async (item: Topic) => {
+    setLoading(true);
+    try {
+      const access = await accessService.checkAccess("TOPIC", item.id);
+      if (access.hasAccess) {
         navigation.navigate("MicroTopic", {
           topicId: item.id,
           topicName: item.name,
           topicNameTe: item.nameTe,
         });
-      }}
+      } else {
+        setAccessData(access);
+        setPaywallVisible(true);
+      }
+    } catch (error) {
+      Alert.alert("Error", "Could not verify access.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const renderTopic = ({ item }: { item: Topic }) => (
+    <TouchableOpacity
+      activeOpacity={0.8}
+      style={styles.card}
+      onPress={() => handleTopicPress(item)}
     >
       <View style={styles.iconContainer}>
         <Text style={styles.iconText}>{item.topicCode || 'T'}</Text>
       </View>
       <View style={styles.content}>
-        <Text style={styles.name}>
-          {language === 'en' ? item.name : item.nameTe}
-        </Text>
+        <View style={{flexDirection: 'row', alignItems: 'center', marginBottom: 4}}>
+          <Text style={styles.name}>
+            {language === 'en' ? item.name : item.nameTe}
+          </Text>
+          <PriceBadge accessType={item.accessType} priceInr={item.priceInr} />
+        </View>
         <Text style={styles.desc} numberOfLines={3}>
           {language === 'en' ? item.description : item.descriptionTe}
         </Text>
@@ -123,6 +147,12 @@ const TopicScreen = () => {
           onRefresh={fetchTopics}
         />
       )}
+      <PaywallModal 
+        visible={paywallVisible} 
+        onClose={() => setPaywallVisible(false)} 
+        price={accessData?.price ?? null} 
+        parentOptions={accessData?.parentOptions} 
+      />
     </SafeAreaView>
   );
 };

@@ -22,6 +22,8 @@ export interface Category {
   descriptionTe?: string;
   imageUrl?: string;
   commissionId: number;
+  accessType?: string;
+  priceInr?: number;
 }
 
 export interface SubCategory {
@@ -32,6 +34,8 @@ export interface SubCategory {
   descriptionTe: string;
   syllabusCode: string;
   categoryId: number;
+  accessType?: string;
+  priceInr?: number;
 }
 export interface Section {
   id: number;
@@ -41,6 +45,8 @@ export interface Section {
   descriptionTe: string;
   sectionCode: string;
   subCategoryId: number;
+  accessType?: string;
+  priceInr?: number;
 }
 
 export interface Topic {
@@ -51,6 +57,8 @@ export interface Topic {
   descriptionTe?: string;
   topicCode?: string;
   sectionId: number;
+  accessType?: string;
+  priceInr?: number;
 }
 
 export interface MicroTopic {
@@ -63,6 +71,8 @@ export interface MicroTopic {
   paper?: string;
   dataConfidence: string;
   topicId?: number;
+  accessType?: string;
+  priceInr?: number;
 }
 
 export interface Question {

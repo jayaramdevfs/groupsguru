@@ -15,6 +15,7 @@ import { subCategoryService } from "../api/subCategoryService";
 import { SubCategory } from "../api/types";
 import { useLanguage } from "../context/LanguageContext";
 import { LanguageToggle } from "../components/LanguageToggle";
+import { PriceBadge } from "../components/PriceBadge";
 
 type RootStackParamList = {
   Category: undefined;
@@ -63,9 +64,12 @@ const SubCategoryScreen = () => {
         <Text style={styles.iconText}>{item.syllabusCode || "S"}</Text>
       </View>
       <View style={styles.content}>
-        <Text style={styles.name}>
-          {language === 'en' ? item.name : item.nameTe}
-        </Text>
+        <View style={{flexDirection: 'row', alignItems: 'center', marginBottom: 4}}>
+          <Text style={styles.name}>
+            {language === 'en' ? item.name : item.nameTe}
+          </Text>
+          <PriceBadge accessType={item.accessType} priceInr={item.priceInr} />
+        </View>
         <Text style={styles.desc} numberOfLines={2}>
           {language === 'en' ? item.description : item.descriptionTe}
         </Text>

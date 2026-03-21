@@ -38,6 +38,13 @@ public class Topic {
     @JoinColumn(name = "section_id", nullable = false)
     private Section section;
 
+    @Column(name = "access_type", length = 10)
+    @Builder.Default
+    private String accessType = "FREE";
+
+    @Column(name = "price_inr")
+    private Double priceInr;
+
     @Column(name = "is_deleted", nullable = false)
     @Builder.Default
     private boolean isDeleted = false;

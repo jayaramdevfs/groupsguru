@@ -48,6 +48,12 @@ public class MicroTopic {
 
     private Long topicId; // Optional link to Topic entity
 
+    @Column(name = "access_type", length = 10)
+    private String accessType = "FREE";
+
+    @Column(name = "price_inr")
+    private Double priceInr;
+
     @Column(nullable = false)
     private Boolean isDeleted = false;
 

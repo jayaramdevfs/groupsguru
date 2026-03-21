@@ -20,7 +20,7 @@ Every sprint **MUST** conclude with the following steps BEFORE being marked as d
 
 | Platform | Stack | Port |
 |----------|-------|------|
-| **Backend** | Spring Boot 3.2.5 · Java 17 · PostgreSQL (via Docker) · JWT | 8080 |
+| **Backend** | Spring Boot 3.2.5 · Java 17 · H2 (dev) / PostgreSQL (prod) · JWT | 8080 |
 | **Frontend** | Next.js 16 · React 19 · Tailwind CSS 4 · Framer Motion | 3000 |
 | **Mobile** | React Native 0.84 · React Navigation 7 · Axios | — |
 
@@ -58,13 +58,15 @@ C:\GroupsGuru\Lms\
 | 12a | UX Polish (Exam UI) | ✅ Done | ✅ Done | ✅ Done |
 | 13 | Data Migration + PostgreSQL | ✅ Done | ✅ Done | ➖ N/A |
 | 14 | Commission + Hierarchy Restructure | ✅ Done | ✅ Done | ✅ Done |
-| 15 | Pricing + Access Control | 📅 Planned | 📅 Planned | 📅 Planned |
+| 15 | Pricing + Access Control | ✅ Done | ✅ Done | ✅ Done |
+| 15a | Post-Sprint Fix: H2 Migration + Cache Bug | ✅ Done | ✅ Done | ➖ N/A |
+| 16 | Razorpay Payment Integration | 📅 Planned | 📅 Planned | 📅 Planned |
 
-**Resume Point:** Start Sprint 15 (Pricing + Access Control)
+**Resume Point:** Start Sprint 16 (Razorpay Payment Integration)
 
 ### Execution Order:
 ```
-Sprint 14 (Commission L0) -> Sprint 15 (Pricing + Access Control)
+Sprint 15a (Hotfix) -> Sprint 16 (Razorpay)
 ```
 
 ---
@@ -847,6 +849,43 @@ This error has **3 distinct causes** that previously all showed the same message
 - [x] Both: Ensure 1 question + 4 options visible without scrolling
 - [x] Mobile: Professional logo layout matching web
 - [x] Mobile: Address UI clipping and flashlight glow effects
+
+---
+
+## Sprint 15a — Post-Sprint Hotfix: H2 Migration + Cache Bug ✅ DONE
+
+> **Context:** After Sprints 13–15 were executed by Gemini 3.14 without intermediate testing, the student login was found stuck in an infinite redirect/loading loop while admin login worked fine.
+
+### Root Cause Analysis
+
+**Symptom:** Student login appeared to redirect infinitely — the page showed a permanent loading spinner and any navigation was interrupted.
+
+**Actual Bug:** The Next.js dev server (Turbopack) had a **corrupted build cache** causing an infinite Fast Refresh rebuild loop every 2–4 seconds. Each rebuild reset React state, so `AuthContext.loading` never resolved to `false`. The `ProtectedLayout` component was stuck showing its loading state, and role-based redirects were constantly interrupted by the next rebuild cycle.
+
+**Why it appeared student-only:** Admin was tested first (generating fresh cache), then student was tested with the now-corrupted cache. The bug was environment-related, not role-related.
+
+**Fix:**
+1. Deleted `.next/` cache directory and `tsconfig.tsbuildinfo`
+2. Restarted dev server with a clean build
+3. Both admin and student login worked immediately
+
+### Database Migration: PostgreSQL → H2 (Development)
+
+Switched development environment from Docker/PostgreSQL to H2 file-based database to reduce resource overhead. PostgreSQL configuration preserved for production deployment.
+
+**Changes Made:**
+- **`application.yaml`** — Restructured to use Spring profiles. Default profile set to `dev`. Common config only (JWT, CORS, storage, server port).
+- **`application-dev.yaml`** (new) — H2 file-based database (`jdbc:h2:file:./data/lms_db`) with H2 console enabled at `/h2-console`.
+- **`application-prod.yaml`** (new) — PostgreSQL config with environment variable support (`DATABASE_URL`, `DATABASE_USERNAME`, `DATABASE_PASSWORD`).
+- **`SecurityConfig.java`** — Added `/h2-console/**` permitAll and frame options `sameOrigin` for H2 console access.
+- **`.gitignore`** — Added `data/` to exclude H2 database files.
+
+**Switching profiles:**
+- Dev (default): `./mvnw spring-boot:run` — uses H2, no Docker needed
+- Prod: `SPRING_PROFILES_ACTIVE=prod ./mvnw spring-boot:run` — uses PostgreSQL
+
+**Closure Date:** March 22, 2026
+**Verification:** Admin and student login both functional. H2 database seeded correctly via DataInitializer. All existing APIs operational.
 
 ---
 

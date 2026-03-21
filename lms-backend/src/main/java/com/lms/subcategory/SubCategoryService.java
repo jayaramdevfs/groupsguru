@@ -85,6 +85,8 @@ public class SubCategoryService {
                 .syllabusCode(subCategory.getSyllabusCode())
                 .categoryId(subCategory.getCategory().getId())
                 .categoryName(subCategory.getCategory().getName())
+                .accessType(subCategory.getAccessType())
+                .priceInr(subCategory.getPriceInr())
                 .build();
     }
 }

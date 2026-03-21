@@ -36,6 +36,13 @@ public class Category {
     @Column(name = "commission_id")
     private Long commissionId;
 
+    @Column(name = "access_type", length = 10)
+    @Builder.Default
+    private String accessType = "FREE";
+
+    @Column(name = "price_inr")
+    private Double priceInr;
+
     @Column(name = "is_deleted", nullable = false)
     @Builder.Default
     private boolean isDeleted = false;

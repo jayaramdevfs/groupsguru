@@ -22,6 +22,8 @@ public class TopicResponse {
     private String sectionName;      // denormalised for frontend
     private Long subCategoryId;      // bubble up for easy filtering
     private String subCategoryName;
+    private String accessType;
+    private Double priceInr;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 }
