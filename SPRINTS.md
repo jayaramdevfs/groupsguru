@@ -54,13 +54,14 @@ C:\LMS PLATFORM\Lms\
 | 10 | Exam Structure | ✅ Done | ✅ Done | ✅ Done |
 | 11 | Student Exam Flow | ✅ Done | ✅ Done | ✅ Done |
 | 12 | Results & Analytics | 📅 Planned | 📅 Planned | 📅 Planned |
+| 12a | UX Polish (Exam UI) | — | 📅 Planned | 📅 Planned |
 | 13 | Production Readiness | 📅 Planned | 📅 Planned | 📅 Planned |
 
 **Resume Point:** Start Sprint 12 (Results & Analytics)
 
 ### Execution Order:
 ```
-Sprint 11 (Student Exam Flow) -> Sprint 13
+Sprint 11 (Student Exam Flow) -> Sprint 12 -> Sprint 12a (UX Polish) -> Sprint 13
 ```
 
 ---
@@ -782,6 +783,41 @@ This error has **3 distinct causes** that previously all showed the same message
 - `src/components/CircularProgress.tsx`
 
 **Verification:** Results display correctly on all platforms. Scores match. Topic breakdown is accurate.
+
+---
+
+## Sprint 12a — UX Polish (Exam UI) 📅
+
+> **Context:** Post-Sprint 11 verification revealed UX problems on both web and mobile
+> exam screens. Content is too large, wastes space, and bilingual rendering is incomplete.
+
+### UX Issues Identified (2026-03-21):
+
+**Issue 1: Text size too large on exam screens (Web + Mobile)**
+- Question text, option text, and labels are oversized
+- On mobile (portrait), a single match-the-following question fills the entire screen
+- On web, the question card takes most of the viewport with few options visible
+- **Fix needed:** Reduce font sizes for question body, option labels, and exam header
+- **Target:** At least 1 full question + all 4 options visible without scrolling (both platforms)
+
+**Issue 2: Questions not rendered in Telugu (bilingual gap)**
+- Questions display only in English (`questionTextEn`) even when Telugu mode is selected
+- Answer options correctly show both English and Telugu (`optionAEn` / `optionATe`)
+- **Root cause:** Exam attempt screen likely only reads `questionText` (English field) and doesn't switch to `questionTextTe` based on language context
+- **Fix needed:** Wire up language toggle to display `questionTextTe` when Telugu is selected
+
+**Issue 3: Exam screen space efficiency (Mobile)**
+- Prev / Submit / Next buttons are very large, consuming valuable screen real estate
+- Question navigator (if present) should be collapsible on mobile
+- **Fix needed:** Compact button bar, smaller padding, better use of vertical space
+
+### Tasks:
+- [ ] Frontend: Reduce exam question/option font sizes and padding
+- [ ] Frontend: Wire Telugu question text to language toggle
+- [ ] Mobile: Reduce exam question/option font sizes and padding
+- [ ] Mobile: Wire Telugu question text to language toggle
+- [ ] Mobile: Compact navigation buttons (Prev/Submit/Next)
+- [ ] Both: Ensure 1 question + 4 options visible without scrolling
 
 ---
 
