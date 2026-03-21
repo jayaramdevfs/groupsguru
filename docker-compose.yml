@@ -2,16 +2,16 @@ version: '3.8'
 services:
   postgres:
     image: postgres:15
-    container_name: lms-postgres
+    container_name: groupsguru-postgres
     environment:
-      POSTGRES_DB: lms_db
+      POSTGRES_DB: groupsguru_db
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
     ports:
       - "5432:5432"
     volumes:
-      - lms-postgres-data:/var/lib/postgresql/data
+      - groupsguru-postgres-data:/var/lib/postgresql/data
     restart: always
 
 volumes:
-  lms-postgres-data:
+  groupsguru-postgres-data:

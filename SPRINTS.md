@@ -1,6 +1,6 @@
-# GroupsGuru LMS — Master Sprint Plan (Vertical Slices)
+# GroupsGuru — Master Sprint Plan (Vertical Slices)
 
-**Updated**: 2026-03-21
+**Updated**: 2026-03-22
 **Architecture**: Vertical Slicing — each sprint delivers Backend + Frontend + Mobile together
 
 ---
@@ -30,9 +30,9 @@ Every sprint **MUST** conclude with the following steps BEFORE being marked as d
 
 ```
 C:\GroupsGuru\Lms\
-├── lms-backend/       → Spring Boot API
-├── lms-frontend/      → Next.js web app
-└── lmsMobile/         → React Native mobile app
+├── groupsguru-backend/    → Spring Boot API
+├── groupsguru-frontend/   → Next.js web app
+└── groupsguru-mobile/     → React Native mobile app
 ```
 
 **Groups Guru Intelligence Source:** `C:\Users\jayar\OneDrive\Desktop\groupsguru`
@@ -60,13 +60,14 @@ C:\GroupsGuru\Lms\
 | 14 | Commission + Hierarchy Restructure | ✅ Done | ✅ Done | ✅ Done |
 | 15 | Pricing + Access Control | ✅ Done | ✅ Done | ✅ Done |
 | 15a | Post-Sprint Fix: H2 Migration + Cache Bug | ✅ Done | ✅ Done | ➖ N/A |
+| 15b | Project Rename: LMS → GroupsGuru | ✅ Done | ✅ Done | ✅ Done |
 | 16 | Razorpay Payment Integration | 📅 Planned | 📅 Planned | 📅 Planned |
 
 **Resume Point:** Start Sprint 16 (Razorpay Payment Integration)
 
 ### Execution Order:
 ```
-Sprint 15a (Hotfix) -> Sprint 16 (Razorpay)
+Sprint 15b (Rename) -> Sprint 16 (Razorpay)
 ```
 
 ---
@@ -875,7 +876,7 @@ Switched development environment from Docker/PostgreSQL to H2 file-based databas
 
 **Changes Made:**
 - **`application.yaml`** — Restructured to use Spring profiles. Default profile set to `dev`. Common config only (JWT, CORS, storage, server port).
-- **`application-dev.yaml`** (new) — H2 file-based database (`jdbc:h2:file:./data/lms_db`) with H2 console enabled at `/h2-console`.
+- **`application-dev.yaml`** (new) — H2 file-based database (`jdbc:h2:file:./data/groupsguru_db`) with H2 console enabled at `/h2-console`.
 - **`application-prod.yaml`** (new) — PostgreSQL config with environment variable support (`DATABASE_URL`, `DATABASE_USERNAME`, `DATABASE_PASSWORD`).
 - **`SecurityConfig.java`** — Added `/h2-console/**` permitAll and frame options `sameOrigin` for H2 console access.
 - **`.gitignore`** — Added `data/` to exclude H2 database files.
@@ -886,6 +887,47 @@ Switched development environment from Docker/PostgreSQL to H2 file-based databas
 
 **Closure Date:** March 22, 2026
 **Verification:** Admin and student login both functional. H2 database seeded correctly via DataInitializer. All existing APIs operational.
+
+---
+
+## Sprint 15b — Project Rename: LMS → GroupsGuru ✅ DONE
+
+> **Context:** Rebranded the entire project from generic "LMS" naming to "GroupsGuru" to match the domain (groupsguru.in) and product identity.
+
+### Changes Made (130+ files, 220+ references)
+
+**Java Backend (107 files):**
+- Renamed package `com.lms` → `com.groupsguru` across all 107 source files
+- Renamed `LmsApplication.java` → `GroupsGuruApplication.java`
+- Renamed test class `LmsApplicationTests` → `GroupsGuruApplicationTests`
+
+**Configuration Files:**
+- **`pom.xml`** — groupId: `com.groupsguru`, artifactId: `groupsguru`, name: `groupsguru`
+- **`application.yaml`** — app name: `groupsguru`
+- **`application-dev.yaml`** — database: `groupsguru_db`
+- **`application-prod.yaml`** — database: `groupsguru_db`
+- **`docker-compose.yml`** — container: `groupsguru-postgres`, db: `groupsguru_db`
+
+**Frontend:**
+- **`package.json`** — name: `groupsguru-frontend`
+
+**Mobile (Android + iOS):**
+- Package: `com.lmsmobile` → `com.groupsguru`
+- App name/module: `lmsMobile` → `groupsguru-mobile`
+- Updated: `build.gradle`, `settings.gradle`, `app.json`, `package.json`
+- Updated: `Podfile`, `Info.plist`, `AppDelegate.swift`, Xcode project/scheme files
+
+**Folder Renames:**
+- `lms-backend/` → `groupsguru-backend/`
+- `lms-frontend/` → `groupsguru-frontend/`
+- `lmsMobile/` → `groupsguru-mobile/`
+
+**Document Archival:**
+- Consolidated all scattered planning docs from `Documents& plans&rules/`, `docs/`, `Repo/`, `postam/` into single `C:\GroupsGuru\archive/` folder
+- Single master document: `SPRINTS.md`
+
+**Closure Date:** March 22, 2026
+**Domain:** groupsguru.in
 
 ---
 
