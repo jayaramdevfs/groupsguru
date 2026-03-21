@@ -19,7 +19,7 @@ Every sprint **MUST** conclude with the following steps BEFORE being marked as d
 
 | Platform | Stack | Port |
 |----------|-------|------|
-| **Backend** | Spring Boot 3.2.5 · Java 17 · H2/PostgreSQL · JWT | 8080 |
+| **Backend** | Spring Boot 3.2.5 · Java 17 · PostgreSQL (via Docker) · JWT | 8080 |
 | **Frontend** | Next.js 16 · React 19 · Tailwind CSS 4 · Framer Motion | 3000 |
 | **Mobile** | React Native 0.84 · React Navigation 7 · Axios | — |
 
