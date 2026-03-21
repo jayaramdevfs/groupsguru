@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GroupsGuru — Urban Planning & Architecture</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: #0f051d;
+  color: #FFFFFF;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-weight: 600;
+  min-height: 100vh;
+}
+.topbar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 28px;
+  border-bottom: 1px solid rgba(147,51,234,0.1);
+}
+.topbar-logo {
+  font-size: 22px; font-weight: 800;
+  background: linear-gradient(135deg, #9333EA, #4f46e5);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text; text-decoration: none;
+}
+.topbar-right { display: flex; align-items: center; gap: 16px; }
+.lang-toggle {
+  display: flex; gap: 4px;
+  background: rgba(147,51,234,0.08);
+  border: 1px solid rgba(147,51,234,0.2);
+  border-radius: 10px; padding: 4px;
+}
+.lang-toggle button {
+  background: none; border: none;
+  color: rgba(255,255,255,0.6);
+  font-weight: 600; font-size: 12px;
+  padding: 4px 10px; border-radius: 7px;
+  cursor: pointer; font-family: inherit; transition: all 0.2s;
+}
+.lang-toggle button.active {
+  background: linear-gradient(135deg, #9333EA, #4f46e5); color: #fff;
+}
+.profile-icon {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: linear-gradient(135deg, #9333EA, #DB2777);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; font-weight: 800; cursor: pointer;
+}
+.container { max-width: 760px; margin: 0 auto; padding: 28px 24px; }
+.breadcrumb {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 13px; color: rgba(255,255,255,0.5);
+  margin-bottom: 24px; flex-wrap: wrap;
+}
+.breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+.breadcrumb a:hover { color: #9333EA; }
+.breadcrumb .sep { opacity: 0.4; }
+.breadcrumb .current { color: #fff; }
+.header-row {
+  display: flex; align-items: center; gap: 16px;
+  margin-bottom: 28px; flex-wrap: wrap;
+}
+.page-header { font-size: 28px; font-weight: 800; margin: 0; }
+.badge-vh {
+  font-size: 12px; font-weight: 700;
+  padding: 5px 14px; border-radius: 10px;
+  background: rgba(239,68,68,0.15); color: #f87171;
+  white-space: nowrap;
+}
+.intel-card {
+  background: linear-gradient(135deg, rgba(147,51,234,0.15), rgba(79,70,229,0.15));
+  border: 1px solid rgba(147,51,234,0.3);
+  border-radius: 24px;
+  padding: 24px 26px;
+  margin-bottom: 28px;
+  position: relative;
+  overflow: hidden;
+}
+.intel-card::before {
+  content: '';
+  position: absolute;
+  top: -40%; right: -20%;
+  width: 200px; height: 200px;
+  background: radial-gradient(circle, rgba(147,51,234,0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.intel-card .label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #9333EA;
+  margin-bottom: 8px;
+}
+.intel-card .text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.85);
+}
+.intel-card .confidence {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #9333EA;
+  font-weight: 700;
+}
+.section-block { margin-bottom: 28px; }
+.section-title {
+  font-size: 16px; font-weight: 800; margin-bottom: 14px;
+  color: rgba(255,255,255,0.9);
+}
+.material-item {
+  background: rgba(147,51,234,0.08);
+  border: 1px solid rgba(147,51,234,0.2);
+  border-radius: 20px;
+  padding: 18px 22px;
+  display: flex; align-items: center; gap: 12px;
+  text-decoration: none; color: #fff;
+  margin-bottom: 12px;
+  transition: border-color 0.2s;
+}
+.material-item:hover { border-color: rgba(147,51,234,0.45); }
+.material-icon { font-size: 22px; }
+.material-info h4 { font-size: 14px; font-weight: 800; margin-bottom: 2px; }
+.material-info span { font-size: 12px; color: rgba(255,255,255,0.5); }
+.facts-list {
+  list-style: none; padding: 0;
+}
+.facts-list li {
+  background: rgba(147,51,234,0.08);
+  border: 1px solid rgba(147,51,234,0.15);
+  border-radius: 16px;
+  padding: 16px 20px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.5;
+  display: flex; gap: 10px; align-items: flex-start;
+}
+.facts-list li::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: #9333EA;
+  border-radius: 50%;
+  margin-top: 7px;
+  flex-shrink: 0;
+}
+.btn-row {
+  display: flex; gap: 14px; flex-wrap: wrap;
+  margin-top: 32px;
+}
+.btn-primary {
+  display: inline-block;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #9333EA, #4f46e5);
+  color: #fff; border: none; border-radius: 16px;
+  font-size: 15px; font-weight: 800;
+  cursor: pointer; font-family: inherit;
+  text-decoration: none; text-align: center;
+  transition: transform 0.15s, box-shadow 0.2s;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(147,51,234,0.35);
+}
+.btn-secondary {
+  display: inline-block;
+  padding: 14px 28px;
+  background: rgba(147,51,234,0.08);
+  border: 1px solid rgba(147,51,234,0.3);
+  color: #fff; border-radius: 16px;
+  font-size: 15px; font-weight: 800;
+  cursor: pointer; font-family: inherit;
+  text-decoration: none; text-align: center;
+  transition: transform 0.15s, border-color 0.2s;
+}
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  border-color: rgba(147,51,234,0.5);
+}
+@media (max-width: 640px) {
+  .container { padding: 20px 16px; }
+  .btn-row { flex-direction: column; }
+  .btn-primary, .btn-secondary { width: 100%; }
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <a href="02-dashboard.html" class="topbar-logo">GroupsGuru</a>
+  <div class="topbar-right">
+    <div class="lang-toggle">
+      <button class="active">EN</button>
+      <button>తెలుగు</button>
+    </div>
+    <div class="profile-icon">S</div>
+  </div>
+</div>
+<div class="container">
+  <div class="breadcrumb">
+    <a href="02-dashboard.html">Dashboard</a>
+    <span class="sep">›</span>
+    <span>...</span>
+    <span class="sep">›</span>
+    <a href="06-topic.html">Indus Valley</a>
+    <span class="sep">›</span>
+    <span class="current">Urban Planning & Architecture</span>
+  </div>
+  <div class="header-row">
+    <h1 class="page-header">Urban Planning & Architecture</h1>
+    <span class="badge-vh">VERY HIGH ⬆</span>
+  </div>
+
+  <div class="intel-card">
+    <div class="label">Intelligence</div>
+    <div class="text">This topic appeared in 4 out of 5 recent exams. High probability of questions on grid-pattern streets, drainage systems, and the Great Bath.</div>
+    <div class="confidence">Confidence: 0.85</div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-title">Study Materials</div>
+    <a href="#" class="material-item">
+      <span class="material-icon">📄</span>
+      <div class="material-info">
+        <h4>Urban Planning Notes — Indus Valley</h4>
+        <span>PDF · FREE</span>
+      </div>
+    </a>
+  </div>
+
+  <div class="section-block">
+    <div class="section-title">Quick Facts</div>
+    <ul class="facts-list">
+      <li>Cities like Harappa and Mohenjo-daro followed a grid-pattern layout with advanced drainage systems, indicating sophisticated urban planning.</li>
+      <li>The Great Bath at Mohenjo-daro is one of the earliest known public water structures, measuring approximately 12m x 7m x 2.4m.</li>
+      <li>Houses were built with standardized baked bricks in a 4:2:1 ratio, and most had private wells and bathrooms connected to covered drains.</li>
+    </ul>
+  </div>
+
+  <div class="btn-row">
+    <a href="08-exam.html" class="btn-primary">Practice Questions</a>
+    <a href="08-exam.html" class="btn-secondary">Start Full Topic Test</a>
+  </div>
+</div>
+</body>
+</html>

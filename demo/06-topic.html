@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GroupsGuru — Indus Valley Civilization</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: #0f051d;
+  color: #FFFFFF;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-weight: 600;
+  min-height: 100vh;
+}
+.topbar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 28px;
+  border-bottom: 1px solid rgba(147,51,234,0.1);
+}
+.topbar-logo {
+  font-size: 22px; font-weight: 800;
+  background: linear-gradient(135deg, #9333EA, #4f46e5);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text; text-decoration: none;
+}
+.topbar-right { display: flex; align-items: center; gap: 16px; }
+.lang-toggle {
+  display: flex; gap: 4px;
+  background: rgba(147,51,234,0.08);
+  border: 1px solid rgba(147,51,234,0.2);
+  border-radius: 10px; padding: 4px;
+}
+.lang-toggle button {
+  background: none; border: none;
+  color: rgba(255,255,255,0.6);
+  font-weight: 600; font-size: 12px;
+  padding: 4px 10px; border-radius: 7px;
+  cursor: pointer; font-family: inherit; transition: all 0.2s;
+}
+.lang-toggle button.active {
+  background: linear-gradient(135deg, #9333EA, #4f46e5); color: #fff;
+}
+.profile-icon {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: linear-gradient(135deg, #9333EA, #DB2777);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; font-weight: 800; cursor: pointer;
+}
+.container { max-width: 960px; margin: 0 auto; padding: 28px 24px; }
+.breadcrumb {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 13px; color: rgba(255,255,255,0.5);
+  margin-bottom: 24px; flex-wrap: wrap;
+}
+.breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+.breadcrumb a:hover { color: #9333EA; }
+.breadcrumb .sep { opacity: 0.4; }
+.breadcrumb .current { color: #fff; }
+.page-header { font-size: 28px; font-weight: 800; margin-bottom: 32px; }
+.section-title {
+  font-size: 18px; font-weight: 800; margin-bottom: 16px;
+  color: rgba(255,255,255,0.9);
+}
+.section-block { margin-bottom: 36px; }
+.micro-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+}
+.micro-card {
+  background: rgba(147,51,234,0.08);
+  border: 1px solid rgba(147,51,234,0.2);
+  border-radius: 20px;
+  padding: 20px 22px;
+  text-decoration: none; color: #fff;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  display: block;
+}
+.micro-card:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 8px 30px rgba(147,51,234,0.18);
+  border-color: rgba(147,51,234,0.45);
+}
+.micro-card h4 { font-size: 14px; font-weight: 800; margin-bottom: 8px; }
+.prediction {
+  font-size: 11px; font-weight: 700;
+  padding: 3px 10px; border-radius: 8px;
+  display: inline-block;
+}
+.pred-very-high { background: rgba(239,68,68,0.15); color: #f87171; }
+.pred-high { background: rgba(249,115,22,0.15); color: #fb923c; }
+.pred-medium { background: rgba(234,179,8,0.15); color: #facc15; }
+.pred-low { background: rgba(34,197,94,0.15); color: #4ade80; }
+.material-list {
+  display: flex; flex-direction: column; gap: 12px;
+}
+.material-item {
+  background: rgba(147,51,234,0.08);
+  border: 1px solid rgba(147,51,234,0.2);
+  border-radius: 20px;
+  padding: 18px 22px;
+  display: flex; align-items: center; justify-content: space-between;
+  text-decoration: none; color: #fff;
+  transition: border-color 0.2s;
+}
+.material-item:hover { border-color: rgba(147,51,234,0.45); }
+.material-left { display: flex; align-items: center; gap: 12px; }
+.material-icon { font-size: 22px; }
+.material-info h4 { font-size: 14px; font-weight: 800; margin-bottom: 2px; }
+.material-info span { font-size: 12px; color: rgba(255,255,255,0.5); }
+.badge-free {
+  font-size: 11px; font-weight: 700;
+  padding: 3px 10px; border-radius: 8px;
+  background: rgba(34,197,94,0.15); color: #4ade80;
+}
+.badge-premium {
+  font-size: 11px; font-weight: 700;
+  padding: 3px 10px; border-radius: 8px;
+  background: rgba(249,115,22,0.15); color: #fb923c;
+}
+.test-item {
+  background: rgba(147,51,234,0.08);
+  border: 1px solid rgba(147,51,234,0.2);
+  border-radius: 20px;
+  padding: 18px 22px;
+  display: flex; align-items: center; justify-content: space-between;
+  text-decoration: none; color: #fff;
+  transition: transform 0.2s, border-color 0.2s;
+}
+.test-item:hover {
+  transform: translateY(-2px);
+  border-color: rgba(147,51,234,0.45);
+}
+.test-left { display: flex; align-items: center; gap: 12px; }
+.test-icon { font-size: 20px; }
+.test-info h4 { font-size: 14px; font-weight: 800; margin-bottom: 2px; }
+.test-info span { font-size: 12px; color: rgba(255,255,255,0.5); }
+.test-list { display: flex; flex-direction: column; gap: 12px; }
+@media (max-width: 640px) {
+  .container { padding: 20px 16px; }
+  .micro-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <a href="02-dashboard.html" class="topbar-logo">GroupsGuru</a>
+  <div class="topbar-right">
+    <div class="lang-toggle">
+      <button class="active">EN</button>
+      <button>తెలుగు</button>
+    </div>
+    <div class="profile-icon">S</div>
+  </div>
+</div>
+<div class="container">
+  <div class="breadcrumb">
+    <a href="02-dashboard.html">Dashboard</a>
+    <span class="sep">›</span>
+    <a href="03-category.html">G1 Prelims</a>
+    <span class="sep">›</span>
+    <a href="04-subcategory.html">History</a>
+    <span class="sep">›</span>
+    <a href="05-section.html">Ancient India</a>
+    <span class="sep">›</span>
+    <span class="current">Indus Valley Civilization</span>
+  </div>
+  <h1 class="page-header">Indus Valley Civilization</h1>
+
+  <div class="section-block">
+    <div class="section-title">Micro Topics</div>
+    <div class="micro-grid">
+      <a href="07-micro-topic.html" class="micro-card">
+        <h4>Urban Planning & Architecture</h4>
+        <span class="prediction pred-very-high">Prediction: VERY HIGH 🔴</span>
+      </a>
+      <a href="07-micro-topic.html" class="micro-card">
+        <h4>Trade & Economy</h4>
+        <span class="prediction pred-high">Prediction: HIGH 🟠</span>
+      </a>
+      <a href="07-micro-topic.html" class="micro-card">
+        <h4>Script & Seals</h4>
+        <span class="prediction pred-medium">Prediction: MEDIUM 🟡</span>
+      </a>
+      <a href="07-micro-topic.html" class="micro-card">
+        <h4>Religion & Culture</h4>
+        <span class="prediction pred-high">Prediction: HIGH 🟠</span>
+      </a>
+      <a href="07-micro-topic.html" class="micro-card">
+        <h4>Decline Theories</h4>
+        <span class="prediction pred-low">Prediction: LOW 🟢</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-title">Study Materials</div>
+    <div class="material-list">
+      <a href="#" class="material-item">
+        <div class="material-left">
+          <span class="material-icon">📄</span>
+          <div class="material-info">
+            <h4>Indus Valley Complete Notes</h4>
+            <span>PDF</span>
+          </div>
+        </div>
+        <span class="badge-free">FREE</span>
+      </a>
+      <a href="#" class="material-item">
+        <div class="material-left">
+          <span class="material-icon">📄</span>
+          <div class="material-info">
+            <h4>NCERT Summary: Ancient India Ch.2</h4>
+            <span>PDF</span>
+          </div>
+        </div>
+        <span class="badge-premium">PREMIUM 🔒</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-title">Test Series</div>
+    <div class="test-list">
+      <a href="08-exam.html" class="test-item">
+        <div class="test-left">
+          <span class="test-icon">▶</span>
+          <div class="test-info">
+            <h4>Topic-wise Practice</h4>
+            <span>5 Qs · Untimed · FREE</span>
+          </div>
+        </div>
+        <span class="badge-free">FREE</span>
+      </a>
+      <a href="08-exam.html" class="test-item">
+        <div class="test-left">
+          <span class="test-icon">▶</span>
+          <div class="test-info">
+            <h4>Ancient History Mock Test</h4>
+            <span>25 Qs · 30 min · FREE</span>
+          </div>
+        </div>
+        <span class="badge-free">FREE</span>
+      </a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
