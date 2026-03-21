@@ -28,7 +28,7 @@ Every sprint **MUST** conclude with the following steps BEFORE being marked as d
 ## Project Directories
 
 ```
-C:\LMS PLATFORM\Lms\
+C:\GroupsGuru\Lms\
 ├── lms-backend/       → Spring Boot API
 ├── lms-frontend/      → Next.js web app
 └── lmsMobile/         → React Native mobile app
