@@ -26,19 +26,32 @@ public class QuestionDataLoader implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        if (repository.count() > 0) {
-            log.info("Questions already loaded, skipping...");
-            return;
+        org.springframework.core.io.support.PathMatchingResourcePatternResolver resolver = new org.springframework.core.io.support.PathMatchingResourcePatternResolver();
+        org.springframework.core.io.Resource[] resources = resolver.getResources("classpath*:groupsguru/questions/**/*.xml");
+        
+        int totalLoaded = 0;
+        for (org.springframework.core.io.Resource resource : resources) {
+            try (InputStream is = resource.getInputStream()) {
+                List<Question> questions = parser.parse(is);
+                List<Question> newQuestions = new java.util.ArrayList<>();
+                
+                for (Question q : questions) {
+                    if (q.getQuestionCode() != null && repository.findByQuestionCodeAndIsDeletedFalse(q.getQuestionCode()).isEmpty()) {
+                        newQuestions.add(q);
+                    }
+                }
+                
+                if (!newQuestions.isEmpty()) {
+                    repository.saveAll(newQuestions);
+                    totalLoaded += newQuestions.size();
+                    log.info("Loaded {} new questions from {}", newQuestions.size(), resource.getFilename());
+                } else {
+                    log.info("No new questions to load from {}", resource.getFilename());
+                }
+            } catch (Exception e) {
+                log.error("Failed to parse and load Moodle XML: {}", resource.getFilename(), e);
+            }
         }
-
-        String filePath = "groupsguru/questions/group-1/s11.1-history-ancient-medieval.xml";
-        try (InputStream is = new ClassPathResource(filePath).getInputStream()) {
-            List<Question> questions = parser.parse(is);
-            repository.saveAll(questions);
-            log.info("Loaded {} questions from {}", questions.size(), filePath);
-        } catch (Exception e) {
-            log.error("Failed to parse and load Moodle XML: {}", filePath, e);
-            throw e; // Crash on failure
-        }
+        log.info("Total new questions loaded: {}", totalLoaded);
     }
 }

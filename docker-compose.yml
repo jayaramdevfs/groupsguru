@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:15
+    container_name: lms-postgres
+    environment:
+      POSTGRES_DB: lms_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - lms-postgres-data:/var/lib/postgresql/data
+    restart: always
+
+volumes:
+  lms-postgres-data:

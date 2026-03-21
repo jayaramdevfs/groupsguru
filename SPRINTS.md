@@ -55,14 +55,15 @@ C:\LMS PLATFORM\Lms\
 | 11 | Student Exam Flow | ✅ Done | ✅ Done | ✅ Done |
 | 12 | Results & Analytics | ✅ Done | ✅ Done | ✅ Done |
 | 12a | UX Polish (Exam UI) | ✅ Done | ✅ Done | ✅ Done |
-| 13 | Frontend UI/UX Polish | 📅 Planned | 📅 Planned | 📅 Planned |
-| 14 | Production Readiness | 📅 Planned | 📅 Planned | 📅 Planned |
+| 13 | Data Migration + PostgreSQL | ✅ Done | ✅ Done | ➖ N/A |
+| 14 | Commission + Hierarchy Restructure | 📅 Planned | 📅 Planned | 📅 Planned |
+| 15 | Pricing + Access Control | 📅 Planned | 📅 Planned | 📅 Planned |
 
-**Resume Point:** Start Sprint 13 (Frontend UI/UX Polish)
+**Resume Point:** Start Sprint 14 (Commission + Hierarchy Restructure)
 
 ### Execution Order:
 ```
-Sprint 12a (UX Polish) -> Sprint 13 (Front-End UI/UX Design) -> Sprint 14
+Sprint 13 (Data Migration) -> Sprint 14 (Commission L0) -> Sprint 15
 ```
 
 ---
@@ -798,6 +799,29 @@ This error has **3 distinct causes** that previously all showed the same message
 **Issue 1: Text size too large on exam screens (Web + Mobile)**
 - Question text, option text, and labels are oversized
 - On mobile (portrait), a single match-the-following question fills the entire screen
+
+---
+
+## Sprint 13 — Data Migration + PostgreSQL ✅ DONE (Backend + Frontend + Mobile)
+
+> **Context:** This sprint established the foundational Database system and local file storage, laying the groundwork for the hierarchical restructure in Sprint 14.
+
+### Backend:
+- Replaced the H2 in-memory DB with PostgreSQL `lms-postgres` running via `docker-compose.yml`.
+- Refactored `application.yaml` to connect to PostgreSQL with `ddl-auto: update`.
+- Handled the idempotency of data by filtering duplicates using `QuestionCode` and ensuring `DataLoaders` do not insert duplicated elements over API restarts.
+- Engineered a robust local file system `FileStorageService` mapped to project root `uploads/` for managing and serving generic files (PDFs/metadata) consistently.
+- Created `GET /api/admin/migration/status` endpoint to pull `microTopic` and `question` populated lengths for sanity checks.
+
+### Frontend:
+- Generated a dashboard view `app/admin/migration/page.tsx` that visually monitors the exact DB states mimicking the app branding (displaying Micro-Topics tracked against the 1,021 goal natively).
+
+### Mobile:
+- N/A - No modifications intended. 
+
+**Closure Date:** March 22, 2026
+**Verification:** Docker containers spin up beautifully, data models generated and correctly constrained, API serves expected registry mapping dynamically directly linking the Database to the active Frontend Dashboard.
+
 - On web, the question card takes most of the viewport with few options visible
 - **Fix needed:** Reduce font sizes for question body, option labels, and exam header
 - **Target:** At least 1 full question + all 4 options visible without scrolling (both platforms)

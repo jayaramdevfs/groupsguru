@@ -3,23 +3,20 @@ spring:
     name: lms
 
   datasource:
-    url: jdbc:h2:mem:lms_db;DB_CLOSE_DELAY=-1
-    username: sa
-    password: 
-    driver-class-name: org.h2.Driver
-
-  h2:
-    console:
-      enabled: true
+    url: jdbc:postgresql://localhost:5432/lms_db
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
 
   jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     show-sql: true
     properties:
       hibernate:
         format_sql: true
+
 
 server:
   port: 8080
@@ -28,6 +25,8 @@ jwt:
   expiration: 86400000
 
 app:
+  storage:
+    location: ./uploads
   cors:
     allowed-origins: ${APP_CORS_ALLOWED_ORIGINS:http://localhost:3000}
   auth:
