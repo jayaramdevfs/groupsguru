@@ -9,15 +9,21 @@ import {
   StatusBar,
   ScrollView,
   Alert,
+  Dimensions,
 } from "react-native";
 import { useRoute, RouteProp, useNavigation } from "@react-navigation/native";
 import { attemptService } from "../api/attemptService";
 import { AttemptStartResponse, Question } from "../api/types";
 import { useLanguage } from "../context/LanguageContext";
+import { FormattedQuestionText } from "../components/FormattedQuestionText";
+import { BackgroundGlow } from "../components/BackgroundGlow";
+
+const { width } = Dimensions.get('window');
 
 type RootStackParamList = {
   ExamAttempt: { examId: number };
   StudentDashboard: undefined;
+  ExamResult: { attemptId: number; examId: number };
 };
 
 type RouteParams = RouteProp<RootStackParamList, "ExamAttempt">;
@@ -104,77 +110,92 @@ const ExamAttemptScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="light-content" />
+      <BackgroundGlow />
       
-      {/* Timer Bar */}
+      {/* Refined Header */}
       <View style={styles.header}>
-        <View>
-          <Text style={styles.examName}>{language === 'en' ? data.examName : data.examNameTe}</Text>
-          <Text style={styles.qCount}>Question {currentIdx + 1} of {data.questions.length}</Text>
+        <View style={styles.headerTitleContainer}>
+          <Text style={styles.examName} numberOfLines={1}>
+            {language === 'en' ? data.examName : data.examNameTe}
+          </Text>
+          <View style={styles.qBadge}>
+            <Text style={styles.qBadgeText}>Q {currentIdx + 1} / {data.questions.length}</Text>
+          </View>
         </View>
+        
         <View style={[styles.timer, timeLeft < 300 && styles.timerCritical]}>
           <Text style={styles.timerText}>{minutes.toString().padStart(2, '0')}:{seconds.toString().padStart(2, '0')}</Text>
         </View>
       </View>
 
-      <ScrollView contentContainerStyle={styles.scroll}>
+      {/* Question Navigator Bar (Horizontal Shelf) */}
+      <View style={styles.shelfContainer}>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.shelfScroll}>
+          {data.questions.map((q, idx) => (
+            <TouchableOpacity 
+              key={q.id}
+              style={[
+                styles.shelfItem, 
+                currentIdx === idx && styles.shelfItemActive,
+                answers[q.id] && styles.shelfItemAnswered
+              ]}
+              onPress={() => setCurrentIdx(idx)}
+            >
+              <Text style={[
+                styles.shelfItemText, 
+                currentIdx === idx && styles.shelfItemTextActive,
+                answers[q.id] && styles.shelfItemTextAnswered
+              ]}>
+                {idx + 1}
+              </Text>
+            </TouchableOpacity>
+          ))}
+        </ScrollView>
+      </View>
+
+      <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
         <View style={styles.qCard}>
-          <Text style={styles.questionText}>
-            {language === 'en' ? currentQuestion.questionTextEn : currentQuestion.questionTextTe}
-          </Text>
+          {/* Professional Question Formatting */}
+          <FormattedQuestionText 
+            text={language === 'en' ? currentQuestion.questionTextEn : currentQuestion.questionTextTe} 
+          />
 
           <View style={styles.optionsGrid}>
-            <OptionButton 
-               label="A" 
-               textEn={currentQuestion.optionAEn} 
-               textTe={currentQuestion.optionATe} 
-               isSelected={answers[currentQuestion.id] === 'A'}
-               onPress={() => handleSelect('A')}
-            />
-            <OptionButton 
-               label="B" 
-               textEn={currentQuestion.optionBEn} 
-               textTe={currentQuestion.optionBTe} 
-               isSelected={answers[currentQuestion.id] === 'B'}
-               onPress={() => handleSelect('B')}
-            />
-            <OptionButton 
-               label="C" 
-               textEn={currentQuestion.optionCEn} 
-               textTe={currentQuestion.optionCTe} 
-               isSelected={answers[currentQuestion.id] === 'C'}
-               onPress={() => handleSelect('C')}
-            />
-            <OptionButton 
-               label="D" 
-               textEn={currentQuestion.optionDEn} 
-               textTe={currentQuestion.optionDTe} 
-               isSelected={answers[currentQuestion.id] === 'D'}
-               onPress={() => handleSelect('D')}
-            />
+            {['A', 'B', 'C', 'D'].map((label) => (
+              <OptionButton 
+                key={label}
+                label={label} 
+                textEn={(currentQuestion as any)[`option${label}En`]} 
+                textTe={(currentQuestion as any)[`option${label}Te`]} 
+                isSelected={answers[currentQuestion.id] === label}
+                onPress={() => handleSelect(label)}
+              />
+            ))}
           </View>
         </View>
+        <View style={{height: 40}} />
       </ScrollView>
 
-      {/* Footer Nav */}
+      {/* Improved Footer Nav */}
       <View style={styles.footer}>
         <TouchableOpacity 
           style={[styles.navBtn, currentIdx === 0 && styles.disabledBtn]}
           onPress={() => setCurrentIdx(prev => Math.max(0, prev - 1))}
           disabled={currentIdx === 0}
         >
-          <Text style={styles.navBtnText}>Prev</Text>
+          <Text style={styles.navBtnText}>PREV</Text>
         </TouchableOpacity>
 
         <TouchableOpacity 
           style={styles.submitBtn}
           onPress={() => {
-            Alert.alert("Confirm", "Are you sure you want to submit?", [
+            Alert.alert("Submit Exam", "Are you sure? Unanswered questions will be marked as skipped.", [
               { text: "Cancel", style: "cancel" },
-              { text: "Submit", onPress: handleSubmit }
+              { text: "SUBMIT NOW", style: 'destructive', onPress: handleSubmit }
             ]);
           }}
         >
-          <Text style={styles.submitBtnText}>Submit</Text>
+          <Text style={styles.submitBtnText}>SUBMIT</Text>
         </TouchableOpacity>
 
         <TouchableOpacity 
@@ -182,7 +203,7 @@ const ExamAttemptScreen = () => {
           onPress={() => setCurrentIdx(prev => Math.min(data.questions.length - 1, prev + 1))}
           disabled={currentIdx === data.questions.length - 1}
         >
-          <Text style={styles.navBtnText}>Next</Text>
+          <Text style={styles.navBtnText}>NEXT</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
@@ -190,7 +211,6 @@ const ExamAttemptScreen = () => {
 };
 
 const OptionButton = ({ label, textEn, textTe, isSelected, onPress }: any) => {
-  const { language } = useLanguage();
   return (
     <TouchableOpacity 
       activeOpacity={0.8}
@@ -219,79 +239,133 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    padding: 24,
-    backgroundColor: "rgba(255,255,255,0.03)",
+    paddingHorizontal: 20,
+    paddingVertical: 16,
+    backgroundColor: "rgba(15, 5, 29, 0.98)",
     borderBottomWidth: 1,
-    borderBottomColor: "rgba(147, 51, 234, 0.2)",
+    borderBottomColor: "rgba(147, 51, 234, 0.3)",
+    zIndex: 10,
+  },
+  headerTitleContainer: {
+    flex: 1,
+    marginRight: 12,
   },
   examName: {
     color: "#FFFFFF",
     fontSize: 14,
     fontWeight: "800",
+    letterSpacing: 0.5,
   },
-  qCount: {
-    color: "rgba(255,255,255,0.4)",
+  qBadge: {
+    backgroundColor: "rgba(147, 51, 234, 0.2)",
+    paddingHorizontal: 8,
+    paddingVertical: 2,
+    borderRadius: 6,
+    alignSelf: 'flex-start',
+    marginTop: 4,
+  },
+  qBadgeText: {
+    color: "#d8b4fe",
     fontSize: 10,
     fontWeight: "900",
     textTransform: "uppercase",
-    marginTop: 2,
   },
   timer: {
     backgroundColor: "rgba(147, 51, 234, 0.15)",
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    borderRadius: 12,
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    borderRadius: 10,
     borderWidth: 1,
-    borderColor: "rgba(147, 51, 234, 0.3)",
+    borderColor: "rgba(147, 51, 234, 0.4)",
+    minWidth: 70,
+    alignItems: 'center',
   },
   timerCritical: {
-    backgroundColor: "rgba(236, 72, 153, 0.15)",
-    borderColor: "rgba(236, 72, 153, 0.3)",
+    backgroundColor: "rgba(236, 72, 153, 0.2)",
+    borderColor: "rgba(236, 72, 153, 0.5)",
   },
   timerText: {
     color: "#FFFFFF",
-    fontSize: 18,
-    fontWeight: "800",
+    fontSize: 16,
+    fontWeight: "900",
     fontFamily: "monospace",
   },
+  shelfContainer: {
+    backgroundColor: "rgba(15, 5, 29, 0.95)",
+    borderBottomWidth: 1,
+    borderBottomColor: "rgba(255,255,255,0.05)",
+    paddingVertical: 10,
+  },
+  shelfScroll: {
+    paddingHorizontal: 16,
+    gap: 8,
+  },
+  shelfItem: {
+    width: 36,
+    height: 36,
+    borderRadius: 10,
+    backgroundColor: "rgba(255,255,255,0.05)",
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: 'rgba(255,255,255,0.1)',
+  },
+  shelfItemActive: {
+    backgroundColor: '#9333EA',
+    borderColor: '#c084fc',
+    elevation: 4,
+  },
+  shelfItemAnswered: {
+    borderColor: '#9333EA',
+    borderWidth: 2,
+  },
+  shelfItemText: {
+    color: 'rgba(255,255,255,0.6)',
+    fontWeight: '800',
+    fontSize: 14,
+  },
+  shelfItemTextActive: {
+    color: '#FFFFFF',
+  },
+  shelfItemTextAnswered: {
+    color: '#d8b4fe',
+  },
   scroll: {
-    padding: 24,
+    padding: 20,
   },
   qCard: {
     backgroundColor: "rgba(255,255,255,0.02)",
-    borderRadius: 32,
-    padding: 24,
+    borderRadius: 30,
+    padding: 20,
     borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.05)",
-  },
-  questionText: {
-    color: "#FFFFFF",
-    fontSize: 18,
-    fontWeight: "700",
-    lineHeight: 24,
-    marginBottom: 24,
+    borderColor: "rgba(255,255,255,0.08)",
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 10 },
+    shadowOpacity: 0.3,
+    shadowRadius: 20,
   },
   optionsGrid: {
     gap: 12,
+    marginTop: 10,
   },
   optBtn: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "rgba(255,255,255,0.03)",
+    backgroundColor: "rgba(255,255,255,0.04)",
     padding: 16,
-    borderRadius: 20,
+    borderRadius: 22,
     borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.05)",
+    borderColor: "rgba(255,255,255,0.08)",
   },
   optBtnSelected: {
-    backgroundColor: "rgba(147, 51, 234, 0.2)",
-    borderColor: "rgba(147, 51, 234, 0.4)",
+    backgroundColor: "rgba(147, 51, 234, 0.25)",
+    borderColor: "rgba(147, 51, 234, 0.6)",
   },
   optCircle: {
-    width: 32,
-    height: 32,
-    borderRadius: 10,
-    backgroundColor: "rgba(147, 51, 234, 0.15)",
+    width: 34,
+    height: 34,
+    borderRadius: 12,
+    backgroundColor: "rgba(147, 51, 234, 0.2)",
     justifyContent: "center",
     alignItems: "center",
     marginRight: 16,
@@ -302,6 +376,7 @@ const styles = StyleSheet.create({
   optLabel: {
     color: "#c084fc",
     fontWeight: "900",
+    fontSize: 16,
   },
   optLabelSelected: {
     color: "#FFFFFF",
@@ -311,50 +386,62 @@ const styles = StyleSheet.create({
   },
   optEn: {
     color: "#FFFFFF",
-    fontWeight: "600",
-    fontSize: 14,
+    fontWeight: "700",
+    fontSize: 15,
   },
   optTe: {
     color: "rgba(255,255,255,0.4)",
-    fontSize: 10,
+    fontSize: 11,
     fontWeight: "600",
-    marginTop: 2,
+    marginTop: 3,
   },
   footer: {
     flexDirection: "row",
-    padding: 24,
-    backgroundColor: "rgba(15, 5, 29, 0.95)",
+    paddingHorizontal: 20,
+    paddingBottom: 24,
+    paddingTop: 16,
+    backgroundColor: "rgba(15, 5, 29, 0.98)",
     borderTopWidth: 1,
-    borderTopColor: "rgba(255,255,255,0.05)",
+    borderTopColor: "rgba(255,255,255,0.08)",
     gap: 12,
   },
   navBtn: {
     flex: 1,
-    height: 56,
-    borderRadius: 16,
-    backgroundColor: "rgba(255,255,255,0.05)",
+    height: 52,
+    borderRadius: 18,
+    backgroundColor: "rgba(255,255,255,0.08)",
     justifyContent: "center",
     alignItems: "center",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.1)",
   },
   navBtnText: {
     color: "#FFFFFF",
-    fontWeight: "800",
+    fontWeight: "900",
+    fontSize: 12,
+    letterSpacing: 1,
   },
   submitBtn: {
-    flex: 2,
-    height: 56,
-    borderRadius: 16,
-    backgroundColor: "#9333EA",
+    flex: 1.8,
+    height: 52,
+    borderRadius: 18,
+    backgroundColor: "#a855f7",
     justifyContent: "center",
     alignItems: "center",
+    shadowColor: "#9333EA",
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.4,
+    shadowRadius: 10,
+    elevation: 8,
   },
   submitBtnText: {
     color: "#FFFFFF",
     fontWeight: "900",
-    textTransform: "uppercase",
+    fontSize: 14,
+    letterSpacing: 1,
   },
   disabledBtn: {
-    opacity: 0.2,
+    opacity: 0.3,
   },
   center: {
     flex: 1,

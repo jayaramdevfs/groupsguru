@@ -4,6 +4,7 @@ import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { useAuth } from "../context/AuthContext";
 import { useLanguage } from "../context/LanguageContext";
+import { ProfessionalLogo } from "../components/ProfessionalLogo";
 import { LanguageToggle } from "../components/LanguageToggle";
 import { registryService } from "../api/registryService";
 import { useEffect, useState } from "react";
@@ -15,6 +16,8 @@ type RootStackParamList = {
 };
 
 type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
+
+import { BackgroundGlow } from "../components/BackgroundGlow";
 
 const StudentDashboard = () => {
   const { logout, user } = useAuth();
@@ -38,21 +41,26 @@ const StudentDashboard = () => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="light-content" />
+      <BackgroundGlow />
       <View style={styles.header}>
-        <View>
-          <Text style={styles.subtitle}>
-            {language === "en" ? "Student Space" : "TE Student Space"}
-          </Text>
-          <Text style={styles.title}>
-            {language === "en" ? `Welcome, ${name}` : `TE Welcome, ${name}`}
-          </Text>
-          {mtCount > 0 && (
-            <Text style={styles.mtBadge}>
-              {language === "en" ? `Intelligence Registry loaded: ${mtCount} Micro-topics` : `మైక్రో-టాపిక్స్: ${mtCount}`}
-            </Text>
-          )}
+        <View style={styles.logoWrapper}>
+          <ProfessionalLogo size={32} />
         </View>
         <LanguageToggle />
+      </View>
+
+      <View style={styles.welcomeSection}>
+        <Text style={styles.subtitle}>
+          {language === "en" ? "Student Space" : "TE Student Space"}
+        </Text>
+        <Text style={styles.title}>
+          {language === "en" ? `Welcome, ${name}` : `TE Welcome, ${name}`}
+        </Text>
+        {mtCount > 0 && (
+          <Text style={styles.mtBadge}>
+            {language === "en" ? `Intelligence Registry: ${mtCount} Topics` : `మైక్రో-టాపిక్స్: ${mtCount}`}
+          </Text>
+        )}
       </View>
 
       <View style={styles.grid}>
@@ -121,6 +129,14 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
+    marginBottom: 32,
+    paddingRight: 8,
+  },
+  logoWrapper: {
+    flex: 1,
+  },
+  welcomeSection: {
+    marginBottom: 24,
   },
   subtitle: {
     fontSize: 14,

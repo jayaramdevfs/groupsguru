@@ -9,9 +9,12 @@ import {
 } from "react-native";
 import { useAuth } from "../context/AuthContext";
 
+import { ProfessionalLogo } from "../components/ProfessionalLogo";
+
+import { BackgroundGlow } from "../components/BackgroundGlow";
+
 const LoginScreen = () => {
   const { login } = useAuth();
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
@@ -34,7 +37,11 @@ const LoginScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>GroupsGuru</Text>
+      <BackgroundGlow />
+      <View style={styles.logoContainer}>
+        <ProfessionalLogo size={60} />
+      </View>
+
 
       <TextInput
         style={styles.input}
@@ -77,30 +84,39 @@ const styles = StyleSheet.create({
     alignItems: "center",
     padding: 24,
   },
-  title: {
-    fontSize: 26,
-    fontWeight: "800",
-    color: "#FFFFFF",
-    marginBottom: 40,
+  logoContainer: {
+    marginBottom: 60,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   input: {
     width: "100%",
-    backgroundColor: "#1e102f",
+    backgroundColor: "rgba(255,255,255,0.03)",
     color: "#FFFFFF",
-    padding: 14,
-    borderRadius: 12,
-    marginBottom: 16,
+    padding: 16,
+    borderRadius: 18,
+    marginBottom: 20,
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.08)",
   },
   button: {
     backgroundColor: "#9333EA",
-    paddingVertical: 14,
-    paddingHorizontal: 40,
-    borderRadius: 16,
+    width: "100%",
+    paddingVertical: 16,
+    borderRadius: 18,
     marginTop: 10,
+    shadowColor: '#9333EA',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 2,
   },
   buttonText: {
     color: "#FFFFFF",
-    fontWeight: "700",
+    fontWeight: "900",
     fontSize: 16,
+    textAlign: "center",
+    textTransform: "uppercase",
+    letterSpacing: 1,
   },
 });

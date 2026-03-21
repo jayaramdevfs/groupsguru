@@ -55,13 +55,14 @@ C:\LMS PLATFORM\Lms\
 | 11 | Student Exam Flow | ✅ Done | ✅ Done | ✅ Done |
 | 12 | Results & Analytics | ✅ Done | ✅ Done | ✅ Done |
 | 12a | UX Polish (Exam UI) | ✅ Done | ✅ Done | ✅ Done |
-| 13 | Production Readiness | 📅 Planned | 📅 Planned | 📅 Planned |
+| 13 | Frontend UI/UX Polish | 📅 Planned | 📅 Planned | 📅 Planned |
+| 14 | Production Readiness | 📅 Planned | 📅 Planned | 📅 Planned |
 
-**Resume Point:** Start Sprint 13 (Production Readiness)
+**Resume Point:** Start Sprint 13 (Frontend UI/UX Polish)
 
 ### Execution Order:
 ```
-Sprint 11 (Student Exam Flow) -> Sprint 12 -> Sprint 12a (UX Polish) -> Sprint 13
+Sprint 12a (UX Polish) -> Sprint 13 (Front-End UI/UX Design) -> Sprint 14
 ```
 
 ---
@@ -813,12 +814,14 @@ This error has **3 distinct causes** that previously all showed the same message
 - **Fix needed:** Compact button bar, smaller padding, better use of vertical space
 
 ### Tasks:
-- [ ] Frontend: Reduce exam question/option font sizes and padding
-- [ ] Frontend: Wire Telugu question text to language toggle
-- [ ] Mobile: Reduce exam question/option font sizes and padding
-- [ ] Mobile: Wire Telugu question text to language toggle
-- [ ] Mobile: Compact navigation buttons (Prev/Submit/Next)
-- [ ] Both: Ensure 1 question + 4 options visible without scrolling
+- [x] Frontend: Reduce exam question/option font sizes and padding
+- [x] Frontend: Wire Telugu question text to language toggle
+- [x] Mobile: Reduce exam question/option font sizes and padding
+- [x] Mobile: Wire Telugu question text to language toggle
+- [x] Mobile: Compact navigation buttons (Prev/Submit/Next)
+- [x] Both: Ensure 1 question + 4 options visible without scrolling
+- [x] Mobile: Professional logo layout matching web
+- [x] Mobile: Address UI clipping and flashlight glow effects
 
 ---
 
