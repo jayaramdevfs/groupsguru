@@ -6,7 +6,7 @@ import gsap from "gsap";
 import Lenis from "lenis";
 
 const spring = {
-  type: "spring",
+  type: "spring" as const,
   stiffness: 420,
   damping: 24,
   mass: 0.8,

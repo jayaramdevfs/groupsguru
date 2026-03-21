@@ -3,8 +3,9 @@ import { Category, CategoryRequest } from "./types";
 
 export const categoryApi = {
   // Public
-  getAll: async (): Promise<Category[]> => {
-    const response = await api.get("/api/categories");
+  getAll: async (commissionId?: number): Promise<Category[]> => {
+    const url = commissionId ? `/api/categories?commissionId=${commissionId}` : "/api/categories";
+    const response = await api.get(url);
     return response.data;
   },
   

@@ -14,8 +14,14 @@ public class CategoryService {
 
     private final CategoryRepository categoryRepository;
 
-    public List<CategoryResponse> getAllCategories() {
-        return categoryRepository.findByIsDeletedFalse().stream()
+    public List<CategoryResponse> getAllCategories(Long commissionId) {
+        List<Category> categories;
+        if (commissionId != null) {
+            categories = categoryRepository.findByCommissionIdAndIsDeletedFalse(commissionId);
+        } else {
+            categories = categoryRepository.findByIsDeletedFalse();
+        }
+        return categories.stream()
                 .map(CategoryResponse::fromEntity)
                 .collect(Collectors.toList());
     }
@@ -32,6 +38,7 @@ public class CategoryService {
                 .description(request.getDescription())
                 .descriptionTe(request.getDescriptionTe())
                 .imageUrl(request.getImageUrl())
+                .commissionId(request.getCommissionId() != null ? request.getCommissionId() : 1L)
                 .isDeleted(false)
                 .build();
         
@@ -56,6 +63,9 @@ public class CategoryService {
         }
         if (request.getImageUrl() != null) {
             category.setImageUrl(request.getImageUrl());
+        }
+        if (request.getCommissionId() != null) {
+            category.setCommissionId(request.getCommissionId());
         }
         
         Category updated = categoryRepository.save(category);

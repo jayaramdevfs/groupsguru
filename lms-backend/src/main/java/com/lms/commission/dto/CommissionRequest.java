@@ -1,4 +1,4 @@
-package com.lms.category.dto;
+package com.lms.commission.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
@@ -6,8 +6,11 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class CategoryRequest {
-    @NotBlank(message = "Category name is required")
+public class CommissionRequest {
+    @NotBlank(message = "Code is required")
+    private String code;
+    
+    @NotBlank(message = "Name is required")
     private String name;
     
     @NotBlank(message = "Telugu name is required")
@@ -16,6 +19,8 @@ public class CategoryRequest {
     private String description;
     private String descriptionTe;
     private String imageUrl;
-    
-    private Long commissionId;
+    private Integer displayOrder;
+    private String accessType;
+    private Double priceInr;
+    private Boolean isActive;
 }

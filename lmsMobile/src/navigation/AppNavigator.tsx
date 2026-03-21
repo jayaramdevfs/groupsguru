@@ -22,7 +22,7 @@ export type RootStackParamList = {
   Login: undefined;
   AdminDashboard: undefined;
   StudentDashboard: undefined;
-  Category: undefined;
+  Category: { commissionId?: number; commissionName?: string };
   SubCategory: { categoryId: number; categoryName: string; categoryNameTe: string };
   Section: { subCategoryId: number; subCategoryName: string; subCategoryNameTe: string };
   Topic: { sectionId: number; sectionName: string; sectionNameTe: string };

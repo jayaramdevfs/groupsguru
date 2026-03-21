@@ -3,12 +3,10 @@
 import ProtectedLayout from "@/components/layout/ProtectedLayout";
 import { motion } from "framer-motion";
 import { useEffect, useState, useCallback } from "react";
-import { categoryApi } from "@/lib/categories";
 import { commissionApi } from "@/lib/commissions";
-import { Category, CategoryRequest, Commission } from "@/lib/types";
+import { Commission, CommissionRequest } from "@/lib/types";
 import Modal from "@/components/ui/Modal";
 import AnimatedInput from "@/components/ui/AnimatedInput";
-import CustomSelect from "@/components/ui/CustomSelect";
 
 const spring = {
   type: "spring" as const,
@@ -17,59 +15,68 @@ const spring = {
   mass: 0.8,
 };
 
-export default function AdminCategoryManagement() {
-  const [categories, setCategories] = useState<Category[]>([]);
+export default function AdminCommissionManagement() {
   const [commissions, setCommissions] = useState<Commission[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [editingCategory, setEditingCategory] = useState<Category | null>(null);
-  const [formData, setFormData] = useState<CategoryRequest>({
+  const [editingCommission, setEditingCommission] = useState<Commission | null>(null);
+  const [formData, setFormData] = useState<CommissionRequest>({
+    code: "",
     name: "",
     nameTe: "",
     description: "",
     descriptionTe: "",
     imageUrl: "",
-    commissionId: 1
+    displayOrder: 0,
+    accessType: "FREE",
+    priceInr: 0,
+    isActive: true
   });
 
-  const fetchCategories = useCallback(async () => {
+  const fetchCommissions = useCallback(async () => {
     setIsLoading(true);
     try {
-      const commData = await commissionApi.getAll();
-      setCommissions(commData);
-      const data = await categoryApi.getAll();
-      setCategories(data);
+      const data = await commissionApi.getAll();
+      setCommissions(data);
     } catch (error) {
-      console.error("Failed to fetch categories:", error);
+      console.error("Failed to fetch commissions:", error);
     } finally {
       setIsLoading(false);
     }
   }, []);
 
   useEffect(() => {
-    fetchCategories();
-  }, [fetchCategories]);
+    fetchCommissions();
+  }, [fetchCommissions]);
 
-  const handleOpenModal = (category: Category | null = null) => {
-    if (category) {
-      setEditingCategory(category);
+  const handleOpenModal = (commission: Commission | null = null) => {
+    if (commission) {
+      setEditingCommission(commission);
       setFormData({
-        name: category.name,
-        nameTe: category.nameTe || "",
-        description: category.description || "",
-        descriptionTe: category.descriptionTe || "",
-        imageUrl: category.imageUrl || "",
-        commissionId: category.commissionId || 1
+        code: commission.code,
+        name: commission.name,
+        nameTe: commission.nameTe,
+        description: commission.description || "",
+        descriptionTe: commission.descriptionTe || "",
+        imageUrl: commission.imageUrl || "",
+        displayOrder: commission.displayOrder || 0,
+        accessType: commission.accessType || "FREE",
+        priceInr: commission.priceInr || 0,
+        isActive: commission.isActive ?? true
       });
     } else {
-      setEditingCategory(null);
-      setFormData({ 
-        name: "", 
-        nameTe: "", 
-        description: "", 
-        descriptionTe: "", 
-        imageUrl: "", 
-        commissionId: commissions.length > 0 ? commissions[0].id : 1 
+      setEditingCommission(null);
+      setFormData({
+        code: "",
+        name: "",
+        nameTe: "",
+        description: "",
+        descriptionTe: "",
+        imageUrl: "",
+        displayOrder: 0,
+        accessType: "FREE",
+        priceInr: 0,
+        isActive: true
       });
     }
     setIsModalOpen(true);
@@ -78,25 +85,25 @@ export default function AdminCategoryManagement() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      if (editingCategory) {
-        await categoryApi.update(editingCategory.id, formData);
+      if (editingCommission) {
+        await commissionApi.update(editingCommission.id, formData);
       } else {
-        await categoryApi.create(formData);
+        await commissionApi.create(formData);
       }
       setIsModalOpen(false);
-      fetchCategories();
+      fetchCommissions();
     } catch (error) {
-      console.error("Failed to save category:", error);
+      console.error("Failed to save commission:", error);
     }
   };
 
   const handleDelete = async (id: number) => {
-    if (confirm("Are you sure you want to delete this category?")) {
+    if (confirm("Are you sure you want to delete this commission?")) {
       try {
-        await categoryApi.delete(id);
-        fetchCategories();
+        await commissionApi.delete(id);
+        fetchCommissions();
       } catch (error) {
-        console.error("Failed to delete category:", error);
+        console.error("Failed to delete commission:", error);
       }
     }
   };
@@ -114,10 +121,10 @@ export default function AdminCategoryManagement() {
         >
           <div>
             <h1 className="text-[36px] md:text-[48px] font-[800] leading-tight mb-2">
-              Category Management
+              Commission Management (L0)
             </h1>
             <p className="text-[18px] text-white/70 font-[600]">
-              Create, edit, and organize exam categories.
+              Create, edit, and organize commissions (APPSC, TSPSC, UPSC).
             </p>
           </div>
 
@@ -132,24 +139,24 @@ export default function AdminCategoryManagement() {
               <line x1="12" y1="5" x2="12" y2="19"></line>
               <line x1="5" y1="12" x2="19" y2="12"></line>
             </svg>
-            Add Category
+            Add Commission
           </motion.button>
         </motion.div>
 
-        {/* Category List */}
+        {/* Commission List */}
         <div className="flex flex-col gap-6">
           {isLoading ? (
             <div className="flex items-center justify-center py-20">
               <div className="w-12 h-12 border-4 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
             </div>
-          ) : categories.length === 0 ? (
+          ) : commissions.length === 0 ? (
             <div className="text-center py-20 text-white/50 bg-white/5 rounded-[24px] border border-white/10">
-              No categories found. Click "Add Category" to get started.
+              No commissions found. Click "Add Commission" to get started.
             </div>
           ) : (
-            categories.map((cat, index) => (
+            commissions.map((comm, index) => (
               <motion.div
-                key={cat.id}
+                key={comm.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ ...spring, delay: index * 0.1 }}
@@ -160,17 +167,16 @@ export default function AdminCategoryManagement() {
                 className="w-full flex flex-col md:flex-row items-center gap-6 p-6 rounded-[24px] bg-[rgba(147,51,234,0.1)] border border-[rgba(147,51,234,0.25)] shadow-[0_15px_50px_rgba(147,51,234,0.3)] backdrop-blur-md transition-colors"
               >
                 <div className="w-16 h-16 md:w-20 md:h-20 shrink-0 rounded-[16px] overflow-hidden bg-purple-900 border border-purple-500/50 flex items-center justify-center font-bold text-2xl">
-                  {cat.imageUrl ? (
-                    <img src={cat.imageUrl} alt={cat.name} className="w-full h-full object-cover" />
+                  {comm.imageUrl ? (
+                    <img src={comm.imageUrl} alt={comm.name} className="w-full h-full object-cover" />
                   ) : (
-                    cat.name.charAt(0)
+                    comm.code.charAt(0)
                   )}
                 </div>
                 
                 <div className="flex-1 w-full text-center md:text-left">
-                  <div className="text-xs font-bold text-purple-400 mb-1">{commissions.find(c => c.id === cat.commissionId)?.code || "Commission"}</div>
-                  <h3 className="text-[22px] md:text-[24px] font-[700] mb-1">{cat.name}</h3>
-                  <p className="text-[16px] font-[600] text-white/70">{cat.description}</p>
+                  <h3 className="text-[22px] md:text-[24px] font-[700] mb-1">{comm.name} ({comm.code})</h3>
+                  <p className="text-[16px] font-[600] text-white/70">{comm.description}</p>
                 </div>
 
                 <div className="flex items-center justify-center gap-3 w-full md:w-auto mt-4 md:mt-0">
@@ -178,7 +184,7 @@ export default function AdminCategoryManagement() {
                     whileHover={{ y: -4, boxShadow: "0px 15px 30px rgba(147, 51, 234, 0.4)" }}
                     whileTap={{ scale: 0.95 }}
                     transition={spring}
-                    onClick={() => handleOpenModal(cat)}
+                    onClick={() => handleOpenModal(comm)}
                     className="flex-1 md:flex-none px-6 py-3 rounded-[12px] bg-[rgba(147,51,234,0.1)] border border-[rgba(147,51,234,0.25)] text-white font-[700] hover:bg-[rgba(147,51,234,0.3)] transition-colors"
                   >
                     Edit
@@ -187,7 +193,7 @@ export default function AdminCategoryManagement() {
                     whileHover={{ y: -4, boxShadow: "0px 15px 30px rgba(236, 72, 153, 0.4)" }}
                     whileTap={{ scale: 0.95 }}
                     transition={spring}
-                    onClick={() => handleDelete(cat.id)}
+                    onClick={() => handleDelete(comm.id)}
                     className="flex-1 md:flex-none px-6 py-3 rounded-[12px] bg-[rgba(236,72,153,0.1)] border border-[rgba(236,72,153,0.3)] text-[#EC4899] font-[700] hover:bg-[rgba(236,72,153,0.2)] transition-colors"
                   >
                     Delete
@@ -202,43 +208,42 @@ export default function AdminCategoryManagement() {
         <Modal 
           isOpen={isModalOpen} 
           onClose={() => setIsModalOpen(false)}
-          title={editingCategory ? "Update Category" : "New Category"}
+          title={editingCommission ? "Update Commission" : "New Commission"}
         >
           <form onSubmit={handleSubmit} className="flex flex-col gap-6">
             <AnimatedInput 
-              label="Category Name (English)"
+              label="Commission Code"
+              type="text"
+              name="code"
+              placeholder="e.g. APPSC"
+              value={formData.code}
+              onChange={(val) => setFormData({ ...formData, code: val })}
+              required
+            />
+            <AnimatedInput 
+              label="Commission Name (English)"
               type="text"
               name="name"
-              placeholder="e.g. Group 1"
+              placeholder="e.g. Andhra Pradesh Public Service Commission"
               value={formData.name}
               onChange={(val) => setFormData({ ...formData, name: val })}
               required
             />
-            
             <AnimatedInput 
-              label="Category Name (Telugu)"
+              label="Commission Name (Telugu)"
               type="text"
               name="nameTe"
-              placeholder="తెలుగు పేరు"
+              placeholder=""
               value={formData.nameTe}
               onChange={(val) => setFormData({ ...formData, nameTe: val })}
               required
             />
 
             <div className="flex flex-col gap-2">
-              <label className="text-sm font-semibold text-white/60 ml-1">Commission</label>
-              <CustomSelect
-                value={formData.commissionId}
-                options={commissions.map(c => ({ value: c.id, label: c.code }))}
-                onChange={(val) => setFormData({ ...formData, commissionId: Number(val) })}
-              />
-            </div>
-            
-            <div className="flex flex-col gap-2">
               <label className="text-sm font-semibold text-white/60 ml-1">Description</label>
               <textarea 
                 className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-white focus:outline-none focus:border-purple-500/50 transition-colors min-h-[100px]"
-                placeholder="Briefly describe this category..."
+                placeholder="Briefly describe this commission..."
                 value={formData.description}
                 onChange={(e) => setFormData({ ...formData, description: e.target.value })}
               />
@@ -259,7 +264,7 @@ export default function AdminCategoryManagement() {
               className="mt-4 w-full py-4 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 font-bold shadow-lg shadow-purple-500/20"
               type="submit"
             >
-              {editingCategory ? "Update Category" : "Create Category"}
+              {editingCommission ? "Update Commission" : "Create Commission"}
             </motion.button>
           </form>
         </Modal>

@@ -17,6 +17,7 @@ public class CategoryResponse {
     private String description;
     private String descriptionTe;
     private String imageUrl;
+    private Long commissionId;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
@@ -28,6 +29,7 @@ public class CategoryResponse {
                 .description(category.getDescription())
                 .descriptionTe(category.getDescriptionTe())
                 .imageUrl(category.getImageUrl())
+                .commissionId(category.getCommissionId())
                 .createdAt(category.getCreatedAt())
                 .updatedAt(category.getUpdatedAt())
                 .build();

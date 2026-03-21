@@ -10,7 +10,7 @@ import {
   SafeAreaView,
   StatusBar,
 } from "react-native";
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation, useRoute, RouteProp } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { categoryService } from "../api/categoryService";
 import { Category } from "../api/types";
@@ -19,7 +19,7 @@ import { useLanguage } from "../context/LanguageContext";
 import { LanguageToggle } from "../components/LanguageToggle";
 
 type RootStackParamList = {
-  Category: undefined;
+  Category: { commissionId?: number; commissionName?: string };
   SubCategory: { categoryId: number; categoryName: string; categoryNameTe: string };
 };
 
@@ -32,17 +32,21 @@ const CategoryScreen = () => {
   const { language } = useLanguage();
   const navigation = useNavigation<NavigationProp>();
 
+  const route = useRoute<RouteProp<RootStackParamList, "Category">>();
+  const commissionId = route.params?.commissionId;
+  const commissionName = route.params?.commissionName || "Explore";
+
   const fetchCategories = useCallback(async () => {
     setLoading(true);
     try {
-      const data = await categoryService.getAll();
+      const data = await categoryService.getAll(commissionId);
       setCategories(data);
     } catch (error) {
       console.error(error);
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [commissionId]);
 
   useEffect(() => {
     fetchCategories();
@@ -90,7 +94,7 @@ const CategoryScreen = () => {
             {language === 'en' ? "What's next?" : "తదుపరి ఎమిటి?"}
           </Text>
           <Text style={styles.title}>
-            {language === 'en' ? "Explore" : "అన్వేషించండి"}
+            {language === 'en' ? commissionName : commissionName}
           </Text>
         </View>
         <View style={styles.headerRight}>

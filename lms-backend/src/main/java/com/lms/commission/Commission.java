@@ -1,4 +1,4 @@
-package com.lms.category;
+package com.lms.commission;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -6,35 +6,49 @@ import lombok.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "categories")
+@Table(name = "commissions")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Category {
+public class Commission {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(unique = true, nullable = false)
+    private String code; // e.g., APPSC, TSPSC, UPSC
+
     @Column(nullable = false)
     private String name;
 
     @Column(name = "name_te", nullable = false)
-    private String nameTe; // Telugu Name
+    private String nameTe;
 
     @Column(columnDefinition = "TEXT")
     private String description;
 
     @Column(name = "description_te", columnDefinition = "TEXT")
-    private String descriptionTe; // Telugu Description
+    private String descriptionTe;
 
     @Column(name = "image_url")
     private String imageUrl;
 
-    @Column(name = "commission_id")
-    private Long commissionId;
+    @Column(name = "display_order")
+    private Integer displayOrder;
+
+    @Column(name = "access_type", length = 10)
+    @Builder.Default
+    private String accessType = "FREE";
+
+    @Column(name = "price_inr", precision = 10, scale = 2)
+    private Double priceInr;
+
+    @Column(name = "is_active", nullable = false)
+    @Builder.Default
+    private boolean isActive = true;
 
     @Column(name = "is_deleted", nullable = false)
     @Builder.Default

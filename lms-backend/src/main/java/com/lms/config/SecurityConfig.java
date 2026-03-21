@@ -26,7 +26,7 @@ public class SecurityConfig {
                 .sessionManagement(session ->
                         session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/auth/login", "/api/auth/register", "/api/auth/logout", "/api/categories/**", "/api/subcategories/**", "/api/sections/**", "/api/topics/**", "/api/registry/**", "/api/questions/**").permitAll()
+                        .requestMatchers("/api/auth/login", "/api/auth/register", "/api/auth/logout", "/api/commissions/**", "/api/categories/**", "/api/subcategories/**", "/api/sections/**", "/api/topics/**", "/api/registry/**", "/api/questions/**").permitAll()
                         .requestMatchers(org.springframework.http.HttpMethod.GET, "/api/exams", "/api/exams/*").permitAll()
                         .requestMatchers("/api/exams/**").authenticated() 
                         .requestMatchers("/api/admin/**").hasRole("ADMIN")

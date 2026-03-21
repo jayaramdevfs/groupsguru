@@ -1,16 +1,51 @@
+export interface Commission {
+  id: number;
+  code: string;
+  name: string;
+  nameTe: string;
+  description?: string;
+  descriptionTe?: string;
+  imageUrl?: string;
+  displayOrder: number;
+  accessType: string;
+  priceInr?: number;
+  isActive: boolean;
+  createdAt?: string;
+  updatedAt?: string;
+}
+
+export interface CommissionRequest {
+  code: string;
+  name: string;
+  nameTe: string;
+  description?: string;
+  descriptionTe?: string;
+  imageUrl?: string;
+  displayOrder?: number;
+  accessType?: string;
+  priceInr?: number;
+  isActive?: boolean;
+}
+
 export interface Category {
   id: number;
   name: string;
+  nameTe: string;
   description?: string;
+  descriptionTe?: string;
   imageUrl?: string;
+  commissionId: number;
   createdAt?: string;
   updatedAt?: string;
 }
 
 export interface CategoryRequest {
   name: string;
+  nameTe: string;
   description?: string;
+  descriptionTe?: string;
   imageUrl?: string;
+  commissionId: number;
 }
 
 export interface SubCategory {

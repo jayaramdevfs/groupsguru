@@ -57,14 +57,14 @@ C:\GroupsGuru\Lms\
 | 12 | Results & Analytics | ✅ Done | ✅ Done | ✅ Done |
 | 12a | UX Polish (Exam UI) | ✅ Done | ✅ Done | ✅ Done |
 | 13 | Data Migration + PostgreSQL | ✅ Done | ✅ Done | ➖ N/A |
-| 14 | Commission + Hierarchy Restructure | 📅 Planned | 📅 Planned | 📅 Planned |
+| 14 | Commission + Hierarchy Restructure | ✅ Done | ✅ Done | ✅ Done |
 | 15 | Pricing + Access Control | 📅 Planned | 📅 Planned | 📅 Planned |
 
-**Resume Point:** Start Sprint 14 (Commission + Hierarchy Restructure)
+**Resume Point:** Start Sprint 15 (Pricing + Access Control)
 
 ### Execution Order:
 ```
-Sprint 13 (Data Migration) -> Sprint 14 (Commission L0) -> Sprint 15
+Sprint 14 (Commission L0) -> Sprint 15 (Pricing + Access Control)
 ```
 
 ---
