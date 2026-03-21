@@ -12,6 +12,7 @@ Every sprint **MUST** conclude with the following steps BEFORE being marked as d
 2. **Post-Implementation Documentation**: Detail any architectural changes in sprint deliverables if they differ from initial plans.
 3. **Git Commit & Push**: Commit all files with the message: `Sprint X complete: [Key feature]`.
 4. **Final Verification**: Ensure the vertical slice (Backend + Frontend + Mobile) is functional.
+5. **Next Sprint Handover**: At the very end of your final response, explicitly provide the user with a pre-written prompt for them to copy and paste into the NEW conversation for the next sprint. The prompt should explicitly reference `SPRINTS.md` and the master plan.
 
 ---
 
