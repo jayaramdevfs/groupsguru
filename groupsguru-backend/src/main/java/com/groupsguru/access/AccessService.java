@@ -6,6 +6,7 @@ import com.groupsguru.subcategory.*;
 import com.groupsguru.section.*;
 import com.groupsguru.topic.*;
 import com.groupsguru.registry.*;
+import com.groupsguru.payment.PurchaseRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -21,6 +22,7 @@ public class AccessService {
     private final SectionRepository sectionRepo;
     private final TopicRepository topicRepo;
     private final MicroTopicRepository microTopicRepo;
+    private final PurchaseRepository purchaseRepository;
 
     public AccessCheckResponse checkAccess(Long userId, String entityType, Long entityId) {
         Double price = null;
@@ -87,8 +89,16 @@ public class AccessService {
             return AccessCheckResponse.builder().hasAccess(true).price(0.0).build();
         }
 
-        // 2. Mocking purchases for sprint 15 until integration with Razorpay in Sprint 16
-        boolean purchased = false; // logic to check purchases will come in S16
+        // 2. Check purchases in DB
+        boolean purchased = purchaseRepository.findByUserIdAndEntityTypeAndEntityIdAndStatus(userId, entityType, entityId, "SUCCESS").isPresent();
+        
+        // 3. Fallback: Check if any parent is purchased (recursive check not strictly needed if we check direct parents, but let's check one level up for now if needed, or rely on frontend to offer bundles)
+        // Actually, the current logic is: if you buy a Category, you get all SubCategories.
+        // So I should check if any parent is purchased.
+        
+        if (!purchased && parentType != null && parentId != null) {
+            purchased = hasPurchasedParent(userId, parentType, parentId);
+        }
         
         List<AccessCheckResponse.ParentOption> parentOptions = new ArrayList<>();
         gatherParents(parentType, parentId, parentOptions);
@@ -161,5 +171,52 @@ public class AccessService {
                     .price(price)
                     .build());
         }
+    }
+
+    private boolean hasPurchasedParent(Long userId, String parentType, Long parentId) {
+        boolean purchased = purchaseRepository.findByUserIdAndEntityTypeAndEntityIdAndStatus(userId, parentType, parentId, "SUCCESS").isPresent();
+        if (purchased) return true;
+
+        // Recursively check parents
+        // Get parent's parent
+        String nextParentType = null;
+        Long nextParentId = null;
+
+        switch (parentType) {
+            case "CATEGORY":
+                Category cat = categoryRepo.findById(parentId).orElse(null);
+                if (cat != null) {
+                    nextParentType = "COMMISSION";
+                    nextParentId = cat.getCommissionId();
+                }
+                break;
+            case "SUB_CATEGORY":
+                SubCategory sub = subCategoryRepo.findById(parentId).orElse(null);
+                if (sub != null) {
+                    nextParentType = "CATEGORY";
+                    nextParentId = sub.getCategory().getId();
+                }
+                break;
+            case "SECTION":
+                Section sec = sectionRepo.findById(parentId).orElse(null);
+                if (sec != null) {
+                    nextParentType = "SUB_CATEGORY";
+                    nextParentId = sec.getSubCategory().getId();
+                }
+                break;
+            case "TOPIC":
+                Topic top = topicRepo.findById(parentId).orElse(null);
+                if (top != null) {
+                    nextParentType = "SECTION";
+                    nextParentId = top.getSection().getId();
+                }
+                break;
+        }
+
+        if (nextParentType != null && nextParentId != null) {
+            return hasPurchasedParent(userId, nextParentType, nextParentId);
+        }
+
+        return false;
     }
 }

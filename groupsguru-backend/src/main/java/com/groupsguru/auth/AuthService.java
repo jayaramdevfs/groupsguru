@@ -4,6 +4,7 @@ import com.groupsguru.auth.dto.AuthMeResponse;
 import com.groupsguru.auth.dto.RegisterRequest;
 import com.groupsguru.security.JwtService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -54,8 +55,15 @@ public class AuthService {
                 .orElseThrow(() -> new RuntimeException("User not found"));
 
         return AuthMeResponse.builder()
+                .id(user.getId())
                 .email(user.getEmail())
                 .role(user.getRole().name())
                 .build();
+    }
+
+    public User getCurrentUser() {
+        String email = SecurityContextHolder.getContext().getAuthentication().getName();
+        return userRepository.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException("User not found"));
     }
 }

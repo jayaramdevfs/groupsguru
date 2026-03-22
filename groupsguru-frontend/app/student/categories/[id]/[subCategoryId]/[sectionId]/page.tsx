@@ -11,6 +11,9 @@ import { useLanguage } from "@/app/context/LanguageContext";
 import { LanguageToggle } from "@/components/ui/LanguageToggle";
 import Link from "next/link";
 import { Multilang } from "@/components/ui/Multilang";
+import { accessApi, AccessCheckResponse } from "@/lib/access";
+import PaywallModal from "@/components/ui/PaywallModal";
+import PriceBadge from "@/components/ui/PriceBadge";
 
 const spring = {
   type: "spring" as const,
@@ -29,6 +32,12 @@ export default function StudentTopics() {
   const [topics, setTopics] = useState<Topic[]>([]);
   const [section, setSection] = useState<Section | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+
+  // Paywall states
+  const [isPaywallOpen, setIsPaywallOpen] = useState(false);
+  const [selectedTopic, setSelectedTopic] = useState<Topic | null>(null);
+  const [accessInfo, setAccessInfo] = useState<AccessCheckResponse | null>(null);
+  const [loadingTopic, setLoadingTopic] = useState<Topic | null>(null);
 
   const fetchData = useCallback(async () => {
     setIsLoading(true);
@@ -120,51 +129,93 @@ export default function StudentTopics() {
                   transition={{ ...spring, delay: index * 0.05 }}
                   className="w-full relative"
                 >
-                <Link href={`/student/categories/${categoryId}/${subCategoryId}/${sectionId}/${top.id}`} className="w-full flex flex-col md:flex-row items-center gap-6 p-8 rounded-[32px] bg-white/[0.03] border border-white/5 hover:border-emerald-500/30 transition-all group relative overflow-hidden">
-                  {/* Background Glow on Hover */}
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 blur-[60px] group-hover:bg-emerald-500/10 transition-all" />
+                  <button 
+                    onClick={async (e) => {
+                      e.preventDefault();
+                      setLoadingTopic(top);
+                      try {
+                        const check = await accessApi.checkAccess("TOPIC", top.id);
+                        if (check.hasAccess) {
+                          window.location.href = `/student/categories/${categoryId}/${subCategoryId}/${sectionId}/${top.id}`;
+                        } else {
+                          setAccessInfo(check);
+                          setSelectedTopic(top);
+                          setIsPaywallOpen(true);
+                        }
+                      } catch (err) {
+                        console.error(err);
+                      } finally {
+                        setLoadingTopic(null);
+                      }
+                    }}
+                    className="w-full flex flex-col md:flex-row items-center gap-6 p-8 rounded-[32px] bg-white/[0.03] border border-white/5 hover:border-emerald-500/30 transition-all group relative overflow-hidden text-left"
+                  >
+                    {/* Background Glow on Hover */}
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 blur-[60px] group-hover:bg-emerald-500/10 transition-all" />
 
-                  <div className="w-16 h-16 shrink-0 rounded-2xl bg-gradient-to-br from-emerald-500/20 to-teal-500/20 border border-white/10 flex items-center justify-center font-black text-xl text-emerald-300">
-                    {top.topicCode || top.name.charAt(0)}
-                  </div>
-                  
-                  <div className="flex-1 w-full relative z-10">
-                    <div className="flex flex-wrap items-center gap-3 mb-2">
-                       <h3 className="text-2xl font-black text-white group-hover:text-emerald-300 transition-colors">
-                         <Multilang en={top.name} te={top.nameTe} />
-                       </h3>
+                    <div className="w-16 h-16 shrink-0 rounded-2xl bg-gradient-to-br from-emerald-500/20 to-teal-500/20 border border-white/10 flex items-center justify-center font-black text-xl text-emerald-300">
+                      {top.topicCode || top.name.charAt(0)}
                     </div>
-                    {(top.description || top.descriptionTe) && (
-                      <p className="text-sm font-medium text-white/40 line-clamp-2 max-w-2xl leading-relaxed">
-                        <Multilang en={top.description || ""} te={top.descriptionTe || ""} />
-                      </p>
-                    )}
-                  </div>
+                    
+                    <div className="flex-1 w-full relative z-10">
+                      <div className="flex flex-wrap items-center gap-3 mb-2">
+                        <h3 className="text-2xl font-black text-white group-hover:text-emerald-300 transition-colors">
+                          <Multilang en={top.name} te={top.nameTe} />
+                        </h3>
+                        <PriceBadge price={top.priceInr ?? null} isFree={top.accessType === "FREE"} />
+                      </div>
+                      {(top.description || top.descriptionTe) && (
+                        <p className="text-sm font-medium text-white/40 line-clamp-2 max-w-2xl leading-relaxed">
+                          <Multilang en={top.description || ""} te={top.descriptionTe || ""} />
+                        </p>
+                      )}
+                    </div>
 
-                  <div className="mt-4 md:mt-0 flex items-center">
-                    <div className="flex items-center text-purple-400 font-bold group/btn">
-                      <span>Browse Micro-Topics</span>
-                      <svg
-                        className="ml-2 w-5 h-5 transform group-hover/btn:translate-x-1 transition-transform"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <polyline points="12 5 19 12 12 19"></polyline>
-                      </svg>
+                    <div className="mt-4 md:mt-0 flex items-center">
+                      <div className="flex items-center text-purple-400 font-bold group/btn">
+                        {loadingTopic?.id === top.id ? (
+                           <div className="w-5 h-5 border-2 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
+                        ) : (
+                          <>
+                            <span>Browse Micro-Topics</span>
+                            <svg
+                              className="ml-2 w-5 h-5 transform group-hover/btn:translate-x-1 transition-transform"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2.5"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            >
+                              <line x1="5" y1="12" x2="19" y2="12"></line>
+                              <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                          </>
+                        )}
+                      </div>
                     </div>
-                  </div>
-                </Link>
+                  </button>
               </motion.div>
               ))}
             </AnimatePresence>
           )}
         </div>
       </div>
+
+      <PaywallModal
+        isOpen={isPaywallOpen}
+        onClose={() => setIsPaywallOpen(false)}
+        accessInfo={accessInfo}
+        entityType="TOPIC"
+        entityId={selectedTopic?.id || 0}
+        entityName={selectedTopic?.name || "Topic"}
+        onSuccess={() => {
+          // Success! Refresh data or navigate
+          if (selectedTopic) {
+             window.location.href = `/student/categories/${categoryId}/${subCategoryId}/${sectionId}/${selectedTopic.id}`;
+          }
+        }}
+      />
     </ProtectedLayout>
   );
 }

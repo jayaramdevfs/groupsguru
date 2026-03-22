@@ -61,13 +61,14 @@ C:\GroupsGuru\Lms\
 | 15 | Pricing + Access Control | ✅ Done | ✅ Done | ✅ Done |
 | 15a | Post-Sprint Fix: H2 Migration + Cache Bug | ✅ Done | ✅ Done | ➖ N/A |
 | 15b | Project Rename: LMS → GroupsGuru | ✅ Done | ✅ Done | ✅ Done |
-| 16 | Razorpay Payment Integration | 📅 Planned | 📅 Planned | 📅 Planned |
+| 16 | Razorpay Payment Integration | ✅ Done | ✅ Done | ✅ Done |
+| 17 | Mobile Recovery & Native Payments | ✅ Done | ➖ N/A | ✅ Done |
 
-**Resume Point:** Start Sprint 16 (Razorpay Payment Integration)
+**Resume Point:** Start Sprint 18
 
 ### Execution Order:
 ```
-Sprint 15b (Rename) -> Sprint 16 (Razorpay)
+Sprint 17 (Mobile Recovery) -> Sprint 18 (TBD)
 ```
 
 ---
@@ -928,6 +929,40 @@ Switched development environment from Docker/PostgreSQL to H2 file-based databas
 
 **Closure Date:** March 22, 2026
 **Domain:** groupsguru.in
+
+---
+
+## Sprint 17 — Mobile Recovery & Native Payments ✅ DONE
+
+> **Context:** After Sprint 15b rename, the mobile `src/` directory was lost during folder copy (file lock issues on Windows). Sprint 16 completed Razorpay for backend + web but mobile was blocked. This sprint recovers all mobile source and integrates native Razorpay payments.
+
+### Recovery
+- Recovered 43 missing source files from git history (`ec3c394`)
+- Files restored: `App.tsx`, all `src/` (api, components, context, navigation, screens), Android Kotlin files, `package.json`, `app.json`
+- Applied GroupsGuru rename to all recovered files
+
+### Razorpay Mobile Integration
+- **`src/api/paymentService.ts`** (new) — `createOrder()` and `verifyPayment()` API calls matching web `lib/payment.ts`
+- **`src/components/PaywallModal.tsx`** (rewritten) — Full Razorpay checkout flow using `react-native-razorpay` SDK
+  - Primary purchase option (direct entity)
+  - Bundle upsell options (parent entities)
+  - Loading states, error handling, cancellation support
+  - Purple/indigo theme matching web design
+- **`src/screens/TopicScreen.tsx`** (updated) — Passes `entityType`, `entityId`, `entityName`, `onSuccess` to PaywallModal. On payment success, navigates to MicroTopic screen.
+- **`package.json`** — Added `react-native-razorpay@^2.3.0`
+
+### Payment Flow (Mobile)
+```
+TopicScreen → accessService.checkAccess("TOPIC", id) →
+  hasAccess? → navigate to MicroTopic
+  !hasAccess? → PaywallModal opens →
+    User taps option → paymentService.createOrder() →
+    RazorpayCheckout.open() → native payment UI →
+    Success → paymentService.verifyPayment() → navigate
+```
+
+**Closure Date:** March 22, 2026
+**Parity:** Mobile now matches web PaywallModal + PriceBadge functionality.
 
 ---
 

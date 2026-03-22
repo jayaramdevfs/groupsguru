@@ -28,4 +28,6 @@ app:
     cookie:
       secure: ${APP_AUTH_COOKIE_SECURE:false}
       same-site: ${APP_AUTH_COOKIE_SAME_SITE:Lax}
-      domain: ${APP_AUTH_COOKIE_DOMAIN:}
+razorpay:
+  key-id: rzp_test_SU3wy02Xv8CfbL
+  key-secret: EDBCJRnOqOmB82tP88ny0u3f
