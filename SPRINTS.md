@@ -63,12 +63,13 @@ C:\GroupsGuru\Lms\
 | 15b | Project Rename: LMS → GroupsGuru | ✅ Done | ✅ Done | ✅ Done |
 | 16 | Razorpay Payment Integration | ✅ Done | ✅ Done | ✅ Done |
 | 17 | Mobile Recovery & Native Payments | ✅ Done | ➖ N/A | ✅ Done |
+| 17a | APPSC Content Hierarchy + Archive Cleanup | ✅ Done | ✅ Done | ➖ N/A |
 
 **Resume Point:** Start Sprint 18
 
 ### Execution Order:
 ```
-Sprint 17 (Mobile Recovery) -> Sprint 18 (TBD)
+Sprint 17a (Content Hierarchy) -> Sprint 18 (TBD)
 ```
 
 ---
@@ -963,6 +964,67 @@ TopicScreen → accessService.checkAccess("TOPIC", id) →
 
 **Closure Date:** March 22, 2026
 **Parity:** Mobile now matches web PaywallModal + PriceBadge functionality.
+
+---
+
+## Sprint 17a — APPSC Content Hierarchy + Archive Cleanup ✅ DONE
+
+> **Context:** The DataSeeder was seeding 6 generic categories (UPSC, SSC, Banking, APPSC G1-4) with no children — empty shells with no subjects, sections, or topics. Students clicking any category saw nothing. Additionally, scattered planning documents across 5+ folders needed consolidation.
+
+### DataSeeder Rewrite
+- **`DataSeeder.java`** — Complete rewrite from flat category list to full APPSC hierarchy
+- Removed generic categories (UPSC, SSC, Banking) — APPSC-only focus
+- Seeds **4 categories**: APPSC Group 1, 2, 3, 4 (linked to APPSC commission)
+- Seeds **6 subjects** under Group 1: History & Culture, Geography, Polity & Governance, Economy, Science & Technology, Current Affairs & Aptitude
+- Seeds **14 sections** with section codes (e.g., HIST-ANC, HIST-MED, GEO-PHY, POL-CON)
+- Seeds **71 topics** with topic codes mapped to registry CSV micro-topic IDs
+- All content is **bilingual** (English + Telugu)
+- Groups 2, 3, 4 created as categories (ready for future content)
+
+### APPSC Group 1 Structure Seeded
+```
+APPSC Group 1
+├── History & Culture (HIST)
+│   ├── Ancient India (10 topics)
+│   ├── Medieval India (5 topics)
+│   ├── Modern India (4 topics)
+│   └── AP History (5 topics)
+├── Geography (GEO)
+│   ├── Physical Geography (4 topics)
+│   └── Economic Geography (3 topics)
+├── Polity & Governance (POL)
+│   ├── Indian Constitution (8 topics)
+│   └── Ethics & Public Admin (6 topics)
+├── Economy (ECON)
+│   ├── Indian Economy (8 topics)
+│   └── AP Economy (5 topics)
+├── Science & Technology (SCI)
+│   ├── Science & Technology (7 topics)
+│   └── Environment (2 topics)
+└── Current Affairs & Aptitude (CA)
+    ├── Aptitude & Mental Ability (3 topics)
+    └── Current Events (1 topic)
+```
+
+### Archive Cleanup
+- Consolidated 5 scattered doc folders into single `C:\GroupsGuru\archive\`
+  - `old-planning-docs/` — Roadmaps, TDD, blueprints, old README
+  - `old-sprint-closures/` — Sprint 0-13 closure reports
+  - `old-architecture/` — Architecture docs, PYQ data, registry CSVs
+  - `old-plans/` — 5 archived plans + master sprint plan v2
+  - `old-reference/` — TDD v2, QB structure, execution plan
+  - `old-repo/` — Sprint 1 zip backup
+  - `old-postman/` — Postman collections
+- Removed `Documents& plans&rules/`, `docs/`, `Repo/`, `postam/` folders
+- **Nothing deleted** — all files preserved in `archive/`
+- Clean root: only `Lms/`, `archive/`, `data/`, `.claude/`, `.vscode/`
+
+### Fresh H2 Database
+- Deleted old `lms_db.mv.db` (had stale generic categories)
+- Fresh `groupsguru_db.mv.db` created on startup with full APPSC hierarchy
+- 50 history questions auto-loaded from XML, registry micro-topics from CSVs
+
+**Closure Date:** March 22, 2026
 
 ---
 
