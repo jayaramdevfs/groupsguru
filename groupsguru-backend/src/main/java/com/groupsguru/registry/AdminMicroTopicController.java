@@ -29,6 +29,11 @@ public class AdminMicroTopicController {
         return ResponseEntity.ok(service.getAll(pageable, subject, paper, groupApplicability));
     }
 
+    @GetMapping("/topic/{topicId}")
+    public ResponseEntity<java.util.List<MicroTopic>> getByTopicId(@PathVariable Long topicId) {
+        return ResponseEntity.ok(service.getByTopicId(topicId));
+    }
+
     @PostMapping
     public ResponseEntity<MicroTopic> create(@RequestBody CreateMicroTopicRequest request) {
         return ResponseEntity.ok(service.create(request));

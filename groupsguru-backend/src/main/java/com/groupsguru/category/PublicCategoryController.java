@@ -16,7 +16,7 @@ public class PublicCategoryController {
 
     @GetMapping
     public ResponseEntity<List<CategoryResponse>> getAllCategories(@RequestParam(required = false) Long commissionId) {
-        return ResponseEntity.ok(categoryService.getAllCategories(commissionId));
+        return ResponseEntity.ok(categoryService.getAllCategories(commissionId, false));
     }
 
     @GetMapping("/{id}")

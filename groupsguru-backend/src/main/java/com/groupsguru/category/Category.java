@@ -43,6 +43,14 @@ public class Category {
     @Column(name = "price_inr")
     private Double priceInr;
 
+    @Column(name = "is_published", nullable = false, columnDefinition = "boolean default true")
+    @Builder.Default
+    private boolean isPublished = true;
+
+    @Column(name = "display_order")
+    @Builder.Default
+    private Integer displayOrder = 0;
+
     @Column(name = "is_deleted", nullable = false)
     @Builder.Default
     private boolean isDeleted = false;

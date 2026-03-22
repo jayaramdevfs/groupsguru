@@ -22,6 +22,8 @@ public class SectionResponse {
     private String subCategoryName;
     private String accessType;
     private Double priceInr;
+    private boolean isPublished;
+    private Integer displayOrder;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 }

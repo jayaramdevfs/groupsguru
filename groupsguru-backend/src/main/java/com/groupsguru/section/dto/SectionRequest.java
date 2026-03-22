@@ -16,4 +16,6 @@ public class SectionRequest {
     private String descriptionTe;
     private String sectionCode;
     private Long subCategoryId;
+    private Boolean isPublished;
+    private Integer displayOrder;
 }

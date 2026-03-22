@@ -15,7 +15,7 @@ export interface AccessCheckResponse {
 
 export const accessApi = {
   checkAccess: async (entityType: string, entityId: number): Promise<AccessCheckResponse> => {
-    const res = await backendApi.get(`/access/check/${entityType}/${entityId}`);
+    const res = await backendApi.get(`/api/access/check/${entityType}/${entityId}`);
     return res.data;
   },
 };

@@ -16,12 +16,12 @@ public class TopicController {
     // GET /api/topics — all topics (public)
     @GetMapping
     public List<TopicResponse> getAllTopics() {
-        return topicService.getAllTopics();
+        return topicService.getAllTopics(false);
     }
 
     // GET /api/topics/section/{id} — topics by section (public)
     @GetMapping("/section/{sectionId}")
     public List<TopicResponse> getTopicsBySection(@PathVariable Long sectionId) {
-        return topicService.getTopicsBySection(sectionId);
+        return topicService.getTopicsBySection(sectionId, false);
     }
 }

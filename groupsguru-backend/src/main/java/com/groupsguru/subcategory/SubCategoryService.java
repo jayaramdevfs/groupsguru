@@ -19,15 +19,21 @@ public class SubCategoryService {
     private final CategoryRepository categoryRepository;
 
     @Transactional(readOnly = true)
-    public List<SubCategoryResponse> getAllSubCategories() {
-        return subCategoryRepository.findByIsDeletedFalse().stream()
+    public List<SubCategoryResponse> getAllSubCategories(boolean isAdmin) {
+        List<SubCategory> items = isAdmin
+                ? subCategoryRepository.findByIsDeletedFalseOrderByDisplayOrderAsc()
+                : subCategoryRepository.findByIsDeletedFalseAndIsPublishedTrueOrderByDisplayOrderAsc();
+        return items.stream()
                 .map(this::mapToResponse)
                 .collect(Collectors.toList());
     }
 
     @Transactional(readOnly = true)
-    public List<SubCategoryResponse> getSubCategoriesByCategory(Long categoryId) {
-        return subCategoryRepository.findByCategoryIdAndIsDeletedFalse(categoryId).stream()
+    public List<SubCategoryResponse> getSubCategoriesByCategory(Long categoryId, boolean isAdmin) {
+        List<SubCategory> items = isAdmin
+                ? subCategoryRepository.findByCategoryIdAndIsDeletedFalseOrderByDisplayOrderAsc(categoryId)
+                : subCategoryRepository.findByCategoryIdAndIsDeletedFalseAndIsPublishedTrueOrderByDisplayOrderAsc(categoryId);
+        return items.stream()
                 .map(this::mapToResponse)
                 .collect(Collectors.toList());
     }
@@ -44,6 +50,8 @@ public class SubCategoryService {
                 .descriptionTe(request.getDescriptionTe())
                 .syllabusCode(request.getSyllabusCode())
                 .category(category)
+                .isPublished(request.getIsPublished() != null ? request.getIsPublished() : true)
+                .displayOrder(request.getDisplayOrder() != null ? request.getDisplayOrder() : 0)
                 .build();
 
         return mapToResponse(subCategoryRepository.save(subCategory));
@@ -63,6 +71,12 @@ public class SubCategoryService {
         subCategory.setDescriptionTe(request.getDescriptionTe());
         subCategory.setSyllabusCode(request.getSyllabusCode());
         subCategory.setCategory(category);
+        if (request.getIsPublished() != null) {
+            subCategory.setPublished(request.getIsPublished());
+        }
+        if (request.getDisplayOrder() != null) {
+            subCategory.setDisplayOrder(request.getDisplayOrder());
+        }
 
         return mapToResponse(subCategoryRepository.save(subCategory));
     }
@@ -87,6 +101,28 @@ public class SubCategoryService {
                 .categoryName(subCategory.getCategory().getName())
                 .accessType(subCategory.getAccessType())
                 .priceInr(subCategory.getPriceInr())
+                .isPublished(subCategory.isPublished())
+                .displayOrder(subCategory.getDisplayOrder())
                 .build();
+    }
+
+    @Transactional
+    public SubCategoryResponse togglePublish(Long id) {
+        SubCategory subCategory = subCategoryRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("SubCategory not found"));
+        subCategory.setPublished(!subCategory.isPublished());
+        return mapToResponse(subCategoryRepository.save(subCategory));
+    }
+
+    @Transactional
+    public void reorder(List<java.util.Map<String, Object>> items) {
+        for (java.util.Map<String, Object> item : items) {
+            Long id = Long.valueOf(item.get("id").toString());
+            Integer displayOrder = Integer.valueOf(item.get("displayOrder").toString());
+            subCategoryRepository.findById(id).ifPresent(entity -> {
+                entity.setDisplayOrder(displayOrder);
+                subCategoryRepository.save(entity);
+            });
+        }
     }
 }

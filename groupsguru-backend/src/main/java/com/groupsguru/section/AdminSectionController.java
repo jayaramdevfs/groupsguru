@@ -18,12 +18,12 @@ public class AdminSectionController {
 
     @GetMapping
     public List<SectionResponse> getAllSections() {
-        return sectionService.getAllSections();
+        return sectionService.getAllSections(true);
     }
 
     @GetMapping("/count")
     public ResponseEntity<Map<String, Long>> getSectionCount() {
-        long count = sectionService.getAllSections().size();
+        long count = sectionService.getAllSections(true).size();
         return ResponseEntity.ok(Map.of("count", count));
     }
 
@@ -47,5 +47,16 @@ public class AdminSectionController {
     public ResponseEntity<Void> deleteSection(@PathVariable Long id) {
         sectionService.deleteSection(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @PatchMapping("/{id}/toggle-publish")
+    public ResponseEntity<SectionResponse> togglePublish(@PathVariable Long id) {
+        return ResponseEntity.ok(sectionService.togglePublish(id));
+    }
+
+    @PutMapping("/reorder")
+    public ResponseEntity<Void> reorder(@RequestBody List<java.util.Map<String, Object>> items) {
+        sectionService.reorder(items);
+        return ResponseEntity.ok().build();
     }
 }

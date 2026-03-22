@@ -396,12 +396,15 @@ public class DataSeeder implements CommandLineRunner {
     }
 
     private void seedTopics(Section section, String[][] topics) {
+        int displayOrder = 1;
         for (String[] t : topics) {
             topicRepository.save(Topic.builder()
                     .name(t[0])
                     .nameTe(t[1])
                     .topicCode(t[2])
                     .section(section)
+                    .displayOrder(displayOrder++)
+                    .isPublished(true)
                     .build());
         }
     }

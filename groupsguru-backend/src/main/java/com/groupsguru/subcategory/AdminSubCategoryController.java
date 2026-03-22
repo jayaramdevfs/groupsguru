@@ -17,7 +17,7 @@ public class AdminSubCategoryController {
 
     @GetMapping
     public List<SubCategoryResponse> getAllSubCategories() {
-        return subCategoryService.getAllSubCategories();
+        return subCategoryService.getAllSubCategories(true);
     }
 
     @PostMapping
@@ -33,6 +33,17 @@ public class AdminSubCategoryController {
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteSubCategory(@PathVariable Long id) {
         subCategoryService.deleteSubCategory(id);
+        return ResponseEntity.ok().build();
+    }
+
+    @PatchMapping("/{id}/toggle-publish")
+    public ResponseEntity<SubCategoryResponse> togglePublish(@PathVariable Long id) {
+        return ResponseEntity.ok(subCategoryService.togglePublish(id));
+    }
+
+    @PutMapping("/reorder")
+    public ResponseEntity<Void> reorder(@RequestBody List<java.util.Map<String, Object>> items) {
+        subCategoryService.reorder(items);
         return ResponseEntity.ok().build();
     }
 }

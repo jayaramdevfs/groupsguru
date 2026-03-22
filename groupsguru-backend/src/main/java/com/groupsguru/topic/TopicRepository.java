@@ -7,6 +7,8 @@ import java.util.List;
 
 @Repository
 public interface TopicRepository extends JpaRepository<Topic, Long> {
-    List<Topic> findBySectionIdAndIsDeletedFalse(Long sectionId);
-    List<Topic> findByIsDeletedFalse();
+    List<Topic> findBySectionIdAndIsDeletedFalseAndIsPublishedTrueOrderByDisplayOrderAsc(Long sectionId);
+    List<Topic> findBySectionIdAndIsDeletedFalseOrderByDisplayOrderAsc(Long sectionId);
+    List<Topic> findByIsDeletedFalseOrderByDisplayOrderAsc();
+    List<Topic> findByIsDeletedFalseAndIsPublishedTrueOrderByDisplayOrderAsc();
 }

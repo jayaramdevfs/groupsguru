@@ -32,4 +32,13 @@ export const subCategoryApi = {
   delete: async (id: number): Promise<void> => {
     await api.delete(`/api/admin/subcategories/${id}`);
   },
+
+  togglePublish: async (id: number): Promise<SubCategory> => {
+    const response = await api.patch(`/api/admin/subcategories/${id}/toggle-publish`);
+    return response.data;
+  },
+
+  reorder: async (items: { id: number; displayOrder: number }[]): Promise<void> => {
+    await api.put(`/api/admin/subcategories/reorder`, items);
+  },
 };

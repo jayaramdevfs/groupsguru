@@ -37,6 +37,11 @@ public class QuestionController {
         return ResponseEntity.ok(service.getByQuestionCode(questionCode));
     }
     
+    @GetMapping("/micro-topic/{microTopicId}")
+    public ResponseEntity<java.util.List<Question>> getByMicroTopicId(@PathVariable String microTopicId) {
+        return ResponseEntity.ok(service.getByMicroTopicId(microTopicId));
+    }
+    
     @GetMapping("/count")
     public ResponseEntity<Long> getCount() {
         return ResponseEntity.ok(service.getCount());

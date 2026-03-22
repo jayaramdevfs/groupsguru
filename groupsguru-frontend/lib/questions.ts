@@ -33,6 +33,35 @@ export const questionsApi = {
     return response.data;
   },
 
+  getPublicAll: async (
+    page = 0,
+    size = 100,
+    subject?: string,
+    difficulty?: string,
+    questionType?: string,
+    sprintId?: string,
+    search?: string
+  ): Promise<PaginatedQuestions> => {
+    const params = new URLSearchParams({
+      page: page.toString(),
+      size: size.toString(),
+    });
+    if (subject) params.append("subject", subject);
+    if (difficulty) params.append("difficulty", difficulty);
+    if (questionType) params.append("questionType", questionType);
+    if (sprintId) params.append("sprintId", sprintId);
+    if (search) params.append("search", search);
+
+    const response = await api.get(`/api/questions?${params.toString()}`);
+    return response.data;
+  },
+
+  getByMicroTopicId: async (microTopicId: string): Promise<Question[]> => {
+    const response = await api.get(`/api/questions/micro-topic/${microTopicId}`);
+    return response.data;
+  },
+
+
   getById: async (id: number): Promise<Question> => {
     const response = await api.get(`/api/questions/${id}`);
     return response.data;

@@ -16,6 +16,8 @@ public interface QuestionRepository extends JpaRepository<Question, Long> {
     
     java.util.List<Question> findBySubjectAndIsDeletedFalse(String subject);
     
+    java.util.List<Question> findByMicroTopicIdAndIsDeletedFalse(String microTopicId);
+    
     long countByIsDeletedFalse();
 
     @Query("SELECT q FROM Question q WHERE q.isDeleted = false " +

@@ -58,6 +58,17 @@ export const registryApi = {
     }
   },
 
+  getMicroTopicsByTopic: async (topicId: number): Promise<MicroTopic[]> => {
+    try {
+      const response = await api.get(`/api/registry/micro-topics/topic/${topicId}`);
+      return response.data;
+    } catch (error) {
+      console.error("Failed to fetch micro-topics by topic:", error);
+      throw error;
+    }
+  },
+
+
   createMicroTopic: async (data: MicroTopicRequest): Promise<MicroTopic> => {
     const response = await api.post("/api/admin/registry/micro-topics", data);
     return response.data;

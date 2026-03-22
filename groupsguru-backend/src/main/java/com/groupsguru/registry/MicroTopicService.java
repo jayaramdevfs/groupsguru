@@ -31,6 +31,10 @@ public class MicroTopicService {
                 .orElseThrow(() -> new RuntimeException("MicroTopic not found with id: " + microTopicId));
     }
 
+    public java.util.List<MicroTopic> getByTopicId(Long topicId) {
+        return repository.findByTopicIdAndIsDeletedFalse(topicId);
+    }
+
     public MicroTopic create(CreateMicroTopicRequest request) {
         // Prevent duplicates
         Optional<MicroTopic> existing = repository.findByMicroTopicIdAndIsDeletedFalse(request.getMicroTopicId());

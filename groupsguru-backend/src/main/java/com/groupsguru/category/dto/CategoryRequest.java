@@ -18,4 +18,6 @@ public class CategoryRequest {
     private String imageUrl;
     
     private Long commissionId;
+    private Boolean isPublished;
+    private Integer displayOrder;
 }

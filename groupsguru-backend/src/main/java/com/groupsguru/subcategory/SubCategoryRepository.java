@@ -7,6 +7,8 @@ import java.util.List;
 
 @Repository
 public interface SubCategoryRepository extends JpaRepository<SubCategory, Long> {
-    List<SubCategory> findByCategoryIdAndIsDeletedFalse(Long categoryId);
-    List<SubCategory> findByIsDeletedFalse();
+    List<SubCategory> findByCategoryIdAndIsDeletedFalseAndIsPublishedTrueOrderByDisplayOrderAsc(Long categoryId);
+    List<SubCategory> findByCategoryIdAndIsDeletedFalseOrderByDisplayOrderAsc(Long categoryId);
+    List<SubCategory> findByIsDeletedFalseOrderByDisplayOrderAsc();
+    List<SubCategory> findByIsDeletedFalseAndIsPublishedTrueOrderByDisplayOrderAsc();
 }

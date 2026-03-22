@@ -15,7 +15,7 @@ import java.util.List;
 
 @Slf4j
 @Component
-@Order(3) // After Registry and Intelligence loaders
+@Order(4) // After Registry, Intelligence, and MicroTopicLinker
 public class QuestionDataLoader implements CommandLineRunner {
 
     @Autowired

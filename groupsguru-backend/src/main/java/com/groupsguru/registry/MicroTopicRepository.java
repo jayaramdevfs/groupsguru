@@ -13,6 +13,8 @@ import java.util.Optional;
 public interface MicroTopicRepository extends JpaRepository<MicroTopic, Long> {
     Optional<MicroTopic> findByMicroTopicIdAndIsDeletedFalse(String microTopicId);
     
+    List<MicroTopic> findByTopicIdAndIsDeletedFalse(Long topicId);
+    
     long countByIsDeletedFalse();
 
     List<MicroTopic> findAllByMicroTopicIdIn(Collection<String> microTopicIds);

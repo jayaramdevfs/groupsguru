@@ -16,12 +16,12 @@ public class SectionController {
     // GET /api/sections — all sections (public)
     @GetMapping
     public List<SectionResponse> getAllSections() {
-        return sectionService.getAllSections();
+        return sectionService.getAllSections(false);
     }
 
     // GET /api/sections/subcategory/{id} — sections by subject (public)
     @GetMapping("/subcategory/{subCategoryId}")
     public List<SectionResponse> getSectionsBySubCategory(@PathVariable Long subCategoryId) {
-        return sectionService.getSectionsBySubCategory(subCategoryId);
+        return sectionService.getSectionsBySubCategory(subCategoryId, false);
     }
 }

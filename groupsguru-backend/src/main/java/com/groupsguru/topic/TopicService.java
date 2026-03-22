@@ -20,15 +20,21 @@ public class TopicService {
     private final SectionRepository sectionRepository;
 
     @Transactional(readOnly = true)
-    public List<TopicResponse> getAllTopics() {
-        return topicRepository.findByIsDeletedFalse().stream()
+    public List<TopicResponse> getAllTopics(boolean isAdmin) {
+        List<Topic> items = isAdmin
+                ? topicRepository.findByIsDeletedFalseOrderByDisplayOrderAsc()
+                : topicRepository.findByIsDeletedFalseAndIsPublishedTrueOrderByDisplayOrderAsc();
+        return items.stream()
                 .map(this::mapToResponse)
                 .collect(Collectors.toList());
     }
 
     @Transactional(readOnly = true)
-    public List<TopicResponse> getTopicsBySection(Long sectionId) {
-        return topicRepository.findBySectionIdAndIsDeletedFalse(Objects.requireNonNull(sectionId)).stream()
+    public List<TopicResponse> getTopicsBySection(Long sectionId, boolean isAdmin) {
+        List<Topic> items = isAdmin
+                ? topicRepository.findBySectionIdAndIsDeletedFalseOrderByDisplayOrderAsc(sectionId)
+                : topicRepository.findBySectionIdAndIsDeletedFalseAndIsPublishedTrueOrderByDisplayOrderAsc(sectionId);
+        return items.stream()
                 .map(this::mapToResponse)
                 .collect(Collectors.toList());
     }
@@ -45,6 +51,8 @@ public class TopicService {
                 .descriptionTe(request.getDescriptionTe())
                 .topicCode(request.getTopicCode())
                 .section(section)
+                .isPublished(request.getIsPublished() != null ? request.getIsPublished() : true)
+                .displayOrder(request.getDisplayOrder() != null ? request.getDisplayOrder() : 0)
                 .build();
 
         return mapToResponse(topicRepository.save(topic));
@@ -60,6 +68,12 @@ public class TopicService {
         topic.setDescription(request.getDescription());
         topic.setDescriptionTe(request.getDescriptionTe());
         topic.setTopicCode(request.getTopicCode());
+        if (request.getIsPublished() != null) {
+            topic.setPublished(request.getIsPublished());
+        }
+        if (request.getDisplayOrder() != null) {
+            topic.setDisplayOrder(request.getDisplayOrder());
+        }
 
         if (!topic.getSection().getId().equals(request.getSectionId())) {
             Section section = sectionRepository.findById(Objects.requireNonNull(request.getSectionId()))
@@ -90,11 +104,33 @@ public class TopicService {
                 .sectionId(section.getId())
                 .sectionName(section.getName())
                 .subCategoryId(section.getSubCategory().getId())
-                .subCategoryName(section.getSubCategory().getName())
+                .sectionName(topic.getSection().getName())
                 .accessType(topic.getAccessType())
                 .priceInr(topic.getPriceInr())
+                .isPublished(topic.isPublished())
+                .displayOrder(topic.getDisplayOrder())
                 .createdAt(topic.getCreatedAt())
                 .updatedAt(topic.getUpdatedAt())
                 .build();
+    }
+
+    @Transactional
+    public TopicResponse togglePublish(Long id) {
+        Topic topic = topicRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Topic not found"));
+        topic.setPublished(!topic.isPublished());
+        return mapToResponse(topicRepository.save(topic));
+    }
+
+    @Transactional
+    public void reorder(List<java.util.Map<String, Object>> items) {
+        for (java.util.Map<String, Object> item : items) {
+            Long id = Long.valueOf(item.get("id").toString());
+            Integer displayOrder = Integer.valueOf(item.get("displayOrder").toString());
+            topicRepository.findById(id).ifPresent(entity -> {
+                entity.setDisplayOrder(displayOrder);
+                topicRepository.save(entity);
+            });
+        }
     }
 }

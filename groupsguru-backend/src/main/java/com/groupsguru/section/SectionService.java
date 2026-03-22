@@ -19,15 +19,21 @@ public class SectionService {
     private final SubCategoryRepository subCategoryRepository;
 
     @Transactional(readOnly = true)
-    public List<SectionResponse> getAllSections() {
-        return sectionRepository.findByIsDeletedFalse().stream()
+    public List<SectionResponse> getAllSections(boolean isAdmin) {
+        List<Section> items = isAdmin
+                ? sectionRepository.findByIsDeletedFalseOrderByDisplayOrderAsc()
+                : sectionRepository.findByIsDeletedFalseAndIsPublishedTrueOrderByDisplayOrderAsc();
+        return items.stream()
                 .map(this::mapToResponse)
                 .collect(Collectors.toList());
     }
 
     @Transactional(readOnly = true)
-    public List<SectionResponse> getSectionsBySubCategory(Long subCategoryId) {
-        return sectionRepository.findBySubCategoryIdAndIsDeletedFalse(subCategoryId).stream()
+    public List<SectionResponse> getSectionsBySubCategory(Long subCategoryId, boolean isAdmin) {
+        List<Section> items = isAdmin
+                ? sectionRepository.findBySubCategoryIdAndIsDeletedFalseOrderByDisplayOrderAsc(subCategoryId)
+                : sectionRepository.findBySubCategoryIdAndIsDeletedFalseAndIsPublishedTrueOrderByDisplayOrderAsc(subCategoryId);
+        return items.stream()
                 .map(this::mapToResponse)
                 .collect(Collectors.toList());
     }
@@ -44,6 +50,8 @@ public class SectionService {
                 .descriptionTe(request.getDescriptionTe())
                 .sectionCode(request.getSectionCode())
                 .subCategory(subCategory)
+                .isPublished(request.getIsPublished() != null ? request.getIsPublished() : true)
+                .displayOrder(request.getDisplayOrder() != null ? request.getDisplayOrder() : 0)
                 .build();
 
         Section savedSection = sectionRepository.save(section);
@@ -60,6 +68,12 @@ public class SectionService {
         section.setDescription(request.getDescription());
         section.setDescriptionTe(request.getDescriptionTe());
         section.setSectionCode(request.getSectionCode());
+        if (request.getIsPublished() != null) {
+            section.setPublished(request.getIsPublished());
+        }
+        if (request.getDisplayOrder() != null) {
+            section.setDisplayOrder(request.getDisplayOrder());
+        }
 
         // Update subcategory if changed
         if (!section.getSubCategory().getId().equals(request.getSubCategoryId())) {
@@ -92,8 +106,30 @@ public class SectionService {
                 .subCategoryName(section.getSubCategory().getName())
                 .accessType(section.getAccessType())
                 .priceInr(section.getPriceInr())
+                .isPublished(section.isPublished())
+                .displayOrder(section.getDisplayOrder())
                 .createdAt(section.getCreatedAt())
                 .updatedAt(section.getUpdatedAt())
                 .build();
+    }
+
+    @Transactional
+    public SectionResponse togglePublish(Long id) {
+        Section section = sectionRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Section not found"));
+        section.setPublished(!section.isPublished());
+        return mapToResponse(sectionRepository.save(section));
+    }
+
+    @Transactional
+    public void reorder(List<java.util.Map<String, Object>> items) {
+        for (java.util.Map<String, Object> item : items) {
+            Long id = Long.valueOf(item.get("id").toString());
+            Integer displayOrder = Integer.valueOf(item.get("displayOrder").toString());
+            sectionRepository.findById(id).ifPresent(entity -> {
+                entity.setDisplayOrder(displayOrder);
+                sectionRepository.save(entity);
+            });
+        }
     }
 }

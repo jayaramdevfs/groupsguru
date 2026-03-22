@@ -155,6 +155,19 @@ export default function AdminDashboard() {
       statLabel: "Paywall",
       disabled: false,
     },
+    {
+      title: "Content Tree",
+      titleTe: "కంటెంట్ సోపానక్రమం",
+      description: "View and manage full content hierarchy from exams down to topics in a tree view.",
+      descriptionTe: "పరీక్షల నుండి టాపిక్‌ల వరకు పూర్తి కంటెంట్ సోపానక్రమాన్ని చూడండి మరియు నిర్వహించండి.",
+      icon: "🌳",
+      href: "/admin/content-tree",
+      color: "from-emerald-500 to-green-500",
+      shadowColor: "rgba(16, 185, 129, 0.25)",
+      stat: null,
+      statLabel: "Hierarchy",
+      disabled: false,
+    },
   ];
 
   return (

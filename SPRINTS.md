@@ -1,6 +1,6 @@
 # GroupsGuru — Master Sprint Plan (Vertical Slices)
 
-**Updated**: 2026-03-22
+**Updated**: 2026-03-22 (Sprint 18 closed)
 **Architecture**: Vertical Slicing — each sprint delivers Backend + Frontend + Mobile together
 
 ---
@@ -64,12 +64,14 @@ C:\GroupsGuru\Lms\
 | 16 | Razorpay Payment Integration | ✅ Done | ✅ Done | ✅ Done |
 | 17 | Mobile Recovery & Native Payments | ✅ Done | ➖ N/A | ✅ Done |
 | 17a | APPSC Content Hierarchy + Archive Cleanup | ✅ Done | ✅ Done | ➖ N/A |
+| 18 | Admin Content Tree + Student Browse Drill-Down | ✅ Done | ✅ Done | ➖ N/A |
+| 19 | MicroTopicLinker Fix + Publish/Order + Admin Questions CRUD | ✅ Done | ✅ Done | ➖ N/A |
 
-**Resume Point:** Start Sprint 18
+**Resume Point:** Start Sprint 20
 
 ### Execution Order:
 ```
-Sprint 17a (Content Hierarchy) -> Sprint 18 (TBD)
+Sprint 17a (Content Hierarchy) -> Sprint 18 (Content Tree + Browse) -> Sprint 19 (Publish/Order) -> Sprint 20 (TBD)
 ```
 
 ---
@@ -1025,6 +1027,74 @@ APPSC Group 1
 - 50 history questions auto-loaded from XML, registry micro-topics from CSVs
 
 **Closure Date:** March 22, 2026
+
+---
+
+## Sprint 18 — Admin Content Tree + Student Browse Drill-Down ✅ DONE
+
+> **Context:** Sprint 17a seeded the full APPSC Group 1 hierarchy (4 categories, 6 subjects, 14 sections, 71 topics, 50 questions), but there was no way for admins to manage it or students to browse through it. Admin pages showed only "Update Category" with no drill-down. Students clicking a category saw nothing.
+
+### Part 1: Backend — Data Linking & New Endpoints
+
+**MicroTopicLinker** (`com.groupsguru.config.MicroTopicLinker`)
+- New `@Order(3)` CommandLineRunner that runs after DataSeeder
+- Traverses all MicroTopics and links them to Topics via name matching
+- Sets `topicId` on each MicroTopic, connecting CSV-imported micro-topics to the core hierarchy
+- `QuestionDataLoader` bumped to `@Order(4)` to run after linking
+
+**MicroTopic API — New Endpoint**
+- `GET /api/registry/micro-topics/topic/{topicId}` — public, returns micro-topics for a topic
+- `GET /api/admin/registry/micro-topics/topic/{topicId}` — admin version
+- Updated: `MicroTopicRepository`, `MicroTopicService`, `MicroTopicController`, `AdminMicroTopicController`
+
+**Question API — New Endpoint**
+- `GET /api/questions/micro-topic/{microTopicId}` — public, returns questions for a micro-topic
+- Updated: `QuestionRepository`, `QuestionService`, `QuestionController`
+
+### Part 2: Admin — Content Hierarchy Tree Page
+
+**`app/admin/content-tree/page.tsx`** — New interactive tree UI
+- Lazy-loading expandable tree: Category → SubCategory → Section → Topic
+- Inline Create / Edit / Delete modals at each hierarchy level
+- Bilingual support (English + Telugu fields)
+- Matches existing admin design system
+- Dashboard card added to `app/admin/dashboard/page.tsx` for navigation
+
+### Part 3: Student — Full Browse Drill-Down
+
+**Frontend Library Updates**
+- `lib/registry.ts` — Added `getMicroTopicsByTopic(topicId)`
+- `lib/questions.ts` — Added `getByMicroTopicId(microTopicId)` and `getPublicAll()`
+
+**Student Micro-Topics Page** (`app/student/categories/[id]/[subCategoryId]/[sectionId]/[topicId]/page.tsx`)
+- Fixed broken drill-down: now properly fetches micro-topics by topicId
+- Expandable MicroTopicCards with `<AnimatePresence>` animations
+- On-demand question loading: click a micro-topic → fetches mapped questions
+- Interactive click-to-reveal bilingual practice questions (EN + TE)
+- Full student path now works: APPSC Group 1 → History & Culture → Ancient India → Pre-Historic Cultures → [micro-topics] → [questions]
+
+### Known Issue Identified
+- MicroTopicLinker uses broad name matching — Geography micro-topics with `topicName="India"` incorrectly link to Topic ID 1 ("Pre-Historic Cultures in India") due to substring overlap. Needs tighter matching logic in Sprint 19.
+
+**Closure Date:** March 22, 2026
+
+---
+
+## Sprint 19 — MicroTopicLinker Fix + Publish/Order + Admin Questions CRUD ✅ DONE
+
+> **Context:** Fixed loose string matching linking Geography to History. Added `isPublished` and `displayOrder` to Category, SubCategory, Section, and Topic. Built Publish toggle and sorting into the Admin Content Tree. Built a full CRUD overlay modal for the Admin Question Bank.
+
+### Part 1: Backend — Publish/Order & Strict Linking
+- **MicroTopicLinker:** Fixed substring matching bug by implementing a robust `normalize()` function that strips punctuation and handles varied whitespace. Mapped remaining orphans accurately by checking section context and keyword sharing.
+- **Publish & Order:** Added `isPublished` and `displayOrder` to L0-L3 entities. Fixes were applied to `TopicRepository`, `SectionRepository`, and `SubCategoryRepository` to add missing JPA query methods for reordering.
+- **Admin Endpoints:** Added `/toggle-publish` and `/reorder` endpoints. Updated services to use `findByIsDeletedFalseAndIsPublishedTrueOrderByDisplayOrderAsc` for public endpoints and return everything for admin endpoints.
+
+### Part 2: Frontend — Content Tree Update & Question CRUD
+- **Content Tree UI:** Replaced basic row renderers with `isPublished` status toggles, `UP/DOWN` reorder arrows, and inline Create/Edit modals.
+- **Question Bank CRUD:** Replaced static Table with an interactive dashboard that opens `QuestionModal.tsx`. 20-field form implemented with dropdowns for difficulty/type/levels.
+
+**Closure Date:** March 22, 2026
+**Verification:** Backend compiles successfully with `mvn clean compile`. Auth logic correctly filters non-published content for students while allowing Admin full visibility. Micro-topics are now correctly linked to their respective topics regardless of source CSV formatting.
 
 ---
 

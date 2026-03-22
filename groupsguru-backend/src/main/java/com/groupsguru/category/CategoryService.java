@@ -14,13 +14,18 @@ public class CategoryService {
 
     private final CategoryRepository categoryRepository;
 
-    public List<CategoryResponse> getAllCategories(Long commissionId) {
+    public List<CategoryResponse> getAllCategories(Long commissionId, boolean isAdmin) {
         List<Category> categories;
         if (commissionId != null) {
-            categories = categoryRepository.findByCommissionIdAndIsDeletedFalse(commissionId);
+            categories = isAdmin
+                ? categoryRepository.findByCommissionIdAndIsDeletedFalseOrderByDisplayOrderAsc(commissionId)
+                : categoryRepository.findByCommissionIdAndIsDeletedFalseAndIsPublishedTrueOrderByDisplayOrderAsc(commissionId);
         } else {
-            categories = categoryRepository.findByIsDeletedFalse();
+            categories = isAdmin
+                ? categoryRepository.findByIsDeletedFalseOrderByDisplayOrderAsc()
+                : categoryRepository.findByIsDeletedFalseAndIsPublishedTrueOrderByDisplayOrderAsc();
         }
+
         return categories.stream()
                 .map(CategoryResponse::fromEntity)
                 .collect(Collectors.toList());
@@ -40,6 +45,8 @@ public class CategoryService {
                 .imageUrl(request.getImageUrl())
                 .commissionId(request.getCommissionId() != null ? request.getCommissionId() : 1L)
                 .isDeleted(false)
+                .isPublished(request.getIsPublished() != null ? request.getIsPublished() : true)
+                .displayOrder(request.getDisplayOrder() != null ? request.getDisplayOrder() : 0)
                 .build();
         
         Category saved = categoryRepository.save(category);
@@ -67,6 +74,12 @@ public class CategoryService {
         if (request.getCommissionId() != null) {
             category.setCommissionId(request.getCommissionId());
         }
+        if (request.getIsPublished() != null) {
+            category.setPublished(request.getIsPublished());
+        }
+        if (request.getDisplayOrder() != null) {
+            category.setDisplayOrder(request.getDisplayOrder());
+        }
         
         Category updated = categoryRepository.save(category);
         return CategoryResponse.fromEntity(updated);
@@ -85,5 +98,24 @@ public class CategoryService {
             throw new RuntimeException("Category not found");
         }
         return category;
+    }
+
+    @org.springframework.transaction.annotation.Transactional
+    public CategoryResponse togglePublish(Long id) {
+        Category category = getEntityById(id);
+        category.setPublished(!category.isPublished());
+        return CategoryResponse.fromEntity(categoryRepository.save(category));
+    }
+
+    @org.springframework.transaction.annotation.Transactional
+    public void reorder(List<java.util.Map<String, Object>> items) {
+        for (java.util.Map<String, Object> item : items) {
+            Long id = Long.valueOf(item.get("id").toString());
+            Integer displayOrder = Integer.valueOf(item.get("displayOrder").toString());
+            categoryRepository.findById(id).ifPresent(cat -> {
+                cat.setDisplayOrder(displayOrder);
+                categoryRepository.save(cat);
+            });
+        }
     }
 }

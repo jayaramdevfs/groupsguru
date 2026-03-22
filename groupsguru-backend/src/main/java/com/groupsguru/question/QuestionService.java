@@ -28,6 +28,10 @@ public class QuestionService {
                 .orElseThrow(() -> new RuntimeException("Question not found with code: " + questionCode));
     }
 
+    public java.util.List<Question> getByMicroTopicId(String microTopicId) {
+        return repository.findByMicroTopicIdAndIsDeletedFalse(microTopicId);
+    }
+
     public long getCount() {
         return repository.countByIsDeletedFalse();
     }

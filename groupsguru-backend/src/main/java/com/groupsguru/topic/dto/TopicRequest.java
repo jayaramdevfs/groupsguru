@@ -16,4 +16,6 @@ public class TopicRequest {
     private String descriptionTe;
     private String topicCode;
     private Long sectionId;
+    private Boolean isPublished;
+    private Integer displayOrder;
 }

@@ -15,6 +15,6 @@ public class PublicSubCategoryController {
 
     @GetMapping("/category/{categoryId}")
     public List<SubCategoryResponse> getSubCategoriesByCategory(@PathVariable Long categoryId) {
-        return subCategoryService.getSubCategoriesByCategory(categoryId);
+        return subCategoryService.getSubCategoriesByCategory(categoryId, false);
     }
 }

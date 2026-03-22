@@ -7,6 +7,8 @@ import java.util.List;
 
 @Repository
 public interface CategoryRepository extends JpaRepository<Category, Long> {
-    List<Category> findByIsDeletedFalse();
-    List<Category> findByCommissionIdAndIsDeletedFalse(Long commissionId);
+    List<Category> findByIsDeletedFalseAndIsPublishedTrueOrderByDisplayOrderAsc();
+    List<Category> findByCommissionIdAndIsDeletedFalseAndIsPublishedTrueOrderByDisplayOrderAsc(Long commissionId);
+    List<Category> findByCommissionIdAndIsDeletedFalseOrderByDisplayOrderAsc(Long commissionId);
+    List<Category> findByIsDeletedFalseOrderByDisplayOrderAsc();
 }

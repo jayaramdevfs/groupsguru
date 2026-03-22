@@ -37,6 +37,8 @@ export interface Category {
   commissionId: number;
   accessType: string;
   priceInr?: number;
+  isPublished?: boolean;
+  displayOrder?: number;
   createdAt?: string;
   updatedAt?: string;
 }
@@ -48,6 +50,8 @@ export interface CategoryRequest {
   descriptionTe?: string;
   imageUrl?: string;
   commissionId: number;
+  isPublished?: boolean;
+  displayOrder?: number;
 }
 
 export interface SubCategory {
@@ -61,6 +65,8 @@ export interface SubCategory {
   categoryName: string;
   accessType: string;
   priceInr?: number;
+  isPublished?: boolean;
+  displayOrder?: number;
   createdAt?: string;
   updatedAt?: string;
 }
@@ -72,6 +78,8 @@ export interface SubCategoryRequest {
   descriptionTe?: string;
   syllabusCode?: string;
   categoryId: number;
+  isPublished?: boolean;
+  displayOrder?: number;
 }
 
 export interface Section {
@@ -85,6 +93,8 @@ export interface Section {
   subCategoryName: string;
   accessType: string;
   priceInr?: number;
+  isPublished?: boolean;
+  displayOrder?: number;
   createdAt?: string;
   updatedAt?: string;
 }
@@ -96,6 +106,8 @@ export interface SectionRequest {
   descriptionTe?: string;
   sectionCode?: string;
   subCategoryId: number;
+  isPublished?: boolean;
+  displayOrder?: number;
 }
 
 export interface Topic {
@@ -111,6 +123,8 @@ export interface Topic {
   subCategoryName: string;
   accessType: string;
   priceInr?: number;
+  isPublished?: boolean;
+  displayOrder?: number;
   createdAt?: string;
   updatedAt?: string;
 }
@@ -122,6 +136,8 @@ export interface TopicRequest {
   descriptionTe?: string;
   topicCode?: string;
   sectionId: number;
+  isPublished?: boolean;
+  displayOrder?: number;
 }
 
 export interface MicroTopic {

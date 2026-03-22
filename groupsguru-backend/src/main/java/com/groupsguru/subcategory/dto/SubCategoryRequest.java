@@ -16,4 +16,6 @@ public class SubCategoryRequest {
     private String descriptionTe;
     private String syllabusCode;
     private Long categoryId;
+    private Boolean isPublished;
+    private Integer displayOrder;
 }

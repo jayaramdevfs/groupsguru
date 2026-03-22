@@ -29,4 +29,9 @@ public class MicroTopicController {
     public ResponseEntity<MicroTopic> getByMicroTopicId(@PathVariable String microTopicId) {
         return ResponseEntity.ok(service.getByMicroTopicId(microTopicId));
     }
+
+    @GetMapping("/topic/{topicId}")
+    public ResponseEntity<java.util.List<MicroTopic>> getByTopicId(@PathVariable Long topicId) {
+        return ResponseEntity.ok(service.getByTopicId(topicId));
+    }
 }

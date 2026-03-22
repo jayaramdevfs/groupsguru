@@ -18,12 +18,12 @@ public class AdminTopicController {
 
     @GetMapping
     public List<TopicResponse> getAllTopics() {
-        return topicService.getAllTopics();
+        return topicService.getAllTopics(true);
     }
 
     @GetMapping("/count")
     public ResponseEntity<Map<String, Long>> getTopicCount() {
-        long count = topicService.getAllTopics().size();
+        long count = topicService.getAllTopics(true).size();
         return ResponseEntity.ok(Map.of("count", count));
     }
 
@@ -46,5 +46,16 @@ public class AdminTopicController {
     public ResponseEntity<Void> deleteTopic(@PathVariable Long id) {
         topicService.deleteTopic(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @PatchMapping("/{id}/toggle-publish")
+    public ResponseEntity<TopicResponse> togglePublish(@PathVariable Long id) {
+        return ResponseEntity.ok(topicService.togglePublish(id));
+    }
+
+    @PutMapping("/reorder")
+    public ResponseEntity<Void> reorder(@RequestBody List<java.util.Map<String, Object>> items) {
+        topicService.reorder(items);
+        return ResponseEntity.ok().build();
     }
 }

@@ -6,6 +6,8 @@ import { useEffect, useState, useCallback } from "react";
 import { questionsApi } from "@/lib/questions";
 import { Question } from "@/lib/types";
 import CustomSelect from "@/components/ui/CustomSelect";
+import QuestionModal from "@/components/admin/QuestionModal";
+import { QuestionRequest } from "@/lib/types";
 
 const spring = { type: "spring" as const, stiffness: 420, damping: 24, mass: 0.8 };
 
@@ -23,6 +25,10 @@ export default function AdminQuestionBank() {
   const [selectedType, setSelectedType] = useState("All Types");
   const [searchQuery, setSearchQuery] = useState("");
   const [expandedId, setExpandedId] = useState<number | null>(null);
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalMode, setModalMode] = useState<"CREATE" | "EDIT">("CREATE");
+  const [editingQuestion, setEditingQuestion] = useState<Question | null>(null);
 
   const fetchData = useCallback(async () => {
     setIsLoading(true);
@@ -45,6 +51,39 @@ export default function AdminQuestionBank() {
   useEffect(() => {
     fetchData();
   }, [fetchData]);
+
+  const handleCreate = () => {
+    setModalMode("CREATE");
+    setEditingQuestion(null);
+    setIsModalOpen(true);
+  };
+
+  const handleEdit = (question: Question) => {
+    setModalMode("EDIT");
+    setEditingQuestion(question);
+    setIsModalOpen(true);
+  };
+
+  const handleDelete = async (id: number) => {
+    if (confirm("Are you sure you want to delete this question?")) {
+      try {
+        await questionsApi.delete(id);
+        fetchData();
+      } catch (error) {
+        console.error(error);
+        alert("Failed to delete question");
+      }
+    }
+  };
+
+  const handleSave = async (data: QuestionRequest) => {
+    if (modalMode === "CREATE") {
+      await questionsApi.create(data);
+    } else if (editingQuestion) {
+      await questionsApi.update(editingQuestion.id, data);
+    }
+    fetchData();
+  };
 
   const getDifficultyBadge = (difficulty: string) => {
     switch (difficulty) {
@@ -105,6 +144,14 @@ export default function AdminQuestionBank() {
               {totalElements} bilingual MCQs parsed from Moodle XML.
             </p>
           </div>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={handleCreate}
+            className="px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 font-bold whitespace-nowrap"
+          >
+            + Add Question
+          </motion.button>
         </motion.div>
 
         {/* Stats Row */}
@@ -216,10 +263,22 @@ export default function AdminQuestionBank() {
                           </td>
                           <td className={`p-5 font-bold text-sm ${getCognitiveBadge(q.cognitiveLevel)}`}>{q.cognitiveLevel}</td>
                           <td className="p-5 font-mono text-xs text-white/50">{q.microTopicId}</td>
-                          <td className="p-5 text-right">
+                          <td className="p-5 text-right flex items-center justify-end gap-2">
+                            <button
+                              onClick={(e) => { e.stopPropagation(); handleEdit(q); }}
+                              className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-lg hover:bg-blue-500/30 text-xs font-bold transition-colors"
+                            >
+                              Edit
+                            </button>
+                            <button
+                              onClick={(e) => { e.stopPropagation(); handleDelete(q.id); }}
+                              className="px-3 py-1 bg-red-500/20 text-red-400 rounded-lg hover:bg-red-500/30 text-xs font-bold transition-colors"
+                            >
+                              Delete
+                            </button>
                             <button
                               onClick={(e) => { e.stopPropagation(); setExpandedId(isExpanded ? null : q.id); }}
-                              className="px-4 py-2 bg-white/5 rounded-xl hover:bg-violet-500/20 text-xs font-bold uppercase tracking-widest transition-colors"
+                              className="px-4 py-1 bg-white/5 rounded-lg hover:bg-violet-500/20 text-xs font-bold tracking-wide transition-colors"
                             >
                               {isExpanded ? "Close" : "View"}
                             </button>
@@ -314,6 +373,14 @@ export default function AdminQuestionBank() {
             </div>
           )}
         </div>
+        
+        <QuestionModal
+          isOpen={isModalOpen}
+          mode={modalMode}
+          initialData={editingQuestion}
+          onClose={() => setIsModalOpen(false)}
+          onSave={handleSave}
+        />
       </div>
     </ProtectedLayout>
   );

@@ -32,4 +32,13 @@ export const topicApi = {
   delete: async (id: number): Promise<void> => {
     await api.delete(`/api/admin/topics/${id}`);
   },
+
+  togglePublish: async (id: number): Promise<Topic> => {
+    const response = await api.patch<Topic>(`/api/admin/topics/${id}/toggle-publish`);
+    return response.data;
+  },
+
+  reorder: async (items: { id: number; displayOrder: number }[]): Promise<void> => {
+    await api.put(`/api/admin/topics/reorder`, items);
+  },
 };
