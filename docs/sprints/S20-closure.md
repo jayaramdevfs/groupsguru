@@ -43,11 +43,20 @@ Upgrade the Intelligence Engine from a static display tool into an actionable "C
 - Ensured consistency with the web dashboard stats.
 
 ## Technical Notes
-- **CORS Dependency:** The backend by default allows `http://localhost:3000`. If the frontend starts on another port (e.g., 3006), it will trigger 403 Forbidden errors until updated.
+- **CORS Fix (Resolved):** Updated `application.yaml` to allow both `http://localhost:3000` and `http://localhost:3006` by default. The `CorsConfig.java` already supported comma-separated origins via `app.cors.allowed-origins` property — no Java changes needed.
 - **Data Seeding:** The `dev` profile must be active for `DataInitializer` to seed the default admin credentials (`admin@lms.com` / `Admin@123`).
+- **Compilation Note:** After adding new DTOs (`CoverageDTO`, `ContentGapDTO`), a `mvn clean compile` is required — stale `.class` files in `target/` cause runtime "Unresolved compilation" errors.
+
+## Verification (2026-03-24)
+- Backend compiles cleanly: `mvn clean compile` — 0 errors
+- Admin login: `POST /api/auth/login` with `admin@lms.com` / `Admin@123` → 200 OK + JWT
+- CORS: Requests with `Origin: http://localhost:3006` return `Access-Control-Allow-Origin: http://localhost:3006`
+- Intelligence API: `/api/admin/intelligence/coverage` → 16 subjects with coverage stats
+- Intelligence API: `/api/admin/intelligence/content-gaps` → gap list sorted by prediction confidence
+- Frontend: `http://localhost:3006/admin/intelligence` → 200 OK
 
 ## Next Sprint
-- [ ] **Sprint 13: Production Readiness**
+- [ ] **Sprint 21: Production Readiness**
   - PostgreSQL migration.
   - Security hardening.
   - Production deployment configuration.

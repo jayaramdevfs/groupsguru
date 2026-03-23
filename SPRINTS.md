@@ -1,6 +1,6 @@
 # GroupsGuru — Master Sprint Plan (Vertical Slices)
 
-**Updated**: 2026-03-22 (Sprint 18 closed)
+**Updated**: 2026-03-24 (Sprint 20 closed)
 **Architecture**: Vertical Slicing — each sprint delivers Backend + Frontend + Mobile together
 
 ---
@@ -66,12 +66,13 @@ C:\GroupsGuru\Lms\
 | 17a | APPSC Content Hierarchy + Archive Cleanup | ✅ Done | ✅ Done | ➖ N/A |
 | 18 | Admin Content Tree + Student Browse Drill-Down | ✅ Done | ✅ Done | ➖ N/A |
 | 19 | MicroTopicLinker Fix + Publish/Order + Admin Questions CRUD | ✅ Done | ✅ Done | ➖ N/A |
+| 20 | Intelligence Engine Upgrade (Gaps + Heatmaps) | ✅ Done | ✅ Done | ✅ Done |
 
-**Resume Point:** Start Sprint 20
+**Resume Point:** Start Sprint 21 (Production Readiness)
 
 ### Execution Order:
 ```
-Sprint 17a (Content Hierarchy) -> Sprint 18 (Content Tree + Browse) -> Sprint 19 (Publish/Order) -> Sprint 20 (TBD)
+Sprint 17a (Content Hierarchy) -> Sprint 18 (Content Tree + Browse) -> Sprint 19 (Publish/Order) -> Sprint 20 (Intelligence Upgrade) -> Sprint 21 (Production Readiness)
 ```
 
 ---
@@ -1098,7 +1099,7 @@ APPSC Group 1
 
 ---
 
-## Sprint 20 — Intelligence Engine Upgrade (Content Gaps & Heatmaps) 📅
+## Sprint 20 — Intelligence Engine Upgrade (Content Gaps & Heatmaps) ✅ DONE
 > **Context:** The Intelligence Engine currently displays prediction scores calculated from CSV data. This sprint upgrades it into an actionable "Content Generation Guide" for admins. It identifies topics with 0 questions (gaps), generates AI prompts for those gaps, and visualizes overall syllabus coverage.
 
 ### Backend:
@@ -1123,10 +1124,26 @@ APPSC Group 1
 
 ### Mobile:
 - [x] Update Admin Intelligence screen to show "Priority Gaps" and "Coverage Stats" lists.
+- [x] Triple-tab view: Preds, Gaps, Stats — consistent with web dashboard.
+
+### CORS Fix (Post-Sprint):
+- Updated `application.yaml` default `app.cors.allowed-origins` to include both `http://localhost:3000` and `http://localhost:3006`.
+- CorsConfig already supported comma-separated origins; no Java changes needed.
+
+**Closure Date:** March 24, 2026
+**Verification:** Backend compiles cleanly (`mvn clean compile`). Login works. Intelligence endpoints (`/coverage`, `/content-gaps`, `/predictions`) return correct data. CORS allows requests from port 3006. Frontend Intelligence Dashboard loads at `/admin/intelligence`.
+
+### API Endpoints Added:
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/admin/intelligence/content-gaps` | Content gaps (micro-topics with 0 questions) |
+| GET | `/api/admin/intelligence/coverage` | Subject-wise coverage stats |
+| PUT | `/api/admin/intelligence/predictions/{id}/notes` | Update admin analysis notes |
+| PUT | `/api/admin/intelligence/predictions/{id}/priority-tweak` | Manual priority override |
 
 ---
 
-## Sprint 13 — Production Readiness 📅
+## Sprint 21 — Production Readiness 📅
 
 ### Backend:
 - [ ] Replace H2 with PostgreSQL
@@ -1163,7 +1180,7 @@ APPSC Group 1
 
 | Directory | Contents | Used In |
 |-----------|----------|---------|
-| `registry/` | 9 CSV files, 875 micro-topics | Sprint 7 |
+| `registry/` | 9 CSV files, 875+ micro-topics | Sprint 7 |
 | `intelligence/analysis/` | prediction-scores.csv (162), g1-pyq-analysis.csv (188), g2-pyq-analysis.csv (224) | Sprint 8 |
 | `intelligence/rulebook.md` | R1–R30 question generation rules | Reference |
 | `intelligence/terminology.csv` | 200+ EN-TE exam terms | Reference |
