@@ -6,15 +6,28 @@ export interface PredictionScore {
   subject: string;
   predictionConfidence: number;
   priorityRank: string;
+  notes?: string;
+}
+
+export interface ContentGap {
+  microTopicId: string;
+  microTopicText: string;
+  subject: string;
+  predictionConfidence: number;
+  priorityRank: string;
+  questionCount: number;
+}
+
+export interface Coverage {
+  subject: string;
+  totalTopics: number;
+  coveredTopics: number;
+  coveragePercentage: number;
+  totalQuestions: number;
 }
 
 export const intelligenceService = {
   getTopPredictions: async (subject: string = "All Subjects", limit: number = 20): Promise<PredictionScore[]> => {
-    // If "All Subjects", we should omit the subject param or let the backend handle it?
-    // Wait, the backend default is "History" if omitted, let's just pass what we have.
-    // If backend doesn't support "All Subjects", we can just fetch all predictions and sort/filter here,
-    // but the backend API has `?subject=xxx`. Let's assume we can fetch all and filter client side if needed, or backend supports filtering.
-    // Actually, backend findBySubject might not work for "All Subjects". Let's fetch all and slice.
     const response = await api.get("/api/admin/intelligence/predictions");
     let data: PredictionScore[] = response.data;
     if (subject !== "All Subjects") {
@@ -23,4 +36,12 @@ export const intelligenceService = {
     data.sort((a,b) => b.predictionConfidence - a.predictionConfidence);
     return data.slice(0, limit);
   },
+  getContentGaps: async (): Promise<ContentGap[]> => {
+    const response = await api.get("/api/admin/intelligence/content-gaps");
+    return response.data;
+  },
+  getCoverage: async (): Promise<Coverage[]> => {
+    const response = await api.get("/api/admin/intelligence/coverage");
+    return response.data;
+  }
 };

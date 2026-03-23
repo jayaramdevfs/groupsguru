@@ -2,32 +2,45 @@ import React, { useCallback, useEffect, useState } from "react";
 import { View, Text, StyleSheet, SafeAreaView, StatusBar, FlatList, ActivityIndicator, TouchableOpacity } from "react-native";
 import { useAuth } from "../context/AuthContext";
 import { useLanguage } from "../context/LanguageContext";
-import { intelligenceService, PredictionScore } from "../api/intelligenceService";
+import { intelligenceService, PredictionScore, ContentGap, Coverage } from "../api/intelligenceService";
 import { useFocusEffect } from "@react-navigation/native";
 
-const SUBJECTS = ["All Subjects", "History", "Economy", "Polity", "Science", "Environment", "AP History"];
+const SUBJECTS = ["All Subjects", "History", "Economy", "Polity", "Science", "Environment", "AP History", "AP Economy", "Geography", "Mental Ability"];
+
+type TabId = "PREDICTIONS" | "GAPS" | "COVERAGE";
 
 const IntelligenceScreen = () => {
   const { language } = useLanguage();
+  const [activeTab, setActiveTab] = useState<TabId>("PREDICTIONS");
   const [predictions, setPredictions] = useState<PredictionScore[]>([]);
+  const [gaps, setGaps] = useState<ContentGap[]>([]);
+  const [coverage, setCoverage] = useState<Coverage[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedSubject, setSelectedSubject] = useState("All Subjects");
 
-  const fetchPredictions = useCallback(async () => {
+  const fetchData = useCallback(async () => {
     setLoading(true);
     try {
-      const data = await intelligenceService.getTopPredictions(selectedSubject, 50);
-      setPredictions(data);
+      if (activeTab === "PREDICTIONS") {
+        const data = await intelligenceService.getTopPredictions(selectedSubject, 50);
+        setPredictions(data);
+      } else if (activeTab === "GAPS") {
+        const data = await intelligenceService.getContentGaps();
+        setGaps(selectedSubject === "All Subjects" ? data : data.filter(g => g.subject === selectedSubject));
+      } else if (activeTab === "COVERAGE") {
+        const data = await intelligenceService.getCoverage();
+        setCoverage(data);
+      }
     } catch (error) {
-      console.error("Failed to load predictions:", error);
+      console.error("Failed to load data:", error);
     } finally {
       setLoading(false);
     }
-  }, [selectedSubject]);
+  }, [selectedSubject, activeTab]);
 
   useEffect(() => {
-    fetchPredictions();
-  }, [fetchPredictions]);
+    fetchData();
+  }, [fetchData]);
 
   const getPriorityColor = (rank: string) => {
     switch (rank) {
@@ -38,7 +51,7 @@ const IntelligenceScreen = () => {
     }
   };
 
-  const renderItem = ({ item }: { item: PredictionScore }) => {
+  const renderPrediction = ({ item }: { item: PredictionScore }) => {
     const pColor = getPriorityColor(item.priorityRank);
     return (
       <View style={styles.card}>
@@ -59,41 +72,108 @@ const IntelligenceScreen = () => {
     );
   };
 
+  const renderGap = ({ item }: { item: ContentGap }) => {
+    const pColor = getPriorityColor(item.priorityRank);
+    return (
+      <View style={[styles.card, { borderColor: "rgba(239, 68, 68, 0.3)" }]}>
+        <View style={styles.cardHeader}>
+          <Text style={styles.mtId}>{item.microTopicId}</Text>
+          <View style={[styles.badge, { backgroundColor: pColor.bg, borderColor: pColor.border }]}>
+            <Text style={[styles.badgeText, { color: pColor.text }]}>{item.priorityRank.replace("_", " ")}</Text>
+          </View>
+        </View>
+        <Text style={styles.subject}>{item.microTopicText}</Text>
+        <View style={styles.gapFooter}>
+           <Text style={styles.gapSubjectText}>{item.subject}</Text>
+           <Text style={styles.gapStatus}>NO QUESTIONS</Text>
+        </View>
+      </View>
+    );
+  };
+
+  const renderCoverage = ({ item }: { item: Coverage }) => {
+    return (
+        <View style={styles.card}>
+            <Text style={styles.coverageSubject}>{item.subject}</Text>
+            <View style={styles.coverageRow}>
+                <Text style={styles.coveragePerc}>{item.coveragePercentage.toFixed(0)}% Covered</Text>
+                <Text style={styles.coverageCount}>{item.coveredTopics}/{item.totalTopics} Topics</Text>
+            </View>
+            <View style={styles.progressBarBg}>
+                <View style={[styles.progressFill, { width: `${item.coveragePercentage}%`, backgroundColor: item.coveragePercentage > 50 ? "#10b981" : "#9333ea" }]} />
+            </View>
+            <Text style={styles.totalQ}>{item.totalQuestions} Questions Total</Text>
+        </View>
+    );
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="light-content" />
       <View style={styles.header}>
-        <Text style={styles.subtitle}>{language === "en" ? "PREDICTION ENGINE" : "TE PREDICTION ENGINE"}</Text>
+        <Text style={styles.subtitle}>{activeTab}</Text>
         <Text style={styles.title}>{language === "en" ? "Intelligence" : "TE Intelligence"}</Text>
       </View>
 
-      <View style={styles.filtersWrapper}>
-         <FlatList 
-           data={SUBJECTS}
-           horizontal
-           showsHorizontalScrollIndicator={false}
-           keyExtractor={(item) => item}
-           renderItem={({ item }) => (
-             <TouchableOpacity 
-                activeOpacity={0.7}
-                onPress={() => setSelectedSubject(item)}
-                style={[styles.filterChip, selectedSubject === item && styles.filterChipActive]}
-             >
-                <Text style={[styles.filterText, selectedSubject === item && styles.filterTextActive]}>{item}</Text>
-             </TouchableOpacity>
-           )}
-         />
+      {/* Tabs */}
+      <View style={styles.tabsContainer}>
+        {[
+          { id: "PREDICTIONS", label: "Preds" },
+          { id: "GAPS", label: "Gaps" },
+          { id: "COVERAGE", label: "Stats" },
+        ].map((t) => (
+          <TouchableOpacity 
+            key={t.id}
+            onPress={() => setActiveTab(t.id as TabId)}
+            style={[styles.tabButton, activeTab === t.id && styles.tabButtonActive]}
+          >
+            <Text style={[styles.tabText, activeTab === t.id && styles.tabTextActive]}>{t.label}</Text>
+          </TouchableOpacity>
+        ))}
       </View>
+
+      {activeTab !== "COVERAGE" && (
+        <View style={styles.filtersWrapper}>
+           <FlatList 
+             data={SUBJECTS}
+             horizontal
+             showsHorizontalScrollIndicator={false}
+             keyExtractor={(item) => item}
+             renderItem={({ item }) => (
+               <TouchableOpacity 
+                  activeOpacity={0.7}
+                  onPress={() => setSelectedSubject(item)}
+                  style={[styles.filterChip, selectedSubject === item && styles.filterChipActive]}
+               >
+                  <Text style={[styles.filterText, selectedSubject === item && styles.filterTextActive]}>{item}</Text>
+               </TouchableOpacity>
+             )}
+           />
+        </View>
+      )}
 
       {loading ? (
         <ActivityIndicator size="large" color="#9333EA" style={{ marginTop: 40 }} />
-      ) : (
+      ) : activeTab === "PREDICTIONS" ? (
         <FlatList
           data={predictions}
           keyExtractor={(item) => item.id.toString()}
-          renderItem={renderItem}
+          renderItem={renderPrediction}
           contentContainerStyle={styles.listContent}
-          initialNumToRender={10}
+        />
+      ) : activeTab === "GAPS" ? (
+        <FlatList
+          data={gaps}
+          keyExtractor={(item) => item.microTopicId}
+          renderItem={renderGap}
+          contentContainerStyle={styles.listContent}
+        />
+      ) : (
+        <FlatList
+          data={coverage}
+          keyExtractor={(item) => item.subject}
+          renderItem={renderCoverage}
+          contentContainerStyle={styles.listContent}
         />
       )}
     </SafeAreaView>
@@ -122,5 +202,18 @@ const styles = StyleSheet.create({
   confidenceRow: { flexDirection: "row", alignItems: "center", justifyContent: "space-between" },
   confidenceValue: { color: "#FFFFFF", fontSize: 14, fontWeight: "800" },
   progressBarBg: { flex: 1, height: 8, backgroundColor: "rgba(255,255,255,0.1)", borderRadius: 4, overflow: "hidden", marginLeft: 16 },
-  progressFill: { height: "100%", backgroundColor: "#9333ea", borderRadius: 4 }
+  progressFill: { height: "100%", backgroundColor: "#9333ea", borderRadius: 4 },
+  totalQ: { color: "rgba(255,255,255,0.4)", fontSize: 11, fontWeight: "700", marginTop: 8 },
+  tabsContainer: { flexDirection: "row", paddingHorizontal: 24, marginBottom: 16, gap: 12 },
+  tabButton: { paddingHorizontal: 16, paddingVertical: 8, borderRadius: 12, backgroundColor: "rgba(255,255,255,0.05)", borderWidth: 1, borderColor: "rgba(255,255,255,0.1)" },
+  tabButtonActive: { backgroundColor: "#9333ea", borderColor: "#c084fc" },
+  tabText: { color: "rgba(255,255,255,0.6)", fontSize: 13, fontWeight: "800", textTransform: "uppercase" },
+  tabTextActive: { color: "#FFFFFF" },
+  gapFooter: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginTop: 12 },
+  gapSubjectText: { color: "#c084fc", fontSize: 11, fontWeight: "800", textTransform: "uppercase" },
+  gapStatus: { color: "#ef4444", fontSize: 10, fontWeight: "900" },
+  coverageSubject: { color: "#FFFFFF", fontSize: 18, fontWeight: "900", marginBottom: 12 },
+  coverageRow: { flexDirection: "row", justifyContent: "space-between", alignItems: "baseline", marginBottom: 8 },
+  coveragePerc: { color: "#34d399", fontSize: 24, fontWeight: "900" },
+  coverageCount: { color: "rgba(255,255,255,0.6)", fontSize: 13, fontWeight: "700" }
 });

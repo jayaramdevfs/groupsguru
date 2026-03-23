@@ -22,6 +22,8 @@ public interface MicroTopicRepository extends JpaRepository<MicroTopic, Long> {
     Page<MicroTopic> findByIsDeletedFalse(Pageable pageable);
 
     Page<MicroTopic> findBySubjectAndIsDeletedFalse(String subject, Pageable pageable);
+    
+    List<MicroTopic> findBySubjectAndIsDeletedFalse(String subject);
 
     Page<MicroTopic> findBySubjectAndPaperAndIsDeletedFalse(String subject, String paper, Pageable pageable);
 

@@ -1098,6 +1098,34 @@ APPSC Group 1
 
 ---
 
+## Sprint 20 — Intelligence Engine Upgrade (Content Gaps & Heatmaps) 📅
+> **Context:** The Intelligence Engine currently displays prediction scores calculated from CSV data. This sprint upgrades it into an actionable "Content Generation Guide" for admins. It identifies topics with 0 questions (gaps), generates AI prompts for those gaps, and visualizes overall syllabus coverage.
+
+### Backend:
+- [x] **Content Gap Analysis:**
+  - New DTO `ContentGapDTO` (topicId, topicName, subject, predictionConfidence, questionCount).
+  - New endpoint `GET /api/admin/intelligence/content-gaps` — returns topics with `questionCount == 0`, sorted by `predictionConfidence` DESC.
+- [x] **Coverage Stats:**
+  - New endpoint `GET /api/admin/intelligence/coverage` — returns subject-wise breakdown of (Total Topics, Covered Topics, Total Questions).
+- [x] **Manual Overrides:**
+  - `PUT /api/admin/intelligence/predictions/{id}/notes` — allow admins to add qualitative analysis notes.
+  - `PUT /api/admin/intelligence/predictions/{id}/priority-tweak` — allow manual score adjustment for "Current Affairs Hot" topics.
+
+### Frontend:
+- [x] **Intelligence Dashboard Enhancements:**
+  - Add "Content Gaps" tab.
+  - Interactive list of top 20 priority gaps.
+  - "Copy AI Prompt" button: Generates a specialized Claude/Gemini prompt for that specific micro-topic.
+- [x] **Syllabus Heatmap (Coverage Bars):**
+  - Visual subject-wise coverage percentage with progress bars (Red to Green intensity).
+- [x] **Priority Export:**
+  - "Export Priority CSV" button for urgent gaps.
+
+### Mobile:
+- [x] Update Admin Intelligence screen to show "Priority Gaps" and "Coverage Stats" lists.
+
+---
+
 ## Sprint 13 — Production Readiness 📅
 
 ### Backend:

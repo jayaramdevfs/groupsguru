@@ -10,13 +10,13 @@ import java.util.Map;
 public class IntelligenceController {
 
     @Autowired
+    private PredictionEngineService predictionEngineService;
+    
+    @Autowired
     private PredictionScoreRepository predictionScoreRepository;
-
+    
     @Autowired
     private PyqAnalysisRepository pyqAnalysisRepository;
-
-    @Autowired
-    private PredictionEngineService predictionEngineService;
 
     @GetMapping("/predictions")
     public List<PredictionScore> getAllPredictions() {
@@ -49,5 +49,27 @@ public class IntelligenceController {
     @GetMapping("/pyq-analysis/stats")
     public Map<String, Long> getPyqStats() {
         return Map.of("totalPyqs", pyqAnalysisRepository.count());
+    }
+
+    @GetMapping("/content-gaps")
+    public List<com.groupsguru.intelligence.dto.ContentGapDTO> getContentGaps() {
+        return predictionEngineService.getContentGaps();
+    }
+
+    @GetMapping("/coverage")
+    public List<com.groupsguru.intelligence.dto.CoverageDTO> getCoverage() {
+        return predictionEngineService.getCoverageStats();
+    }
+
+    @PutMapping("/predictions/{id}/notes")
+    public Map<String, String> updateNotes(@PathVariable Long id, @RequestBody Map<String, String> body) {
+        predictionEngineService.updateNotes(id, body.get("notes"));
+        return Map.of("message", "Notes updated successfully");
+    }
+
+    @PutMapping("/predictions/{id}/priority-tweak")
+    public Map<String, String> updatePriority(@PathVariable Long id, @RequestBody Map<String, String> body) {
+        predictionEngineService.updatePriorityRank(id, body.get("priority"));
+        return Map.of("message", "Priority rank updated successfully");
     }
 }
