@@ -47,7 +47,7 @@ export default function CustomSelect({
       y: 0, 
       scale: 1,
       transition: { 
-        type: "spring" as const, stiffness: 400, damping: 25,
+        duration: 0.25, ease: "easeOut" as const,
         staggerChildren: 0.03 // Stagger the appearance of options
       } 
     },
@@ -57,7 +57,7 @@ export default function CustomSelect({
   // Framer motion variants for individual options
   const optionVariants = {
     hidden: { opacity: 0, x: -10 },
-    visible: { opacity: 1, x: 0, transition: { type: "spring" as const, stiffness: 300, damping: 20 } }
+    visible: { opacity: 1, x: 0, transition: { duration: 0.25, ease: "easeOut" as const } }
   };
 
   return (
@@ -70,24 +70,24 @@ export default function CustomSelect({
         whileTap={{ scale: 0.98 }}
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className={`w-full bg-black/40 border rounded-2xl p-4 flex justify-between items-center transition-all duration-300 text-left backdrop-blur-md
+        className={`w-full bg-black/40 border rounded-2xl p-4 flex justify-between items-center transition-all duration-300 text-left 
           ${isOpen 
-            ? "border-purple-500/70 shadow-[0_0_15px_rgba(147,51,234,0.3)] bg-purple-900/10" 
-            : "border-white/10 hover:border-white/20 hover:bg-black/60"
+            ? "border-orange-500/70 shadow-md bg-[#292524]" 
+            : "border-[#57534E]/40 hover:border-white/20 hover:bg-black/60"
           }
         `}
       >
         <span
           className={`font-medium ${
-            selectedOption ? "text-white" : "text-white/40 italic"
+            selectedOption ? "text-[#FAFAF9]" : "text-[#FAFAF9]/40 "
           }`}
         >
           {selectedOption ? selectedOption.label : placeholder}
         </span>
         <motion.svg
           animate={{ rotate: isOpen ? 180 : 0 }}
-          transition={{ type: "spring", stiffness: 300, damping: 20 }}
-          className={`w-5 h-5 ${isOpen ? "text-purple-400" : "text-white/40"}`}
+          transition={{ duration: 0.25, ease: "easeOut" as const }}
+          className={`w-5 h-5 ${isOpen ? "text-[#F97316]" : "text-[#FAFAF9]/40"}`}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -109,12 +109,12 @@ export default function CustomSelect({
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="absolute z-[999] w-full mt-3 bg-[#0f051d] border border-white/20 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] overflow-hidden"
+            className="absolute z-[999] w-full mt-3 bg-[#1C1917] border border-white/20 rounded-2xl shadow-md overflow-hidden"
           >
             {/* Custom generic CSS scrollbar classes added for tailwind via global CSS logic */}
             <div className="max-h-[300px] overflow-y-auto p-2" style={{ scrollbarWidth: "thin", scrollbarColor: "rgba(255,255,255,0.1) transparent" }}>
               {options.length === 0 ? (
-                <div className="px-5 py-4 text-white/40 italic text-center font-medium">
+                <div className="px-5 py-4 text-[#FAFAF9]/40  text-center font-medium">
                   No options available
                 </div>
               ) : (
@@ -132,8 +132,8 @@ export default function CustomSelect({
                       className={`w-full text-left px-4 py-3.5 mb-1 last:mb-0 rounded-xl transition-all duration-200 flex items-center justify-between group
                         ${
                           isSelected
-                            ? "bg-gradient-to-r from-purple-500/20 to-indigo-500/10 text-purple-300 font-bold border border-purple-500/20 shadow-[inset_0_0_10px_rgba(147,51,234,0.1)]"
-                            : "text-white/80 hover:bg-white/5 hover:text-white border border-transparent"
+                            ? "bg-[#EA580C] text-[#F97316] font-bold border border-[#57534E]/40 shadow-md"
+                            : "text-[#FAFAF9]/80 hover:bg-white/5 hover:text-[#FAFAF9] border border-transparent"
                         }
                       `}
                     >
@@ -144,8 +144,8 @@ export default function CustomSelect({
                         <motion.svg
                           initial={{ scale: 0, opacity: 0 }}
                           animate={{ scale: 1, opacity: 1 }}
-                          transition={{ type: "spring", stiffness: 400, damping: 25 }}
-                          className="w-5 h-5 text-purple-400 shrink-0"
+                          transition={{ duration: 0.25, ease: "easeOut" as const }}
+                          className="w-5 h-5 text-[#F97316] shrink-0"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"

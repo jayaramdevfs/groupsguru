@@ -1,22 +1,22 @@
 "use client";
 
 import { useLanguage } from "@/app/context/LanguageContext";
-import { motion } from "framer-motion";
 
 export const LanguageToggle = () => {
   const { language, toggleLanguage } = useLanguage();
 
   return (
-    <motion.button
-      whileHover={{ scale: 1.02, backgroundColor: "rgba(255,255,255,0.15)" }}
-      whileTap={{ scale: 0.98 }}
+    <button
       onClick={toggleLanguage}
-      className="px-3 py-1.5 rounded-full bg-white/5 backdrop-blur-md border border-white/10 text-white font-bold text-[10px] flex items-center gap-2 transition-all shadow-lg"
+      className="px-3 py-1 rounded-full bg-[#1E1E1E] border border-[#3A3A3A] text-[11px] font-semibold flex items-center gap-2 transition-colors duration-150 hover:border-[#666666]"
     >
-      <span className={language === "en" ? "text-purple-400" : "text-white/40"}>EN</span>
-      <div className="w-[1px] h-3 bg-white/10" />
-      <span className={language === "te" ? "text-purple-400" : "text-white/40"}>తెలుగు</span>
-    </motion.button>
-
+      <span className={language === "en" ? "text-[#D97706]" : "text-[#666666]"}>
+        EN
+      </span>
+      <div className="w-px h-3 bg-[#3A3A3A]" />
+      <span className={language === "te" ? "text-[#D97706]" : "text-[#666666]"}>
+        తెలుగు
+      </span>
+    </button>
   );
 };

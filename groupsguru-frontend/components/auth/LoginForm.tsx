@@ -4,15 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import api from "../../lib/api";
 import AnimatedInput from "../ui/AnimatedInput";
-import { motion } from "framer-motion";
 import { useAuth } from "../../app/context/AuthContext";
-
-const spring = {
-  type: "spring" as const,
-  stiffness: 420,
-  damping: 24,
-  mass: 0.8,
-};
 
 export default function LoginForm() {
   const router = useRouter();
@@ -41,42 +33,52 @@ export default function LoginForm() {
       } else {
         setError("Unable to resolve user role");
       }
-    } catch {
-      setError("Invalid credentials");
+    } catch (err: any) {
+      const status = err?.response?.status;
+      if (status === 401 || status === 403) {
+        setError("Invalid email or password");
+      } else if (status === 404) {
+        setError("Account not found");
+      } else if (!navigator.onLine) {
+        setError("No internet connection");
+      } else {
+        setError(
+          err?.response?.data?.message || "Server error — please try again"
+        );
+      }
     }
   };
 
   return (
-    <form onSubmit={handleLogin} className="space-y-6">
+    <form onSubmit={handleLogin} className="space-y-5">
       {error && (
-        <p className="text-[#EC4899] text-center text-[16px] font-semibold">
+        <p className="text-[#C74444] text-center text-[14px] font-medium">
           {error}
         </p>
       )}
 
       <AnimatedInput
         type="email"
-        placeholder="Email"
+        label="Email"
+        placeholder="you@example.com"
         value={email}
         onChange={setEmail}
       />
 
       <AnimatedInput
         type="password"
-        placeholder="Password"
+        label="Password"
+        placeholder="Enter password"
         value={password}
         onChange={setPassword}
       />
 
-      <motion.button
-        whileHover={{ y: -10 }}
-        whileTap={{ scale: 0.95 }}
-        transition={spring}
+      <button
         type="submit"
-        className="w-full py-4 rounded-2xl text-[18px] font-bold text-white bg-gradient-to-r from-[#9333EA] to-[#DB2777] shadow-[0px_30px_70px_rgba(147,51,234,0.6)]"
+        className="w-full py-3 rounded-[8px] text-[15px] font-semibold text-white bg-[#D97706] hover:bg-[#F59E0B] transition-colors duration-150"
       >
-        Login
-      </motion.button>
+        Sign in
+      </button>
     </form>
   );
 }

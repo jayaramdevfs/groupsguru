@@ -11,7 +11,7 @@ import ExamTimer from "@/components/exam/ExamTimer";
 import QuestionNavPanel from "@/components/exam/QuestionNavPanel";
 import Modal from "@/components/ui/Modal";
 
-const spring = { type: "spring" as const, stiffness: 420, damping: 24, mass: 0.8 };
+const spring = {  duration: 0.25, ease: "easeOut" as const };
 
 export default function ExamAttemptPage() {
   const { id } = useParams();
@@ -79,13 +79,13 @@ export default function ExamAttemptPage() {
   }, [data, answers]);
 
   if (!data) return (
-    <div className="min-h-screen bg-[#0f051d] flex items-center justify-center">
-       <div className="w-16 h-16 border-4 border-purple-500 border-t-transparent rounded-full animate-spin" />
+    <div className="min-h-screen bg-[#1C1917] flex items-center justify-center">
+       <div className="w-16 h-16 border-4 border-orange-500 border-t-transparent rounded-full animate-spin" />
     </div>
   );
 
   if (isSubmitted) return (
-     <div className="min-h-screen bg-[#0f051d] flex flex-col items-center justify-center p-6 text-center">
+     <div className="min-h-screen bg-[#1C1917] flex flex-col items-center justify-center p-6 text-center">
         <motion.div 
            initial={{ scale: 0.8, opacity: 0 }}
            animate={{ scale: 1, opacity: 1 }}
@@ -93,45 +93,45 @@ export default function ExamAttemptPage() {
         >
            <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
         </motion.div>
-        <h1 className="text-4xl font-black italic mb-4">Exam Submitted!</h1>
-        <p className="text-white/40 font-bold mb-12">Redirecting to your dashboard...</p>
+        <h1 className="text-4xl font-semibold mb-4">Exam Submitted!</h1>
+        <p className="text-[#FAFAF9]/40 font-bold mb-12">Redirecting to your dashboard...</p>
      </div>
   );
 
   return (
     <ProtectedLayout requiredRole="STUDENT">
       <div className="h-[calc(100vh-64px)] flex items-center justify-center overflow-hidden">
-        <div className="h-[92%] w-[92%] text-white flex flex-col overflow-hidden">
+        <div className="h-[92%] w-[92%] text-[#FAFAF9] flex flex-col overflow-hidden">
         
         {/* Horizontal Split Layout */}
         <div className="flex-1 flex gap-6 overflow-hidden">
            
            {/* Main Quiz Area (Left) */}
-           <div className="flex-1 flex flex-col overflow-hidden bg-[#12081f]/40 border border-white/10 rounded-2xl backdrop-blur-3xl">
+           <div className="flex-1 flex flex-col overflow-hidden bg-[#1C1917]/40 border border-[#57534E]/40 rounded-2xl ">
               
               {/* Fixed Header */}
-              <div className="flex justify-between items-center p-3 border-b border-white/10 shrink-0 bg-white/5">
+              <div className="flex justify-between items-center p-3 border-b border-[#57534E]/40 shrink-0 bg-white/5">
                  <div className="flex items-center gap-3">
-                    <div className="w-1 h-6 bg-purple-500 rounded-full" />
+                    <div className="w-1 h-6 bg-orange-500 rounded-full" />
                     <div>
-                       <h2 className="text-sm font-black italic">
+                       <h2 className="text-sm font-semibold">
                           <Multilang en={data.examName} te={data.examNameTe} />
                        </h2>
-                       <p className="text-[8px] font-black uppercase tracking-widest text-white/40 italic"> Question {currentIdx + 1}/{data.questions.length}</p>
+                       <p className="text-[8px] font-bold uppercase tracking-widest text-[#FAFAF9]/40 "> Question {currentIdx + 1}/{data.questions.length}</p>
                     </div>
                  </div>
                  <ExamTimer durationMinutes={data.durationMinutes} onTimeUp={handleSubmit} />
               </div>
 
               {/* Scrollable Content (Question & Options) */}
-              <div className="flex-1 overflow-y-auto p-4 space-y-4 scrollbar-thin scrollbar-thumb-purple-500/20 scrollbar-track-transparent">
+              <div className="flex-1 overflow-y-auto p-4 space-y-4 scrollbar-thin scrollbar-thumb-orange-500/20 scrollbar-track-transparent">
                  <motion.div 
                    key={currentIdx}
                    initial={{ x: 20, opacity: 0 }}
                    animate={{ x: 0, opacity: 1 }}
                    className="flex flex-col gap-4"
                  >
-                    <div className="text-sm md:text-base font-bold italic leading-relaxed bg-white/5 p-4 rounded-xl border border-white/5 text-white/90">
+                    <div className="text-sm md:text-base font-bold  leading-relaxed bg-white/5 p-4 rounded-xl border border-white/5 text-[#FAFAF9]/90">
                        <Multilang en={currentQuestion?.questionTextEn || ""} te={currentQuestion?.questionTextTe || ""} />
                     </div>
 
@@ -145,19 +145,19 @@ export default function ExamAttemptPage() {
               </div>
 
               {/* Fixed Footer (Always Visible) */}
-              <div className="flex justify-between items-center p-3 border-t border-white/10 shrink-0 bg-white/5">
+              <div className="flex justify-between items-center p-3 border-t border-[#57534E]/40 shrink-0 bg-white/5">
                  <div className="flex gap-2">
                     <button 
                       onClick={() => setCurrentIdx(prev => Math.max(0, prev - 1))} 
                       disabled={currentIdx === 0} 
-                      className="px-5 py-2 bg-white/5 border border-white/10 rounded-xl font-bold italic text-[10px] hover:bg-white/10 disabled:opacity-20"
+                      className="px-5 py-2 bg-white/5 border border-[#57534E]/40 rounded-xl font-bold  text-[10px] hover:bg-white/10 disabled:opacity-20"
                     >
                       Previous
                     </button>
                     <button 
                       onClick={() => setCurrentIdx(prev => Math.min(data.questions.length - 1, prev + 1))} 
                       disabled={currentIdx === data.questions.length - 1} 
-                      className="px-5 py-2 bg-white/5 border border-white/10 rounded-xl font-bold italic text-[10px] hover:bg-white/10 disabled:opacity-20"
+                      className="px-5 py-2 bg-white/5 border border-[#57534E]/40 rounded-xl font-bold  text-[10px] hover:bg-white/10 disabled:opacity-20"
                     >
                       Next
                     </button>
@@ -165,15 +165,15 @@ export default function ExamAttemptPage() {
                  <div className="flex gap-2">
                    <button 
                      onClick={handleFlag} 
-                     className={`px-5 py-2 rounded-xl font-bold italic text-[10px] transition-all ${
-                       flagged.includes(currentIdx) ? "bg-yellow-500 text-black shadow-lg shadow-yellow-500/10" : "bg-white/5 border border-white/10 text-white/40"
+                     className={`px-5 py-2 rounded-xl font-bold  text-[10px] transition-all ${
+                       flagged.includes(currentIdx) ? "bg-yellow-500 text-black shadow-lg shadow-yellow-500/10" : "bg-white/5 border border-[#57534E]/40 text-[#FAFAF9]/40"
                      }`}
                    >
                      Mark
                    </button>
                    <button 
                      onClick={() => setIsSubmitModalOpen(true)} 
-                     className="px-6 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl font-black italic text-[10px] shadow-lg shadow-purple-500/20 hover:scale-105 active:scale-95 transition-all"
+                     className="px-6 py-2 bg-[#EA580C] rounded-xl font-semibold text-[10px] shadow-lg shadow-orange-500/20 hover:scale-105 active:scale-95 transition-all"
                    >
                      Submit
                    </button>
@@ -184,16 +184,16 @@ export default function ExamAttemptPage() {
            {/* Sidebar (Right) */}
            <div className="w-72 flex flex-col gap-4 overflow-y-auto pr-1 scrollbar-hide">
               <QuestionNavPanel totalQuestions={data.questions.length} currentIdx={currentIdx} onNavigate={setCurrentIdx} answeredIndices={answeredIndices} flaggedIndices={flagged} />
-              <div className="bg-white/5 border border-white/10 p-4 rounded-[24px] w-full backdrop-blur-xl">
-                <h3 className="text-[9px] font-black uppercase tracking-widest text-white/40 mb-3 italic">Quick Stats</h3>
+              <div className="bg-white/5 border border-[#57534E]/40 p-4 rounded-xl w-full ">
+                <h3 className="text-[9px] font-bold uppercase tracking-widest text-[#FAFAF9]/40 mb-3 ">Quick Stats</h3>
                 <div className="grid grid-cols-2 gap-3">
                    <div className="p-3 bg-white/5 rounded-xl border border-white/5">
-                      <div className="text-xl font-black italic">{answeredIndices.length}</div>
-                      <div className="text-[8px] font-black uppercase tracking-widest text-white/40">Answered</div>
+                      <div className="text-xl font-semibold">{answeredIndices.length}</div>
+                      <div className="text-[8px] font-bold uppercase tracking-widest text-[#FAFAF9]/40">Answered</div>
                    </div>
                    <div className="p-3 bg-white/5 rounded-xl border border-white/5">
-                      <div className="text-xl font-black italic">{data.questions.length - answeredIndices.length}</div>
-                      <div className="text-[8px] font-black uppercase tracking-widest text-white/40">Remaining</div>
+                      <div className="text-xl font-semibold">{data.questions.length - answeredIndices.length}</div>
+                      <div className="text-[8px] font-bold uppercase tracking-widest text-[#FAFAF9]/40">Remaining</div>
                    </div>
                 </div>
               </div>
@@ -204,14 +204,14 @@ export default function ExamAttemptPage() {
         {/* Confirmation Modal */}
         <Modal isOpen={isSubmitModalOpen} onClose={() => setIsSubmitModalOpen(false)} title="Review Submission">
           <div className="space-y-8">
-             <div className="p-8 bg-purple-500/10 border border-purple-500/20 rounded-[32px] text-center">
-                <div className="text-5xl font-black italic text-purple-400 mb-2">{answeredIndices.length} / {data.questions.length}</div>
-                <div className="text-[10px] font-black uppercase tracking-widest text-white/40">Questions Answered</div>
+             <div className="p-8 bg-orange-500/10 border border-[#57534E]/40 rounded-xl text-center">
+                <div className="text-5xl font-semibold text-[#F97316] mb-2">{answeredIndices.length} / {data.questions.length}</div>
+                <div className="text-[10px] font-bold uppercase tracking-widest text-[#FAFAF9]/40">Questions Answered</div>
              </div>
-             <p className="text-white/60 italic font-bold text-center px-6">Are you sure you want to submit your exam? Once submitted, you cannot change your answers.</p>
+             <p className="text-[#FAFAF9]/60  font-bold text-center px-6">Are you sure you want to submit your exam? Once submitted, you cannot change your answers.</p>
              <div className="flex gap-4">
-               <button onClick={() => setIsSubmitModalOpen(false)} className="flex-1 py-4 bg-white/5 rounded-2xl font-bold italic">Back to Quiz</button>
-               <button onClick={handleSubmit} disabled={isSubmitting} className="flex-1 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl font-black italic disabled:opacity-50">{isSubmitting ? "Submitting..." : "Yes, Submit Now"}</button>
+               <button onClick={() => setIsSubmitModalOpen(false)} className="flex-1 py-4 bg-white/5 rounded-2xl font-bold ">Back to Quiz</button>
+               <button onClick={handleSubmit} disabled={isSubmitting} className="flex-1 py-4 bg-[#EA580C] rounded-2xl font-semibold disabled:opacity-50">{isSubmitting ? "Submitting..." : "Yes, Submit Now"}</button>
              </div>
           </div>
         </Modal>
@@ -230,19 +230,19 @@ function OptionCard({ label, en, te, isSelected, onClick }: { label: string, en:
       onClick={onClick}
       className={`p-4 rounded-2xl border text-left transition-all ${
         isSelected 
-          ? "bg-purple-600 border-purple-500 text-white shadow-xl shadow-purple-500/20" 
-          : "bg-white/5 border-white/10 hover:bg-white/10"
+          ? "bg-[#EA580C] border-orange-500 text-[#FAFAF9] shadow-xl shadow-orange-500/20" 
+          : "bg-white/5 border-[#57534E]/40 hover:bg-white/10"
       }`}
     >
       <div className="flex items-start gap-4">
-        <div className={`w-8 h-8 rounded-xl flex items-center justify-center font-black italic text-sm ${
-          isSelected ? "bg-white text-purple-600" : "bg-purple-500/20 text-purple-400"
+        <div className={`w-8 h-8 rounded-xl flex items-center justify-center font-semibold text-sm ${
+          isSelected ? "bg-white text-[#F97316]" : "bg-orange-500/20 text-[#F97316]"
         }`}>
           {label}
         </div>
         <div className="flex-1">
-          <div className={`font-semibold italic ${isSelected ? "text-white" : "text-white/80"}`}>{en}</div>
-          <div className={`text-[10px] font-bold mt-1 ${isSelected ? "text-white/70" : "text-white/40"}`}>{te}</div>
+          <div className={`font-semibold  ${isSelected ? "text-[#FAFAF9]" : "text-[#FAFAF9]/80"}`}>{en}</div>
+          <div className={`text-[10px] font-bold mt-1 ${isSelected ? "text-[#FAFAF9]/70" : "text-[#FAFAF9]/40"}`}>{te}</div>
         </div>
       </div>
     </motion.button>

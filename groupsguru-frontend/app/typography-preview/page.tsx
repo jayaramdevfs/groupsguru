@@ -7,7 +7,7 @@ const robotoMono = Roboto_Mono({ subsets: ["latin"] });
 
 export default function TypographyPreview() {
   return (
-    <div className="min-h-screen bg-black text-white p-10 space-y-16">
+    <div className="min-h-screen bg-black text-[#FAFAF9] p-10 space-y-16">
 
       <h1 className="text-4xl font-bold text-center">
         Typography Comparison Preview
@@ -15,7 +15,7 @@ export default function TypographyPreview() {
 
       {/* Inter */}
       <div className="space-y-4">
-        <h2 className="text-2xl font-semibold text-purple-400">
+        <h2 className="text-2xl font-semibold text-[#F97316]">
           1️⃣ Inter (Premium SaaS Style)
         </h2>
         <div className={`${inter.className} space-y-2`}>
@@ -30,7 +30,7 @@ export default function TypographyPreview() {
 
       {/* Roboto Mono */}
       <div className="space-y-4">
-        <h2 className="text-2xl font-semibold text-pink-400">
+        <h2 className="text-2xl font-semibold text-[#F97316]">
           2️⃣ Roboto Mono (Monospace / Robot Style)
         </h2>
         <div className={`${robotoMono.className} space-y-2`}>
@@ -45,7 +45,7 @@ export default function TypographyPreview() {
 
       {/* System Font */}
       <div className="space-y-4">
-        <h2 className="text-2xl font-semibold text-blue-400">
+        <h2 className="text-2xl font-semibold ">
           3️⃣ System UI (iPhone-like)
         </h2>
         <div className="space-y-2 font-semibold">

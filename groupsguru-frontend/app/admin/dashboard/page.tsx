@@ -14,10 +14,8 @@ import { registryApi } from "@/lib/registry";
 import { questionsApi } from "@/lib/questions";
 
 const spring = {
-  type: "spring" as const,
-  stiffness: 420,
-  damping: 24,
-  mass: 0.8,
+  
+  duration: 0.25, ease: "easeOut" as const,
 };
 
 interface DashboardStats {
@@ -70,7 +68,7 @@ export default function AdminDashboard() {
       descriptionTe: "టాప్-లెవల్ పరీక్షా విభాగాలను నిర్వహించండి.",
       icon: "🎯",
       href: "/admin/categories",
-      color: "from-indigo-600 to-purple-600",
+      color: " ",
       shadowColor: "rgba(99, 102, 241, 0.25)",
       stat: stats.categories,
       statLabel: "Exams",
@@ -83,7 +81,7 @@ export default function AdminDashboard() {
       descriptionTe: "కోర్ సబ్జెక్టులు మరియు సిలబస్ నిర్మాణాలను నిర్వహించండి.",
       icon: "📚",
       href: "/admin/subcategories",
-      color: "from-purple-600 to-pink-500",
+      color: " ",
       shadowColor: "rgba(147, 51, 234, 0.25)",
       stat: stats.subcategories,
       statLabel: "Subjects",
@@ -96,7 +94,7 @@ export default function AdminDashboard() {
       descriptionTe: "సబ్జెక్టులను లాజికల్ స్టడీ సెక్షన్లుగా విభజించండి.",
       icon: "📑",
       href: "/admin/sections",
-      color: "from-indigo-600 to-blue-500",
+      color: " ",
       shadowColor: "rgba(99, 102, 241, 0.25)",
       stat: stats.sections,
       statLabel: "Sections",
@@ -109,7 +107,7 @@ export default function AdminDashboard() {
       descriptionTe: "ప్రతి సెక్షన్ కింద అటామిక్ స్టడీ టాపిక్‌లను నిర్వహించండి.",
       icon: "🧠",
       href: "/admin/topics",
-      color: "from-emerald-500 to-blue-500",
+      color: "from-emerald-500 ",
       shadowColor: "rgba(16, 185, 129, 0.25)",
       stat: stats.topics,
       statLabel: "Topics",
@@ -123,7 +121,7 @@ export default function AdminDashboard() {
       descriptionTe: "హై ఇంపాక్ట్ ప్రిడిక్షన్ స్కోర్లు",
       icon: "⚛️",
       href: "/admin/intelligence",
-      color: "from-purple-600 to-indigo-600",
+      color: " ",
       shadowColor: "rgba(147, 51, 234, 0.25)",
       stat: stats.microTopics,
       statLabel: "Intelligence",
@@ -136,7 +134,7 @@ export default function AdminDashboard() {
       descriptionTe: "ద్విభాషా MCQలను నిర్వహించండి — సబ్జెక్ట్, కఠినత, రకం ద్వారా ఫిల్టర్ చేయండి.",
       icon: "❓",
       href: "/admin/questions",
-      color: "from-violet-600 to-fuchsia-500",
+      color: " to-fuchsia-500",
       shadowColor: "rgba(139, 92, 246, 0.25)",
       stat: stats.questions,
       statLabel: "MCQs",
@@ -181,13 +179,13 @@ export default function AdminDashboard() {
           transition={spring}
           className="text-center"
         >
-          <div className="px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-[9px] font-black uppercase tracking-[0.2em] mb-4 inline-block">
+          <div className="px-3 py-1 rounded-full bg-orange-500/10 border border-[#57534E]/40 text-[#F97316] text-[9px] font-bold uppercase tracking-[0.2em] mb-4 inline-block">
             Intelligence Command
           </div>
-          <h1 className="text-4xl md:text-6xl font-black tracking-tighter leading-none bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-white/20">
-            GroupsGuru<span className="text-purple-500">.</span>
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tighter leading-none bg-clip-text text-transparent bg-[#EA580C]">
+            GroupsGuru<span className="text-orange-500">.</span>
           </h1>
-          <p className="mt-2 text-white/40 text-base font-medium">
+          <p className="mt-2 text-[#FAFAF9]/40 text-base font-medium">
             <Multilang en="APPSC Exam Intelligence Engine — Admin Console" te="APPSC పరీక్షా ఇంటెలిజెన్స్ ఇంజిన్ — అడ్మిన్ కన్సోల్" />
           </p>
         </motion.div>
@@ -201,16 +199,16 @@ export default function AdminDashboard() {
             className="w-full flex flex-wrap justify-center gap-6"
           >
             {[
-              { label: "Exams", labelTe: "పరీక్షలు", value: stats.categories, color: "text-indigo-400" },
-              { label: "Subjects", labelTe: "సబ్జెక్టులు", value: stats.subcategories, color: "text-purple-400" },
-              { label: "Sections", labelTe: "సెక్షన్లు", value: stats.sections, color: "text-pink-400" },
-              { label: "Topics", labelTe: "టాపిక్‌లు", value: stats.topics, color: "text-violet-400" },
-              { label: "Micro-Topics", labelTe: "మైక్రో-టాపిక్‌లు", value: stats.microTopics, color: "text-purple-400" },
-              { label: "Questions", labelTe: "ప్రశ్నలు", value: stats.questions, color: "text-violet-400" },
+              { label: "Exams", labelTe: "పరీక్షలు", value: stats.categories, color: "text-[#F97316]" },
+              { label: "Subjects", labelTe: "సబ్జెక్టులు", value: stats.subcategories, color: "text-[#F97316]" },
+              { label: "Sections", labelTe: "సెక్షన్లు", value: stats.sections, color: "text-[#F97316]" },
+              { label: "Topics", labelTe: "టాపిక్‌లు", value: stats.topics, color: "text-[#F97316]" },
+              { label: "Micro-Topics", labelTe: "మైక్రో-టాపిక్‌లు", value: stats.microTopics, color: "text-[#F97316]" },
+              { label: "Questions", labelTe: "ప్రశ్నలు", value: stats.questions, color: "text-[#F97316]" },
             ].map((s, i) => (
-              <div key={i} className="flex flex-col items-center px-6 py-2 rounded-xl bg-white/5 border border-white/10 shrink-0">
-                <span className={`text-2xl font-black ${s.color}`}>{s.value}</span>
-                <span className="text-white/40 text-[9px] font-bold uppercase tracking-widest mt-0.5">
+              <div key={i} className="flex flex-col items-center px-6 py-2 rounded-xl bg-white/5 border border-[#57534E]/40 shrink-0">
+                <span className={`text-2xl font-bold ${s.color}`}>{s.value}</span>
+                <span className="text-[#FAFAF9]/40 text-[9px] font-bold uppercase tracking-widest mt-0.5">
                   <Multilang en={s.label} te={s.labelTe} />
                 </span>
               </div>
@@ -230,10 +228,10 @@ export default function AdminDashboard() {
             >
               <Link
                 href={card.href}
-                className={`group block p-8 rounded-[32px] border h-full transition-all relative overflow-hidden backdrop-blur-xl
+                className={`group block p-8 rounded-xl border h-full transition-all relative overflow-hidden 
                   ${card.disabled
                     ? "opacity-40 cursor-not-allowed border-white/5 bg-white/5"
-                    : "border-white/10 bg-white/[0.03] hover:border-purple-500/40 hover:bg-purple-500/5 shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
+                    : "border-[#57534E]/40 bg-white/[0.03] hover:border-orange-500/40 hover:bg-orange-500/5 shadow-md"
                   }
                 `}
                 onClick={card.disabled ? (e) => e.preventDefault() : undefined}
@@ -241,7 +239,7 @@ export default function AdminDashboard() {
                 {/* Gradient Glow */}
                 {!card.disabled && (
                   <div
-                    className={`absolute -top-20 -right-20 w-52 h-52 bg-gradient-to-br ${card.color} opacity-10 blur-3xl group-hover:opacity-25 transition-all duration-500`}
+                    className={`absolute -top-20 -right-20 w-52 h-52 ${card.color} opacity-10  group-hover:opacity-25 transition-all duration-500`}
                   />
                 )}
 
@@ -250,7 +248,7 @@ export default function AdminDashboard() {
                   <div className="flex items-start justify-between mb-6">
                     <div className="text-5xl">{card.icon}</div>
                     {/* Live stat badge */}
-                    <div className={`px-3 py-1 rounded-xl text-xs font-black uppercase tracking-widest border ${card.disabled ? "border-white/10 bg-white/5 text-white/30" : `bg-gradient-to-br ${card.color} bg-opacity-10 border-white/10 text-white`}`}>
+                    <div className={`px-3 py-1 rounded-xl text-xs font-bold uppercase tracking-widest border ${card.disabled ? "border-[#57534E]/40 bg-white/5 text-[#FAFAF9]/30" : `${card.color} bg-opacity-10 border-[#57534E]/40 text-[#FAFAF9]`}`}>
                       {card.stat !== null ? (
                         <span>
                           {statsLoaded ? card.stat : "—"} {card.statLabel}
@@ -264,12 +262,12 @@ export default function AdminDashboard() {
                   <h3 className="text-2xl font-bold mb-3">
                     <Multilang en={card.title} te={card.titleTe} />
                   </h3>
-                  <p className="text-white/50 font-medium leading-relaxed mb-6 text-sm">
+                  <p className="text-[#FAFAF9]/50 font-medium leading-relaxed mb-6 text-sm">
                     <Multilang en={card.description} te={card.descriptionTe} />
                   </p>
 
                   {!card.disabled && (
-                    <div className="flex items-center gap-2 text-purple-400 font-bold text-xs uppercase tracking-widest">
+                    <div className="flex items-center gap-2 text-[#F97316] font-bold text-xs uppercase tracking-widest">
                       <span>Manage</span>
                       <svg
                         width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"

@@ -1,9 +1,44 @@
 @import "tailwindcss";
 
+@theme {
+  /* === BACKGROUNDS (Claude Code dark base) === */
+  --color-base: #191919;
+  --color-surface: #1E1E1E;
+  --color-elevated: #2D2D2D;
+  --color-overlay: #363636;
+  --color-inset: #141414;
+
+  /* === FOREGROUNDS === */
+  --color-fg-primary: #E8E8E8;
+  --color-fg-secondary: #A0A0A0;
+  --color-fg-muted: #666666;
+  --color-fg-faint: #3A3A3A;
+
+  /* === ACCENT (Anthropic warm amber) === */
+  --color-accent: #D97706;
+  --color-accent-hover: #F59E0B;
+
+  /* === SEMANTIC === */
+  --color-success: #3D9A5F;
+  --color-warning: #C4901A;
+  --color-error: #C74444;
+  --color-info: #4A8FBF;
+
+  /* === BORDERS === */
+  --color-border: #2A2A28;
+  --color-border-hover: #3D3D3A;
+
+  /* === RADII === */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+}
+
 :root {
-  --background: #0f051d;
-  --foreground: #ffffff;
-  color-scheme: dark; /* Force browser native UI to stay dark */
+  --background: #191919;
+  --foreground: #E8E8E8;
+  color-scheme: dark;
 }
 
 body {
@@ -13,62 +48,45 @@ body {
   padding: 0;
 }
 
-/* 
-   PROFESSIONAL AUTOFILL OVERRIDE
-   Prevents the "White Out" (Chrome light blue #e8f0fe) 
-*/
+/* Autofill override — prevent Chrome white-out */
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-    /* Use a large inset shadow to force the background color */
-    -webkit-box-shadow: 0 0 0 1000px #140a24 inset !important;
-    /* Force text to stay white */
-    -webkit-text-fill-color: white !important;
-    /* Smooth transition to prevent the color-flicker on load */
-    transition: background-color 5000000s ease-in-out 0s;
-    caret-color: #8B5CF6 !important;
+  -webkit-box-shadow: 0 0 0 1000px #141414 inset !important;
+  -webkit-text-fill-color: #E8E8E8 !important;
+  transition: background-color 5000000s ease-in-out 0s;
+  caret-color: #D97706 !important;
 }
 
-/* Target specific credential manager highlights */
 input:-internal-autofill-selected {
-    background-color: #140a24 !important;
-    color: white !important;
+  background-color: #141414 !important;
+  color: #E8E8E8 !important;
 }
 
-/* Custom Professional Scrollbar (Thin & Indigo) */
+/* Scrollbar — thin, subtle */
 ::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.02);
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(139, 92, 246, 0.3); /* purple-500 */
-  border-radius: 10px;
+  background: #3A3A3A;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(139, 92, 246, 0.5);
+  background: #666666;
 }
 
-/* Hide scrollbar for specific elements if needed */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
-}
-
-/* Floating label: float up when input has content (typed or autofilled) */
-.floating-input:not(:placeholder-shown) ~ .floating-label,
-.floating-input:-webkit-autofill ~ .floating-label {
-    top: 6px !important;
-    transform: translateY(0) !important;
-    font-size: 11px !important;
-    color: rgb(192 132 252) !important; /* purple-400 */
 }

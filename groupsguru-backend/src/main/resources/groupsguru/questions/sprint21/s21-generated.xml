@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+  <question type="multichoice">
+    <name><text>GG-S21-SCI-Q01</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">The restriction endonuclease EcoRI recognises the specific palindromic nucleotide sequence in DNA. Which of the following is the correct sequence?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">5' - GATATC - 3'</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">5' - GAATTC - 3'</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct! EcoRI specifically recognises the palindromic sequence 5'-GAATTC-3' and cuts between G and A. The other sequences are recognised by different restriction enzymes.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">5' - GTATAC - 3'</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">5' - GGATCC - 3'</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-SCI-M5-7-001</text></tag>
+      <tag><text>subject:Science</text></tag>
+      <tag><text>difficulty:easy</text></tag>
+      <tag><text>cognitive_level:L1</text></tag>
+      <tag><text>question_type:STATIC</text></tag>
+      <tag><text>sprint:S21</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S21-SCI-Q02</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Consider the following statements regarding the Polymerase Chain Reaction (PCR):
+1. The denaturation step is carried out at a high temperature (around 94°C) to separate the two strands of DNA.
+2. DNA polymerase isolated from E. coli is used for the extension step because of its high efficiency.
+3. The process of DNA replication in PCR is repeated many times to amplify the DNA segment.
+Which of the statements given above are correct?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1 and 2 only</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">2 and 3 only</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1 and 3 only</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct! Statement 1 is correct. Statement 2 is incorrect because the DNA polymerase used in PCR is Taq polymerase, isolated from the thermophilic bacterium Thermus aquaticus, as it remains active during high temperatures. Statement 3 is correct as the goal of PCR is amplification.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1, 2 and 3</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-SCI-M5-7-001</text></tag>
+      <tag><text>subject:Science</text></tag>
+      <tag><text>difficulty:medium</text></tag>
+      <tag><text>cognitive_level:L2</text></tag>
+      <tag><text>question_type:STMT</text></tag>
+      <tag><text>sprint:S21</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S21-SCI-Q03</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">In the context of genetically modified crops, what is the primary mechanism of action of the Bt toxin?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">It inhibits the photosynthesis process in the insect pests.</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">It creates pores in the midgut epithelial cells of the insect, leading to cell lysis.</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct! The Bt toxin is ingested in its inactive form. The alkaline pH of the insect's gut solubilises the crystals into an active toxin. This active toxin binds to the surface of midgut epithelial cells and creates pores that cause cell swelling and lysis, eventually causing the death of the insect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">It blocks the respiratory chain in the mitochondria of pests.</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">It acts as a neurotoxin that paralyzes the insect's nervous system.</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-SCI-M5-7-001</text></tag>
+      <tag><text>subject:Science</text></tag>
+      <tag><text>difficulty:medium</text></tag>
+      <tag><text>cognitive_level:L2</text></tag>
+      <tag><text>question_type:STATIC</text></tag>
+      <tag><text>sprint:S21</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S21-SCI-Q04</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Consider the following matched pairs regarding biotechnology processes:
+1. Gel Electrophoresis : Separation of DNA fragments based on size
+2. DNA Ligase : Cutting DNA into small fragments
+3. Ethidium Bromide : Visualisation of DNA fragments
+4. Downstream Processing : Separation and purification of products
+Which of the pairs given above are correctly matched?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1, 2 and 3</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1, 3 and 4</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct! DNA Ligase is used to join DNA fragments, not cut them. Restriction endonucleases are used for cutting. The other pairs are correctly matched.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">2, 3 and 4</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1, 2, 3 and 4</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-SCI-M5-7-001</text></tag>
+      <tag><text>subject:Science</text></tag>
+      <tag><text>difficulty:medium</text></tag>
+      <tag><text>cognitive_level:L2</text></tag>
+      <tag><text>question_type:MATCH</text></tag>
+      <tag><text>sprint:S21</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S21-SCI-Q05</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Which of the following is NOT a correct statement regarding the application of RNA interference (RNAi)?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">It is a method of cellular defense present in all eukaryotic organisms.</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">It involves the silencing of a specific mRNA due to a complementary dsRNA molecule.</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">It has been primarily used to develop tobacco plants resistant to the nematode Meloidegyne incognita.</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">The technique requires the use of Agrobacterium vectors to introduce restriction enzymes into the host plant.</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct! RNAi technique uses Agrobacterium vectors to introduce nematode-specific genes into the host plant to produce both sense and antisense RNA, which form the dsRNA that triggers RNAi. It does not introduce restriction enzymes for this purpose. The other statements are correct.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-SCI-M5-7-001</text></tag>
+      <tag><text>subject:Science</text></tag>
+      <tag><text>difficulty:hard</text></tag>
+      <tag><text>cognitive_level:L3</text></tag>
+      <tag><text>question_type:ELIM</text></tag>
+      <tag><text>sprint:S21</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S21-SCI-Q06</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Compared to the maturation of human insulin in the body, the genetically engineered insulin produced by Eli Lilly using E. coli:</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Contains the extra C-peptide sequence that makes it more stable.</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Is synthesised directly without the C-peptide stretch by creating separate DNA sequences for A and B chains.</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct! In humans, insulin is synthesised as a pro-hormone containing an extra C-peptide, which is removed during maturation. Eli Lilly prepared two DNA sequences corresponding to A and B, chains of human insulin and introduced them in plasmids of E. coli to produce insulin chains separately, which were then extracted and combined by creating disulfide bonds.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Requires post-translational modification inside the bacterial host to join the A, B, and C chains.</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Is identical to pro-insulin and needs to be activated in the human bloodstream.</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-SCI-M5-7-001</text></tag>
+      <tag><text>subject:Science</text></tag>
+      <tag><text>difficulty:hard</text></tag>
+      <tag><text>cognitive_level:L3</text></tag>
+      <tag><text>question_type:ANALYTICAL</text></tag>
+      <tag><text>sprint:S21</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S21-SCI-Q07</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Consider the following statements regarding the Genetic Engineering Appraisal Committee (GEAC):
+1. It is the apex body in India under the Ministry of Environment, Forest and Climate Change.
+2. It takes decisions regarding the validity of GM research and the safety of introducing GM-organisms for public services.
+Which of the statements given above is/are correct?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1 only</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">2 only</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Both 1 and 2</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct! The Indian Government has set up organisations such as GEAC, which makes decisions regarding the validity of GM research and the safety of introducing GM-organisms for public services. Both statements accurately reflect its role and administrative authority.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Neither 1 nor 2</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-SCI-M5-7-001</text></tag>
+      <tag><text>subject:Science</text></tag>
+      <tag><text>difficulty:easy</text></tag>
+      <tag><text>cognitive_level:L2</text></tag>
+      <tag><text>question_type:STMT</text></tag>
+      <tag><text>sprint:S21</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S21-SCI-Q08</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Which among the following human diseases was the first clinical gene therapy given for in 1990?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Emphysema</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Cystic Fibrosis</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Adenosine Deaminase (ADA) deficiency</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct! The first clinical gene therapy was given in 1990 to a 4-year-old girl with adenosine deaminase (ADA) deficiency, a crucial enzyme for the immune system to function.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Phenylketonuria</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-SCI-M5-7-001</text></tag>
+      <tag><text>subject:Science</text></tag>
+      <tag><text>difficulty:easy</text></tag>
+      <tag><text>cognitive_level:L1</text></tag>
+      <tag><text>question_type:STATIC</text></tag>
+      <tag><text>sprint:S21</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S21-SCI-Q09</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">In the context of the controversy surrounding naturally occurring biological resources, what does the term 'Biopiracy' refer to?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">The unauthorized production of generic medicines by developing nations without paying royalties.</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">The theft of laboratory-created recombinant DNA plasmids by rival pharmaceutical companies.</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">The use of bio-resources by multinational companies without proper authorization from the countries and people concerned.</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct! Biopiracy is the term used to refer to the use of bio-resources by multinational companies and other organisations without proper authorisation from the countries and people concerned without compensatory payment. Examples include US patents filed for traditional Indian resources like Basmati rice, Neem, and Turmeric.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">The deliberate release of genetically modified organisms into the wild to alter ecosystems.</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-SCI-M5-7-001</text></tag>
+      <tag><text>subject:Science</text></tag>
+      <tag><text>difficulty:medium</text></tag>
+      <tag><text>cognitive_level:L2</text></tag>
+      <tag><text>question_type:STATIC</text></tag>
+      <tag><text>sprint:S21</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S21-SCI-Q10</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Transgenic models are widely developed for studying human diseases. Which of the following diseases do NOT currently have a transgenic model used for investigation?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Cancer</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Cystic fibrosis</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Alzheimer's disease</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Common cold</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct! Transgenic models exist for many human diseases, such as cancer, cystic fibrosis, rheumatoid arthritis, and Alzheimer's disease, allowing scientists to investigate new treatments. There is no standard transgenic model specifically highlighted for the "common cold" in the context of major disease research in NCERT.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-SCI-M5-7-001</text></tag>
+      <tag><text>subject:Science</text></tag>
+      <tag><text>difficulty:medium</text></tag>
+      <tag><text>cognitive_level:L2</text></tag>
+      <tag><text>question_type:ELIM</text></tag>
+      <tag><text>sprint:S21</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S21-ECON-Q01</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">According to the AP Land Reforms (Ceiling on Agricultural Holdings) Act of 1973, what is the 'Family Unit' typically defined as for calculating ceiling limits?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">An individual adult, regardless of marital status</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Husband, wife, and their unmarried minor children up to 5 members</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct! The 1973 Act plugged loopholes from the 1961 Act by defining the 'Family Unit' as consisting of husband, wife, and minor children, up to a maximum of 5 members. For families larger than 5, an additional increment was allowed up to a maximum limit.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">The entire joint family including grandparents and married siblings</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Husband, wife, and all unmarried children regardless of age</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-ECON-M4-7-006</text></tag>
+      <tag><text>subject:Economy</text></tag>
+      <tag><text>difficulty:medium</text></tag>
+      <tag><text>cognitive_level:L2</text></tag>
+      <tag><text>question_type:STATIC</text></tag>
+      <tag><text>sprint:S21</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S21-ECON-Q02</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Match the following land reform acts/committees in Andhra Pradesh with their distinct features:
+List-I:
+A. The AP (Andhra Area) Estates Act, 1948
+B. The AP Ceiling on Agricultural Holdings Act, 1961
+C. The AP Land Reforms Act, 1973
+D. Koneru Ranga Rao Committee, 2004
+
+List-II:
+1. Individual as the unit of application
+2. Review of assigned lands and 1/70 Act implementation
+3. Family as the unit of application
+4. Abolition of Zamindari system</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">A-4, B-3, C-1, D-2</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">A-4, B-1, C-3, D-2</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct! The 1948 Act abolished Zamindari (A-4). The 1961 Act used the individual as the unit (B-1). The 1973 Act used the family as the unit (C-3). The Koneru Ranga Rao Committee evaluated land assignments to the poor (D-2).</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">A-2, B-1, C-3, D-4</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">A-1, B-4, C-2, D-3</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-ECON-M4-7-006</text></tag>
+      <tag><text>subject:Economy</text></tag>
+      <tag><text>difficulty:medium</text></tag>
+      <tag><text>cognitive_level:L2</text></tag>
+      <tag><text>question_type:MATCH</text></tag>
+      <tag><text>sprint:S21</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S21-ECON-Q03</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Consider the following statements regarding the Koneru Ranga Rao Committee:
+1. It was appointed primarily to recommend strategies for attracting foreign direct investment (FDI) in AP's agricultural sector.
+2. It strongly recommended the strict enforcement of the AP Assigned Lands (Prohibition of Transfers) Act, 1977.
+3. It highlighted the need to effectively implement the 1/70 Act to protect tribal lands in scheduled areas.
+Which of the statements given above are correct?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1 and 2 only</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">2 and 3 only</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct! The Koneru Ranga Rao Committee was appointed to look into issues related to land distribution to the poor, assigned lands, and tribal land rights, NOT for attracting FDI in agriculture. Hence, statement 1 is incorrect. Statements 2 and 3 accurately reflect its major recommendations.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1 and 3 only</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1, 2 and 3</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-ECON-M4-7-006</text></tag>
+      <tag><text>subject:Economy</text></tag>
+      <tag><text>difficulty:medium</text></tag>
+      <tag><text>cognitive_level:L2</text></tag>
+      <tag><text>question_type:STMT</text></tag>
+      <tag><text>sprint:S21</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S21-ECON-Q04</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Why were the various Land Ceiling Acts passed by the respective state legislatures, including Andhra Pradesh, placed in the Ninth Schedule of the Indian Constitution?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">To exempt agricultural income from income tax calculations.</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">To mandate the central government to fund the land redistribution processes.</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">To protect them from being challenged in judicial courts on the grounds of violating Fundamental Rights.</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct! placing land reform legislations in the Ninth Schedule protected them from judicial review under Article 31B, specifically protecting them from being struck down for violating Fundamental Rights such as the Right to Property (Article 31, before its repeal).</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">To automatically transfer the subject of land from the State List to the Concurrent List.</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-ECON-M4-7-006</text></tag>
+      <tag><text>subject:Economy</text></tag>
+      <tag><text>difficulty:hard</text></tag>
+      <tag><text>cognitive_level:L3</text></tag>
+      <tag><text>question_type:ANALYTICAL</text></tag>
+      <tag><text>sprint:S21</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S21-ECON-Q05</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Which of the following is NOT a prominent reason for the failure or limited success of the 1961 AP Ceiling on Agricultural Holdings Act?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">The unit of application for the ceiling was the individual rather than the family.</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">The ceiling limits set were excessively high, leaving very little surplus land.</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">The Act provided numerous exemptions for orchards, specialized farms, and trusts.</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">The Act strictly prohibited benami transactions and confiscated all such lands immediately.</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct! The Act failed precisely because benami transfers (transferring land to fictitious names or distant relatives) were rampant, and the law did not effectively curb or strictly confiscate them. Statements (a), (b), and (c) represent genuine loopholes that caused the 1961 Act to fail.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-ECON-M4-7-006</text></tag>
+      <tag><text>subject:Economy</text></tag>
+      <tag><text>difficulty:medium</text></tag>
+      <tag><text>cognitive_level:L2</text></tag>
+      <tag><text>question_type:ELIM</text></tag>
+      <tag><text>sprint:S21</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S21-ECON-Q06</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Under the AP Land Reforms (Ceiling on Agricultural Holdings) Act of 1973, what is the approximate statutory ceiling limit prescribed for 'dryland' for a standard family unit consisting of five members?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">10 to 15 acres</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">35 to 54 acres</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct! The 1973 Act prescribes standard holding limits ranging from 10 to 27 acres for wetland (depending on irrigation class) and 35 to 54 acres for dryland.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">5 to 10 acres</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">100 to 120 acres</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-ECON-M4-7-006</text></tag>
+      <tag><text>subject:Economy</text></tag>
+      <tag><text>difficulty:easy</text></tag>
+      <tag><text>cognitive_level:L1</text></tag>
+      <tag><text>question_type:STATIC</text></tag>
+      <tag><text>sprint:S21</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S21-ECON-Q07</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">In the context of agrarian reforms in Andhra Pradesh, what was the primary purpose of the '1/70 Act' (AP Scheduled Areas Land Transfer Regulation Amendment, 1970)?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">To ensure that one-seventieth (1/70) of all state revenue is allocated to tribal welfare.</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">To establish maximum ceiling limits on tribal agricultural holdings.</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">To prohibit and nullify the transfer of land in Scheduled Areas from tribals to non-tribals.</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct! The 1/70 Act strictly prohibits the transfer of land in the Scheduled Areas to non-tribals. Any transfer, whether from a tribal or a non-tribal situated in these areas, can only be made to a tribal. This protects Adivasis from land alienation.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">To regularize encroached forest lands for tribal communities.</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-ECON-M4-7-006</text></tag>
+      <tag><text>subject:Economy</text></tag>
+      <tag><text>difficulty:medium</text></tag>
+      <tag><text>cognitive_level:L2</text></tag>
+      <tag><text>question_type:STATIC</text></tag>
+      <tag><text>sprint:S21</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S21-ECON-Q08</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">Consider the following statements about Tenancy Reforms during the land reform era:
+1. They aimed to provide security of tenure to the cultivating tenants against arbitrary eviction.
+2. They recommended fixing the rent at completely equal shares (50-50) between the landlord and the tenant.
+Which of the statements given above is/are correct?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">1 only</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct! Statement 1 is correct. Statement 2 is incorrect; the national guidelines for tenancy reforms recommended that rent should not exceed 1/4th to 1/5th of the gross produce (20-25%), not 50%.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">2 only</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Both 1 and 2</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Neither 1 nor 2</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-ECON-M4-7-006</text></tag>
+      <tag><text>subject:Economy</text></tag>
+      <tag><text>difficulty:hard</text></tag>
+      <tag><text>cognitive_level:L3</text></tag>
+      <tag><text>question_type:STMT</text></tag>
+      <tag><text>sprint:S21</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S21-ECON-Q09</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">While evaluating the multi-dimensional impact of Land Reforms in India, comparing the success of intermediary abolition with land ceilings yields which of the following definitive conclusions?</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Both intermediary abolition and land ceilings were equally successful and met their redistributive targets.</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Intermediary abolition was largely successful, while land ceilings had limited success due to vast legal loopholes and bureaucratic delays.</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct! Economic surveys and historians agree that the abolition of Zamindars (intermediaries) was the most successful aspect of land reforms. Conversely, land ceilings failed to yield significant surplus land due to benami transfers, poor land records, and political interference from landed elites.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Land ceilings successfully redistributed wealth to the landless Dalits, but intermediary abolition completely failed to confer rights to occupancy tenants.</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Both programs failed because agriculture was moved from the State List to the Union List shortly after independence.</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-ECON-M4-7-006</text></tag>
+      <tag><text>subject:Economy</text></tag>
+      <tag><text>difficulty:hard</text></tag>
+      <tag><text>cognitive_level:L3</text></tag>
+      <tag><text>question_type:ANALYTICAL</text></tag>
+      <tag><text>sprint:S21</text></tag>
+    </tags>
+  </question>
+
+  <question type="multichoice">
+    <name><text>GG-S21-ECON-Q10</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span lang="en" class="multilang">The digital land records portal developed by the Government of Andhra Pradesh to provide transparent access to land passbooks and Adangal details is known as:</span></p>]]></text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.25</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Dharani</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Mee Bhoomi</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Correct! 'Mee Bhoomi' is the specialized digital land record portal implemented by the Andhra Pradesh government. (Dharani is for Telangana; Bhoomi is for Karnataka).</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">Bhoomi</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<span lang="en" class="multilang">E-Panta</span>]]></text>
+      <feedback format="html"><text><![CDATA[<span lang="en" class="multilang">Incorrect.</span>]]></text></feedback>
+    </answer>
+    <tags>
+      <tag><text>micro_topic_id:MT-ECON-M4-7-006</text></tag>
+      <tag><text>subject:Economy</text></tag>
+      <tag><text>difficulty:easy</text></tag>
+      <tag><text>cognitive_level:L1</text></tag>
+      <tag><text>question_type:STATIC</text></tag>
+      <tag><text>sprint:S21</text></tag>
+    </tags>
+  </question>
+
+</quiz>

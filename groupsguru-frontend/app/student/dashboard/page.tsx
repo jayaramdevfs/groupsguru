@@ -9,10 +9,8 @@ import { commissionApi } from "@/lib/commissions";
 import { Commission } from "@/lib/types";
 
 const spring = {
-  type: "spring" as const,
-  stiffness: 420,
-  damping: 24,
-  mass: 0.8,
+  
+  duration: 0.25, ease: "easeOut" as const,
 };
 
 export default function StudentDashboard() {
@@ -37,7 +35,7 @@ export default function StudentDashboard() {
 
   return (
     <ProtectedLayout requiredRole="STUDENT">
-      <div className="min-h-screen py-10 px-6 md:px-12 w-full max-w-[92%] mx-auto text-white text-center">
+      <div className="min-h-screen py-10 px-6 md:px-12 w-full max-w-[92%] mx-auto text-[#FAFAF9] text-center">
         {/* Header */}
         <motion.div
           className="mb-8 text-center"
@@ -45,10 +43,10 @@ export default function StudentDashboard() {
           animate={{ opacity: 1, y: 0 }}
           transition={spring}
         >
-          <h1 className="text-[32px] md:text-[48px] font-[800] leading-tight mb-3 bg-gradient-to-r from-white via-white to-purple-400 bg-clip-text text-transparent">
+          <h1 className="text-[32px] md:text-[48px] font-[800] leading-tight mb-3 text-[#F97316]">
             Welcome Back
           </h1>
-          <p className="text-base text-white/70 font-[600] max-w-2xl mx-auto">
+          <p className="text-base text-[#FAFAF9]/70 font-[600] max-w-2xl mx-auto">
             Select your target commission to start your intelligent preparation.
           </p>
         </motion.div>
@@ -57,7 +55,7 @@ export default function StudentDashboard() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {isLoading ? (
             <div className="col-span-1 sm:col-span-2 lg:col-span-3 flex items-center justify-center py-20">
-              <div className="w-12 h-12 border-4 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
+              <div className="w-12 h-12 border-4 border-orange-500 border-t-transparent rounded-full animate-spin"></div>
             </div>
           ) : (
             commissions.map((comm, index) => (
@@ -70,24 +68,23 @@ export default function StudentDashboard() {
               >
                 <Link
                   href={`/student/categories?commissionId=${comm.id}`}
-                  className="group relative block h-full p-8 rounded-[32px] bg-white/5 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/5 transition-all duration-300 backdrop-blur-xl overflow-hidden text-left"
+                  className="group relative block h-full p-8 rounded-xl bg-white/5 border border-[#57534E]/40 hover:border-orange-500/50 hover:bg-orange-500/5 transition-all duration-300  overflow-hidden text-left"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-600/0 via-transparent to-pink-600/0 group-hover:from-purple-600/10 group-hover:to-pink-600/10 transition-all duration-500" />
                   <div className="relative z-10">
-                    <div className="w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-500 flex items-center justify-center text-3xl shadow-lg shadow-purple-500/20 overflow-hidden font-bold">
+                    <div className="w-14 h-14 mb-6 rounded-2xl bg-[#44403C] flex items-center justify-center text-2xl shadow-lg overflow-hidden font-bold">
                       {comm.imageUrl ? (
                         <img src={comm.imageUrl} alt={comm.name} className="w-full h-full object-cover" />
                       ) : (
                         comm.code.charAt(0)
                       )}
                     </div>
-                    <h3 className="text-2xl font-bold mb-3 group-hover:text-purple-300 transition-colors">
+                    <h3 className="text-2xl font-bold mb-3 group-hover:text-[#F97316] transition-colors">
                       {comm.name}
                     </h3>
-                    <p className="text-white/60 font-medium leading-relaxed">
+                    <p className="text-[#FAFAF9]/60 font-medium leading-relaxed">
                       {comm.description || `Browse categories for ${comm.code}`}
                     </p>
-                    <div className="mt-8 flex items-center text-purple-400 font-bold group/btn">
+                    <div className="mt-8 flex items-center text-[#F97316] font-bold group/btn">
                       <span>Explore</span>
                       <svg
                         className="ml-2 w-5 h-5 transform group-hover/btn:translate-x-1 transition-transform"
@@ -120,17 +117,16 @@ export default function StudentDashboard() {
           >
             <Link
               href="/student/exams"
-              className="group relative block h-full p-8 rounded-[32px] bg-white/5 border border-white/10 hover:border-indigo-500/50 hover:bg-indigo-500/5 transition-all duration-300 backdrop-blur-xl overflow-hidden text-left"
+              className="group relative block h-full p-8 rounded-xl bg-white/5 border border-[#57534E]/40 hover:border-orange-500/50 hover:bg-orange-500/5 transition-all duration-300 overflow-hidden text-left"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/0 via-transparent to-blue-600/0 group-hover:from-indigo-600/10 group-hover:to-blue-600/10 transition-all duration-500" />
               <div className="relative z-10">
-                <div className="w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-indigo-500 to-blue-500 flex items-center justify-center text-3xl shadow-lg shadow-indigo-500/20">
-                  📝
+                <div className="w-14 h-14 mb-6 rounded-2xl bg-[#44403C] flex items-center justify-center text-2xl shadow-lg">
+                  <svg className="w-6 h-6 text-[#F97316]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
                 </div>
-                <h3 className="text-2xl font-bold mb-3 group-hover:text-indigo-300 transition-colors">
+                <h3 className="text-2xl font-bold mb-3 group-hover:text-[#F97316] transition-colors">
                   Practice Exams
                 </h3>
-                <p className="text-white/60 font-medium leading-relaxed">
+                <p className="text-[#FAFAF9]/60 font-medium leading-relaxed">
                   Take topic-wise, section-wise, and full-length mock tests.
                 </p>
               </div>
@@ -141,17 +137,17 @@ export default function StudentDashboard() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ ...spring, delay: 0.5 }}
           >
-            <div className="group relative block h-full p-8 rounded-[32px] bg-white/[0.03] border border-white/10 backdrop-blur-xl overflow-hidden opacity-60 cursor-default text-left">
+            <div className="group relative block h-full p-8 rounded-xl bg-white/[0.03] border border-[#57534E]/40  overflow-hidden opacity-60 cursor-default text-left">
               <div className="relative z-10">
-                <div className="w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-500 flex items-center justify-center text-3xl shadow-lg shadow-pink-500/20">
-                  📊
+                <div className="w-14 h-14 mb-6 rounded-2xl bg-[#44403C] flex items-center justify-center text-2xl shadow-lg">
+                  <svg className="w-6 h-6 text-[#F97316]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
                 </div>
                 <h3 className="text-2xl font-bold mb-3">My Dashboard</h3>
-                <p className="text-white/60 font-medium leading-relaxed">
+                <p className="text-[#FAFAF9]/60 font-medium leading-relaxed">
                   Track your progress, scores, and study analytics.
                 </p>
                 <div className="mt-8">
-                  <span className="inline-block px-4 py-2 rounded-full text-xs font-bold bg-white/10 text-white/50 border border-white/10">
+                  <span className="inline-block px-4 py-2 rounded-full text-xs font-bold bg-white/10 text-[#FAFAF9]/50 border border-[#57534E]/40">
                     Coming Soon
                   </span>
                 </div>

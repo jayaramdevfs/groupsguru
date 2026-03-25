@@ -1,14 +1,28 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Instrument_Serif, Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import { AuthProvider } from "./context/AuthContext";
+import { LanguageProvider } from "./context/LanguageContext";
 
-const inter = Inter({
+const serif = Instrument_Serif({
   subsets: ["latin"],
-  weight: ["600", "700", "800"],
+  weight: "400",
   display: "swap",
+  variable: "--font-serif",
 });
 
-import { LanguageProvider } from "./context/LanguageContext";
+const sans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+  variable: "--font-sans",
+});
+
+const mono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: "500",
+  display: "swap",
+  variable: "--font-mono",
+});
 
 export const metadata = {
   title: "GroupsGuru",
@@ -21,14 +35,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body
-        className={`${inter.className} relative min-h-screen bg-[#0c051a] text-white overflow-x-hidden`}
-      >
-        {/* Global Cinematic Glows */}
-        <div className="absolute bottom-[-150px] left-[-150px] w-[800px] h-[600px] bg-purple-600/30 blur-[130px] pointer-events-none" />
-        <div className="absolute top-[-150px] right-[-150px] w-[800px] h-[600px] bg-indigo-600/20 blur-[130px] pointer-events-none" />
-
+    <html lang="en" className={`${serif.variable} ${sans.variable} ${mono.variable}`}>
+      <body className="font-[family-name:var(--font-sans)] min-h-screen bg-[#191919] text-[#E8E8E8]">
         <LanguageProvider>
           <AuthProvider>{children}</AuthProvider>
         </LanguageProvider>

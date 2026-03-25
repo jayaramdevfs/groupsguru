@@ -39,7 +39,7 @@ export default function MigrationStatusPage() {
             
             <div className="max-w-4xl bg-white p-8 rounded-xl shadow border border-gray-200">
                 <h2 className="text-xl font-semibold mb-6 flex items-center text-gray-800">
-                    <span className="w-3 h-3 bg-purple-600 rounded-full mr-3 shadow-glow-purple"></span>
+                    <span className="w-3 h-3 bg-[#EA580C] rounded-full mr-3 shadow-glow-purple"></span>
                     Database Population
                 </h2>
                 
@@ -49,16 +49,16 @@ export default function MigrationStatusPage() {
                 
                 {status && (
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div className="bg-gradient-to-br from-purple-50 to-indigo-50 border border-purple-100 p-6 rounded-lg text-center shadow-sm">
-                            <h3 className="text-lg font-medium text-purple-900 mb-2">Micro Topics</h3>
-                            <div className="text-5xl font-bold text-purple-700 font-mono tracking-tight">{status.microTopics}</div>
-                            <div className="mt-3 text-sm font-medium text-purple-600/80 bg-purple-100/50 inline-block px-3 py-1 rounded-full">Target: 1,021</div>
+                        <div className="bg-[#EA580C] border border-[#57534E]/40 p-6 rounded-lg text-center shadow-sm">
+                            <h3 className="text-lg font-medium text-[#F97316] mb-2">Micro Topics</h3>
+                            <div className="text-5xl font-bold text-[#F97316] font-mono tracking-tight">{status.microTopics}</div>
+                            <div className="mt-3 text-sm font-medium text-[#F97316] bg-[#EA580C] inline-block px-3 py-1 rounded-full">Target: 1,021</div>
                         </div>
                         
-                        <div className="bg-gradient-to-br from-indigo-50 to-blue-50 border border-indigo-100 p-6 rounded-lg text-center shadow-sm">
-                            <h3 className="text-lg font-medium text-indigo-900 mb-2">Questions</h3>
-                            <div className="text-5xl font-bold text-indigo-700 font-mono tracking-tight">{status.questions}</div>
-                            <div className="mt-3 text-sm font-medium text-indigo-600/80 bg-indigo-100/50 inline-block px-3 py-1 rounded-full">Target: 200+</div>
+                        <div className="bg-[#EA580C] border border-[#57534E]/40 p-6 rounded-lg text-center shadow-sm">
+                            <h3 className="text-lg font-medium text-[#F97316] mb-2">Questions</h3>
+                            <div className="text-5xl font-bold text-[#F97316] font-mono tracking-tight">{status.questions}</div>
+                            <div className="mt-3 text-sm font-medium text-[#F97316] bg-[#EA580C] inline-block px-3 py-1 rounded-full">Target: 200+</div>
                         </div>
                     </div>
                 )}

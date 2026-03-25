@@ -94,7 +94,7 @@ export default function PaywallModal({
     >
       <div className="space-y-6">
         <div className="text-center">
-          <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-purple-500/30">
+          <div className="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-[#57534E]/40">
             <svg
               width="32"
               height="32"
@@ -109,7 +109,7 @@ export default function PaywallModal({
               <path d="M7 11V7a5 5 0 0110 0v4" />
             </svg>
           </div>
-          <p className="text-white/70 text-lg">
+          <p className="text-[#FAFAF9]/70 text-lg">
             <Multilang
               en={`You need a premium subscription to access ${entityName}.`}
               te={`${entityName}ని యాక్సెస్ చేయడానికి మీకు ప్రీమియం సభ్యత్వం అవసరం.`}
@@ -121,21 +121,21 @@ export default function PaywallModal({
         <button
           onClick={() => handlePayment(entityType, entityId, entityName, accessInfo.price || 0)}
           disabled={loading}
-          className="w-full p-6 rounded-2xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 transition-all border border-white/10 shadow-lg group relative overflow-hidden"
+          className="w-full p-6 rounded-2xl bg-[#EA580C] hover:from-orange-500  transition-all border border-[#57534E]/40 shadow-lg group relative overflow-hidden"
         >
           <div className="flex items-center justify-between text-left">
             <div>
-              <div className="text-sm text-white/60 font-medium">Standard Access</div>
+              <div className="text-sm text-[#FAFAF9]/60 font-medium">Standard Access</div>
               <div className="text-xl font-bold">{entityName}</div>
             </div>
-            <div className="text-2xl font-black italic">₹{accessInfo.price}</div>
+            <div className="text-2xl font-semibold">₹{accessInfo.price}</div>
           </div>
         </button>
 
         {/* Bundle Options */}
         {accessInfo.parentOptions && accessInfo.parentOptions.length > 0 && (
           <div className="space-y-3">
-            <div className="text-sm font-bold text-white/40 uppercase tracking-widest pl-1">
+            <div className="text-sm font-bold text-[#FAFAF9]/40 uppercase tracking-widest pl-1">
               Recommended Bundles
             </div>
             {accessInfo.parentOptions.map((parent: ParentOption) => (
@@ -143,15 +143,15 @@ export default function PaywallModal({
                 key={`${parent.entityType}-${parent.entityId}`}
                 onClick={() => handlePayment(parent.entityType, parent.entityId, parent.name, parent.price)}
                 disabled={loading}
-                className="w-full p-4 rounded-xl bg-white/[0.03] border border-white/10 hover:bg-white/[0.06] transition-all flex items-center justify-between group"
+                className="w-full p-4 rounded-xl bg-white/[0.03] border border-[#57534E]/40 hover:bg-white/[0.06] transition-all flex items-center justify-between group"
               >
                 <div className="text-left">
-                  <div className="text-xs text-white/40 capitalize">
+                  <div className="text-xs text-[#FAFAF9]/40 capitalize">
                     {parent.entityType.replace("_", " ")} Level
                   </div>
-                  <div className="font-semibold text-white/90">{parent.name}</div>
+                  <div className="font-semibold text-[#FAFAF9]/90">{parent.name}</div>
                 </div>
-                <div className="text-lg font-bold text-purple-400">₹{parent.price}</div>
+                <div className="text-lg font-bold text-[#F97316]">₹{parent.price}</div>
               </button>
             ))}
           </div>
@@ -159,7 +159,7 @@ export default function PaywallModal({
 
         <button
           onClick={onClose}
-          className="w-full py-3 text-white/40 hover:text-white/60 transition-colors text-sm"
+          className="w-full py-3 text-[#FAFAF9]/40 hover:text-[#FAFAF9]/60 transition-colors text-sm"
         >
           Cancel and return
         </button>

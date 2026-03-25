@@ -1,6 +1,6 @@
 # GroupsGuru — Master Sprint Plan (Vertical Slices)
 
-**Updated**: 2026-03-24 (Sprint 20 closed)
+**Updated**: 2026-03-25 (Sprint 21a closed)
 **Architecture**: Vertical Slicing — each sprint delivers Backend + Frontend + Mobile together
 
 ---
@@ -68,11 +68,19 @@ C:\GroupsGuru\Lms\
 | 19 | MicroTopicLinker Fix + Publish/Order + Admin Questions CRUD | ✅ Done | ✅ Done | ➖ N/A |
 | 20 | Intelligence Engine Upgrade (Gaps + Heatmaps) | ✅ Done | ✅ Done | ✅ Done |
 
-**Resume Point:** Start Sprint 21 (Production Readiness)
+| 20a | Frontend UI Reskin (claude.ai Theme) | ➖ N/A | ❌ Replaced by S21 | ➖ N/A |
+| 21a | Frontend Redesign: Foundation + Auth | ➖ N/A | ✅ Done | ✅ Done |
+| 21b | Frontend Redesign: Dashboards | ➖ N/A | ⏳ Planned | ⏳ Planned |
+| 21c | Frontend Redesign: Content Browse | ➖ N/A | ⏳ Planned | ⏳ Planned |
+| 21d | Frontend Redesign: Exam Flow | ➖ N/A | ⏳ Planned | ⏳ Planned |
+| 21e | Frontend Redesign: Admin Pages | ➖ N/A | ⏳ Planned | ⏳ Planned |
+| 21f | Frontend Redesign: Register + Polish | ➖ N/A | ⏳ Planned | ⏳ Planned |
+
+**Resume Point:** Sprint 21b (Dashboards) — see `docs/sprints/S21-frontend-redesign-plan.md` for full plan.
 
 ### Execution Order:
 ```
-Sprint 17a (Content Hierarchy) -> Sprint 18 (Content Tree + Browse) -> Sprint 19 (Publish/Order) -> Sprint 20 (Intelligence Upgrade) -> Sprint 21 (Production Readiness)
+Sprint 20 (Intelligence) -> Sprint 21a-f (Complete Frontend Redesign) -> Sprint 22 (Production Readiness)
 ```
 
 ---
@@ -103,24 +111,43 @@ All entities: `createdAt`, `updatedAt`, `isDeleted` (soft-delete), bilingual (`n
 
 ---
 
-## Design System (All Platforms Must Match)
+## Design System (All Platforms Must Match) — UPDATED Sprint 21
+
+> **Complete redesign in Sprint 21** — Claude Code Mirror aesthetic. Flat, restrained, border-based.
 
 | Token | Value |
 |-------|-------|
-| Background | `#0f051d` (backend sends no UI, but mobile+web must match) |
-| Primary gradient | `violet-600 → indigo-600` / `#9333EA → #4f46e5` |
-| Accent gradient | `#9333EA → #DB2777` |
-| Card background | `rgba(147, 51, 234, 0.08)` — web: `bg-white/[0.03]` |
-| Card border | `rgba(147, 51, 234, 0.2)` — web: `border-white/10` |
-| Card radius | 24px (mobile) / `rounded-[32px]` (web) |
-| Text primary | `#FFFFFF` |
-| Text muted | `rgba(255,255,255,0.6)` |
-| Input background | `#1e102f` (mobile) / `#0f071a` (web) |
-| Font weight heading | 800 |
-| Font weight body | 600 |
-| Spring config (web) | `stiffness: 420, damping: 24, mass: 0.8` |
+| Background (base) | `#191919` |
+| Background (surface/cards) | `#1E1E1E` |
+| Background (elevated) | `#2D2D2D` |
+| Background (overlay/hover) | `#363636` |
+| Background (inset/inputs) | `#141414` |
+| Border (default) | `#3A3A3A` (1px solid) |
+| Accent primary | `#D97706` (amber-600) |
+| Accent hover | `#F59E0B` (amber-500) |
+| Text primary | `#E8E8E8` |
+| Text secondary | `#A0A0A0` |
+| Text muted | `#666666` |
+| Success | `#3D9A5F` |
+| Error | `#C74444` |
+| Warning | `#C4901A` |
+| Info | `#4A8FBF` |
+| Card radius | 8px (rounded-md) |
+| Modal radius | 12px |
+| Font display | Instrument Serif (400) |
+| Font body | Plus Jakarta Sans (400, 500, 600, 700) |
+| Font mono | JetBrains Mono (500) |
+| Animation | **Almost none** — content renders instantly. Only modals/dropdowns animate (150ms). |
+| Logo | Geometric "G" mark (concentric arcs) in amber |
+| Wordmark | "Groups" (#E8E8E8) + "Guru" (#D97706) in Instrument Serif |
+| Layout | Sidebar 260px + Top navbar 48px + Content centered max-width 900px |
 
-**CRITICAL:** Do NOT introduce new colors, fonts, or design patterns. All new screens adopt the existing system.
+**CRITICAL:**
+- NO gradients, NO glow, NO orbs, NO glassmorphism, NO backdrop-blur
+- NO hover animations (scale, translate-y, lift) — border-color change only
+- NO stagger animations — cards render instantly
+- ALL depth via 1px borders, NOT shadows
+- See `docs/sprints/S21-frontend-redesign-plan.md` for full specification
 
 ---
 
@@ -1143,6 +1170,50 @@ APPSC Group 1
 
 ---
 
+## Sprint 21a — Frontend Redesign: Foundation + Auth ✅ DONE
+
+> **Context:** Complete visual redesign mirroring Claude Code's aesthetic. Flat, restrained, border-based. Warm dark palette (#191919 base) with Anthropic amber accent (#D97706). Sprint 20a (simple reskin) was replaced by this comprehensive redesign.
+
+### Design System Established
+
+**Web (`globals.css` @theme):**
+- Background palette: #191919 (base) → #1E1E1E (surface) → #2D2D2D (elevated) → #363636 (overlay) → #141414 (inset)
+- Accent: #D97706 (primary), #F59E0B (hover)
+- Borders: 1px solid #3A3A3A (no shadows for depth)
+- Typography: Instrument Serif (display), Plus Jakarta Sans (body), JetBrains Mono (mono)
+- Animation: Almost none — content renders instantly, only modals/dropdowns animate (150ms)
+
+**Mobile (`src/theme/tokens.ts`):**
+- Identical color values to web for cross-platform consistency
+- Spacing, radii, and typography scale defined
+
+### Web Files (12):
+1. ✅ `app/globals.css` — Complete design token system
+2. ✅ `app/layout.tsx` — Instrument Serif + Plus Jakarta Sans + JetBrains Mono fonts
+3. ✅ `lib/motion.ts` — Shared animation presets (subtle + layout only)
+4. ✅ `components/ui/Logo.tsx` — Geometric G mark (concentric arcs) + wordmark
+5. ✅ `components/ui/AnimatedInput.tsx` — Flat input, label-above, no glow
+6. ✅ `components/ui/LanguageToggle.tsx` — Pill toggle with accent highlight
+7. ✅ `components/ui/Skeleton.tsx` — Pulse loader with #2D2D2D
+8. ✅ `components/ui/Sidebar.tsx` — Flat sidebar, text-first nav, CONTENT/TOOLS/SYSTEM sections
+9. ✅ `components/layout/ProtectedLayout.tsx` — 48px navbar + 260px sidebar + centered content
+10. ✅ `components/auth/LoginForm.tsx` — Flat form, amber submit, error in #C74444
+11. ✅ `app/login/page.tsx` — Centered card, serif welcome text
+12. ✅ `app/page.tsx` — Clean landing with serif hero, architecture section, hierarchy grid
+
+### Mobile Files (6):
+1. ✅ `src/theme/tokens.ts` — Design tokens matching web
+2. ✅ `src/components/ProfessionalLogo.tsx` — G mark + wordmark
+3. ✅ `src/components/BackgroundGlow.tsx` — Returns null (removed)
+4. ✅ `src/components/LanguageToggle.tsx` — Token-based styling
+5. ✅ `src/screens/LoginScreen.tsx` — Complete redesign with flat card
+6. ✅ `src/navigation/AppNavigator.tsx` — Token-based colors
+
+**Closure Date:** March 25, 2026
+**Verification:** Landing, login, admin dashboard, student dashboard all verified on web. Mobile login screen updated. No purple/#9333EA/#0f051d in 21a scope files. No glassmorphism or backdrop-blur.
+
+---
+
 ## Sprint 21 — Production Readiness 📅
 
 ### Backend:
@@ -1171,6 +1242,101 @@ APPSC Group 1
 - [ ] Error handling & crash reporting
 - [ ] App icon & splash screen
 - [ ] Play Store / App Store listing
+
+---
+
+## Sprint 20a — Frontend UI Reskin (claude.ai Dark + Warm Theme)
+
+**Goal:** Completely reskin the GroupsGuru frontend to mirror claude.ai's UI/UX — warm dark theme (#1C1917), orange accent (#EA580C), DM Sans font, collapsible sidebar, clean layout, skeleton loading states. No purple, no glassmorphism, no spring physics.
+
+**Logo:** Symmetric Crown Tree — balanced top-down hierarchy tree. Glowing root node at top, 3 inner nodes (L1), 6 outer nodes (L2), 12 small leaf dots (L3). Flat design (no 3D). Orange (#EA580C) nodes on dark (#1C1917). Connections as clean lines. Reference PNG: `groupsguru-logos-v2.png` (Variation A)
+
+**Scope:** Frontend only (44 files: 41 modified + 3 new). No backend changes.
+
+### Phase 0A: Logo Component (1 new file)
+- **NEW** `components/ui/Logo.tsx` — SVG React component for Symmetric Crown Tree mark
+  - Props: `size` (sm/md/lg), `showWordmark` (boolean)
+  - Flat design: Root node (top), 3 L1 nodes, 6 L2 nodes, 12 L3 leaf dots. Lines connecting parent→child
+  - All nodes: orange (#EA580C) circles, connections as SVG `<line>` elements
+  - Wordmark: "Groups" `text-[#FAFAF9]` + "Guru" `text-[#EA580C]`, DM Sans bold
+
+### Phase 0B: Layout Structure — Sidebar + Navbar
+- **REWRITE** `components/layout/ProtectedLayout.tsx` — claude.ai mirror layout
+  - Left Sidebar: 260px expanded / 0px collapsed, `#1C1917` bg, right border `#57534E/30`
+    - Student nav: Dashboard, Categories, Exams, Results, Profile
+    - Admin nav: Dashboard, Content Tree, Questions, Exams, Pricing, Intelligence, Migration
+    - Active: `bg-[#292524] text-[#FAFAF9] border-l-2 border-[#EA580C]`
+    - Inactive: `text-[#A8A29E] hover:bg-[#292524]/50`
+  - Top Navbar: 56px, `bg-[#1C1917] border-b border-[#57534E]/30`, breadcrumbs + profile
+  - Main content: `ml-[260px]` expanded, `ml-0` collapsed, `pt-[56px]`, `px-8 py-6`
+- **NEW** `components/ui/Sidebar.tsx` — Extracted sidebar, `usePathname()`, localStorage collapse state
+- **NEW** `components/ui/Skeleton.tsx` — `bg-[#292524] rounded-lg animate-pulse`, variants: text/card/avatar/button
+
+### Phase 0C: Design System Foundation (2 files)
+- `app/globals.css`:
+  - `:root` vars: `--background: #1C1917`, `--foreground: #FAFAF9`
+  - `@theme` block: bg-base, bg-surface, bg-elevated, border, accent, text tokens
+  - `@import` DM Sans font (400, 500, 600, 700)
+  - Autofill: `#292524`, caret `#EA580C`
+  - Scrollbar: `rgba(234,88,12,0.3)`
+  - Floating label: `#EA580C`
+- `app/layout.tsx`:
+  - `Inter` → `DM_Sans` from `next/font/google`, weights 400-700
+  - Body bg: `#1C1917`
+  - Remove cinematic purple/indigo blur orbs
+
+### Phase 1: Shared Components (7 files)
+- `AnimatedInput.tsx` — Remove spring, `bg-[#292524] border-[#57534E]/40 rounded-lg`, focus orange ring
+- `CustomSelect.tsx` — `{ duration: 0.2, ease: "easeOut" }`, `bg-[#292524] rounded-lg`, selected orange
+- `Modal.tsx` — `bg-[#292524] rounded-xl border-[#57534E]/40 shadow-2xl`
+- `LanguageToggle.tsx` — `bg-[#292524] rounded-lg`, active `text-[#EA580C]`
+- `PaywallModal.tsx` — Orange lock icon, solid `bg-[#EA580C]` button, Razorpay `#EA580C`
+- `PriceBadge.tsx` — Premium: `bg-[rgba(234,88,12,0.1)] text-[#F97316]`
+- `QuestionModal.tsx` — Inputs `bg-[#1C1917] border-[#57534E]/40`, save `bg-[#EA580C]`
+
+### Phase 2: Auth Pages (4 files)
+- `LoginForm.tsx` + `RegisterForm.tsx` — Remove spring, `bg-[#EA580C]` button, error `text-[#EF4444]`
+- `login/page.tsx` + `register/page.tsx` — `bg-[#1C1917]`, card `bg-[#292524] rounded-xl`, no glassmorphism
+
+### Phase 3: Exam Components (2 files)
+- `ExamTimer.tsx` — `bg-[rgba(234,88,12,0.1)] text-[#F97316] rounded-lg`, `font-semibold`
+- `QuestionNavPanel.tsx` — `bg-[#292524] rounded-lg`, current `bg-[#EA580C]`, CSS transitions
+
+### Phase 4: Landing Page (1 file)
+- `app/page.tsx` — `bg-[#1C1917]`, remove blur orbs, ghost login button, CTA `bg-[#EA580C]`, all purple → orange
+
+### Phase 5: Student Pages (11 files)
+- All student pages: cards `bg-[#292524] border-[#57534E]/30 rounded-xl`, hover orange, no spring/blur
+
+### Phase 6: Admin Pages (14 files)
+- All admin pages: "Add New" `bg-[#EA580C]`, rows `bg-[#292524]`, edit `bg-[#44403C]`, delete red
+
+### Phase 7: Preview Pages (2 files, optional)
+- `design-preview/page.tsx` + `typography-preview/page.tsx` — Update to new design system
+
+### Global Find-Replace Reference
+| Find | Replace |
+|------|---------|
+| `bg-[#0c051a]`, `bg-[#0a0114]`, `bg-[#0f051d]`, `bg-[#0f071a]`, `bg-[#12081f]`, `bg-[#1a0b2e]` | `bg-[#1C1917]` or `bg-[#292524]` |
+| `border-purple-500/30`, `border-purple-500/20`, `border-white/10` | `border-[#57534E]/40` |
+| `text-purple-400`, `text-purple-300`, `text-violet-400`, `text-indigo-400` | `text-[#F97316]` |
+| `bg-gradient-to-r from-purple-600 to-indigo-600` | `bg-[#EA580C]` |
+| `bg-gradient-to-r from-[#9333EA] to-[#DB2777]` | `bg-[#EA580C]` |
+| All `shadow-[..._rgba(147,51,234,...)]` | `shadow-md` or `shadow-lg` |
+| `rounded-[48px]`, `rounded-[32px]`, `rounded-[24px]` | `rounded-xl` |
+| `backdrop-blur-xl`, `backdrop-blur-3xl`, `backdrop-blur-[100px]` | Remove |
+| `font-black italic` | `font-semibold` |
+| `stiffness: 420, damping: 24, mass: 0.8` | `duration: 0.25, ease: "easeOut"` |
+| `whileHover={{ y: -10 }}` | `whileHover={{ y: -2 }}` or CSS |
+| `#EC4899` (pink errors) | `#EF4444` (red) |
+
+### Verification
+1. `npm run dev` in `groupsguru-frontend/`
+2. Check all pages visually — no purple/pink, warm dark + orange throughout
+3. Search for `#9333EA`, `#DB2777`, `purple-`, `indigo-`, `pink-` — should find ZERO
+4. Test sidebar collapse, skeleton loading, mobile responsiveness
+
+**Total: 44 files (41 modified + 3 new) | No new dependencies | Font: DM Sans via next/font/google**
 
 ---
 

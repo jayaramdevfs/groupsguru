@@ -1,10 +1,28 @@
 "use client";
 
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import { useRouter, usePathname } from "next/navigation";
 import { useAuth } from "../../app/context/AuthContext";
 import { LanguageToggle } from "../ui/LanguageToggle";
-import Link from "next/link";
+import { Sidebar } from "../ui/Sidebar";
+import { Skeleton } from "../ui/Skeleton";
+
+const MenuIcon = (props: any) => (
+  <svg
+    {...props}
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <line x1="4" x2="20" y1="12" y2="12" />
+    <line x1="4" x2="20" y1="6" y2="6" />
+    <line x1="4" x2="20" y1="18" y2="18" />
+  </svg>
+);
 
 interface ProtectedLayoutProps {
   children: React.ReactNode;
@@ -17,65 +35,102 @@ export default function ProtectedLayout({
 }: ProtectedLayoutProps) {
   const { isAuthenticated, role, loading, logout } = useAuth();
   const router = useRouter();
+  const pathname = usePathname();
+
+  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    // If we're still loading the initial auth state, do nothing
-    if (loading) return;
+    setIsMounted(true);
+    const saved = localStorage.getItem("groupsguru_sidebar_collapsed");
+    if (saved) setIsCollapsed(JSON.parse(saved));
+  }, []);
 
-    // We only redirect if we are definitely not loading and:
-    // 1. We are not authenticated
-    // 2. We are authenticated but have the wrong role
+  const toggleSidebar = () => {
+    const newState = !isCollapsed;
+    setIsCollapsed(newState);
+    localStorage.setItem(
+      "groupsguru_sidebar_collapsed",
+      JSON.stringify(newState)
+    );
+  };
+
+  useEffect(() => {
+    if (loading) return;
     if (!isAuthenticated) {
       router.replace("/login");
       return;
     }
-
     if (role && role !== requiredRole) {
       router.replace("/login");
     }
   }, [isAuthenticated, role, loading, requiredRole, router]);
 
+  if (loading || !isMounted)
+    return (
+      <div className="min-h-screen bg-[#191919] flex flex-col items-center justify-center p-8">
+        <div className="w-full max-w-3xl space-y-4">
+          <Skeleton variant="card" />
+          <Skeleton variant="text" />
+          <Skeleton variant="text" />
+        </div>
+      </div>
+    );
 
-  if (loading) return (
-    <div className="min-h-screen bg-[#0c051a] flex items-center justify-center">
-      <div className="w-16 h-16 border-4 border-purple-500 border-t-transparent rounded-full animate-spin" />
-    </div>
-  );
   if (!isAuthenticated || role !== requiredRole) return null;
 
-  return (
-    <>
-      <nav className="fixed top-0 left-0 right-0 h-16 border-b border-white/5 bg-[#0c051a]/60 backdrop-blur-xl z-[100] px-6 md:px-12">
-        <div className="h-full max-w-[95%] mx-auto flex items-center justify-between">
-          {/* Logo / Home Link */}
-          <Link 
-            href={role === "ADMIN" ? "/admin/dashboard" : "/student/dashboard"}
-            className="group flex items-center gap-2"
-          >
-            <div className="w-10 h-8 rounded-xl bg-gradient-to-br from-purple-600 to-indigo-600 flex items-center justify-center font-black italic shadow-lg shadow-purple-500/20 group-hover:scale-110 transition-transform">
-              GG
-            </div>
-            <span className="text-xl font-black italic tracking-tighter bg-gradient-to-r from-white to-purple-400 bg-clip-text text-transparent group-hover:to-white transition-all px-1">
-              GroupsGuru
-            </span>
-          </Link>
+  // Page name from path
+  const pathParts = pathname.split("/").filter((p) => p !== "");
+  const pageName =
+    pathParts.length > 1
+      ? pathParts[pathParts.length - 1]
+          .replace(/-/g, " ")
+          .replace(/\b\w/g, (c) => c.toUpperCase())
+      : "Dashboard";
 
-          {/* Right Controls */}
-          <div className="flex items-center gap-6">
+  return (
+    <div className="min-h-screen bg-[#191919] flex">
+      <Sidebar
+        role={requiredRole}
+        isCollapsed={isCollapsed}
+        onToggle={toggleSidebar}
+      />
+
+      <div
+        className={`flex-1 transition-all duration-200 ease-out flex flex-col ${
+          isCollapsed ? "ml-0" : "ml-0 md:ml-[260px]"
+        }`}
+      >
+        {/* Top Navbar — 48px, flat, minimal */}
+        <nav className="h-[48px] border-b border-[#3A3A3A] bg-[#191919] sticky top-0 z-40 px-4 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <button
+              onClick={toggleSidebar}
+              className="p-1.5 text-[#666666] hover:text-[#E8E8E8] hover:bg-[#2D2D2D] rounded-[8px] transition-colors duration-150"
+            >
+              <MenuIcon className="w-4 h-4" />
+            </button>
+            <span className="text-[13px] font-medium text-[#A0A0A0]">
+              {pageName}
+            </span>
+          </div>
+
+          <div className="flex items-center gap-3">
             <LanguageToggle />
             <button
               onClick={() => void logout()}
-              className="px-4 py-1.5 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:text-white transition-all font-black italic text-xs uppercase tracking-widest text-white/60"
+              className="px-3 py-1 rounded-[8px] text-[12px] font-medium text-[#A0A0A0] hover:text-[#E8E8E8] border border-[#3A3A3A] hover:border-[#666666] transition-colors duration-150"
             >
               Logout
             </button>
           </div>
-        </div>
-      </nav>
-      <div className="pt-16">
-        {children}
+        </nav>
+
+        {/* Content — centered, max-width 900px */}
+        <main className="flex-1 px-4 md:px-8 py-6 md:py-8">
+          <div className="max-w-[900px] mx-auto">{children}</div>
+        </main>
       </div>
-    </>
+    </div>
   );
 }
-

@@ -13,10 +13,8 @@ import CustomSelect from "@/components/ui/CustomSelect";
 import { Multilang } from "@/components/ui/Multilang";
 
 const spring = {
-  type: "spring" as const,
-  stiffness: 420,
-  damping: 24,
-  mass: 0.8,
+  
+  duration: 0.25, ease: "easeOut" as const,
 };
 
 export default function AdminSectionManagement() {
@@ -138,7 +136,7 @@ export default function AdminSectionManagement() {
 
   return (
     <ProtectedLayout requiredRole="ADMIN">
-      <div className="min-h-screen py-24 px-6 md:px-12 w-full max-w-7xl mx-auto text-white">
+      <div className="min-h-screen py-24 px-6 md:px-12 w-full max-w-7xl mx-auto text-[#FAFAF9]">
         
         {/* Header Section */}
         <motion.div 
@@ -148,13 +146,13 @@ export default function AdminSectionManagement() {
           transition={spring}
         >
           <div>
-            <div className="px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-[10px] font-black uppercase tracking-[0.3em] mb-4 inline-block">
+            <div className="px-3 py-1 rounded-full bg-orange-500/10 border border-[#57534E]/40 text-[#F97316] text-[10px] font-bold uppercase tracking-[0.3em] mb-4 inline-block">
               Level 2 Management
             </div>
             <h1 className="text-[36px] md:text-[48px] font-[800] leading-tight mb-2">
               <Multilang en="Section Management" te="సెక్షన్ నిర్వహణ" />
             </h1>
-            <p className="text-[18px] text-white/70 font-[600]">
+            <p className="text-[18px] text-[#FAFAF9]/70 font-[600]">
               <Multilang 
                 en="Break down subjects into logical study sections." 
                 te="సబ్జెక్టులను లాజికల్ స్టడీ సెక్షన్లుగా విభజించండి."
@@ -167,7 +165,7 @@ export default function AdminSectionManagement() {
             whileTap={{ scale: 0.95 }}
             transition={spring}
             onClick={() => handleOpenModal()}
-            className="px-8 py-4 h-fit rounded-[16px] bg-gradient-to-r from-[#9333EA] to-[#DB2777] font-[700] text-[16px] whitespace-nowrap shadow-[0_15px_30px_rgba(219,39,119,0.3)] transition-all flex items-center gap-2"
+            className="px-8 py-4 h-fit rounded-[16px] bg-[#EA580C] font-[700] text-[16px] whitespace-nowrap shadow-md transition-all flex items-center gap-2"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <line x1="12" y1="5" x2="12" y2="19"></line>
@@ -178,14 +176,14 @@ export default function AdminSectionManagement() {
         </motion.div>
 
         {/* Multi-Level Filtering */}
-        <div className="mb-12 space-y-8 p-8 rounded-[32px] bg-white/5 border border-white/10 backdrop-blur-xl">
+        <div className="mb-12 space-y-8 p-8 rounded-xl bg-white/5 border border-[#57534E]/40 ">
           {/* L0 Filter */}
           <div className="flex flex-col gap-4">
-            <span className="text-white/40 font-bold uppercase text-[10px] tracking-widest ml-1">Step 1: Select Exam Category (L0)</span>
+            <span className="text-[#FAFAF9]/40 font-bold uppercase text-[10px] tracking-widest ml-1">Step 1: Select Exam Category (L0)</span>
             <div className="flex flex-wrap gap-2">
               <button 
                 onClick={() => { setSelectedCategoryId("all"); setSelectedSubCategoryId("all"); }}
-                className={`px-5 py-2.5 rounded-2xl border transition-all text-sm ${selectedCategoryId === "all" ? "bg-purple-600 border-purple-400 font-bold shadow-lg shadow-purple-500/20" : "bg-white/5 border-white/10 hover:bg-white/10"}`}
+                className={`px-5 py-2.5 rounded-2xl border transition-all text-sm ${selectedCategoryId === "all" ? "bg-[#EA580C] border-[#57534E]/40 font-bold shadow-lg shadow-orange-500/20" : "bg-white/5 border-[#57534E]/40 hover:bg-white/10"}`}
               >
                 All Exams
               </button>
@@ -193,7 +191,7 @@ export default function AdminSectionManagement() {
                 <button 
                   key={cat.id}
                   onClick={() => { setSelectedCategoryId(cat.id.toString()); setSelectedSubCategoryId("all"); }}
-                  className={`px-5 py-2.5 rounded-2xl border transition-all text-sm ${selectedCategoryId === cat.id.toString() ? "bg-purple-600 border-purple-400 font-bold shadow-lg shadow-purple-500/20" : "bg-white/5 border-white/10 hover:bg-white/10"}`}
+                  className={`px-5 py-2.5 rounded-2xl border transition-all text-sm ${selectedCategoryId === cat.id.toString() ? "bg-[#EA580C] border-[#57534E]/40 font-bold shadow-lg shadow-orange-500/20" : "bg-white/5 border-[#57534E]/40 hover:bg-white/10"}`}
                 >
                   {cat.name}
                 </button>
@@ -203,11 +201,11 @@ export default function AdminSectionManagement() {
 
           {/* L1 Filter */}
           <div className="flex flex-col gap-4">
-            <span className="text-white/40 font-bold uppercase text-[10px] tracking-widest ml-1">Step 2: Select Subject (L1)</span>
+            <span className="text-[#FAFAF9]/40 font-bold uppercase text-[10px] tracking-widest ml-1">Step 2: Select Subject (L1)</span>
             <div className="flex flex-wrap gap-2">
               <button 
                 onClick={() => setSelectedSubCategoryId("all")}
-                className={`px-5 py-2.5 rounded-2xl border transition-all text-sm ${selectedSubCategoryId === "all" ? "bg-indigo-600 border-indigo-400 font-bold shadow-lg shadow-indigo-500/20" : "bg-white/5 border-white/10 hover:bg-white/10"}`}
+                className={`px-5 py-2.5 rounded-2xl border transition-all text-sm ${selectedSubCategoryId === "all" ? "bg-[#EA580C] border-[#57534E]/40 font-bold shadow-lg " : "bg-white/5 border-[#57534E]/40 hover:bg-white/10"}`}
               >
                 All Subjects
               </button>
@@ -215,13 +213,13 @@ export default function AdminSectionManagement() {
                 <button 
                   key={sub.id}
                   onClick={() => setSelectedSubCategoryId(sub.id.toString())}
-                  className={`px-5 py-2.5 rounded-2xl border transition-all text-sm ${selectedSubCategoryId === sub.id.toString() ? "bg-indigo-600 border-indigo-400 font-bold shadow-lg shadow-indigo-500/20" : "bg-white/5 border-white/10 hover:bg-white/10"}`}
+                  className={`px-5 py-2.5 rounded-2xl border transition-all text-sm ${selectedSubCategoryId === sub.id.toString() ? "bg-[#EA580C] border-[#57534E]/40 font-bold shadow-lg " : "bg-white/5 border-[#57534E]/40 hover:bg-white/10"}`}
                 >
                   {sub.name}
                 </button>
               ))}
               {filteredSubCategories.length === 0 && selectedCategoryId !== "all" && (
-                <span className="text-white/30 text-sm italic py-2">No subjects found for this exam.</span>
+                <span className="text-[#FAFAF9]/30 text-sm  py-2">No subjects found for this exam.</span>
               )}
             </div>
           </div>
@@ -231,10 +229,10 @@ export default function AdminSectionManagement() {
         <div className="grid grid-cols-1 gap-4">
           {isLoading ? (
             <div className="flex items-center justify-center py-20">
-              <div className="w-12 h-12 border-4 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
+              <div className="w-12 h-12 border-4 border-orange-500 border-t-transparent rounded-full animate-spin"></div>
             </div>
           ) : filteredSections.length === 0 ? (
-            <div className="text-center py-20 text-white/50 bg-white/5 rounded-[32px] border border-white/10 border-dashed">
+            <div className="text-center py-20 text-[#FAFAF9]/50 bg-white/5 rounded-xl border border-[#57534E]/40 border-dashed">
               <div className="text-4xl mb-4">📑</div>
               No sections found in this criteria.
             </div>
@@ -248,25 +246,25 @@ export default function AdminSectionManagement() {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ ...spring, delay: index * 0.05 }}
-                  className="w-full flex flex-col md:flex-row items-center gap-6 p-8 rounded-[32px] bg-white/[0.03] border border-white/5 hover:border-purple-500/30 transition-all group relative overflow-hidden"
+                  className="w-full flex flex-col md:flex-row items-center gap-6 p-8 rounded-xl bg-white/[0.03] border border-white/5 hover:border-[#57534E]/40 transition-all group relative overflow-hidden"
                 >
                    {/* Background Glow on Hover */}
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/5 blur-[60px] group-hover:bg-purple-500/10 transition-all" />
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/5  group-hover:bg-orange-500/10 transition-all" />
 
-                  <div className="w-16 h-16 shrink-0 rounded-2xl bg-gradient-to-br from-purple-600/20 to-indigo-600/20 border border-white/10 flex items-center justify-center font-black text-xl text-purple-300">
+                  <div className="w-16 h-16 shrink-0 rounded-2xl bg-[#EA580C] border border-[#57534E]/40 flex items-center justify-center font-bold text-xl text-[#F97316]">
                     {sec.sectionCode || sec.name.charAt(0)}
                   </div>
                   
                   <div className="flex-1 w-full relative z-10">
                     <div className="flex flex-wrap items-center gap-3 mb-2">
-                       <div className="text-xs font-black text-purple-400 uppercase tracking-widest bg-purple-400/10 px-2 py-0.5 rounded border border-purple-400/20">
+                       <div className="text-xs font-bold text-[#F97316] uppercase tracking-widest bg-[#EA580C] px-2 py-0.5 rounded border border-[#57534E]/40">
                          {sec.subCategoryName}
                        </div>
-                       <h3 className="text-2xl font-black text-white">
+                       <h3 className="text-2xl font-bold text-[#FAFAF9]">
                          <Multilang en={sec.name} te={sec.nameTe} />
                        </h3>
                     </div>
-                    <p className="text-sm font-medium text-white/40 line-clamp-2 max-w-2xl leading-relaxed">
+                    <p className="text-sm font-medium text-[#FAFAF9]/40 line-clamp-2 max-w-2xl leading-relaxed">
                       <Multilang en={sec.description || ""} te={sec.descriptionTe || ""} />
                     </p>
                   </div>
@@ -274,13 +272,13 @@ export default function AdminSectionManagement() {
                   <div className="flex items-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
                     <button 
                       onClick={() => handleOpenModal(sec)}
-                      className="p-4 rounded-2xl bg-white/5 hover:bg-purple-500/20 text-white border border-white/10 transition-colors"
+                      className="p-4 rounded-2xl bg-white/5 hover:bg-orange-500/20 text-[#FAFAF9] border border-[#57534E]/40 transition-colors"
                     >
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
                     </button>
                     <button 
                       onClick={() => handleDelete(sec.id)}
-                      className="p-4 rounded-2xl bg-white/5 hover:bg-red-500/20 text-red-400 border border-white/10 transition-colors"
+                      className="p-4 rounded-2xl bg-white/5 hover:bg-red-500/20 text-red-400 border border-[#57534E]/40 transition-colors"
                     >
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
                     </button>
@@ -299,7 +297,7 @@ export default function AdminSectionManagement() {
         >
           <form onSubmit={handleSubmit} className="flex flex-col gap-6 py-4">
             <div className="flex flex-col gap-3">
-              <label className="text-xs font-black text-white/40 uppercase tracking-widest ml-1">Parent Subject (L1)</label>
+              <label className="text-xs font-bold text-[#FAFAF9]/40 uppercase tracking-widest ml-1">Parent Subject (L1)</label>
               <CustomSelect
                 placeholder="Select a Subject"
                 options={subCategories.map(sub => ({ value: sub.id, label: `${sub.name} (${sub.categoryName})` }))}
@@ -340,18 +338,18 @@ export default function AdminSectionManagement() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="flex flex-col gap-3">
-                <label className="text-xs font-black text-white/40 uppercase tracking-widest ml-1">Description (EN)</label>
+                <label className="text-xs font-bold text-[#FAFAF9]/40 uppercase tracking-widest ml-1">Description (EN)</label>
                 <textarea 
-                  className="w-full bg-white/5 border border-white/10 rounded-2xl p-5 text-white focus:outline-none focus:border-purple-500/50 transition-colors min-h-[120px] text-sm"
+                  className="w-full bg-white/5 border border-[#57534E]/40 rounded-2xl p-5 text-[#FAFAF9] focus:outline-none focus:border-orange-500/50 transition-colors min-h-[120px] text-sm"
                   placeholder="Details about this section..."
                   value={formData.description}
                   onChange={(e) => setFormData({ ...formData, description: e.target.value })}
                 />
               </div>
               <div className="flex flex-col gap-3">
-                <label className="text-xs font-black text-white/40 uppercase tracking-widest ml-1">Description (TE)</label>
+                <label className="text-xs font-bold text-[#FAFAF9]/40 uppercase tracking-widest ml-1">Description (TE)</label>
                 <textarea 
-                  className="w-full bg-white/5 border border-white/10 rounded-2xl p-5 text-white focus:outline-none focus:border-purple-500/50 transition-colors min-h-[120px] text-sm"
+                  className="w-full bg-white/5 border border-[#57534E]/40 rounded-2xl p-5 text-[#FAFAF9] focus:outline-none focus:border-orange-500/50 transition-colors min-h-[120px] text-sm"
                   placeholder="వివరాలు..."
                   value={formData.descriptionTe}
                   onChange={(e) => setFormData({ ...formData, descriptionTe: e.target.value })}
@@ -362,7 +360,7 @@ export default function AdminSectionManagement() {
             <motion.button
               whileHover={{ y: -5, boxShadow: "0px 20px 40px rgba(147, 51, 234, 0.4)" }}
               whileTap={{ scale: 0.98 }}
-              className="mt-6 w-full py-5 rounded-2xl bg-gradient-to-r from-purple-600 to-indigo-600 font-black text-lg tracking-tight shadow-xl"
+              className="mt-6 w-full py-5 rounded-2xl bg-[#EA580C] font-bold text-lg tracking-tight shadow-xl"
               type="submit"
             >
               <Multilang en={editingSection ? "Sync Changes" : "Forge Section"} te={editingSection ? "నవీకరించండి" : "సెక్షన్ సృష్టించండి"} />

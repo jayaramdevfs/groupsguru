@@ -124,7 +124,7 @@ export default function ContentTreePage() {
   const ActionButtons = ({ type, item, items, index, isExpandedConfig }: { type: string, item: any, items: any[], index: number, isExpandedConfig?: any }) => (
     <div className="flex gap-2 items-center opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity ml-2">
       <button 
-        className="text-xs text-blue-400 hover:text-blue-300 font-semibold bg-blue-400/10 px-2 py-1 rounded" 
+        className="text-xs   font-semibold  px-2 py-1 rounded" 
         onClick={(e) => { 
           e.stopPropagation(); 
           setModalConfig({ 
@@ -157,12 +157,12 @@ export default function ContentTreePage() {
       </button>
       <div className="flex flex-col gap-0.5 ml-1">
         <button 
-          className="text-[10px] text-white/50 hover:text-white disabled:opacity-30 leading-none px-1" 
+          className="text-[10px] text-[#FAFAF9]/50 hover:text-[#FAFAF9] disabled:opacity-30 leading-none px-1" 
           disabled={index === 0}
           onClick={(e) => { e.stopPropagation(); handleReorder(type, items, index, 'UP'); }}
         >▲</button>
         <button 
-          className="text-[10px] text-white/50 hover:text-white disabled:opacity-30 leading-none px-1" 
+          className="text-[10px] text-[#FAFAF9]/50 hover:text-[#FAFAF9] disabled:opacity-30 leading-none px-1" 
           disabled={index === items.length - 1}
           onClick={(e) => { e.stopPropagation(); handleReorder(type, items, index, 'DOWN'); }}
         >▼</button>
@@ -180,9 +180,9 @@ export default function ContentTreePage() {
 
   const TopicNode = ({ topic, items, index, parentId }: { topic: Topic; items: Topic[]; index: number; parentId: number }) => {
     return (
-      <div className="flex items-center gap-4 py-2 border-l border-white/10 pl-6 ml-4 relative group">
+      <div className="flex items-center gap-4 py-2 border-l border-[#57534E]/40 pl-6 ml-4 relative group">
         <div className="absolute left-0 top-1/2 w-4 h-[1px] bg-white/10" />
-        <span className={`font-medium ${topic.isPublished !== false ? 'text-violet-300' : 'text-violet-300/50 line-through'}`}>📄 {topic.name}</span>
+        <span className={`font-medium ${topic.isPublished !== false ? 'text-[#F97316]' : 'text-[#F97316] line-through'}`}>📄 {topic.name}</span>
         <ActionButtons type="TOPIC" item={topic} items={items} index={index} />
       </div>
     );
@@ -200,10 +200,10 @@ export default function ContentTreePage() {
     };
 
     return (
-      <div className="border-l border-white/10 pl-6 ml-4 relative group">
+      <div className="border-l border-[#57534E]/40 pl-6 ml-4 relative group">
         <div className="absolute left-0 top-5 w-4 h-[1px] bg-white/10" />
         <div className="flex items-center gap-4 py-2 cursor-pointer" onClick={load}>
-          <span className={`font-bold ${section.isPublished !== false ? 'text-pink-300' : 'text-pink-300/50 line-through'}`}>{expanded ? "📂" : "📁"} {section.name} <span className="text-xs font-normal text-white/30 ml-2">[{children.length > 0 ? children.length : '...'} topics]</span></span>
+          <span className={`font-bold ${section.isPublished !== false ? 'text-[#F97316]' : 'text-[#F97316] line-through'}`}>{expanded ? "📂" : "📁"} {section.name} <span className="text-xs font-normal text-[#FAFAF9]/30 ml-2">[{children.length > 0 ? children.length : '...'} topics]</span></span>
           <ActionButtons 
             type="SECTION" item={section} items={items} index={index} 
             isExpandedConfig={{ type: "TOPIC", mode: "CREATE", parentId: section.id, data: { name: "", nameTe: "", description: "", topicCode: "", displayOrder: children.length, isPublished: true }, btnText: "+ Add Topic" }} 
@@ -230,10 +230,10 @@ export default function ContentTreePage() {
     };
 
     return (
-      <div className="border-l border-white/10 pl-6 ml-4 relative group">
+      <div className="border-l border-[#57534E]/40 pl-6 ml-4 relative group">
         <div className="absolute left-0 top-5 w-4 h-[1px] bg-white/10" />
         <div className="flex items-center gap-4 py-2 cursor-pointer" onClick={load}>
-          <span className={`font-bold ${sub.isPublished !== false ? 'text-purple-300' : 'text-purple-300/50 line-through'}`}>{expanded ? "📖" : "📘"} {sub.name} <span className="text-xs font-normal text-white/30 ml-2">[{children.length > 0 ? children.length : '...'} sections]</span></span>
+          <span className={`font-bold ${sub.isPublished !== false ? 'text-[#F97316]' : 'text-[#F97316]/50 line-through'}`}>{expanded ? "📖" : "📘"} {sub.name} <span className="text-xs font-normal text-[#FAFAF9]/30 ml-2">[{children.length > 0 ? children.length : '...'} sections]</span></span>
           <ActionButtons 
             type="SUBCATEGORY" item={sub} items={items} index={index} 
             isExpandedConfig={{ type: "SECTION", mode: "CREATE", parentId: sub.id, data: { name: "", nameTe: "", description: "", displayOrder: children.length, isPublished: true }, btnText: "+ Add Section" }}
@@ -262,7 +262,7 @@ export default function ContentTreePage() {
     return (
       <div className="mb-4 bg-white/[0.02] border border-white/5 rounded-2xl p-4 group">
         <div className="flex items-center gap-4 cursor-pointer" onClick={load}>
-          <span className={`text-xl font-bold ${cat.isPublished !== false ? 'text-indigo-300' : 'text-indigo-300/50 line-through'}`}>{expanded ? "🏛️" : "🏛️"} {cat.name}</span>
+          <span className={`text-xl font-bold ${cat.isPublished !== false ? 'text-[#F97316]' : 'text-[#F97316] line-through'}`}>{expanded ? "🏛️" : "🏛️"} {cat.name}</span>
           <ActionButtons 
             type="CATEGORY" item={cat} items={items} index={index} 
             isExpandedConfig={{ type: "SUBCATEGORY", mode: "CREATE", parentId: cat.id, data: { name: "", nameTe: "", description: "", imageUrl: "", displayOrder: children.length, isPublished: true }, btnText: "+ Add Subject" }}
@@ -279,15 +279,15 @@ export default function ContentTreePage() {
 
   return (
     <ProtectedLayout requiredRole="ADMIN">
-      <div className="min-h-screen py-24 px-6 md:px-12 w-full max-w-5xl mx-auto text-white">
+      <div className="min-h-screen py-24 px-6 md:px-12 w-full max-w-5xl mx-auto text-[#FAFAF9]">
         <motion.div className="mb-10">
           <h1 className="text-[36px] font-[800] leading-tight mb-2">Content Hierarchy Tree</h1>
-          <p className="text-white/60 font-semibold">Drill down level by level to manage all contents</p>
+          <p className="text-[#FAFAF9]/60 font-semibold">Drill down level by level to manage all contents</p>
         </motion.div>
 
         {isLoading ? (
            <div className="flex items-center justify-center py-20">
-             <div className="w-12 h-12 border-4 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
+             <div className="w-12 h-12 border-4 border-orange-500 border-t-transparent rounded-full animate-spin"></div>
            </div>
         ) : (
           <div className="flex flex-col gap-2">
@@ -306,9 +306,9 @@ export default function ContentTreePage() {
               value={modalConfig.data.nameTe || ""} onChange={(val) => handleInputChange("nameTe", val)} required 
             />
             <div className="flex flex-col gap-2">
-              <label className="text-sm font-semibold text-white/60 ml-1">Description</label>
+              <label className="text-sm font-semibold text-[#FAFAF9]/60 ml-1">Description</label>
               <textarea 
-                className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-white focus:outline-none focus:border-purple-500/50 min-h-[100px]"
+                className="w-full bg-white/5 border border-[#57534E]/40 rounded-xl p-4 text-[#FAFAF9] focus:outline-none focus:border-orange-500/50 min-h-[100px]"
                 placeholder="Description"
                 value={modalConfig.data.description || ""} onChange={(e) => handleInputChange("description", e.target.value)}
               />
@@ -316,8 +316,8 @@ export default function ContentTreePage() {
 
             {modalConfig.type === "CATEGORY" && (
                <div className="flex flex-col gap-2">
-                  <label className="text-sm font-semibold text-white/60 ml-1">Commission ID</label>
-                  <input type="number" className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-white" value={modalConfig.data.commissionId || 1} onChange={(e) => handleInputChange("commissionId", e.target.value)} />
+                  <label className="text-sm font-semibold text-[#FAFAF9]/60 ml-1">Commission ID</label>
+                  <input type="number" className="w-full bg-white/5 border border-[#57534E]/40 rounded-xl p-4 text-[#FAFAF9]" value={modalConfig.data.commissionId || 1} onChange={(e) => handleInputChange("commissionId", e.target.value)} />
                </div>
             )}
 
@@ -335,7 +335,7 @@ export default function ContentTreePage() {
               />
             )}
 
-            <motion.button type="submit" whileHover={{ scale: 1.02 }} className="mt-4 w-full py-4 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 font-bold">
+            <motion.button type="submit" whileHover={{ scale: 1.02 }} className="mt-4 w-full py-4 rounded-xl bg-[#EA580C] font-bold">
               Save changes
             </motion.button>
           </form>

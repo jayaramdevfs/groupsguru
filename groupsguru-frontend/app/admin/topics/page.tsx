@@ -14,10 +14,8 @@ import CustomSelect from "@/components/ui/CustomSelect";
 import { Multilang } from "@/components/ui/Multilang";
 
 const spring = {
-  type: "spring" as const,
-  stiffness: 420,
-  damping: 24,
-  mass: 0.8,
+  
+  duration: 0.25, ease: "easeOut" as const,
 };
 
 export default function AdminTopicManagement() {
@@ -158,7 +156,7 @@ export default function AdminTopicManagement() {
 
   return (
     <ProtectedLayout requiredRole="ADMIN">
-      <div className="min-h-screen py-24 px-6 md:px-12 w-full max-w-7xl mx-auto text-white">
+      <div className="min-h-screen py-24 px-6 md:px-12 w-full max-w-7xl mx-auto text-[#FAFAF9]">
 
         {/* Header */}
         <motion.div
@@ -168,13 +166,13 @@ export default function AdminTopicManagement() {
           transition={spring}
         >
           <div>
-            <div className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-black uppercase tracking-[0.3em] mb-4 inline-block">
+            <div className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-bold uppercase tracking-[0.3em] mb-4 inline-block">
               Level 3 Management
             </div>
             <h1 className="text-[36px] md:text-[48px] font-[800] leading-tight mb-2">
               <Multilang en="Topic Engine" te="టాపిక్ ఇంజిన్" />
             </h1>
-            <p className="text-[18px] text-white/70 font-[600]">
+            <p className="text-[18px] text-[#FAFAF9]/70 font-[600]">
               <Multilang
                 en="Forge atomic study topics under each section."
                 te="ప్రతి సెక్షన్ కింద అటామిక్ స్టడీ టాపిక్‌లను సృష్టించండి."
@@ -187,7 +185,7 @@ export default function AdminTopicManagement() {
             whileTap={{ scale: 0.95 }}
             transition={spring}
             onClick={() => handleOpenModal()}
-            className="px-8 py-4 h-fit rounded-[16px] bg-gradient-to-r from-[#10B981] to-[#3B82F6] font-[700] text-[16px] whitespace-nowrap shadow-[0_15px_30px_rgba(16,185,129,0.3)] transition-all flex items-center gap-2"
+            className="px-8 py-4 h-fit rounded-[16px] bg-[#EA580C] font-[700] text-[16px] whitespace-nowrap shadow-md transition-all flex items-center gap-2"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <line x1="12" y1="5" x2="12" y2="19"></line>
@@ -198,21 +196,21 @@ export default function AdminTopicManagement() {
         </motion.div>
 
         {/* 3-Level Filter */}
-        <div className="mb-12 space-y-6 p-8 rounded-[32px] bg-white/5 border border-white/10 backdrop-blur-xl">
+        <div className="mb-12 space-y-6 p-8 rounded-xl bg-white/5 border border-[#57534E]/40 ">
 
           {/* L0 — Exam */}
           <div className="flex flex-col gap-3">
-            <span className="text-white/40 font-bold uppercase text-[10px] tracking-widest ml-1">Step 1: Exam (L0)</span>
+            <span className="text-[#FAFAF9]/40 font-bold uppercase text-[10px] tracking-widest ml-1">Step 1: Exam (L0)</span>
             <div className="flex flex-wrap gap-2">
               <button
                 onClick={() => { setSelectedCategoryId("all"); setSelectedSubCategoryId("all"); setSelectedSectionId("all"); }}
-                className={`px-5 py-2.5 rounded-2xl border transition-all text-sm ${selectedCategoryId === "all" ? "bg-blue-600 border-blue-400 font-bold shadow-lg shadow-blue-500/20" : "bg-white/5 border-white/10 hover:bg-white/10"}`}
+                className={`px-5 py-2.5 rounded-2xl border transition-all text-sm ${selectedCategoryId === "all" ? "  font-bold shadow-lg shadow-blue-500/20" : "bg-white/5 border-[#57534E]/40 hover:bg-white/10"}`}
               >All Exams</button>
               {categories.map((cat) => (
                 <button
                   key={cat.id}
                   onClick={() => { setSelectedCategoryId(cat.id.toString()); setSelectedSubCategoryId("all"); setSelectedSectionId("all"); }}
-                  className={`px-5 py-2.5 rounded-2xl border transition-all text-sm ${selectedCategoryId === cat.id.toString() ? "bg-blue-600 border-blue-400 font-bold shadow-lg shadow-blue-500/20" : "bg-white/5 border-white/10 hover:bg-white/10"}`}
+                  className={`px-5 py-2.5 rounded-2xl border transition-all text-sm ${selectedCategoryId === cat.id.toString() ? "  font-bold shadow-lg shadow-blue-500/20" : "bg-white/5 border-[#57534E]/40 hover:bg-white/10"}`}
                 >{cat.name}</button>
               ))}
             </div>
@@ -220,17 +218,17 @@ export default function AdminTopicManagement() {
 
           {/* L1 — Subject */}
           <div className="flex flex-col gap-3">
-            <span className="text-white/40 font-bold uppercase text-[10px] tracking-widest ml-1">Step 2: Subject (L1)</span>
+            <span className="text-[#FAFAF9]/40 font-bold uppercase text-[10px] tracking-widest ml-1">Step 2: Subject (L1)</span>
             <div className="flex flex-wrap gap-2">
               <button
                 onClick={() => { setSelectedSubCategoryId("all"); setSelectedSectionId("all"); }}
-                className={`px-5 py-2.5 rounded-2xl border transition-all text-sm ${selectedSubCategoryId === "all" ? "bg-purple-600 border-purple-400 font-bold shadow-lg shadow-purple-500/20" : "bg-white/5 border-white/10 hover:bg-white/10"}`}
+                className={`px-5 py-2.5 rounded-2xl border transition-all text-sm ${selectedSubCategoryId === "all" ? "bg-[#EA580C] border-[#57534E]/40 font-bold shadow-lg shadow-orange-500/20" : "bg-white/5 border-[#57534E]/40 hover:bg-white/10"}`}
               >All Subjects</button>
               {filteredSubCategories.map((sub) => (
                 <button
                   key={sub.id}
                   onClick={() => { setSelectedSubCategoryId(sub.id.toString()); setSelectedSectionId("all"); }}
-                  className={`px-5 py-2.5 rounded-2xl border transition-all text-sm ${selectedSubCategoryId === sub.id.toString() ? "bg-purple-600 border-purple-400 font-bold shadow-lg shadow-purple-500/20" : "bg-white/5 border-white/10 hover:bg-white/10"}`}
+                  className={`px-5 py-2.5 rounded-2xl border transition-all text-sm ${selectedSubCategoryId === sub.id.toString() ? "bg-[#EA580C] border-[#57534E]/40 font-bold shadow-lg shadow-orange-500/20" : "bg-white/5 border-[#57534E]/40 hover:bg-white/10"}`}
                 >{sub.name}</button>
               ))}
             </div>
@@ -238,21 +236,21 @@ export default function AdminTopicManagement() {
 
           {/* L2 — Section */}
           <div className="flex flex-col gap-3">
-            <span className="text-white/40 font-bold uppercase text-[10px] tracking-widest ml-1">Step 3: Section (L2)</span>
+            <span className="text-[#FAFAF9]/40 font-bold uppercase text-[10px] tracking-widest ml-1">Step 3: Section (L2)</span>
             <div className="flex flex-wrap gap-2">
               <button
                 onClick={() => setSelectedSectionId("all")}
-                className={`px-5 py-2.5 rounded-2xl border transition-all text-sm ${selectedSectionId === "all" ? "bg-indigo-600 border-indigo-400 font-bold shadow-lg shadow-indigo-500/20" : "bg-white/5 border-white/10 hover:bg-white/10"}`}
+                className={`px-5 py-2.5 rounded-2xl border transition-all text-sm ${selectedSectionId === "all" ? "bg-[#EA580C] border-[#57534E]/40 font-bold shadow-lg " : "bg-white/5 border-[#57534E]/40 hover:bg-white/10"}`}
               >All Sections</button>
               {filteredSections.map((sec) => (
                 <button
                   key={sec.id}
                   onClick={() => setSelectedSectionId(sec.id.toString())}
-                  className={`px-5 py-2.5 rounded-2xl border transition-all text-sm ${selectedSectionId === sec.id.toString() ? "bg-indigo-600 border-indigo-400 font-bold shadow-lg shadow-indigo-500/20" : "bg-white/5 border-white/10 hover:bg-white/10"}`}
+                  className={`px-5 py-2.5 rounded-2xl border transition-all text-sm ${selectedSectionId === sec.id.toString() ? "bg-[#EA580C] border-[#57534E]/40 font-bold shadow-lg " : "bg-white/5 border-[#57534E]/40 hover:bg-white/10"}`}
                 >{sec.name}</button>
               ))}
               {filteredSections.length === 0 && selectedSubCategoryId !== "all" && (
-                <span className="text-white/30 text-sm italic py-2">No sections found.</span>
+                <span className="text-[#FAFAF9]/30 text-sm  py-2">No sections found.</span>
               )}
             </div>
           </div>
@@ -265,10 +263,10 @@ export default function AdminTopicManagement() {
               <div className="w-12 h-12 border-4 border-emerald-500 border-t-transparent rounded-full animate-spin"></div>
             </div>
           ) : filteredTopics.length === 0 ? (
-            <div className="text-center py-20 text-white/50 bg-white/5 rounded-[32px] border border-white/10 border-dashed">
+            <div className="text-center py-20 text-[#FAFAF9]/50 bg-white/5 rounded-xl border border-[#57534E]/40 border-dashed">
               <div className="text-4xl mb-4">🧠</div>
               <p className="font-semibold">No topics found.</p>
-              <p className="text-sm mt-2 text-white/30">Select a section above and add your first topic.</p>
+              <p className="text-sm mt-2 text-[#FAFAF9]/30">Select a section above and add your first topic.</p>
             </div>
           ) : (
             <AnimatePresence>
@@ -280,26 +278,26 @@ export default function AdminTopicManagement() {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ ...spring, delay: index * 0.04 }}
-                  className="w-full flex flex-col md:flex-row items-center gap-6 p-8 rounded-[32px] bg-white/[0.03] border border-white/5 hover:border-emerald-500/30 transition-all group relative overflow-hidden"
+                  className="w-full flex flex-col md:flex-row items-center gap-6 p-8 rounded-xl bg-white/[0.03] border border-white/5 hover:border-emerald-500/30 transition-all group relative overflow-hidden"
                 >
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 blur-[60px] group-hover:bg-emerald-500/10 transition-all" />
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5  group-hover:bg-emerald-500/10 transition-all" />
 
                   {/* Icon */}
-                  <div className="w-16 h-16 shrink-0 rounded-2xl bg-gradient-to-br from-emerald-600/20 to-blue-600/20 border border-white/10 flex items-center justify-center font-black text-lg text-emerald-300">
+                  <div className="w-16 h-16 shrink-0 rounded-2xl bg-[#EA580C] border border-[#57534E]/40 flex items-center justify-center font-bold text-lg text-emerald-300">
                     {topic.topicCode || topic.name.charAt(0)}
                   </div>
 
                   <div className="flex-1 w-full relative z-10">
                     {/* Breadcrumb */}
-                    <div className="flex flex-wrap items-center gap-2 mb-2 text-[11px] font-black uppercase tracking-widest">
-                      <span className="text-blue-400 bg-blue-400/10 px-2 py-0.5 rounded border border-blue-400/20">{topic.subCategoryName}</span>
-                      <span className="text-white/20">›</span>
-                      <span className="text-indigo-400 bg-indigo-400/10 px-2 py-0.5 rounded border border-indigo-400/20">{topic.sectionName}</span>
+                    <div className="flex flex-wrap items-center gap-2 mb-2 text-[11px] font-bold uppercase tracking-widest">
+                      <span className="  px-2 py-0.5 rounded border ">{topic.subCategoryName}</span>
+                      <span className="text-[#FAFAF9]/20">›</span>
+                      <span className="text-[#F97316] bg-[#EA580C] px-2 py-0.5 rounded border border-[#57534E]/40">{topic.sectionName}</span>
                     </div>
-                    <h3 className="text-2xl font-black text-white mb-1">
+                    <h3 className="text-2xl font-bold text-[#FAFAF9] mb-1">
                       <Multilang en={topic.name} te={topic.nameTe} />
                     </h3>
-                    <p className="text-sm font-medium text-white/40 line-clamp-2 max-w-2xl leading-relaxed">
+                    <p className="text-sm font-medium text-[#FAFAF9]/40 line-clamp-2 max-w-2xl leading-relaxed">
                       <Multilang en={topic.description || ""} te={topic.descriptionTe || ""} />
                     </p>
                   </div>
@@ -308,13 +306,13 @@ export default function AdminTopicManagement() {
                   <div className="flex items-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
                     <button
                       onClick={() => handleOpenModal(topic)}
-                      className="p-4 rounded-2xl bg-white/5 hover:bg-emerald-500/20 text-white border border-white/10 transition-colors"
+                      className="p-4 rounded-2xl bg-white/5 hover:bg-emerald-500/20 text-[#FAFAF9] border border-[#57534E]/40 transition-colors"
                     >
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
                     </button>
                     <button
                       onClick={() => handleDelete(topic.id)}
-                      className="p-4 rounded-2xl bg-white/5 hover:bg-red-500/20 text-red-400 border border-white/10 transition-colors"
+                      className="p-4 rounded-2xl bg-white/5 hover:bg-red-500/20 text-red-400 border border-[#57534E]/40 transition-colors"
                     >
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
                     </button>
@@ -335,7 +333,7 @@ export default function AdminTopicManagement() {
 
             {/* Parent Section selector */}
             <div className="flex flex-col gap-3">
-              <label className="text-xs font-black text-white/40 uppercase tracking-widest ml-1">Parent Section (L2)</label>
+              <label className="text-xs font-bold text-[#FAFAF9]/40 uppercase tracking-widest ml-1">Parent Section (L2)</label>
               <CustomSelect
                 placeholder="Select a Section"
                 options={sections.map((sec) => ({ value: sec.id, label: `${sec.name} (${sec.subCategoryName})` }))}
@@ -376,18 +374,18 @@ export default function AdminTopicManagement() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="flex flex-col gap-3">
-                <label className="text-xs font-black text-white/40 uppercase tracking-widest ml-1">Description (EN)</label>
+                <label className="text-xs font-bold text-[#FAFAF9]/40 uppercase tracking-widest ml-1">Description (EN)</label>
                 <textarea
-                  className="w-full bg-white/5 border border-white/10 rounded-2xl p-5 text-white focus:outline-none focus:border-emerald-500/50 transition-colors min-h-[120px] text-sm"
+                  className="w-full bg-white/5 border border-[#57534E]/40 rounded-2xl p-5 text-[#FAFAF9] focus:outline-none focus:border-emerald-500/50 transition-colors min-h-[120px] text-sm"
                   placeholder="Brief overview of this topic..."
                   value={formData.description}
                   onChange={(e) => setFormData({ ...formData, description: e.target.value })}
                 />
               </div>
               <div className="flex flex-col gap-3">
-                <label className="text-xs font-black text-white/40 uppercase tracking-widest ml-1">Description (TE)</label>
+                <label className="text-xs font-bold text-[#FAFAF9]/40 uppercase tracking-widest ml-1">Description (TE)</label>
                 <textarea
-                  className="w-full bg-white/5 border border-white/10 rounded-2xl p-5 text-white focus:outline-none focus:border-emerald-500/50 transition-colors min-h-[120px] text-sm"
+                  className="w-full bg-white/5 border border-[#57534E]/40 rounded-2xl p-5 text-[#FAFAF9] focus:outline-none focus:border-emerald-500/50 transition-colors min-h-[120px] text-sm"
                   placeholder="వివరాలు..."
                   value={formData.descriptionTe}
                   onChange={(e) => setFormData({ ...formData, descriptionTe: e.target.value })}
@@ -398,7 +396,7 @@ export default function AdminTopicManagement() {
             <motion.button
               whileHover={{ y: -5, boxShadow: "0px 20px 40px rgba(16, 185, 129, 0.4)" }}
               whileTap={{ scale: 0.98 }}
-              className="mt-6 w-full py-5 rounded-2xl bg-gradient-to-r from-emerald-600 to-blue-600 font-black text-lg tracking-tight shadow-xl"
+              className="mt-6 w-full py-5 rounded-2xl bg-[#EA580C] font-bold text-lg tracking-tight shadow-xl"
               type="submit"
             >
               <Multilang en={editingTopic ? "Sync Changes" : "Forge Topic"} te={editingTopic ? "నవీకరించండి" : "టాపిక్ సృష్టించండి"} />

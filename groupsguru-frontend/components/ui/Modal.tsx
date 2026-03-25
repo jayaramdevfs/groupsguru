@@ -21,7 +21,7 @@ export default function Modal({ isOpen, onClose, title, children }: ModalProps) 
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+            className="absolute inset-0 bg-black/60 "
           />
 
           {/* Modal Content */}
@@ -29,11 +29,11 @@ export default function Modal({ isOpen, onClose, title, children }: ModalProps) 
             initial={{ scale: 0.9, opacity: 0, y: 20 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.9, opacity: 0, y: 20 }}
-            className="relative w-full max-w-lg rounded-[24px] bg-[#1a0b2e] border border-[rgba(147,51,234,0.3)] shadow-[0_25px_80px_rgba(0,0,0,0.5)] flex flex-col"
+            className="relative w-full max-w-lg rounded-xl bg-[#1C1917] border border-[rgba(147,51,234,0.3)] shadow-md flex flex-col"
           >
             {/* Header */}
             <div className="flex items-center justify-between p-6 border-b border-[rgba(147,51,234,0.1)]">
-              <h2 className="text-2xl font-bold bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent">
+              <h2 className="text-2xl font-bold text-[#F97316]">
                 {title}
               </h2>
               <button

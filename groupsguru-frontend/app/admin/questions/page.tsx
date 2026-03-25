@@ -9,7 +9,7 @@ import CustomSelect from "@/components/ui/CustomSelect";
 import QuestionModal from "@/components/admin/QuestionModal";
 import { QuestionRequest } from "@/lib/types";
 
-const spring = { type: "spring" as const, stiffness: 420, damping: 24, mass: 0.8 };
+const spring = {  duration: 0.25, ease: "easeOut" as const };
 
 const SUBJECTS = ["All Subjects", "History", "AP History", "Polity", "Economy", "Geography", "Science", "Mental Ability", "Environment", "Ethics", "Administration"];
 const DIFFICULTIES = ["All Difficulties", "easy", "medium", "hard", "very_hard"];
@@ -97,10 +97,10 @@ export default function AdminQuestionBank() {
 
   const getTypeBadge = (type: string) => {
     switch (type) {
-      case "STATIC": return { bg: "bg-blue-500/20", text: "text-blue-400" };
-      case "ANALYTICAL": return { bg: "bg-purple-500/20", text: "text-purple-400" };
-      case "STMT": return { bg: "bg-indigo-500/20", text: "text-indigo-400" };
-      case "ELIM": return { bg: "bg-pink-500/20", text: "text-pink-400" };
+      case "STATIC": return { bg: "", text: "" };
+      case "ANALYTICAL": return { bg: "bg-orange-500/20", text: "text-[#F97316]" };
+      case "STMT": return { bg: "bg-[#EA580C]", text: "text-[#F97316]" };
+      case "ELIM": return { bg: "bg-[#EA580C]", text: "text-[#F97316]" };
       case "MATCH": return { bg: "bg-teal-500/20", text: "text-teal-400" };
       case "AR": return { bg: "bg-amber-500/20", text: "text-amber-400" };
       default: return { bg: "bg-gray-500/20", text: "text-gray-400" };
@@ -110,10 +110,10 @@ export default function AdminQuestionBank() {
   const getCognitiveBadge = (level: string) => {
     switch (level) {
       case "L1": return "text-emerald-400";
-      case "L2": return "text-blue-400";
+      case "L2": return "";
       case "L3": return "text-orange-400";
       case "L4": return "text-red-400";
-      default: return "text-white/60";
+      default: return "text-[#FAFAF9]/60";
     }
   };
 
@@ -126,7 +126,7 @@ export default function AdminQuestionBank() {
 
   return (
     <ProtectedLayout requiredRole="ADMIN">
-      <div className="min-h-screen py-24 px-6 md:px-12 w-full max-w-7xl mx-auto text-white">
+      <div className="min-h-screen py-24 px-6 md:px-12 w-full max-w-7xl mx-auto text-[#FAFAF9]">
 
         {/* Header */}
         <motion.div
@@ -134,13 +134,13 @@ export default function AdminQuestionBank() {
           initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={spring}
         >
           <div>
-            <div className="px-3 py-1 rounded-full bg-violet-500/10 border border-violet-500/20 text-violet-400 text-[10px] font-black uppercase tracking-[0.3em] mb-4 inline-block">
+            <div className="px-3 py-1 rounded-full bg-[#EA580C] border border-[#57534E]/40 text-[#F97316] text-[10px] font-bold uppercase tracking-[0.3em] mb-4 inline-block">
               Sprint 9 — Question Bank
             </div>
             <h1 className="text-[36px] md:text-[48px] font-[800] leading-tight mb-2">
               Question Bank
             </h1>
-            <p className="text-[18px] text-white/70 font-[600]">
+            <p className="text-[18px] text-[#FAFAF9]/70 font-[600]">
               {totalElements} bilingual MCQs parsed from Moodle XML.
             </p>
           </div>
@@ -148,7 +148,7 @@ export default function AdminQuestionBank() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={handleCreate}
-            className="px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 font-bold whitespace-nowrap"
+            className="px-6 py-3 rounded-xl bg-[#EA580C] font-bold whitespace-nowrap"
           >
             + Add Question
           </motion.button>
@@ -157,26 +157,26 @@ export default function AdminQuestionBank() {
         {/* Stats Row */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
           {[
-            { label: "Total Questions", value: totalElements, color: "text-purple-400" },
+            { label: "Total Questions", value: totalElements, color: "text-[#F97316]" },
             { label: "Easy", value: diffCounts.easy, color: "text-emerald-400" },
             { label: "Medium", value: diffCounts.medium, color: "text-yellow-400" },
             { label: "Hard / Very Hard", value: diffCounts.hard + diffCounts.very_hard, color: "text-orange-400" },
           ].map((s, i) => (
-            <motion.div key={i} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ ...spring, delay: i * 0.08 }} className="bg-white/5 border border-white/10 rounded-[24px] p-6 backdrop-blur-md">
-              <div className={`text-4xl font-black ${s.color} mb-1`}>{s.value}</div>
-              <div className="text-white/40 text-xs font-bold uppercase tracking-widest">{s.label}</div>
+            <motion.div key={i} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ ...spring, delay: i * 0.08 }} className="bg-white/5 border border-[#57534E]/40 rounded-xl p-6 ">
+              <div className={`text-4xl font-bold ${s.color} mb-1`}>{s.value}</div>
+              <div className="text-[#FAFAF9]/40 text-xs font-bold uppercase tracking-widest">{s.label}</div>
             </motion.div>
           ))}
         </div>
 
         {/* Filters */}
         <motion.div
-          className="mb-8 p-6 rounded-[24px] bg-white/5 border border-white/10 backdrop-blur-xl"
+          className="mb-8 p-6 rounded-xl bg-white/5 border border-[#57534E]/40 "
           initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ ...spring, delay: 0.2 }}
         >
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             <div className="flex flex-col gap-2">
-              <span className="text-white/40 font-bold uppercase text-[10px] tracking-widest ml-1">Subject</span>
+              <span className="text-[#FAFAF9]/40 font-bold uppercase text-[10px] tracking-widest ml-1">Subject</span>
               <CustomSelect
                 options={SUBJECTS.map(s => ({ value: s, label: s }))}
                 value={selectedSubject}
@@ -184,7 +184,7 @@ export default function AdminQuestionBank() {
               />
             </div>
             <div className="flex flex-col gap-2">
-              <span className="text-white/40 font-bold uppercase text-[10px] tracking-widest ml-1">Difficulty</span>
+              <span className="text-[#FAFAF9]/40 font-bold uppercase text-[10px] tracking-widest ml-1">Difficulty</span>
               <CustomSelect
                 options={DIFFICULTIES.map(d => ({ value: d, label: d === "very_hard" ? "Very Hard" : d.charAt(0).toUpperCase() + d.slice(1) }))}
                 value={selectedDifficulty}
@@ -192,7 +192,7 @@ export default function AdminQuestionBank() {
               />
             </div>
             <div className="flex flex-col gap-2">
-              <span className="text-white/40 font-bold uppercase text-[10px] tracking-widest ml-1">Type</span>
+              <span className="text-[#FAFAF9]/40 font-bold uppercase text-[10px] tracking-widest ml-1">Type</span>
               <CustomSelect
                 options={TYPES.map(t => ({ value: t, label: t.replace("All Types", "All Types") }))}
                 value={selectedType}
@@ -200,36 +200,36 @@ export default function AdminQuestionBank() {
               />
             </div>
             <div className="flex flex-col gap-2">
-              <span className="text-white/40 font-bold uppercase text-[10px] tracking-widest ml-1">Search</span>
+              <span className="text-[#FAFAF9]/40 font-bold uppercase text-[10px] tracking-widest ml-1">Search</span>
               <input
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search question text..."
-                className="bg-[#0f071a] border border-white/10 rounded-2xl px-4 py-3 text-sm text-white placeholder:text-white/30 focus:border-violet-500/50 focus:outline-none transition-colors"
+                className="bg-[#1C1917] border border-[#57534E]/40 rounded-2xl px-4 py-3 text-sm text-[#FAFAF9] placeholder:text-[#FAFAF9]/30 focus:border-[#57534E]/40 focus:outline-none transition-colors"
               />
             </div>
           </div>
         </motion.div>
 
         {/* Questions Table */}
-        <div className="bg-white/[0.02] border border-white/10 rounded-[32px] overflow-hidden">
+        <div className="bg-white/[0.02] border border-[#57534E]/40 rounded-xl overflow-hidden">
           {isLoading ? (
-            <div className="p-20 text-center text-indigo-400 font-semibold">Loading questions...</div>
+            <div className="p-20 text-center text-[#F97316] font-semibold">Loading questions...</div>
           ) : questions.length === 0 ? (
-            <div className="p-20 text-center text-white/40 font-semibold">No questions found.</div>
+            <div className="p-20 text-center text-[#FAFAF9]/40 font-semibold">No questions found.</div>
           ) : (
             <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse">
                 <thead>
-                  <tr className="border-b border-white/10 bg-white/5">
-                    <th className="p-5 text-xs font-bold uppercase tracking-widest text-white/40">Code</th>
-                    <th className="p-5 text-xs font-bold uppercase tracking-widest text-white/40">Subject</th>
-                    <th className="p-5 text-xs font-bold uppercase tracking-widest text-white/40">Difficulty</th>
-                    <th className="p-5 text-xs font-bold uppercase tracking-widest text-white/40">Type</th>
-                    <th className="p-5 text-xs font-bold uppercase tracking-widest text-white/40">Level</th>
-                    <th className="p-5 text-xs font-bold uppercase tracking-widest text-white/40">Micro-Topic</th>
-                    <th className="p-5 text-xs font-bold uppercase tracking-widest text-white/40 text-right">Details</th>
+                  <tr className="border-b border-[#57534E]/40 bg-white/5">
+                    <th className="p-5 text-xs font-bold uppercase tracking-widest text-[#FAFAF9]/40">Code</th>
+                    <th className="p-5 text-xs font-bold uppercase tracking-widest text-[#FAFAF9]/40">Subject</th>
+                    <th className="p-5 text-xs font-bold uppercase tracking-widest text-[#FAFAF9]/40">Difficulty</th>
+                    <th className="p-5 text-xs font-bold uppercase tracking-widest text-[#FAFAF9]/40">Type</th>
+                    <th className="p-5 text-xs font-bold uppercase tracking-widest text-[#FAFAF9]/40">Level</th>
+                    <th className="p-5 text-xs font-bold uppercase tracking-widest text-[#FAFAF9]/40">Micro-Topic</th>
+                    <th className="p-5 text-xs font-bold uppercase tracking-widest text-[#FAFAF9]/40 text-right">Details</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -249,7 +249,7 @@ export default function AdminQuestionBank() {
                           onClick={() => setExpandedId(isExpanded ? null : q.id)}
                           style={{ cursor: "pointer" }}
                         >
-                          <td className="p-5 font-mono text-sm text-violet-300 font-bold">{q.questionCode}</td>
+                          <td className="p-5 font-mono text-sm text-[#F97316] font-bold">{q.questionCode}</td>
                           <td className="p-5 text-sm font-semibold">{q.subject}</td>
                           <td className="p-5">
                             <span className={`px-3 py-1 rounded-md text-xs font-bold ${dc.bg} ${dc.text} ${dc.border} border`}>
@@ -262,11 +262,11 @@ export default function AdminQuestionBank() {
                             </span>
                           </td>
                           <td className={`p-5 font-bold text-sm ${getCognitiveBadge(q.cognitiveLevel)}`}>{q.cognitiveLevel}</td>
-                          <td className="p-5 font-mono text-xs text-white/50">{q.microTopicId}</td>
+                          <td className="p-5 font-mono text-xs text-[#FAFAF9]/50">{q.microTopicId}</td>
                           <td className="p-5 text-right flex items-center justify-end gap-2">
                             <button
                               onClick={(e) => { e.stopPropagation(); handleEdit(q); }}
-                              className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-lg hover:bg-blue-500/30 text-xs font-bold transition-colors"
+                              className="px-3 py-1   rounded-lg  text-xs font-bold transition-colors"
                             >
                               Edit
                             </button>
@@ -278,7 +278,7 @@ export default function AdminQuestionBank() {
                             </button>
                             <button
                               onClick={(e) => { e.stopPropagation(); setExpandedId(isExpanded ? null : q.id); }}
-                              className="px-4 py-1 bg-white/5 rounded-lg hover:bg-violet-500/20 text-xs font-bold tracking-wide transition-colors"
+                              className="px-4 py-1 bg-white/5 rounded-lg hover:bg-[#EA580C] text-xs font-bold tracking-wide transition-colors"
                             >
                               {isExpanded ? "Close" : "View"}
                             </button>
@@ -299,16 +299,16 @@ export default function AdminQuestionBank() {
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
-                    className="border-t border-white/10 p-8 bg-white/[0.03]"
+                    className="border-t border-[#57534E]/40 p-8 bg-white/[0.03]"
                   >
                     {/* Question Text */}
                     <div className="mb-6">
-                      <span className="text-white/40 text-[10px] font-black uppercase tracking-widest block mb-2">Question (English)</span>
-                      <p className="text-white/90 text-base font-semibold leading-relaxed">{q.questionTextEn}</p>
+                      <span className="text-[#FAFAF9]/40 text-[10px] font-bold uppercase tracking-widest block mb-2">Question (English)</span>
+                      <p className="text-[#FAFAF9]/90 text-base font-semibold leading-relaxed">{q.questionTextEn}</p>
                     </div>
                     <div className="mb-8">
-                      <span className="text-white/40 text-[10px] font-black uppercase tracking-widest block mb-2">Question (Telugu)</span>
-                      <p className="text-white/70 text-base font-medium leading-relaxed">{q.questionTextTe}</p>
+                      <span className="text-[#FAFAF9]/40 text-[10px] font-bold uppercase tracking-widest block mb-2">Question (Telugu)</span>
+                      <p className="text-[#FAFAF9]/70 text-base font-medium leading-relaxed">{q.questionTextTe}</p>
                     </div>
 
                     {/* Options */}
@@ -326,18 +326,18 @@ export default function AdminQuestionBank() {
                             className={`p-4 rounded-2xl border transition-all ${
                               isCorrect
                                 ? "bg-emerald-500/10 border-emerald-500/30"
-                                : "bg-white/5 border-white/10"
+                                : "bg-white/5 border-[#57534E]/40"
                             }`}
                           >
                             <div className="flex items-start gap-3">
-                              <span className={`flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center font-black text-sm ${
-                                isCorrect ? "bg-emerald-500/30 text-emerald-400" : "bg-white/10 text-white/60"
+                              <span className={`flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center font-bold text-sm ${
+                                isCorrect ? "bg-emerald-500/30 text-emerald-400" : "bg-white/10 text-[#FAFAF9]/60"
                               }`}>
                                 {opt.letter}
                               </span>
                               <div className="flex-1">
-                                <p className={`text-sm font-semibold ${isCorrect ? "text-emerald-300" : "text-white/90"}`}>{opt.en}</p>
-                                <p className="text-xs text-white/40 mt-1">{opt.te}</p>
+                                <p className={`text-sm font-semibold ${isCorrect ? "text-emerald-300" : "text-[#FAFAF9]/90"}`}>{opt.en}</p>
+                                <p className="text-xs text-[#FAFAF9]/40 mt-1">{opt.te}</p>
                               </div>
                               {isCorrect && (
                                 <span className="text-emerald-400 text-lg">✓</span>
@@ -350,21 +350,21 @@ export default function AdminQuestionBank() {
 
                     {/* Meta */}
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                      <div className="p-4 bg-white/5 rounded-2xl border border-white/10">
-                        <span className="text-white/40 text-[10px] font-black uppercase tracking-widest">Sprint</span>
-                        <p className="text-lg font-bold mt-1 text-indigo-300">{q.sprintId}</p>
+                      <div className="p-4 bg-white/5 rounded-2xl border border-[#57534E]/40">
+                        <span className="text-[#FAFAF9]/40 text-[10px] font-bold uppercase tracking-widest">Sprint</span>
+                        <p className="text-lg font-bold mt-1 text-[#F97316]">{q.sprintId}</p>
                       </div>
-                      <div className="p-4 bg-white/5 rounded-2xl border border-white/10">
-                        <span className="text-white/40 text-[10px] font-black uppercase tracking-widest">Penalty</span>
+                      <div className="p-4 bg-white/5 rounded-2xl border border-[#57534E]/40">
+                        <span className="text-[#FAFAF9]/40 text-[10px] font-bold uppercase tracking-widest">Penalty</span>
                         <p className="text-lg font-bold mt-1">{q.penalty}</p>
                       </div>
-                      <div className="p-4 bg-white/5 rounded-2xl border border-white/10">
-                        <span className="text-white/40 text-[10px] font-black uppercase tracking-widest">Cognitive</span>
+                      <div className="p-4 bg-white/5 rounded-2xl border border-[#57534E]/40">
+                        <span className="text-[#FAFAF9]/40 text-[10px] font-bold uppercase tracking-widest">Cognitive</span>
                         <p className={`text-lg font-bold mt-1 ${getCognitiveBadge(q.cognitiveLevel)}`}>{q.cognitiveLevel}</p>
                       </div>
-                      <div className="p-4 bg-white/5 rounded-2xl border border-white/10">
-                        <span className="text-white/40 text-[10px] font-black uppercase tracking-widest">Micro-Topic</span>
-                        <p className="text-sm font-mono font-bold mt-1 text-violet-300">{q.microTopicId}</p>
+                      <div className="p-4 bg-white/5 rounded-2xl border border-[#57534E]/40">
+                        <span className="text-[#FAFAF9]/40 text-[10px] font-bold uppercase tracking-widest">Micro-Topic</span>
+                        <p className="text-sm font-mono font-bold mt-1 text-[#F97316]">{q.microTopicId}</p>
                       </div>
                     </div>
                   </motion.div>

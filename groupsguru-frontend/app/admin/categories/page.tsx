@@ -11,10 +11,8 @@ import AnimatedInput from "@/components/ui/AnimatedInput";
 import CustomSelect from "@/components/ui/CustomSelect";
 
 const spring = {
-  type: "spring" as const,
-  stiffness: 420,
-  damping: 24,
-  mass: 0.8,
+  
+  duration: 0.25, ease: "easeOut" as const,
 };
 
 export default function AdminCategoryManagement() {
@@ -103,7 +101,7 @@ export default function AdminCategoryManagement() {
 
   return (
     <ProtectedLayout requiredRole="ADMIN">
-      <div className="min-h-screen py-24 px-6 md:px-12 w-full max-w-7xl mx-auto text-white">
+      <div className="min-h-screen py-24 px-6 md:px-12 w-full max-w-7xl mx-auto text-[#FAFAF9]">
         
         {/* Header Section */}
         <motion.div 
@@ -116,7 +114,7 @@ export default function AdminCategoryManagement() {
             <h1 className="text-[36px] md:text-[48px] font-[800] leading-tight mb-2">
               Category Management
             </h1>
-            <p className="text-[18px] text-white/70 font-[600]">
+            <p className="text-[18px] text-[#FAFAF9]/70 font-[600]">
               Create, edit, and organize exam categories.
             </p>
           </div>
@@ -126,7 +124,7 @@ export default function AdminCategoryManagement() {
             whileTap={{ scale: 0.95 }}
             transition={spring}
             onClick={() => handleOpenModal()}
-            className="px-8 py-4 h-fit rounded-[16px] bg-gradient-to-r from-[#9333EA] to-[#DB2777] font-[700] text-[16px] whitespace-nowrap shadow-[0_15px_30px_rgba(219,39,119,0.3)] transition-all flex items-center gap-2"
+            className="px-8 py-4 h-fit rounded-[16px] bg-[#EA580C] font-[700] text-[16px] whitespace-nowrap shadow-md transition-all flex items-center gap-2"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <line x1="12" y1="5" x2="12" y2="19"></line>
@@ -140,10 +138,10 @@ export default function AdminCategoryManagement() {
         <div className="flex flex-col gap-6">
           {isLoading ? (
             <div className="flex items-center justify-center py-20">
-              <div className="w-12 h-12 border-4 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
+              <div className="w-12 h-12 border-4 border-orange-500 border-t-transparent rounded-full animate-spin"></div>
             </div>
           ) : categories.length === 0 ? (
-            <div className="text-center py-20 text-white/50 bg-white/5 rounded-[24px] border border-white/10">
+            <div className="text-center py-20 text-[#FAFAF9]/50 bg-white/5 rounded-xl border border-[#57534E]/40">
               No categories found. Click "Add Category" to get started.
             </div>
           ) : (
@@ -157,9 +155,9 @@ export default function AdminCategoryManagement() {
                   y: -4, 
                   backgroundColor: "rgba(147,51,234,0.18)" 
                 }}
-                className="w-full flex flex-col md:flex-row items-center gap-6 p-6 rounded-[24px] bg-[rgba(147,51,234,0.1)] border border-[rgba(147,51,234,0.25)] shadow-[0_15px_50px_rgba(147,51,234,0.3)] backdrop-blur-md transition-colors"
+                className="w-full flex flex-col md:flex-row items-center gap-6 p-6 rounded-xl bg-[rgba(147,51,234,0.1)] border border-[rgba(147,51,234,0.25)] shadow-md  transition-colors"
               >
-                <div className="w-16 h-16 md:w-20 md:h-20 shrink-0 rounded-[16px] overflow-hidden bg-purple-900 border border-purple-500/50 flex items-center justify-center font-bold text-2xl">
+                <div className="w-16 h-16 md:w-20 md:h-20 shrink-0 rounded-[16px] overflow-hidden bg-[#292524] border border-orange-500/50 flex items-center justify-center font-bold text-2xl">
                   {cat.imageUrl ? (
                     <img src={cat.imageUrl} alt={cat.name} className="w-full h-full object-cover" />
                   ) : (
@@ -168,9 +166,9 @@ export default function AdminCategoryManagement() {
                 </div>
                 
                 <div className="flex-1 w-full text-center md:text-left">
-                  <div className="text-xs font-bold text-purple-400 mb-1">{commissions.find(c => c.id === cat.commissionId)?.code || "Commission"}</div>
+                  <div className="text-xs font-bold text-[#F97316] mb-1">{commissions.find(c => c.id === cat.commissionId)?.code || "Commission"}</div>
                   <h3 className="text-[22px] md:text-[24px] font-[700] mb-1">{cat.name}</h3>
-                  <p className="text-[16px] font-[600] text-white/70">{cat.description}</p>
+                  <p className="text-[16px] font-[600] text-[#FAFAF9]/70">{cat.description}</p>
                 </div>
 
                 <div className="flex items-center justify-center gap-3 w-full md:w-auto mt-4 md:mt-0">
@@ -179,7 +177,7 @@ export default function AdminCategoryManagement() {
                     whileTap={{ scale: 0.95 }}
                     transition={spring}
                     onClick={() => handleOpenModal(cat)}
-                    className="flex-1 md:flex-none px-6 py-3 rounded-[12px] bg-[rgba(147,51,234,0.1)] border border-[rgba(147,51,234,0.25)] text-white font-[700] hover:bg-[rgba(147,51,234,0.3)] transition-colors"
+                    className="flex-1 md:flex-none px-6 py-3 rounded-[12px] bg-[rgba(147,51,234,0.1)] border border-[rgba(147,51,234,0.25)] text-[#FAFAF9] font-[700] hover:bg-[rgba(147,51,234,0.3)] transition-colors"
                   >
                     Edit
                   </motion.button>
@@ -188,7 +186,7 @@ export default function AdminCategoryManagement() {
                     whileTap={{ scale: 0.95 }}
                     transition={spring}
                     onClick={() => handleDelete(cat.id)}
-                    className="flex-1 md:flex-none px-6 py-3 rounded-[12px] bg-[rgba(236,72,153,0.1)] border border-[rgba(236,72,153,0.3)] text-[#EC4899] font-[700] hover:bg-[rgba(236,72,153,0.2)] transition-colors"
+                    className="flex-1 md:flex-none px-6 py-3 rounded-[12px] bg-[rgba(236,72,153,0.1)] border border-[rgba(236,72,153,0.3)] text-[#EF4444] font-[700] hover:bg-[rgba(236,72,153,0.2)] transition-colors"
                   >
                     Delete
                   </motion.button>
@@ -226,7 +224,7 @@ export default function AdminCategoryManagement() {
             />
 
             <div className="flex flex-col gap-2">
-              <label className="text-sm font-semibold text-white/60 ml-1">Commission</label>
+              <label className="text-sm font-semibold text-[#FAFAF9]/60 ml-1">Commission</label>
               <CustomSelect
                 value={formData.commissionId}
                 options={commissions.map(c => ({ value: c.id, label: c.code }))}
@@ -235,9 +233,9 @@ export default function AdminCategoryManagement() {
             </div>
             
             <div className="flex flex-col gap-2">
-              <label className="text-sm font-semibold text-white/60 ml-1">Description</label>
+              <label className="text-sm font-semibold text-[#FAFAF9]/60 ml-1">Description</label>
               <textarea 
-                className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-white focus:outline-none focus:border-purple-500/50 transition-colors min-h-[100px]"
+                className="w-full bg-white/5 border border-[#57534E]/40 rounded-xl p-4 text-[#FAFAF9] focus:outline-none focus:border-orange-500/50 transition-colors min-h-[100px]"
                 placeholder="Briefly describe this category..."
                 value={formData.description}
                 onChange={(e) => setFormData({ ...formData, description: e.target.value })}
@@ -256,7 +254,7 @@ export default function AdminCategoryManagement() {
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="mt-4 w-full py-4 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 font-bold shadow-lg shadow-purple-500/20"
+              className="mt-4 w-full py-4 rounded-xl bg-[#EA580C] font-bold shadow-lg shadow-orange-500/20"
               type="submit"
             >
               {editingCategory ? "Update Category" : "Create Category"}

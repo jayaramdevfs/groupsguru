@@ -16,10 +16,8 @@ import PaywallModal from "@/components/ui/PaywallModal";
 import PriceBadge from "@/components/ui/PriceBadge";
 
 const spring = {
-  type: "spring" as const,
-  stiffness: 420,
-  damping: 24,
-  mass: 0.8,
+  
+  duration: 0.25, ease: "easeOut" as const,
 };
 
 export default function StudentTopics() {
@@ -67,7 +65,7 @@ export default function StudentTopics() {
 
   return (
     <ProtectedLayout requiredRole="STUDENT">
-      <div className="min-h-screen py-24 px-6 md:px-12 w-full max-w-7xl mx-auto text-white">
+      <div className="min-h-screen py-24 px-6 md:px-12 w-full max-w-7xl mx-auto text-[#FAFAF9]">
         {/* Header */}
         <motion.div
           className="mb-16 text-center"
@@ -95,12 +93,12 @@ export default function StudentTopics() {
           </Link>
 
           <div className="flex items-center justify-center gap-4 mb-4">
-            <h1 className="text-[40px] md:text-[56px] font-[800] leading-tight bg-gradient-to-r from-white via-white to-emerald-400 bg-clip-text text-transparent">
+            <h1 className="text-[40px] md:text-[56px] font-[800] leading-tight text-[#F97316]">
               {displayName}
             </h1>
             <LanguageToggle />
           </div>
-          <p className="text-[18px] text-white/70 font-[600] max-w-2xl mx-auto">
+          <p className="text-[18px] text-[#FAFAF9]/70 font-[600] max-w-2xl mx-auto">
             Explore atomic topics to master this section.
           </p>
         </motion.div>
@@ -112,7 +110,7 @@ export default function StudentTopics() {
               <div className="w-12 h-12 border-4 border-emerald-500 border-t-transparent rounded-full animate-spin"></div>
             </div>
           ) : topics.length === 0 ? (
-            <div className="text-center py-20 text-white/50 bg-white/5 rounded-[32px] border border-white/10 border-dashed">
+            <div className="text-center py-20 text-[#FAFAF9]/50 bg-white/5 rounded-xl border border-[#57534E]/40 border-dashed">
               <div className="text-4xl mb-4">🧠</div>
               <p className="text-xl font-semibold mb-2">No topics found.</p>
               <p>Topics for this section are still under construction.</p>
@@ -148,33 +146,33 @@ export default function StudentTopics() {
                         setLoadingTopic(null);
                       }
                     }}
-                    className="w-full flex flex-col md:flex-row items-center gap-6 p-8 rounded-[32px] bg-white/[0.03] border border-white/5 hover:border-emerald-500/30 transition-all group relative overflow-hidden text-left"
+                    className="w-full flex flex-col md:flex-row items-center gap-6 p-8 rounded-xl bg-white/[0.03] border border-white/5 hover:border-emerald-500/30 transition-all group relative overflow-hidden text-left"
                   >
                     {/* Background Glow on Hover */}
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 blur-[60px] group-hover:bg-emerald-500/10 transition-all" />
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5  group-hover:bg-emerald-500/10 transition-all" />
 
-                    <div className="w-16 h-16 shrink-0 rounded-2xl bg-gradient-to-br from-emerald-500/20 to-teal-500/20 border border-white/10 flex items-center justify-center font-black text-xl text-emerald-300">
+                    <div className="w-14 h-14 shrink-0 rounded-2xl bg-[#44403C] border border-[#57534E]/40 flex items-center justify-center font-bold text-xl text-[#F97316]">
                       {top.topicCode || top.name.charAt(0)}
                     </div>
                     
                     <div className="flex-1 w-full relative z-10">
                       <div className="flex flex-wrap items-center gap-3 mb-2">
-                        <h3 className="text-2xl font-black text-white group-hover:text-emerald-300 transition-colors">
+                        <h3 className="text-2xl font-bold text-[#FAFAF9] group-hover:text-emerald-300 transition-colors">
                           <Multilang en={top.name} te={top.nameTe} />
                         </h3>
                         <PriceBadge price={top.priceInr ?? null} isFree={top.accessType === "FREE"} />
                       </div>
                       {(top.description || top.descriptionTe) && (
-                        <p className="text-sm font-medium text-white/40 line-clamp-2 max-w-2xl leading-relaxed">
+                        <p className="text-sm font-medium text-[#FAFAF9]/40 line-clamp-2 max-w-2xl leading-relaxed">
                           <Multilang en={top.description || ""} te={top.descriptionTe || ""} />
                         </p>
                       )}
                     </div>
 
                     <div className="mt-4 md:mt-0 flex items-center">
-                      <div className="flex items-center text-purple-400 font-bold group/btn">
+                      <div className="flex items-center text-[#F97316] font-bold group/btn">
                         {loadingTopic?.id === top.id ? (
-                           <div className="w-5 h-5 border-2 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
+                           <div className="w-5 h-5 border-2 border-orange-500 border-t-transparent rounded-full animate-spin"></div>
                         ) : (
                           <>
                             <span>Browse Micro-Topics</span>

@@ -6,12 +6,13 @@ import {
   TouchableOpacity,
   StyleSheet,
   Alert,
+  KeyboardAvoidingView,
+  Platform,
 } from "react-native";
 import { useAuth } from "../context/AuthContext";
-
 import { ProfessionalLogo } from "../components/ProfessionalLogo";
-
-import { BackgroundGlow } from "../components/BackgroundGlow";
+import { LanguageToggle } from "../components/LanguageToggle";
+import { colors, radii, spacing } from "../theme/tokens";
 
 const LoginScreen = () => {
   const { login } = useAuth();
@@ -37,39 +38,63 @@ const LoginScreen = () => {
 
   return (
     <View style={styles.container}>
-      <BackgroundGlow />
-      <View style={styles.logoContainer}>
-        <ProfessionalLogo size={60} />
+      {/* Header */}
+      <View style={styles.header}>
+        <ProfessionalLogo size={28} />
+        <LanguageToggle />
       </View>
 
-
-      <TextInput
-        style={styles.input}
-        placeholder="Email"
-        placeholderTextColor="#888"
-        value={email}
-        onChangeText={setEmail}
-        autoCapitalize="none"
-      />
-
-      <TextInput
-        style={styles.input}
-        placeholder="Password"
-        placeholderTextColor="#888"
-        value={password}
-        onChangeText={setPassword}
-        secureTextEntry
-      />
-
-      <TouchableOpacity
-        style={styles.button}
-        onPress={handleLogin}
-        disabled={loading}
+      <KeyboardAvoidingView
+        behavior={Platform.OS === "ios" ? "padding" : "height"}
+        style={styles.content}
       >
-        <Text style={styles.buttonText}>
-          {loading ? "Logging in..." : "Login"}
-        </Text>
-      </TouchableOpacity>
+        {/* Title */}
+        <View style={styles.titleSection}>
+          <Text style={styles.title}>Welcome back</Text>
+          <Text style={styles.subtitle}>
+            Sign in to your GroupsGuru account
+          </Text>
+        </View>
+
+        {/* Form Card */}
+        <View style={styles.card}>
+          <Text style={styles.label}>Email</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="you@example.com"
+            placeholderTextColor={colors.fgMuted}
+            value={email}
+            onChangeText={setEmail}
+            autoCapitalize="none"
+            keyboardType="email-address"
+          />
+
+          <Text style={[styles.label, { marginTop: spacing.lg }]}>
+            Password
+          </Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Enter password"
+            placeholderTextColor={colors.fgMuted}
+            value={password}
+            onChangeText={setPassword}
+            secureTextEntry
+          />
+
+          <TouchableOpacity
+            style={[styles.button, loading && styles.buttonDisabled]}
+            onPress={handleLogin}
+            disabled={loading}
+            activeOpacity={0.8}
+          >
+            <Text style={styles.buttonText}>
+              {loading ? "Signing in..." : "Sign in"}
+            </Text>
+          </TouchableOpacity>
+        </View>
+
+        <Text style={styles.footer}>GroupsGuru Exam Intelligence Engine</Text>
+      </KeyboardAvoidingView>
     </View>
   );
 };
@@ -79,44 +104,81 @@ export default LoginScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#0f051d",
-    justifyContent: "center",
-    alignItems: "center",
-    padding: 24,
+    backgroundColor: colors.base,
   },
-  logoContainer: {
-    marginBottom: 60,
-    alignItems: 'center',
-    justifyContent: 'center',
+  header: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingHorizontal: spacing.xl,
+    paddingTop: spacing["5xl"],
+    paddingBottom: spacing.lg,
+  },
+  content: {
+    flex: 1,
+    justifyContent: "center",
+    paddingHorizontal: spacing.xl,
+  },
+  titleSection: {
+    alignItems: "center",
+    marginBottom: spacing["3xl"],
+  },
+  title: {
+    fontSize: 28,
+    fontWeight: "400",
+    color: colors.fgPrimary,
+    marginBottom: spacing.sm,
+  },
+  subtitle: {
+    fontSize: 13,
+    fontWeight: "500",
+    color: colors.fgMuted,
+  },
+  card: {
+    backgroundColor: colors.surface,
+    borderRadius: radii.lg,
+    borderWidth: 1,
+    borderColor: colors.border,
+    padding: spacing["2xl"],
+  },
+  label: {
+    fontSize: 13,
+    fontWeight: "500",
+    color: colors.fgSecondary,
+    marginBottom: spacing.sm,
   },
   input: {
     width: "100%",
-    backgroundColor: "rgba(255,255,255,0.03)",
-    color: "#FFFFFF",
-    padding: 16,
-    borderRadius: 18,
-    marginBottom: 20,
+    backgroundColor: colors.inset,
+    color: colors.fgPrimary,
+    fontSize: 15,
+    fontWeight: "500",
+    padding: spacing.lg,
+    borderRadius: radii.md,
     borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.08)",
+    borderColor: colors.border,
   },
   button: {
-    backgroundColor: "#9333EA",
+    backgroundColor: colors.accent,
     width: "100%",
-    paddingVertical: 16,
-    borderRadius: 18,
-    marginTop: 10,
-    shadowColor: '#9333EA',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
-    elevation: 2,
+    paddingVertical: 14,
+    borderRadius: radii.md,
+    marginTop: spacing["2xl"],
+    alignItems: "center",
+  },
+  buttonDisabled: {
+    opacity: 0.7,
   },
   buttonText: {
     color: "#FFFFFF",
-    fontWeight: "900",
-    fontSize: 16,
+    fontWeight: "600",
+    fontSize: 15,
+  },
+  footer: {
     textAlign: "center",
-    textTransform: "uppercase",
-    letterSpacing: 1,
+    color: colors.fgMuted,
+    fontSize: 11,
+    fontWeight: "500",
+    marginTop: spacing["2xl"],
   },
 });

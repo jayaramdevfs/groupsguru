@@ -83,97 +83,97 @@ export default function QuestionModal({ isOpen, onClose, onSave, initialData, mo
 
         <div className="grid grid-cols-3 gap-4">
           <div className="flex flex-col gap-1">
-            <span className="text-xs text-white/50 ml-1">Type</span>
+            <span className="text-xs text-[#FAFAF9]/50 ml-1">Type</span>
             <CustomSelect options={TYPES.map(t => ({label: t, value: t}))} value={formData.questionType || ""} onChange={(v) => handleChange("questionType", v as string)} />
           </div>
           <div className="flex flex-col gap-1">
-            <span className="text-xs text-white/50 ml-1">Difficulty</span>
+            <span className="text-xs text-[#FAFAF9]/50 ml-1">Difficulty</span>
             <CustomSelect options={DIFFICULTIES.map(t => ({label: t, value: t}))} value={formData.difficulty || ""} onChange={(v) => handleChange("difficulty", v as string)} />
           </div>
           <div className="flex flex-col gap-1">
-            <span className="text-xs text-white/50 ml-1">Cognitive Level</span>
+            <span className="text-xs text-[#FAFAF9]/50 ml-1">Cognitive Level</span>
             <CustomSelect options={COGNITIVE_LEVELS.map(t => ({label: t, value: t}))} value={formData.cognitiveLevel || ""} onChange={(v) => handleChange("cognitiveLevel", v as string)} />
           </div>
         </div>
 
         <div className="flex flex-col gap-2">
-          <label className="text-sm font-semibold text-white/60 ml-1">Question (English)</label>
-          <textarea className="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-white focus:outline-none min-h-[80px]" required value={formData.questionTextEn || ""} onChange={(e) => handleChange("questionTextEn", e.target.value)} />
+          <label className="text-sm font-semibold text-[#FAFAF9]/60 ml-1">Question (English)</label>
+          <textarea className="w-full bg-white/5 border border-[#57534E]/40 rounded-xl p-3 text-[#FAFAF9] focus:outline-none min-h-[80px]" required value={formData.questionTextEn || ""} onChange={(e) => handleChange("questionTextEn", e.target.value)} />
         </div>
         <div className="flex flex-col gap-2">
-          <label className="text-sm font-semibold text-white/60 ml-1">Question (Telugu)</label>
-          <textarea className="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-white focus:outline-none min-h-[80px]" required value={formData.questionTextTe || ""} onChange={(e) => handleChange("questionTextTe", e.target.value)} />
+          <label className="text-sm font-semibold text-[#FAFAF9]/60 ml-1">Question (Telugu)</label>
+          <textarea className="w-full bg-white/5 border border-[#57534E]/40 rounded-xl p-3 text-[#FAFAF9] focus:outline-none min-h-[80px]" required value={formData.questionTextTe || ""} onChange={(e) => handleChange("questionTextTe", e.target.value)} />
         </div>
 
-        <div className="grid grid-cols-2 gap-4 border-t border-white/10 pt-4 mt-2">
+        <div className="grid grid-cols-2 gap-4 border-t border-[#57534E]/40 pt-4 mt-2">
           <div className="flex flex-col gap-2">
-             <label className="text-sm font-semibold text-white/60 ml-1">Option A (English)</label>
-             <textarea className="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-white min-h-[60px]" required value={formData.optionAEn || ""} onChange={(e) => handleChange("optionAEn", e.target.value)} />
+             <label className="text-sm font-semibold text-[#FAFAF9]/60 ml-1">Option A (English)</label>
+             <textarea className="w-full bg-white/5 border border-[#57534E]/40 rounded-xl p-3 text-[#FAFAF9] min-h-[60px]" required value={formData.optionAEn || ""} onChange={(e) => handleChange("optionAEn", e.target.value)} />
           </div>
           <div className="flex flex-col gap-2">
-             <label className="text-sm font-semibold text-white/60 ml-1">Option A (Telugu)</label>
-             <textarea className="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-white min-h-[60px]" required value={formData.optionATe || ""} onChange={(e) => handleChange("optionATe", e.target.value)} />
-          </div>
-        </div>
-
-        <div className="grid grid-cols-2 gap-4 border-t border-white/10 pt-4 mt-2">
-          <div className="flex flex-col gap-2">
-             <label className="text-sm font-semibold text-white/60 ml-1">Option B (English)</label>
-             <textarea className="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-white min-h-[60px]" required value={formData.optionBEn || ""} onChange={(e) => handleChange("optionBEn", e.target.value)} />
-          </div>
-          <div className="flex flex-col gap-2">
-             <label className="text-sm font-semibold text-white/60 ml-1">Option B (Telugu)</label>
-             <textarea className="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-white min-h-[60px]" required value={formData.optionBTe || ""} onChange={(e) => handleChange("optionBTe", e.target.value)} />
+             <label className="text-sm font-semibold text-[#FAFAF9]/60 ml-1">Option A (Telugu)</label>
+             <textarea className="w-full bg-white/5 border border-[#57534E]/40 rounded-xl p-3 text-[#FAFAF9] min-h-[60px]" required value={formData.optionATe || ""} onChange={(e) => handleChange("optionATe", e.target.value)} />
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-4 border-t border-white/10 pt-4 mt-2">
+        <div className="grid grid-cols-2 gap-4 border-t border-[#57534E]/40 pt-4 mt-2">
           <div className="flex flex-col gap-2">
-             <label className="text-sm font-semibold text-white/60 ml-1">Option C (English)</label>
-             <textarea className="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-white min-h-[60px]" required value={formData.optionCEn || ""} onChange={(e) => handleChange("optionCEn", e.target.value)} />
+             <label className="text-sm font-semibold text-[#FAFAF9]/60 ml-1">Option B (English)</label>
+             <textarea className="w-full bg-white/5 border border-[#57534E]/40 rounded-xl p-3 text-[#FAFAF9] min-h-[60px]" required value={formData.optionBEn || ""} onChange={(e) => handleChange("optionBEn", e.target.value)} />
           </div>
           <div className="flex flex-col gap-2">
-             <label className="text-sm font-semibold text-white/60 ml-1">Option C (Telugu)</label>
-             <textarea className="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-white min-h-[60px]" required value={formData.optionCTe || ""} onChange={(e) => handleChange("optionCTe", e.target.value)} />
-          </div>
-        </div>
-
-        <div className="grid grid-cols-2 gap-4 border-t border-white/10 pt-4 mt-2">
-          <div className="flex flex-col gap-2">
-             <label className="text-sm font-semibold text-white/60 ml-1">Option D (English)</label>
-             <textarea className="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-white min-h-[60px]" required value={formData.optionDEn || ""} onChange={(e) => handleChange("optionDEn", e.target.value)} />
-          </div>
-          <div className="flex flex-col gap-2">
-             <label className="text-sm font-semibold text-white/60 ml-1">Option D (Telugu)</label>
-             <textarea className="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-white min-h-[60px]" required value={formData.optionDTe || ""} onChange={(e) => handleChange("optionDTe", e.target.value)} />
+             <label className="text-sm font-semibold text-[#FAFAF9]/60 ml-1">Option B (Telugu)</label>
+             <textarea className="w-full bg-white/5 border border-[#57534E]/40 rounded-xl p-3 text-[#FAFAF9] min-h-[60px]" required value={formData.optionBTe || ""} onChange={(e) => handleChange("optionBTe", e.target.value)} />
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-4 mt-2">
+        <div className="grid grid-cols-2 gap-4 border-t border-[#57534E]/40 pt-4 mt-2">
+          <div className="flex flex-col gap-2">
+             <label className="text-sm font-semibold text-[#FAFAF9]/60 ml-1">Option C (English)</label>
+             <textarea className="w-full bg-white/5 border border-[#57534E]/40 rounded-xl p-3 text-[#FAFAF9] min-h-[60px]" required value={formData.optionCEn || ""} onChange={(e) => handleChange("optionCEn", e.target.value)} />
+          </div>
+          <div className="flex flex-col gap-2">
+             <label className="text-sm font-semibold text-[#FAFAF9]/60 ml-1">Option C (Telugu)</label>
+             <textarea className="w-full bg-white/5 border border-[#57534E]/40 rounded-xl p-3 text-[#FAFAF9] min-h-[60px]" required value={formData.optionCTe || ""} onChange={(e) => handleChange("optionCTe", e.target.value)} />
+          </div>
+        </div>
+
+        <div className="grid grid-cols-2 gap-4 border-t border-[#57534E]/40 pt-4 mt-2">
+          <div className="flex flex-col gap-2">
+             <label className="text-sm font-semibold text-[#FAFAF9]/60 ml-1">Option D (English)</label>
+             <textarea className="w-full bg-white/5 border border-[#57534E]/40 rounded-xl p-3 text-[#FAFAF9] min-h-[60px]" required value={formData.optionDEn || ""} onChange={(e) => handleChange("optionDEn", e.target.value)} />
+          </div>
+          <div className="flex flex-col gap-2">
+             <label className="text-sm font-semibold text-[#FAFAF9]/60 ml-1">Option D (Telugu)</label>
+             <textarea className="w-full bg-white/5 border border-[#57534E]/40 rounded-xl p-3 text-[#FAFAF9] min-h-[60px]" required value={formData.optionDTe || ""} onChange={(e) => handleChange("optionDTe", e.target.value)} />
+          </div>
+        </div>
+
+        <div className="border-t border-[#57534E]/40 pt-4 mt-2">
           <div className="flex flex-col gap-1 w-1/3">
-            <span className="text-xs text-white/50 ml-1">Correct Option</span>
+            <span className="text-xs text-[#FAFAF9]/50 ml-1">Correct Option</span>
             <CustomSelect options={OPTIONS.map(t => ({label: t, value: t}))} value={formData.correctOption || "A"} onChange={(v) => handleChange("correctOption", v as string)} />
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-4 border-t border-white/10 pt-4 mt-2">
+        <div className="grid grid-cols-2 gap-4 border-t border-[#57534E]/40 pt-4 mt-2">
           <div className="flex flex-col gap-2">
-             <label className="text-sm font-semibold text-white/60 ml-1">Explanation (English)</label>
-             <textarea className="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-white min-h-[60px]" value={formData.explanationEn || ""} onChange={(e) => handleChange("explanationEn", e.target.value)} />
+             <label className="text-sm font-semibold text-[#FAFAF9]/60 ml-1">Explanation (English)</label>
+             <textarea className="w-full bg-white/5 border border-[#57534E]/40 rounded-xl p-3 text-[#FAFAF9] min-h-[60px]" value={formData.explanationEn || ""} onChange={(e) => handleChange("explanationEn", e.target.value)} />
           </div>
           <div className="flex flex-col gap-2">
-             <label className="text-sm font-semibold text-white/60 ml-1">Explanation (Telugu)</label>
-             <textarea className="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-white min-h-[60px]" value={formData.explanationTe || ""} onChange={(e) => handleChange("explanationTe", e.target.value)} />
+             <label className="text-sm font-semibold text-[#FAFAF9]/60 ml-1">Explanation (Telugu)</label>
+             <textarea className="w-full bg-white/5 border border-[#57534E]/40 rounded-xl p-3 text-[#FAFAF9] min-h-[60px]" value={formData.explanationTe || ""} onChange={(e) => handleChange("explanationTe", e.target.value)} />
           </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-4 border-t border-white/10 pt-4 mt-2">
+        <div className="grid grid-cols-3 gap-4 border-t border-[#57534E]/40 pt-4 mt-2">
           <AnimatedInput label="MicroTopic ID" type="text" name="microTopicId" value={formData.microTopicId || ""} onChange={(v) => handleChange("microTopicId", v)} required />
           <AnimatedInput label="Sprint ID" type="text" name="sprintId" value={formData.sprintId || ""} onChange={(v) => handleChange("sprintId", v)} required />
           <AnimatedInput label="Penalty" type="number" name="penalty" value={(formData.penalty || 0).toString()} onChange={(v) => handleChange("penalty", parseFloat(v))} />
         </div>
 
-        <motion.button disabled={isSaving} type="submit" whileHover={{ scale: 1.02 }} className="mt-6 w-full py-4 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 font-bold">
+        <motion.button disabled={isSaving} type="submit" whileHover={{ scale: 1.02 }} className="mt-6 w-full py-4 rounded-xl bg-[#EA580C] font-bold">
           {isSaving ? "Saving..." : "Save Question"}
         </motion.button>
       </form>

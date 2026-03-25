@@ -28,10 +28,10 @@ export default function ExamTimer({ durationMinutes, onTimeUp }: ExamTimerProps)
 
   return (
     <div className={`px-6 py-3 rounded-2xl border flex items-center gap-3 transition-colors ${
-      isCritical ? "bg-red-500/10 border-red-500/20 text-red-500" : "bg-purple-500/10 border-purple-500/20 text-purple-400"
+      isCritical ? "bg-red-500/10 border-red-500/20 text-red-500" : "bg-orange-500/10 border-[#57534E]/40 text-[#F97316]"
     }`}>
-      <span className="text-[10px] font-black uppercase tracking-widest italic">Time Left</span>
-      <span className="font-mono text-xl font-black tabular-nums">
+      <span className="text-[10px] font-bold uppercase tracking-widest ">Time Left</span>
+      <span className="font-mono text-xl font-bold tabular-nums">
         {minutes.toString().padStart(2, '0')}:{seconds.toString().padStart(2, '0')}
       </span>
       {isCritical && (

@@ -163,14 +163,14 @@ export default function AdminPricingPage() {
       <div className="flex flex-col gap-2">
         {nodeList.map((node) => (
           <div key={`${node.type}-${node.id}`} className="flex flex-col gap-2 border-l-2 border-white/5 pl-4 ml-2">
-            <div className="flex items-center gap-4 bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-colors">
+            <div className="flex items-center gap-4 bg-white/5 border border-[#57534E]/40 rounded-xl p-4 hover:bg-white/10 transition-colors">
               
-              <button onClick={() => toggleExpand(node.type, node.id)} className="w-8 h-8 flex items-center justify-center bg-white/10 rounded-lg hover:bg-purple-500/50">
+              <button onClick={() => toggleExpand(node.type, node.id)} className="w-8 h-8 flex items-center justify-center bg-white/10 rounded-lg hover:bg-orange-500/50">
                 {node.loadingChildren ? "..." : (node.isExpanded ? "v" : ">")}
               </button>
               
               <div className="flex flex-col flex-1">
-                <span className="text-xs text-white/40 uppercase font-black tracking-widest">{node.type}</span>
+                <span className="text-xs text-[#FAFAF9]/40 uppercase font-bold tracking-widest">{node.type}</span>
                 <span className="font-bold text-lg"><Multilang en={node.name} te={node.nameTe} /></span>
               </div>
               
@@ -179,7 +179,7 @@ export default function AdminPricingPage() {
                 <input 
                   type="number" 
                   step="0.01"
-                  className="bg-black/40 border border-white/10 rounded-lg px-3 py-2 w-28 text-right outline-none focus:border-purple-500"
+                  className="bg-black/40 border border-[#57534E]/40 rounded-lg px-3 py-2 w-28 text-right outline-none focus:border-orange-500"
                   placeholder="FREE"
                   value={node.priceInr || ""}
                   onChange={(e) => {
@@ -187,7 +187,7 @@ export default function AdminPricingPage() {
                     handlePriceChange(node.type, node.id, val);
                   }}
                 />
-                <span className={`px-2 py-1 rounded text-xs font-black ${node.accessType === "PAID" ? "bg-amber-500/20 text-amber-500" : "bg-emerald-500/20 text-emerald-500"}`}>{node.accessType || "FREE"}</span>
+                <span className={`px-2 py-1 rounded text-xs font-bold ${node.accessType === "PAID" ? "bg-amber-500/20 text-amber-500" : "bg-emerald-500/20 text-emerald-500"}`}>{node.accessType || "FREE"}</span>
               </div>
             </div>
 
@@ -198,7 +198,7 @@ export default function AdminPricingPage() {
             )}
             
             {node.isExpanded && node.children && node.children.length === 0 && (
-              <div className="pl-4 text-white/30 text-smitalic">No contents</div>
+              <div className="pl-4 text-[#FAFAF9]/30 text-smitalic">No contents</div>
             )}
 
           </div>
@@ -210,11 +210,11 @@ export default function AdminPricingPage() {
   return (
     <ProtectedLayout requiredRole="ADMIN">
       <div className="min-h-screen py-10 px-6 max-w-5xl mx-auto">
-        <h1 className="text-4xl font-black mb-2">Pricing <span className="text-amber-500">&</span> Access Control</h1>
-        <p className="text-white/60 mb-8">Set pricing incrementally at any level in the hierarchy. A purchase of an ancestor unlocks all its descendants automatically.</p>
+        <h1 className="text-4xl font-bold mb-2">Pricing <span className="text-amber-500">&</span> Access Control</h1>
+        <p className="text-[#FAFAF9]/60 mb-8">Set pricing incrementally at any level in the hierarchy. A purchase of an ancestor unlocks all its descendants automatically.</p>
         
         {loading ? (
-          <div className="text-white/50 animate-pulse">Loading tree...</div>
+          <div className="text-[#FAFAF9]/50 animate-pulse">Loading tree...</div>
         ) : (
           renderTree(nodes)
         )}

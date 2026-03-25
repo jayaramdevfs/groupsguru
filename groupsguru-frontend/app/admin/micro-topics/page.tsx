@@ -12,10 +12,8 @@ import CustomSelect from "@/components/ui/CustomSelect";
 import { Multilang } from "@/components/ui/Multilang";
 
 const spring = {
-  type: "spring" as const,
-  stiffness: 420,
-  damping: 24,
-  mass: 0.8,
+  
+  duration: 0.25, ease: "easeOut" as const,
 };
 
 // Distinct Subjects for filtering
@@ -145,7 +143,7 @@ export default function AdminMicroTopicManagement() {
 
   return (
     <ProtectedLayout requiredRole="ADMIN">
-      <div className="min-h-screen py-24 px-6 md:px-12 w-full max-w-7xl mx-auto text-white">
+      <div className="min-h-screen py-24 px-6 md:px-12 w-full max-w-7xl mx-auto text-[#FAFAF9]">
 
         {/* Header */}
         <motion.div
@@ -155,18 +153,18 @@ export default function AdminMicroTopicManagement() {
           transition={spring}
         >
           <div>
-            <div className="px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-[10px] font-black uppercase tracking-[0.3em] mb-4 inline-block">
+            <div className="px-3 py-1 rounded-full bg-orange-500/10 border border-[#57534E]/40 text-[#F97316] text-[10px] font-bold uppercase tracking-[0.3em] mb-4 inline-block">
               Level 4 Registry (Atomic)
             </div>
             {totalElements > 0 && (
-              <div className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-black uppercase tracking-[0.3em] mb-4 inline-block ml-4">
+              <div className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-bold uppercase tracking-[0.3em] mb-4 inline-block ml-4">
                 Registry loaded: {totalElements} micro-topics
               </div>
             )}
             <h1 className="text-[36px] md:text-[48px] font-[800] leading-tight mb-2">
               Micro-Topics
             </h1>
-            <p className="text-[18px] text-white/70 font-[600]">
+            <p className="text-[18px] text-[#FAFAF9]/70 font-[600]">
               Manage the atomic intelligence targets for the Groups Guru prediction engine.
             </p>
           </div>
@@ -176,7 +174,7 @@ export default function AdminMicroTopicManagement() {
             whileTap={{ scale: 0.95 }}
             transition={spring}
             onClick={() => handleOpenModal()}
-            className="px-8 py-4 h-fit rounded-[16px] bg-gradient-to-r from-purple-600 to-indigo-600 font-[700] text-[16px] whitespace-nowrap shadow-[0_15px_30px_rgba(147,51,234,0.3)] transition-all flex items-center gap-2"
+            className="px-8 py-4 h-fit rounded-[16px] bg-[#EA580C] font-[700] text-[16px] whitespace-nowrap shadow-md transition-all flex items-center gap-2"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <line x1="12" y1="5" x2="12" y2="19"></line>
@@ -187,11 +185,11 @@ export default function AdminMicroTopicManagement() {
         </motion.div>
 
         {/* Filters */}
-        <div className="mb-8 space-y-6 p-8 rounded-[32px] bg-white/5 border border-white/10 backdrop-blur-xl">
+        <div className="mb-8 space-y-6 p-8 rounded-xl bg-white/5 border border-[#57534E]/40 ">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             
             <div className="flex flex-col gap-3">
-              <span className="text-white/40 font-bold uppercase text-[10px] tracking-widest ml-1">Subject</span>
+              <span className="text-[#FAFAF9]/40 font-bold uppercase text-[10px] tracking-widest ml-1">Subject</span>
               <CustomSelect
                 options={[{value: "all", label: "All Subjects"}, ...SUBJECTS.map(s => ({value: s, label: s}))]}
                 value={selectedSubject}
@@ -200,7 +198,7 @@ export default function AdminMicroTopicManagement() {
             </div>
 
             <div className="flex flex-col gap-3">
-              <span className="text-white/40 font-bold uppercase text-[10px] tracking-widest ml-1">Paper</span>
+              <span className="text-[#FAFAF9]/40 font-bold uppercase text-[10px] tracking-widest ml-1">Paper</span>
               <CustomSelect
                 options={[{value: "all", label: "All Papers"}, ...PAPERS.map(p => ({value: p, label: p}))]}
                 value={selectedPaper}
@@ -209,7 +207,7 @@ export default function AdminMicroTopicManagement() {
             </div>
 
             <div className="flex flex-col gap-3">
-              <span className="text-white/40 font-bold uppercase text-[10px] tracking-widest ml-1">Group Applicability</span>
+              <span className="text-[#FAFAF9]/40 font-bold uppercase text-[10px] tracking-widest ml-1">Group Applicability</span>
               <CustomSelect
                 options={[{value: "all", label: "All Groups"}, ...GROUPS.map(g => ({value: g, label: g}))]}
                 value={selectedGroup}
@@ -218,13 +216,13 @@ export default function AdminMicroTopicManagement() {
             </div>
 
              <div className="flex flex-col gap-3">
-              <span className="text-white/40 font-bold uppercase text-[10px] tracking-widest ml-1">Search Keywords</span>
+              <span className="text-[#FAFAF9]/40 font-bold uppercase text-[10px] tracking-widest ml-1">Search Keywords</span>
               <input
                 type="text"
                 placeholder="Search..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-black/40 border border-white/10 rounded-2xl p-4 text-white focus:outline-none focus:border-purple-500/50"
+                className="w-full bg-black/40 border border-[#57534E]/40 rounded-2xl p-4 text-[#FAFAF9] focus:outline-none focus:border-orange-500/50"
               />
             </div>
 
@@ -235,10 +233,10 @@ export default function AdminMicroTopicManagement() {
         <div className="grid grid-cols-1 gap-4">
           {isLoading ? (
             <div className="flex items-center justify-center py-20">
-               <div className="w-12 h-12 border-4 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
+               <div className="w-12 h-12 border-4 border-orange-500 border-t-transparent rounded-full animate-spin"></div>
             </div>
           ) : displayedMicroTopics.length === 0 ? (
-             <div className="text-center py-20 text-white/50 bg-white/5 rounded-[32px] border border-white/10 border-dashed">
+             <div className="text-center py-20 text-[#FAFAF9]/50 bg-white/5 rounded-xl border border-[#57534E]/40 border-dashed">
               <div className="text-4xl mb-4">⚛️</div>
               <p className="font-semibold">No Micro-Topics found.</p>
             </div>
@@ -252,19 +250,19 @@ export default function AdminMicroTopicManagement() {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ ...spring, delay: Math.min(index * 0.05, 0.5) }}
-                  className="w-full p-6 bg-white/[0.02] border border-white/5 rounded-3xl group hover:bg-white/[0.04] hover:border-purple-500/30 transition-all flex flex-col md:flex-row gap-6 relative overflow-hidden"
+                  className="w-full p-6 bg-white/[0.02] border border-white/5 rounded-3xl group hover:bg-white/[0.04] hover:border-[#57534E]/40 transition-all flex flex-col md:flex-row gap-6 relative overflow-hidden"
                 >
-                  <div className="absolute top-0 left-0 w-2 h-full bg-purple-500/50 group-hover:bg-purple-400 transition-colors" />
+                  <div className="absolute top-0 left-0 w-2 h-full bg-orange-500/50 group-hover:bg-[#EA580C] transition-colors" />
 
                   <div className="flex-1 ml-4">
                      <div className="flex flex-wrap items-center gap-2 mb-3">
-                        <span className="text-purple-400 font-mono text-xs font-bold px-2 py-1 bg-purple-400/10 rounded border border-purple-400/20">{mt.microTopicId}</span>
-                        <span className="text-purple-400 text-xs font-bold px-2 py-1 bg-purple-400/10 rounded">{mt.subject}</span>
-                        <span className="text-blue-400 text-xs font-bold px-2 py-1 bg-blue-400/10 rounded">{mt.paper}</span>
+                        <span className="text-[#F97316] font-mono text-xs font-bold px-2 py-1 bg-[#EA580C] rounded border border-[#57534E]/40">{mt.microTopicId}</span>
+                        <span className="text-[#F97316] text-xs font-bold px-2 py-1 bg-[#EA580C] rounded">{mt.subject}</span>
+                        <span className=" text-xs font-bold px-2 py-1  rounded">{mt.paper}</span>
                         <span className="text-orange-400 text-xs font-bold px-2 py-1 bg-orange-400/10 rounded">{mt.groupApplicability}</span>
                      </div>
-                     <h3 className="text-lg font-bold text-white mb-2">{mt.topicName || "No Topic Name"}</h3>
-                     <p className="text-white/60 text-sm leading-relaxed mb-3">{mt.microTopicText}</p>
+                     <h3 className="text-lg font-bold text-[#FAFAF9] mb-2">{mt.topicName || "No Topic Name"}</h3>
+                     <p className="text-[#FAFAF9]/60 text-sm leading-relaxed mb-3">{mt.microTopicText}</p>
                      
                      {mt.topicId && (
                        <p className="text-xs text-emerald-400 font-medium border border-emerald-400/20 inline-block px-2 py-1 rounded bg-emerald-400/5">
@@ -275,7 +273,7 @@ export default function AdminMicroTopicManagement() {
 
                   {/* Actions */}
                   <div className="flex flex-row md:flex-col justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity self-start">
-                    <button onClick={() => handleOpenModal(mt)} className="p-3 bg-white/5 rounded-xl hover:bg-purple-500/20 transition-colors">✏️</button>
+                    <button onClick={() => handleOpenModal(mt)} className="p-3 bg-white/5 rounded-xl hover:bg-orange-500/20 transition-colors">✏️</button>
                     <button onClick={() => handleDelete(mt.microTopicId)} className="p-3 bg-white/5 rounded-xl hover:bg-red-500/20 transition-colors">🗑️</button>
                   </div>
                 </motion.div>
@@ -301,7 +299,7 @@ export default function AdminMicroTopicManagement() {
                    required
                  />
                  <div className="flex flex-col gap-3">
-                   <label className="text-xs font-black text-white/40 uppercase">Subject</label>
+                   <label className="text-xs font-bold text-[#FAFAF9]/40 uppercase">Subject</label>
                    <CustomSelect
                      placeholder="--Select Subject--"
                      options={SUBJECTS.map(s => ({value: s, label: s}))}
@@ -329,9 +327,9 @@ export default function AdminMicroTopicManagement() {
               </div>
 
               <div className="flex flex-col gap-3">
-                 <label className="text-xs font-black text-white/40 uppercase">MicroTopic Text (Atomic details)</label>
+                 <label className="text-xs font-bold text-[#FAFAF9]/40 uppercase">MicroTopic Text (Atomic details)</label>
                  <textarea
-                   className="w-full bg-black/40 border border-white/10 rounded-2xl p-4 text-white focus:outline-none focus:border-purple-500/50 min-h-[100px]"
+                   className="w-full bg-black/40 border border-[#57534E]/40 rounded-2xl p-4 text-[#FAFAF9] focus:outline-none focus:border-orange-500/50 min-h-[100px]"
                    value={formData.microTopicText}
                    onChange={e => setFormData({...formData, microTopicText: e.target.value})}
                  />
@@ -339,7 +337,7 @@ export default function AdminMicroTopicManagement() {
 
                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                  <div className="flex flex-col gap-3">
-                   <label className="text-xs font-black text-white/40 uppercase">Group Applicability</label>
+                   <label className="text-xs font-bold text-[#FAFAF9]/40 uppercase">Group Applicability</label>
                    <CustomSelect
                      options={GROUPS.map(g => ({value: g, label: g}))}
                      value={formData.groupApplicability || "ALL_GROUPS"}
@@ -348,7 +346,7 @@ export default function AdminMicroTopicManagement() {
                  </div>
                  
                  <div className="flex flex-col gap-3">
-                   <label className="text-xs font-black text-white/40 uppercase">Link L3 Topic</label>
+                   <label className="text-xs font-bold text-[#FAFAF9]/40 uppercase">Link L3 Topic</label>
                    <CustomSelect
                      placeholder="--No Linked Topic L3--"
                      options={topics.map(t => ({value: t.id, label: `${t.name} (Code: ${t.topicCode})`}))}
@@ -361,7 +359,7 @@ export default function AdminMicroTopicManagement() {
                <motion.button
                  type="submit"
                  whileHover={{ y: -5 }}
-                 className="mt-6 w-full py-5 rounded-2xl bg-gradient-to-r from-purple-600 to-indigo-600 font-bold text-lg shadow-xl"
+                 className="mt-6 w-full py-5 rounded-2xl bg-[#EA580C] font-bold text-lg shadow-xl"
                >
                  {editingMt ? "Save Changes" : "Create MT"}
                </motion.button>

@@ -4,10 +4,8 @@ import RegisterForm from "../../components/auth/RegisterForm";
 import { motion } from "framer-motion";
 
 const spring = {
-  type: "spring" as const,
-  stiffness: 420,
-  damping: 24,
-  mass: 0.8,
+  
+  duration: 0.25, ease: "easeOut" as const,
 };
 
 export default function RegisterPage() {
@@ -18,16 +16,16 @@ export default function RegisterPage() {
         animate={{ opacity: 1, scale: 1 }}
         transition={spring}
         className="relative z-10 w-full max-w-xl min-h-[400px] px-12 py-10 rounded-3xl
-                   backdrop-blur-2xl
-                   border border-purple-500/30
-                   bg-purple-900/30
-                   shadow-[0_20px_70px_rgba(147,51,234,0.45)]"
+                   
+                   border border-[#57534E]/40
+                   bg-[#292524]
+                   shadow-md"
       >
         <div className="text-center mb-8 space-y-2">
           <h1 className="text-[48px] font-extrabold leading-tight">
             Create Account
           </h1>
-          <p className="text-purple-300/70 text-base font-semibold">
+          <p className="text-[#F97316]/70 text-base font-semibold">
             Start Your Government Exams Journey
           </p>
         </div>

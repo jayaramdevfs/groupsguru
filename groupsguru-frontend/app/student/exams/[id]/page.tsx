@@ -9,10 +9,8 @@ import { Multilang } from "@/components/ui/Multilang";
 import { useRouter } from "next/navigation";
 
 const spring = {
-  type: "spring" as const,
-  stiffness: 420,
-  damping: 24,
-  mass: 0.8,
+  
+  duration: 0.25, ease: "easeOut" as const,
 };
 
 export default function ExamDetail({ params }: { params: Promise<{ id: string }> }) {
@@ -41,7 +39,7 @@ export default function ExamDetail({ params }: { params: Promise<{ id: string }>
     return (
       <ProtectedLayout requiredRole="STUDENT">
         <div className="min-h-screen flex items-center justify-center">
-          <div className="w-12 h-12 border-4 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
+          <div className="w-12 h-12 border-4 border-orange-500 border-t-transparent rounded-full animate-spin"></div>
         </div>
       </ProtectedLayout>
     );
@@ -50,9 +48,9 @@ export default function ExamDetail({ params }: { params: Promise<{ id: string }>
   if (!exam) {
     return (
       <ProtectedLayout requiredRole="STUDENT">
-        <div className="min-h-screen py-32 text-center text-white/50">
-          <p className="text-xl font-bold italic mb-4">Exam not found</p>
-          <button onClick={() => router.back()} className="text-purple-400 font-bold hover:underline">
+        <div className="min-h-screen py-32 text-center text-[#FAFAF9]/50">
+          <p className="text-xl font-bold  mb-4">Exam not found</p>
+          <button onClick={() => router.back()} className="text-[#F97316] font-bold hover:underline">
             Go back
           </button>
         </div>
@@ -62,7 +60,7 @@ export default function ExamDetail({ params }: { params: Promise<{ id: string }>
 
   return (
     <ProtectedLayout requiredRole="STUDENT">
-      <div className="min-h-screen py-10 px-6 md:px-12 w-full max-w-[95%] mx-auto text-white">
+      <div className="min-h-screen py-10 px-6 md:px-12 w-full max-w-[95%] mx-auto text-[#FAFAF9]">
         
         {/* Exam Header */}
         <motion.div 
@@ -71,15 +69,15 @@ export default function ExamDetail({ params }: { params: Promise<{ id: string }>
           animate={{ opacity: 1, y: 0 }}
           transition={spring}
         >
-          <div className="inline-flex items-center px-4 py-1 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold border border-purple-500/30 uppercase tracking-widest mb-6 translate-y-[-10px] scale-[0.9] origin-left">
+          <div className="inline-flex items-center px-4 py-1 rounded-full bg-orange-500/20 text-[#F97316] text-sm font-bold border border-[#57534E]/40 uppercase tracking-widest mb-6 translate-y-[-10px] scale-[0.9] origin-left">
             {exam.examType.replace('_', ' ')}
           </div>
           
-          <h1 className="text-[32px] md:text-[48px] font-[800] leading-tight mb-4 bg-gradient-to-r from-white via-white to-purple-400 bg-clip-text text-transparent italic">
+          <h1 className="text-[32px] md:text-[48px] font-[800] leading-tight mb-4 text-[#F97316] ">
             <Multilang en={exam.name} te={exam.nameTe} />
           </h1>
           
-          <p className="text-[18px] text-white/70 font-[600] leading-relaxed max-w-2xl italic">
+          <p className="text-[18px] text-[#FAFAF9]/70 font-[600] leading-relaxed max-w-2xl ">
             <Multilang en={exam.description || ""} te={exam.descriptionTe || ""} />
           </p>
         </motion.div>
@@ -94,15 +92,15 @@ export default function ExamDetail({ params }: { params: Promise<{ id: string }>
           ].map((stat, i) => (
             <motion.div
               key={i}
-              className="p-6 rounded-[24px] bg-white/5 border border-white/10 text-center"
+              className="p-6 rounded-xl bg-white/5 border border-[#57534E]/40 text-center"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ ...spring, delay: 0.2 + (i * 0.05) }}
             >
-              <p className="text-[10px] uppercase tracking-widest text-white/40 font-bold mb-2 italic">
+              <p className="text-[10px] uppercase tracking-widest text-[#FAFAF9]/40 font-bold mb-2 ">
                 <Multilang en={stat.en} te={stat.te} />
               </p>
-              <p className="text-2xl font-bold bg-gradient-to-br from-white to-white/60 bg-clip-text text-transparent italic">
+              <p className="text-2xl font-bold text-[#F97316] ">
                 {stat.value}
               </p>
             </motion.div>
@@ -111,31 +109,31 @@ export default function ExamDetail({ params }: { params: Promise<{ id: string }>
 
         {/* Rules Section */}
         <motion.div
-          className="p-6 md:p-8 rounded-[32px] bg-white/5 border border-white/10 backdrop-blur-3xl mb-8 shadow-2xl shadow-purple-500/5"
+          className="p-6 md:p-8 rounded-xl bg-white/5 border border-[#57534E]/40  mb-8 shadow-2xl shadow-orange-500/5"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ ...spring, delay: 0.4 }}
         >
-          <h3 className="text-xl font-bold mb-4 flex items-center italic">
+          <h3 className="text-xl font-bold mb-4 flex items-center ">
             <span className="w-8 h-8 rounded-lg bg-red-500/20 text-red-400 flex items-center justify-center mr-3 text-sm">!</span>
             <Multilang en="Exam Rules" te="పరీక్ష నిబంధనలు" />
           </h3>
           
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-white/70 font-[600]">
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-[#FAFAF9]/70 font-[600]">
             <li className="flex items-start">
-              <span className="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center mr-4 mt-0.5 text-xs">1</span>
+              <span className="w-6 h-6 rounded-full bg-orange-500/20 text-[#F97316] flex items-center justify-center mr-4 mt-0.5 text-xs">1</span>
               <p className="text-sm"><Multilang en="Once you start, the timer cannot be paused." te="మొదలు పెట్టిన తర్వాత టైమర్ ఆగదు." /></p>
             </li>
             <li className="flex items-start">
-              <span className="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center mr-4 mt-0.5 text-xs">2</span>
+              <span className="w-6 h-6 rounded-full bg-orange-500/20 text-[#F97316] flex items-center justify-center mr-4 mt-0.5 text-xs">2</span>
               <p className="text-sm"><Multilang en="Each correct answer gives 1.0 mark." te="ప్రతి సరైన సమాధానానికి 1.0 మార్కు లభిస్తుంది." /></p>
             </li>
             <li className="flex items-start">
-              <span className="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center mr-4 mt-0.5 text-xs">3</span>
+              <span className="w-6 h-6 rounded-full bg-orange-500/20 text-[#F97316] flex items-center justify-center mr-4 mt-0.5 text-xs">3</span>
               <p className="text-sm"><Multilang en="Negative marking applies for incorrect attempts." te="తప్పు సమాధానాలకు నెగటివ్ మార్కింగ్ ఉంటుంది." /></p>
             </li>
             <li className="flex items-start">
-              <span className="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center mr-4 mt-0.5 text-xs">4</span>
+              <span className="w-6 h-6 rounded-full bg-orange-500/20 text-[#F97316] flex items-center justify-center mr-4 mt-0.5 text-xs">4</span>
               <p className="text-sm"><Multilang en="The exam will auto-submit when the time expires." te="సమయం ముగిసినప్పుడు పరీక్ష ఆటోమేటిక్ గా సబ్మిట్ అవుతుంది." /></p>
             </li>
           </ul>
@@ -150,7 +148,7 @@ export default function ExamDetail({ params }: { params: Promise<{ id: string }>
         >
           <button 
              onClick={() => router.push(`/student/exams/${id}/attempt`)}
-            className="group relative px-12 py-5 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-bold text-xl shadow-2xl shadow-purple-500/20 hover:scale-105 active:scale-95 transition-all duration-300 italic"
+            className="group relative px-12 py-5 rounded-full bg-[#EA580C] text-[#FAFAF9] font-bold text-xl shadow-2xl shadow-orange-500/20 hover:scale-105 active:scale-95 transition-all duration-300 "
           >
             <span className="relative z-10 flex items-center">
               <Multilang en="Start Exam Now" te="పరీక్ష ప్రారంభించండి" />
@@ -159,11 +157,11 @@ export default function ExamDetail({ params }: { params: Promise<{ id: string }>
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </span>
-            <div className="absolute inset-0 rounded-full bg-white/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="absolute inset-0 rounded-full bg-white/20  opacity-0 group-hover:opacity-100 transition-opacity" />
           </button>
         </motion.div>
         
-        <p className="text-center mt-3 text-white/40 font-bold italic text-sm">
+        <p className="text-center mt-3 text-[#FAFAF9]/40 font-bold  text-sm">
           <Multilang en="Timer will start on next page" te="తదుపరి పేజీలో టైమర్ ప్రారంభమవుతుంది" />
         </p>
 

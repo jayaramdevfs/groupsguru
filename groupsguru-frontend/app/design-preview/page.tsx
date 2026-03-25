@@ -6,10 +6,8 @@ import gsap from "gsap";
 import Lenis from "lenis";
 
 const spring = {
-  type: "spring" as const,
-  stiffness: 420,
-  damping: 24,
-  mass: 0.8,
+  
+  duration: 0.25, ease: "easeOut" as const,
 };
 
 function PremiumInput() {
@@ -26,7 +24,7 @@ function PremiumInput() {
       transition={{ duration: 0.3 }}
       className="w-full rounded-2xl"
     >
-      <div className="relative h-16 rounded-2xl bg-purple-950/60 border border-purple-700/40 backdrop-blur-xl px-5 flex items-center">
+      <div className="relative h-16 rounded-2xl bg-[#292524] border border-[#57534E]/40  px-5 flex items-center">
 
         {/* REAL INPUT (hidden text, caret visible) */}
         <input
@@ -34,12 +32,12 @@ function PremiumInput() {
           onChange={(e) => setValue(e.target.value)}
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
-          className="absolute inset-0 px-5 bg-transparent outline-none text-transparent caret-pink-400 font-bold text-lg"
+          className="absolute inset-0 px-5 bg-transparent outline-none text-transparent caret-[#EA580C] font-bold text-lg"
           placeholder=""
         />
 
         {/* Animated Text */}
-        <div className="flex items-center pointer-events-none font-bold text-lg text-white">
+        <div className="flex items-center pointer-events-none font-bold text-lg text-[#FAFAF9]">
           {value.split("").map((char, index) => (
             <motion.span
               key={index}
@@ -67,7 +65,7 @@ function PremiumInput() {
         </div>
 
         {!value && (
-          <span className="text-purple-300/60 font-bold text-lg pointer-events-none">
+          <span className="text-[#F97316]/60 font-bold text-lg pointer-events-none">
             Enter Email
           </span>
         )}
@@ -114,10 +112,10 @@ export default function DesignPreview() {
   return (
     <div
       ref={containerRef}
-      className="min-h-screen bg-gradient-to-br from-[#0f051d] via-[#12081f] to-[#0a0114] text-white relative overflow-hidden p-10"
+      className="min-h-screen bg-[#EA580C] text-[#FAFAF9] relative overflow-hidden p-10"
     >
-      <div className="orb absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-purple-700/30 rounded-full blur-3xl" />
-      <div className="orb absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-pink-700/20 rounded-full blur-3xl" />
+      <div className="orb absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-[#EA580C] rounded-full " />
+      <div className="orb absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-[#EA580C] rounded-full " />
 
       <motion.div
         initial={{ opacity: 0, y: 60 }}
@@ -126,10 +124,10 @@ export default function DesignPreview() {
         className="relative z-10 max-w-5xl mx-auto space-y-24"
       >
         <div className="text-center space-y-6">
-          <h1 className="text-5xl font-extrabold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+          <h1 className="text-5xl font-extrabold text-[#F97316]">
             GROUPSGURU
           </h1>
-          <p className="text-purple-200/80 text-lg font-bold">
+          <p className="text-[#F97316] text-lg font-bold">
             Refined Interactive System
           </p>
         </div>
@@ -147,15 +145,15 @@ export default function DesignPreview() {
             }}
             whileTap={{ scale: 0.95 }}
             transition={spring}
-            className="px-14 py-5 rounded-2xl text-white font-extrabold bg-gradient-to-r from-purple-600 to-pink-600"
+            className="px-14 py-5 rounded-2xl text-[#FAFAF9] font-extrabold bg-[#EA580C]"
           >
             ENTER PLATFORM
           </motion.button>
         </div>
 
-        <div className="bg-purple-950/50 backdrop-blur-xl border border-purple-800/40 rounded-3xl overflow-hidden shadow-[0_15px_50px_rgba(147,51,234,0.3)]">
+        <div className="bg-[#292524]  border border-[#57534E]/40 rounded-3xl overflow-hidden shadow-md">
           <table className="w-full text-left">
-            <thead className="bg-purple-900/70 text-purple-200 font-bold">
+            <thead className="bg-[#292524] text-[#F97316] font-bold">
               <tr>
                 <th className="p-6">NAME</th>
                 <th className="p-6">ROLE</th>
@@ -170,7 +168,7 @@ export default function DesignPreview() {
                   whileHover={{
                     backgroundColor: "rgba(147,51,234,0.18)",
                   }}
-                  className="border-t border-purple-800/40 cursor-pointer font-bold"
+                  className="border-t border-[#57534E]/40 cursor-pointer font-bold"
                 >
                   <td className="p-6">{name}</td>
                   <td className="p-6">USER</td>
@@ -186,7 +184,7 @@ export default function DesignPreview() {
                           : {}
                       }
                       transition={{ duration: 0.4 }}
-                      className="text-pink-400"
+                      className="text-[#F97316]"
                     >
                       ACTIVE
                     </motion.span>

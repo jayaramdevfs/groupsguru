@@ -10,7 +10,7 @@ import CustomSelect from "@/components/ui/CustomSelect";
 import Modal from "@/components/ui/Modal";
 import AnimatedInput from "@/components/ui/AnimatedInput";
 
-const spring = { type: "spring" as const, stiffness: 420, damping: 24, mass: 0.8 };
+const spring = {  duration: 0.25, ease: "easeOut" as const };
 
 const EXAM_TYPES: ExamType[] = ["TOPIC_WISE", "SECTION_WISE", "SUBJECT_WISE", "FULL_LENGTH_TEST"];
 const SUBJECTS = ["History", "AP History", "Polity", "Economy", "Geography", "Science", "Mental Ability"];
@@ -159,27 +159,27 @@ export default function AdminExams() {
 
   return (
     <ProtectedLayout requiredRole="ADMIN">
-      <div className="min-h-screen py-24 px-6 md:px-12 w-full max-w-7xl mx-auto text-white">
+      <div className="min-h-screen py-24 px-6 md:px-12 w-full max-w-7xl mx-auto text-[#FAFAF9]">
         
         {/* Header */}
         <div className="flex justify-between items-end mb-12">
           <div>
-            <h1 className="text-4xl font-black mb-2 italic">Exam Management</h1>
-            <p className="text-white/60 font-bold uppercase tracking-widest text-xs">Sprint 10 — Structure & Assignments</p>
+            <h1 className="text-4xl font-bold mb-2 ">Exam Management</h1>
+            <p className="text-[#FAFAF9]/60 font-bold uppercase tracking-widest text-xs">Sprint 10 — Structure & Assignments</p>
           </div>
           <button 
             onClick={handleOpenCreate}
-            className="px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl font-black italic shadow-xl shadow-purple-500/20 hover:scale-105 active:scale-95 transition-all"
+            className="px-8 py-4 bg-[#EA580C] rounded-2xl font-semibold shadow-xl shadow-orange-500/20 hover:scale-105 active:scale-95 transition-all"
           >
             Create New Exam
           </button>
         </div>
 
         {/* Exams Table */}
-        <div className="bg-white/5 border border-white/10 rounded-[32px] overflow-hidden backdrop-blur-xl">
+        <div className="bg-white/5 border border-[#57534E]/40 rounded-xl overflow-hidden ">
           <table className="w-full text-left">
             <thead>
-              <tr className="border-b border-white/10 bg-white/5 font-black uppercase text-[10px] tracking-widest text-white/40 italic">
+              <tr className="border-b border-[#57534E]/40 bg-white/5 font-bold uppercase text-[10px] tracking-widest text-[#FAFAF9]/40 ">
                 <th className="p-6">Name</th>
                 <th className="p-6">Type</th>
                 <th className="p-6">Subject</th>
@@ -199,33 +199,33 @@ export default function AdminExams() {
                     className="border-b border-white/5 hover:bg-white/5 transition-colors"
                   >
                     <td className="p-6">
-                      <div className="text-white mb-1 italic">{exam.name}</div>
-                      <div className="text-[10px] text-white/40">{exam.nameTe}</div>
+                      <div className="text-[#FAFAF9] mb-1 ">{exam.name}</div>
+                      <div className="text-[10px] text-[#FAFAF9]/40">{exam.nameTe}</div>
                     </td>
                     <td className="p-6">
-                      <span className="px-3 py-1 bg-purple-500/10 border border-purple-500/20 text-purple-400 rounded-lg text-[10px] font-black italic uppercase">
+                      <span className="px-3 py-1 bg-orange-500/10 border border-[#57534E]/40 text-[#F97316] rounded-lg text-[10px] font-semibold uppercase">
                         {exam.examType.replace('_', ' ')}
                       </span>
                     </td>
-                    <td className="p-6 text-white/60 italic">{exam.subject || "N/A"}</td>
-                    <td className="p-6 text-center italic">{exam.totalQuestions}</td>
-                    <td className="p-6 text-center italic">{exam.durationMinutes}m</td>
+                    <td className="p-6 text-[#FAFAF9]/60 ">{exam.subject || "N/A"}</td>
+                    <td className="p-6 text-center ">{exam.totalQuestions}</td>
+                    <td className="p-6 text-center ">{exam.durationMinutes}m</td>
                     <td className="p-6 text-right space-x-2">
                       <button 
                         onClick={() => handleOpenAssign(exam)}
-                        className="px-4 py-2 bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 rounded-xl hover:bg-indigo-500/20 transition-all italic text-xs"
+                        className="px-4 py-2 bg-[#EA580C] text-[#F97316] border border-[#57534E]/40 rounded-xl hover:bg-[#EA580C] transition-all  text-xs"
                       >
                         Assign Qs
                       </button>
                       <button 
                          onClick={() => handleOpenEdit(exam)}
-                        className="px-4 py-2 bg-white/10 text-white rounded-xl hover:bg-white/20 transition-all italic text-xs"
+                        className="px-4 py-2 bg-white/10 text-[#FAFAF9] rounded-xl hover:bg-white/20 transition-all  text-xs"
                       >
                         Edit
                       </button>
                       <button 
                         onClick={() => handleDelete(exam.id)}
-                        className="px-4 py-2 bg-red-500/10 text-red-500 rounded-xl hover:bg-red-500/20 transition-all italic text-xs"
+                        className="px-4 py-2 bg-red-500/10 text-red-500 rounded-xl hover:bg-red-500/20 transition-all  text-xs"
                       >
                         Delete
                       </button>
@@ -236,7 +236,7 @@ export default function AdminExams() {
             </tbody>
           </table>
           {exams.length === 0 && !isLoading && (
-            <div className="p-20 text-center text-white/40 italic font-bold">No exams found. Start by creating one.</div>
+            <div className="p-20 text-center text-[#FAFAF9]/40  font-bold">No exams found. Start by creating one.</div>
           )}
         </div>
 
@@ -254,7 +254,7 @@ export default function AdminExams() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="text-[10px] font-black uppercase tracking-widest text-white/40 ml-1 mb-2 block italic">Exam Type</label>
+                <label className="text-[10px] font-bold uppercase tracking-widest text-[#FAFAF9]/40 ml-1 mb-2 block ">Exam Type</label>
                 <CustomSelect 
                   options={EXAM_TYPES.map(t => ({ value: t, label: t.replace('_', ' ') }))}
                   value={formData.examType}
@@ -262,7 +262,7 @@ export default function AdminExams() {
                 />
               </div>
               <div>
-                <label className="text-[10px] font-black uppercase tracking-widest text-white/40 ml-1 mb-2 block italic">Subject</label>
+                <label className="text-[10px] font-bold uppercase tracking-widest text-[#FAFAF9]/40 ml-1 mb-2 block ">Subject</label>
                 <CustomSelect 
                   options={SUBJECTS.map(s => ({ value: s, label: s }))}
                   value={formData.subject}
@@ -277,14 +277,14 @@ export default function AdminExams() {
                <AnimatedInput label="Marks/Question" placeholder="1.0" type="number" value={formData.marksPerQuestion.toString()} onChange={(val) => setFormData({...formData, marksPerQuestion: parseFloat(val) || 1.0})} />
             </div>
 
-            <div className="flex items-center gap-4 p-4 bg-white/5 rounded-2xl border border-white/10">
+            <div className="flex items-center gap-4 p-4 bg-white/5 rounded-2xl border border-[#57534E]/40">
               <input 
                  type="checkbox" 
                  checked={formData.negativeMarking} 
                  onChange={(e) => setFormData({...formData, negativeMarking: e.target.checked})}
-                 className="w-5 h-5 accent-purple-500"
+                 className="w-5 h-5 accent-orange-500"
               />
-              <span className="font-bold italic">Enable Negative Marking</span>
+              <span className="font-bold ">Enable Negative Marking</span>
               {formData.negativeMarking && (
                 <div className="ml-auto w-32">
                   <AnimatedInput label="Penalty" placeholder="0.25" type="number" value={formData.penaltyPerWrong.toString()} onChange={(val) => setFormData({...formData, penaltyPerWrong: parseFloat(val) || 0.25})} />
@@ -296,13 +296,13 @@ export default function AdminExams() {
                <button 
                   type="button" 
                   onClick={() => setIsModalOpen(false)}
-                  className="flex-1 py-4 bg-white/5 rounded-2xl font-bold italic transition-all hover:bg-white/10"
+                  className="flex-1 py-4 bg-white/5 rounded-2xl font-bold  transition-all hover:bg-white/10"
                >
                   Cancel
                </button>
                <button 
                   type="submit"
-                  className="flex-1 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl font-black italic shadow-lg shadow-purple-500/20"
+                  className="flex-1 py-4 bg-[#EA580C] rounded-2xl font-semibold shadow-lg shadow-orange-500/20"
                >
                   {editingExam ? "Save Changes" : "Create Exam"}
                </button>
@@ -323,9 +323,9 @@ export default function AdminExams() {
                  placeholder="Search questions..."
                  value={assignSearch}
                  onChange={(e) => setAssignSearch(e.target.value)}
-                 className="flex-1 bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white placeholder:text-white/20 focus:outline-none focus:border-purple-500 transition-all font-bold italic"
+                 className="flex-1 bg-white/5 border border-[#57534E]/40 rounded-2xl px-6 py-4 text-[#FAFAF9] placeholder:text-[#FAFAF9]/20 focus:outline-none focus:border-orange-500 transition-all font-bold "
                />
-               <div className="px-6 py-4 bg-purple-500/10 border border-purple-500/20 text-purple-400 rounded-2xl font-black italic">
+               <div className="px-6 py-4 bg-orange-500/10 border border-[#57534E]/40 text-[#F97316] rounded-2xl font-semibold">
                  {selectedQuestionIds.length} Selected
                </div>
             </div>
@@ -339,22 +339,22 @@ export default function AdminExams() {
                     onClick={() => toggleQuestion(q.id)}
                     className={`p-4 rounded-2xl border transition-all cursor-pointer ${
                       isSelected 
-                        ? "bg-purple-500/10 border-purple-500/40" 
-                        : "bg-white/5 border-white/10 hover:border-white/20"
+                        ? "bg-orange-500/10 border-orange-500/40" 
+                        : "bg-white/5 border-[#57534E]/40 hover:border-white/20"
                     }`}
                   >
                     <div className="flex items-center gap-4">
                       <div className={`w-6 h-6 rounded-lg flex items-center justify-center border ${
-                        isSelected ? "bg-purple-500 border-purple-500 text-white" : "border-white/20"
+                        isSelected ? "bg-orange-500 border-orange-500 text-[#FAFAF9]" : "border-white/20"
                       }`}>
                         {isSelected && "✓"}
                       </div>
                       <div className="flex-1">
                         <div className="flex justify-between items-start mb-1">
-                          <span className="font-mono text-[10px] text-purple-400 font-black">{q.questionCode}</span>
-                          <span className="text-[10px] text-white/40 font-bold uppercase tracking-widest">{q.subject}</span>
+                          <span className="font-mono text-[10px] text-[#F97316] font-bold">{q.questionCode}</span>
+                          <span className="text-[10px] text-[#FAFAF9]/40 font-bold uppercase tracking-widest">{q.subject}</span>
                         </div>
-                        <p className="text-xs font-bold italic line-clamp-1">{q.questionTextEn}</p>
+                        <p className="text-xs font-bold  line-clamp-1">{q.questionTextEn}</p>
                       </div>
                     </div>
                   </div>
@@ -365,13 +365,13 @@ export default function AdminExams() {
             <div className="flex gap-4">
               <button 
                   onClick={() => setIsAssignModalOpen(false)}
-                  className="flex-1 py-4 bg-white/5 rounded-2xl font-bold italic transition-all hover:bg-white/10"
+                  className="flex-1 py-4 bg-white/5 rounded-2xl font-bold  transition-all hover:bg-white/10"
                >
                   Cancel
                </button>
                <button 
                   onClick={handleAssignSubmit}
-                  className="flex-1 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl font-black italic shadow-lg shadow-purple-500/20"
+                  className="flex-1 py-4 bg-[#EA580C] rounded-2xl font-semibold shadow-lg shadow-orange-500/20"
                >
                   Save Assignment
                </button>
