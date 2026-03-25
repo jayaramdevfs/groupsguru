@@ -70,13 +70,13 @@ C:\GroupsGuru\Lms\
 
 | 20a | Frontend UI Reskin (claude.ai Theme) | ➖ N/A | ❌ Replaced by S21 | ➖ N/A |
 | 21a | Frontend Redesign: Foundation + Auth | ➖ N/A | ✅ Done | ✅ Done |
-| 21b | Frontend Redesign: Dashboards | ➖ N/A | ⏳ Planned | ⏳ Planned |
+| 21b | Frontend Redesign: Dashboards | ➖ N/A | ✅ Done | ✅ Done |
 | 21c | Frontend Redesign: Content Browse | ➖ N/A | ⏳ Planned | ⏳ Planned |
 | 21d | Frontend Redesign: Exam Flow | ➖ N/A | ⏳ Planned | ⏳ Planned |
 | 21e | Frontend Redesign: Admin Pages | ➖ N/A | ⏳ Planned | ⏳ Planned |
 | 21f | Frontend Redesign: Register + Polish | ➖ N/A | ⏳ Planned | ⏳ Planned |
 
-**Resume Point:** Sprint 21b (Dashboards) — see `docs/sprints/S21-frontend-redesign-plan.md` for full plan.
+**Resume Point:** Sprint 21c (Content Browse) — see `docs/sprints/S21-frontend-redesign-plan.md` for full plan.
 
 ### Execution Order:
 ```
@@ -1211,6 +1211,30 @@ APPSC Group 1
 
 **Closure Date:** March 25, 2026
 **Verification:** Landing, login, admin dashboard, student dashboard all verified on web. Mobile login screen updated. No purple/#9333EA/#0f051d in 21a scope files. No glassmorphism or backdrop-blur.
+
+---
+
+## Sprint 21b — Frontend Redesign: Dashboards ✅ DONE
+
+> **Context:** Redesigned the Admin and Student central hubs for both Web and Mobile platforms to align with the Claude Code mirror aesthetic. Removed complex animations, implemented flat-card layouts with 1px borders, and established the warm dark palette (#191919) as the absolute base.
+
+### Web Files (2):
+1. ✅ `app/admin/dashboard/page.tsx` — Standardized to 900px centered layout. Flat stats grid, Instrument Serif headers, amber progress markers.
+2. ✅ `app/student/dashboard/page.tsx` — Dynamic commission selector with flat borders. Amber primary buttons. Bilingual welcome text support via Multilang.
+
+### Mobile Files (2):
+1. ✅ `src/screens/AdminDashboard.tsx` — Token-based redesign. Removed background glows. Flat grid navigation with amber detail icons.
+2. ✅ `src/screens/StudentDashboard.tsx` — Clean, data-dense layout. Section headers with separator lines. Tokenized spacing and typography.
+
+### Common Components (1):
+1. ✅ `components/ui/Multilang.tsx` — Updated to intelligently handle fonts: English (Instrument Serif) fallback to Sans/Body font for Telugu to ensure legibility.
+
+**Closure Date:** March 25, 2026
+**Verification:** 
+- No purple (#9333EA) remnants in dashboards.
+- Hover states use border-color transitions instead of scaling.
+- Typography correctly switches from Serif (EN) to Sans (TE) in titles.
+- Mobile screens perfectly mirror the web design tokens.
 
 ---
 

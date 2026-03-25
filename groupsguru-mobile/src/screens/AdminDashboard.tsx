@@ -1,12 +1,12 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { View, Text, TouchableOpacity, StyleSheet, SafeAreaView, StatusBar, ActivityIndicator } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet, SafeAreaView, StatusBar, ActivityIndicator, ScrollView } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { useAuth } from "../context/AuthContext";
 import { useLanguage } from "../context/LanguageContext";
 import { ProfessionalLogo } from "../components/ProfessionalLogo";
 import { LanguageToggle } from "../components/LanguageToggle";
-import { BackgroundGlow } from "../components/BackgroundGlow";
+import { colors, spacing, radii, typography } from "../theme/tokens";
 import { categoryService } from "../api/categoryService";
 
 type RootStackParamList = {
@@ -41,107 +41,96 @@ const AdminDashboard = () => {
     fetchStats();
   }, [fetchStats]);
 
+  const NavItem = ({ title, desc, onPress, icon }: { title: string, desc: string, onPress: () => void, icon: string }) => (
+    <TouchableOpacity
+      activeOpacity={0.7}
+      style={styles.navCard}
+      onPress={onPress}
+    >
+      <View style={styles.cardHeader}>
+        <Text style={styles.cardIcon}>{icon}</Text>
+        <View style={styles.arrowIcon}>
+          <Text style={{ color: colors.accent, fontSize: 18, fontWeight: "700" }}>→</Text>
+        </View>
+      </View>
+      <Text style={styles.cardTitle}>{title}</Text>
+      <Text style={styles.cardDesc}>{desc}</Text>
+    </TouchableOpacity>
+  );
+
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="light-content" />
-      <BackgroundGlow />
+      
       <View style={styles.header}>
-        <View style={styles.logoWrapper}>
-          <ProfessionalLogo size={32} />
-        </View>
+        <ProfessionalLogo size={28} />
         <LanguageToggle />
       </View>
 
-      <View style={styles.welcomeSection}>
-        <Text style={styles.subtitle}>
-          {language === "en" ? "Admin Console" : "TE Admin Console"}
-        </Text>
-        <Text style={styles.title}>
-          {language === "en" ? "Welcome Back" : "TE Welcome Back"}
-        </Text>
-        <Text style={styles.userText}>{user?.email ?? ""}</Text>
-      </View>
+      <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
+        <View style={styles.welcomeSection}>
+          <View style={styles.badge}>
+            <Text style={styles.badgeText}>
+              {language === "en" ? "ADMIN_CONSOLE" : "అడ్మిన్_కన్సోల్"}
+            </Text>
+          </View>
+          <Text style={styles.title}>
+            {language === "en" ? "System Core" : "సిస్టమ్ కోర్"}
+          </Text>
+          <Text style={styles.userText}>{user?.email ?? ""}</Text>
+        </View>
 
-      <View style={styles.statsCard}>
-        <Text style={styles.statsLabel}>
-          {language === "en" ? "Total Categories" : "TE Total Categories"}
-        </Text>
-        {loading ? (
-          <ActivityIndicator size="small" color="#9333EA" />
-        ) : (
-          <Text style={styles.statsValue}>{categoryCount}</Text>
-        )}
-      </View>
+        <View style={styles.statsRow}>
+          <View style={styles.statBox}>
+            <Text style={styles.statLabel}>
+              {language === "en" ? "Exams" : "పరీక్షలు"}
+            </Text>
+            {loading ? (
+              <ActivityIndicator size="small" color={colors.accent} />
+            ) : (
+              <Text style={styles.statValue}>{categoryCount}</Text>
+            )}
+          </View>
+          <View style={[styles.statBox, { borderLeftWidth: 0 }]}>
+            <Text style={styles.statLabel}>
+              {language === "en" ? "Status" : "స్థితి"}
+            </Text>
+            <View style={styles.statusIndicator}>
+              <View style={styles.statusDot} />
+              <Text style={styles.statusText}>LIVE</Text>
+            </View>
+          </View>
+        </View>
 
-      <View style={styles.grid}>
-        <TouchableOpacity
-          activeOpacity={0.8}
-          style={styles.navCard}
-          onPress={() => navigation.navigate("Category")}
-        >
-          <Text style={styles.cardTitle}>
-            {language === "en" ? "Categories" : "TE Categories"}
-          </Text>
-          <Text style={styles.cardDesc}>
-            {language === "en"
-              ? "Manage exam categories"
-              : "TE Manage exam categories"}
-          </Text>
-        </TouchableOpacity>
+        <View style={styles.grid}>
+          <NavItem 
+            title={language === "en" ? "Content Tree" : "కంటెంట్ ట్రీ"}
+            desc={language === "en" ? "Precision hierarchy management" : "ఖచ్చితమైన కంటెంట్ నిర్వహణ"}
+            icon="🌳"
+            onPress={() => navigation.navigate("Category")}
+          />
+          
+          <NavItem 
+            title={language === "en" ? "Intelligence" : "ఇంటెలిజెన్స్"}
+            desc={language === "en" ? "AI predictions & heatmaps" : "AI ప్రిడిక్షన్ స్కోర్లు"}
+            icon="⚛️"
+            onPress={() => navigation.navigate("Intelligence")}
+          />
 
-        <TouchableOpacity
-          activeOpacity={0.8}
-          style={styles.navCard}
-          onPress={() => navigation.navigate("Category")}
-        >
-          <Text style={styles.cardTitle}>
-            {language === "en" ? "Sub Categories" : "TE Sub Categories"}
-          </Text>
-          <Text style={styles.cardDesc}>
-            {language === "en"
-              ? "Open categories and drill down"
-              : "TE Open categories and drill down"}
-          </Text>
-        </TouchableOpacity>
+          <NavItem 
+            title={language === "en" ? "Question Bank" : "ప్రశ్న బ్యాంక్"}
+            desc={language === "en" ? "Bilingual MCQ repository" : "ద్విభాషా MCQల సేకరణ"}
+            icon="❓"
+            onPress={() => navigation.navigate("QuestionList")}
+          />
+        </View>
 
-        <TouchableOpacity
-          activeOpacity={0.8}
-          style={styles.navCard}
-          onPress={() => navigation.navigate("Intelligence")}
-        >
-          <Text style={styles.cardTitle}>
-            {language === "en" ? "Intelligence Engine" : "TE Intelligence Engine"}
-          </Text>
-          <Text style={styles.cardDesc}>
-            {language === "en"
-              ? "View AI prediction scores and PYQ analysis"
-              : "TE View AI prediction scores and PYQ analysis"}
-          </Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          activeOpacity={0.8}
-          style={styles.navCard}
-          onPress={() => navigation.navigate("QuestionList")}
-        >
-          <Text style={styles.cardTitle}>
-            {language === "en" ? "Question Bank" : "ప్రశ్న బ్యాంక్"}
-          </Text>
-          <Text style={styles.cardDesc}>
-            {language === "en"
-              ? "Browse and search bilingual MCQs"
-              : "ద్విభాషా MCQలను బ్రౌజ్ చేయండి"}
-          </Text>
-        </TouchableOpacity>
-      </View>
-
-      <View style={styles.footer}>
         <TouchableOpacity style={styles.logoutButton} onPress={logout}>
-          <Text style={styles.buttonText}>
-            {language === "en" ? "Logout" : "TE Logout"}
+          <Text style={styles.logoutText}>
+            {language === "en" ? "Terminate Session" : "సెషన్‌ను ముగించు"}
           </Text>
         </TouchableOpacity>
-      </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };
@@ -151,99 +140,136 @@ export default AdminDashboard;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#0f051d",
-    paddingHorizontal: 24,
-    paddingTop: 20,
-    paddingBottom: 24,
+    backgroundColor: colors.base,
   },
   header: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    marginBottom: 32,
-    paddingRight: 8,
+    paddingHorizontal: spacing.lg,
+    paddingVertical: spacing.md,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.fgFaint,
   },
-  logoWrapper: {
-    flex: 1,
+  scrollContent: {
+    padding: spacing.lg,
+    paddingBottom: spacing["5xl"],
   },
   welcomeSection: {
-    marginBottom: 32,
+    marginBottom: spacing.xl,
   },
-  subtitle: {
-    fontSize: 14,
-    fontWeight: "700",
-    color: "rgba(255,255,255,0.6)",
-    textTransform: "uppercase",
-    letterSpacing: 1,
-  },
-  userText: {
-    color: "rgba(255,255,255,0.6)",
-    marginTop: 4,
-    fontWeight: "600",
-  },
-  statsCard: {
-    marginTop: 20,
-    borderRadius: 24,
+  badge: {
+    alignSelf: "flex-start",
+    backgroundColor: colors.accentSubtle,
     borderWidth: 1,
-    borderColor: "rgba(147, 51, 234, 0.25)",
-    backgroundColor: "rgba(147, 51, 234, 0.08)",
-    padding: 18,
+    borderColor: colors.accentBorder,
+    paddingHorizontal: 8,
+    paddingVertical: 2,
+    borderRadius: 4,
+    marginBottom: spacing.sm,
   },
-  statsLabel: {
-    color: "rgba(255,255,255,0.65)",
+  badgeText: {
+    color: colors.accent,
+    fontSize: 10,
     fontWeight: "700",
-    fontSize: 12,
-    textTransform: "uppercase",
     letterSpacing: 1,
-  },
-  statsValue: {
-    color: "#FFFFFF",
-    fontWeight: "800",
-    fontSize: 32,
-    marginTop: 8,
-  },
-  grid: {
-    marginTop: 22,
-    gap: 14,
-  },
-  navCard: {
-    borderRadius: 24,
-    borderWidth: 1,
-    borderColor: "rgba(147, 51, 234, 0.2)",
-    backgroundColor: "rgba(147, 51, 234, 0.08)",
-    padding: 24,
   },
   title: {
-    fontSize: 30,
-    fontWeight: "800",
-    color: "#FFFFFF",
-    marginTop: 2,
+    ...typography.displayMd,
+    color: colors.fgPrimary,
+    fontWeight: "400", // Instrument Serif placeholder style
+  },
+  userText: {
+    ...typography.bodySm,
+    color: colors.fgSecondary,
+    marginTop: 4,
+  },
+  statsRow: {
+    flexDirection: "row",
+    borderWidth: 1,
+    borderColor: colors.fgFaint,
+    borderRadius: radii.md,
+    backgroundColor: colors.surface,
+    marginBottom: spacing.xl,
+    overflow: "hidden",
+  },
+  statBox: {
+    flex: 1,
+    padding: spacing.md,
+    borderLeftWidth: 1,
+    borderLeftColor: colors.fgFaint,
+  },
+  statLabel: {
+    ...typography.caption,
+    color: colors.fgMuted,
+    marginBottom: 4,
+  },
+  statValue: {
+    ...typography.mono,
+    fontSize: 24,
+    color: colors.fgPrimary,
+  },
+  statusIndicator: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: 4,
+  },
+  statusDot: {
+    width: 6,
+    height: 6,
+    borderRadius: 3,
+    backgroundColor: colors.success,
+    marginRight: 6,
+  },
+  statusText: {
+    ...typography.mono,
+    fontSize: 12,
+    color: colors.success,
+  },
+  grid: {
+    gap: spacing.md,
+  },
+  navCard: {
+    backgroundColor: colors.surface,
+    borderRadius: radii.md,
+    borderWidth: 1,
+    borderColor: colors.fgFaint,
+    padding: spacing.lg,
+  },
+  cardHeader: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: spacing.md,
+  },
+  cardIcon: {
+    fontSize: 24,
+  },
+  arrowIcon: {
+    opacity: 0.5,
   },
   cardTitle: {
-    color: "#FFFFFF",
-    fontWeight: "800",
-    fontSize: 20,
+    ...typography.heading,
+    color: colors.fgPrimary,
+    marginBottom: 4,
   },
   cardDesc: {
-    color: "rgba(255,255,255,0.65)",
-    fontSize: 14,
-    marginTop: 8,
-    lineHeight: 20,
-    fontWeight: "600",
-  },
-  footer: {
-    marginTop: "auto",
+    ...typography.bodySm,
+    color: colors.fgSecondary,
+    lineHeight: 18,
   },
   logoutButton: {
-    backgroundColor: "#DB2777",
-    paddingVertical: 14,
-    paddingHorizontal: 28,
-    borderRadius: 16,
+    marginTop: spacing["3xl"],
+    paddingVertical: spacing.md,
     alignItems: "center",
+    borderWidth: 1,
+    borderColor: colors.error,
+    borderRadius: radii.md,
   },
-  buttonText: {
-    color: "#FFFFFF",
+  logoutText: {
+    ...typography.bodySm,
+    color: colors.error,
     fontWeight: "700",
-    fontSize: 16,
   },
 });
+

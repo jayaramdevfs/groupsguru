@@ -1,7 +1,6 @@
 "use client";
 
 import ProtectedLayout from "@/components/layout/ProtectedLayout";
-import { motion } from "framer-motion";
 import { useAuth } from "@/app/context/AuthContext";
 import Link from "next/link";
 import { Multilang } from "@/components/ui/Multilang";
@@ -12,11 +11,6 @@ import { sectionApi } from "@/lib/sections";
 import { topicApi } from "@/lib/topics";
 import { registryApi } from "@/lib/registry";
 import { questionsApi } from "@/lib/questions";
-
-const spring = {
-  
-  duration: 0.25, ease: "easeOut" as const,
-};
 
 interface DashboardStats {
   categories: number;
@@ -62,228 +56,126 @@ export default function AdminDashboard() {
 
   const navCards = [
     {
-      title: "Exam Categories",
-      titleTe: "పరీక్షా విభాగాలు",
-      description: "Manage Level 0: Top-level exam categories (UPSC, APPSC, etc.)",
-      descriptionTe: "టాప్-లెవల్ పరీక్షా విభాగాలను నిర్వహించండి.",
-      icon: "🎯",
-      href: "/admin/categories",
-      color: " ",
-      shadowColor: "rgba(99, 102, 241, 0.25)",
-      stat: stats.categories,
-      statLabel: "Exams",
-      disabled: false,
-    },
-    {
-      title: "Subject Management",
-      titleTe: "సబ్జెక్ట్ నిర్వహణ",
-      description: "Manage Level 1: Core subjects and syllabus structures.",
-      descriptionTe: "కోర్ సబ్జెక్టులు మరియు సిలబస్ నిర్మాణాలను నిర్వహించండి.",
-      icon: "📚",
-      href: "/admin/subcategories",
-      color: " ",
-      shadowColor: "rgba(147, 51, 234, 0.25)",
-      stat: stats.subcategories,
-      statLabel: "Subjects",
-      disabled: false,
-    },
-    {
-      title: "Section Architecture",
-      titleTe: "సెక్షన్ ఆర్కిటెక్చర్",
-      description: "Manage Level 2: Sub-divide subjects into logical study sections.",
-      descriptionTe: "సబ్జెక్టులను లాజికల్ స్టడీ సెక్షన్లుగా విభజించండి.",
-      icon: "📑",
-      href: "/admin/sections",
-      color: " ",
-      shadowColor: "rgba(99, 102, 241, 0.25)",
-      stat: stats.sections,
-      statLabel: "Sections",
-      disabled: false,
-    },
-    {
-      title: "Topic Engine",
-      titleTe: "టాపిక్ ఇంజిన్",
-      description: "Manage Level 3: Atomic study topics under each section.",
-      descriptionTe: "ప్రతి సెక్షన్ కింద అటామిక్ స్టడీ టాపిక్‌లను నిర్వహించండి.",
-      icon: "🧠",
-      href: "/admin/topics",
-      color: "from-emerald-500 ",
-      shadowColor: "rgba(16, 185, 129, 0.25)",
-      stat: stats.topics,
-      statLabel: "Topics",
-      disabled: false,
+      title: "Content Tree",
+      titleTe: "కంటెంట్ సోపానక్రమం",
+      description: "Manage the full hierarchy from exams to topics in a precision tree view.",
+      descriptionTe: "పరీక్షల నుండి టాపిక్‌ల వరకు పూర్తి కంటెంట్‌ను నిర్వహించండి.",
+      icon: "🌳",
+      href: "/admin/content-tree",
+      stat: null,
+      statLabel: "Hierarchy",
     },
     {
       title: "Intelligence Engine",
       titleTe: "ఇంటెలిజెన్స్ ఇంజిన్",
-      level: "ENGINE",
-      description: "Manage PYQ analysis and AI prediction confidence scores.",
-      descriptionTe: "హై ఇంపాక్ట్ ప్రిడిక్షన్ స్కోర్లు",
+      description: "PYQ analysis, prediction scores, and syllabus coverage heatmaps.",
+      descriptionTe: "ప్రిడిక్షన్ స్కోర్లు మరియు సిలబస్ కవరేజీని చూడండి.",
       icon: "⚛️",
       href: "/admin/intelligence",
-      color: " ",
-      shadowColor: "rgba(147, 51, 234, 0.25)",
       stat: stats.microTopics,
-      statLabel: "Intelligence",
-      disabled: false,
+      statLabel: "Micro-Topics",
     },
     {
       title: "Question Bank",
       titleTe: "ప్రశ్న బ్యాంక్",
-      description: "Manage bilingual MCQs parsed from Moodle XML — filterable by subject, difficulty, type.",
-      descriptionTe: "ద్విభాషా MCQలను నిర్వహించండి — సబ్జెక్ట్, కఠినత, రకం ద్వారా ఫిల్టర్ చేయండి.",
+      description: "Manage bilingual MCQs, difficulty levels, and cognitive tagging.",
+      descriptionTe: "ద్విభాషా MCQలను నిర్వహించండి మరియు క్రియేట్ చేయండి.",
       icon: "❓",
       href: "/admin/questions",
-      color: " to-fuchsia-500",
-      shadowColor: "rgba(139, 92, 246, 0.25)",
       stat: stats.questions,
       statLabel: "MCQs",
-      disabled: false,
     },
     {
-      title: "Pricing & Access Control",
-      titleTe: "ధర & యాక్సెస్ కంట్రోల్",
-      description: "Manage Level 0-5 Node Pricing: Set free/paid content layers securely.",
+      title: "Pricing & Access",
+      titleTe: "ధర & యాక్సెస్",
+      description: "Set paywall layers and subscription access for students.",
       descriptionTe: "ధరలను మరియు యూజర్ యాక్సెస్ నిర్వహించండి.",
       icon: "💰",
       href: "/admin/pricing",
-      color: "from-amber-500 to-orange-500",
-      shadowColor: "rgba(245, 158, 11, 0.25)",
       stat: null,
       statLabel: "Paywall",
-      disabled: false,
-    },
-    {
-      title: "Content Tree",
-      titleTe: "కంటెంట్ సోపానక్రమం",
-      description: "View and manage full content hierarchy from exams down to topics in a tree view.",
-      descriptionTe: "పరీక్షల నుండి టాపిక్‌ల వరకు పూర్తి కంటెంట్ సోపానక్రమాన్ని చూడండి మరియు నిర్వహించండి.",
-      icon: "🌳",
-      href: "/admin/content-tree",
-      color: "from-emerald-500 to-green-500",
-      shadowColor: "rgba(16, 185, 129, 0.25)",
-      stat: null,
-      statLabel: "Hierarchy",
-      disabled: false,
     },
   ];
 
   return (
     <ProtectedLayout requiredRole="ADMIN">
-      <div className="min-h-screen py-10 px-6 md:px-12 w-full max-w-[92%] mx-auto flex flex-col items-center gap-8">
-
-        {/* Hero Header */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={spring}
-          className="text-center"
-        >
-          <div className="px-3 py-1 rounded-full bg-orange-500/10 border border-[#57534E]/40 text-[#F97316] text-[9px] font-bold uppercase tracking-[0.2em] mb-4 inline-block">
-            Intelligence Command
+      <div className="max-w-[900px] mx-auto py-12 px-6">
+        
+        {/* Header Section */}
+        <header className="mb-12 border-b border-[#3A3A3A] pb-8">
+          <div className="inline-block px-2 py-0.5 rounded border border-[#D97706]/30 bg-[#D97706]/10 text-[#D97706] text-[10px] font-bold uppercase tracking-widest mb-4">
+            Command Center
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tighter leading-none bg-clip-text text-transparent bg-[#EA580C]">
-            GroupsGuru<span className="text-orange-500">.</span>
+          <h1 className="text-4xl md:text-5xl font-serif text-[#E8E8E8] mb-4">
+            Administrative <span className="text-[#D97706]">Dashboard</span>
           </h1>
-          <p className="mt-2 text-[#FAFAF9]/40 text-base font-medium">
-            <Multilang en="APPSC Exam Intelligence Engine — Admin Console" te="APPSC పరీక్షా ఇంటెలిజెన్స్ ఇంజిన్ — అడ్మిన్ కన్సోల్" />
+          <p className="text-[#A0A0A0] max-w-xl leading-relaxed">
+            <Multilang 
+              en="Manage your educational ecosystem with precision. Track coverage, analyze trends, and curate high-impact content." 
+              te="మీ విద్యా వ్యవస్థను ఖచ్చితత్వంతో నిర్వహించండి. కవరేజీని ట్రాక్ చేయండి మరియు కంటెంట్‌ను క్యూరేట్ చేయండి."
+            />
           </p>
-        </motion.div>
+        </header>
 
-        {/* Live Stats Summary Bar */}
-        {statsLoaded && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ ...spring, delay: 0.1 }}
-            className="w-full flex flex-wrap justify-center gap-6"
-          >
-            {[
-              { label: "Exams", labelTe: "పరీక్షలు", value: stats.categories, color: "text-[#F97316]" },
-              { label: "Subjects", labelTe: "సబ్జెక్టులు", value: stats.subcategories, color: "text-[#F97316]" },
-              { label: "Sections", labelTe: "సెక్షన్లు", value: stats.sections, color: "text-[#F97316]" },
-              { label: "Topics", labelTe: "టాపిక్‌లు", value: stats.topics, color: "text-[#F97316]" },
-              { label: "Micro-Topics", labelTe: "మైక్రో-టాపిక్‌లు", value: stats.microTopics, color: "text-[#F97316]" },
-              { label: "Questions", labelTe: "ప్రశ్నలు", value: stats.questions, color: "text-[#F97316]" },
-            ].map((s, i) => (
-              <div key={i} className="flex flex-col items-center px-6 py-2 rounded-xl bg-white/5 border border-[#57534E]/40 shrink-0">
-                <span className={`text-2xl font-bold ${s.color}`}>{s.value}</span>
-                <span className="text-[#FAFAF9]/40 text-[9px] font-bold uppercase tracking-widest mt-0.5">
-                  <Multilang en={s.label} te={s.labelTe} />
-                </span>
-              </div>
-            ))}
-          </motion.div>
-        )}
-
-        {/* Nav Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 w-full">
-          {navCards.map((card, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ ...spring, delay: index * 0.08 }}
-              whileHover={card.disabled ? {} : { y: -8, scale: 1.02 }}
-            >
-              <Link
-                href={card.href}
-                className={`group block p-8 rounded-xl border h-full transition-all relative overflow-hidden 
-                  ${card.disabled
-                    ? "opacity-40 cursor-not-allowed border-white/5 bg-white/5"
-                    : "border-[#57534E]/40 bg-white/[0.03] hover:border-orange-500/40 hover:bg-orange-500/5 shadow-md"
-                  }
-                `}
-                onClick={card.disabled ? (e) => e.preventDefault() : undefined}
-              >
-                {/* Gradient Glow */}
-                {!card.disabled && (
-                  <div
-                    className={`absolute -top-20 -right-20 w-52 h-52 ${card.color} opacity-10  group-hover:opacity-25 transition-all duration-500`}
-                  />
-                )}
-
-                <div className="relative z-10">
-                  {/* Icon + Stat */}
-                  <div className="flex items-start justify-between mb-6">
-                    <div className="text-5xl">{card.icon}</div>
-                    {/* Live stat badge */}
-                    <div className={`px-3 py-1 rounded-xl text-xs font-bold uppercase tracking-widest border ${card.disabled ? "border-[#57534E]/40 bg-white/5 text-[#FAFAF9]/30" : `${card.color} bg-opacity-10 border-[#57534E]/40 text-[#FAFAF9]`}`}>
-                      {card.stat !== null ? (
-                        <span>
-                          {statsLoaded ? card.stat : "—"} {card.statLabel}
-                        </span>
-                      ) : (
-                        <span>{card.statLabel}</span>
-                      )}
-                    </div>
-                  </div>
-
-                  <h3 className="text-2xl font-bold mb-3">
-                    <Multilang en={card.title} te={card.titleTe} />
-                  </h3>
-                  <p className="text-[#FAFAF9]/50 font-medium leading-relaxed mb-6 text-sm">
-                    <Multilang en={card.description} te={card.descriptionTe} />
-                  </p>
-
-                  {!card.disabled && (
-                    <div className="flex items-center gap-2 text-[#F97316] font-bold text-xs uppercase tracking-widest">
-                      <span>Manage</span>
-                      <svg
-                        width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
-                        className="group-hover:translate-x-2 transition-transform duration-200"
-                      >
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <polyline points="12 5 19 12 12 19"></polyline>
-                      </svg>
-                    </div>
-                  )}
-                </div>
-              </Link>
-            </motion.div>
+        {/* Quick Stats Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12">
+          {[
+            { label: "Exams", value: stats.categories },
+            { label: "Subjects", value: stats.subcategories },
+            { label: "Sections", value: stats.sections },
+            { label: "Topics", value: stats.topics },
+            { label: "Intelligence", value: stats.microTopics },
+            { label: "MCQs", value: stats.questions },
+          ].map((s, i) => (
+            <div key={i} className="bg-[#1E1E1E] border border-[#3A3A3A] p-4 rounded-lg">
+              <div className="text-[#666666] text-[10px] font-bold uppercase tracking-widest mb-1">{s.label}</div>
+              <div className="text-2xl font-mono text-[#E8E8E8]">{statsLoaded ? s.value : "—"}</div>
+            </div>
           ))}
         </div>
+
+        {/* Navigation Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {navCards.map((card, index) => (
+            <Link
+              key={index}
+              href={card.href}
+              className="group bg-[#1E1E1E] border border-[#3A3A3A] p-6 rounded-lg hover:border-[#D97706]/50 transition-colors"
+            >
+              <div className="flex justify-between items-start mb-6">
+                <span className="text-3xl grayscale group-hover:grayscale-0 transition-all">{card.icon}</span>
+                {card.statLabel && (
+                  <span className="text-[10px] font-mono text-[#666666] border border-[#3A3A3A] px-2 py-1 rounded">
+                    {statsLoaded && card.stat !== null ? `${card.stat} ` : ""}{card.statLabel}
+                  </span>
+                )}
+              </div>
+              <h3 className="text-xl font-bold text-[#E8E8E8] mb-2 group-hover:text-[#D97706] transition-colors">
+                <Multilang en={card.title} te={card.titleTe} />
+              </h3>
+              <p className="text-sm text-[#A0A0A0] leading-relaxed">
+                <Multilang en={card.description} te={card.descriptionTe} />
+              </p>
+              
+              <div className="mt-8 flex items-center text-[10px] font-bold uppercase tracking-widest text-[#D97706] opacity-0 group-hover:opacity-100 transition-opacity">
+                Configure Module 
+                <svg className="ml-2 w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        {/* System Status Footer */}
+        <footer className="mt-16 pt-8 border-t border-[#3A3A3A] flex justify-between items-center text-[10px] font-mono text-[#666666]">
+          <div>SYSTEM_VERSION: 3.2.5_PROD</div>
+          <div className="flex items-center gap-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#3D9A5F]"></span>
+            DATABASE_PERSISTENT
+          </div>
+        </footer>
 
       </div>
     </ProtectedLayout>

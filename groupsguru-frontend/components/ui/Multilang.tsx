@@ -13,14 +13,19 @@ interface MultilangProps {
  * Multilang component to show text based on current language.
  * Usage: <Multilang en="History" te="చరిత్ర" />
  */
-export const Multilang: React.FC<MultilangProps> = ({ en, te, className }) => {
+export const Multilang: React.FC<MultilangProps> = ({ en, te, className = "" }) => {
   const { language } = useLanguage();
 
-  if (language === "en") {
-    return <span className={className}>{en || te}</span>;
-  }
+  // If language is Telugu, we often want to override font-serif to font-sans
+  // since most sherif fonts don't support Telugu well.
+  const isTelugu = language === "te";
+  const finalContent = isTelugu ? (te || en) : (en || te);
   
-  return <span className={className} style={{ fontFamily: "inherit" }}>{te || en}</span>;
+  return (
+    <span className={`${className} ${isTelugu ? "font-sans italic-none" : ""}`}>
+      {finalContent}
+    </span>
+  );
 };
 
 /**
