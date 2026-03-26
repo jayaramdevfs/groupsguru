@@ -38,10 +38,16 @@ export const contentApi = {
   },
 
   // Student
+  getAllPublished: (page = 0, size = 20) =>
+    api.get(`/student/content/all?page=${page}&size=${size}`).then((res) => res.data),
+
   getPublishedByEntity: async (entityType: string, entityId: number): Promise<StudyMaterial[]> => {
     const response = await api.get(`/api/student/content/entity/${entityType}/${entityId}`);
     return response.data;
   },
 
-  downloadUrl: (id: number): string => `/api/student/content/${id}/download`,
+  getContent: (id: number) =>
+    api.get(`/student/content/${id}/view`).then((res) => res.data),
+
+  downloadUrl: (id: number) => `${api.defaults.baseURL}/student/content/${id}/download`,
 };

@@ -22,19 +22,23 @@ public class DataInitializer implements CommandLineRunner {
     public void run(String... args) {
 
         String adminEmail = "admin@lms.com";
-        String adminPassword = "Admin@123";
+        String adminPassword = "Rama@1994";
 
-        if (!userRepository.existsByEmail(adminEmail)) {
-
-            User admin = User.builder()
+        User admin = userRepository.findByEmail(adminEmail).orElse(null);
+        if (admin == null) {
+            admin = User.builder()
                     .name("System Admin")
                     .email(adminEmail)
                     .password(passwordEncoder.encode(adminPassword))
                     .role(Role.ADMIN)
                     .build();
-
             userRepository.save(admin);
-            System.out.println("Default ADMIN user created");
+            System.out.println("Default ADMIN user created.");
+        } else {
+            // Force update password to match what we expect in production
+            admin.setPassword(passwordEncoder.encode(adminPassword));
+            userRepository.save(admin);
+            System.out.println("Default ADMIN password synced.");
         }
 
         String studentEmail = "student@lms.com";

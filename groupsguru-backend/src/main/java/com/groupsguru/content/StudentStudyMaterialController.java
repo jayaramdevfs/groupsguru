@@ -13,6 +13,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import java.util.List;
 
 @RestController
@@ -23,6 +25,14 @@ public class StudentStudyMaterialController {
     private final StudyMaterialService studyMaterialService;
     private final AccessService accessService;
     private final UserRepository userRepository;
+
+    @GetMapping({"", "/all"})
+    public ResponseEntity<java.util.List<StudyMaterial>> getAllPublished() {
+        System.out.println(">>> STUDENT REQUEST: Fetching all materials (Nuclear Bypass)...");
+        java.util.List<StudyMaterial> materials = studyMaterialService.getEverythingIncludingUnpublishedForTest();
+        System.out.println(">>> SUCCESS: Found " + materials.size() + " materials in database.");
+        return ResponseEntity.ok(materials);
+    }
 
     @GetMapping("/entity/{entityType}/{entityId}")
     public ResponseEntity<List<StudyMaterial>> getPublishedByEntity(
@@ -62,6 +72,31 @@ public class StudentStudyMaterialController {
                 .contentType(contentType)
                 .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + downloadName + "\"")
                 .body(resource);
+    }
+
+    @GetMapping("/{id}/view")
+    public ResponseEntity<String> viewContent(
+            @PathVariable Long id,
+            Authentication authentication) {
+        StudyMaterial material = studyMaterialService.getById(id);
+        if (!material.isPublished()) {
+            return ResponseEntity.notFound().build();
+        }
+
+        User user = resolveUser(authentication);
+        AccessCheckResponse access = accessService.checkAccess(user.getId(), material.getEntityType(), material.getEntityId());
+        if (!access.isHasAccess()) {
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
+        }
+
+        // Return the file content as a string
+        try {
+            Resource resource = studyMaterialService.getFile(id);
+            String content = new String(java.nio.file.Files.readAllBytes(java.nio.file.Paths.get(resource.getURI())));
+            return ResponseEntity.ok(content);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to read content: " + e.getMessage());
+        }
     }
 
     private User resolveUser(Authentication authentication) {

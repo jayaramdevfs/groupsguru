@@ -14,35 +14,35 @@ public class Question {
     @Column(unique = true, nullable = false)
     private String questionCode; // e.g., GG-S11.1-Q01
 
-    @Column(length = 2000)
+    @Column(length = 8000)
     private String questionTextEn;
 
-    @Column(length = 2000)
+    @Column(length = 8000)
     private String questionTextTe;
 
-    @Column(length = 2000)
+    @Column(length = 8000)
     private String optionAEn;
-    @Column(length = 2000)
+    @Column(length = 8000)
     private String optionATe;
-    @Column(length = 2000)
+    @Column(length = 8000)
     private String optionBEn;
-    @Column(length = 2000)
+    @Column(length = 8000)
     private String optionBTe;
-    @Column(length = 2000)
+    @Column(length = 8000)
     private String optionCEn;
-    @Column(length = 2000)
+    @Column(length = 8000)
     private String optionCTe;
-    @Column(length = 2000)
+    @Column(length = 8000)
     private String optionDEn;
-    @Column(length = 2000)
+    @Column(length = 8000)
     private String optionDTe;
 
     private String correctOption; // A/B/C/D
 
-    @Column(length = 2000)
+    @Column(length = 8000)
     private String explanationEn;
 
-    @Column(length = 2000)
+    @Column(length = 8000)
     private String explanationTe;
 
     private String microTopicId; 

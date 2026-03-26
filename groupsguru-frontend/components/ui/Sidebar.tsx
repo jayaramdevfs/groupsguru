@@ -13,6 +13,7 @@ interface SidebarProps {
 const studentLinks = [
   { name: "Dashboard", href: "/student/dashboard" },
   { name: "Categories", href: "/student/categories" },
+  { name: "Study Materials", href: "/student/content" },
   { name: "Test Series", href: "/student/test-series" },
   { name: "Exams", href: "/student/exams" },
 ];
@@ -22,6 +23,7 @@ const adminSections = [
     label: "CONTENT",
     links: [
       { name: "Dashboard", href: "/admin/dashboard" },
+      { name: "Study Materials", href: "/admin/study-materials" },
       { name: "Content Tree", href: "/admin/content-tree" },
       { name: "Categories", href: "/admin/categories" },
       { name: "Subcategories", href: "/admin/subcategories" },

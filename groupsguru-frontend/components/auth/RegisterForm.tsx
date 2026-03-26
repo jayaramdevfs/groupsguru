@@ -26,8 +26,8 @@ export default function RegisterForm() {
       });
 
       router.push("/login");
-    } catch {
-      setError("Registration protocol failed. Internal server error.");
+    } catch (err: any) {
+      setError(err?.response?.data?.message || "Registration protocol failed.");
     }
   };
 
@@ -42,7 +42,7 @@ export default function RegisterForm() {
 
       <div className="space-y-4">
         <AnimatedInput
-          label="Legal Full Name"
+          label="Full Name"
           placeholder="e.g. Jayram Prasad"
           value={name}
           onChange={(v) => setName(v.toString())}
@@ -50,7 +50,7 @@ export default function RegisterForm() {
         />
 
         <AnimatedInput
-          label="Verification Email"
+          label="Email Address"
           type="email"
           placeholder="user@example.com"
           value={email}
@@ -59,7 +59,7 @@ export default function RegisterForm() {
         />
 
         <AnimatedInput
-          label="Access Protocol (Password)"
+          label="Password"
           type="password"
           placeholder="••••••••"
           value={password}
@@ -70,14 +70,14 @@ export default function RegisterForm() {
 
       <button
         type="submit"
-        className="w-full py-4 rounded bg-[#D97706] text-white font-bold text-sm tracking-widest hover:bg-[#F59E0B] transition-colors"
+        className="w-full py-4 rounded bg-[#D97706] text-white font-bold text-sm uppercase tracking-widest hover:bg-[#F59E0B] transition-colors shadow-lg shadow-[#D97706]/20"
       >
-        EXECUTE_REGISTRATION
+        Create Account
       </button>
 
-      <div className="text-center pt-4">
-        <Link href="/login" className="text-[10px] font-mono font-bold text-[#666666] hover:text-[#D97706] uppercase tracking-[0.2em] transition-colors">
-          Already verified? Login++
+      <div className="text-center pt-6">
+        <Link href="/login" className="text-sm font-medium text-[#666666] hover:text-[#D97706] transition-colors">
+          Already have an account? <span className="font-bold underline decoration-[#D97706]/30">Sign in</span>
         </Link>
       </div>
     </form>

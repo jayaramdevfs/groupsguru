@@ -12,7 +12,7 @@ export default function MigrationStatusPage() {
     useEffect(() => {
         const fetchStatus = async () => {
             try {
-                const response = await fetch('http://localhost:8080/api/admin/migration/status', {
+                const response = await fetch('/api/admin/migration/status', {
                     headers: {
                         'Authorization': `Bearer ${localStorage.getItem('token')}`
                     }
@@ -115,6 +115,32 @@ export default function MigrationStatusPage() {
                             </div>
                         )}
                         
+                        {status && (
+                            <div className="mt-8 flex justify-center">
+                                <button 
+                                    onClick={async () => {
+                                        try {
+                                           const res = await fetch('/api/admin/migration/sync-materials', {
+                                                method: 'POST',
+                                                headers: {
+                                                    'Authorization': `Bearer ${localStorage.getItem('token')}`
+                                                }
+                                           });
+                                           const msg = await res.text();
+                                           alert(msg);
+                                           // refresh status...
+                                           window.location.reload();
+                                        } catch (e: any) {
+                                            alert("Sync failed: " + e.message);
+                                        }
+                                    }}
+                                    className="px-8 py-3 rounded bg-[#D97706]/10 border border-[#D97706]/30 text-[#D97706] font-mono font-bold uppercase tracking-widest hover:bg-[#D97706] hover:text-white transition-all shadow-lg"
+                                >
+                                    Sync Materials from Local Drive
+                                </button>
+                            </div>
+                        )}
+
                         {status && (
                             <footer className="mt-8 pt-6 border-t border-[#3A3A3A] flex items-center justify-between">
                                 <div className="flex items-center gap-2">

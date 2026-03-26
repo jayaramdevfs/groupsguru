@@ -148,6 +148,7 @@ export interface StudyMaterial {
   descriptionTe?: string;
   entityType: string;
   entityId: number;
+  subject?: string;
   fileName?: string;
   storedFileName?: string;
   fileType?: string;

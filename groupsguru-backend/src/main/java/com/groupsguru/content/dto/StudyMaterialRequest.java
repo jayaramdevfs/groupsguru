@@ -11,6 +11,7 @@ public class StudyMaterialRequest {
     private String entityType;
     private Long entityId;
     private String fileType;
+    private String subject;
     private String accessType;
     private Double priceInr;
     private Boolean isPublished;

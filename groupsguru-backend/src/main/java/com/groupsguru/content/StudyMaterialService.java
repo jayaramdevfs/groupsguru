@@ -25,6 +25,11 @@ public class StudyMaterialService {
     }
 
     @Transactional(readOnly = true)
+    public List<StudyMaterial> getEverythingIncludingUnpublishedForTest() {
+        return repository.findAll();
+    }
+
+    @Transactional(readOnly = true)
     public List<StudyMaterial> getByEntity(String entityType, Long entityId) {
         return repository.findByEntityTypeAndEntityIdAndIsDeletedFalseOrderByDisplayOrder(normalizeEntityType(entityType), entityId);
     }
@@ -103,6 +108,7 @@ public class StudyMaterialService {
         if (request.getEntityType() != null) material.setEntityType(normalizeEntityType(request.getEntityType()));
         if (request.getEntityId() != null) material.setEntityId(request.getEntityId());
         if (request.getFileType() != null) material.setFileType(request.getFileType().trim().toUpperCase());
+        if (request.getSubject() != null) material.setSubject(request.getSubject());
         if (request.getAccessType() != null) material.setAccessType(request.getAccessType().trim().toUpperCase());
         if (request.getPriceInr() != null) material.setPriceInr(request.getPriceInr());
         if (request.getIsPublished() != null) material.setPublished(request.getIsPublished());

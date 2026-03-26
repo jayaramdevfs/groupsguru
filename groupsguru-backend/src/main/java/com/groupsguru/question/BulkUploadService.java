@@ -6,6 +6,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Optional;
 
 @Service
 public class BulkUploadService {
@@ -65,19 +66,25 @@ public class BulkUploadService {
         for (Question q : parsedQuestions) {
             String error = validateQuestion(q);
             if (error == null) {
-                // duplicate check
-                if (q.getQuestionCode() != null && questionRepository.findByQuestionCodeAndIsDeletedFalse(q.getQuestionCode()).isPresent()) {
-                    error = "Duplicate question code: " + q.getQuestionCode();
+                // duplicate check - find existing by questionCode
+                Optional<Question> existingOpt = questionRepository.findByQuestionCodeAndIsDeletedFalse(q.getQuestionCode());
+                if (existingOpt.isPresent()) {
+                    error = "DUPLICATE: This question already exists in the database.";
                 }
             }
             
             if (error == null) {
-                q.setBatchId(batch.getId());
-                if (q.getSprintId() == null || q.getSprintId().isEmpty()) {
-                    q.setSprintId("BULK");
+                try {
+                    q.setBatchId(batch.getId());
+                    if (q.getSprintId() == null || q.getSprintId().isEmpty()) {
+                        q.setSprintId("BULK");
+                    }
+                    questionRepository.save(q);
+                    successCount++;
+                } catch (Exception e) {
+                    failCount++;
+                    notes.append("Question ").append(q.getQuestionCode()).append(": DATABASE ERR: ").append(e.getMessage()).append("\n");
                 }
-                questionRepository.save(q);
-                successCount++;
             } else {
                 failCount++;
                 notes.append("Question ").append(q.getQuestionCode()).append(": ").append(error).append("\n");
@@ -97,15 +104,25 @@ public class BulkUploadService {
     }
 
     private String validateQuestion(Question q) {
+        if (q == null) return "Empty question object";
+        
         if (q.getQuestionCode() == null || q.getQuestionCode().trim().isEmpty()) {
-            return "Missing questionCode";
+            return "Missing field: questionCode";
         }
         if (q.getQuestionTextEn() == null || q.getQuestionTextEn().trim().isEmpty()) {
-            return "Missing questionTextEn";
+            return "Missing field: questionTextEn";
         }
-        if (q.getCorrectOption() == null || !q.getCorrectOption().matches("[ABCD]")) {
-            return "Invalid or missing correctOption";
+        if (q.getCorrectOption() == null || q.getCorrectOption().trim().isEmpty()) {
+            return "Missing field: correctOption";
         }
+        
+        // Normalize and validate correctOption
+        String co = q.getCorrectOption().trim().toUpperCase();
+        if (!co.matches("[ABCD]")) {
+            return "Invalid correctOption value: [" + co + "]. Must be A, B, C, or D.";
+        }
+        q.setCorrectOption(co);
+        
         return null;
     }
 

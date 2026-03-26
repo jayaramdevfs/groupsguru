@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import api from "../../lib/api";
 import AnimatedInput from "../ui/AnimatedInput";
 import { useAuth } from "../../app/context/AuthContext";
@@ -75,10 +76,22 @@ export default function LoginForm() {
 
       <button
         type="submit"
-        className="w-full py-3 rounded-[8px] text-[15px] font-semibold text-white bg-[#D97706] hover:bg-[#F59E0B] transition-colors duration-150"
+        className="w-full py-3 rounded-[8px] text-[15px] font-semibold text-white bg-[#D97706] hover:bg-[#F59E0B] transition-colors duration-150 shadow-lg shadow-[#D97706]/20"
       >
         Sign in
       </button>
+
+      <div className="pt-4 text-center">
+        <p className="text-[13px] text-[#666666]">
+          Don't have an account?{" "}
+          <Link
+            href="/register"
+            className="text-[#D97706] font-semibold hover:text-[#F59E0B] transition-colors"
+          >
+            Create account
+          </Link>
+        </p>
+      </div>
     </form>
   );
 }

@@ -76,6 +76,16 @@ export default function AdminDashboard() {
       statLabel: "Micro-Nodes",
     },
     {
+      title: "Knowledge Assets",
+      titleTe: "నోట్స్ & మెటీరియల్స్",
+      description: "Manage bilingual study notes, PDFs, and learning resources across the system.",
+      descriptionTe: "స్టడీ మెటీరియల్స్ మరియు PDFలను ఇక్కడ నిర్వహించండి.",
+      icon: "📚",
+      href: "/admin/study-materials",
+      stat: null,
+      statLabel: "Library",
+    },
+    {
       title: "Question Forge",
       titleTe: "ప్రశ్న బ్యాంక్",
       description: "Bilingual MCQ engineering with difficulty and cognitive metadata.",

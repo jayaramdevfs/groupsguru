@@ -42,6 +42,8 @@ public class StudyMaterial {
     @Column(name = "stored_file_name")
     private String storedFileName;
 
+    private String subject;
+
     @Column(name = "file_type")
     private String fileType;
 
