@@ -131,6 +131,20 @@ public class ExamAttemptService {
         return examAttemptRepository.save(attempt);
     }
 
+    @Transactional
+    public com.groupsguru.exam.dto.PracticeAnswerResponse submitPracticeAnswer(Long examId, com.groupsguru.exam.dto.PracticeAnswerRequest request) {
+        Question q = questionRepository.findById(request.getQuestionId())
+                .orElseThrow(() -> new RuntimeException("Question not found"));
+        boolean isCorrect = request.getSelectedOption() != null &&
+                            request.getSelectedOption().equalsIgnoreCase(q.getCorrectOption());
+        return com.groupsguru.exam.dto.PracticeAnswerResponse.builder()
+                .isCorrect(isCorrect)
+                .correctOption(q.getCorrectOption())
+                .explanationEn(q.getExplanationEn())
+                .explanationTe(q.getExplanationTe())
+                .build();
+    }
+
     public List<ExamAttempt> getMyAttempts(Long userId) {
         return examAttemptRepository.findByUserIdOrderByStartedAtDesc(userId);
     }

@@ -170,3 +170,24 @@ export interface ExamResult {
   questions: QuestionResult[];
   topicAnalytics: TopicAnalytics[];
 }
+
+export interface StudyMaterial {
+  id: number;
+  title: string;
+  titleTe: string;
+  description: string;
+  descriptionTe: string;
+  entityType: string;
+  entityId: number;
+  fileName: string;
+  storedFileName: string;
+  fileType: string;
+  mimeType: string;
+  fileSize: number;
+  accessType: string;
+  priceInr?: number;
+  isPublished: boolean;
+  displayOrder: number;
+  createdAt: string;
+  updatedAt: string;
+}

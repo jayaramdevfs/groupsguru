@@ -1,7 +1,6 @@
 "use client";
 
 import ProtectedLayout from "@/components/layout/ProtectedLayout";
-import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState, useCallback } from "react";
 import { useParams } from "next/navigation";
 import { registryApi } from "@/lib/registry";
@@ -12,11 +11,6 @@ import { useLanguage } from "@/app/context/LanguageContext";
 import { LanguageToggle } from "@/components/ui/LanguageToggle";
 import Link from "next/link";
 import { Multilang } from "@/components/ui/Multilang";
-
-const spring = {
-  
-  duration: 0.25, ease: "easeOut" as const,
-};
 
 function QuestionCard({ question, language }: { question: Question; language: string }) {
   const [showAnswer, setShowAnswer] = useState(false);
@@ -29,45 +23,53 @@ function QuestionCard({ question, language }: { question: Question; language: st
   const explanation = language === "te" && question.explanationTe ? question.explanationTe : question.explanationEn;
 
   return (
-    <div className="bg-white/5 border border-[#57534E]/40 rounded-2xl p-6 relative">
-       <div className="flex justify-between items-start mb-4">
-         <div className="flex gap-2 mb-2">
-            <span className="text-[10px] font-bold px-2 py-1 rounded  ">{question.difficulty}</span>
-            <span className="text-[10px] font-bold px-2 py-1 rounded bg-green-500/20 text-green-300">{question.questionType}</span>
+    <div className="bg-[#141414] border border-[#3A3A3A] rounded p-6">
+       <div className="flex justify-between items-start mb-6">
+         <div className="flex gap-2">
+            <span className="text-[9px] font-mono font-bold px-1.5 py-0.5 rounded border border-[#3A3A3A] text-[#666666] uppercase tracking-widest">
+              {question.difficulty}
+            </span>
+            <span className="text-[9px] font-mono font-bold px-1.5 py-0.5 rounded border border-[#D97706]/30 bg-[#D97706]/5 text-[#D97706] uppercase tracking-widest">
+              {question.questionType}
+            </span>
          </div>
        </div>
-       <div className="text-lg font-medium text-[#FAFAF9] mb-6" dangerouslySetInnerHTML={{ __html: qText || '' }} />
-       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+       
+       <div className="text-base font-bold text-[#E8E8E8] mb-8 leading-relaxed" dangerouslySetInnerHTML={{ __html: qText || '' }} />
+       
+       <div className="grid grid-cols-1 gap-3 mb-8">
          {['A', 'B', 'C', 'D'].map((letter, idx) => {
            const optText = [optA, optB, optC, optD][idx];
            const isCorrect = showAnswer && question.correctOption === letter;
            return (
-             <div key={letter} className={`p-4 rounded-xl border flex gap-3 ${isCorrect ? 'bg-green-500/10 border-green-500/50 text-green-200' : 'bg-white/[0.02] border-[#57534E]/40 text-[#FAFAF9]/80'}`}>
-                <span className="font-bold opacity-50">{letter}.</span>
-                <span dangerouslySetInnerHTML={{ __html: optText || '' }} />
+             <div key={letter} className={`p-4 rounded border flex gap-4 transition-colors ${isCorrect ? 'bg-[#10B981]/5 border-[#10B981]/40 text-[#10B981]' : 'bg-[#191919] border-[#3A3A3A] text-[#A0A0A0]'}`}>
+                <span className="font-mono font-bold opacity-40 text-xs">{letter}</span>
+                <span className="text-sm font-medium" dangerouslySetInnerHTML={{ __html: optText || '' }} />
              </div>
            );
          })}
        </div>
-       <button onClick={() => setShowAnswer(!showAnswer)} className="px-4 py-2 bg-orange-500/20 text-[#F97316] rounded-lg hover:bg-orange-500/30 transition-colors text-sm font-bold">
-         {showAnswer ? "Hide Answer" : "Reveal Answer"}
+       
+       <button 
+         onClick={() => setShowAnswer(!showAnswer)} 
+         className="px-4 py-2 bg-[#D97706]/10 text-[#D97706] border border-[#D97706]/30 rounded hover:bg-[#D97706]/20 transition-colors text-[10px] font-mono font-bold uppercase tracking-[0.2em]"
+       >
+         {showAnswer ? "HIDE_RATIONALE" : "REVEAL_PROTOCOL"}
        </button>
        
-       <AnimatePresence>
-         {showAnswer && (
-            <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }} className="mt-4 pt-4 border-t border-[#57534E]/40 overflow-hidden">
-               <p className="text-sm text-green-400 font-bold mb-2">Correct Option: {question.correctOption}</p>
-               {explanation && (
-                 <div className="text-sm text-[#FAFAF9]/70" dangerouslySetInnerHTML={{ __html: explanation }} />
-               )}
-            </motion.div>
-         )}
-       </AnimatePresence>
+       {showAnswer && (
+          <div className="mt-8 pt-8 border-t border-[#3A3A3A]">
+             <div className="text-[10px] font-mono font-bold text-[#10B981] uppercase tracking-[0.2em] mb-4">Verification: VECTOR_{question.correctOption}</div>
+             {explanation && (
+               <div className="text-sm text-[#E8E8E8] leading-relaxed bg-[#191919] p-6 rounded border border-[#3A3A3A] font-mono whitespace-pre-line" dangerouslySetInnerHTML={{ __html: explanation }} />
+             )}
+          </div>
+       )}
     </div>
   );
 }
 
-function MicroTopicCard({ mt, language, index }: { mt: MicroTopic; language: string; index: number }) {
+function MicroTopicCard({ mt, language }: { mt: MicroTopic; language: string; index: number }) {
   const [expanded, setExpanded] = useState(false);
   const [questions, setQuestions] = useState<Question[]>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -88,73 +90,60 @@ function MicroTopicCard({ mt, language, index }: { mt: MicroTopic; language: str
   };
 
   return (
-    <motion.div
-      layout
-      initial={{ opacity: 0, x: -20 }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, scale: 0.9 }}
-      transition={{ ...spring, delay: index * 0.05 }}
-      className="w-full flex-col relative overflow-hidden bg-white/[0.03] border border-white/5 rounded-xl cursor-pointer group hover:bg-white/[0.05] transition-all"
-      onClick={handleExpand}
-    >
-        <div className="flex flex-col md:flex-row items-center gap-6 p-8 relative">
-           <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/5  group-hover:bg-orange-500/10 transition-all pointer-events-none" />
-           <div className="w-14 h-14 shrink-0 rounded-2xl bg-[#44403C] border border-[#57534E]/40 flex items-center justify-center font-bold text-xl text-[#F97316]">
-             <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="1"/><path d="M20.2 20.2c2.04-2.03.02-7.36-4.5-11.9-4.54-4.52-9.87-6.54-11.9-4.5-2.04 2.03-.02 7.36 4.5 11.9 4.54 4.52 9.87 6.54 11.9 4.5Z"/><path d="M15.7 15.7c4.52-4.54 6.54-9.87 4.5-11.9-2.03-2.04-7.36-.02-11.9 4.5-4.52 4.54-6.54 9.87-4.5 11.9 2.03 2.04 7.36.02 11.9-4.5Z"/></svg>
-           </div>
-           <div className="flex-1 w-full relative z-10">
-              <div className="flex flex-wrap items-center gap-2 mb-3">
-                 <span className="text-[#F97316] font-mono text-[10px] font-bold px-2 py-0.5 border border-[#57534E]/40 rounded-full">{mt.microTopicId}</span>
-                 {mt.subject && <span className="text-[#F97316] text-[10px] font-bold px-2 py-0.5 border border-[#57534E]/40 rounded-full bg-orange-500/20">{mt.subject}</span>}
-                 {mt.paper && <span className=" text-[10px] font-bold px-2 py-0.5 border  rounded-full ">{mt.paper}</span>}
-              </div>
-              <h3 className="text-xl font-bold text-[#FAFAF9] mb-2">{mt.topicName || "Atomic Topic"}</h3>
-              <p className="text-sm text-[#FAFAF9]/60 leading-relaxed mb-3">{mt.microTopicText}</p>
-              
-              <div className="mt-4 pt-4 border-t border-white/5 flex gap-4 text-xs font-semibold text-[#FAFAF9]/30">
-                 {mt.groupApplicability && <span>🎯 {mt.groupApplicability}</span>}
-                 {mt.dataConfidence && <span>✓ Confidence: {mt.dataConfidence.toUpperCase()}</span>}
-              </div>
+    <div className={`w-full overflow-hidden bg-[#1C1C1C] border border-[#3A3A3A] rounded transition-colors ${expanded ? 'border-[#666666]' : 'hover:border-[#666666]'}`}>
+        <button 
+          className="w-full flex flex-col sm:flex-row sm:items-center gap-6 p-6 text-left"
+          onClick={handleExpand}
+        >
+           <div className="w-10 h-10 shrink-0 rounded border border-[#3A3A3A] bg-[#141414] flex items-center justify-center font-mono font-bold text-xs text-[#D97706]">
+             L4
            </div>
            
-           <div className="shrink-0 pl-4 z-10">
-             <div className={`p-2 rounded-full bg-white/5 text-[#FAFAF9]/50 transition-transform ${expanded ? 'rotate-180' : ''}`}>
-               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-               </svg>
-             </div>
+           <div className="flex-1 min-w-0">
+              <div className="flex flex-wrap items-center gap-2 mb-2">
+                 <span className="text-[9px] font-mono font-bold text-[#666666] uppercase tracking-[0.2em]">{mt.microTopicId}</span>
+                 {mt.paper && <span className="text-[9px] font-mono font-bold px-1.5 py-0.5 border border-[#3A3A3A] rounded text-[#666666] uppercase tracking-widest">{mt.paper}</span>}
+              </div>
+              <h3 className="text-xl font-bold text-[#E8E8E8] mb-1">{mt.topicName || "Atomic Topic"}</h3>
+              <p className="text-sm text-[#A0A0A0] leading-relaxed line-clamp-2">{mt.microTopicText}</p>
            </div>
-        </div>
+           
+           <div className="shrink-0">
+              <div className={`p-2 rounded text-[#666666] transition-transform ${expanded ? 'rotate-180 text-[#D97706]' : ''}`}>
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+           </div>
+        </button>
 
-        <AnimatePresence>
-          {expanded && (
-            <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: "auto", opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              className="px-8 pb-8 pt-0 mt-0"
-              onClick={(e) => e.stopPropagation()}
-            >
-               <div className="pt-8 border-t border-white/5">
-                 {isLoading ? (
-                   <div className="py-8 text-center text-[#FAFAF9]/50">
-                      <div className="inline-block w-8 h-8 border-4 border-orange-500 border-t-transparent rounded-full animate-spin"></div>
-                   </div>
-                 ) : questions.length === 0 ? (
-                   <div className="py-8 text-center text-[#FAFAF9]/50">No questions mapped to this micro-topic yet.</div>
-                 ) : (
-                   <div className="flex flex-col gap-4">
-                     <h4 className="text-lg font-bold text-[#F97316] mb-2">Practice Questions</h4>
-                     {questions.map((q) => (
-                       <QuestionCard key={q.id} question={q} language={language} />
-                     ))}
-                   </div>
-                 )}
+        {expanded && (
+          <div className="px-6 pb-8 pt-8 border-t border-[#3A3A3A]">
+             <div className="flex items-center gap-4 mb-8">
+               <div className="h-px flex-1 bg-[#3A3A3A]"></div>
+               <div className="text-[10px] font-mono font-bold uppercase tracking-[0.3em] text-[#666666]">Assessment Inventory</div>
+               <div className="h-px flex-1 bg-[#3A3A3A]"></div>
+             </div>
+
+             {isLoading ? (
+               <div className="py-12 flex flex-col items-center gap-4">
+                  <div className="w-6 h-6 border-2 border-[#D97706] border-t-transparent rounded-full animate-spin"></div>
+                  <span className="text-[9px] font-mono font-bold text-[#666666] uppercase tracking-widest">Querying Corpus...</span>
                </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-    </motion.div>
+             ) : questions.length === 0 ? (
+               <div className="py-12 text-center text-[#666666] font-mono text-[10px] uppercase tracking-[0.2em] bg-[#141414] rounded border border-[#3A3A3A]">
+                 // ASSESSMENT_EMPTY
+               </div>
+             ) : (
+               <div className="space-y-6">
+                 {questions.map((q) => (
+                   <QuestionCard key={q.id} question={q} language={language} />
+                 ))}
+               </div>
+             )}
+          </div>
+        )}
+    </div>
   );
 }
 
@@ -191,60 +180,45 @@ export default function StudentMicroTopics() {
     fetchData();
   }, [fetchData]);
 
-  const displayName = topic
-    ? language === "te" && topic.nameTe
-      ? topic.nameTe
-      : topic.name
-    : "Micro-Topics";
-
   return (
     <ProtectedLayout requiredRole="STUDENT">
-      <div className="min-h-screen py-24 px-6 md:px-12 w-full max-w-7xl mx-auto text-[#FAFAF9]">
-        <motion.div
-          className="mb-16 text-center"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={spring}
-        >
-          <Link
-            href={`/student/categories/${categoryId}/${subCategoryId}/${sectionId}`}
-            className="inline-flex items-center gap-2 text-[#F97316] font-semibold mb-6 hover:text-[#F97316] transition-colors"
-          >
-            <svg
-              className="w-5 h-5"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+      <div className="max-w-[1000px] mx-auto py-12 px-6">
+        
+        {/* Header Section */}
+        <header className="mb-12 flex flex-col sm:flex-row sm:items-end justify-between gap-6 border-b border-[#3A3A3A] pb-8">
+          <div className="flex-1">
+             <Link
+              href={`/student/categories/${categoryId}/${subCategoryId}/${sectionId}`}
+              className="inline-flex items-center gap-2 text-[#D97706] text-[10px] font-mono font-bold uppercase tracking-[0.2em] mb-6 hover:opacity-70 transition-opacity"
             >
-              <polyline points="15 18 9 12 15 6"></polyline>
-            </svg>
-            Back to Topics
-          </Link>
+              <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+              Level_03 Root
+            </Link>
 
-          <div className="flex items-center justify-center gap-4 mb-4">
-            <h1 className="text-[40px] md:text-[56px] font-[800] leading-tight text-[#F97316]">
-              {displayName}
+            <div className="text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-[#666666] mb-2">Knowledge Subset_v2</div>
+            <h1 className="text-4xl md:text-5xl font-serif text-[#E8E8E8]">
+              {topic ? (
+                <Multilang en={topic.name} te={topic.nameTe || topic.name} />
+              ) : (
+                "Micro-Topics"
+              )}
             </h1>
-            <LanguageToggle />
           </div>
-          <p className="text-[18px] text-[#FAFAF9]/70 font-[600] max-w-2xl mx-auto">
-            Atomic learning intelligence targeted for Groups exams.
-          </p>
-        </motion.div>
+          <LanguageToggle />
+        </header>
 
-        <div className="grid grid-cols-1 gap-4">
+        {/* Micro-Topic Grid */}
+        <div className="pb-20">
           {isLoading ? (
-            <div className="flex items-center justify-center py-20">
-              <div className="w-12 h-12 border-4 border-orange-500 border-t-transparent rounded-full animate-spin"></div>
+            <div className="flex flex-col items-center justify-center py-20 gap-4">
+              <div className="w-8 h-8 border-2 border-[#D97706] border-t-transparent rounded-full animate-spin"></div>
+              <span className="text-[10px] font-mono font-bold text-[#666666] uppercase tracking-widest">Parsing Subset...</span>
             </div>
           ) : microTopics.length === 0 ? (
-            <div className="text-center py-20 text-[#FAFAF9]/50 bg-white/5 rounded-xl border border-[#57534E]/40 border-dashed">
-              <div className="text-4xl mb-4">⚛️</div>
-              <p className="text-xl font-semibold mb-2">No micro-topics found.</p>
-              <p>Guru intelligence has no atomic data here yet.</p>
+            <div className="text-center py-20 bg-[#1C1C1C] border border-[#3A3A3A] rounded">
+               <p className="text-[#666666] font-mono text-[10px] uppercase tracking-[0.2em]">// INDEX_EMPTY</p>
             </div>
           ) : (
             <div className="flex flex-col gap-4">

@@ -17,6 +17,7 @@ interface AuthContextType {
   user: User | null;
   loading: boolean;
   login: (email: string, password: string) => Promise<void>;
+  register: (name: string, email: string, password: string) => Promise<void>;
   logout: () => Promise<void>;
 }
 
@@ -109,6 +110,24 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     }
   };
 
+  const register = async (name: string, email: string, password: string) => {
+    try {
+      await api.post("/api/auth/register", {
+        name,
+        email,
+        password,
+        role: "STUDENT",
+      });
+    } catch (error: any) {
+      if (error.code === "ERR_NETWORK" || !error.response) {
+        throw new Error("Cannot reach server. Run: adb reverse tcp:8080 tcp:8080");
+      }
+      throw new Error(
+        `Registration error: ${error.response?.data?.message || error.message}`
+      );
+    }
+  };
+
   const logout = async () => {
     try {
       await api.post("/api/auth/logout");
@@ -120,7 +139,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, loading, login, logout }}>
+    <AuthContext.Provider value={{ user, loading, login, register, logout }}>
       {children}
     </AuthContext.Provider>
   );

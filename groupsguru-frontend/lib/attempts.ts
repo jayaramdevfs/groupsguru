@@ -25,4 +25,9 @@ export const attemptsApi = {
     const response = await api.get("/api/exams/my-attempts");
     return response.data;
   },
+
+  practiceAnswer: async (examId: number, data: { questionId: number, selectedOption: string }): Promise<{ isCorrect: boolean, correctOption: string, explanationEn: string, explanationTe: string }> => {
+    const response = await api.post(`/api/exams/${examId}/practice-answer`, data);
+    return response.data;
+  }
 };

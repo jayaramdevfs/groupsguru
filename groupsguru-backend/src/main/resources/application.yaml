@@ -16,8 +16,8 @@ spring:
 server:
   port: 8080
 jwt:
-  secret: mysupersecretkeymysupersecretkey
-  expiration: 86400000
+  secret: ${JWT_SECRET:mysupersecretkeymysupersecretkey}
+  expiration: ${JWT_EXPIRATION:86400000}
 
 app:
   storage:
@@ -29,5 +29,5 @@ app:
       secure: ${APP_AUTH_COOKIE_SECURE:false}
       same-site: ${APP_AUTH_COOKIE_SAME_SITE:Lax}
 razorpay:
-  key-id: rzp_test_SU3wy02Xv8CfbL
-  key-secret: EDBCJRnOqOmB82tP88ny0u3f
+  key-id: ${RAZORPAY_KEY_ID:rzp_test_SU3wy02Xv8CfbL}
+  key-secret: ${RAZORPAY_KEY_SECRET:EDBCJRnOqOmB82tP88ny0u3f}

@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
+import ProtectedLayout from "@/components/layout/ProtectedLayout";
+import { Multilang } from "@/components/ui/Multilang";
 
 export default function MigrationStatusPage() {
     const [status, setStatus] = useState<{ microTopics: number; questions: number } | null>(null);
@@ -10,10 +12,9 @@ export default function MigrationStatusPage() {
     useEffect(() => {
         const fetchStatus = async () => {
             try {
-                // Fetch from the backend
                 const response = await fetch('http://localhost:8080/api/admin/migration/status', {
                     headers: {
-                        'Authorization': `Bearer ${localStorage.getItem('token')}` // assuming token is needed
+                        'Authorization': `Bearer ${localStorage.getItem('token')}`
                     }
                 });
                 
@@ -34,44 +35,102 @@ export default function MigrationStatusPage() {
     }, []);
 
     return (
-        <div className="min-h-screen bg-gray-50 flex flex-col p-8">
-            <h1 className="text-3xl font-bold mb-8 text-black">Data Migration Status</h1>
-            
-            <div className="max-w-4xl bg-white p-8 rounded-xl shadow border border-gray-200">
-                <h2 className="text-xl font-semibold mb-6 flex items-center text-gray-800">
-                    <span className="w-3 h-3 bg-[#EA580C] rounded-full mr-3 shadow-glow-purple"></span>
-                    Database Population
-                </h2>
+        <ProtectedLayout requiredRole="ADMIN">
+            <div className="max-w-[800px] mx-auto py-12 px-6">
                 
-                {loading && <div className="text-gray-500 animate-pulse">Checking status...</div>}
-                
-                {error && <div className="text-red-500 bg-red-50 p-4 rounded-md border border-red-200">{error}</div>}
-                
-                {status && (
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div className="bg-[#EA580C] border border-[#57534E]/40 p-6 rounded-lg text-center shadow-sm">
-                            <h3 className="text-lg font-medium text-[#F97316] mb-2">Micro Topics</h3>
-                            <div className="text-5xl font-bold text-[#F97316] font-mono tracking-tight">{status.microTopics}</div>
-                            <div className="mt-3 text-sm font-medium text-[#F97316] bg-[#EA580C] inline-block px-3 py-1 rounded-full">Target: 1,021</div>
+                {/* Header Section */}
+                <header className="mb-12 border-b border-[#3A3A3A] pb-8">
+                    <div className="inline-block px-2 py-0.5 rounded border border-[#D97706]/30 bg-[#D97706]/10 text-[#D97706] text-[10px] font-mono font-bold uppercase tracking-widest mb-4">
+                        Data Integrity Protocol_09
+                    </div>
+                    <h1 className="text-4xl md:text-5xl font-serif text-[#E8E8E8] mb-4">
+                        Migration <span className="text-[#D97706]">Verify</span>
+                    </h1>
+                    <p className="text-[#A0A0A0] max-w-xl leading-relaxed text-sm">
+                        <Multilang 
+                            en="Real-time audit of the seed data migration. Verify knowledge node population and MCQ repository sync against benchmark targets." 
+                            te="డేటా మైగ్రేషన్ స్థితిని తనిఖీ చేయండి. లక్ష్యాలను చేరుకున్నాయో లేదో చూడండి."
+                        />
+                    </p>
+                </header>
+
+                <div className="border border-[#3A3A3A] rounded bg-[#1C1C1C] overflow-hidden">
+                    <div className="p-8 border-b border-[#3A3A3A] bg-[#141414] flex justify-between items-center">
+                        <div>
+                            <h2 className="text-sm font-mono font-bold text-[#E8E8E8] uppercase tracking-[0.2em]">Live Database Population</h2>
+                            <div className="flex items-center gap-2 mt-1">
+                                <span className={`w-1.5 h-1.5 rounded-full ${loading ? "bg-[#666666] animate-pulse" : (status?.microTopics ? "bg-[#10B981]" : "bg-[#C74444]")}`}></span>
+                                <span className="text-[10px] font-mono font-bold text-[#666666] uppercase tracking-widest">
+                                    {loading ? "querying..." : (status?.microTopics ? "connected_stable" : "connection_failed")}
+                                </span>
+                            </div>
                         </div>
+                    </div>
+
+                    <div className="p-8">
+                        {loading && (
+                            <div className="py-10 flex flex-col items-center gap-4">
+                                <div className="w-8 h-8 border-2 border-[#D97706] border-t-transparent rounded-full animate-spin"></div>
+                                <span className="text-[10px] font-mono font-bold text-[#666666] uppercase tracking-widest">Parsing Tables...</span>
+                            </div>
+                        )}
                         
-                        <div className="bg-[#EA580C] border border-[#57534E]/40 p-6 rounded-lg text-center shadow-sm">
-                            <h3 className="text-lg font-medium text-[#F97316] mb-2">Questions</h3>
-                            <div className="text-5xl font-bold text-[#F97316] font-mono tracking-tight">{status.questions}</div>
-                            <div className="mt-3 text-sm font-medium text-[#F97316] bg-[#EA580C] inline-block px-3 py-1 rounded-full">Target: 200+</div>
-                        </div>
+                        {error && (
+                            <div className="p-6 bg-[#C74444]/10 border border-[#C74444]/30 rounded flex items-start gap-4">
+                                <div className="text-[#C74444]">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                                </div>
+                                <div>
+                                    <div className="text-[10px] font-mono font-bold text-[#C74444] uppercase tracking-widest mb-1">Critical Failure</div>
+                                    <div className="text-sm font-mono text-[#E8E8E8]">{error}</div>
+                                </div>
+                            </div>
+                        )}
+                        
+                        {status && (
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div className="bg-[#141414] border border-[#3A3A3A] p-8 rounded relative overflow-hidden group">
+                                    <div className="absolute top-0 right-0 w-16 h-16 bg-[#D97706]/5 group-hover:bg-[#D97706]/10 transition-colors"></div>
+                                    <div className="text-[#666666] text-[10px] font-mono font-bold uppercase tracking-widest mb-4">Micro-Topic Index</div>
+                                    <div className="text-5xl font-mono font-bold text-[#D97706] mb-4">{status.microTopics}</div>
+                                    <div className="flex items-center gap-2">
+                                        <div className="flex-1 h-1 bg-[#1C1C1C] rounded-full overflow-hidden border border-[#3A3A3A]">
+                                            <div className="h-full bg-[#10B981]" style={{ width: `${Math.min(100, (status.microTopics / 1021) * 100)}%` }}></div>
+                                        </div>
+                                        <span className="text-[9px] font-mono font-bold text-[#666666] uppercase tracking-widest">Target: 1,021</span>
+                                    </div>
+                                </div>
+                                
+                                <div className="bg-[#141414] border border-[#3A3A3A] p-8 rounded relative overflow-hidden group">
+                                    <div className="absolute top-0 right-0 w-16 h-16 bg-[#D97706]/5 group-hover:bg-[#D97706]/10 transition-colors"></div>
+                                    <div className="text-[#666666] text-[10px] font-mono font-bold uppercase tracking-widest mb-4">Question Corpus</div>
+                                    <div className="text-5xl font-mono font-bold text-[#D97706] mb-4">{status.questions}</div>
+                                    <div className="flex items-center gap-2">
+                                        <div className="flex-1 h-1 bg-[#1C1C1C] rounded-full overflow-hidden border border-[#3A3A3A]">
+                                            <div className="h-full bg-[#10B981]" style={{ width: `${Math.min(100, (status.questions / 200) * 100)}%` }}></div>
+                                        </div>
+                                        <span className="text-[9px] font-mono font-bold text-[#666666] uppercase tracking-widest">Target: 200+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+                        
+                        {status && (
+                            <footer className="mt-8 pt-6 border-t border-[#3A3A3A] flex items-center justify-between">
+                                <div className="flex items-center gap-2">
+                                    <div className={`w-2 h-2 rounded-full ${status.microTopics >= 1021 ? 'bg-[#10B981]' : 'bg-[#D97706]'}`}></div>
+                                    <span className="text-[10px] font-mono font-bold text-[#666666] uppercase tracking-widest">
+                                        Status: {status.microTopics >= 1021 ? 'PROTOCOL_SUCCESS' : 'SYNC_IN_PROGRESS'}
+                                    </span>
+                                </div>
+                                <div className="text-[9px] font-mono font-bold text-[#3A3A3A] uppercase tracking-[0.2em]">
+                                    GroupsGuru_Migration_Module_v3
+                                </div>
+                            </footer>
+                        )}
                     </div>
-                )}
-                
-                {status && (
-                    <div className="mt-8 pt-6 border-t border-gray-100 flex items-center">
-                        <div className={`w-3 h-3 rounded-full mr-2 ${status.microTopics >= 1021 ? 'bg-green-500' : 'bg-yellow-500'}`}></div>
-                        <span className="text-gray-700 font-medium">
-                            {status.microTopics >= 1021 ? 'Migration Successful' : 'Migration Pending or Incomplete'}
-                        </span>
-                    </div>
-                )}
+                </div>
             </div>
-        </div>
+        </ProtectedLayout>
     );
 }

@@ -1,7 +1,7 @@
-# GroupsGuru — Master Sprint Plan (Vertical Slices)
+# GroupsGuru â€” Master Sprint Plan (Vertical Slices)
 
-**Updated**: 2026-03-25 (Sprint 21a closed)
-**Architecture**: Vertical Slicing — each sprint delivers Backend + Frontend + Mobile together
+**Updated**: 2026-03-25 (Sprint 22 closed)
+**Architecture**: Vertical Slicing â€” each sprint delivers Backend + Frontend + Mobile together
 
 ---
 
@@ -20,9 +20,9 @@ Every sprint **MUST** conclude with the following steps BEFORE being marked as d
 
 | Platform | Stack | Port |
 |----------|-------|------|
-| **Backend** | Spring Boot 3.2.5 · Java 17 · H2 (dev) / PostgreSQL (prod) · JWT | 8080 |
-| **Frontend** | Next.js 16 · React 19 · Tailwind CSS 4 · Framer Motion | 3000 |
-| **Mobile** | React Native 0.84 · React Navigation 7 · Axios | — |
+| **Backend** | Spring Boot 3.2.5 Â· Java 17 Â· H2 (dev) / PostgreSQL (prod) Â· JWT | 8080 |
+| **Frontend** | Next.js 16 Â· React 19 Â· Tailwind CSS 4 Â· Framer Motion | 3000 |
+| **Mobile** | React Native 0.84 Â· React Navigation 7 Â· Axios | â€” |
 
 ---
 
@@ -30,9 +30,9 @@ Every sprint **MUST** conclude with the following steps BEFORE being marked as d
 
 ```
 C:\GroupsGuru\Lms\
-├── groupsguru-backend/    → Spring Boot API
-├── groupsguru-frontend/   → Next.js web app
-└── groupsguru-mobile/     → React Native mobile app
+â”œâ”€â”€ groupsguru-backend/    â†’ Spring Boot API
+â”œâ”€â”€ groupsguru-frontend/   â†’ Next.js web app
+â””â”€â”€ groupsguru-mobile/     â†’ React Native mobile app
 ```
 
 **Groups Guru Intelligence Source:** `C:\Users\jayar\OneDrive\Desktop\groupsguru`
@@ -43,22 +43,22 @@ C:\GroupsGuru\Lms\
 
 | Sprint | Feature | Backend | Frontend | Mobile |
 |--------|---------|---------|----------|--------|
-| 1 | Authentication | ✅ Done | ✅ Done | ✅ Done |
-| 2 | Category (L0) | ✅ Done | ✅ Done | ✅ Done |
-| 3 | SubCategory (L1) | ✅ Done | ✅ Done | ✅ Done |
-| 4 | Section (L2) | ✅ Done | ✅ Done | ✅ Done |
-| 5 | Topic (L3) | ✅ Done | ✅ Done | ✅ Done |
-| 6 | MicroTopic (L4) | ✅ Done | ✅ Done | ✅ Done |
-| 7 | Registry Data Migration | ✅ Done | ✅ Done | ✅ Done |
-| 8 | Intelligence Engine | ✅ Done | ✅ Done | ✅ Done |
-| 9 | Question Bank | ✅ Done | ✅ Done | ✅ Done |
-| 10 | Exam Structure | ✅ Done | ✅ Done | ✅ Done |
-| 11 | Student Exam Flow | ✅ Done | ✅ Done | ✅ Done |
-| 12 | Results & Analytics | ✅ Done | ✅ Done | ✅ Done |
-| 12a | UX Polish (Exam UI) | ✅ Done | ✅ Done | ✅ Done |
-| 13 | Data Migration + PostgreSQL | ✅ Done | ✅ Done | ➖ N/A |
-| 14 | Commission + Hierarchy Restructure | ✅ Done | ✅ Done | ✅ Done |
-| 15 | Pricing + Access Control | ✅ Done | ✅ Done | ✅ Done |
+| 1 | Authentication | âœ… Done | âœ… Done | âœ… Done |
+| 2 | Category (L0) | âœ… Done | âœ… Done | âœ… Done |
+| 3 | SubCategory (L1) | âœ… Done | âœ… Done | âœ… Done |
+| 4 | Section (L2) | âœ… Done | âœ… Done | âœ… Done |
+| 5 | Topic (L3) | âœ… Done | âœ… Done | âœ… Done |
+| 6 | MicroTopic (L4) | âœ… Done | âœ… Done | âœ… Done |
+| 7 | Registry Data Migration | âœ… Done | âœ… Done | âœ… Done |
+| 8 | Intelligence Engine | âœ… Done | âœ… Done | âœ… Done |
+| 9 | Question Bank | âœ… Done | âœ… Done | âœ… Done |
+| 10 | Exam Structure | âœ… Done | âœ… Done | âœ… Done |
+| 11 | Student Exam Flow | âœ… Done | âœ… Done | âœ… Done |
+| 12 | Results & Analytics | âœ… Done | âœ… Done | âœ… Done |
+| 12a | UX Polish (Exam UI) | âœ… Done | âœ… Done | âœ… Done |
+| 13 | Data Migration + PostgreSQL | âœ… Done | âœ… Done | âž– N/A |
+| 14 | Commission + Hierarchy Restructure | âœ… Done | âœ… Done | âœ… Done |
+| 15 | Pricing + Access Control | âœ… Done | âœ… Done | âœ… Done |
 | 15a | Post-Sprint Fix: H2 Migration + Cache Bug | ✅ Done | ✅ Done | ➖ N/A |
 | 15b | Project Rename: LMS → GroupsGuru | ✅ Done | ✅ Done | ✅ Done |
 | 16 | Razorpay Payment Integration | ✅ Done | ✅ Done | ✅ Done |
@@ -71,49 +71,54 @@ C:\GroupsGuru\Lms\
 | 20a | Frontend UI Reskin (claude.ai Theme) | ➖ N/A | ❌ Replaced by S21 | ➖ N/A |
 | 21a | Frontend Redesign: Foundation + Auth | ➖ N/A | ✅ Done | ✅ Done |
 | 21b | Frontend Redesign: Dashboards | ➖ N/A | ✅ Done | ✅ Done |
-| 21c | Frontend Redesign: Content Browse | ➖ N/A | ⏳ Planned | ⏳ Planned |
-| 21d | Frontend Redesign: Exam Flow | ➖ N/A | ⏳ Planned | ⏳ Planned |
-| 21e | Frontend Redesign: Admin Pages | ➖ N/A | ⏳ Planned | ⏳ Planned |
-| 21f | Frontend Redesign: Register + Polish | ➖ N/A | ⏳ Planned | ⏳ Planned |
+| 21c | Frontend Redesign: Content Browse | ➖ N/A | ✅ Done | ✅ Done |
+| 21d | Frontend Redesign: Exam Flow | ➖ N/A | ✅ Done | ✅ Done |
+| 21e | Frontend Redesign: Admin Pages | ➖ N/A | ✅ Done | ✅ Done |
+| 21f | Frontend Redesign: Register + Polish | ➖ N/A | ✅ Done | ✅ Done |
+| 22 | Content Management (StudyMaterial) | ✅ Done | ✅ Done | ➖ N/A |
+| 23 | Question Bulk Upload (CSV/JSON/XML) | ✅ Done | ✅ Done | ➖ N/A |
+| 24 | Test Series & Practice Mode | ✅ Done | ✅ Done | ➖ N/A |
+| 25 | Production Readiness | ✅ Done | ✅ Done | ➖ N/A |
+| 26 | PostgreSQL Migration + Go Live | ✅ Done | ✅ Done | ➖ N/A |
 
-**Resume Point:** Sprint 21c (Content Browse) — see `docs/sprints/S21-frontend-redesign-plan.md` for full plan.
+**Resume Point:** PRODUCTION READY. All sprints complete.
 
 ### Execution Order:
 ```
-Sprint 20 (Intelligence) -> Sprint 21a-f (Complete Frontend Redesign) -> Sprint 22 (Production Readiness)
+Sprint 20 (Intelligence) -> Sprint 21a-f (Complete Frontend Redesign) -> Sprint 22 (Content Management) -> Sprint 23 (Question Bulk Upload) -> Sprint 24 (Test Series)
 ```
 
 ---
 
-## Data Model — Complete Hierarchy
+## Data Model â€” Complete Hierarchy
 
 ```
-Category (L0 — Exam)
-  └── SubCategory (L1 — Subject)
-        └── Section (L2 — Section)
-              └── Topic (L3 — Topic)
-                    └── MicroTopic (L4 — Atomic Micro-Topic)
+Category (L0 â€” Exam)
+  â””â”€â”€ SubCategory (L1 â€” Subject)
+        â””â”€â”€ Section (L2 â€” Section)
+              â””â”€â”€ Topic (L3 â€” Topic)
+                    â””â”€â”€ MicroTopic (L4 â€” Atomic Micro-Topic)
 
 --- Intelligence Layer (linked via microTopicId) ---
 
-MicroTopic ←── PredictionScore      (1:1 prediction confidence)
-MicroTopic ←── PyqAnalysis[]        (1:many PYQ question mappings)
-MicroTopic ←── Question[]           (1:many bilingual MCQs)
+MicroTopic â†â”€â”€ PredictionScore      (1:1 prediction confidence)
+MicroTopic â†â”€â”€ PyqAnalysis[]        (1:many PYQ question mappings)
+MicroTopic â†â”€â”€ Question[]           (1:many bilingual MCQs)
 
 --- Exam Layer ---
 
-Exam ←── ExamQuestion[] ──→ Question  (many:many with ordering)
-Exam ←── ExamAttempt[] ──→ User       (student attempts)
-ExamAttempt ←── AttemptAnswer[]       (individual answers)
+Exam â†â”€â”€ ExamQuestion[] â”€â”€â†’ Question  (many:many with ordering)
+Exam â†â”€â”€ ExamAttempt[] â”€â”€â†’ User       (student attempts)
+ExamAttempt â†â”€â”€ AttemptAnswer[]       (individual answers)
 ```
 
 All entities: `createdAt`, `updatedAt`, `isDeleted` (soft-delete), bilingual (`name`/`nameTe` or `*En`/`*Te`).
 
 ---
 
-## Design System (All Platforms Must Match) — UPDATED Sprint 21
+## Design System (All Platforms Must Match) â€” UPDATED Sprint 21
 
-> **Complete redesign in Sprint 21** — Claude Code Mirror aesthetic. Flat, restrained, border-based.
+> **Complete redesign in Sprint 21** â€” Claude Code Mirror aesthetic. Flat, restrained, border-based.
 
 | Token | Value |
 |-------|-------|
@@ -137,15 +142,15 @@ All entities: `createdAt`, `updatedAt`, `isDeleted` (soft-delete), bilingual (`n
 | Font display | Instrument Serif (400) |
 | Font body | Plus Jakarta Sans (400, 500, 600, 700) |
 | Font mono | JetBrains Mono (500) |
-| Animation | **Almost none** — content renders instantly. Only modals/dropdowns animate (150ms). |
+| Animation | **Almost none** â€” content renders instantly. Only modals/dropdowns animate (150ms). |
 | Logo | Geometric "G" mark (concentric arcs) in amber |
 | Wordmark | "Groups" (#E8E8E8) + "Guru" (#D97706) in Instrument Serif |
 | Layout | Sidebar 260px + Top navbar 48px + Content centered max-width 900px |
 
 **CRITICAL:**
 - NO gradients, NO glow, NO orbs, NO glassmorphism, NO backdrop-blur
-- NO hover animations (scale, translate-y, lift) — border-color change only
-- NO stagger animations — cards render instantly
+- NO hover animations (scale, translate-y, lift) â€” border-color change only
+- NO stagger animations â€” cards render instantly
 - ALL depth via 1px borders, NOT shadows
 - See `docs/sprints/S21-frontend-redesign-plan.md` for full specification
 
@@ -189,7 +194,7 @@ All user-facing content supports English + Telugu.
 
 ---
 
-## Sprint 1 — Authentication ✅ DONE (All Platforms)
+## Sprint 1 â€” Authentication âœ… DONE (All Platforms)
 
 **Backend:** Register/Login/Logout endpoints, JWT generation, cookie handling, `User` entity, `SecurityConfig`
 **Frontend:** Login page, Register page, `AuthContext`, `ProtectedLayout`
@@ -197,7 +202,7 @@ All user-facing content supports English + Telugu.
 
 ---
 
-## Sprint 2 — Category Management (L0) ✅ DONE (Backend + Frontend + Mobile)
+## Sprint 2 â€” Category Management (L0) âœ… DONE (Backend + Frontend + Mobile)
 
 **Backend:** `Category` entity + Repository + Service + Controller. Public GET + Admin CRUD.
 **Frontend:** Admin category management page + Student category browse page.
@@ -210,11 +215,11 @@ All user-facing content supports English + Telugu.
 
 ---
 
-## Sprint 3 — SubCategory Management (L1) ✅ DONE (Backend + Frontend + Mobile)
+## Sprint 3 â€” SubCategory Management (L1) âœ… DONE (Backend + Frontend + Mobile)
 
-**Backend:** ✅ Done — `SubCategory` entity + full CRUD
-**Frontend:** ✅ Done — Admin subcategory management + Student browse
-**Mobile:** ✅ Done
+**Backend:** âœ… Done â€” `SubCategory` entity + full CRUD
+**Frontend:** âœ… Done â€” Admin subcategory management + Student browse
+**Mobile:** âœ… Done
 
 ### Mobile Sprint 3 Deliverables:
 
@@ -244,7 +249,7 @@ export interface SubCategory {
 - FlatList with subcategory cards (same card style as `CategoryScreen`)
 - Shows bilingual name (pick based on language context)
 - Pull-to-refresh, loading state, empty state
-- Tap card → navigates to `SectionScreen` (Sprint 4)
+- Tap card â†’ navigates to `SectionScreen` (Sprint 4)
 
 **3d. `src/context/LanguageContext.tsx`:** (needed for bilingual support going forward)
 - State: `language: "en" | "te"`
@@ -252,34 +257,34 @@ export interface SubCategory {
 - `useLanguage()` hook
 
 **3e. `src/components/LanguageToggle.tsx`:**
-- Button showing "EN" or "తెలుగు"
+- Button showing "EN" or "à°¤à±†à°²à±à°—à±"
 - Toggles language context
 - Style: small pill button, `bg-purple-500/20`, positioned in headers
 
 **3f. Update `AppNavigator.tsx`:**
 - Add `SubCategoryScreen` to student stack
-- `CategoryScreen` tap → navigates to `SubCategoryScreen` with `categoryId` param
+- `CategoryScreen` tap â†’ navigates to `SubCategoryScreen` with `categoryId` param
 - Wrap navigator in `LanguageProvider`
 
 **3g. Update `App.tsx`:**
 - Wrap with `LanguageProvider`
 
-**Verification:** Login as student → see categories → tap one → see subcategories for that category. Language toggle switches names.
+**Verification:** Login as student â†’ see categories â†’ tap one â†’ see subcategories for that category. Language toggle switches names.
 
 ---
 
-## Sprint 4 — Section Management (L2) ✅ DONE (Backend + Frontend + Mobile)
+## Sprint 4 â€” Section Management (L2) âœ… DONE (Backend + Frontend + Mobile)
 
-**Backend:** ✅ Done — `Section` entity + full CRUD
-**Frontend:** ✅ Done — Admin section management + Student browse
-**Mobile:** ✅ Done
+**Backend:** âœ… Done â€” `Section` entity + full CRUD
+**Frontend:** âœ… Done â€” Admin section management + Student browse
+**Mobile:** âœ… Done
 
-### Frontend Sprint 4 — Finish:
-- Complete `app/admin/sections/page.tsx` — CRUD table with modal forms
-- `lib/sections.ts` — API client for sections endpoints
+### Frontend Sprint 4 â€” Finish:
+- Complete `app/admin/sections/page.tsx` â€” CRUD table with modal forms
+- `lib/sections.ts` â€” API client for sections endpoints
 - Add Section types to `lib/types.ts`
 - Add "Sections" nav card to admin dashboard
-- Student: `app/student/sections/page.tsx` — browse sections by subcategory
+- Student: `app/student/sections/page.tsx` â€” browse sections by subcategory
 - Follow existing admin page patterns (same as categories/subcategories pages)
 
 ### Mobile Sprint 4 Deliverables:
@@ -307,21 +312,21 @@ export interface Section {
 - Receives `subCategoryId` and `subCategoryName` via navigation params
 - Fetches sections via `sectionService.getBySubCategoryId(subCategoryId)`
 - FlatList with section cards (same style)
-- Tap card → navigates to `TopicScreen` (Sprint 5)
+- Tap card â†’ navigates to `TopicScreen` (Sprint 5)
 
 **4d. Update `AppNavigator.tsx`:** Add `SectionScreen` to stack.
 
-**Verification:** Full student drill-down: Category → SubCategory → Section. All screens show bilingual names with toggle.
+**Verification:** Full student drill-down: Category â†’ SubCategory â†’ Section. All screens show bilingual names with toggle.
 
 ---
 
-## Sprint 5 — Topic Layer (L3) ✅ DONE (Backend + Frontend + Mobile)
+## Sprint 5 â€” Topic Layer (L3) âœ… DONE (Backend + Frontend + Mobile)
 
 > First sprint where all 3 platforms are built together from scratch.
 
 ### Backend:
 - `Topic` entity (package: `com.lms.topic`)
-- Fields: `id`, `name`, `nameTe`, `description`, `descriptionTe`, `topicCode`, `sectionId` (FK → Section), `isDeleted`, `createdAt`, `updatedAt`
+- Fields: `id`, `name`, `nameTe`, `description`, `descriptionTe`, `topicCode`, `sectionId` (FK â†’ Section), `isDeleted`, `createdAt`, `updatedAt`
 - `TopicRepository`, `TopicService`, `TopicController`
 - DTOs: `CreateTopicRequest`, `UpdateTopicRequest`
 - Public: `GET /api/topics`, `GET /api/topics/section/{sectionId}`
@@ -329,25 +334,25 @@ export interface Section {
 - Register in `SecurityConfig`
 
 ### Frontend:
-- `app/admin/topics/page.tsx` — Admin CRUD page (same pattern as sections)
-- `app/student/topics/page.tsx` — Student browse by section
-- `lib/topics.ts` — API client
+- `app/admin/topics/page.tsx` â€” Admin CRUD page (same pattern as sections)
+- `app/student/topics/page.tsx` â€” Student browse by section
+- `lib/topics.ts` â€” API client
 - Add Topic types to `lib/types.ts`
 - Add "Topics" nav card to admin dashboard
 
 ### Mobile:
-- `src/api/topicService.ts` — API client
+- `src/api/topicService.ts` â€” API client
 - Add `Topic` type to `src/api/types.ts`
-- `src/screens/TopicScreen.tsx` — FlatList with topic cards, navigated from SectionScreen
+- `src/screens/TopicScreen.tsx` â€” FlatList with topic cards, navigated from SectionScreen
 - Update `AppNavigator.tsx`
 
-**Verification:** Full drill-down works on all 3 platforms: Category → SubCategory → Section → Topic.
+**Verification:** Full drill-down works on all 3 platforms: Category â†’ SubCategory â†’ Section â†’ Topic.
 
 ---
 
-## Sprint 6 — MicroTopic Entity & CRUD (L4) ✅ DONE (Backend + Frontend + Mobile)
+## Sprint 6 â€” MicroTopic Entity & CRUD (L4) âœ… DONE (Backend + Frontend + Mobile)
 
-> Creates the MicroTopic entity — the atomic unit that the Groups Guru intelligence system maps to. This sprint builds the entity and UI only; data loading happens in Sprint 7.
+> Creates the MicroTopic entity â€” the atomic unit that the Groups Guru intelligence system maps to. This sprint builds the entity and UI only; data loading happens in Sprint 7.
 
 ### Backend:
 - `MicroTopic` entity (package: `com.lms.registry`)
@@ -382,27 +387,27 @@ export interface Section {
 - Admin: full CRUD at `/api/admin/registry/micro-topics`
 
 ### Frontend:
-- `app/admin/micro-topics/page.tsx` — Admin micro-topic management (table with filters: subject, paper, group)
-- `lib/registry.ts` — API client
+- `app/admin/micro-topics/page.tsx` â€” Admin micro-topic management (table with filters: subject, paper, group)
+- `lib/registry.ts` â€” API client
 - Add `MicroTopic` interface to `lib/types.ts`
 - Search bar for micro-topic text
 - Subject/depth/confidence badges with purple accent colors
 - Add "Micro-Topics" nav card to admin dashboard
 
 ### Mobile:
-- `src/api/registryService.ts` — API client
+- `src/api/registryService.ts` â€” API client
 - Add `MicroTopic` type to `src/api/types.ts`
-- `src/screens/MicroTopicScreen.tsx` — navigated from TopicScreen, shows micro-topics for that topic
+- `src/screens/MicroTopicScreen.tsx` â€” navigated from TopicScreen, shows micro-topics for that topic
 - Filter by subject, searchable
 - Update `AppNavigator.tsx`
 
-**Verification:** Full 5-level drill-down works: Category → SubCategory → Section → Topic → MicroTopic. Admin can CRUD micro-topics on web.
+**Verification:** Full 5-level drill-down works: Category â†’ SubCategory â†’ Section â†’ Topic â†’ MicroTopic. Admin can CRUD micro-topics on web.
 - **UI/UX Polish:** Ensured all admin pages use the `CustomSelect` component with the standard violet/indigo palette (removed all mismatched cyan colors).
 - **Mobile Polish:** Custom high-res GroupsGuru app icon designed (`GG` violet->indigo), replacing default React Native Android icon across all res-buckets.
 
 ---
 
-## Sprint 7 — Registry Data Migration ✅ DONE (Backend + Frontend + Mobile)
+## Sprint 7 â€” Registry Data Migration âœ… DONE (Backend + Frontend + Mobile)
 
 > Loads all 875 micro-topics from Groups Guru registry CSVs into the database. Frontend/mobile get data display enhancements.
 
@@ -411,15 +416,15 @@ export interface Section {
 **7a. Copy source data files into backend resources:**
 Copy from `C:\Users\jayar\OneDrive\Desktop\groupsguru\` into `src/main/resources/groupsguru/`:
 ```
-registry/              → all 9 CSV files (875 total rows)
-intelligence/          → analysis/ (all CSVs), rulebook.md, terminology.csv
-questions/             → the XML file(s)
+registry/              â†’ all 9 CSV files (875 total rows)
+intelligence/          â†’ analysis/ (all CSVs), rulebook.md, terminology.csv
+questions/             â†’ the XML file(s)
 ```
 
 **7b. `RegistryDataLoader` service (package: `com.lms.config`):**
 - Implements `CommandLineRunner` (runs at startup)
 - Reads all 9 registry CSVs from classpath `groupsguru/registry/`
-- Parses each row → `MicroTopic` entity
+- Parses each row â†’ `MicroTopic` entity
 - Inserts into DB (skip if `microTopicId` already exists)
 - Logs count per file: `"Loaded 244 micro-topics from g1-prelims.csv"`
 - **Throws exception on any parse error** (ZERO silent data loss)
@@ -439,11 +444,11 @@ questions/             → the XML file(s)
 | `g2-screening.csv` | 32 |
 | **Total** | **875** |
 
-**CSV column → entity field mapping:**
-`micro_topic_id` → `microTopicId`, `subject` → `subject`, `section` → `sectionName`, `topic` → `topicName`, `micro_topic` → `microTopicText`, `syllabus_ref` → `syllabusRef`, `group_applicability` → `groupApplicability`, `depth_level` → `depthLevel`, `content_type` → `contentType`, `topic_category` → `topicCategory`, `pyq_frequency` → `pyqFrequency`, `difficulty_trend` → `difficultyTrend`, `prediction_priority` → `predictionPriority`, `data_confidence` → `dataConfidence`, `prelims_or_mains` → `prelimsOrMains`, `paper` → `paper`
+**CSV column â†’ entity field mapping:**
+`micro_topic_id` â†’ `microTopicId`, `subject` â†’ `subject`, `section` â†’ `sectionName`, `topic` â†’ `topicName`, `micro_topic` â†’ `microTopicText`, `syllabus_ref` â†’ `syllabusRef`, `group_applicability` â†’ `groupApplicability`, `depth_level` â†’ `depthLevel`, `content_type` â†’ `contentType`, `topic_category` â†’ `topicCategory`, `pyq_frequency` â†’ `pyqFrequency`, `difficulty_trend` â†’ `difficultyTrend`, `prediction_priority` â†’ `predictionPriority`, `data_confidence` â†’ `dataConfidence`, `prelims_or_mains` â†’ `prelimsOrMains`, `paper` â†’ `paper`
 
 ### Frontend:
-- Enhance `app/admin/micro-topics/page.tsx` — show loaded data count, add "Registry loaded: 875 micro-topics" status badge
+- Enhance `app/admin/micro-topics/page.tsx` â€” show loaded data count, add "Registry loaded: 875 micro-topics" status badge
 - Add registry stats card to admin dashboard (total micro-topics, by subject breakdown)
 
 ### Mobile:
@@ -454,7 +459,7 @@ questions/             → the XML file(s)
 
 ---
 
-## Sprint 8 — Intelligence Engine (PYQ Analysis + Prediction Engine) 📅 FULL VERTICAL SLICE ✅ Done
+## Sprint 8 â€” Intelligence Engine (PYQ Analysis + Prediction Engine) ðŸ“… FULL VERTICAL SLICE âœ… Done
 
 > Creates PYQ analysis and prediction score entities, loads historical data, implements the prediction formula, and builds the admin intelligence dashboard.
 
@@ -467,16 +472,16 @@ questions/             → the XML file(s)
 | `id` | Long (auto) |
 | `microTopicId` | String (links to MicroTopic) |
 | `subject` | String |
-| `frequencyScore` | Double (0–1) |
+| `frequencyScore` | Double (0â€“1) |
 | `depthScore` | Double (awareness=0.3, understanding=0.6, analytical=1.0) |
-| `recurrenceScore` | Double (0–1) |
+| `recurrenceScore` | Double (0â€“1) |
 | `caLinkedBoost` | Double (+0.15 recent, +0.05 older) |
-| `syllabusPriority` | Double (0–1) |
+| `syllabusPriority` | Double (0â€“1) |
 | `trendMomentum` | Double (-1 to +1) |
-| `commissionBlendAppsc` | Double (0.3–1.0) |
-| `commissionBlendUpsc` | Double (0.0–0.7) |
+| `commissionBlendAppsc` | Double (0.3â€“1.0) |
+| `commissionBlendUpsc` | Double (0.0â€“0.7) |
 | `dataConfidence` | String (high/medium/low) |
-| `predictionConfidence` | Double (**FINAL SCORE 0–1**) |
+| `predictionConfidence` | Double (**FINAL SCORE 0â€“1**) |
 | `priorityRank` | String (VERY_HIGH/HIGH/MEDIUM/LOW) |
 | `notes` | String (nullable) |
 | `createdAt`, `updatedAt` | LocalDateTime |
@@ -486,7 +491,7 @@ questions/             → the XML file(s)
 | Field | Type |
 |-------|------|
 | `id` | Long (auto) |
-| `pyqId` | String (unique — e.g., `APPSC-G1-2016-P2-001a`) |
+| `pyqId` | String (unique â€” e.g., `APPSC-G1-2016-P2-001a`) |
 | `commission` | String (APPSC/UPSC/TSPSC) |
 | `year` | Integer |
 | `paper` | String |
@@ -516,30 +521,30 @@ predictionConfidence =
 Commission blending:
 - AP-Specific (`topicCategory = "ap_specific"`): APPSC=1.0, UPSC=0.0
 - Shared GS with 5+ APPSC questions: APPSC=0.6, UPSC=0.4
-- Shared GS with 0–4 APPSC questions: APPSC=0.3, UPSC=0.7 (`dataConfidence=low`)
+- Shared GS with 0â€“4 APPSC questions: APPSC=0.3, UPSC=0.7 (`dataConfidence=low`)
 
-Priority thresholds: VERY_HIGH >= 0.70, HIGH 0.50–0.69, MEDIUM 0.30–0.49, LOW < 0.30
+Priority thresholds: VERY_HIGH >= 0.70, HIGH 0.50â€“0.69, MEDIUM 0.30â€“0.49, LOW < 0.30
 
 Methods: `recalculateAllScores()`, `getTopPredictions(subject, limit)`, `getPredictionsByPriority(rank)`
 
 **8d. `IntelligenceDataLoader` (runs at startup after registry):**
-- Load `groupsguru/intelligence/analysis/prediction-scores.csv` → 162 rows
-- Load `groupsguru/intelligence/analysis/g1-pyq-analysis.csv` → 188 rows
-- Load `groupsguru/intelligence/analysis/g2-pyq-analysis.csv` → 224 rows
+- Load `groupsguru/intelligence/analysis/prediction-scores.csv` â†’ 162 rows
+- Load `groupsguru/intelligence/analysis/g1-pyq-analysis.csv` â†’ 188 rows
+- Load `groupsguru/intelligence/analysis/g2-pyq-analysis.csv` â†’ 224 rows
 
 **8e. Admin API:** `GET /api/admin/intelligence/predictions`, `/predictions/top`, `/predictions/by-priority/{rank}`, `POST /predictions/recalculate`, `GET /api/admin/intelligence/pyq-analysis`, `/pyq-analysis/stats`
 
 ### Frontend:
-- `app/admin/intelligence/page.tsx` — Intelligence dashboard:
+- `app/admin/intelligence/page.tsx` â€” Intelligence dashboard:
   - Stats cards: Total Micro-Topics, Avg Prediction Confidence, VERY_HIGH count, Total PYQs Analyzed
   - Prediction table (sortable by confidence DESC) with progress bars and priority badges
   - Filters: subject dropdown, priority rank dropdown
-  - Click row → expand to show all score components
+  - Click row â†’ expand to show all score components
   - Priority badges: VERY_HIGH=emerald, HIGH=blue, MEDIUM=yellow, LOW=gray
 - Add "Intelligence" nav card to admin dashboard
 
 ### Mobile:
-- `src/screens/IntelligenceScreen.tsx` — simplified prediction view for admin role
+- `src/screens/IntelligenceScreen.tsx` â€” simplified prediction view for admin role
 - Shows top predictions by subject with priority badges
 - FlatList with prediction cards
 
@@ -566,7 +571,7 @@ Methods: `recalculateAllScores()`, `getTopPredictions(subject, limit)`, `getPred
 
 ---
 
-## Sprint 9 — Question Bank 📅 FULL VERTICAL SLICE
+## Sprint 9 â€” Question Bank ðŸ“… FULL VERTICAL SLICE
 
 > Creates the Question entity, parses Moodle XML to extract 50 bilingual MCQs, and builds admin management UI.
 
@@ -577,7 +582,7 @@ Methods: `recalculateAllScores()`, `getTopPredictions(subject, limit)`, `getPred
 | Field | Type |
 |-------|------|
 | `id` | Long (auto) |
-| `questionCode` | String (unique — e.g., `GG-S11.1-Q01`) |
+| `questionCode` | String (unique â€” e.g., `GG-S11.1-Q01`) |
 | `questionTextEn` | String (length=2000) |
 | `questionTextTe` | String (length=2000) |
 | `optionAEn`, `optionATe` | String |
@@ -601,37 +606,37 @@ Methods: `recalculateAllScores()`, `getTopPredictions(subject, limit)`, `getPred
 Parses `groupsguru/questions/group-1/s11.1-history-ancient-medieval.xml` (50 MCQs).
 
 Each `<question type="multichoice">` contains:
-- `<name><text>` → questionCode
-- `<questiontext>` → bilingual spans: `<span lang="en" class="multilang">` and `<span lang="te" class="multilang">`
-- 4 `<answer>` elements — `fraction="100"` = correct, map position to A/B/C/D
-- `<tags><tag><text>` → `key:value` metadata (micro_topic_id, subject, difficulty, cognitive_level, question_type, sprint)
-- `<penalty>` → penalty value
+- `<name><text>` â†’ questionCode
+- `<questiontext>` â†’ bilingual spans: `<span lang="en" class="multilang">` and `<span lang="te" class="multilang">`
+- 4 `<answer>` elements â€” `fraction="100"` = correct, map position to A/B/C/D
+- `<tags><tag><text>` â†’ `key:value` metadata (micro_topic_id, subject, difficulty, cognitive_level, question_type, sprint)
+- `<penalty>` â†’ penalty value
 
-**CRITICAL:** Log every parsed question. If ANY parse error → throw exception, do NOT skip silently.
+**CRITICAL:** Log every parsed question. If ANY parse error â†’ throw exception, do NOT skip silently.
 
 **9c. `QuestionDataLoader`:** Runs at startup after registry loads. Logs: `"Loaded 50 questions from s11.1-history-ancient-medieval.xml"`
 
 **9d. Admin CRUD:** `GET/POST/PUT/DELETE /api/admin/questions`, `GET /api/questions/count`
 
 ### Frontend:
-- `app/admin/questions/page.tsx` — Question bank management
+- `app/admin/questions/page.tsx` â€” Question bank management
   - Table: code, subject, difficulty badge, type badge, sprint, micro-topic
   - Filters: subject, difficulty, type, sprint
   - Search by question text (EN + TE)
-  - Click row → expand with full bilingual question + options + correct answer (green)
+  - Click row â†’ expand with full bilingual question + options + correct answer (green)
   - Difficulty badges: easy=emerald, medium=yellow, hard=orange, very_hard=red
-- `lib/questions.ts` — API client
+- `lib/questions.ts` â€” API client
 - Add "Question Bank" nav card to admin dashboard
 
 ### Mobile:
-- Admin: `src/screens/QuestionListScreen.tsx` — searchable question list
+- Admin: `src/screens/QuestionListScreen.tsx` â€” searchable question list
 - Student: no direct access to question bank (questions served via exams)
 
 **Verification:** `SELECT COUNT(*) FROM question` = **50**. Spot-check 5 questions: EN text, TE text, correct answer, all options, tags match source XML.
 
 ---
 
-## Sprint 10 — Exam Structure ✅ DONE (Full Vertical Slice)
+## Sprint 10 â€” Exam Structure âœ… DONE (Full Vertical Slice)
 
 > Creates Exam and ExamQuestion entities, admin CRUD, and student exam browser.
 
@@ -645,7 +650,7 @@ Each `<question type="multichoice">` contains:
 | `name`, `nameTe` | String |
 | `description`, `descriptionTe` | String |
 | `examType` | String (TOPIC_WISE/SECTION_WISE/SUBJECT_WISE/FULL_LENGTH_TEST) |
-| `subject` | String (nullable — null for FLT) |
+| `subject` | String (nullable â€” null for FLT) |
 | `totalQuestions` | Integer |
 | `durationMinutes` | Integer |
 | `negativeMarking` | Boolean (default true) |
@@ -659,23 +664,23 @@ Each `<question type="multichoice">` contains:
 `id`, `examId` (FK), `questionId` (FK), `questionOrder` (Integer)
 
 **10c. Seed 2 sample exams:**
-1. "History — Ancient & Medieval India" (TOPIC_WISE, 25Q, 30min)
-2. "History — Full Sprint S11.1" (SECTION_WISE, 50Q, 60min)
+1. "History â€” Ancient & Medieval India" (TOPIC_WISE, 25Q, 30min)
+2. "History â€” Full Sprint S11.1" (SECTION_WISE, 50Q, 60min)
 
 **10d. API:** Public: `GET /api/exams`, `GET /api/exams/{id}`. Admin: full CRUD + `POST /api/admin/exams/{id}/assign-questions`
 
 ### Frontend:
-- `app/student/exams/page.tsx` — Exam browser (filter tabs by type, exam cards with name/type/questions/duration)
-- `app/student/exams/[id]/page.tsx` — Exam detail (info cards, rules, "Start Exam" button with modal)
-- `lib/exams.ts` — API client
+- `app/student/exams/page.tsx` â€” Exam browser (filter tabs by type, exam cards with name/type/questions/duration)
+- `app/student/exams/[id]/page.tsx` â€” Exam detail (info cards, rules, "Start Exam" button with modal)
+- `lib/exams.ts` â€” API client
 - Add Exam types to `lib/types.ts`
 - Update student dashboard with "Available Exams" nav card + stats
-- Admin: `app/admin/exams/page.tsx` — Exam CRUD + question assignment
+- Admin: `app/admin/exams/page.tsx` â€” Exam CRUD + question assignment
 
 ### Mobile:
-- `src/screens/ExamListScreen.tsx` — Browse available exams (FlatList with exam cards)
-- `src/screens/ExamDetailScreen.tsx` — Exam info + "Start Exam" button
-- `src/api/examService.ts` — API client
+- `src/screens/ExamListScreen.tsx` â€” Browse available exams (FlatList with exam cards)
+- `src/screens/ExamDetailScreen.tsx` â€” Exam info + "Start Exam" button
+- `src/api/examService.ts` â€” API client
 - Add `Exam` type to `src/api/types.ts`
 - Update student dashboard with exam navigation
 
@@ -684,9 +689,9 @@ Each `<question type="multichoice">` contains:
 
 ---
 
-## Sprint 11 — Student Exam Flow ✅ DONE
+## Sprint 11 â€” Student Exam Flow âœ… DONE
 
-> Implements the exam-taking experience: start → answer → submit → score.
+> Implements the exam-taking experience: start â†’ answer â†’ submit â†’ score.
 
 ### Backend:
 
@@ -694,24 +699,24 @@ Each `<question type="multichoice">` contains:
 `id`, `examId` (FK), `userId` (FK), `startedAt`, `submittedAt` (nullable), `totalMarks` (nullable), `correctCount`, `wrongCount`, `unattemptedCount`, `status` (IN_PROGRESS/SUBMITTED/EVALUATED), `createdAt`
 
 **11b. `AttemptAnswer` entity:**
-`id`, `attemptId` (FK), `questionId` (FK), `selectedOption` (nullable — A/B/C/D/null), `isCorrect` (nullable)
+`id`, `attemptId` (FK), `questionId` (FK), `selectedOption` (nullable â€” A/B/C/D/null), `isCorrect` (nullable)
 
 **11c. Scoring logic:**
 ```
-correct answer   → +marksPerQuestion
-wrong answer     → -penaltyPerWrong
-skipped          → 0
-totalMarks       → sum (floor at 0)
+correct answer   â†’ +marksPerQuestion
+wrong answer     â†’ -penaltyPerWrong
+skipped          â†’ 0
+totalMarks       â†’ sum (floor at 0)
 ```
 
 **11d. Student API:**
-- `POST /api/exams/{id}/start` → creates attempt, returns attemptId + questions (WITHOUT correctOption)
-- `POST /api/exams/attempts/{attemptId}/submit` → accepts answers, scores, returns result
-- `GET /api/exams/attempts/{attemptId}/result` → full breakdown
-- `GET /api/exams/my-attempts` → student's history
+- `POST /api/exams/{id}/start` â†’ creates attempt, returns attemptId + questions (WITHOUT correctOption)
+- `POST /api/exams/attempts/{attemptId}/submit` â†’ accepts answers, scores, returns result
+- `GET /api/exams/attempts/{attemptId}/result` â†’ full breakdown
+- `GET /api/exams/my-attempts` â†’ student's history
 
 ### Frontend:
-- `app/student/exams/[id]/attempt/page.tsx` — Quiz-taking UI:
+- `app/student/exams/[id]/attempt/page.tsx` â€” Quiz-taking UI:
   - Timer (countdown, red warning < 5 min, auto-submit at 0)
   - Question display (bilingual via Multilang)
   - 4 option cards (selectable, purple highlight on selected)
@@ -724,7 +729,7 @@ totalMarks       → sum (floor at 0)
 - `components/exam/QuestionNavPanel.tsx`
 
 ### Mobile:
-- `src/screens/ExamAttemptScreen.tsx` — Quiz-taking (timer, question display, option selection, navigation, submit)
+- `src/screens/ExamAttemptScreen.tsx` â€” Quiz-taking (timer, question display, option selection, navigation, submit)
 - `src/components/ExamTimer.tsx`
 - `src/components/QuestionCard.tsx`
 - `src/components/OptionButton.tsx`
@@ -740,62 +745,62 @@ totalMarks       → sum (floor at 0)
 - **Fix:** Added `findByExamIdOrderByQuestionOrder(Long examId)` to `ExamQuestionRepository`
 
 **11f. Backend: JWT Bearer token support (mobile login fix):**
-- React Native cannot use HttpOnly cookies — `Set-Cookie` headers are silently ignored
+- React Native cannot use HttpOnly cookies â€” `Set-Cookie` headers are silently ignored
 - `JwtAuthenticationFilter` only read tokens from cookies, so mobile was always unauthenticated
 - **Fix (Backend):** Filter now checks `Authorization: Bearer <token>` header as fallback after cookies
 - **Fix (Backend):** Login endpoint now returns JWT token in response body (`data` field)
 - **Fix (Mobile):** `api.ts` stores token in memory, attaches via axios interceptor
 - **Fix (Mobile):** `AuthContext.tsx` persists token to AsyncStorage for session restore
 
-**11g. Backend: SecurityConfig — exam start endpoint access:**
+**11g. Backend: SecurityConfig â€” exam start endpoint access:**
 - `POST /api/exams/{id}/start` was blocked for authenticated students (only GET was `permitAll`)
 - **Fix:** Added `/api/exams/*/start` to permitted paths for authenticated users
 
 **11h. Diagnostic error messages (replacing "Invalid credentials or server error"):**
 - Mobile showed the same generic error for ALL failures: network, auth, server, token
 - **Fix (Mobile):** `AuthContext.tsx` now throws specific errors for each failure mode:
-  - `ERR_NETWORK` → "Cannot reach server" + adb reverse instructions
-  - HTTP 401/403 → "Invalid email or password"
-  - No token in response → "Backend may need to be updated"
-  - `/me` fails after login → "JWT Bearer token not working"
+  - `ERR_NETWORK` â†’ "Cannot reach server" + adb reverse instructions
+  - HTTP 401/403 â†’ "Invalid email or password"
+  - No token in response â†’ "Backend may need to be updated"
+  - `/me` fails after login â†’ "JWT Bearer token not working"
 - **Fix (Mobile):** `LoginScreen.tsx` now displays `error.message` instead of hardcoded string
 - **Fix (Backend):** `GlobalExceptionHandler.java` returns proper HTTP status codes:
-  - "Invalid credentials" → 401, "not found" → 404, "already" → 409, "unauthorized" → 403
+  - "Invalid credentials" â†’ 401, "not found" â†’ 404, "already" â†’ 409, "unauthorized" â†’ 403
 
 ---
 
-## Known Issue: "Invalid Credentials" — Root Cause Analysis
+## Known Issue: "Invalid Credentials" â€” Root Cause Analysis
 
 This error has **3 distinct causes** that previously all showed the same message:
 
 ### Cause 1: Mobile cannot use HttpOnly cookies (FIXED)
 - **Why:** React Native doesn't have a browser cookie jar. `Set-Cookie` headers are silently ignored.
-- **Symptom:** Login POST returns 200 (success), but the follow-up `GET /api/auth/me` fails because no cookie is sent → app catches exception → shows "Invalid credentials"
+- **Symptom:** Login POST returns 200 (success), but the follow-up `GET /api/auth/me` fails because no cookie is sent â†’ app catches exception â†’ shows "Invalid credentials"
 - **Fix:** Backend returns JWT in response body. Mobile stores in AsyncStorage. Axios interceptor sends `Authorization: Bearer <token>` header. Backend `JwtAuthenticationFilter` reads Bearer header as fallback.
-- **How to verify:** `curl -X POST localhost:8080/api/auth/login ...` → response body has `"data": "<jwt>"` (not `null`)
+- **How to verify:** `curl -X POST localhost:8080/api/auth/login ...` â†’ response body has `"data": "<jwt>"` (not `null`)
 
 ### Cause 2: H2 in-memory database resets on restart
 - **Why:** `ddl-auto: create-drop` + `jdbc:h2:mem:lms_db` means every backend restart wipes all data. `DataInitializer` re-seeds admin/student users, but if it fails silently, users won't exist.
-- **Symptom:** Credentials are correct but user doesn't exist in DB → 401
+- **Symptom:** Credentials are correct but user doesn't exist in DB â†’ 401
 - **How to verify:** Check backend startup logs for `"Default ADMIN user created"` and `"Default STUDENT user created for Jayram."`
 - **Will be resolved in Sprint 13:** PostgreSQL migration with persistent storage
 
 ### Cause 3: ADB reverse not active (mobile only)
 - **Why:** Physical Android device can't reach `localhost:8080` without USB port forwarding
-- **Symptom:** `ERR_NETWORK` — request never reaches backend
+- **Symptom:** `ERR_NETWORK` â€” request never reaches backend
 - **Fix:** Run `adb reverse tcp:8080 tcp:8080` before launching the mobile app
 - **How to verify:** From device, the login request should appear in backend logs
 
 ### Developer Checklist (before debugging login):
-1. Is backend running? → `curl http://localhost:8080/api/auth/login -X POST -H "Content-Type: application/json" -d '{"email":"admin@lms.com","password":"Admin@123"}'`
-2. Did DataInitializer run? → Check logs for "Default ADMIN user created"
-3. For mobile: is ADB bridge active? → `adb reverse tcp:8080 tcp:8080`
-4. Is token in login response body? → Response should have `"data": "eyJ..."`
-5. Does Bearer auth work? → `curl localhost:8080/api/auth/me -H "Authorization: Bearer <token>"`
+1. Is backend running? â†’ `curl http://localhost:8080/api/auth/login -X POST -H "Content-Type: application/json" -d '{"email":"admin@lms.com","password":"Admin@123"}'`
+2. Did DataInitializer run? â†’ Check logs for "Default ADMIN user created"
+3. For mobile: is ADB bridge active? â†’ `adb reverse tcp:8080 tcp:8080`
+4. Is token in login response body? â†’ Response should have `"data": "eyJ..."`
+5. Does Bearer auth work? â†’ `curl localhost:8080/api/auth/me -H "Authorization: Bearer <token>"`
 
 ---
 
-## Sprint 12 — Results & Analytics 📅 FULL VERTICAL SLICE
+## Sprint 12 â€” Results & Analytics ðŸ“… FULL VERTICAL SLICE
 
 > Shows detailed exam results with question-by-question breakdown and topic-wise analysis.
 
@@ -825,7 +830,7 @@ This error has **3 distinct causes** that previously all showed the same message
 
 ---
 
-## Sprint 12a — UX Polish (Exam UI) 📅
+## Sprint 12a â€” UX Polish (Exam UI) ðŸ“…
 
 > **Context:** Post-Sprint 11 verification revealed UX problems on both web and mobile
 > exam screens. Content is too large, wastes space, and bilingual rendering is incomplete.
@@ -838,7 +843,7 @@ This error has **3 distinct causes** that previously all showed the same message
 
 ---
 
-## Sprint 13 — Data Migration + PostgreSQL ✅ DONE (Backend + Frontend + Mobile)
+## Sprint 13 â€” Data Migration + PostgreSQL âœ… DONE (Backend + Frontend + Mobile)
 
 > **Context:** This sprint established the foundational Database system and local file storage, laying the groundwork for the hierarchical restructure in Sprint 14.
 
@@ -885,15 +890,15 @@ This error has **3 distinct causes** that previously all showed the same message
 
 ---
 
-## Sprint 15a — Post-Sprint Hotfix: H2 Migration + Cache Bug ✅ DONE
+## Sprint 15a â€” Post-Sprint Hotfix: H2 Migration + Cache Bug âœ… DONE
 
-> **Context:** After Sprints 13–15 were executed by Gemini 3.14 without intermediate testing, the student login was found stuck in an infinite redirect/loading loop while admin login worked fine.
+> **Context:** After Sprints 13â€“15 were executed by Gemini 3.14 without intermediate testing, the student login was found stuck in an infinite redirect/loading loop while admin login worked fine.
 
 ### Root Cause Analysis
 
-**Symptom:** Student login appeared to redirect infinitely — the page showed a permanent loading spinner and any navigation was interrupted.
+**Symptom:** Student login appeared to redirect infinitely â€” the page showed a permanent loading spinner and any navigation was interrupted.
 
-**Actual Bug:** The Next.js dev server (Turbopack) had a **corrupted build cache** causing an infinite Fast Refresh rebuild loop every 2–4 seconds. Each rebuild reset React state, so `AuthContext.loading` never resolved to `false`. The `ProtectedLayout` component was stuck showing its loading state, and role-based redirects were constantly interrupted by the next rebuild cycle.
+**Actual Bug:** The Next.js dev server (Turbopack) had a **corrupted build cache** causing an infinite Fast Refresh rebuild loop every 2â€“4 seconds. Each rebuild reset React state, so `AuthContext.loading` never resolved to `false`. The `ProtectedLayout` component was stuck showing its loading state, and role-based redirects were constantly interrupted by the next rebuild cycle.
 
 **Why it appeared student-only:** Admin was tested first (generating fresh cache), then student was tested with the now-corrupted cache. The bug was environment-related, not role-related.
 
@@ -902,57 +907,57 @@ This error has **3 distinct causes** that previously all showed the same message
 2. Restarted dev server with a clean build
 3. Both admin and student login worked immediately
 
-### Database Migration: PostgreSQL → H2 (Development)
+### Database Migration: PostgreSQL â†’ H2 (Development)
 
 Switched development environment from Docker/PostgreSQL to H2 file-based database to reduce resource overhead. PostgreSQL configuration preserved for production deployment.
 
 **Changes Made:**
-- **`application.yaml`** — Restructured to use Spring profiles. Default profile set to `dev`. Common config only (JWT, CORS, storage, server port).
-- **`application-dev.yaml`** (new) — H2 file-based database (`jdbc:h2:file:./data/groupsguru_db`) with H2 console enabled at `/h2-console`.
-- **`application-prod.yaml`** (new) — PostgreSQL config with environment variable support (`DATABASE_URL`, `DATABASE_USERNAME`, `DATABASE_PASSWORD`).
-- **`SecurityConfig.java`** — Added `/h2-console/**` permitAll and frame options `sameOrigin` for H2 console access.
-- **`.gitignore`** — Added `data/` to exclude H2 database files.
+- **`application.yaml`** â€” Restructured to use Spring profiles. Default profile set to `dev`. Common config only (JWT, CORS, storage, server port).
+- **`application-dev.yaml`** (new) â€” H2 file-based database (`jdbc:h2:file:./data/groupsguru_db`) with H2 console enabled at `/h2-console`.
+- **`application-prod.yaml`** (new) â€” PostgreSQL config with environment variable support (`DATABASE_URL`, `DATABASE_USERNAME`, `DATABASE_PASSWORD`).
+- **`SecurityConfig.java`** â€” Added `/h2-console/**` permitAll and frame options `sameOrigin` for H2 console access.
+- **`.gitignore`** â€” Added `data/` to exclude H2 database files.
 
 **Switching profiles:**
-- Dev (default): `./mvnw spring-boot:run` — uses H2, no Docker needed
-- Prod: `SPRING_PROFILES_ACTIVE=prod ./mvnw spring-boot:run` — uses PostgreSQL
+- Dev (default): `./mvnw spring-boot:run` â€” uses H2, no Docker needed
+- Prod: `SPRING_PROFILES_ACTIVE=prod ./mvnw spring-boot:run` â€” uses PostgreSQL
 
 **Closure Date:** March 22, 2026
 **Verification:** Admin and student login both functional. H2 database seeded correctly via DataInitializer. All existing APIs operational.
 
 ---
 
-## Sprint 15b — Project Rename: LMS → GroupsGuru ✅ DONE
+## Sprint 15b â€” Project Rename: LMS â†’ GroupsGuru âœ… DONE
 
 > **Context:** Rebranded the entire project from generic "LMS" naming to "GroupsGuru" to match the domain (groupsguru.in) and product identity.
 
 ### Changes Made (130+ files, 220+ references)
 
 **Java Backend (107 files):**
-- Renamed package `com.lms` → `com.groupsguru` across all 107 source files
-- Renamed `LmsApplication.java` → `GroupsGuruApplication.java`
-- Renamed test class `LmsApplicationTests` → `GroupsGuruApplicationTests`
+- Renamed package `com.lms` â†’ `com.groupsguru` across all 107 source files
+- Renamed `LmsApplication.java` â†’ `GroupsGuruApplication.java`
+- Renamed test class `LmsApplicationTests` â†’ `GroupsGuruApplicationTests`
 
 **Configuration Files:**
-- **`pom.xml`** — groupId: `com.groupsguru`, artifactId: `groupsguru`, name: `groupsguru`
-- **`application.yaml`** — app name: `groupsguru`
-- **`application-dev.yaml`** — database: `groupsguru_db`
-- **`application-prod.yaml`** — database: `groupsguru_db`
-- **`docker-compose.yml`** — container: `groupsguru-postgres`, db: `groupsguru_db`
+- **`pom.xml`** â€” groupId: `com.groupsguru`, artifactId: `groupsguru`, name: `groupsguru`
+- **`application.yaml`** â€” app name: `groupsguru`
+- **`application-dev.yaml`** â€” database: `groupsguru_db`
+- **`application-prod.yaml`** â€” database: `groupsguru_db`
+- **`docker-compose.yml`** â€” container: `groupsguru-postgres`, db: `groupsguru_db`
 
 **Frontend:**
-- **`package.json`** — name: `groupsguru-frontend`
+- **`package.json`** â€” name: `groupsguru-frontend`
 
 **Mobile (Android + iOS):**
-- Package: `com.lmsmobile` → `com.groupsguru`
-- App name/module: `lmsMobile` → `groupsguru-mobile`
+- Package: `com.lmsmobile` â†’ `com.groupsguru`
+- App name/module: `lmsMobile` â†’ `groupsguru-mobile`
 - Updated: `build.gradle`, `settings.gradle`, `app.json`, `package.json`
 - Updated: `Podfile`, `Info.plist`, `AppDelegate.swift`, Xcode project/scheme files
 
 **Folder Renames:**
-- `lms-backend/` → `groupsguru-backend/`
-- `lms-frontend/` → `groupsguru-frontend/`
-- `lmsMobile/` → `groupsguru-mobile/`
+- `lms-backend/` â†’ `groupsguru-backend/`
+- `lms-frontend/` â†’ `groupsguru-frontend/`
+- `lmsMobile/` â†’ `groupsguru-mobile/`
 
 **Document Archival:**
 - Consolidated all scattered planning docs from `Documents& plans&rules/`, `docs/`, `Repo/`, `postam/` into single `C:\GroupsGuru\archive/` folder
@@ -963,7 +968,7 @@ Switched development environment from Docker/PostgreSQL to H2 file-based databas
 
 ---
 
-## Sprint 17 — Mobile Recovery & Native Payments ✅ DONE
+## Sprint 17 â€” Mobile Recovery & Native Payments âœ… DONE
 
 > **Context:** After Sprint 15b rename, the mobile `src/` directory was lost during folder copy (file lock issues on Windows). Sprint 16 completed Razorpay for backend + web but mobile was blocked. This sprint recovers all mobile source and integrates native Razorpay payments.
 
@@ -973,23 +978,23 @@ Switched development environment from Docker/PostgreSQL to H2 file-based databas
 - Applied GroupsGuru rename to all recovered files
 
 ### Razorpay Mobile Integration
-- **`src/api/paymentService.ts`** (new) — `createOrder()` and `verifyPayment()` API calls matching web `lib/payment.ts`
-- **`src/components/PaywallModal.tsx`** (rewritten) — Full Razorpay checkout flow using `react-native-razorpay` SDK
+- **`src/api/paymentService.ts`** (new) â€” `createOrder()` and `verifyPayment()` API calls matching web `lib/payment.ts`
+- **`src/components/PaywallModal.tsx`** (rewritten) â€” Full Razorpay checkout flow using `react-native-razorpay` SDK
   - Primary purchase option (direct entity)
   - Bundle upsell options (parent entities)
   - Loading states, error handling, cancellation support
   - Purple/indigo theme matching web design
-- **`src/screens/TopicScreen.tsx`** (updated) — Passes `entityType`, `entityId`, `entityName`, `onSuccess` to PaywallModal. On payment success, navigates to MicroTopic screen.
-- **`package.json`** — Added `react-native-razorpay@^2.3.0`
+- **`src/screens/TopicScreen.tsx`** (updated) â€” Passes `entityType`, `entityId`, `entityName`, `onSuccess` to PaywallModal. On payment success, navigates to MicroTopic screen.
+- **`package.json`** â€” Added `react-native-razorpay@^2.3.0`
 
 ### Payment Flow (Mobile)
 ```
-TopicScreen → accessService.checkAccess("TOPIC", id) →
-  hasAccess? → navigate to MicroTopic
-  !hasAccess? → PaywallModal opens →
-    User taps option → paymentService.createOrder() →
-    RazorpayCheckout.open() → native payment UI →
-    Success → paymentService.verifyPayment() → navigate
+TopicScreen â†’ accessService.checkAccess("TOPIC", id) â†’
+  hasAccess? â†’ navigate to MicroTopic
+  !hasAccess? â†’ PaywallModal opens â†’
+    User taps option â†’ paymentService.createOrder() â†’
+    RazorpayCheckout.open() â†’ native payment UI â†’
+    Success â†’ paymentService.verifyPayment() â†’ navigate
 ```
 
 **Closure Date:** March 22, 2026
@@ -997,13 +1002,13 @@ TopicScreen → accessService.checkAccess("TOPIC", id) →
 
 ---
 
-## Sprint 17a — APPSC Content Hierarchy + Archive Cleanup ✅ DONE
+## Sprint 17a â€” APPSC Content Hierarchy + Archive Cleanup âœ… DONE
 
-> **Context:** The DataSeeder was seeding 6 generic categories (UPSC, SSC, Banking, APPSC G1-4) with no children — empty shells with no subjects, sections, or topics. Students clicking any category saw nothing. Additionally, scattered planning documents across 5+ folders needed consolidation.
+> **Context:** The DataSeeder was seeding 6 generic categories (UPSC, SSC, Banking, APPSC G1-4) with no children â€” empty shells with no subjects, sections, or topics. Students clicking any category saw nothing. Additionally, scattered planning documents across 5+ folders needed consolidation.
 
 ### DataSeeder Rewrite
-- **`DataSeeder.java`** — Complete rewrite from flat category list to full APPSC hierarchy
-- Removed generic categories (UPSC, SSC, Banking) — APPSC-only focus
+- **`DataSeeder.java`** â€” Complete rewrite from flat category list to full APPSC hierarchy
+- Removed generic categories (UPSC, SSC, Banking) â€” APPSC-only focus
 - Seeds **4 categories**: APPSC Group 1, 2, 3, 4 (linked to APPSC commission)
 - Seeds **6 subjects** under Group 1: History & Culture, Geography, Polity & Governance, Economy, Science & Technology, Current Affairs & Aptitude
 - Seeds **14 sections** with section codes (e.g., HIST-ANC, HIST-MED, GEO-PHY, POL-CON)
@@ -1014,39 +1019,39 @@ TopicScreen → accessService.checkAccess("TOPIC", id) →
 ### APPSC Group 1 Structure Seeded
 ```
 APPSC Group 1
-├── History & Culture (HIST)
-│   ├── Ancient India (10 topics)
-│   ├── Medieval India (5 topics)
-│   ├── Modern India (4 topics)
-│   └── AP History (5 topics)
-├── Geography (GEO)
-│   ├── Physical Geography (4 topics)
-│   └── Economic Geography (3 topics)
-├── Polity & Governance (POL)
-│   ├── Indian Constitution (8 topics)
-│   └── Ethics & Public Admin (6 topics)
-├── Economy (ECON)
-│   ├── Indian Economy (8 topics)
-│   └── AP Economy (5 topics)
-├── Science & Technology (SCI)
-│   ├── Science & Technology (7 topics)
-│   └── Environment (2 topics)
-└── Current Affairs & Aptitude (CA)
-    ├── Aptitude & Mental Ability (3 topics)
-    └── Current Events (1 topic)
+â”œâ”€â”€ History & Culture (HIST)
+â”‚   â”œâ”€â”€ Ancient India (10 topics)
+â”‚   â”œâ”€â”€ Medieval India (5 topics)
+â”‚   â”œâ”€â”€ Modern India (4 topics)
+â”‚   â””â”€â”€ AP History (5 topics)
+â”œâ”€â”€ Geography (GEO)
+â”‚   â”œâ”€â”€ Physical Geography (4 topics)
+â”‚   â””â”€â”€ Economic Geography (3 topics)
+â”œâ”€â”€ Polity & Governance (POL)
+â”‚   â”œâ”€â”€ Indian Constitution (8 topics)
+â”‚   â””â”€â”€ Ethics & Public Admin (6 topics)
+â”œâ”€â”€ Economy (ECON)
+â”‚   â”œâ”€â”€ Indian Economy (8 topics)
+â”‚   â””â”€â”€ AP Economy (5 topics)
+â”œâ”€â”€ Science & Technology (SCI)
+â”‚   â”œâ”€â”€ Science & Technology (7 topics)
+â”‚   â””â”€â”€ Environment (2 topics)
+â””â”€â”€ Current Affairs & Aptitude (CA)
+    â”œâ”€â”€ Aptitude & Mental Ability (3 topics)
+    â””â”€â”€ Current Events (1 topic)
 ```
 
 ### Archive Cleanup
 - Consolidated 5 scattered doc folders into single `C:\GroupsGuru\archive\`
-  - `old-planning-docs/` — Roadmaps, TDD, blueprints, old README
-  - `old-sprint-closures/` — Sprint 0-13 closure reports
-  - `old-architecture/` — Architecture docs, PYQ data, registry CSVs
-  - `old-plans/` — 5 archived plans + master sprint plan v2
-  - `old-reference/` — TDD v2, QB structure, execution plan
-  - `old-repo/` — Sprint 1 zip backup
-  - `old-postman/` — Postman collections
+  - `old-planning-docs/` â€” Roadmaps, TDD, blueprints, old README
+  - `old-sprint-closures/` â€” Sprint 0-13 closure reports
+  - `old-architecture/` â€” Architecture docs, PYQ data, registry CSVs
+  - `old-plans/` â€” 5 archived plans + master sprint plan v2
+  - `old-reference/` â€” TDD v2, QB structure, execution plan
+  - `old-repo/` â€” Sprint 1 zip backup
+  - `old-postman/` â€” Postman collections
 - Removed `Documents& plans&rules/`, `docs/`, `Repo/`, `postam/` folders
-- **Nothing deleted** — all files preserved in `archive/`
+- **Nothing deleted** â€” all files preserved in `archive/`
 - Clean root: only `Lms/`, `archive/`, `data/`, `.claude/`, `.vscode/`
 
 ### Fresh H2 Database
@@ -1058,11 +1063,11 @@ APPSC Group 1
 
 ---
 
-## Sprint 18 — Admin Content Tree + Student Browse Drill-Down ✅ DONE
+## Sprint 18 â€” Admin Content Tree + Student Browse Drill-Down âœ… DONE
 
 > **Context:** Sprint 17a seeded the full APPSC Group 1 hierarchy (4 categories, 6 subjects, 14 sections, 71 topics, 50 questions), but there was no way for admins to manage it or students to browse through it. Admin pages showed only "Update Category" with no drill-down. Students clicking a category saw nothing.
 
-### Part 1: Backend — Data Linking & New Endpoints
+### Part 1: Backend â€” Data Linking & New Endpoints
 
 **MicroTopicLinker** (`com.groupsguru.config.MicroTopicLinker`)
 - New `@Order(3)` CommandLineRunner that runs after DataSeeder
@@ -1070,54 +1075,54 @@ APPSC Group 1
 - Sets `topicId` on each MicroTopic, connecting CSV-imported micro-topics to the core hierarchy
 - `QuestionDataLoader` bumped to `@Order(4)` to run after linking
 
-**MicroTopic API — New Endpoint**
-- `GET /api/registry/micro-topics/topic/{topicId}` — public, returns micro-topics for a topic
-- `GET /api/admin/registry/micro-topics/topic/{topicId}` — admin version
+**MicroTopic API â€” New Endpoint**
+- `GET /api/registry/micro-topics/topic/{topicId}` â€” public, returns micro-topics for a topic
+- `GET /api/admin/registry/micro-topics/topic/{topicId}` â€” admin version
 - Updated: `MicroTopicRepository`, `MicroTopicService`, `MicroTopicController`, `AdminMicroTopicController`
 
-**Question API — New Endpoint**
-- `GET /api/questions/micro-topic/{microTopicId}` — public, returns questions for a micro-topic
+**Question API â€” New Endpoint**
+- `GET /api/questions/micro-topic/{microTopicId}` â€” public, returns questions for a micro-topic
 - Updated: `QuestionRepository`, `QuestionService`, `QuestionController`
 
-### Part 2: Admin — Content Hierarchy Tree Page
+### Part 2: Admin â€” Content Hierarchy Tree Page
 
-**`app/admin/content-tree/page.tsx`** — New interactive tree UI
-- Lazy-loading expandable tree: Category → SubCategory → Section → Topic
+**`app/admin/content-tree/page.tsx`** â€” New interactive tree UI
+- Lazy-loading expandable tree: Category â†’ SubCategory â†’ Section â†’ Topic
 - Inline Create / Edit / Delete modals at each hierarchy level
 - Bilingual support (English + Telugu fields)
 - Matches existing admin design system
 - Dashboard card added to `app/admin/dashboard/page.tsx` for navigation
 
-### Part 3: Student — Full Browse Drill-Down
+### Part 3: Student â€” Full Browse Drill-Down
 
 **Frontend Library Updates**
-- `lib/registry.ts` — Added `getMicroTopicsByTopic(topicId)`
-- `lib/questions.ts` — Added `getByMicroTopicId(microTopicId)` and `getPublicAll()`
+- `lib/registry.ts` â€” Added `getMicroTopicsByTopic(topicId)`
+- `lib/questions.ts` â€” Added `getByMicroTopicId(microTopicId)` and `getPublicAll()`
 
 **Student Micro-Topics Page** (`app/student/categories/[id]/[subCategoryId]/[sectionId]/[topicId]/page.tsx`)
 - Fixed broken drill-down: now properly fetches micro-topics by topicId
 - Expandable MicroTopicCards with `<AnimatePresence>` animations
-- On-demand question loading: click a micro-topic → fetches mapped questions
+- On-demand question loading: click a micro-topic â†’ fetches mapped questions
 - Interactive click-to-reveal bilingual practice questions (EN + TE)
-- Full student path now works: APPSC Group 1 → History & Culture → Ancient India → Pre-Historic Cultures → [micro-topics] → [questions]
+- Full student path now works: APPSC Group 1 â†’ History & Culture â†’ Ancient India â†’ Pre-Historic Cultures â†’ [micro-topics] â†’ [questions]
 
 ### Known Issue Identified
-- MicroTopicLinker uses broad name matching — Geography micro-topics with `topicName="India"` incorrectly link to Topic ID 1 ("Pre-Historic Cultures in India") due to substring overlap. Needs tighter matching logic in Sprint 19.
+- MicroTopicLinker uses broad name matching â€” Geography micro-topics with `topicName="India"` incorrectly link to Topic ID 1 ("Pre-Historic Cultures in India") due to substring overlap. Needs tighter matching logic in Sprint 19.
 
 **Closure Date:** March 22, 2026
 
 ---
 
-## Sprint 19 — MicroTopicLinker Fix + Publish/Order + Admin Questions CRUD ✅ DONE
+## Sprint 19 â€” MicroTopicLinker Fix + Publish/Order + Admin Questions CRUD âœ… DONE
 
 > **Context:** Fixed loose string matching linking Geography to History. Added `isPublished` and `displayOrder` to Category, SubCategory, Section, and Topic. Built Publish toggle and sorting into the Admin Content Tree. Built a full CRUD overlay modal for the Admin Question Bank.
 
-### Part 1: Backend — Publish/Order & Strict Linking
+### Part 1: Backend â€” Publish/Order & Strict Linking
 - **MicroTopicLinker:** Fixed substring matching bug by implementing a robust `normalize()` function that strips punctuation and handles varied whitespace. Mapped remaining orphans accurately by checking section context and keyword sharing.
 - **Publish & Order:** Added `isPublished` and `displayOrder` to L0-L3 entities. Fixes were applied to `TopicRepository`, `SectionRepository`, and `SubCategoryRepository` to add missing JPA query methods for reordering.
 - **Admin Endpoints:** Added `/toggle-publish` and `/reorder` endpoints. Updated services to use `findByIsDeletedFalseAndIsPublishedTrueOrderByDisplayOrderAsc` for public endpoints and return everything for admin endpoints.
 
-### Part 2: Frontend — Content Tree Update & Question CRUD
+### Part 2: Frontend â€” Content Tree Update & Question CRUD
 - **Content Tree UI:** Replaced basic row renderers with `isPublished` status toggles, `UP/DOWN` reorder arrows, and inline Create/Edit modals.
 - **Question Bank CRUD:** Replaced static Table with an interactive dashboard that opens `QuestionModal.tsx`. 20-field form implemented with dropdowns for difficulty/type/levels.
 
@@ -1126,18 +1131,18 @@ APPSC Group 1
 
 ---
 
-## Sprint 20 — Intelligence Engine Upgrade (Content Gaps & Heatmaps) ✅ DONE
+## Sprint 20 â€” Intelligence Engine Upgrade (Content Gaps & Heatmaps) âœ… DONE
 > **Context:** The Intelligence Engine currently displays prediction scores calculated from CSV data. This sprint upgrades it into an actionable "Content Generation Guide" for admins. It identifies topics with 0 questions (gaps), generates AI prompts for those gaps, and visualizes overall syllabus coverage.
 
 ### Backend:
 - [x] **Content Gap Analysis:**
   - New DTO `ContentGapDTO` (topicId, topicName, subject, predictionConfidence, questionCount).
-  - New endpoint `GET /api/admin/intelligence/content-gaps` — returns topics with `questionCount == 0`, sorted by `predictionConfidence` DESC.
+  - New endpoint `GET /api/admin/intelligence/content-gaps` â€” returns topics with `questionCount == 0`, sorted by `predictionConfidence` DESC.
 - [x] **Coverage Stats:**
-  - New endpoint `GET /api/admin/intelligence/coverage` — returns subject-wise breakdown of (Total Topics, Covered Topics, Total Questions).
+  - New endpoint `GET /api/admin/intelligence/coverage` â€” returns subject-wise breakdown of (Total Topics, Covered Topics, Total Questions).
 - [x] **Manual Overrides:**
-  - `PUT /api/admin/intelligence/predictions/{id}/notes` — allow admins to add qualitative analysis notes.
-  - `PUT /api/admin/intelligence/predictions/{id}/priority-tweak` — allow manual score adjustment for "Current Affairs Hot" topics.
+  - `PUT /api/admin/intelligence/predictions/{id}/notes` â€” allow admins to add qualitative analysis notes.
+  - `PUT /api/admin/intelligence/predictions/{id}/priority-tweak` â€” allow manual score adjustment for "Current Affairs Hot" topics.
 
 ### Frontend:
 - [x] **Intelligence Dashboard Enhancements:**
@@ -1151,7 +1156,7 @@ APPSC Group 1
 
 ### Mobile:
 - [x] Update Admin Intelligence screen to show "Priority Gaps" and "Coverage Stats" lists.
-- [x] Triple-tab view: Preds, Gaps, Stats — consistent with web dashboard.
+- [x] Triple-tab view: Preds, Gaps, Stats â€” consistent with web dashboard.
 
 ### CORS Fix (Post-Sprint):
 - Updated `application.yaml` default `app.cors.allowed-origins` to include both `http://localhost:3000` and `http://localhost:3006`.
@@ -1170,64 +1175,64 @@ APPSC Group 1
 
 ---
 
-## Sprint 21a — Frontend Redesign: Foundation + Auth ✅ DONE
+## Sprint 21a â€” Frontend Redesign: Foundation + Auth âœ… DONE
 
 > **Context:** Complete visual redesign mirroring Claude Code's aesthetic. Flat, restrained, border-based. Warm dark palette (#191919 base) with Anthropic amber accent (#D97706). Sprint 20a (simple reskin) was replaced by this comprehensive redesign.
 
 ### Design System Established
 
 **Web (`globals.css` @theme):**
-- Background palette: #191919 (base) → #1E1E1E (surface) → #2D2D2D (elevated) → #363636 (overlay) → #141414 (inset)
+- Background palette: #191919 (base) â†’ #1E1E1E (surface) â†’ #2D2D2D (elevated) â†’ #363636 (overlay) â†’ #141414 (inset)
 - Accent: #D97706 (primary), #F59E0B (hover)
 - Borders: 1px solid #3A3A3A (no shadows for depth)
 - Typography: Instrument Serif (display), Plus Jakarta Sans (body), JetBrains Mono (mono)
-- Animation: Almost none — content renders instantly, only modals/dropdowns animate (150ms)
+- Animation: Almost none â€” content renders instantly, only modals/dropdowns animate (150ms)
 
 **Mobile (`src/theme/tokens.ts`):**
 - Identical color values to web for cross-platform consistency
 - Spacing, radii, and typography scale defined
 
 ### Web Files (12):
-1. ✅ `app/globals.css` — Complete design token system
-2. ✅ `app/layout.tsx` — Instrument Serif + Plus Jakarta Sans + JetBrains Mono fonts
-3. ✅ `lib/motion.ts` — Shared animation presets (subtle + layout only)
-4. ✅ `components/ui/Logo.tsx` — Geometric G mark (concentric arcs) + wordmark
-5. ✅ `components/ui/AnimatedInput.tsx` — Flat input, label-above, no glow
-6. ✅ `components/ui/LanguageToggle.tsx` — Pill toggle with accent highlight
-7. ✅ `components/ui/Skeleton.tsx` — Pulse loader with #2D2D2D
-8. ✅ `components/ui/Sidebar.tsx` — Flat sidebar, text-first nav, CONTENT/TOOLS/SYSTEM sections
-9. ✅ `components/layout/ProtectedLayout.tsx` — 48px navbar + 260px sidebar + centered content
-10. ✅ `components/auth/LoginForm.tsx` — Flat form, amber submit, error in #C74444
-11. ✅ `app/login/page.tsx` — Centered card, serif welcome text
-12. ✅ `app/page.tsx` — Clean landing with serif hero, architecture section, hierarchy grid
+1. âœ… `app/globals.css` â€” Complete design token system
+2. âœ… `app/layout.tsx` â€” Instrument Serif + Plus Jakarta Sans + JetBrains Mono fonts
+3. âœ… `lib/motion.ts` â€” Shared animation presets (subtle + layout only)
+4. âœ… `components/ui/Logo.tsx` â€” Geometric G mark (concentric arcs) + wordmark
+5. âœ… `components/ui/AnimatedInput.tsx` â€” Flat input, label-above, no glow
+6. âœ… `components/ui/LanguageToggle.tsx` â€” Pill toggle with accent highlight
+7. âœ… `components/ui/Skeleton.tsx` â€” Pulse loader with #2D2D2D
+8. âœ… `components/ui/Sidebar.tsx` â€” Flat sidebar, text-first nav, CONTENT/TOOLS/SYSTEM sections
+9. âœ… `components/layout/ProtectedLayout.tsx` â€” 48px navbar + 260px sidebar + centered content
+10. âœ… `components/auth/LoginForm.tsx` â€” Flat form, amber submit, error in #C74444
+11. âœ… `app/login/page.tsx` â€” Centered card, serif welcome text
+12. âœ… `app/page.tsx` â€” Clean landing with serif hero, architecture section, hierarchy grid
 
 ### Mobile Files (6):
-1. ✅ `src/theme/tokens.ts` — Design tokens matching web
-2. ✅ `src/components/ProfessionalLogo.tsx` — G mark + wordmark
-3. ✅ `src/components/BackgroundGlow.tsx` — Returns null (removed)
-4. ✅ `src/components/LanguageToggle.tsx` — Token-based styling
-5. ✅ `src/screens/LoginScreen.tsx` — Complete redesign with flat card
-6. ✅ `src/navigation/AppNavigator.tsx` — Token-based colors
+1. âœ… `src/theme/tokens.ts` â€” Design tokens matching web
+2. âœ… `src/components/ProfessionalLogo.tsx` â€” G mark + wordmark
+3. âœ… `src/components/BackgroundGlow.tsx` â€” Returns null (removed)
+4. âœ… `src/components/LanguageToggle.tsx` â€” Token-based styling
+5. âœ… `src/screens/LoginScreen.tsx` â€” Complete redesign with flat card
+6. âœ… `src/navigation/AppNavigator.tsx` â€” Token-based colors
 
 **Closure Date:** March 25, 2026
 **Verification:** Landing, login, admin dashboard, student dashboard all verified on web. Mobile login screen updated. No purple/#9333EA/#0f051d in 21a scope files. No glassmorphism or backdrop-blur.
 
 ---
 
-## Sprint 21b — Frontend Redesign: Dashboards ✅ DONE
+## Sprint 21b â€” Frontend Redesign: Dashboards âœ… DONE
 
 > **Context:** Redesigned the Admin and Student central hubs for both Web and Mobile platforms to align with the Claude Code mirror aesthetic. Removed complex animations, implemented flat-card layouts with 1px borders, and established the warm dark palette (#191919) as the absolute base.
 
 ### Web Files (2):
-1. ✅ `app/admin/dashboard/page.tsx` — Standardized to 900px centered layout. Flat stats grid, Instrument Serif headers, amber progress markers.
-2. ✅ `app/student/dashboard/page.tsx` — Dynamic commission selector with flat borders. Amber primary buttons. Bilingual welcome text support via Multilang.
+1. âœ… `app/admin/dashboard/page.tsx` â€” Standardized to 900px centered layout. Flat stats grid, Instrument Serif headers, amber progress markers.
+2. âœ… `app/student/dashboard/page.tsx` â€” Dynamic commission selector with flat borders. Amber primary buttons. Bilingual welcome text support via Multilang.
 
 ### Mobile Files (2):
-1. ✅ `src/screens/AdminDashboard.tsx` — Token-based redesign. Removed background glows. Flat grid navigation with amber detail icons.
-2. ✅ `src/screens/StudentDashboard.tsx` — Clean, data-dense layout. Section headers with separator lines. Tokenized spacing and typography.
+1. âœ… `src/screens/AdminDashboard.tsx` â€” Token-based redesign. Removed background glows. Flat grid navigation with amber detail icons.
+2. âœ… `src/screens/StudentDashboard.tsx` â€” Clean, data-dense layout. Section headers with separator lines. Tokenized spacing and typography.
 
 ### Common Components (1):
-1. ✅ `components/ui/Multilang.tsx` — Updated to intelligently handle fonts: English (Instrument Serif) fallback to Sans/Body font for Telugu to ensure legibility.
+1. âœ… `components/ui/Multilang.tsx` â€” Updated to intelligently handle fonts: English (Instrument Serif) fallback to Sans/Body font for Telugu to ensure legibility.
 
 **Closure Date:** March 25, 2026
 **Verification:** 
@@ -1238,7 +1243,7 @@ APPSC Group 1
 
 ---
 
-## Sprint 21 — Production Readiness 📅
+## Sprint 21 â€” Production Readiness ðŸ“…
 
 ### Backend:
 - [ ] Replace H2 with PostgreSQL
@@ -1269,23 +1274,23 @@ APPSC Group 1
 
 ---
 
-## Sprint 20a — Frontend UI Reskin (claude.ai Dark + Warm Theme)
+## Sprint 20a â€” Frontend UI Reskin (claude.ai Dark + Warm Theme)
 
-**Goal:** Completely reskin the GroupsGuru frontend to mirror claude.ai's UI/UX — warm dark theme (#1C1917), orange accent (#EA580C), DM Sans font, collapsible sidebar, clean layout, skeleton loading states. No purple, no glassmorphism, no spring physics.
+**Goal:** Completely reskin the GroupsGuru frontend to mirror claude.ai's UI/UX â€” warm dark theme (#1C1917), orange accent (#EA580C), DM Sans font, collapsible sidebar, clean layout, skeleton loading states. No purple, no glassmorphism, no spring physics.
 
-**Logo:** Symmetric Crown Tree — balanced top-down hierarchy tree. Glowing root node at top, 3 inner nodes (L1), 6 outer nodes (L2), 12 small leaf dots (L3). Flat design (no 3D). Orange (#EA580C) nodes on dark (#1C1917). Connections as clean lines. Reference PNG: `groupsguru-logos-v2.png` (Variation A)
+**Logo:** Symmetric Crown Tree â€” balanced top-down hierarchy tree. Glowing root node at top, 3 inner nodes (L1), 6 outer nodes (L2), 12 small leaf dots (L3). Flat design (no 3D). Orange (#EA580C) nodes on dark (#1C1917). Connections as clean lines. Reference PNG: `groupsguru-logos-v2.png` (Variation A)
 
 **Scope:** Frontend only (44 files: 41 modified + 3 new). No backend changes.
 
 ### Phase 0A: Logo Component (1 new file)
-- **NEW** `components/ui/Logo.tsx` — SVG React component for Symmetric Crown Tree mark
+- **NEW** `components/ui/Logo.tsx` â€” SVG React component for Symmetric Crown Tree mark
   - Props: `size` (sm/md/lg), `showWordmark` (boolean)
-  - Flat design: Root node (top), 3 L1 nodes, 6 L2 nodes, 12 L3 leaf dots. Lines connecting parent→child
+  - Flat design: Root node (top), 3 L1 nodes, 6 L2 nodes, 12 L3 leaf dots. Lines connecting parentâ†’child
   - All nodes: orange (#EA580C) circles, connections as SVG `<line>` elements
   - Wordmark: "Groups" `text-[#FAFAF9]` + "Guru" `text-[#EA580C]`, DM Sans bold
 
-### Phase 0B: Layout Structure — Sidebar + Navbar
-- **REWRITE** `components/layout/ProtectedLayout.tsx` — claude.ai mirror layout
+### Phase 0B: Layout Structure â€” Sidebar + Navbar
+- **REWRITE** `components/layout/ProtectedLayout.tsx` â€” claude.ai mirror layout
   - Left Sidebar: 260px expanded / 0px collapsed, `#1C1917` bg, right border `#57534E/30`
     - Student nav: Dashboard, Categories, Exams, Results, Profile
     - Admin nav: Dashboard, Content Tree, Questions, Exams, Pricing, Intelligence, Migration
@@ -1293,8 +1298,8 @@ APPSC Group 1
     - Inactive: `text-[#A8A29E] hover:bg-[#292524]/50`
   - Top Navbar: 56px, `bg-[#1C1917] border-b border-[#57534E]/30`, breadcrumbs + profile
   - Main content: `ml-[260px]` expanded, `ml-0` collapsed, `pt-[56px]`, `px-8 py-6`
-- **NEW** `components/ui/Sidebar.tsx` — Extracted sidebar, `usePathname()`, localStorage collapse state
-- **NEW** `components/ui/Skeleton.tsx` — `bg-[#292524] rounded-lg animate-pulse`, variants: text/card/avatar/button
+- **NEW** `components/ui/Sidebar.tsx` â€” Extracted sidebar, `usePathname()`, localStorage collapse state
+- **NEW** `components/ui/Skeleton.tsx` â€” `bg-[#292524] rounded-lg animate-pulse`, variants: text/card/avatar/button
 
 ### Phase 0C: Design System Foundation (2 files)
 - `app/globals.css`:
@@ -1305,29 +1310,29 @@ APPSC Group 1
   - Scrollbar: `rgba(234,88,12,0.3)`
   - Floating label: `#EA580C`
 - `app/layout.tsx`:
-  - `Inter` → `DM_Sans` from `next/font/google`, weights 400-700
+  - `Inter` â†’ `DM_Sans` from `next/font/google`, weights 400-700
   - Body bg: `#1C1917`
   - Remove cinematic purple/indigo blur orbs
 
 ### Phase 1: Shared Components (7 files)
-- `AnimatedInput.tsx` — Remove spring, `bg-[#292524] border-[#57534E]/40 rounded-lg`, focus orange ring
-- `CustomSelect.tsx` — `{ duration: 0.2, ease: "easeOut" }`, `bg-[#292524] rounded-lg`, selected orange
-- `Modal.tsx` — `bg-[#292524] rounded-xl border-[#57534E]/40 shadow-2xl`
-- `LanguageToggle.tsx` — `bg-[#292524] rounded-lg`, active `text-[#EA580C]`
-- `PaywallModal.tsx` — Orange lock icon, solid `bg-[#EA580C]` button, Razorpay `#EA580C`
-- `PriceBadge.tsx` — Premium: `bg-[rgba(234,88,12,0.1)] text-[#F97316]`
-- `QuestionModal.tsx` — Inputs `bg-[#1C1917] border-[#57534E]/40`, save `bg-[#EA580C]`
+- `AnimatedInput.tsx` â€” Remove spring, `bg-[#292524] border-[#57534E]/40 rounded-lg`, focus orange ring
+- `CustomSelect.tsx` â€” `{ duration: 0.2, ease: "easeOut" }`, `bg-[#292524] rounded-lg`, selected orange
+- `Modal.tsx` â€” `bg-[#292524] rounded-xl border-[#57534E]/40 shadow-2xl`
+- `LanguageToggle.tsx` â€” `bg-[#292524] rounded-lg`, active `text-[#EA580C]`
+- `PaywallModal.tsx` â€” Orange lock icon, solid `bg-[#EA580C]` button, Razorpay `#EA580C`
+- `PriceBadge.tsx` â€” Premium: `bg-[rgba(234,88,12,0.1)] text-[#F97316]`
+- `QuestionModal.tsx` â€” Inputs `bg-[#1C1917] border-[#57534E]/40`, save `bg-[#EA580C]`
 
 ### Phase 2: Auth Pages (4 files)
-- `LoginForm.tsx` + `RegisterForm.tsx` — Remove spring, `bg-[#EA580C]` button, error `text-[#EF4444]`
-- `login/page.tsx` + `register/page.tsx` — `bg-[#1C1917]`, card `bg-[#292524] rounded-xl`, no glassmorphism
+- `LoginForm.tsx` + `RegisterForm.tsx` â€” Remove spring, `bg-[#EA580C]` button, error `text-[#EF4444]`
+- `login/page.tsx` + `register/page.tsx` â€” `bg-[#1C1917]`, card `bg-[#292524] rounded-xl`, no glassmorphism
 
 ### Phase 3: Exam Components (2 files)
-- `ExamTimer.tsx` — `bg-[rgba(234,88,12,0.1)] text-[#F97316] rounded-lg`, `font-semibold`
-- `QuestionNavPanel.tsx` — `bg-[#292524] rounded-lg`, current `bg-[#EA580C]`, CSS transitions
+- `ExamTimer.tsx` â€” `bg-[rgba(234,88,12,0.1)] text-[#F97316] rounded-lg`, `font-semibold`
+- `QuestionNavPanel.tsx` â€” `bg-[#292524] rounded-lg`, current `bg-[#EA580C]`, CSS transitions
 
 ### Phase 4: Landing Page (1 file)
-- `app/page.tsx` — `bg-[#1C1917]`, remove blur orbs, ghost login button, CTA `bg-[#EA580C]`, all purple → orange
+- `app/page.tsx` â€” `bg-[#1C1917]`, remove blur orbs, ghost login button, CTA `bg-[#EA580C]`, all purple â†’ orange
 
 ### Phase 5: Student Pages (11 files)
 - All student pages: cards `bg-[#292524] border-[#57534E]/30 rounded-xl`, hover orange, no spring/blur
@@ -1336,7 +1341,7 @@ APPSC Group 1
 - All admin pages: "Add New" `bg-[#EA580C]`, rows `bg-[#292524]`, edit `bg-[#44403C]`, delete red
 
 ### Phase 7: Preview Pages (2 files, optional)
-- `design-preview/page.tsx` + `typography-preview/page.tsx` — Update to new design system
+- `design-preview/page.tsx` + `typography-preview/page.tsx` â€” Update to new design system
 
 ### Global Find-Replace Reference
 | Find | Replace |
@@ -1356,8 +1361,8 @@ APPSC Group 1
 
 ### Verification
 1. `npm run dev` in `groupsguru-frontend/`
-2. Check all pages visually — no purple/pink, warm dark + orange throughout
-3. Search for `#9333EA`, `#DB2777`, `purple-`, `indigo-`, `pink-` — should find ZERO
+2. Check all pages visually â€” no purple/pink, warm dark + orange throughout
+3. Search for `#9333EA`, `#DB2777`, `purple-`, `indigo-`, `pink-` â€” should find ZERO
 4. Test sidebar collapse, skeleton loading, mobile responsiveness
 
 **Total: 44 files (41 modified + 3 new) | No new dependencies | Font: DM Sans via next/font/google**
@@ -1372,11 +1377,38 @@ APPSC Group 1
 |-----------|----------|---------|
 | `registry/` | 9 CSV files, 875+ micro-topics | Sprint 7 |
 | `intelligence/analysis/` | prediction-scores.csv (162), g1-pyq-analysis.csv (188), g2-pyq-analysis.csv (224) | Sprint 8 |
-| `intelligence/rulebook.md` | R1–R30 question generation rules | Reference |
+| `intelligence/rulebook.md` | R1â€“R30 question generation rules | Reference |
 | `intelligence/terminology.csv` | 200+ EN-TE exam terms | Reference |
 | `questions/group-1/` | s11.1-history-ancient-medieval.xml (50 MCQs) | Sprint 9 |
 
 **Prediction Engine Formula:**
 ```
-Prediction_Confidence = 0.30 * Frequency + 0.15 * Depth + 0.25 * Recurrence + 0.15 * SyllabusPriority + 0.15 * TrendMomentum
+Prediction_Confidence = 0.30 * Frequency + 0.15 * Depth + 0.25 * SyllabusPriority + 0.15 * TrendMomentum
 ```
+
+---
+
+## Sprint 22 â€” Content Management (Study Material) âœ… DONE
+> Developed StudyMaterial entity with PDF support and hierarchical linkage. Admin content dashboard and Student study center UI.
+> **Documentation:** `docs/sprints/S22-closure.md`
+
+---
+
+## Sprint 23 â€” Question Bulk Upload âœ… DONE
+> Robust CSV/JSON/XML parsing pipelines with QuestionBatch orchestration for heavy content ingest. Validations, error flagging, and batch review UI.
+> **Documentation:** `docs/sprints/S23-closure.md`
+
+---
+
+## Sprint 24 â€” Test Series & Practice Mode âœ… DONE
+> Grouping exams into series (MOCK, PRACTICE, PYQ_BASED) with auto-generation from QuestionBank. Implemented real-time Practice Mode evaluation API and responsive UI.
+> **Documentation:** `docs/sprints/S24-closure.md`
+
+---
+
+## Sprint 25 â€” Production Readiness âœ… DONE
+> Hardening, security, and deployment preparation. Externalized secrets, rate limiting, health checks, SEO metadata, branded error pages, and production launcher.
+> **Documentation:** `docs/sprints/S25-closure.md`
+
+
+

@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import { colors } from '../theme/tokens';
 
 interface Props {
   text: string;
@@ -45,8 +46,8 @@ const styles = StyleSheet.create({
     height: 12,
   },
   text: {
-    color: '#FFFFFF',
-    fontSize: 17,
+    color: colors.fgPrimary,
+    fontSize: 16,
     fontWeight: '600',
     lineHeight: 24,
   },

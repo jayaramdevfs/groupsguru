@@ -1,17 +1,11 @@
 "use client";
 
 import ProtectedLayout from "@/components/layout/ProtectedLayout";
-import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState, useCallback, useMemo } from "react";
 import { examsApi } from "@/lib/exams";
 import { Exam, ExamType } from "@/lib/types";
 import Link from "next/link";
 import { Multilang } from "@/components/ui/Multilang";
-
-const spring = {
-  
-  duration: 0.25, ease: "easeOut" as const,
-};
 
 const EXAM_TYPES: { id: ExamType | "ALL"; label: string; labelTe: string }[] = [
   { id: "ALL", label: "All Exams", labelTe: "అన్ని పరీక్షలు" },
@@ -49,35 +43,34 @@ export default function StudentExams() {
 
   return (
     <ProtectedLayout requiredRole="STUDENT">
-      <div className="min-h-screen py-10 px-6 md:px-12 w-full max-w-[92%] mx-auto text-[#FAFAF9] text-center">
+      <div className="max-w-[900px] mx-auto py-12 px-6">
         
-        <motion.div 
-          className="mb-8 text-center"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={spring}
-        >
-          <h1 className="text-[32px] md:text-[48px] font-[800] leading-tight mb-3 text-[#F97316] ">
-            <Multilang en="Available Exams" te="అందుబాటులో ఉన్న పరీక్షలు" />
+        {/* Header Section */}
+        <header className="mb-12 border-b border-[#3A3A3A] pb-8 text-center sm:text-left">
+          <div className="inline-block px-2 py-0.5 rounded border border-[#D97706]/30 bg-[#D97706]/10 text-[#D97706] text-[10px] font-bold uppercase tracking-widest mb-4">
+            Practice Center
+          </div>
+          <h1 className="text-4xl md:text-5xl font-serif text-[#E8E8E8] mb-4">
+            Available <span className="text-[#D97706]">Exams</span>
           </h1>
-          <p className="text-base text-[#FAFAF9]/70 font-[600] max-w-2xl mx-auto ">
+          <p className="text-[#A0A0A0] max-w-xl leading-relaxed mx-auto sm:mx-0">
             <Multilang 
               en="Challenge yourself with our curated tests. Practice makes perfect." 
               te="మా రూపొందించిన పరీక్షలతో మిమ్మల్ని మీరు సవాలు చేసుకోండి. సాధన మనిషిని పరిపూర్ణుడిని చేస్తుంది." 
             />
           </p>
-        </motion.div>
+        </header>
 
         {/* Tabs */}
-        <div className="flex flex-wrap justify-center gap-2 mb-8">
+        <div className="flex flex-wrap justify-center sm:justify-start gap-2 mb-8 border-b border-[#3A3A3A] pb-6">
           {EXAM_TYPES.map((type) => (
             <button
               key={type.id}
               onClick={() => setActiveTab(type.id)}
-              className={`px-5 py-2 rounded-full font-bold transition-all duration-300 text-sm ${
+              className={`px-4 py-2 rounded border transition-colors text-[11px] font-bold uppercase tracking-wider ${
                 activeTab === type.id
-                  ? "bg-[#EA580C] text-[#FAFAF9] shadow-lg shadow-orange-500/20 scale-105"
-                  : "bg-white/5 text-[#FAFAF9]/60 hover:bg-white/10"
+                  ? "bg-[#D97706] text-white border-[#D97706]"
+                  : "bg-[#141414] text-[#666666] border-[#3A3A3A] hover:border-[#D97706]/30 hover:text-[#A0A0A0]"
               }`}
             >
               <Multilang en={type.label} te={type.labelTe} />
@@ -88,89 +81,69 @@ export default function StudentExams() {
         {/* Exam Grid */}
         {isLoading ? (
           <div className="flex items-center justify-center py-20">
-            <div className="w-12 h-12 border-4 border-orange-500 border-t-transparent rounded-full animate-spin"></div>
+            <div className="w-8 h-8 border-2 border-[#D97706] border-t-transparent rounded-full animate-spin"></div>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <AnimatePresence mode="popLayout">
-              {filteredExams.map((exam, index) => (
-                <motion.div
-                  key={exam.id}
-                  layout
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ ...spring, delay: index * 0.05 }}
-                  whileHover={{ y: -2 }}
-                >
-                  <Link 
-                    href={`/student/exams/${exam.id}`}
-                    className="group relative block h-full p-6 rounded-xl bg-white/5 border border-[#57534E]/40 hover:border-orange-500/50 hover:bg-orange-500/5 transition-all duration-300  overflow-hidden"
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {filteredExams.map((exam) => (
+              <Link 
+                key={exam.id}
+                href={`/student/exams/${exam.id}`}
+                className="group p-6 rounded-lg bg-[#1E1E1E] border border-[#3A3A3A] hover:border-[#D97706]/50 transition-colors"
+              >
+                <div className="flex items-center justify-between mb-6">
+                  <div className="w-12 h-12 rounded border border-[#3A3A3A] bg-[#141414] flex items-center justify-center text-xl font-bold text-[#D97706] font-mono">
+                    {exam.subject?.charAt(0) || "E"}
+                  </div>
+                  <div className="px-2 py-1 rounded border border-[#3A3A3A] bg-[#141414] text-[#666666] text-[10px] font-mono uppercase tracking-wider group-hover:border-[#D97706]/30 transition-colors">
+                    {exam.examType.replace('_', ' ')}
+                  </div>
+                </div>
+
+                <h3 className="text-xl font-bold text-[#E8E8E8] mb-2 group-hover:text-[#D97706] transition-colors">
+                  <Multilang en={exam.name} te={exam.nameTe} />
+                </h3>
+                
+                <p className="text-sm text-[#A0A0A0] leading-relaxed mb-8 line-clamp-2">
+                  <Multilang en={exam.description || "Comprehensive test designed to evaluate your understanding of this topic."} te={exam.descriptionTe || "ఈ అంశంపై మీ అవగాహనను అంచనా వేయడానికి రూపొందించబడిన సమగ్ర పరీక్ష."} />
+                </p>
+
+                <div className="grid grid-cols-2 gap-4 pt-6 border-t border-[#3A3A3A] mb-8">
+                  <div>
+                    <p className="text-[10px] uppercase tracking-widest text-[#666666] font-bold mb-1">Questions</p>
+                    <p className="text-lg font-bold text-[#E8E8E8] font-mono">{exam.totalQuestions}</p>
+                  </div>
+                  <div>
+                    <p className="text-[10px] uppercase tracking-widest text-[#666666] font-bold mb-1">Duration</p>
+                    <p className="text-lg font-bold text-[#E8E8E8] font-mono">{exam.durationMinutes}m</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center text-[10px] font-bold uppercase tracking-widest text-[#D97706]">
+                  View Details
+                  <svg 
+                    className="ml-2 w-3 h-3 group-hover:translate-x-1 transition-transform" 
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"
                   >
-                    <div className="absolute top-0 right-0 p-6">
-                      <div className="px-3 py-1 rounded-full bg-orange-500/20 text-[#F97316] text-xs font-bold border border-[#57534E]/40 uppercase tracking-wider">
-                        {exam.examType.replace('_', ' ')}
-                      </div>
-                    </div>
-
-                    <div className="relative z-10">
-                      <div className="w-14 h-14 mb-6 rounded-2xl bg-[#44403C] flex items-center justify-center text-2xl font-bold shadow-lg">
-                        {exam.subject?.charAt(0) || "E"}
-                      </div>
-                      
-                      <h3 className="text-2xl font-bold mb-3 group-hover:text-[#F97316] transition-colors">
-                        <Multilang en={exam.name} te={exam.nameTe} />
-                      </h3>
-                      
-                      <p className="text-[#FAFAF9]/60 font-medium leading-relaxed mb-8 line-clamp-2">
-                        <Multilang en={exam.description || ""} te={exam.descriptionTe || ""} />
-                      </p>
-
-                      <div className="grid grid-cols-2 gap-4 pt-6 border-t border-[#57534E]/40">
-                        <div>
-                          <p className="text-[10px] uppercase tracking-widest text-[#FAFAF9]/40 font-bold mb-1">Questions</p>
-                          <p className="text-lg font-bold text-[#FAFAF9]">{exam.totalQuestions}</p>
-                        </div>
-                        <div>
-                          <p className="text-[10px] uppercase tracking-widest text-[#FAFAF9]/40 font-bold mb-1">Duration</p>
-                          <p className="text-lg font-bold text-[#FAFAF9]">{exam.durationMinutes}m</p>
-                        </div>
-                      </div>
-
-                      <div className="mt-8 flex items-center text-[#F97316] font-bold group/btn">
-                        <Multilang en="View Details" te="వివరాలు చూడండి" />
-                        <svg 
-                          className="ml-2 w-5 h-5 transform group-hover/btn:translate-x-1 transition-transform" 
-                          viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
-                        >
-                          <line x1="5" y1="12" x2="19" y2="12"></line>
-                          <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                      </div>
-                    </div>
-                  </Link>
-                </motion.div>
-              ))}
-            </AnimatePresence>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </div>
+              </Link>
+            ))}
           </div>
         )}
 
         {!isLoading && filteredExams.length === 0 && (
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="text-center py-20 text-[#FAFAF9]/50 bg-white/5 rounded-xl border border-[#57534E]/40 max-w-2xl mx-auto"
-          >
-            <p className="text-xl font-semibold mb-2">
-              <Multilang en="No exams found." te="పరీక్షలు కనుగొనబడలేదు." />
-            </p>
-            <p>
+          <div className="text-center py-20 text-[#666666] bg-[#1E1E1E] rounded-lg border border-[#3A3A3A]">
+            <p className="text-sm font-mono uppercase tracking-widest mb-2">No exams found</p>
+            <p className="text-xs">
               <Multilang 
                 en="Try a different category or check back later." 
                 te="వేరే వర్గాన్ని ప్రయత్నించండి లేదా తర్వాత మళ్ళీ చూడండి." 
               />
             </p>
-          </motion.div>
+          </div>
         )}
 
       </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import { colors, radii, spacing, typography } from '../theme/tokens';
 
 interface PriceBadgeProps {
   accessType?: string;
@@ -20,26 +21,30 @@ export const PriceBadge = ({ accessType, priceInr }: PriceBadgeProps) => {
 
 const styles = StyleSheet.create({
   badge: {
-    paddingHorizontal: 8,
-    paddingVertical: 4,
-    borderRadius: 6,
+    paddingHorizontal: spacing.sm,
+    paddingVertical: 2,
+    borderRadius: radii.sm,
     alignSelf: 'flex-start',
-    marginLeft: 8,
+    marginLeft: spacing.sm,
+    borderWidth: 1,
   },
   paidBadge: {
-    backgroundColor: 'rgba(245, 158, 11, 0.2)',
+    backgroundColor: colors.accent + '20',
+    borderColor: colors.accent + '40',
   },
   freeBadge: {
-    backgroundColor: 'rgba(16, 185, 129, 0.2)',
+    backgroundColor: colors.success + '20',
+    borderColor: colors.success + '40',
   },
   text: {
     fontSize: 10,
-    fontWeight: '800',
+    fontWeight: 'bold',
+    fontFamily: typography.mono.fontFamily,
   },
   paidText: {
-    color: '#f59e0b',
+    color: colors.accent,
   },
   freeText: {
-    color: '#10b981',
+    color: colors.success,
   },
 });

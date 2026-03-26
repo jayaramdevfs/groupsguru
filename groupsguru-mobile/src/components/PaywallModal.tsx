@@ -11,6 +11,7 @@ import {
 import RazorpayCheckout from 'react-native-razorpay';
 import { paymentService } from '../api/paymentService';
 import { ParentOption } from '../api/accessTypes';
+import { colors, radii, spacing, typography } from '../theme/tokens';
 
 const RAZORPAY_KEY = 'rzp_test_SU3wy02Xv8CfbL';
 
@@ -55,7 +56,7 @@ export const PaywallModal = ({
           contact: '',
           name: '',
         },
-        theme: { color: '#9333ea' },
+        theme: { color: colors.accent },
       };
 
       const response = await RazorpayCheckout.open(options);
@@ -84,7 +85,7 @@ export const PaywallModal = ({
 
   return (
     <Modal
-      animationType="slide"
+      animationType="fade"
       transparent={true}
       visible={visible}
       onRequestClose={onClose}
@@ -98,8 +99,10 @@ export const PaywallModal = ({
             </TouchableOpacity>
           </View>
 
-          <View style={styles.lockIcon}>
-            <Text style={styles.lockEmoji}>🔒</Text>
+          <View style={styles.lockIconContainer}>
+             <View style={styles.lockCircle}>
+                <Text style={styles.lockEmoji}>🔒</Text>
+             </View>
           </View>
 
           <Text style={styles.message}>
@@ -112,19 +115,19 @@ export const PaywallModal = ({
               style={styles.primaryBtn}
               onPress={() => handlePayment(entityType, entityId, entityName, price)}
               disabled={loading}
-              activeOpacity={0.8}
+              activeOpacity={0.9}
             >
-              {loading ? (
-                <ActivityIndicator color="#fff" />
-              ) : (
-                <View style={styles.optionRow}>
-                  <View>
-                    <Text style={styles.optionLabel}>Standard Access</Text>
-                    <Text style={styles.optionName}>{entityName}</Text>
-                  </View>
-                  <Text style={styles.primaryPrice}>₹{price}</Text>
+              <View style={styles.optionRow}>
+                <View>
+                  <Text style={styles.optionLabel}>Standard Access</Text>
+                  <Text style={styles.optionName}>{entityName}</Text>
                 </View>
-              )}
+                {loading ? (
+                  <ActivityIndicator color="#fff" size="small" />
+                ) : (
+                  <Text style={styles.primaryPrice}>₹{price}</Text>
+                )}
+              </View>
             </TouchableOpacity>
           )}
 
@@ -138,7 +141,7 @@ export const PaywallModal = ({
                   style={styles.bundleCard}
                   onPress={() => handlePayment(opt.entityType, opt.entityId, opt.name, opt.price)}
                   disabled={loading}
-                  activeOpacity={0.8}
+                  activeOpacity={0.7}
                 >
                   <View style={{ flex: 1 }}>
                     <Text style={styles.bundleType}>
@@ -164,47 +167,60 @@ export const PaywallModal = ({
 const styles = StyleSheet.create({
   overlay: {
     flex: 1,
-    backgroundColor: 'rgba(0,0,0,0.7)',
-    justifyContent: 'flex-end',
+    backgroundColor: 'rgba(0,0,0,0.8)',
+    justifyContent: 'center',
+    padding: spacing.xl,
   },
   content: {
-    backgroundColor: '#1E1B4B',
-    borderTopLeftRadius: 24,
-    borderTopRightRadius: 24,
-    padding: 24,
-    minHeight: 300,
+    backgroundColor: colors.surface,
+    borderRadius: radii.lg,
+    padding: spacing.xl,
+    borderWidth: 1,
+    borderColor: colors.border,
   },
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: 16,
+    marginBottom: spacing.xl,
   },
   title: {
-    fontSize: 24,
-    fontWeight: '800',
-    color: '#A855F7',
+    fontSize: 22,
+    fontWeight: '400',
+    color: colors.fgPrimary,
+    fontFamily: 'serif',
   },
-  closeBtn: { padding: 8 },
-  closeText: { color: '#fff', fontSize: 20, fontWeight: 'bold' },
-  lockIcon: {
+  closeBtn: { padding: spacing.xs },
+  closeText: { color: colors.fgMuted, fontSize: 18, fontWeight: '300' },
+  lockIconContainer: {
     alignItems: 'center',
-    marginBottom: 12,
+    marginBottom: spacing.lg,
   },
-  lockEmoji: { fontSize: 40 },
+  lockCircle: {
+     width: 64,
+     height: 64,
+     borderRadius: radii.full,
+     backgroundColor: colors.accent + '15',
+     justifyContent: 'center',
+     alignItems: 'center',
+     borderWidth: 1,
+     borderColor: colors.accent + '30',
+  },
+  lockEmoji: { fontSize: 28 },
   message: {
-    color: 'rgba(255,255,255,0.7)',
-    fontSize: 16,
+    color: colors.fgSecondary,
+    fontSize: 15,
     textAlign: 'center',
-    marginBottom: 24,
+    marginBottom: spacing.xl,
     lineHeight: 22,
   },
   primaryBtn: {
-    borderRadius: 16,
-    padding: 16,
-    marginBottom: 12,
-    overflow: 'hidden',
-    backgroundColor: '#7C3AED',
+    borderRadius: radii.md,
+    padding: spacing.lg,
+    marginBottom: spacing.md,
+    backgroundColor: colors.accent,
+    borderWidth: 1,
+    borderColor: colors.border,
   },
   optionRow: {
     flexDirection: 'row',
@@ -212,65 +228,72 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   optionLabel: {
-    color: 'rgba(255,255,255,0.6)',
-    fontSize: 12,
-    fontWeight: '600',
+    color: 'rgba(255,255,255,0.7)',
+    fontSize: 10,
+    fontWeight: 'bold',
+    textTransform: 'uppercase',
+    letterSpacing: 1,
+    marginBottom: 2,
   },
   optionName: {
     color: '#fff',
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: '700',
-    marginTop: 2,
+    letterSpacing: -0.5,
   },
   primaryPrice: {
     color: '#fff',
-    fontWeight: '900',
+    fontWeight: 'bold',
     fontSize: 22,
-    fontStyle: 'italic',
+    fontFamily: typography.mono.fontFamily,
   },
-  bundles: { marginTop: 8 },
+  bundles: { marginTop: spacing.md },
   bundleHeader: {
-    color: 'rgba(255,255,255,0.4)',
-    fontWeight: '700',
-    marginBottom: 8,
-    fontSize: 12,
+    color: colors.fgMuted,
+    fontWeight: 'bold',
+    marginBottom: spacing.sm,
+    fontSize: 10,
     textTransform: 'uppercase',
-    letterSpacing: 1,
+    letterSpacing: 1.5,
   },
   bundleCard: {
-    backgroundColor: 'rgba(255,255,255,0.03)',
+    backgroundColor: colors.inset,
     borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.1)',
-    borderRadius: 12,
-    padding: 14,
-    marginBottom: 8,
+    borderColor: colors.border,
+    borderRadius: radii.md,
+    padding: spacing.md,
+    marginBottom: spacing.sm,
     flexDirection: 'row',
     alignItems: 'center',
   },
   bundleType: {
-    color: 'rgba(255,255,255,0.4)',
-    fontSize: 11,
-    textTransform: 'capitalize',
+    color: colors.fgMuted,
+    fontSize: 10,
+    fontWeight: 'bold',
+    textTransform: 'uppercase',
+    letterSpacing: 0.5,
+    marginBottom: 2,
   },
   bundleName: {
-    color: 'rgba(255,255,255,0.9)',
-    fontWeight: '600',
+    color: colors.fgPrimary,
+    fontWeight: '700',
     fontSize: 14,
-    marginTop: 2,
   },
   bundlePrice: {
-    color: '#A855F7',
-    fontWeight: '800',
-    fontSize: 18,
-    marginLeft: 16,
+    color: colors.accent,
+    fontWeight: 'bold',
+    fontSize: 16,
+    fontFamily: typography.mono.fontFamily,
+    marginLeft: spacing.md,
   },
   cancelBtn: {
     alignItems: 'center',
-    paddingVertical: 14,
-    marginTop: 8,
+    paddingVertical: spacing.md,
+    marginTop: spacing.md,
   },
   cancelText: {
-    color: 'rgba(255,255,255,0.4)',
-    fontSize: 14,
+    color: colors.fgMuted,
+    fontSize: 13,
+    fontWeight: '500',
   },
 });

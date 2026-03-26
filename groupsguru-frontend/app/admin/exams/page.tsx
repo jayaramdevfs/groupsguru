@@ -1,7 +1,6 @@
 "use client";
 
 import ProtectedLayout from "@/components/layout/ProtectedLayout";
-import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState, useCallback } from "react";
 import { examsApi } from "@/lib/exams";
 import { questionsApi } from "@/lib/questions";
@@ -9,8 +8,6 @@ import { Exam, ExamType, Question } from "@/lib/types";
 import CustomSelect from "@/components/ui/CustomSelect";
 import Modal from "@/components/ui/Modal";
 import AnimatedInput from "@/components/ui/AnimatedInput";
-
-const spring = {  duration: 0.25, ease: "easeOut" as const };
 
 const EXAM_TYPES: ExamType[] = ["TOPIC_WISE", "SECTION_WISE", "SUBJECT_WISE", "FULL_LENGTH_TEST"];
 const SUBJECTS = ["History", "AP History", "Polity", "Economy", "Geography", "Science", "Mental Ability"];
@@ -114,7 +111,7 @@ export default function AdminExams() {
   };
 
   const handleDelete = async (id: number) => {
-    if (confirm("Delete this exam?")) {
+    if (confirm("Delete this exam configuration?")) {
       await examsApi.delete(id);
       fetchData();
     }
@@ -159,84 +156,94 @@ export default function AdminExams() {
 
   return (
     <ProtectedLayout requiredRole="ADMIN">
-      <div className="min-h-screen py-24 px-6 md:px-12 w-full max-w-7xl mx-auto text-[#FAFAF9]">
+      <div className="max-w-[1000px] mx-auto py-12 px-6">
         
         {/* Header */}
-        <div className="flex justify-between items-end mb-12">
+        <header className="mb-12 flex flex-col sm:flex-row sm:items-end justify-between gap-6 border-b border-[#3A3A3A] pb-8">
           <div>
-            <h1 className="text-4xl font-bold mb-2 ">Exam Management</h1>
-            <p className="text-[#FAFAF9]/60 font-bold uppercase tracking-widest text-xs">Sprint 10 — Structure & Assignments</p>
+            <div className="text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-[#666666] mb-2">Operational Module_10</div>
+            <h1 className="text-4xl md:text-5xl font-serif text-[#E8E8E8]">
+              Examination <span className="text-[#D97706]">Architect</span>
+            </h1>
           </div>
+
           <button 
             onClick={handleOpenCreate}
-            className="px-8 py-4 bg-[#EA580C] rounded-2xl font-semibold shadow-xl shadow-orange-500/20 hover:scale-105 active:scale-95 transition-all"
+            className="px-6 py-3 rounded bg-[#D97706] text-white font-bold text-sm hover:bg-[#F59E0B] transition-colors flex items-center gap-2"
           >
-            Create New Exam
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+            Initialize Exam
           </button>
-        </div>
+        </header>
 
         {/* Exams Table */}
-        <div className="bg-white/5 border border-[#57534E]/40 rounded-xl overflow-hidden ">
-          <table className="w-full text-left">
+        <div className="border border-[#3A3A3A] rounded bg-[#1C1C1C] overflow-hidden">
+          <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="border-b border-[#57534E]/40 bg-white/5 font-bold uppercase text-[10px] tracking-widest text-[#FAFAF9]/40 ">
-                <th className="p-6">Name</th>
-                <th className="p-6">Type</th>
-                <th className="p-6">Subject</th>
-                <th className="p-6 text-center">Questions</th>
-                <th className="p-6 text-center">Duration</th>
-                <th className="p-6 text-right">Actions</th>
+              <tr className="border-b border-[#3A3A3A] bg-[#141414]">
+                <th className="p-4 text-[10px] font-mono font-bold text-[#666666] uppercase tracking-widest">Descriptor</th>
+                <th className="p-4 text-[10px] font-mono font-bold text-[#666666] uppercase tracking-widest">Classification</th>
+                <th className="p-4 text-[10px] font-mono font-bold text-[#666666] uppercase tracking-widest text-center">Metrics</th>
+                <th className="p-4 text-[10px] font-mono font-bold text-[#666666] uppercase tracking-widest text-right">Operations</th>
               </tr>
             </thead>
-            <tbody className="font-bold text-sm">
-              <AnimatePresence>
-                {exams.map((exam) => (
-                  <motion.tr 
-                    key={exam.id}
-                    layout
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    className="border-b border-white/5 hover:bg-white/5 transition-colors"
-                  >
-                    <td className="p-6">
-                      <div className="text-[#FAFAF9] mb-1 ">{exam.name}</div>
-                      <div className="text-[10px] text-[#FAFAF9]/40">{exam.nameTe}</div>
-                    </td>
-                    <td className="p-6">
-                      <span className="px-3 py-1 bg-orange-500/10 border border-[#57534E]/40 text-[#F97316] rounded-lg text-[10px] font-semibold uppercase">
+            <tbody className="text-sm">
+              {exams.map((exam) => (
+                <tr 
+                  key={exam.id}
+                  className="border-b border-[#3A3A3A] hover:bg-[#1E1E1E] transition-colors group"
+                >
+                  <td className="p-4">
+                    <div className="text-[#E8E8E8] font-bold group-hover:text-[#D97706] transition-colors">{exam.name}</div>
+                    <div className="text-[10px] text-[#666666] mt-0.5">{exam.nameTe}</div>
+                  </td>
+                  <td className="p-4">
+                    <div className="flex flex-col gap-1.5">
+                      <span className="inline-block px-1.5 py-0.5 rounded border border-[#D97706]/20 bg-[#D97706]/5 text-[#D97706] text-[9px] font-mono font-bold uppercase w-fit">
                         {exam.examType.replace('_', ' ')}
                       </span>
-                    </td>
-                    <td className="p-6 text-[#FAFAF9]/60 ">{exam.subject || "N/A"}</td>
-                    <td className="p-6 text-center ">{exam.totalQuestions}</td>
-                    <td className="p-6 text-center ">{exam.durationMinutes}m</td>
-                    <td className="p-6 text-right space-x-2">
+                      <span className="text-[10px] text-[#666666] font-mono uppercase tracking-widest">{exam.subject || "GEN_COUP"}</span>
+                    </div>
+                  </td>
+                  <td className="p-4 text-center">
+                    <div className="flex flex-col gap-1">
+                      <div className="text-[#E8E8E8] font-mono text-xs">{exam.totalQuestions} Qs</div>
+                      <div className="text-[#666666] font-mono text-[9px] uppercase">{exam.durationMinutes}m Duration</div>
+                    </div>
+                  </td>
+                  <td className="p-4 text-right">
+                    <div className="flex items-center justify-end gap-2">
                       <button 
                         onClick={() => handleOpenAssign(exam)}
-                        className="px-4 py-2 bg-[#EA580C] text-[#F97316] border border-[#57534E]/40 rounded-xl hover:bg-[#EA580C] transition-all  text-xs"
+                        className="px-3 py-1.5 rounded border border-[#D97706] text-[#D97706] text-[10px] font-mono font-bold uppercase transition-colors hover:bg-[#D97706] hover:text-white"
                       >
-                        Assign Qs
+                        Map Qs
                       </button>
                       <button 
                          onClick={() => handleOpenEdit(exam)}
-                        className="px-4 py-2 bg-white/10 text-[#FAFAF9] rounded-xl hover:bg-white/20 transition-all  text-xs"
+                        className="p-1.5 rounded border border-[#3A3A3A] text-[#E8E8E8] transition-colors hover:bg-[#2D2D2D]"
                       >
-                        Edit
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
                       </button>
                       <button 
                         onClick={() => handleDelete(exam.id)}
-                        className="px-4 py-2 bg-red-500/10 text-red-500 rounded-xl hover:bg-red-500/20 transition-all  text-xs"
+                        className="p-1.5 rounded border border-[#C74444]/30 text-[#C74444] transition-colors hover:bg-[#C74444]/10"
                       >
-                        Delete
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
                       </button>
-                    </td>
-                  </motion.tr>
-                ))}
-              </AnimatePresence>
+                    </div>
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </table>
           {exams.length === 0 && !isLoading && (
-            <div className="p-20 text-center text-[#FAFAF9]/40  font-bold">No exams found. Start by creating one.</div>
+            <div className="p-20 text-center text-[#666666] font-mono text-sm uppercase tracking-widest">
+              Zero records in examinations repository.
+            </div>
           )}
         </div>
 
@@ -244,27 +251,27 @@ export default function AdminExams() {
         <Modal 
           isOpen={isModalOpen} 
           onClose={() => setIsModalOpen(false)}
-          title={editingExam ? "Edit Exam" : "Create Exam"}
+          title={editingExam ? "Edit Examination Settings" : "Define New Examination"}
         >
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6 pt-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <AnimatedInput label="Exam Name (EN)" placeholder="Enter name" value={formData.name} onChange={(val) => setFormData({...formData, name: val})} />
-              <AnimatedInput label="Exam Name (TE)" placeholder="పేరు నమోదు చేయండి" value={formData.nameTe} onChange={(val) => setFormData({...formData, nameTe: val})} />
+              <AnimatedInput label="Official Label (EN)" placeholder="UPSC Prelims Mock 1" value={formData.name} onChange={(val) => setFormData({...formData, name: val})} required />
+              <AnimatedInput label="Official Label (TE)" placeholder="..." value={formData.nameTe} onChange={(val) => setFormData({...formData, nameTe: val})} required />
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label className="text-[10px] font-bold uppercase tracking-widest text-[#FAFAF9]/40 ml-1 mb-2 block ">Exam Type</label>
+              <div className="space-y-2">
+                <label className="text-[10px] font-mono font-bold text-[#666666] uppercase tracking-widest ml-1">Test Classification</label>
                 <CustomSelect 
                   options={EXAM_TYPES.map(t => ({ value: t, label: t.replace('_', ' ') }))}
                   value={formData.examType}
                   onChange={(val) => setFormData({...formData, examType: val as ExamType})}
                 />
               </div>
-              <div>
-                <label className="text-[10px] font-bold uppercase tracking-widest text-[#FAFAF9]/40 ml-1 mb-2 block ">Subject</label>
+              <div className="space-y-2">
+                <label className="text-[10px] font-mono font-bold text-[#666666] uppercase tracking-widest ml-1">Subject Scope</label>
                 <CustomSelect 
-                  options={SUBJECTS.map(s => ({ value: s, label: s }))}
+                  options={SUBJECTS.map(s => ({ value: s, label: s.toUpperCase() }))}
                   value={formData.subject}
                   onChange={(val) => setFormData({...formData, subject: val.toString()})}
                 />
@@ -272,41 +279,32 @@ export default function AdminExams() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-               <AnimatedInput label="Duration (min)" placeholder="30" type="number" value={formData.durationMinutes.toString()} onChange={(val) => setFormData({...formData, durationMinutes: parseInt(val) || 0})} />
-               <AnimatedInput label="Avg Q Count" placeholder="25" type="number" value={formData.totalQuestions.toString()} onChange={(val) => setFormData({...formData, totalQuestions: parseInt(val) || 0})} />
-               <AnimatedInput label="Marks/Question" placeholder="1.0" type="number" value={formData.marksPerQuestion.toString()} onChange={(val) => setFormData({...formData, marksPerQuestion: parseFloat(val) || 1.0})} />
+               <AnimatedInput label="Duration_m" placeholder="30" type="number" value={formData.durationMinutes.toString()} onChange={(val) => setFormData({...formData, durationMinutes: parseInt(val) || 0})} />
+               <AnimatedInput label="Capacity_q" placeholder="25" type="number" value={formData.totalQuestions.toString()} onChange={(val) => setFormData({...formData, totalQuestions: parseInt(val) || 0})} />
+               <AnimatedInput label="Unit Marks" placeholder="1.0" type="number" value={formData.marksPerQuestion.toString()} onChange={(val) => setFormData({...formData, marksPerQuestion: parseFloat(val) || 1.0})} />
             </div>
 
-            <div className="flex items-center gap-4 p-4 bg-white/5 rounded-2xl border border-[#57534E]/40">
+            <div className="flex items-center gap-4 p-4 bg-[#141414] rounded border border-[#3A3A3A]">
               <input 
                  type="checkbox" 
                  checked={formData.negativeMarking} 
                  onChange={(e) => setFormData({...formData, negativeMarking: e.target.checked})}
-                 className="w-5 h-5 accent-orange-500"
+                 className="w-4 h-4 accent-[#D97706]"
               />
-              <span className="font-bold ">Enable Negative Marking</span>
+              <span className="text-xs font-mono font-bold text-[#E8E8E8] uppercase tracking-widest">Enable Penalty Protocol</span>
               {formData.negativeMarking && (
-                <div className="ml-auto w-32">
-                  <AnimatedInput label="Penalty" placeholder="0.25" type="number" value={formData.penaltyPerWrong.toString()} onChange={(val) => setFormData({...formData, penaltyPerWrong: parseFloat(val) || 0.25})} />
+                <div className="ml-auto w-32 scale-90 origin-right">
+                  <AnimatedInput label="Penalty Scalar" placeholder="0.25" type="number" value={formData.penaltyPerWrong.toString()} onChange={(val) => setFormData({...formData, penaltyPerWrong: parseFloat(val) || 0.25})} />
                 </div>
               )}
             </div>
 
-            <div className="flex gap-4">
-               <button 
-                  type="button" 
-                  onClick={() => setIsModalOpen(false)}
-                  className="flex-1 py-4 bg-white/5 rounded-2xl font-bold  transition-all hover:bg-white/10"
-               >
-                  Cancel
-               </button>
-               <button 
-                  type="submit"
-                  className="flex-1 py-4 bg-[#EA580C] rounded-2xl font-semibold shadow-lg shadow-orange-500/20"
-               >
-                  {editingExam ? "Save Changes" : "Create Exam"}
-               </button>
-            </div>
+            <button 
+              type="submit"
+              className="w-full py-4 rounded bg-[#D97706] text-white font-bold text-sm hover:bg-[#F59E0B] transition-colors"
+            >
+              {editingExam ? "Commit Configuration Changes" : "Initialize Examination Record"}
+            </button>
           </form>
         </Modal>
 
@@ -314,19 +312,19 @@ export default function AdminExams() {
         <Modal
           isOpen={isAssignModalOpen}
           onClose={() => setIsAssignModalOpen(false)}
-          title={`Assign Questions: ${activeAssignExam?.name}`}
+          title="Map Corpus Questions"
         >
-          <div className="space-y-6">
+          <div className="space-y-6 pt-4">
             <div className="flex gap-4 items-center">
                <input 
                  type="text" 
-                 placeholder="Search questions..."
+                 placeholder="Filter questions by reference..."
                  value={assignSearch}
                  onChange={(e) => setAssignSearch(e.target.value)}
-                 className="flex-1 bg-white/5 border border-[#57534E]/40 rounded-2xl px-6 py-4 text-[#FAFAF9] placeholder:text-[#FAFAF9]/20 focus:outline-none focus:border-orange-500 transition-all font-bold "
+                 className="flex-1 bg-[#141414] border border-[#3A3A3A] rounded px-4 py-2.5 text-[#E8E8E8] text-sm focus:outline-none focus:border-[#D97706]/50 transition-colors"
                />
-               <div className="px-6 py-4 bg-orange-500/10 border border-[#57534E]/40 text-[#F97316] rounded-2xl font-semibold">
-                 {selectedQuestionIds.length} Selected
+               <div className="px-4 py-2 bg-[#D97706]/10 border border-[#D97706]/30 text-[#D97706] rounded font-mono text-[10px] font-bold uppercase tracking-widest whitespace-nowrap">
+                 {selectedQuestionIds.length} MAP_SIGS
                </div>
             </div>
 
@@ -337,24 +335,24 @@ export default function AdminExams() {
                   <div 
                     key={q.id}
                     onClick={() => toggleQuestion(q.id)}
-                    className={`p-4 rounded-2xl border transition-all cursor-pointer ${
+                    className={`p-4 rounded border transition-all cursor-pointer group ${
                       isSelected 
-                        ? "bg-orange-500/10 border-orange-500/40" 
-                        : "bg-white/5 border-[#57534E]/40 hover:border-white/20"
+                        ? "bg-[#D97706]/5 border-[#D97706]/40" 
+                        : "bg-[#1E1E1E] border-[#3A3A3A] hover:border-[#666666]"
                     }`}
                   >
                     <div className="flex items-center gap-4">
-                      <div className={`w-6 h-6 rounded-lg flex items-center justify-center border ${
-                        isSelected ? "bg-orange-500 border-orange-500 text-[#FAFAF9]" : "border-white/20"
+                      <div className={`w-5 h-5 rounded flex items-center justify-center border transition-colors ${
+                        isSelected ? "bg-[#D97706] border-[#D97706] text-white" : "bg-[#141414] border-[#3A3A3A]"
                       }`}>
-                        {isSelected && "✓"}
+                        {isSelected && <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4"><polyline points="20 6 9 17 4 12"></polyline></svg>}
                       </div>
                       <div className="flex-1">
                         <div className="flex justify-between items-start mb-1">
-                          <span className="font-mono text-[10px] text-[#F97316] font-bold">{q.questionCode}</span>
-                          <span className="text-[10px] text-[#FAFAF9]/40 font-bold uppercase tracking-widest">{q.subject}</span>
+                          <span className="font-mono text-[9px] text-[#D97706] font-bold tracking-widest uppercase">{q.questionCode}</span>
+                          <span className="text-[9px] text-[#666666] font-mono font-bold uppercase tracking-widest">{q.subject}</span>
                         </div>
-                        <p className="text-xs font-bold  line-clamp-1">{q.questionTextEn}</p>
+                        <p className="text-xs font-medium text-[#E8E8E8] line-clamp-1 group-hover:text-white transition-colors">{q.questionTextEn}</p>
                       </div>
                     </div>
                   </div>
@@ -362,20 +360,12 @@ export default function AdminExams() {
               })}
             </div>
 
-            <div className="flex gap-4">
-              <button 
-                  onClick={() => setIsAssignModalOpen(false)}
-                  className="flex-1 py-4 bg-white/5 rounded-2xl font-bold  transition-all hover:bg-white/10"
-               >
-                  Cancel
-               </button>
-               <button 
-                  onClick={handleAssignSubmit}
-                  className="flex-1 py-4 bg-[#EA580C] rounded-2xl font-semibold shadow-lg shadow-orange-500/20"
-               >
-                  Save Assignment
-               </button>
-            </div>
+            <button 
+              onClick={handleAssignSubmit}
+              className="w-full py-4 rounded bg-[#D97706] text-white font-bold text-sm hover:bg-[#F59E0B] transition-colors"
+            >
+              Commit Mapping Signatures
+            </button>
           </div>
         </Modal>
 

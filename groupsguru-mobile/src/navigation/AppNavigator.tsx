@@ -18,9 +18,14 @@ import ExamListScreen from "../screens/ExamListScreen";
 import ExamDetailScreen from "../screens/ExamDetailScreen";
 import ExamAttemptScreen from "../screens/ExamAttemptScreen";
 import ExamResultScreen from "../screens/ExamResultScreen";
+import RegisterScreen from "../screens/RegisterScreen";
+import StudyMaterialScreen from "../screens/StudyMaterialScreen";
+import StudyMaterialViewScreen from "../screens/StudyMaterialViewScreen";
+import { StudyMaterial } from "../api/types";
 
 export type RootStackParamList = {
   Login: undefined;
+  Register: undefined;
   AdminDashboard: undefined;
   StudentDashboard: undefined;
   Category: { commissionId?: number; commissionName?: string };
@@ -42,6 +47,8 @@ export type RootStackParamList = {
   ExamDetail: { examId: number };
   ExamAttempt: { examId: number };
   ExamResult: { attemptId: number; examId: number };
+  StudyMaterial: { entityType: string; entityId: number; entityName: string };
+  StudyMaterialView: { material: StudyMaterial };
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -61,7 +68,10 @@ const AppNavigator = () => {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         {user === null ? (
-          <Stack.Screen name="Login" component={LoginScreen} />
+          <>
+            <Stack.Screen name="Login" component={LoginScreen} />
+            <Stack.Screen name="Register" component={RegisterScreen} />
+          </>
         ) : user.role === "ADMIN" ? (
           <>
             <Stack.Screen
@@ -84,6 +94,8 @@ const AppNavigator = () => {
               name="QuestionList"
               component={QuestionListScreen}
             />
+            <Stack.Screen name="StudyMaterial" component={StudyMaterialScreen} />
+            <Stack.Screen name="StudyMaterialView" component={StudyMaterialViewScreen} />
           </>
         ) : (
           <>
@@ -106,6 +118,8 @@ const AppNavigator = () => {
               component={ExamAttemptScreen}
             />
             <Stack.Screen name="ExamResult" component={ExamResultScreen} />
+            <Stack.Screen name="StudyMaterial" component={StudyMaterialScreen} />
+            <Stack.Screen name="StudyMaterialView" component={StudyMaterialViewScreen} />
           </>
         )}
       </Stack.Navigator>

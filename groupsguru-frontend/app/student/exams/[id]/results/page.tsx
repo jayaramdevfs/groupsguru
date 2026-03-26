@@ -2,13 +2,11 @@
 
 import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
-import { motion } from "framer-motion";
 import ProtectedLayout from "@/components/layout/ProtectedLayout";
 import { attemptsApi } from "@/lib/attempts";
 import { ExamResult, QuestionResult, TopicAnalytics } from "@/lib/types";
 import { Multilang } from "@/components/ui/Multilang";
-
-const spring = {  duration: 0.25, ease: "easeOut" as const };
+import Link from "next/link";
 
 export default function ExamResultsPage() {
   const { id } = useParams();
@@ -19,9 +17,6 @@ export default function ExamResultsPage() {
   useEffect(() => {
     const fetchResult = async () => {
       try {
-        // We need the attemptId. In a real app, we might pass it as a query param or fetch the latest attempt.
-        // For now, let's assume the user just finished an attempt.
-        // If we don't have attemptId, we can get the latest attempt for this exam.
         const myAttempts = await attemptsApi.getMyAttempts();
         const latestAttempt = myAttempts.find(a => a.examId === Number(id));
         
@@ -39,17 +34,17 @@ export default function ExamResultsPage() {
   }, [id]);
 
   if (loading) return (
-    <div className="min-h-screen bg-[#1C1917] flex items-center justify-center">
-       <div className="w-16 h-16 border-4 border-orange-500 border-t-transparent rounded-full animate-spin" />
+    <div className="min-h-screen bg-[#191919] flex items-center justify-center">
+       <div className="w-8 h-8 border-2 border-[#D97706] border-t-transparent rounded-full animate-spin" />
     </div>
   );
 
   if (!result) return (
-    <div className="min-h-screen bg-[#1C1917] flex flex-col items-center justify-center p-6 text-center">
-       <h1 className="text-4xl font-semibold mb-4">No Results Found</h1>
+    <div className="min-h-screen bg-[#191919] flex flex-col items-center justify-center p-6 text-center">
+       <h1 className="text-4xl font-serif text-[#E8E8E8] mb-4">No Results Found</h1>
        <button 
           onClick={() => router.push("/student/dashboard")}
-          className="px-8 py-4 bg-[#EA580C] rounded-2xl font-semibold"
+          className="px-8 py-3 bg-[#D97706] border border-[#D97706] rounded text-white font-bold uppercase tracking-widest text-xs hover:bg-[#F59E0B] transition-colors"
        >
           Back to Dashboard
        </button>
@@ -57,14 +52,25 @@ export default function ExamResultsPage() {
   );
 
   const { attempt, questions, topicAnalytics } = result;
-  const maxMarks = questions.length; // Assuming 1 mark per question for simplicity in UI display
+  const maxMarks = questions.length;
 
   return (
     <ProtectedLayout requiredRole="STUDENT">
-      <div className="min-h-screen pt-10 pb-16 px-6 md:px-12 w-full max-w-[95%] mx-auto space-y-6 text-[#FAFAF9]">
+      <div className="max-w-[900px] mx-auto py-12 px-6 space-y-12">
         
+        {/* Back Hook */}
+        <Link
+          href="/student/exams"
+          className="inline-flex items-center gap-2 text-[#D97706] text-[10px] font-bold uppercase tracking-widest hover:text-[#F59E0B] transition-colors"
+        >
+          <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+          Back to Practice Center
+        </Link>
+
         {/* Hero Section: Circular Progress & Score */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-white/5 border border-[#57534E]/40 p-8 rounded-[40px]  shadow-2xl shadow-orange-500/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-[#1E1E1E] border border-[#3A3A3A] p-10 rounded-lg">
            <div className="flex justify-center">
               <CircularProgress 
                 percentage={((attempt.correctCount || 0) / questions.length) * 100} 
@@ -72,45 +78,56 @@ export default function ExamResultsPage() {
                 total={maxMarks}
               />
            </div>
-           <div className="space-y-4">
-              <h1 className="text-4xl font-semibold text-[#F97316]">Exam Analysis</h1>
-              <p className="text-[#FAFAF9]/50 font-bold  text-base leading-relaxed">
-                Great job! You've completed the exam. Here's a detailed breakdown of your performance across different topics.
+           <div className="space-y-6">
+              <div className="inline-block px-2 py-0.5 rounded border border-[#D97706]/30 bg-[#D97706]/10 text-[#D97706] text-[10px] font-bold uppercase tracking-widest">
+                Attempt Analysis
+              </div>
+              <h1 className="text-4xl font-serif text-[#E8E8E8]">Exam <span className="text-[#D97706]">Performance</span></h1>
+              <p className="text-[#A0A0A0] leading-relaxed">
+                <Multilang 
+                  en="Review your results below to identify your strengths and areas for improvement." 
+                  te="మీ బలాలు మరియు మెరుగుపరచవలసిన అంశాలను గుర్తించడానికి క్రింద మీ ఫలితాలను సమీక్షించండి." 
+                />
               </p>
-              <div className="grid grid-cols-3 gap-3">
-                 <StatCard label="Correct" value={attempt.correctCount || 0} color="emerald" />
-                 <StatCard label="Wrong" value={attempt.wrongCount || 0} color="red" />
-                 <StatCard label="Skipped" value={attempt.unattemptedCount || 0} color="zinc" />
+              <div className="grid grid-cols-3 gap-2">
+                 <StatCard label="Correct" value={attempt.correctCount || 0} type="correct" />
+                 <StatCard label="Wrong" value={attempt.wrongCount || 0} type="wrong" />
+                 <StatCard label="Skipped" value={attempt.unattemptedCount || 0} type="skipped" />
               </div>
            </div>
         </div>
 
         {/* Topic Breakdown */}
-        <div className="space-y-8">
-           <h2 className="text-3xl font-semibold px-4">Topic Performance</h2>
-           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="space-y-6">
+           <h2 className="text-2xl font-serif text-[#E8E8E8] pb-4 border-b border-[#3A3A3A]">Topic Breakdown</h2>
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {topicAnalytics.map((topic, i) => (
-                <TopicCard key={i} topic={topic} index={i} />
+                <TopicCard key={i} topic={topic} />
               ))}
            </div>
         </div>
 
         {/* Question Review */}
-        <div className="space-y-8">
-           <h2 className="text-3xl font-semibold px-4">Question Review</h2>
-           <div className="space-y-6">
+        <div className="space-y-6">
+           <h2 className="text-2xl font-serif text-[#E8E8E8] pb-4 border-b border-[#3A3A3A]">Detailed Review</h2>
+           <div className="space-y-4">
               {questions.map((qr, i) => (
                 <QuestionReviewCard key={i} qr={qr} index={i} />
               ))}
            </div>
         </div>
 
-        <div className="flex justify-center pt-12">
+        {/* CTA */}
+        <div className="text-center pt-8">
            <button 
               onClick={() => router.push("/student/dashboard")}
-              className="px-12 py-5 bg-[#EA580C] rounded-3xl font-semibold shadow-2xl shadow-orange-500/40 hover:scale-105 active:scale-95 transition-all text-xl"
+              className="inline-flex items-center gap-3 px-12 py-4 bg-[#D97706] border border-[#D97706] rounded text-white font-bold uppercase tracking-widest text-xs hover:bg-[#F59E0B] transition-colors"
            >
               Return to Dashboard
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
            </button>
         </div>
 
@@ -119,16 +136,16 @@ export default function ExamResultsPage() {
   );
 }
 
-function StatCard({ label, value, color }: { label: string, value: number, color: string }) {
-  const colors: Record<string, string> = {
-    emerald: "text-emerald-400 bg-emerald-500/10 border-emerald-500/20",
-    red: "text-red-400 bg-red-500/10 border-red-500/20",
-    zinc: "text-zinc-400 bg-zinc-500/10 border-zinc-500/20"
+function StatCard({ label, value, type }: { label: string, value: number, type: 'correct' | 'wrong' | 'skipped' }) {
+  const styles = {
+    correct: "text-[#3D9A5F] border-[#3D9A5F]/20 bg-[#3D9A5F]/5",
+    wrong: "text-[#EF4444] border-[#EF4444]/20 bg-[#EF4444]/5",
+    skipped: "text-[#666666] border-[#3A3A3A] bg-[#141414]"
   };
   return (
-    <div className={`p-4 rounded-2xl border text-center ${colors[color]}`}>
-       <div className="text-2xl font-semibold mb-1">{value}</div>
-       <div className="text-[8px] font-bold uppercase tracking-widest opacity-60 ">{label}</div>
+    <div className={`p-4 rounded border text-center ${styles[type]}`}>
+       <div className="text-xl font-bold font-mono mb-1">{value}</div>
+       <div className="text-[10px] font-bold uppercase tracking-widest opacity-60 font-mono">{label}</div>
     </div>
   );
 }
@@ -143,89 +160,61 @@ function CircularProgress({ percentage, score, total }: { percentage: number, sc
        <svg className="w-full h-full transform -rotate-90">
           <circle 
             cx="96" cy="96" r={radius} 
-            stroke="currentColor" strokeWidth="12" fill="transparent"
-            className="text-[#FAFAF9]/5"
+            stroke="#3A3A3A" strokeWidth="8" fill="transparent"
           />
-          <motion.circle 
+          <circle 
             cx="96" cy="96" r={radius} 
-            stroke="url(#gradient)" strokeWidth="12" fill="transparent"
+            stroke="#D97706" strokeWidth="8" fill="transparent"
             strokeDasharray={circumference}
-            initial={{ strokeDashoffset: circumference }}
-            animate={{ strokeDashoffset: offset }}
-            transition={{ duration: 1.5, ease: "easeOut" as const }}
+            strokeDashoffset={offset}
             strokeLinecap="round"
           />
-          <defs>
-             <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#EA580C" />
-                <stop offset="100%" stopColor="#F97316" />
-             </linearGradient>
-          </defs>
        </svg>
        <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-          <motion.span 
-             initial={{ opacity: 0, scale: 0.5 }}
-             animate={{ opacity: 1, scale: 1 }}
-             className="text-4xl font-semibold text-[#F97316]"
-          >
-            {score.toFixed(1)}
-          </motion.span>
-          <span className="text-[#FAFAF9]/40 font-semibold text-[9px] uppercase tracking-widest mt-1">of {total} marks</span>
+          <span className="text-5xl font-bold text-[#E8E8E8] font-mono leading-none">
+            {score.toFixed(0)}
+          </span>
+          <span className="text-[#666666] font-bold text-[10px] uppercase tracking-widest mt-2 font-mono">Total Score</span>
+          <span className="text-[#D97706] font-bold text-[10px] uppercase tracking-widest font-mono">of {total}</span>
        </div>
     </div>
   );
 }
 
-function TopicCard({ topic, index }: { topic: TopicAnalytics, index: number }) {
+function TopicCard({ topic }: { topic: TopicAnalytics }) {
   return (
-    <motion.div 
-      initial={{ y: 20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ delay: index * 0.1 }}
-      className="bg-white/5 border border-[#57534E]/40 p-5 rounded-3xl hover:bg-white/[0.08] transition-all group"
-    >
-       <div className="flex justify-between items-start mb-4">
-          <h3 className="text-base font-bold  text-[#FAFAF9]/90 group-hover:text-[#FAFAF9] transition-colors uppercase tracking-tight">{topic.topicName}</h3>
-          <div className="text-xl font-semibold text-[#F97316]">{topic.hitRate.toFixed(0)}%</div>
+    <div className="bg-[#1E1E1E] border border-[#3A3A3A] p-6 rounded-lg group hover:border-[#D97706]/30 transition-colors">
+       <div className="flex justify-between items-center mb-4">
+          <h3 className="text-sm font-bold text-[#E8E8E8] uppercase tracking-wider">{topic.topicName}</h3>
+          <div className="text-lg font-bold text-[#D97706] font-mono">{topic.hitRate.toFixed(0)}%</div>
        </div>
-       <div className="w-full h-2 bg-white/5 rounded-full overflow-hidden mb-5">
-          <motion.div 
-             initial={{ width: 0 }}
-             animate={{ width: `${topic.hitRate}%` }}
-             className="h-full bg-[#EA580C] rounded-full"
-          />
+       <div className="w-full h-1.5 bg-[#141414] border border-[#3A3A3A] rounded-full overflow-hidden mb-6">
+          <div className="h-full bg-[#D97706]" style={{ width: `${topic.hitRate}%` }} />
        </div>
-       <div className="flex justify-between font-semibold text-[9px] uppercase tracking-widest text-[#FAFAF9]/40">
-          <span>{topic.correctCount} C</span>
-          <span>{topic.wrongCount} W</span>
-          <span>{topic.unattemptedCount} S</span>
+       <div className="flex justify-between font-mono text-[10px] font-bold uppercase tracking-widest text-[#666666]">
+          <span>{topic.correctCount} Correct</span>
+          <span>{topic.wrongCount} Wrong</span>
        </div>
-    </motion.div>
+    </div>
   );
 }
 
 function QuestionReviewCard({ qr, index }: { qr: QuestionResult, index: number }) {
   const isSelected = !!qr.selectedOption;
   const isCorrect = qr.isCorrect;
-  
-  const borderColor = isCorrect ? "border-emerald-500/30 bg-emerald-500/[0.02]" : !isSelected ? "border-[#57534E]/40 bg-white/5" : "border-red-500/30 bg-red-500/[0.02]";
+  const statusColor = isCorrect ? "border-[#3D9A5F]/30 bg-[#3D9A5F]/5" : isSelected ? "border-[#EF4444]/30 bg-[#EF4444]/5" : "border-[#3A3A3A] bg-[#1E1E1E]";
  
   return (
-    <motion.div 
-      initial={{ x: -20, opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
-      transition={{ delay: 0.5 + (index * 0.1) }}
-      className={`p-6 md:p-8 rounded-xl border ${borderColor}  space-y-4`}
-    >
+    <div className={`p-8 rounded-lg border ${statusColor} space-y-6`}>
        <div className="flex justify-between items-start">
-          <div className="space-y-1">
-             <div className="text-[9px] font-bold uppercase tracking-widest text-[#FAFAF9]/40 ">Question {index + 1}</div>
-             <h3 className="text-base font-bold  leading-relaxed">
+          <div className="space-y-2">
+             <div className="text-[10px] font-bold uppercase tracking-widest text-[#666666] font-mono">Question {index + 1}</div>
+             <h3 className="text-lg font-medium text-[#E8E8E8] leading-relaxed">
                 <Multilang en={qr.question.questionTextEn} te={qr.question.questionTextTe} />
              </h3>
           </div>
           {qr.isCorrect !== null && (
-             <div className={`px-3 py-1.5 rounded-lg font-semibold text-[10px] uppercase tracking-widest ${isCorrect ? "bg-emerald-500/20 text-emerald-400" : "bg-red-500/20 text-red-400"}`}>
+             <div className={`px-3 py-1 rounded border font-bold text-[10px] uppercase tracking-widest font-mono ${isCorrect ? "border-[#3D9A5F]/30 text-[#3D9A5F]" : "border-[#EF4444]/30 text-[#EF4444]"}`}>
                 {isCorrect ? "Correct" : "Incorrect"}
              </div>
           )}
@@ -237,34 +226,34 @@ function QuestionReviewCard({ qr, index }: { qr: QuestionResult, index: number }
           <ReviewOption label="C" en={qr.question.optionCEn} te={qr.question.optionCTe} selected={qr.selectedOption === 'C'} correct={qr.question.correctOption === 'C'} />
           <ReviewOption label="D" en={qr.question.optionDEn} te={qr.question.optionDTe} selected={qr.selectedOption === 'D'} correct={qr.question.correctOption === 'D'} />
        </div>
- 
+  
        {(qr.question.explanationEn || qr.question.explanationTe) && (
-          <div className="p-5 bg-white/5 border border-[#57534E]/40 rounded-2xl space-y-2">
-             <div className="text-[9px] font-bold uppercase tracking-widest text-[#F97316] ">Explanation</div>
-             <div className="text-[#FAFAF9]/50 font-bold  text-sm leading-relaxed">
+          <div className="p-6 bg-[#141414] border border-[#3A3A3A] rounded-lg">
+             <div className="text-[10px] font-bold uppercase tracking-widest text-[#D97706] mb-3 font-mono">Explanation</div>
+             <div className="text-[#A0A0A0] text-sm leading-relaxed">
                 <Multilang en={qr.question.explanationEn || ""} te={qr.question.explanationTe || ""} />
              </div>
           </div>
        )}
-    </motion.div>
+    </div>
   );
 }
 
 function ReviewOption({ label, en, te, selected, correct }: { label: string, en: string, te: string, selected: boolean, correct: boolean }) {
-  let style = "bg-white/5 border-[#57534E]/40";
-  if (correct) style = "bg-emerald-500/20 border-emerald-500/50 ring-2 ring-emerald-500/20";
-  else if (selected && !correct) style = "bg-red-500/20 border-red-500/50";
+  let style = "bg-[#1E1E1E] border-[#3A3A3A]";
+  if (correct) style = "bg-[#3D9A5F]/10 border-[#3D9A5F] text-[#E8E8E8]";
+  else if (selected && !correct) style = "bg-[#EF4444]/10 border-[#EF4444] text-[#E8E8E8]";
  
   return (
-    <div className={`p-4 rounded-2xl border transition-all flex items-start gap-3 ${style}`}>
-       <div className={`w-7 h-7 rounded-lg flex items-center justify-center font-semibold text-xs shrink-0 ${
-          correct ? "bg-emerald-500 text-[#FAFAF9]" : selected ? "bg-red-500 text-[#FAFAF9]" : "bg-white/5 text-[#FAFAF9]/40"
+    <div className={`p-4 rounded border flex items-start gap-4 transition-colors ${style}`}>
+       <div className={`w-8 h-8 rounded border flex items-center justify-center font-bold text-xs shrink-0 font-mono ${
+          correct ? "bg-[#3D9A5F] border-[#3D9A5F] text-white" : selected ? "bg-[#EF4444] border-[#EF4444] text-white" : "bg-[#141414] border-[#3A3A3A] text-[#666666]"
        }`}>
           {label}
        </div>
        <div>
-          <div className="font-semibold  text-[#FAFAF9]/90 text-sm">{en}</div>
-          <div className="text-[9px] font-bold mt-1 text-[#FAFAF9]/40">{te}</div>
+          <div className="font-medium text-sm mb-1">{en}</div>
+          <div className="text-[11px] opacity-60">{te}</div>
        </div>
     </div>
   );

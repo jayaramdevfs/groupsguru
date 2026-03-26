@@ -18,7 +18,7 @@ export default function CustomSelect({
   options,
   value,
   onChange,
-  placeholder = "Select...",
+  placeholder = "Select option...",
   disabled = false,
 }: CustomSelectProps) {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,55 +39,30 @@ export default function CustomSelect({
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Framer motion variants for the dropdown container
-  const dropdownVariants = {
-    hidden: { opacity: 0, y: -10, scale: 0.95 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      scale: 1,
-      transition: { 
-        duration: 0.25, ease: "easeOut" as const,
-        staggerChildren: 0.03 // Stagger the appearance of options
-      } 
-    },
-    exit: { opacity: 0, y: -10, scale: 0.95, transition: { duration: 0.15 } }
-  };
-
-  // Framer motion variants for individual options
-  const optionVariants = {
-    hidden: { opacity: 0, x: -10 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.25, ease: "easeOut" as const } }
-  };
-
   return (
     <div
       className={`relative w-full ${disabled ? "opacity-50 pointer-events-none" : ""}`}
       ref={containerRef}
     >
-      {/* Trigger Button */}
-      <motion.button
-        whileTap={{ scale: 0.98 }}
+      <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className={`w-full bg-black/40 border rounded-2xl p-4 flex justify-between items-center transition-all duration-300 text-left 
+        className={`w-full bg-[#141414] border rounded p-3 flex justify-between items-center transition-all duration-150 text-left 
           ${isOpen 
-            ? "border-orange-500/70 shadow-md bg-[#292524]" 
-            : "border-[#57534E]/40 hover:border-white/20 hover:bg-black/60"
+            ? "border-[#D97706] ring-1 ring-[#D97706]/20" 
+            : "border-[#3A3A3A] hover:border-[#666666]"
           }
         `}
       >
         <span
-          className={`font-medium ${
-            selectedOption ? "text-[#FAFAF9]" : "text-[#FAFAF9]/40 "
+          className={`text-sm font-medium truncate pr-4 ${
+            selectedOption ? "text-[#E8E8E8]" : "text-[#666666]"
           }`}
         >
           {selectedOption ? selectedOption.label : placeholder}
         </span>
-        <motion.svg
-          animate={{ rotate: isOpen ? 180 : 0 }}
-          transition={{ duration: 0.25, ease: "easeOut" as const }}
-          className={`w-5 h-5 ${isOpen ? "text-[#F97316]" : "text-[#FAFAF9]/40"}`}
+        <svg
+          className={`w-4 h-4 transition-transform duration-150 ${isOpen ? "rotate-180 text-[#D97706]" : "text-[#666666]"}`}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -95,70 +70,52 @@ export default function CustomSelect({
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
-            strokeWidth="2.5"
+            strokeWidth="2"
             d="M19 9l-7 7-7-7"
           />
-        </motion.svg>
-      </motion.button>
+        </svg>
+      </button>
 
-      {/* Dropdown Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            variants={dropdownVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            className="absolute z-[999] w-full mt-3 bg-[#1C1917] border border-white/20 rounded-2xl shadow-md overflow-hidden"
+            initial={{ opacity: 0, y: -4 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -4 }}
+            transition={{ duration: 0.15 }}
+            className="absolute z-[999] w-full mt-1 bg-[#1E1E1E] border border-[#3A3A3A] rounded shadow-xl overflow-hidden"
           >
-            {/* Custom generic CSS scrollbar classes added for tailwind via global CSS logic */}
-            <div className="max-h-[300px] overflow-y-auto p-2" style={{ scrollbarWidth: "thin", scrollbarColor: "rgba(255,255,255,0.1) transparent" }}>
+            <div className="max-h-[240px] overflow-y-auto py-1 custom-scrollbar">
               {options.length === 0 ? (
-                <div className="px-5 py-4 text-[#FAFAF9]/40  text-center font-medium">
+                <div className="px-4 py-3 text-[#666666] text-sm text-center">
                   No options available
                 </div>
               ) : (
                 options.map((option) => {
                   const isSelected = value === option.value;
                   return (
-                    <motion.button
-                      variants={optionVariants}
+                    <button
                       key={option.value}
                       type="button"
                       onClick={() => {
                         onChange(option.value);
                         setIsOpen(false);
                       }}
-                      className={`w-full text-left px-4 py-3.5 mb-1 last:mb-0 rounded-xl transition-all duration-200 flex items-center justify-between group
+                      className={`w-full text-left px-4 py-2 text-sm transition-colors duration-150 flex items-center justify-between
                         ${
                           isSelected
-                            ? "bg-[#EA580C] text-[#F97316] font-bold border border-[#57534E]/40 shadow-md"
-                            : "text-[#FAFAF9]/80 hover:bg-white/5 hover:text-[#FAFAF9] border border-transparent"
+                            ? "bg-[#D97706]/10 text-[#D97706] font-bold"
+                            : "text-[#A0A0A0] hover:bg-[#2D2D2D] hover:text-[#E8E8E8]"
                         }
                       `}
                     >
                       <span className="truncate pr-4">{option.label}</span>
-                      
-                      {/* Checkmark icon for selected item */}
                       {isSelected && (
-                        <motion.svg
-                          initial={{ scale: 0, opacity: 0 }}
-                          animate={{ scale: 1, opacity: 1 }}
-                          transition={{ duration: 0.25, ease: "easeOut" as const }}
-                          className="w-5 h-5 text-[#F97316] shrink-0"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="3"
-                            d="M5 13l4 4L19 7"
-                          />
-                        </motion.svg>
+                        <svg className="w-4 h-4 text-[#D97706] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
+                        </svg>
                       )}
-                    </motion.button>
+                    </button>
                   );
                 })
               )}

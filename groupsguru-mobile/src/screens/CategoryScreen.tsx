@@ -18,10 +18,12 @@ import { useAuth } from "../context/AuthContext";
 import { useLanguage } from "../context/LanguageContext";
 import { LanguageToggle } from "../components/LanguageToggle";
 import { PriceBadge } from "../components/PriceBadge";
+import { colors, spacing, radii, typography } from "../theme/tokens";
 
 type RootStackParamList = {
   Category: { commissionId?: number; commissionName?: string };
   SubCategory: { categoryId: number; categoryName: string; categoryNameTe: string };
+  StudyMaterial: { entityType: string; entityId: number; entityName: string };
 };
 
 type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
@@ -55,7 +57,7 @@ const CategoryScreen = () => {
 
   const renderCategory = ({ item }: { item: Category }) => (
     <TouchableOpacity 
-      activeOpacity={0.8}
+      activeOpacity={0.7}
       style={styles.categoryCard}
       onPress={() => navigation.navigate("SubCategory", { 
         categoryId: item.id, 
@@ -63,28 +65,54 @@ const CategoryScreen = () => {
         categoryNameTe: item.nameTe
       })}
     >
-      <View style={styles.imageContainer}>
-        {item.imageUrl ? (
-          <Image source={{ uri: item.imageUrl }} style={styles.image} />
-        ) : (
-          <Text style={styles.initial}>{item.name.charAt(0)}</Text>
-        )}
-      </View>
-      <View style={styles.content}>
-        <View style={{flexDirection: 'row', alignItems: 'center', marginBottom: 4}}>
-          <Text style={styles.categoryName}>
+      <View style={styles.contentHeader}>
+        <View style={styles.imageContainer}>
+          {item.imageUrl ? (
+            <Image source={{ uri: item.imageUrl }} style={styles.image} />
+          ) : (
+            <Text style={styles.initial}>{item.name.charAt(0)}</Text>
+          )}
+        </View>
+        <View style={styles.titleArea}>
+           <Text style={styles.categoryName}>
             {language === 'en' ? item.name : item.nameTe}
           </Text>
           <PriceBadge accessType={item.accessType} priceInr={item.priceInr} />
         </View>
-        <Text style={styles.categoryDesc} numberOfLines={2}>
-          {language === 'en' ? item.description : item.descriptionTe}
-        </Text>
-        <View style={styles.badge}>
-          <Text style={styles.badgeText}>
-            {language === 'en' ? "Browse Subjects" : "విషయాలు చూడండి"}
-          </Text>
-        </View>
+      </View>
+      
+      <Text style={styles.categoryDesc} numberOfLines={2}>
+        {language === 'en' ? item.description : item.descriptionTe}
+      </Text>
+      
+      <View style={styles.cardFooter}>
+         <TouchableOpacity 
+            style={styles.notesBtn} 
+            onPress={() => navigation.navigate("StudyMaterial", { 
+              entityType: "CATEGORY", 
+              entityId: item.id, 
+              entityName: language === 'en' ? item.name : item.nameTe 
+            })}
+          >
+            <Text style={styles.notesText}>📚 {language === "en" ? "NOTES" : "నోట్స్"}</Text>
+          </TouchableOpacity>
+
+         <TouchableOpacity 
+           activeOpacity={0.7}
+           onPress={() => navigation.navigate("SubCategory", { 
+            categoryId: item.id, 
+            categoryName: item.name,
+            categoryNameTe: item.nameTe
+          })}
+          style={styles.footerLinkContainer}
+         >
+           <Text style={styles.footerLink}>
+             {language === 'en' ? "BROWSE SUBJECTS" : "విషయాలు చూడండి"}
+           </Text>
+           <View style={styles.arrowIcon}>
+             <Text style={{color: colors.accent, fontWeight: 'bold'}}>→</Text>
+           </View>
+         </TouchableOpacity>
       </View>
     </TouchableOpacity>
   );
@@ -94,8 +122,8 @@ const CategoryScreen = () => {
       <StatusBar barStyle="light-content" />
       <View style={styles.header}>
         <View>
-          <Text style={styles.greeting}>
-            {language === 'en' ? "What's next?" : "తదుపరి ఎమిటి?"}
+          <Text style={styles.label}>
+            {language === 'en' ? "BROWSE CATALOGUE" : "కేటలాగ్ బ్రౌజ్ చేయండి"}
           </Text>
           <Text style={styles.title}>
             {language === 'en' ? commissionName : commissionName}
@@ -111,7 +139,7 @@ const CategoryScreen = () => {
 
       {loading ? (
         <View style={styles.center}>
-          <ActivityIndicator size="large" color="#9333EA" />
+          <ActivityIndicator size="small" color={colors.accent} />
         </View>
       ) : categories.length === 0 ? (
         <View style={styles.center}>
@@ -137,108 +165,125 @@ export default CategoryScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#0f051d",
+    backgroundColor: colors.base,
   },
   header: {
-    paddingHorizontal: 24,
-    paddingVertical: 20,
+    paddingHorizontal: spacing.xl,
+    paddingVertical: spacing.xl,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.border,
     flexDirection: "row",
     justifyContent: "space-between",
-    alignItems: "flex-end",
+    alignItems: "center",
   },
-  greeting: {
-    fontSize: 16,
-    color: "rgba(255,255,255,0.6)",
-    fontWeight: "600",
+  label: {
+    fontSize: 10,
+    color: colors.fgMuted,
+    fontWeight: "bold",
+    letterSpacing: 2,
+    marginBottom: 4,
   },
   title: {
-    fontSize: 28,
-    fontWeight: "800",
-    color: "#FFFFFF",
-    marginTop: 4,
+    fontSize: 24,
+    fontWeight: "400",
+    color: colors.fgPrimary,
+    fontFamily: 'serif', // Simulation
   },
   headerRight: {
     flexDirection: "row",
     alignItems: "center",
+    gap: spacing.sm,
   },
   logoutBtn: {
-    padding: 8,
+    marginLeft: spacing.xs,
   },
   logoutText: {
-    color: "#EC4899",
-    fontWeight: "700",
-    fontSize: 14,
+    color: colors.error,
+    fontWeight: "600",
+    fontSize: 13,
   },
   list: {
-    padding: 24,
-    paddingTop: 10,
+    padding: spacing.xl,
   },
   categoryCard: {
-    backgroundColor: "rgba(147, 51, 234, 0.08)",
-    borderRadius: 24,
-    padding: 16,
-    marginBottom: 20,
-    flexDirection: "row",
-    alignItems: "center",
+    backgroundColor: colors.surface,
+    borderRadius: radii.md,
+    padding: spacing.xl,
+    marginBottom: spacing.md,
     borderWidth: 1,
-    borderColor: "rgba(147, 51, 234, 0.2)",
+    borderColor: colors.border,
+  },
+  contentHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: spacing.lg,
   },
   imageContainer: {
-    width: 64,
-    height: 64,
-    borderRadius: 16,
-    backgroundColor: "#2e1065",
+    width: 48,
+    height: 48,
+    borderRadius: radii.sm,
+    backgroundColor: colors.inset,
     justifyContent: "center",
     alignItems: "center",
-    overflow: "hidden",
     borderWidth: 1,
-    borderColor: "rgba(147, 51, 234, 0.4)",
+    borderColor: colors.border,
+  },
+  titleArea: {
+    flex: 1,
+    marginLeft: spacing.md,
   },
   image: {
     width: "100%",
     height: "100%",
+    borderRadius: radii.sm - 1,
   },
   initial: {
-    fontSize: 24,
+    fontSize: 18,
     fontWeight: "bold",
-    color: "#FFFFFF",
-  },
-  content: {
-    flex: 1,
-    marginLeft: 16,
+    color: colors.accent,
   },
   categoryName: {
     fontSize: 18,
     fontWeight: "700",
-    color: "#FFFFFF",
+    color: colors.fgPrimary,
     marginBottom: 4,
   },
   categoryDesc: {
     fontSize: 14,
-    color: "rgba(255,255,255,0.6)",
+    color: colors.fgSecondary,
     lineHeight: 20,
+    marginBottom: spacing.xl,
   },
-  badge: {
-    marginTop: 10,
-    backgroundColor: "rgba(147, 51, 234, 0.15)",
-    paddingHorizontal: 12,
-    paddingVertical: 4,
-    borderRadius: 8,
-    alignSelf: "flex-start",
+  cardFooter: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
   },
-  badgeText: {
-    color: "#a855f7",
-    fontSize: 12,
-    fontWeight: "700",
+  footerLink: {
+    color: colors.accent,
+    fontSize: 10,
+    fontWeight: "bold",
+    letterSpacing: 1.5,
+  },
+  arrowIcon: {
+    opacity: 0.8,
   },
   center: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
   },
+  footerLinkContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+  },
+  notesBtn: { paddingVertical: 4, paddingHorizontal: 8, borderRadius: 4, backgroundColor: colors.inset, borderWidth: 1, borderColor: colors.border },
+  notesText: { color: colors.fgSecondary, fontSize: 9, fontWeight: "bold", letterSpacing: 1 },
   emptyText: {
-    color: "rgba(255,255,255,0.4)",
-    fontSize: 16,
-    fontWeight: "600",
+    color: colors.fgMuted,
+    fontSize: 14,
+    fontWeight: "500",
+    fontFamily: typography.mono.fontFamily,
   },
 });

@@ -70,7 +70,7 @@ export default function PaywallModal({
           contact: "",
         },
         theme: {
-          color: "#9333ea",
+          color: "#D97706",
         },
       };
 
@@ -94,14 +94,14 @@ export default function PaywallModal({
     >
       <div className="space-y-6">
         <div className="text-center">
-          <div className="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-[#57534E]/40">
+          <div className="w-16 h-16 bg-[#D97706]/10 rounded-full flex items-center justify-center mx-auto mb-4 border border-[#3A3A3A]">
             <svg
               width="32"
               height="32"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="#a855f7"
-              strokeWidth="2"
+              stroke="#D97706"
+              strokeWidth="2.5"
               strokeLinecap="round"
               strokeLinejoin="round"
             >
@@ -109,7 +109,7 @@ export default function PaywallModal({
               <path d="M7 11V7a5 5 0 0110 0v4" />
             </svg>
           </div>
-          <p className="text-[#FAFAF9]/70 text-lg">
+          <p className="text-[#A0A0A0] text-lg">
             <Multilang
               en={`You need a premium subscription to access ${entityName}.`}
               te={`${entityName}ని యాక్సెస్ చేయడానికి మీకు ప్రీమియం సభ్యత్వం అవసరం.`}
@@ -121,37 +121,37 @@ export default function PaywallModal({
         <button
           onClick={() => handlePayment(entityType, entityId, entityName, accessInfo.price || 0)}
           disabled={loading}
-          className="w-full p-6 rounded-2xl bg-[#EA580C] hover:from-orange-500  transition-all border border-[#57534E]/40 shadow-lg group relative overflow-hidden"
+          className="w-full p-6 rounded-lg bg-[#D97706] hover:bg-[#F59E0B] transition-colors border border-[#3A3A3A] group relative overflow-hidden"
         >
           <div className="flex items-center justify-between text-left">
             <div>
-              <div className="text-sm text-[#FAFAF9]/60 font-medium">Standard Access</div>
-              <div className="text-xl font-bold">{entityName}</div>
+              <div className="text-[10px] text-white/60 font-bold uppercase tracking-widest mb-1">Standard Access</div>
+              <div className="text-xl font-bold text-white tracking-tight">{entityName}</div>
             </div>
-            <div className="text-2xl font-semibold">₹{accessInfo.price}</div>
+            <div className="text-2xl font-mono font-bold text-white">₹{accessInfo.price}</div>
           </div>
         </button>
 
         {/* Bundle Options */}
         {accessInfo.parentOptions && accessInfo.parentOptions.length > 0 && (
           <div className="space-y-3">
-            <div className="text-sm font-bold text-[#FAFAF9]/40 uppercase tracking-widest pl-1">
-              Recommended Bundles
+            <div className="text-[10px] font-bold text-[#666666] uppercase tracking-[0.2em] pl-1">
+              RECOMMENDED BUNDLES
             </div>
             {accessInfo.parentOptions.map((parent: ParentOption) => (
               <button
                 key={`${parent.entityType}-${parent.entityId}`}
                 onClick={() => handlePayment(parent.entityType, parent.entityId, parent.name, parent.price)}
                 disabled={loading}
-                className="w-full p-4 rounded-xl bg-white/[0.03] border border-[#57534E]/40 hover:bg-white/[0.06] transition-all flex items-center justify-between group"
+                className="w-full p-4 rounded-lg bg-[#141414] border border-[#3A3A3A] hover:bg-[#363636] transition-colors flex items-center justify-between group"
               >
                 <div className="text-left">
-                  <div className="text-xs text-[#FAFAF9]/40 capitalize">
+                  <div className="text-[10px] text-[#666666] font-mono uppercase tracking-wider">
                     {parent.entityType.replace("_", " ")} Level
                   </div>
-                  <div className="font-semibold text-[#FAFAF9]/90">{parent.name}</div>
+                  <div className="font-bold text-[#E8E8E8]">{parent.name}</div>
                 </div>
-                <div className="text-lg font-bold text-[#F97316]">₹{parent.price}</div>
+                <div className="text-lg font-mono font-bold text-[#D97706]">₹{parent.price}</div>
               </button>
             ))}
           </div>

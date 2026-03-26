@@ -1,7 +1,6 @@
 "use client";
 
 import ProtectedLayout from "@/components/layout/ProtectedLayout";
-import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState, useCallback, useMemo } from "react";
 import { registryApi } from "@/lib/registry";
 import { topicApi } from "@/lib/topics";
@@ -9,12 +8,6 @@ import { MicroTopic, MicroTopicRequest, Topic } from "@/lib/types";
 import Modal from "@/components/ui/Modal";
 import AnimatedInput from "@/components/ui/AnimatedInput";
 import CustomSelect from "@/components/ui/CustomSelect";
-import { Multilang } from "@/components/ui/Multilang";
-
-const spring = {
-  
-  duration: 0.25, ease: "easeOut" as const,
-};
 
 // Distinct Subjects for filtering
 const SUBJECTS = ["History", "Polity", "Economy", "Geography", "Science", "Mental Ability", "AP History", "AP Economy"];
@@ -143,142 +136,121 @@ export default function AdminMicroTopicManagement() {
 
   return (
     <ProtectedLayout requiredRole="ADMIN">
-      <div className="min-h-screen py-24 px-6 md:px-12 w-full max-w-7xl mx-auto text-[#FAFAF9]">
+      <div className="max-w-[1000px] mx-auto py-12 px-6">
 
         {/* Header */}
-        <motion.div
-          className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={spring}
-        >
+        <header className="mb-12 flex flex-col sm:flex-row sm:items-end justify-between gap-6 border-b border-[#3A3A3A] pb-8">
           <div>
-            <div className="px-3 py-1 rounded-full bg-orange-500/10 border border-[#57534E]/40 text-[#F97316] text-[10px] font-bold uppercase tracking-[0.3em] mb-4 inline-block">
-              Level 4 Registry (Atomic)
-            </div>
-            {totalElements > 0 && (
-              <div className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-bold uppercase tracking-[0.3em] mb-4 inline-block ml-4">
-                Registry loaded: {totalElements} micro-topics
+            <div className="flex items-center gap-3 mb-2">
+              <div className="text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-[#666666]">Knowledge Registry L4</div>
+              <div className="text-[10px] font-mono font-bold uppercase tracking-[0.1em] text-[#D97706] bg-[#D97706]/10 px-2 py-0.5 rounded border border-[#D97706]/20">
+                AOD: {totalElements} NODES
               </div>
-            )}
-            <h1 className="text-[36px] md:text-[48px] font-[800] leading-tight mb-2">
-              Micro-Topics
+            </div>
+            <h1 className="text-4xl md:text-5xl font-serif text-[#E8E8E8]">
+              Atomic <span className="text-[#D97706]">Micro-Topics</span>
             </h1>
-            <p className="text-[18px] text-[#FAFAF9]/70 font-[600]">
-              Manage the atomic intelligence targets for the Groups Guru prediction engine.
-            </p>
           </div>
 
-          <motion.button
-            whileHover={{ y: -5, boxShadow: "0px 30px 70px rgba(147, 51, 234, 0.5)" }}
-            whileTap={{ scale: 0.95 }}
-            transition={spring}
+          <button
             onClick={() => handleOpenModal()}
-            className="px-8 py-4 h-fit rounded-[16px] bg-[#EA580C] font-[700] text-[16px] whitespace-nowrap shadow-md transition-all flex items-center gap-2"
+            className="px-6 py-3 rounded bg-[#D97706] text-white font-bold text-sm hover:bg-[#F59E0B] transition-colors flex items-center gap-2"
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
               <line x1="12" y1="5" x2="12" y2="19"></line>
               <line x1="5" y1="12" x2="19" y2="12"></line>
             </svg>
-            Add MT
-          </motion.button>
-        </motion.div>
+            Forge MT
+          </button>
+        </header>
 
-        {/* Filters */}
-        <div className="mb-8 space-y-6 p-8 rounded-xl bg-white/5 border border-[#57534E]/40 ">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            
-            <div className="flex flex-col gap-3">
-              <span className="text-[#FAFAF9]/40 font-bold uppercase text-[10px] tracking-widest ml-1">Subject</span>
+        {/* Filters Panel */}
+        <div className="mb-12 border border-[#3A3A3A] rounded bg-[#1C1C1C]">
+          <div className="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="space-y-2">
+              <label className="text-[10px] font-mono font-bold text-[#666666] uppercase tracking-widest block ml-1">Subject domain</label>
               <CustomSelect
-                options={[{value: "all", label: "All Subjects"}, ...SUBJECTS.map(s => ({value: s, label: s}))]}
+                options={[{value: "all", label: "ALL SUBJECTS"}, ...SUBJECTS.map(s => ({value: s, label: s.toUpperCase()}))]}
                 value={selectedSubject}
                 onChange={(val) => setSelectedSubject(val.toString())}
               />
             </div>
 
-            <div className="flex flex-col gap-3">
-              <span className="text-[#FAFAF9]/40 font-bold uppercase text-[10px] tracking-widest ml-1">Paper</span>
+            <div className="space-y-2">
+              <label className="text-[10px] font-mono font-bold text-[#666666] uppercase tracking-widest block ml-1">Examination Paper</label>
               <CustomSelect
-                options={[{value: "all", label: "All Papers"}, ...PAPERS.map(p => ({value: p, label: p}))]}
+                options={[{value: "all", label: "ALL PAPERS"}, ...PAPERS.map(p => ({value: p, label: p.toUpperCase()}))]}
                 value={selectedPaper}
                 onChange={(val) => setSelectedPaper(val.toString())}
               />
             </div>
 
-            <div className="flex flex-col gap-3">
-              <span className="text-[#FAFAF9]/40 font-bold uppercase text-[10px] tracking-widest ml-1">Group Applicability</span>
+            <div className="space-y-2">
+              <label className="text-[10px] font-mono font-bold text-[#666666] uppercase tracking-widest block ml-1">Tier Applicability</label>
               <CustomSelect
-                options={[{value: "all", label: "All Groups"}, ...GROUPS.map(g => ({value: g, label: g}))]}
+                options={[{value: "all", label: "ALL TIERS"}, ...GROUPS.map(g => ({value: g, label: g.toUpperCase()}))]}
                 value={selectedGroup}
                 onChange={(val) => setSelectedGroup(val.toString())}
               />
             </div>
 
-             <div className="flex flex-col gap-3">
-              <span className="text-[#FAFAF9]/40 font-bold uppercase text-[10px] tracking-widest ml-1">Search Keywords</span>
+             <div className="space-y-2">
+              <label className="text-[10px] font-mono font-bold text-[#666666] uppercase tracking-widest block ml-1">FTS Search</label>
               <input
                 type="text"
-                placeholder="Search..."
+                placeholder="Query Registry..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-black/40 border border-[#57534E]/40 rounded-2xl p-4 text-[#FAFAF9] focus:outline-none focus:border-orange-500/50"
+                className="w-full bg-[#141414] border border-[#3A3A3A] rounded p-2.5 text-[#E8E8E8] text-sm focus:outline-none focus:border-[#D97706]/50 transition-colors"
               />
             </div>
-
           </div>
         </div>
 
-        {/* List */}
-        <div className="grid grid-cols-1 gap-4">
+        {/* List Section */}
+        <div className="space-y-4">
           {isLoading ? (
             <div className="flex items-center justify-center py-20">
-               <div className="w-12 h-12 border-4 border-orange-500 border-t-transparent rounded-full animate-spin"></div>
+               <div className="w-8 h-8 border-2 border-[#D97706] border-t-transparent rounded-full animate-spin"></div>
             </div>
           ) : displayedMicroTopics.length === 0 ? (
-             <div className="text-center py-20 text-[#FAFAF9]/50 bg-white/5 rounded-xl border border-[#57534E]/40 border-dashed">
-              <div className="text-4xl mb-4">⚛️</div>
-              <p className="font-semibold">No Micro-Topics found.</p>
+             <div className="text-center py-20 text-[#666666] bg-[#1E1E1E] rounded border border-[#3A3A3A] font-mono text-sm uppercase tracking-widest">
+              Knowledge registry is empty.
             </div>
           ) : (
-            <AnimatePresence>
-              {displayedMicroTopics.map((mt, index) => (
-                <motion.div
-                  key={mt.microTopicId}
-                  layout
-                  initial={{ opacity: 0, scale: 0.98 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{ ...spring, delay: Math.min(index * 0.05, 0.5) }}
-                  className="w-full p-6 bg-white/[0.02] border border-white/5 rounded-3xl group hover:bg-white/[0.04] hover:border-[#57534E]/40 transition-all flex flex-col md:flex-row gap-6 relative overflow-hidden"
-                >
-                  <div className="absolute top-0 left-0 w-2 h-full bg-orange-500/50 group-hover:bg-[#EA580C] transition-colors" />
-
-                  <div className="flex-1 ml-4">
-                     <div className="flex flex-wrap items-center gap-2 mb-3">
-                        <span className="text-[#F97316] font-mono text-xs font-bold px-2 py-1 bg-[#EA580C] rounded border border-[#57534E]/40">{mt.microTopicId}</span>
-                        <span className="text-[#F97316] text-xs font-bold px-2 py-1 bg-[#EA580C] rounded">{mt.subject}</span>
-                        <span className=" text-xs font-bold px-2 py-1  rounded">{mt.paper}</span>
-                        <span className="text-orange-400 text-xs font-bold px-2 py-1 bg-orange-400/10 rounded">{mt.groupApplicability}</span>
+            displayedMicroTopics.map((mt) => (
+              <div
+                key={mt.microTopicId}
+                className="group w-full p-6 bg-[#1E1E1E] border border-[#3A3A3A] rounded border-l-4 border-l-[#D97706]/30 hover:border-l-[#D97706] hover:border-[#D97706]/20 transition-all flex flex-col md:flex-row gap-6"
+              >
+                <div className="flex-1">
+                   <div className="flex flex-wrap items-center gap-2 mb-3">
+                      <span className="bg-[#141414] text-[#D97706] font-mono text-[9px] font-bold px-2 py-0.5 rounded border border-[#3A3A3A]">{mt.microTopicId}</span>
+                      <span className="bg-[#141414] text-[#666666] font-mono text-[9px] font-bold px-2 py-0.5 rounded border border-[#3A3A3A]">{mt.subject}</span>
+                      <span className="bg-[#141414] text-[#666666] font-mono text-[9px] font-bold px-2 py-0.5 rounded border border-[#3A3A3A]">{mt.paper}</span>
+                      <span className="bg-[#D97706]/10 text-[#D97706] font-mono text-[9px] font-bold px-2 py-0.5 rounded border border-[#D97706]/20">{mt.groupApplicability}</span>
+                   </div>
+                   <h3 className="text-lg font-bold text-[#E8E8E8] group-hover:text-[#D97706] transition-colors mb-2">{mt.topicName}</h3>
+                   <p className="text-[#A0A0A0] text-sm leading-relaxed mb-4">{mt.microTopicText}</p>
+                   
+                   {mt.topicId && (
+                     <div className="flex items-center gap-1.5 opacity-60">
+                       <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                       <span className="text-[10px] font-mono font-bold text-[#666666] uppercase tracking-widest">Linked Knowledge Node: {mt.topicId}</span>
                      </div>
-                     <h3 className="text-lg font-bold text-[#FAFAF9] mb-2">{mt.topicName || "No Topic Name"}</h3>
-                     <p className="text-[#FAFAF9]/60 text-sm leading-relaxed mb-3">{mt.microTopicText}</p>
-                     
-                     {mt.topicId && (
-                       <p className="text-xs text-emerald-400 font-medium border border-emerald-400/20 inline-block px-2 py-1 rounded bg-emerald-400/5">
-                         Linked Topic (L3) ID: {mt.topicId}
-                       </p>
-                     )}
-                  </div>
+                   )}
+                </div>
 
-                  {/* Actions */}
-                  <div className="flex flex-row md:flex-col justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity self-start">
-                    <button onClick={() => handleOpenModal(mt)} className="p-3 bg-white/5 rounded-xl hover:bg-orange-500/20 transition-colors">✏️</button>
-                    <button onClick={() => handleDelete(mt.microTopicId)} className="p-3 bg-white/5 rounded-xl hover:bg-red-500/20 transition-colors">🗑️</button>
-                  </div>
-                </motion.div>
-               ))}
-            </AnimatePresence>
+                <div className="flex flex-row md:flex-col justify-end gap-3 self-start">
+                  <button onClick={() => handleOpenModal(mt)} className="p-2.5 rounded border border-[#3A3A3A] text-[#E8E8E8] hover:bg-[#2D2D2D] hover:border-[#666666] transition-colors">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                  </button>
+                  <button onClick={() => handleDelete(mt.microTopicId)} className="p-2.5 rounded border border-[#C74444]/30 text-[#C74444] hover:bg-[#C74444]/10 transition-colors">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+                  </button>
+                </div>
+              </div>
+            ))
           )}
         </div>
 
@@ -286,83 +258,84 @@ export default function AdminMicroTopicManagement() {
         <Modal
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}
-          title={editingMt ? "Edit MicroTopic" : "New MicroTopic"}
+          title={editingMt ? "Modify Atlas Entry" : "New Atlas Entry"}
         >
-           <form onSubmit={handleSubmit} className="flex flex-col gap-6 py-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+           <form onSubmit={handleSubmit} className="space-y-6 pt-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                  <AnimatedInput
-                   label="MicroTopic ID (Unique)"
+                   label="Atlas Record ID"
                    name="microTopicId"
-                   placeholder="e.g. MT-HIST-001"
+                   placeholder="MT-XXX-000"
                    value={formData.microTopicId}
                    onChange={(val) => setFormData({...formData, microTopicId: val})}
                    required
                  />
-                 <div className="flex flex-col gap-3">
-                   <label className="text-xs font-bold text-[#FAFAF9]/40 uppercase">Subject</label>
+                 <div className="space-y-2">
+                    <label className="text-[10px] font-mono font-bold text-[#666666] uppercase tracking-widest ml-1">Subject domain</label>
                    <CustomSelect
-                     placeholder="--Select Subject--"
-                     options={SUBJECTS.map(s => ({value: s, label: s}))}
+                     placeholder="Select subject..."
+                     options={SUBJECTS.map(s => ({value: s, label: s.toUpperCase()}))}
                      value={formData.subject}
                      onChange={(val) => setFormData({...formData, subject: val.toString()})}
                    />
                  </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                  <AnimatedInput
-                   label="Paper"
+                   label="Examination Paper"
                    name="paper"
                    placeholder="e.g. Paper-I"
                    value={formData.paper || ""}
                    onChange={(val) => setFormData({...formData, paper: val})}
                  />
                  <AnimatedInput
-                   label="Topic Name (Macro)"
+                   label="Macro Topic Reference"
                    name="topicName"
-                   placeholder="Name of topic..."
+                   placeholder="e.g. Constitutional Law"
                    value={formData.topicName || ""}
                    onChange={(val) => setFormData({...formData, topicName: val})}
                  />
               </div>
 
-              <div className="flex flex-col gap-3">
-                 <label className="text-xs font-bold text-[#FAFAF9]/40 uppercase">MicroTopic Text (Atomic details)</label>
+              <div className="space-y-2">
+                 <label className="text-[10px] font-mono font-bold text-[#666666] uppercase tracking-widest ml-1">Atomic Intelligence Specification</label>
                  <textarea
-                   className="w-full bg-black/40 border border-[#57534E]/40 rounded-2xl p-4 text-[#FAFAF9] focus:outline-none focus:border-orange-500/50 min-h-[100px]"
+                   className="w-full bg-[#141414] border border-[#3A3A3A] rounded p-4 text-[#E8E8E8] text-sm focus:outline-none focus:border-[#D97706]/50 transition-colors min-h-[140px] resize-none"
+                   placeholder="Define the atomic boundaries for this micro-topic..."
                    value={formData.microTopicText}
                    onChange={e => setFormData({...formData, microTopicText: e.target.value})}
+                   required
                  />
               </div>
 
-               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                 <div className="flex flex-col gap-3">
-                   <label className="text-xs font-bold text-[#FAFAF9]/40 uppercase">Group Applicability</label>
+               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                 <div className="space-y-2">
+                    <label className="text-[10px] font-mono font-bold text-[#666666] uppercase tracking-widest ml-1">Tier Applicability</label>
                    <CustomSelect
-                     options={GROUPS.map(g => ({value: g, label: g}))}
+                     options={GROUPS.map(g => ({value: g, label: g.toUpperCase()}))}
                      value={formData.groupApplicability || "ALL_GROUPS"}
                      onChange={(val) => setFormData({...formData, groupApplicability: val.toString()})}
                    />
                  </div>
                  
-                 <div className="flex flex-col gap-3">
-                   <label className="text-xs font-bold text-[#FAFAF9]/40 uppercase">Link L3 Topic</label>
+                 <div className="space-y-2">
+                    <label className="text-[10px] font-mono font-bold text-[#666666] uppercase tracking-widest ml-1">Linked Knowledge Node (L3)</label>
                    <CustomSelect
-                     placeholder="--No Linked Topic L3--"
-                     options={topics.map(t => ({value: t.id, label: `${t.name} (Code: ${t.topicCode})`}))}
+                     placeholder="Optional link..."
+                     options={topics.map(t => ({value: t.id, label: `${t.name} (${t.topicCode})`}))}
                      value={formData.topicId || 0}
                      onChange={(val) => setFormData({...formData, topicId: parseInt(val.toString()) || undefined})}
                    />
                  </div>
                </div>
 
-               <motion.button
-                 type="submit"
-                 whileHover={{ y: -5 }}
-                 className="mt-6 w-full py-5 rounded-2xl bg-[#EA580C] font-bold text-lg shadow-xl"
-               >
-                 {editingMt ? "Save Changes" : "Create MT"}
-               </motion.button>
+              <button
+                className="w-full py-4 rounded bg-[#D97706] text-white font-bold text-sm hover:bg-[#F59E0B] transition-colors"
+                type="submit"
+              >
+                {editingMt ? "Sync Atlas record" : "Append Atlas record"}
+              </button>
            </form>
         </Modal>
       </div>

@@ -16,7 +16,7 @@ import { attemptService } from "../api/attemptService";
 import { AttemptStartResponse, Question } from "../api/types";
 import { useLanguage } from "../context/LanguageContext";
 import { FormattedQuestionText } from "../components/FormattedQuestionText";
-import { BackgroundGlow } from "../components/BackgroundGlow";
+import { colors, spacing, radii, typography } from "../theme/tokens";
 
 const { width } = Dimensions.get('window');
 
@@ -100,7 +100,7 @@ const ExamAttemptScreen = () => {
   if (loading) {
     return (
       <View style={[styles.container, styles.center]}>
-        <ActivityIndicator size="large" color="#9333EA" />
+        <ActivityIndicator size="small" color={colors.accent} />
       </View>
     );
   }
@@ -110,16 +110,15 @@ const ExamAttemptScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="light-content" />
-      <BackgroundGlow />
       
-      {/* Refined Header */}
+      {/* Header */}
       <View style={styles.header}>
         <View style={styles.headerTitleContainer}>
           <Text style={styles.examName} numberOfLines={1}>
             {language === 'en' ? data.examName : data.examNameTe}
           </Text>
           <View style={styles.qBadge}>
-            <Text style={styles.qBadgeText}>Q {currentIdx + 1} / {data.questions.length}</Text>
+            <Text style={styles.qBadgeText}>QUESTION {currentIdx + 1} OF {data.questions.length}</Text>
           </View>
         </View>
         
@@ -128,7 +127,7 @@ const ExamAttemptScreen = () => {
         </View>
       </View>
 
-      {/* Question Navigator Bar (Horizontal Shelf) */}
+      {/* Question Navigator */}
       <View style={styles.shelfContainer}>
         <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.shelfScroll}>
           {data.questions.map((q, idx) => (
@@ -137,14 +136,14 @@ const ExamAttemptScreen = () => {
               style={[
                 styles.shelfItem, 
                 currentIdx === idx && styles.shelfItemActive,
-                answers[q.id] && styles.shelfItemAnswered
+                answers[q.id] && currentIdx !== idx && styles.shelfItemAnswered
               ]}
               onPress={() => setCurrentIdx(idx)}
             >
               <Text style={[
                 styles.shelfItemText, 
                 currentIdx === idx && styles.shelfItemTextActive,
-                answers[q.id] && styles.shelfItemTextAnswered
+                answers[q.id] && currentIdx !== idx && styles.shelfItemTextAnswered
               ]}>
                 {idx + 1}
               </Text>
@@ -155,7 +154,6 @@ const ExamAttemptScreen = () => {
 
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
         <View style={styles.qCard}>
-          {/* Professional Question Formatting */}
           <FormattedQuestionText 
             text={language === 'en' ? currentQuestion.questionTextEn : currentQuestion.questionTextTe} 
           />
@@ -176,26 +174,26 @@ const ExamAttemptScreen = () => {
         <View style={{height: 40}} />
       </ScrollView>
 
-      {/* Improved Footer Nav */}
+      {/* Footer Nav */}
       <View style={styles.footer}>
         <TouchableOpacity 
           style={[styles.navBtn, currentIdx === 0 && styles.disabledBtn]}
           onPress={() => setCurrentIdx(prev => Math.max(0, prev - 1))}
           disabled={currentIdx === 0}
         >
-          <Text style={styles.navBtnText}>PREV</Text>
+          <Text style={styles.navBtnText}>PREVIOUS</Text>
         </TouchableOpacity>
 
         <TouchableOpacity 
           style={styles.submitBtn}
           onPress={() => {
-            Alert.alert("Submit Exam", "Are you sure? Unanswered questions will be marked as skipped.", [
-              { text: "Cancel", style: "cancel" },
-              { text: "SUBMIT NOW", style: 'destructive', onPress: handleSubmit }
+            Alert.alert("Finish Exam", "Are you sure you want to submit your attempt?", [
+              { text: "Continue Test", style: "cancel" },
+              { text: "Submit Now", style: 'default', onPress: handleSubmit }
             ]);
           }}
         >
-          <Text style={styles.submitBtnText}>SUBMIT</Text>
+          <Text style={styles.submitBtnText}>FINISH</Text>
         </TouchableOpacity>
 
         <TouchableOpacity 
@@ -213,7 +211,7 @@ const ExamAttemptScreen = () => {
 const OptionButton = ({ label, textEn, textTe, isSelected, onPress }: any) => {
   return (
     <TouchableOpacity 
-      activeOpacity={0.8}
+      activeOpacity={0.7}
       onPress={onPress}
       style={[styles.optBtn, isSelected && styles.optBtnSelected]}
     >
@@ -222,7 +220,7 @@ const OptionButton = ({ label, textEn, textTe, isSelected, onPress }: any) => {
       </View>
       <View style={styles.optContent}>
         <Text style={styles.optEn}>{textEn}</Text>
-        <Text style={styles.optTe}>{textTe}</Text>
+        {textTe && <Text style={styles.optTe}>{textTe}</Text>}
       </View>
     </TouchableOpacity>
   );
@@ -233,150 +231,150 @@ export default ExamAttemptScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#0f051d",
+    backgroundColor: colors.base,
   },
   header: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    paddingHorizontal: 20,
-    paddingVertical: 16,
-    backgroundColor: "rgba(15, 5, 29, 0.98)",
+    paddingHorizontal: spacing.xl,
+    paddingVertical: spacing.lg,
+    backgroundColor: colors.base,
     borderBottomWidth: 1,
-    borderBottomColor: "rgba(147, 51, 234, 0.3)",
-    zIndex: 10,
+    borderBottomColor: colors.border,
   },
   headerTitleContainer: {
     flex: 1,
-    marginRight: 12,
+    marginRight: spacing.md,
   },
   examName: {
-    color: "#FFFFFF",
+    color: colors.fgPrimary,
     fontSize: 14,
-    fontWeight: "800",
-    letterSpacing: 0.5,
+    fontWeight: "700",
   },
   qBadge: {
-    backgroundColor: "rgba(147, 51, 234, 0.2)",
-    paddingHorizontal: 8,
+    backgroundColor: colors.inset,
+    paddingHorizontal: 6,
     paddingVertical: 2,
-    borderRadius: 6,
+    borderRadius: radii.sm,
+    borderWidth: 1,
+    borderColor: colors.border,
     alignSelf: 'flex-start',
     marginTop: 4,
   },
   qBadgeText: {
-    color: "#d8b4fe",
-    fontSize: 10,
-    fontWeight: "900",
-    textTransform: "uppercase",
+    color: colors.fgMuted,
+    fontSize: 9,
+    fontWeight: "bold",
+    letterSpacing: 0.5,
   },
   timer: {
-    backgroundColor: "rgba(147, 51, 234, 0.15)",
-    paddingHorizontal: 10,
-    paddingVertical: 5,
-    borderRadius: 10,
+    backgroundColor: colors.inset,
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: radii.sm,
     borderWidth: 1,
-    borderColor: "rgba(147, 51, 234, 0.4)",
-    minWidth: 70,
+    borderColor: colors.border,
+    minWidth: 80,
     alignItems: 'center',
   },
   timerCritical: {
-    backgroundColor: "rgba(236, 72, 153, 0.2)",
-    borderColor: "rgba(236, 72, 153, 0.5)",
+    backgroundColor: "rgba(199, 68, 68, 0.1)",
+    borderColor: "rgba(199, 68, 68, 0.3)",
   },
   timerText: {
-    color: "#FFFFFF",
+    color: colors.fgPrimary,
     fontSize: 16,
-    fontWeight: "900",
-    fontFamily: "monospace",
+    fontWeight: "700",
+    fontFamily: typography.mono.fontFamily,
   },
   shelfContainer: {
-    backgroundColor: "rgba(15, 5, 29, 0.95)",
+    backgroundColor: colors.base,
     borderBottomWidth: 1,
-    borderBottomColor: "rgba(255,255,255,0.05)",
-    paddingVertical: 10,
+    borderBottomColor: colors.border,
+    paddingVertical: spacing.md,
   },
   shelfScroll: {
-    paddingHorizontal: 16,
-    gap: 8,
+    paddingHorizontal: spacing.xl,
+    gap: spacing.sm,
   },
   shelfItem: {
     width: 36,
     height: 36,
-    borderRadius: 10,
-    backgroundColor: "rgba(255,255,255,0.05)",
+    borderRadius: radii.sm,
+    backgroundColor: colors.inset,
     justifyContent: 'center',
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.1)',
+    borderColor: colors.border,
   },
   shelfItemActive: {
-    backgroundColor: '#9333EA',
-    borderColor: '#c084fc',
-    elevation: 4,
+    backgroundColor: colors.accent,
+    borderColor: colors.accent,
   },
   shelfItemAnswered: {
-    borderColor: '#9333EA',
-    borderWidth: 2,
+    backgroundColor: "rgba(61, 154, 95, 0.1)",
+    borderColor: "rgba(61, 154, 95, 0.3)",
   },
   shelfItemText: {
-    color: 'rgba(255,255,255,0.6)',
-    fontWeight: '800',
-    fontSize: 14,
+    color: colors.fgSecondary,
+    fontWeight: '700',
+    fontSize: 13,
+    fontFamily: typography.mono.fontFamily,
   },
   shelfItemTextActive: {
     color: '#FFFFFF',
   },
   shelfItemTextAnswered: {
-    color: '#d8b4fe',
+    color: colors.success,
   },
   scroll: {
-    padding: 20,
+    padding: spacing.xl,
   },
   qCard: {
-    backgroundColor: "rgba(255,255,255,0.02)",
-    borderRadius: 30,
-    padding: 20,
+    backgroundColor: colors.surface,
+    padding: spacing.xl,
     borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.08)",
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 10 },
-    shadowOpacity: 0.3,
-    shadowRadius: 20,
+    borderColor: colors.border,
+    borderRadius: radii.md,
   },
   optionsGrid: {
-    gap: 12,
-    marginTop: 10,
+    gap: spacing.md,
+    marginTop: spacing.xl,
   },
   optBtn: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "rgba(255,255,255,0.04)",
-    padding: 16,
-    borderRadius: 22,
+    backgroundColor: colors.inset,
+    padding: spacing.lg,
+    borderRadius: radii.sm,
     borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.08)",
+    borderColor: colors.border,
   },
   optBtnSelected: {
-    backgroundColor: "rgba(147, 51, 234, 0.25)",
-    borderColor: "rgba(147, 51, 234, 0.6)",
+    backgroundColor: "rgba(217, 119, 6, 0.08)",
+    borderColor: colors.accent,
   },
   optCircle: {
-    width: 34,
-    height: 34,
-    borderRadius: 12,
-    backgroundColor: "rgba(147, 51, 234, 0.2)",
+    width: 32,
+    height: 32,
+    borderRadius: radii.sm,
+    backgroundColor: colors.surface,
     justifyContent: "center",
     alignItems: "center",
-    marginRight: 16,
+    marginRight: spacing.lg,
+    borderWidth: 1,
+    borderColor: colors.border,
   },
   optCircleSelected: {
-    backgroundColor: "#9333EA",
+    backgroundColor: colors.accent,
+    borderColor: colors.accent,
   },
   optLabel: {
-    color: "#c084fc",
-    fontWeight: "900",
-    fontSize: 16,
+    color: colors.fgMuted,
+    fontWeight: "bold",
+    fontSize: 14,
+    fontFamily: typography.mono.fontFamily,
   },
   optLabelSelected: {
     color: "#FFFFFF",
@@ -385,59 +383,53 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   optEn: {
-    color: "#FFFFFF",
-    fontWeight: "700",
+    color: colors.fgPrimary,
+    fontWeight: "600",
     fontSize: 15,
   },
   optTe: {
-    color: "rgba(255,255,255,0.4)",
-    fontSize: 11,
-    fontWeight: "600",
-    marginTop: 3,
+    color: colors.fgSecondary,
+    fontSize: 13,
+    marginTop: 4,
   },
   footer: {
     flexDirection: "row",
-    paddingHorizontal: 20,
-    paddingBottom: 24,
-    paddingTop: 16,
-    backgroundColor: "rgba(15, 5, 29, 0.98)",
+    paddingHorizontal: spacing.xl,
+    paddingBottom: spacing["2xl"],
+    paddingTop: spacing.lg,
+    backgroundColor: colors.base,
     borderTopWidth: 1,
-    borderTopColor: "rgba(255,255,255,0.08)",
-    gap: 12,
+    borderTopColor: colors.border,
+    gap: spacing.md,
   },
   navBtn: {
     flex: 1,
-    height: 52,
-    borderRadius: 18,
-    backgroundColor: "rgba(255,255,255,0.08)",
+    height: 48,
+    borderRadius: radii.sm,
+    backgroundColor: colors.inset,
     justifyContent: "center",
     alignItems: "center",
     borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.1)",
+    borderColor: colors.border,
   },
   navBtnText: {
-    color: "#FFFFFF",
-    fontWeight: "900",
-    fontSize: 12,
+    color: colors.fgPrimary,
+    fontWeight: "bold",
+    fontSize: 10,
     letterSpacing: 1,
   },
   submitBtn: {
-    flex: 1.8,
-    height: 52,
-    borderRadius: 18,
-    backgroundColor: "#a855f7",
+    flex: 1.5,
+    height: 48,
+    borderRadius: radii.sm,
+    backgroundColor: colors.accent,
     justifyContent: "center",
     alignItems: "center",
-    shadowColor: "#9333EA",
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.4,
-    shadowRadius: 10,
-    elevation: 8,
   },
   submitBtnText: {
     color: "#FFFFFF",
-    fontWeight: "900",
-    fontSize: 14,
+    fontWeight: "bold",
+    fontSize: 12,
     letterSpacing: 1,
   },
   disabledBtn: {

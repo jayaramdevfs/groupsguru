@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import "./globals.css";
 import { Instrument_Serif, Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import { AuthProvider } from "./context/AuthContext";
@@ -24,9 +25,20 @@ const mono = JetBrains_Mono({
   variable: "--font-mono",
 });
 
-export const metadata = {
-  title: "GroupsGuru",
-  description: "Exam Intelligence & Predictive Preparation Engine",
+export const metadata: Metadata = {
+  title: {
+    default: "GroupsGuru — APPSC, TSPSC & UPSC Exam Preparation",
+    template: "%s | GroupsGuru",
+  },
+  description: "Exam Intelligence & Predictive Preparation Engine for APPSC, TSPSC, and UPSC competitive exams. Smart test series, question bank, and study materials.",
+  keywords: ["APPSC", "TSPSC", "UPSC", "exam preparation", "GroupsGuru", "test series", "question bank"],
+  openGraph: {
+    title: "GroupsGuru — Exam Intelligence Platform",
+    description: "Smart exam preparation for APPSC, TSPSC & UPSC",
+    url: "https://groupsguru.in",
+    siteName: "GroupsGuru",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

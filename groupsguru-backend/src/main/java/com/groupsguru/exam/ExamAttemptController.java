@@ -4,6 +4,8 @@ import com.groupsguru.auth.User;
 import com.groupsguru.auth.UserRepository;
 import com.groupsguru.exam.dto.AttemptStartResponse;
 import com.groupsguru.exam.dto.ExamResultDTO;
+import com.groupsguru.exam.dto.PracticeAnswerRequest;
+import com.groupsguru.exam.dto.PracticeAnswerResponse;
 import com.groupsguru.exam.dto.SubmitAttemptRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -34,6 +36,13 @@ public class ExamAttemptController {
             @RequestBody SubmitAttemptRequest request) {
         User user = resolveUser(authentication);
         return ResponseEntity.ok(attemptService.submitAttempt(attemptId, user.getId(), request));
+    }
+
+    @PostMapping("/{examId}/practice-answer")
+    public ResponseEntity<PracticeAnswerResponse> submitPracticeAnswer(
+            @PathVariable Long examId,
+            @RequestBody PracticeAnswerRequest request) {
+        return ResponseEntity.ok(attemptService.submitPracticeAnswer(examId, request));
     }
 
     @GetMapping("/my-attempts")

@@ -1,7 +1,6 @@
 "use client";
 
 import ProtectedLayout from "@/components/layout/ProtectedLayout";
-import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState, useCallback } from "react";
 import { subCategoryApi } from "@/lib/subcategories";
 import { categoryApi } from "@/lib/categories";
@@ -10,11 +9,6 @@ import Modal from "@/components/ui/Modal";
 import AnimatedInput from "@/components/ui/AnimatedInput";
 import CustomSelect from "@/components/ui/CustomSelect";
 import { Multilang } from "@/components/ui/Multilang";
-
-const spring = {
-  
-  duration: 0.25, ease: "easeOut" as const,
-};
 
 export default function AdminSubCategoryManagement() {
   const [subCategories, setSubCategories] = useState<SubCategory[]>([]);
@@ -108,57 +102,47 @@ export default function AdminSubCategoryManagement() {
 
   return (
     <ProtectedLayout requiredRole="ADMIN">
-      <div className="min-h-screen py-24 px-6 md:px-12 w-full max-w-7xl mx-auto text-[#FAFAF9]">
+      <div className="max-w-[900px] mx-auto py-12 px-6">
         
         {/* Header Section */}
-        <motion.div 
-          className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={spring}
-        >
+        <header className="mb-12 flex flex-col sm:flex-row sm:items-end justify-between gap-6 border-b border-[#3A3A3A] pb-8">
           <div>
-            <h1 className="text-[36px] md:text-[48px] font-[800] leading-tight mb-2">
-              <Multilang en="Subject Management" te="సబ్జెక్ట్ నిర్వహణ" />
+            <div className="text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-[#666666] mb-2">Academic Core</div>
+            <h1 className="text-4xl md:text-5xl font-serif text-[#E8E8E8]">
+              Subject <span className="text-[#D97706]">Inventory</span>
             </h1>
-            <p className="text-[18px] text-[#FAFAF9]/70 font-[600]">
-              <Multilang 
-                en="Organize subjects and syllabus codes under your primary exams." 
-                te="ప్రాథమిక పరీక్షల క్రింద సబ్జెక్టులు మరియు సిలబస్ కోడ్‌లను నిర్వహించండి."
-              />
-            </p>
           </div>
 
-          <motion.button
-            whileHover={{ y: -5, boxShadow: "0px 30px 70px rgba(147, 51, 234, 0.6)" }}
-            whileTap={{ scale: 0.95 }}
-            transition={spring}
+          <button
             onClick={() => handleOpenModal()}
-            className="px-8 py-4 h-fit rounded-[16px] bg-[#EA580C] font-[700] text-[16px] whitespace-nowrap shadow-md transition-all flex items-center gap-2"
+            className="px-6 py-3 rounded bg-[#D97706] text-white font-bold text-sm hover:bg-[#F59E0B] transition-colors flex items-center gap-2"
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
               <line x1="12" y1="5" x2="12" y2="19"></line>
               <line x1="5" y1="12" x2="19" y2="12"></line>
             </svg>
-            <Multilang en="Add Subject" te="సబ్జెక్ట్ జోడించండి" />
-          </motion.button>
-        </motion.div>
+            Add Subject
+          </button>
+        </header>
 
         {/* Filter Section */}
-        <div className="mb-8 flex flex-wrap gap-4 items-center">
-          <span className="text-[#FAFAF9]/60 font-bold uppercase text-xs tracking-widest">Filter by Exam:</span>
+        <div className="mb-8 flex flex-col sm:flex-row sm:items-center gap-4 border border-[#3A3A3A] p-4 rounded bg-[#1C1C1C]">
+          <span className="text-[10px] font-mono font-bold text-[#666666] uppercase tracking-widest flex items-center gap-2">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+            Filter by Exam:
+          </span>
           <div className="flex flex-wrap gap-2">
             <button 
               onClick={() => setSelectedCategoryId("all")}
-              className={`px-4 py-2 rounded-full border transition-all ${selectedCategoryId === "all" ? "bg-[#EA580C] border-[#57534E]/40 font-bold" : "bg-white/5 border-[#57534E]/40 hover:bg-white/10"}`}
+              className={`px-3 py-1.5 rounded text-[11px] font-mono font-bold uppercase transition-colors border ${selectedCategoryId === "all" ? "bg-[#D97706] border-[#D97706] text-white" : "bg-[#141414] border-[#3A3A3A] text-[#666666] hover:border-[#666666]"}`}
             >
-              All Exams
+              All
             </button>
             {categories.map(cat => (
               <button 
                 key={cat.id}
                 onClick={() => setSelectedCategoryId(cat.id.toString())}
-                className={`px-4 py-2 rounded-full border transition-all ${selectedCategoryId === cat.id.toString() ? "bg-[#EA580C] border-[#57534E]/40 font-bold" : "bg-white/5 border-[#57534E]/40 hover:bg-white/10"}`}
+                className={`px-3 py-1.5 rounded text-[11px] font-mono font-bold uppercase transition-colors border ${selectedCategoryId === cat.id.toString() ? "bg-[#D97706] border-[#D97706] text-white" : "bg-[#141414] border-[#3A3A3A] text-[#666666] hover:border-[#666666]"}`}
               >
                 {cat.name}
               </button>
@@ -167,60 +151,53 @@ export default function AdminSubCategoryManagement() {
         </div>
 
         {/* List Section */}
-        <div className="grid grid-cols-1 gap-4">
+        <div className="space-y-4">
           {isLoading ? (
             <div className="flex items-center justify-center py-20">
-              <div className="w-12 h-12 border-4 border-orange-500 border-t-transparent rounded-full animate-spin"></div>
+              <div className="w-8 h-8 border-2 border-[#D97706] border-t-transparent rounded-full animate-spin"></div>
             </div>
           ) : filteredSubCategories.length === 0 ? (
-            <div className="text-center py-20 text-[#FAFAF9]/50 bg-white/5 rounded-xl border border-[#57534E]/40">
-              No subjects found.
+            <div className="text-center py-20 text-[#666666] bg-[#1E1E1E] rounded border border-[#3A3A3A] font-mono text-sm uppercase tracking-widest">
+              No subjects defined.
             </div>
           ) : (
-            <AnimatePresence>
-              {filteredSubCategories.map((sub, index) => (
-                <motion.div
-                  key={sub.id}
-                  layout
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ ...spring, delay: index * 0.05 }}
-                  className="w-full flex flex-col md:flex-row items-center gap-6 p-6 rounded-xl bg-[rgba(147,51,234,0.05)] border border-[rgba(147,51,234,0.15)] hover:border-[rgba(147,51,234,0.4)] transition-all group"
-                >
-                  <div className="w-14 h-14 shrink-0 rounded-2xl bg-[#EA580C] border border-[#57534E]/40 flex items-center justify-center font-bold text-xl text-[#F97316]">
-                    {sub.syllabusCode || sub.name.charAt(0)}
+            filteredSubCategories.map((sub) => (
+              <div
+                key={sub.id}
+                className="group w-full flex flex-col md:flex-row items-center gap-6 p-5 rounded-lg bg-[#1E1E1E] border border-[#3A3A3A] hover:border-[#D97706]/30 transition-colors"
+              >
+                <div className="w-12 h-12 shrink-0 rounded border border-[#3A3A3A] bg-[#141414] flex items-center justify-center font-mono font-bold text-lg text-[#D97706]">
+                  {sub.syllabusCode || sub.name.charAt(0)}
+                </div>
+                
+                <div className="flex-1 w-full text-center md:text-left">
+                  <div className="flex flex-col md:flex-row md:items-center gap-2 mb-1">
+                    <h3 className="text-lg font-bold text-[#E8E8E8] group-hover:text-[#D97706] transition-colors">{sub.name}</h3>
+                    <span className="inline-block px-2 py-0.5 rounded bg-[#D97706]/10 text-[#D97706] text-[9px] font-mono font-bold uppercase border border-[#D97706]/20 self-center">
+                      {sub.categoryName}
+                    </span>
                   </div>
-                  
-                  <div className="flex-1 w-full">
-                    <div className="flex items-center gap-3 mb-1">
-                      <h3 className="text-[20px] font-[700] text-[#F97316]">{sub.name}</h3>
-                      <span className="px-2 py-0.5 rounded-md bg-orange-500/20 text-[#F97316] text-[10px] font-bold uppercase tracking-tighter border border-[#57534E]/40">
-                        {sub.categoryName}
-                      </span>
-                    </div>
-                    <p className="text-[14px] font-[500] text-[#FAFAF9]/50 line-clamp-1">{sub.description}</p>
-                  </div>
+                  <p className="text-sm text-[#A0A0A0] line-clamp-1">{sub.description}</p>
+                </div>
 
-                  <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <button 
-                      onClick={() => handleOpenModal(sub)}
-                      className="p-3 rounded-xl bg-white/5 hover:bg-orange-500/20 text-[#FAFAF9] border border-[#57534E]/40 transition-colors"
-                      title="Edit Subject"
-                    >
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
-                    </button>
-                    <button 
-                      onClick={() => handleDelete(sub.id)}
-                      className="p-3 rounded-xl bg-white/5 hover:bg-red-500/20 text-red-400 border border-[#57534E]/40 transition-colors"
-                      title="Delete Subject"
-                    >
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
-                    </button>
-                  </div>
-                </motion.div>
-              ))}
-            </AnimatePresence>
+                <div className="flex items-center gap-3">
+                  <button 
+                    onClick={() => handleOpenModal(sub)}
+                    className="p-2.5 rounded border border-[#3A3A3A] text-[#E8E8E8] hover:bg-[#2D2D2D] hover:border-[#666666] transition-colors"
+                    title="Edit Subject"
+                  >
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                  </button>
+                  <button 
+                    onClick={() => handleDelete(sub.id)}
+                    className="p-2.5 rounded border border-[#C74444]/30 text-[#C74444] hover:bg-[#C74444]/10 transition-colors"
+                    title="Delete Subject"
+                  >
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+                  </button>
+                </div>
+              </div>
+            ))
           )}
         </div>
 
@@ -228,11 +205,11 @@ export default function AdminSubCategoryManagement() {
         <Modal 
           isOpen={isModalOpen} 
           onClose={() => setIsModalOpen(false)}
-          title={editingSubCategory ? "Update Subject" : "New Subject"}
+          title={editingSubCategory ? "Update Subject" : "New Subject Profile"}
         >
-          <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-            <div className="flex flex-col gap-2">
-              <label className="text-sm font-bold text-[#FAFAF9]/50 ml-1">Parent Exam</label>
+          <form onSubmit={handleSubmit} className="space-y-6 pt-4">
+            <div className="space-y-2">
+              <label className="text-[10px] font-mono font-bold text-[#666666] uppercase tracking-widest ml-1">Parent Hierarchy (Exam)</label>
               <CustomSelect
                 placeholder="Select an Exam"
                 options={categories.map(cat => ({ value: cat.id, label: cat.name }))}
@@ -241,43 +218,42 @@ export default function AdminSubCategoryManagement() {
               />
             </div>
 
-            <AnimatedInput 
-              label="Subject Name"
-              type="text"
-              name="name"
-              placeholder="e.g. Indian History, Geography"
-              value={formData.name}
-              onChange={(val) => setFormData({ ...formData, name: val })}
-              required
-            />
-
-            <AnimatedInput 
-              label="Syllabus Code (Optional)"
-              type="text"
-              name="syllabusCode"
-              placeholder="e.g. HIS-01, GEO-02"
-              value={formData.syllabusCode || ""}
-              onChange={(val) => setFormData({ ...formData, syllabusCode: val })}
-            />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <AnimatedInput 
+                label="Subject Name"
+                type="text"
+                name="name"
+                placeholder="Indian History"
+                value={formData.name}
+                onChange={(val) => setFormData({ ...formData, name: val })}
+                required
+              />
+              <AnimatedInput 
+                label="Syllabus Reference Code"
+                type="text"
+                name="syllabusCode"
+                placeholder="HIS-G1"
+                value={formData.syllabusCode || ""}
+                onChange={(val) => setFormData({ ...formData, syllabusCode: val })}
+              />
+            </div>
             
-            <div className="flex flex-col gap-2">
-              <label className="text-sm font-bold text-[#FAFAF9]/50 ml-1">Description</label>
+            <div className="space-y-2">
+              <label className="text-[10px] font-mono font-bold text-[#666666] uppercase tracking-widest ml-1">Subject Scope</label>
               <textarea 
-                className="w-full bg-white/5 border border-[#57534E]/40 rounded-xl p-4 text-[#FAFAF9] focus:outline-none focus:border-orange-500/50 transition-colors min-h-[80px]"
-                placeholder="Brief details about the subject..."
+                className="w-full bg-[#141414] border border-[#3A3A3A] rounded p-4 text-[#E8E8E8] text-sm focus:outline-none focus:border-[#D97706]/50 transition-colors min-h-[100px] resize-none"
+                placeholder="Define the scope of this subject..."
                 value={formData.description}
                 onChange={(e) => setFormData({ ...formData, description: e.target.value })}
               />
             </div>
 
-            <motion.button
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="mt-4 w-full py-4 rounded-xl bg-[#EA580C] font-bold shadow-lg"
+            <button
+              className="w-full py-4 rounded bg-[#D97706] text-white font-bold text-sm hover:bg-[#F59E0B] transition-colors"
               type="submit"
             >
-              {editingSubCategory ? "Update Subject" : "Create Subject"}
-            </motion.button>
+              {editingSubCategory ? "Apply System Updates" : "Initialize Subject Profile"}
+            </button>
           </form>
         </Modal>
 

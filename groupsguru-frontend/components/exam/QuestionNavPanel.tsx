@@ -1,7 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
-
 interface QuestionNavPanelProps {
   totalQuestions: number;
   currentIdx: number;
@@ -18,41 +16,34 @@ export default function QuestionNavPanel({
   flaggedIndices
 }: QuestionNavPanelProps) {
   return (
-    <div className="bg-[#1C1917]/40 border border-[#57534E]/40 p-4 rounded-2xl w-full ">
-      <h3 className="text-[8px] font-bold uppercase tracking-widest text-[#FAFAF9]/40 mb-3 ">Question Navigator</h3>
-      
+    <div className="w-full">
       <div className="grid grid-cols-5 gap-2">
         {Array.from({ length: totalQuestions }).map((_, idx) => {
           const isCurrent = idx === currentIdx;
           const isAnswered = answeredIndices.includes(idx);
           const isFlagged = flaggedIndices.includes(idx);
 
+          let style = "bg-[#141414] border-[#3A3A3A] text-[#666666] hover:border-[#A0A0A0]";
+          if (isCurrent) style = "bg-[#D97706] border-[#D97706] text-white shadow-lg shadow-[#D97706]/10";
+          else if (isAnswered) style = "bg-[#3D9A5F]/10 border-[#3D9A5F]/30 text-[#3D9A5F]";
+          else if (isFlagged) style = "bg-[#C4901A]/10 border-[#C4901A]/30 text-[#C4901A]";
+
           return (
-            <motion.button
+            <button
               key={idx}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
               onClick={() => onNavigate(idx)}
-              className={`w-8 h-8 rounded-lg font-semibold text-[10px] transition-all border ${
-                isCurrent 
-                  ? "bg-[#EA580C] border-orange-500 text-[#FAFAF9] shadow-lg shadow-orange-500/20" 
-                  : isAnswered 
-                    ? "bg-green-500/10 border-green-500/20 text-green-400" 
-                    : isFlagged
-                      ? "bg-yellow-500/10 border-yellow-500/20 text-yellow-500"
-                      : "bg-white/5 border-[#57534E]/40 text-[#FAFAF9]/40 hover:bg-white/10"
-              }`}
+              className={`w-full aspect-square rounded flex items-center justify-center font-mono font-bold text-[11px] transition-all border ${style}`}
             >
               {idx + 1}
-            </motion.button>
+            </button>
           );
         })}
       </div>
 
-      <div className="mt-4 pt-4 border-t border-[#57534E]/40 space-y-2">
-        <StatusKey color="bg-green-400" label="Answered" />
-        <StatusKey color="bg-yellow-500" label="Marked" />
-        <StatusKey color="bg-white/5 border-[#57534E]/40" label="Not Visited" />
+      <div className="mt-8 pt-6 border-t border-[#3A3A3A] space-y-3">
+        <StatusKey color="bg-[#3D9A5F]" label="Answered" />
+        <StatusKey color="bg-[#C4901A]" label="Marked" />
+        <StatusKey color="bg-[#141414] border-[#3A3A3A]" label="Not Visited" />
       </div>
     </div>
   );
@@ -61,8 +52,8 @@ export default function QuestionNavPanel({
 function StatusKey({ color, label }: { color: string, label: string }) {
   return (
     <div className="flex items-center gap-3">
-      <div className={`w-3 h-3 rounded-full ${color}`} />
-      <span className="text-[10px] font-bold uppercase tracking-widest text-[#FAFAF9]/40 ">{label}</span>
+      <div className={`w-2.5 h-2.5 rounded-sm border border-[#3A3A3A] ${color}`} />
+      <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-[#666666] font-mono">{label}</span>
     </div>
   );
 }

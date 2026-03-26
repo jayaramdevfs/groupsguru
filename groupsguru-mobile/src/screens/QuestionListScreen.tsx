@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, SafeAreaView, StatusBar, FlatList, ActivityIndi
 import { useLanguage } from "../context/LanguageContext";
 import { questionService } from "../api/questionService";
 import { Question } from "../api/types";
+import { colors, spacing, radii, typography } from "../theme/tokens";
 
 const QuestionListScreen = () => {
   const { language } = useLanguage();
@@ -29,11 +30,11 @@ const QuestionListScreen = () => {
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
-      case "easy": return { bg: "rgba(16, 185, 129, 0.2)", border: "rgba(16, 185, 129, 0.4)", text: "#34d399" };
-      case "medium": return { bg: "rgba(234, 179, 8, 0.2)", border: "rgba(234, 179, 8, 0.4)", text: "#facc15" };
-      case "hard": return { bg: "rgba(249, 115, 22, 0.2)", border: "rgba(249, 115, 22, 0.4)", text: "#fb923c" };
-      case "very_hard": return { bg: "rgba(239, 68, 68, 0.2)", border: "rgba(239, 68, 68, 0.4)", text: "#f87171" };
-      default: return { bg: "rgba(156, 163, 175, 0.2)", border: "rgba(156, 163, 175, 0.4)", text: "#9ca3af" };
+      case "easy": return { bg: "rgba(61, 154, 95, 0.12)", border: "rgba(61, 154, 95, 0.25)", text: colors.success };
+      case "medium": return { bg: "rgba(196, 144, 26, 0.12)", border: "rgba(196, 144, 26, 0.25)", text: colors.warning };
+      case "hard": return { bg: "rgba(217, 119, 6, 0.12)", border: "rgba(217, 119, 6, 0.25)", text: colors.accent };
+      case "very_hard": return { bg: "rgba(199, 68, 68, 0.12)", border: "rgba(199, 68, 68, 0.25)", text: colors.error };
+      default: return { bg: "rgba(160, 160, 160, 0.12)", border: "rgba(160, 160, 160, 0.25)", text: colors.fgSecondary };
     }
   };
 
@@ -45,9 +46,8 @@ const QuestionListScreen = () => {
       <TouchableOpacity
         activeOpacity={0.8}
         onPress={() => setExpandedId(isExpanded ? null : item.id)}
-        style={styles.card}
+        style={[styles.card, isExpanded && styles.cardExpanded]}
       >
-        {/* Header Row */}
         <View style={styles.cardHeader}>
           <Text style={styles.qCode}>{item.questionCode}</Text>
           <View style={[styles.badge, { backgroundColor: dc.bg, borderColor: dc.border }]}>
@@ -57,12 +57,10 @@ const QuestionListScreen = () => {
           </View>
         </View>
 
-        {/* Question preview */}
         <Text style={styles.questionPreview} numberOfLines={isExpanded ? undefined : 2}>
           {language === "en" ? item.questionTextEn : item.questionTextTe}
         </Text>
 
-        {/* Meta row */}
         <View style={styles.metaRow}>
           <Text style={styles.metaText}>{item.subject}</Text>
           <Text style={styles.metaDot}>·</Text>
@@ -71,9 +69,9 @@ const QuestionListScreen = () => {
           <Text style={styles.metaText}>{item.cognitiveLevel}</Text>
         </View>
 
-        {/* Expanded details */}
         {isExpanded && (
           <View style={styles.expandedSection}>
+            <View style={styles.divider} />
             {/* Options */}
             {[
               { letter: "A", en: item.optionAEn, te: item.optionATe },
@@ -91,21 +89,20 @@ const QuestionListScreen = () => {
                   ]}
                 >
                   <View style={[styles.optionLetter, isCorrect && styles.optionLetterCorrect]}>
-                    <Text style={[styles.optionLetterText, isCorrect && { color: "#34d399" }]}>{opt.letter}</Text>
+                    <Text style={[styles.optionLetterText, isCorrect && { color: "#FFFFFF" }]}>{opt.letter}</Text>
                   </View>
                   <View style={{ flex: 1 }}>
-                    <Text style={[styles.optionText, isCorrect && { color: "#34d399" }]}>
+                    <Text style={[styles.optionText, isCorrect && { color: colors.success }]}>
                       {language === "en" ? opt.en : opt.te}
                     </Text>
                   </View>
-                  {isCorrect && <Text style={{ color: "#34d399", fontSize: 18 }}>✓</Text>}
+                  {isCorrect && <Text style={{ color: colors.success, fontSize: 16 }}>✓</Text>}
                 </View>
               );
             })}
 
-            {/* Micro-Topic */}
-            <View style={styles.microTopicRow}>
-              <Text style={styles.microTopicLabel}>Micro-Topic</Text>
+            <View style={styles.microTopicBox}>
+              <Text style={styles.microTopicLabel}>MAPPING</Text>
               <Text style={styles.microTopicValue}>{item.microTopicId}</Text>
             </View>
           </View>
@@ -118,32 +115,42 @@ const QuestionListScreen = () => {
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="light-content" />
       <View style={styles.header}>
-        <Text style={styles.subtitle}>{language === "en" ? "QUESTION BANK" : "ప్రశ్న బ్యాంక్"}</Text>
-        <Text style={styles.title}>{language === "en" ? "All Questions" : "అన్ని ప్రశ్నలు"}</Text>
-        <Text style={styles.count}>{questions.length} MCQs loaded</Text>
+        <Text style={styles.label}>{language === "en" ? "QUESTION BANK" : "ప్రశ్న బ్యాంక్"}</Text>
+        <Text style={styles.title}>{language === "en" ? "Review Content" : "కంటెంట్ రివ్యూ"}</Text>
+        <View style={styles.countBadge}>
+          <Text style={styles.countText}>{questions.length} QUESTIONS</Text>
+        </View>
       </View>
 
-      {/* Search */}
-      <View style={styles.searchWrapper}>
-        <TextInput
-          style={styles.searchInput}
-          placeholder={language === "en" ? "Search questions..." : "ప్రశ్నలు వెతకండి..."}
-          placeholderTextColor="rgba(255,255,255,0.3)"
-          value={search}
-          onChangeText={setSearch}
-          onSubmitEditing={fetchQuestions}
-        />
+      <View style={styles.searchContainer}>
+        <View style={styles.searchBox}>
+          <TextInput
+            style={styles.searchInput}
+            placeholder={language === "en" ? "Filter by keywords..." : "కీవర్డ్ల ద్వారా వెతకండి..."}
+            placeholderTextColor={colors.fgMuted}
+            value={search}
+            onChangeText={setSearch}
+            onSubmitEditing={fetchQuestions}
+          />
+        </View>
       </View>
 
       {loading ? (
-        <ActivityIndicator size="large" color="#9333EA" style={{ marginTop: 40 }} />
+        <View style={styles.center}>
+          <ActivityIndicator size="small" color={colors.accent} />
+        </View>
       ) : (
         <FlatList
           data={questions}
           keyExtractor={(item) => item.id.toString()}
           renderItem={renderItem}
           contentContainerStyle={styles.listContent}
-          initialNumToRender={10}
+          showsVerticalScrollIndicator={false}
+          ListEmptyComponent={
+            <View style={styles.center}>
+              <Text style={styles.emptyText}>No questions found matching your search.</Text>
+            </View>
+          }
         />
       )}
     </SafeAreaView>
@@ -153,75 +160,206 @@ const QuestionListScreen = () => {
 export default QuestionListScreen;
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#0f051d" },
-  header: { padding: 24, paddingBottom: 10 },
-  subtitle: { fontSize: 11, fontWeight: "800", color: "rgba(147, 51, 234, 0.8)", textTransform: "uppercase", letterSpacing: 3 },
-  title: { fontSize: 32, fontWeight: "900", color: "#FFFFFF", marginTop: 4 },
-  count: { fontSize: 14, fontWeight: "600", color: "rgba(255,255,255,0.5)", marginTop: 4 },
-  searchWrapper: { paddingHorizontal: 24, marginBottom: 16 },
+  container: { 
+    flex: 1, 
+    backgroundColor: colors.base 
+  },
+  header: { 
+    paddingHorizontal: spacing.xl, 
+    paddingTop: spacing.xl,
+    paddingBottom: spacing.lg,
+  },
+  label: { 
+    fontSize: 10, 
+    fontWeight: "bold", 
+    color: colors.fgMuted, 
+    textTransform: "uppercase", 
+    letterSpacing: 2 
+  },
+  title: { 
+    fontSize: 28, 
+    fontWeight: "400", 
+    color: colors.fgPrimary, 
+    marginTop: 4,
+    fontFamily: 'serif' 
+  },
+  countBadge: {
+    alignSelf: 'flex-start',
+    backgroundColor: colors.inset,
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: radii.sm,
+    borderWidth: 1,
+    borderColor: colors.border,
+    marginTop: spacing.md,
+  },
+  countText: {
+    color: colors.fgSecondary,
+    fontSize: 10,
+    fontWeight: 'bold',
+    fontFamily: typography.mono.fontFamily,
+  },
+  searchContainer: { 
+    paddingHorizontal: spacing.xl, 
+    marginBottom: spacing.lg 
+  },
+  searchBox: {
+    backgroundColor: colors.inset,
+    borderRadius: radii.sm,
+    borderWidth: 1,
+    borderColor: colors.border,
+    paddingHorizontal: spacing.md,
+  },
   searchInput: {
-    backgroundColor: "#1e102f",
-    borderRadius: 16,
-    paddingHorizontal: 16,
-    paddingVertical: 12,
-    color: "#FFFFFF",
+    height: 44,
+    color: colors.fgPrimary,
     fontSize: 14,
-    fontWeight: "600",
-    borderWidth: 1,
-    borderColor: "rgba(147, 51, 234, 0.2)",
+    fontWeight: "500",
   },
-  listContent: { padding: 24, paddingTop: 0, paddingBottom: 40, gap: 16 },
+  listContent: { 
+    padding: spacing.xl, 
+    paddingTop: 0, 
+    paddingBottom: 40, 
+    gap: spacing.md 
+  },
   card: {
-    backgroundColor: "rgba(255,255,255,0.03)",
-    borderRadius: 20,
-    padding: 16,
+    backgroundColor: colors.surface,
+    borderRadius: radii.md,
+    padding: spacing.lg,
     borderWidth: 1,
-    borderColor: "rgba(147,51,234,0.15)",
+    borderColor: colors.border,
   },
-  cardHeader: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 12 },
-  qCode: { color: "#c4b5fd", fontSize: 13, fontWeight: "800", letterSpacing: 0.5 },
-  badge: { paddingHorizontal: 8, paddingVertical: 4, borderRadius: 8, borderWidth: 1 },
-  badgeText: { fontSize: 10, fontWeight: "900" },
-  questionPreview: { color: "#FFFFFF", fontSize: 14, fontWeight: "600", lineHeight: 22, marginBottom: 12 },
-  metaRow: { flexDirection: "row", alignItems: "center", gap: 6 },
-  metaText: { color: "rgba(255,255,255,0.4)", fontSize: 12, fontWeight: "700" },
-  metaDot: { color: "rgba(255,255,255,0.2)", fontSize: 12 },
-  expandedSection: { marginTop: 16, gap: 8 },
+  cardExpanded: {
+    borderColor: "rgba(217, 119, 6, 0.4)",
+  },
+  cardHeader: { 
+    flexDirection: "row", 
+    justifyContent: "space-between", 
+    alignItems: "center", 
+    marginBottom: spacing.md 
+  },
+  qCode: { 
+    color: colors.fgSecondary, 
+    fontSize: 11, 
+    fontWeight: "bold", 
+    fontFamily: typography.mono.fontFamily,
+    letterSpacing: 0.5 
+  },
+  badge: { 
+    paddingHorizontal: 6, 
+    paddingVertical: 2, 
+    borderRadius: radii.sm, 
+    borderWidth: 1 
+  },
+  badgeText: { 
+    fontSize: 8, 
+    fontWeight: "bold" 
+  },
+  questionPreview: { 
+    color: colors.fgPrimary, 
+    fontSize: 15, 
+    fontWeight: "600", 
+    lineHeight: 22, 
+    marginBottom: spacing.lg 
+  },
+  metaRow: { 
+    flexDirection: "row", 
+    alignItems: "center", 
+    gap: 6 
+  },
+  metaText: { 
+    color: colors.fgMuted, 
+    fontSize: 11, 
+    fontWeight: "bold",
+    textTransform: "uppercase",
+    letterSpacing: 0.5
+  },
+  metaDot: { 
+    color: colors.border, 
+    fontSize: 12 
+  },
+  expandedSection: { 
+    marginTop: spacing.lg, 
+  },
+  divider: {
+    height: 1,
+    backgroundColor: colors.border,
+    marginBottom: spacing.lg,
+  },
   optionRow: {
     flexDirection: "row",
     alignItems: "center",
-    padding: 12,
-    borderRadius: 14,
-    backgroundColor: "rgba(255,255,255,0.05)",
+    padding: spacing.md,
+    borderRadius: radii.sm,
+    backgroundColor: colors.base,
     borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.08)",
-    gap: 12,
+    borderColor: colors.border,
+    gap: spacing.md,
+    marginBottom: spacing.sm,
   },
   optionCorrect: {
-    backgroundColor: "rgba(16, 185, 129, 0.1)",
-    borderColor: "rgba(16, 185, 129, 0.3)",
+    backgroundColor: "rgba(61, 154, 95, 0.08)",
+    borderColor: colors.success,
   },
   optionLetter: {
-    width: 30,
-    height: 30,
-    borderRadius: 8,
-    backgroundColor: "rgba(255,255,255,0.1)",
+    width: 28,
+    height: 28,
+    borderRadius: radii.sm,
+    backgroundColor: colors.inset,
     justifyContent: "center",
     alignItems: "center",
+    borderWidth: 1,
+    borderColor: colors.border,
   },
   optionLetterCorrect: {
-    backgroundColor: "rgba(16, 185, 129, 0.3)",
+    backgroundColor: colors.success,
+    borderColor: colors.success,
   },
-  optionLetterText: { fontSize: 13, fontWeight: "900", color: "rgba(255,255,255,0.6)" },
-  optionText: { color: "rgba(255,255,255,0.9)", fontSize: 13, fontWeight: "600" },
-  microTopicRow: {
-    marginTop: 8,
-    padding: 12,
-    borderRadius: 14,
-    backgroundColor: "rgba(147,51,234,0.08)",
+  optionLetterText: { 
+    fontSize: 12, 
+    fontWeight: "bold", 
+    color: colors.fgSecondary,
+    fontFamily: typography.mono.fontFamily
+  },
+  optionText: { 
+    color: colors.fgPrimary, 
+    fontSize: 14, 
+    fontWeight: "600" 
+  },
+  microTopicBox: {
+    marginTop: spacing.md,
+    padding: spacing.md,
+    borderRadius: radii.sm,
+    backgroundColor: colors.inset,
     borderWidth: 1,
-    borderColor: "rgba(147,51,234,0.2)",
+    borderColor: colors.border,
   },
-  microTopicLabel: { fontSize: 10, fontWeight: "800", color: "rgba(255,255,255,0.4)", textTransform: "uppercase", letterSpacing: 2, marginBottom: 4 },
-  microTopicValue: { fontSize: 13, fontWeight: "700", color: "#c4b5fd" },
+  microTopicLabel: { 
+    fontSize: 9, 
+    fontWeight: "bold", 
+    color: colors.fgMuted, 
+    textTransform: "uppercase", 
+    letterSpacing: 1.5, 
+    marginBottom: 2 
+  },
+  microTopicValue: { 
+    fontSize: 12, 
+    fontWeight: "bold", 
+    color: colors.accent,
+    fontFamily: typography.mono.fontFamily
+  },
+  center: { 
+    flex: 1, 
+    justifyContent: "center", 
+    alignItems: "center",
+    paddingVertical: 40,
+  },
+  emptyText: {
+    color: colors.fgMuted,
+    fontSize: 14,
+    fontWeight: "500",
+    fontFamily: typography.mono.fontFamily,
+    textAlign: 'center',
+  }
 });
+

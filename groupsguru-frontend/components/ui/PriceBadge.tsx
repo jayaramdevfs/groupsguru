@@ -13,16 +13,16 @@ export default function PriceBadge({ price, isFree }: PriceBadgeProps) {
   return (
     <div className={`px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-2 border ${
       free 
-        ? "bg-emerald-500/20 text-emerald-400 border-emerald-500/30" 
-        : "bg-[#EA580C] text-[#F97316] border-[#57534E]/40 shadow-md"
+        ? "bg-[#3D9A5F]/10 text-[#3D9A5F] border-[#3D9A5F]/20" 
+        : "bg-[#D97706]/10 text-[#D97706] border-[#D97706]/20"
     }`}>
-      <span className={free ? "text-emerald-300" : "text-[#F97316]"}>
+      <span className={free ? "text-[#3D9A5F]/70" : "text-[#D97706]/70"}>
         {free ? "✓" : "⚡"}
       </span>
       {free ? (
         <Multilang en="Free Access" te="ఉచితం" />
       ) : (
-        <span className="flex items-center gap-1">
+        <span className="flex items-center gap-1 font-mono">
           <Multilang en="Premium" te="ప్రీమియం" /> · ₹{price}
         </span>
       )}

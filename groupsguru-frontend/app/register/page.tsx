@@ -1,37 +1,33 @@
 "use client";
 
 import RegisterForm from "../../components/auth/RegisterForm";
-import { motion } from "framer-motion";
-
-const spring = {
-  
-  duration: 0.25, ease: "easeOut" as const,
-};
 
 export default function RegisterPage() {
   return (
-    <div className="relative min-h-screen flex items-center justify-center px-6">
-      <motion.div
-        initial={{ opacity: 0, scale: 0.96 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={spring}
-        className="relative z-10 w-full max-w-xl min-h-[400px] px-12 py-10 rounded-3xl
-                   
-                   border border-[#57534E]/40
-                   bg-[#292524]
-                   shadow-md"
-      >
-        <div className="text-center mb-8 space-y-2">
-          <h1 className="text-[48px] font-extrabold leading-tight">
-            Create Account
+    <div className="min-h-screen flex items-center justify-center p-6">
+      <div className="w-full max-w-xl bg-[#1C1C1C] border border-[#3A3A3A] rounded p-12 shadow-2xl relative overflow-hidden">
+        
+        {/* Header Section */}
+        <header className="mb-10 text-center">
+          <div className="inline-block px-2 py-0.5 rounded border border-[#D97706]/30 bg-[#D97706]/10 text-[#D97706] text-[10px] font-mono font-bold uppercase tracking-widest mb-4">
+            REGISTRATION_V2.0
+          </div>
+          <h1 className="text-4xl md:text-5xl font-serif text-[#E8E8E8] mb-4">
+            Create <span className="text-[#D97706]">Account</span>
           </h1>
-          <p className="text-[#F97316]/70 text-base font-semibold">
-            Start Your Government Exams Journey
+          <p className="text-[#666666] font-mono text-[10px] uppercase tracking-widest leading-relaxed">
+            Begin the public service examination protocol
           </p>
-        </div>
+        </header>
 
         <RegisterForm />
-      </motion.div>
+        
+        <div className="mt-8 pt-6 border-t border-[#3A3A3A] text-center">
+          <span className="text-[10px] font-mono font-bold text-[#3A3A3A] uppercase tracking-[0.25em]">
+            GroupsGuru_Secure_Auth
+          </span>
+        </div>
+      </div>
     </div>
   );
 }

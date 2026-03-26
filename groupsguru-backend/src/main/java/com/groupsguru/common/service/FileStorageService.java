@@ -21,7 +21,7 @@ public class FileStorageService {
     private final Path rootLocation;
 
     public FileStorageService(@Value("${app.storage.location}") String storageLocation) {
-        this.rootLocation = Paths.get(storageLocation);
+        this.rootLocation = Paths.get(storageLocation).toAbsolutePath().normalize();
     }
 
     @PostConstruct

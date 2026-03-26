@@ -4,12 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import api from "../../lib/api";
 import AnimatedInput from "../ui/AnimatedInput";
-import { motion } from "framer-motion";
-
-const spring = {
-  
-  duration: 0.25, ease: "easeOut" as const,
-};
+import Link from "next/link";
 
 export default function RegisterForm() {
   const router = useRouter();
@@ -32,47 +27,59 @@ export default function RegisterForm() {
 
       router.push("/login");
     } catch {
-      setError("Registration failed");
+      setError("Registration protocol failed. Internal server error.");
     }
   };
 
   return (
     <form onSubmit={handleRegister} className="space-y-6">
       {error && (
-        <p className="text-[#EF4444] text-center text-[16px] font-semibold">
-          {error}
-        </p>
+        <div className="p-4 bg-[#C74444]/10 border border-[#C74444]/30 rounded flex items-center gap-3">
+          <div className="w-1.5 h-1.5 rounded-full bg-[#C74444]"></div>
+          <span className="text-[10px] font-mono font-bold text-[#C74444] uppercase tracking-widest">{error}</span>
+        </div>
       )}
 
-      <AnimatedInput
-        placeholder="Full Name"
-        value={name}
-        onChange={setName}
-      />
+      <div className="space-y-4">
+        <AnimatedInput
+          label="Legal Full Name"
+          placeholder="e.g. Jayram Prasad"
+          value={name}
+          onChange={(v) => setName(v.toString())}
+          required
+        />
 
-      <AnimatedInput
-        type="email"
-        placeholder="Email"
-        value={email}
-        onChange={setEmail}
-      />
+        <AnimatedInput
+          label="Verification Email"
+          type="email"
+          placeholder="user@example.com"
+          value={email}
+          onChange={(v) => setEmail(v.toString())}
+          required
+        />
 
-      <AnimatedInput
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={setPassword}
-      />
+        <AnimatedInput
+          label="Access Protocol (Password)"
+          type="password"
+          placeholder="••••••••"
+          value={password}
+          onChange={(v) => setPassword(v.toString())}
+          required
+        />
+      </div>
 
-      <motion.button
-        whileHover={{ y: -2 }}
-        whileTap={{ scale: 0.95 }}
-        transition={spring}
+      <button
         type="submit"
-        className="w-full py-4 rounded-2xl text-[18px] font-bold text-[#FAFAF9] bg-[#EA580C] shadow-md"
+        className="w-full py-4 rounded bg-[#D97706] text-white font-bold text-sm tracking-widest hover:bg-[#F59E0B] transition-colors"
       >
-        Register
-      </motion.button>
+        EXECUTE_REGISTRATION
+      </button>
+
+      <div className="text-center pt-4">
+        <Link href="/login" className="text-[10px] font-mono font-bold text-[#666666] hover:text-[#D97706] uppercase tracking-[0.2em] transition-colors">
+          Already verified? Login++
+        </Link>
+      </div>
     </form>
   );
 }

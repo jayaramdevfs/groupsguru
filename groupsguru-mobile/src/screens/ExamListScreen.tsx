@@ -15,6 +15,7 @@ import { examService } from "../api/examService";
 import { Exam } from "../api/types";
 import { useLanguage } from "../context/LanguageContext";
 import { LanguageToggle } from "../components/LanguageToggle";
+import { colors, spacing, radii, typography } from "../theme/tokens";
 
 type RootStackParamList = {
   ExamList: undefined;
@@ -47,7 +48,7 @@ const ExamListScreen = () => {
 
   const renderExam = ({ item }: { item: Exam }) => (
     <TouchableOpacity 
-      activeOpacity={0.8}
+      activeOpacity={0.7}
       style={styles.examCard}
       onPress={() => navigation.navigate("ExamDetail", { examId: item.id })}
     >
@@ -67,20 +68,20 @@ const ExamListScreen = () => {
       </Text>
       
       <View style={styles.footer}>
-        <View style={styles.stat}>
-          <Text style={styles.statLabel}>{language === 'en' ? "Questions" : "ప్రశ్నలు"}</Text>
-          <Text style={styles.statValue}>{item.totalQuestions}</Text>
+        <View style={styles.statsRow}>
+          <View style={styles.stat}>
+            <Text style={styles.statLabel}>{language === 'en' ? "Questions" : "ప్రశ్నలు"}</Text>
+            <Text style={styles.statValue}>{item.totalQuestions}</Text>
+          </View>
+          <View style={styles.stat}>
+            <Text style={styles.statLabel}>{language === 'en' ? "Duration" : "సమయం"}</Text>
+            <Text style={styles.statValue}>{item.durationMinutes}m</Text>
+          </View>
         </View>
-        <View style={styles.stat}>
-          <Text style={styles.statLabel}>{language === 'en' ? "Duration" : "సమయం"}</Text>
-          <Text style={styles.statValue}>{item.durationMinutes}m</Text>
+        <View style={styles.viewBtn}>
+          <Text style={styles.viewBtnText}>{language === 'en' ? "TAKE TEST" : "ప్రారంభించండి"}</Text>
+          <Text style={{color: colors.accent, marginLeft: 4}}>→</Text>
         </View>
-        <TouchableOpacity 
-          style={styles.viewBtn}
-          onPress={() => navigation.navigate("ExamDetail", { examId: item.id })}
-        >
-          <Text style={styles.viewBtnText}>{language === 'en' ? "View" : "చూడండి"}</Text>
-        </TouchableOpacity>
       </View>
     </TouchableOpacity>
   );
@@ -90,11 +91,11 @@ const ExamListScreen = () => {
       <StatusBar barStyle="light-content" />
       <View style={styles.header}>
         <View>
-          <Text style={styles.greeting}>
-            {language === 'en' ? "Practice Exams" : "ప్రాక్టీస్ పరీక్షలు"}
+          <Text style={styles.label}>
+            {language === 'en' ? "PRACTICE CENTER" : "ప్రాక్టీస్ సెంటర్"}
           </Text>
           <Text style={styles.title}>
-            {language === 'en' ? "Tests" : "పరీక్షలు"}
+            {language === 'en' ? "Exams" : "పరీక్షలు"}
           </Text>
         </View>
         <LanguageToggle />
@@ -102,7 +103,7 @@ const ExamListScreen = () => {
 
       {loading ? (
         <View style={styles.center}>
-          <ActivityIndicator size="large" color="#9333EA" />
+          <ActivityIndicator size="small" color={colors.accent} />
         </View>
       ) : exams.length === 0 ? (
         <View style={styles.center}>
@@ -128,106 +129,117 @@ export default ExamListScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#0f051d",
+    backgroundColor: colors.base,
   },
   header: {
-    paddingHorizontal: 24,
-    paddingVertical: 20,
+    paddingHorizontal: spacing.xl,
+    paddingVertical: spacing.xl,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.border,
     flexDirection: "row",
     justifyContent: "space-between",
-    alignItems: "flex-end",
+    alignItems: "center",
   },
-  greeting: {
-    fontSize: 16,
-    color: "rgba(255,255,255,0.6)",
-    fontWeight: "600",
+  label: {
+    fontSize: 10,
+    color: colors.fgMuted,
+    fontWeight: "bold",
+    letterSpacing: 1.5,
+    textTransform: "uppercase",
+    marginBottom: 2,
   },
   title: {
-    fontSize: 28,
-    fontWeight: "800",
-    color: "#FFFFFF",
-    marginTop: 4,
+    fontSize: 24,
+    fontWeight: "400",
+    color: colors.fgPrimary,
+    fontFamily: 'serif',
   },
   list: {
-    padding: 24,
-    paddingTop: 10,
+    padding: spacing.xl,
   },
   examCard: {
-    backgroundColor: "rgba(147, 51, 234, 0.08)",
-    borderRadius: 24,
-    padding: 20,
-    marginBottom: 20,
+    backgroundColor: colors.surface,
+    borderRadius: radii.md,
+    padding: spacing.xl,
+    marginBottom: spacing.md,
     borderWidth: 1,
-    borderColor: "rgba(147, 51, 234, 0.2)",
+    borderColor: colors.border,
   },
   cardHeader: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    marginBottom: 12,
+    marginBottom: spacing.md,
   },
   typeBadge: {
-    backgroundColor: "rgba(147, 51, 234, 0.2)",
-    paddingHorizontal: 10,
-    paddingVertical: 4,
-    borderRadius: 8,
+    backgroundColor: colors.inset,
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+    borderRadius: radii.sm,
+    borderWidth: 1,
+    borderColor: colors.border,
   },
   typeBadgeText: {
-    color: "#c084fc",
+    color: colors.accent,
     fontSize: 10,
-    fontWeight: "800",
+    fontWeight: "bold",
     textTransform: "uppercase",
+    fontFamily: typography.mono.fontFamily,
   },
   subjectText: {
-    color: "rgba(255,255,255,0.4)",
-    fontSize: 12,
-    fontWeight: "700",
+    color: colors.fgMuted,
+    fontSize: 10,
+    fontWeight: "bold",
+    textTransform: "uppercase",
   },
   examName: {
     fontSize: 20,
-    fontWeight: "800",
-    color: "#FFFFFF",
+    fontWeight: "700",
+    color: colors.fgPrimary,
     marginBottom: 8,
   },
   examDesc: {
     fontSize: 14,
-    color: "rgba(255,255,255,0.6)",
+    color: colors.fgSecondary,
     lineHeight: 20,
-    marginBottom: 20,
+    marginBottom: spacing.xl,
   },
   footer: {
     flexDirection: "row",
+    justifyContent: "space-between",
     alignItems: "center",
-    paddingTop: 16,
+    paddingTop: spacing.lg,
     borderTopWidth: 1,
-    borderTopColor: "rgba(255,255,255,0.05)",
+    borderTopColor: colors.border,
+  },
+  statsRow: {
+    flexDirection: "row",
   },
   stat: {
-    marginRight: 24,
+    marginRight: spacing.xl,
   },
   statLabel: {
-    fontSize: 10,
-    color: "rgba(255,255,255,0.4)",
-    fontWeight: "800",
+    fontSize: 9,
+    color: colors.fgMuted,
+    fontWeight: "bold",
     textTransform: "uppercase",
     marginBottom: 2,
   },
   statValue: {
-    fontSize: 16,
-    color: "#FFFFFF",
+    fontSize: 15,
+    color: colors.fgPrimary,
     fontWeight: "700",
+    fontFamily: typography.mono.fontFamily,
   },
   viewBtn: {
-    marginLeft: "auto",
-    backgroundColor: "#9333EA",
-    paddingHorizontal: 16,
-    paddingVertical: 8,
-    borderRadius: 12,
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   viewBtnText: {
-    color: "#FFFFFF",
-    fontSize: 14,
-    fontWeight: "800",
+    color: colors.accent,
+    fontSize: 11,
+    fontWeight: "bold",
+    letterSpacing: 1,
   },
   center: {
     flex: 1,
@@ -235,8 +247,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   emptyText: {
-    color: "rgba(255,255,255,0.4)",
-    fontSize: 16,
-    fontWeight: "600",
+    color: colors.fgMuted,
+    fontSize: 14,
+    fontWeight: "500",
+    fontFamily: typography.mono.fontFamily,
   },
 });

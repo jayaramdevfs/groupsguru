@@ -1,59 +1,61 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
-import { ReactNode } from "react";
+import { useEffect, useState, ReactNode } from "react";
 
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   title: ReactNode;
   children: ReactNode;
+  maxWidth?: string;
 }
 
-export default function Modal({ isOpen, onClose, title, children }: ModalProps) {
+export default function Modal({ isOpen, onClose, title, children, maxWidth = "max-w-xl" }: ModalProps) {
+  const [shouldRender, setShouldRender] = useState(isOpen);
+
+  useEffect(() => {
+    if (isOpen) setShouldRender(true);
+    else {
+      // Small delay for fade out if we were using CSS, but user wants them GONE.
+      // So we just close instantly for that "snappy/utility" feel.
+      setShouldRender(false);
+    }
+  }, [isOpen]);
+
+  if (!shouldRender) return null;
+
   return (
-    <AnimatePresence>
-      {isOpen && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
-          {/* Backdrop */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+      {/* Backdrop */}
+      <div 
+        onClick={onClose}
+        className="absolute inset-0 bg-black/80 backdrop-blur-[2px]"
+      />
+
+      {/* Modal Content */}
+      <div className={`relative w-full ${maxWidth} bg-[#1C1C1C] border border-[#3A3A3A] rounded shadow-2xl flex flex-col overflow-hidden`}>
+        
+        {/* Header */}
+        <div className="flex items-center justify-between p-6 border-b border-[#3A3A3A] bg-[#141414]">
+          <h2 className="text-xl font-serif text-[#E8E8E8] font-bold">
+            {title}
+          </h2>
+          <button
             onClick={onClose}
-            className="absolute inset-0 bg-black/60 "
-          />
-
-          {/* Modal Content */}
-          <motion.div
-            initial={{ scale: 0.9, opacity: 0, y: 20 }}
-            animate={{ scale: 1, opacity: 1, y: 0 }}
-            exit={{ scale: 0.9, opacity: 0, y: 20 }}
-            className="relative w-full max-w-lg rounded-xl bg-[#1C1917] border border-[rgba(147,51,234,0.3)] shadow-md flex flex-col"
+            className="w-8 h-8 flex items-center justify-center rounded border border-[#3A3A3A] text-[#666666] hover:text-[#D97706] hover:border-[#D97706] transition-colors"
           >
-            {/* Header */}
-            <div className="flex items-center justify-between p-6 border-b border-[rgba(147,51,234,0.1)]">
-              <h2 className="text-2xl font-bold text-[#F97316]">
-                {title}
-              </h2>
-              <button
-                onClick={onClose}
-                className="p-2 rounded-full hover:bg-white/10 transition-colors"
-              >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="18" y1="6" x2="6" y2="18"></line>
-                  <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-              </button>
-            </div>
-
-            {/* Body */}
-            <div className="p-6 overflow-visible">
-              {children}
-            </div>
-          </motion.div>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
         </div>
-      )}
-    </AnimatePresence>
+
+        {/* Body */}
+        <div className="p-8 max-h-[80vh] overflow-y-auto custom-scrollbar">
+          {children}
+        </div>
+      </div>
+    </div>
   );
 }

@@ -13,11 +13,18 @@ import { useAuth } from "../context/AuthContext";
 import { ProfessionalLogo } from "../components/ProfessionalLogo";
 import { LanguageToggle } from "../components/LanguageToggle";
 import { colors, radii, spacing } from "../theme/tokens";
+import { useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { RootStackParamList } from "../navigation/AppNavigator";
+
+type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
 
 const LoginScreen = () => {
   const { login } = useAuth();
+  const navigation = useNavigation<NavigationProp>();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const handleLogin = async () => {
@@ -72,14 +79,24 @@ const LoginScreen = () => {
           <Text style={[styles.label, { marginTop: spacing.lg }]}>
             Password
           </Text>
-          <TextInput
-            style={styles.input}
-            placeholder="Enter password"
-            placeholderTextColor={colors.fgMuted}
-            value={password}
-            onChangeText={setPassword}
-            secureTextEntry
-          />
+          <View style={styles.passwordContainer}>
+            <TextInput
+              style={styles.passwordInput}
+              placeholder="Enter password"
+              placeholderTextColor={colors.fgMuted}
+              value={password}
+              onChangeText={setPassword}
+              secureTextEntry={!showPassword}
+            />
+            <TouchableOpacity 
+              style={styles.visibilityToggle} 
+              onPress={() => setShowPassword(!showPassword)}
+            >
+              <Text style={styles.visibilityText}>
+                {showPassword ? "HIDE" : "SHOW"}
+              </Text>
+            </TouchableOpacity>
+          </View>
 
           <TouchableOpacity
             style={[styles.button, loading && styles.buttonDisabled]}
@@ -89,6 +106,15 @@ const LoginScreen = () => {
           >
             <Text style={styles.buttonText}>
               {loading ? "Signing in..." : "Sign in"}
+            </Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity 
+            style={styles.linkButton} 
+            onPress={() => navigation.navigate("Register")}
+          >
+            <Text style={styles.linkText}>
+              Don't have an account? <Text style={{ color: colors.accent }}>Register</Text>
             </Text>
           </TouchableOpacity>
         </View>
@@ -158,6 +184,30 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: colors.border,
   },
+  passwordContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: colors.inset,
+    borderRadius: radii.md,
+    borderWidth: 1,
+    borderColor: colors.border,
+  },
+  passwordInput: {
+    flex: 1,
+    color: colors.fgPrimary,
+    fontSize: 15,
+    fontWeight: "500",
+    padding: spacing.lg,
+  },
+  visibilityToggle: {
+    paddingHorizontal: spacing.lg,
+  },
+  visibilityText: {
+    fontSize: 10,
+    fontWeight: "800",
+    color: colors.accent,
+    letterSpacing: 1,
+  },
   button: {
     backgroundColor: colors.accent,
     width: "100%",
@@ -180,5 +230,14 @@ const styles = StyleSheet.create({
     fontSize: 11,
     fontWeight: "500",
     marginTop: spacing["2xl"],
+  },
+  linkButton: {
+    marginTop: spacing.xl,
+    alignItems: "center",
+  },
+  linkText: {
+    fontSize: 14,
+    color: colors.fgSecondary,
+    fontWeight: "500",
   },
 });

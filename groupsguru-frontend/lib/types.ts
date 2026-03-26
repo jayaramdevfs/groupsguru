@@ -140,6 +140,41 @@ export interface TopicRequest {
   displayOrder?: number;
 }
 
+export interface StudyMaterial {
+  id: number;
+  title: string;
+  titleTe?: string;
+  description?: string;
+  descriptionTe?: string;
+  entityType: string;
+  entityId: number;
+  fileName?: string;
+  storedFileName?: string;
+  fileType?: string;
+  mimeType?: string;
+  fileSize?: number;
+  accessType: string;
+  priceInr?: number;
+  isPublished?: boolean;
+  displayOrder?: number;
+  createdAt?: string;
+  updatedAt?: string;
+}
+
+export interface StudyMaterialRequest {
+  title: string;
+  titleTe?: string;
+  description?: string;
+  descriptionTe?: string;
+  entityType: string;
+  entityId: number;
+  fileType?: string;
+  accessType?: string;
+  priceInr?: number;
+  isPublished?: boolean;
+  displayOrder?: number;
+}
+
 export interface MicroTopic {
   id: number;
   microTopicId: string;
@@ -330,4 +365,42 @@ export interface ExamResult {
   attempt: ExamAttempt;
   questions: QuestionResult[];
   topicAnalytics: TopicAnalytics[];
+}
+
+export interface TestSeries {
+  id: number; 
+  name: string; 
+  nameTe: string;
+  description: string; 
+  descriptionTe: string;
+  seriesType: 'MOCK' | 'PRACTICE' | 'TOPIC_DRILL' | 'PYQ_BASED';
+  categoryId?: number; 
+  subCategoryId?: number;
+  sectionId?: number; 
+  topicId?: number;
+  accessType: string; 
+  priceInr?: number;
+  totalExams: number; 
+  isActive: boolean;
+  isPublished: boolean; 
+  displayOrder?: number;
+  createdAt: string;
+  updatedAt?: string;
+}
+
+export interface TestSeriesRequest {
+  name: string;
+  nameTe: string;
+  description: string;
+  descriptionTe: string;
+  seriesType: 'MOCK' | 'PRACTICE' | 'TOPIC_DRILL' | 'PYQ_BASED';
+  categoryId?: number;
+  subCategoryId?: number;
+  sectionId?: number;
+  topicId?: number;
+  accessType: string;
+  priceInr?: number;
+  isActive: boolean;
+  isPublished: boolean;
+  displayOrder?: number;
 }

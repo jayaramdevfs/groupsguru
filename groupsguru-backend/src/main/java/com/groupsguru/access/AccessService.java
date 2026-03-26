@@ -48,6 +48,7 @@ public class AccessService {
                 parentType = "COMMISSION";
                 break;
             case "SUB_CATEGORY":
+            case "SUBCATEGORY":
                 SubCategory sub = subCategoryRepo.findById(entityId).orElseThrow();
                 price = sub.getPriceInr();
                 isFree = "FREE".equals(sub.getAccessType()) || price == null || price == 0;

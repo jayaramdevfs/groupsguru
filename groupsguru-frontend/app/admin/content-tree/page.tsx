@@ -7,7 +7,6 @@ import { subCategoryApi } from "@/lib/subcategories";
 import { sectionApi } from "@/lib/sections";
 import { topicApi } from "@/lib/topics";
 import { Category, SubCategory, Section, Topic } from "@/lib/types";
-import { motion, AnimatePresence } from "framer-motion";
 import Modal from "@/components/ui/Modal";
 import AnimatedInput from "@/components/ui/AnimatedInput";
 
@@ -42,7 +41,7 @@ export default function ContentTreePage() {
   }, [fetchRoot]);
 
   // Handle Form Change
-  const handleInputChange = (field: string, val: string) => {
+  const handleInputChange = (field: string, val: string | number) => {
     setModalConfig((prev) => ({
       ...prev,
       data: { ...prev.data, [field]: val }
@@ -73,7 +72,7 @@ export default function ContentTreePage() {
   };
 
   const handleDelete = async (type: string, id: number) => {
-    if (!confirm("Are you sure? This may have cascading effects.")) return;
+    if (!confirm("Permanently remove this node? This will cascade and delete all nested descendants.")) return;
     try {
       if (type === "CATEGORY") await categoryApi.delete(id);
       if (type === "SUBCATEGORY") await subCategoryApi.delete(id);
@@ -122,9 +121,9 @@ export default function ContentTreePage() {
   };
 
   const ActionButtons = ({ type, item, items, index, isExpandedConfig }: { type: string, item: any, items: any[], index: number, isExpandedConfig?: any }) => (
-    <div className="flex gap-2 items-center opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity ml-2">
+    <div className="flex gap-2 items-center opacity-0 group-hover:opacity-100 transition-opacity ml-4 scale-90 origin-left">
       <button 
-        className="text-xs   font-semibold  px-2 py-1 rounded" 
+        className="text-[9px] font-mono font-bold uppercase tracking-widest text-[#666666] hover:text-[#D97706] border border-[#3A3A3A] px-2 py-0.5 rounded transition-colors" 
         onClick={(e) => { 
           e.stopPropagation(); 
           setModalConfig({ 
@@ -136,43 +135,44 @@ export default function ContentTreePage() {
           }); 
           setModalOpen(true); 
         }}
-        title="Edit"
       >
-        Edit
+        MOD
       </button>
       <button 
-        className="text-xs text-red-400 hover:text-red-300 font-semibold bg-red-400/10 px-2 py-1 rounded" 
+        className="text-[9px] font-mono font-bold uppercase tracking-widest text-[#C74444] border border-[#C74444]/30 px-2 py-0.5 rounded hover:bg-[#C74444]/10 transition-colors" 
         onClick={(e) => { e.stopPropagation(); handleDelete(type, item.id!); }}
-        title="Delete"
       >
-        Delete
+        DEL
       </button>
-      <div className="w-[1px] h-4 bg-white/20 mx-1"></div>
+      
+      <div className="w-[1px] h-3 bg-[#3A3A3A] mx-1"></div>
+      
       <button 
-        className={`text-xs ${item.isPublished ? 'text-green-400 bg-green-400/10' : 'text-gray-400 bg-gray-400/10'} px-2 py-1 rounded font-bold hover:opacity-80`} 
+        className={`text-[9px] font-mono font-bold uppercase tracking-widest px-2 py-0.5 rounded transition-colors ${item.isPublished ? 'text-[#10B981] border border-[#10B981]/30 bg-[#10B981]/5' : 'text-[#666666] border border-[#3A3A3A]'}`} 
         onClick={(e) => { e.stopPropagation(); handleTogglePublish(type, item.id!); }}
-        title={item.isPublished ? "Click to Unpublish" : "Click to Publish"}
       >
-        {item.isPublished ? '● Published' : '○ Hidden'}
+        {item.isPublished ? 'PUB' : 'HID'}
       </button>
-      <div className="flex flex-col gap-0.5 ml-1">
+      
+      <div className="flex gap-1 ml-1">
         <button 
-          className="text-[10px] text-[#FAFAF9]/50 hover:text-[#FAFAF9] disabled:opacity-30 leading-none px-1" 
+          className="text-[10px] text-[#666666] hover:text-[#D97706] disabled:opacity-0 transition-colors" 
           disabled={index === 0}
           onClick={(e) => { e.stopPropagation(); handleReorder(type, items, index, 'UP'); }}
         >▲</button>
         <button 
-          className="text-[10px] text-[#FAFAF9]/50 hover:text-[#FAFAF9] disabled:opacity-30 leading-none px-1" 
+          className="text-[10px] text-[#666666] hover:text-[#D97706] disabled:opacity-0 transition-colors" 
           disabled={index === items.length - 1}
           onClick={(e) => { e.stopPropagation(); handleReorder(type, items, index, 'DOWN'); }}
         >▼</button>
       </div>
+      
       {isExpandedConfig && (
         <button 
-          className="text-xs font-semibold text-green-400 hover:text-green-300 bg-green-400/10 px-2 py-1 rounded ml-2" 
+          className="text-[9px] font-mono font-bold uppercase tracking-widest text-[#D97706] border border-[#D97706]/30 px-2 py-0.5 rounded hover:bg-[#D97706]/10 transition-colors ml-2" 
           onClick={(e) => { e.stopPropagation(); setModalConfig(isExpandedConfig); setModalOpen(true); }}
         >
-          {isExpandedConfig.btnText}
+          {isExpandedConfig.btnText.split(' ')[2]}++
         </button>
       )}
     </div>
@@ -180,9 +180,10 @@ export default function ContentTreePage() {
 
   const TopicNode = ({ topic, items, index, parentId }: { topic: Topic; items: Topic[]; index: number; parentId: number }) => {
     return (
-      <div className="flex items-center gap-4 py-2 border-l border-[#57534E]/40 pl-6 ml-4 relative group">
-        <div className="absolute left-0 top-1/2 w-4 h-[1px] bg-white/10" />
-        <span className={`font-medium ${topic.isPublished !== false ? 'text-[#F97316]' : 'text-[#F97316] line-through'}`}>📄 {topic.name}</span>
+      <div className="flex items-center gap-2 py-2 border-l border-[#3A3A3A] pl-6 ml-4 relative group">
+        <div className="absolute left-0 top-1/2 w-4 h-[1px] bg-[#3A3A3A]" />
+        <span className="text-[10px] font-mono font-bold text-[#666666] uppercase tracking-widest">L4</span>
+        <span className={`text-sm font-medium ${topic.isPublished !== false ? 'text-[#E8E8E8]' : 'text-[#666666] italic'}`}>{topic.name}</span>
         <ActionButtons type="TOPIC" item={topic} items={items} index={index} />
       </div>
     );
@@ -200,10 +201,13 @@ export default function ContentTreePage() {
     };
 
     return (
-      <div className="border-l border-[#57534E]/40 pl-6 ml-4 relative group">
-        <div className="absolute left-0 top-5 w-4 h-[1px] bg-white/10" />
-        <div className="flex items-center gap-4 py-2 cursor-pointer" onClick={load}>
-          <span className={`font-bold ${section.isPublished !== false ? 'text-[#F97316]' : 'text-[#F97316] line-through'}`}>{expanded ? "📂" : "📁"} {section.name} <span className="text-xs font-normal text-[#FAFAF9]/30 ml-2">[{children.length > 0 ? children.length : '...'} topics]</span></span>
+      <div className="border-l border-[#3A3A3A] pl-6 ml-4 relative group">
+        <div className="absolute left-0 top-5 w-4 h-[1px] bg-[#3A3A3A]" />
+        <div className="flex items-center gap-2 py-2 cursor-pointer" onClick={load}>
+          <span className="text-[10px] font-mono font-bold text-[#D97706] uppercase tracking-widest">L3</span>
+          <span className={`font-bold transition-colors ${expanded ? 'text-[#D97706]' : 'text-[#E8E8E8]'} ${section.isPublished === false ? 'opacity-50' : ''}`}>
+             {section.name} <span className="text-[10px] font-mono font-bold text-[#666666] ml-2 tracking-widest">[{children.length > 0 ? children.length : '...'}_NODES]</span>
+          </span>
           <ActionButtons 
             type="SECTION" item={section} items={items} index={index} 
             isExpandedConfig={{ type: "TOPIC", mode: "CREATE", parentId: section.id, data: { name: "", nameTe: "", description: "", topicCode: "", displayOrder: children.length, isPublished: true }, btnText: "+ Add Topic" }} 
@@ -230,10 +234,13 @@ export default function ContentTreePage() {
     };
 
     return (
-      <div className="border-l border-[#57534E]/40 pl-6 ml-4 relative group">
-        <div className="absolute left-0 top-5 w-4 h-[1px] bg-white/10" />
-        <div className="flex items-center gap-4 py-2 cursor-pointer" onClick={load}>
-          <span className={`font-bold ${sub.isPublished !== false ? 'text-[#F97316]' : 'text-[#F97316]/50 line-through'}`}>{expanded ? "📖" : "📘"} {sub.name} <span className="text-xs font-normal text-[#FAFAF9]/30 ml-2">[{children.length > 0 ? children.length : '...'} sections]</span></span>
+      <div className="border-l border-[#3A3A3A] pl-6 ml-4 relative group">
+        <div className="absolute left-0 top-5 w-4 h-[1px] bg-[#3A3A3A]" />
+        <div className="flex items-center gap-2 py-2 cursor-pointer" onClick={load}>
+          <span className="text-[10px] font-mono font-bold text-[#D97706] uppercase tracking-widest">L2</span>
+          <span className={`font-bold text-lg transition-colors ${expanded ? 'text-[#D97706]' : 'text-[#E8E8E8]'} ${sub.isPublished === false ? 'opacity-50' : ''}`}>
+            {sub.name} <span className="text-[10px] font-mono font-bold text-[#666666] ml-2 tracking-widest">[{children.length > 0 ? children.length : '...'}_SECT]</span>
+          </span>
           <ActionButtons 
             type="SUBCATEGORY" item={sub} items={items} index={index} 
             isExpandedConfig={{ type: "SECTION", mode: "CREATE", parentId: sub.id, data: { name: "", nameTe: "", description: "", displayOrder: children.length, isPublished: true }, btnText: "+ Add Section" }}
@@ -260,16 +267,19 @@ export default function ContentTreePage() {
     };
 
     return (
-      <div className="mb-4 bg-white/[0.02] border border-white/5 rounded-2xl p-4 group">
+      <div className={`mb-4 border border-[#3A3A3A] rounded bg-[#1C1C1C] p-4 group transition-colors ${expanded ? 'border-[#D97706]/30' : 'hover:border-[#D97706]/50'}`}>
         <div className="flex items-center gap-4 cursor-pointer" onClick={load}>
-          <span className={`text-xl font-bold ${cat.isPublished !== false ? 'text-[#F97316]' : 'text-[#F97316] line-through'}`}>{expanded ? "🏛️" : "🏛️"} {cat.name}</span>
+          <div className="flex items-center gap-2">
+            <span className="text-[10px] font-mono font-bold text-[#D97706] uppercase tracking-widest">L1 CORE</span>
+            <span className="text-2xl font-serif text-[#E8E8E8] group-hover:text-[#D97706] transition-colors">{cat.name}</span>
+          </div>
           <ActionButtons 
             type="CATEGORY" item={cat} items={items} index={index} 
             isExpandedConfig={{ type: "SUBCATEGORY", mode: "CREATE", parentId: cat.id, data: { name: "", nameTe: "", description: "", imageUrl: "", displayOrder: children.length, isPublished: true }, btnText: "+ Add Subject" }}
           />
         </div>
         {expanded && (
-          <div className="mt-4">
+          <div className="mt-8 border-t border-[#3A3A3A] pt-4">
             {children.map((child, i) => <SubCategoryNode key={child.id} sub={child} items={children} index={i} parentId={cat.id!} />)}
           </div>
         )}
@@ -279,65 +289,78 @@ export default function ContentTreePage() {
 
   return (
     <ProtectedLayout requiredRole="ADMIN">
-      <div className="min-h-screen py-24 px-6 md:px-12 w-full max-w-5xl mx-auto text-[#FAFAF9]">
-        <motion.div className="mb-10">
-          <h1 className="text-[36px] font-[800] leading-tight mb-2">Content Hierarchy Tree</h1>
-          <p className="text-[#FAFAF9]/60 font-semibold">Drill down level by level to manage all contents</p>
-        </motion.div>
+      <div className="max-w-[1000px] mx-auto py-12 px-6">
+        
+        {/* Header Section */}
+        <header className="mb-12 border-b border-[#3A3A3A] pb-8">
+          <div className="inline-block px-2 py-0.5 rounded border border-[#D97706]/30 bg-[#D97706]/10 text-[#D97706] text-[10px] font-mono font-bold uppercase tracking-widest mb-4">
+            Architectural Overview_v3
+          </div>
+          <h1 className="text-4xl md:text-5xl font-serif text-[#E8E8E8] mb-4">
+            Knowledge <span className="text-[#D97706]">Inventory</span>
+          </h1>
+          <p className="text-[#A0A0A0] max-w-xl leading-relaxed text-sm">
+            Recursive mapping of the LMS content hierarchy. Control every node from examinations down to atomic syllabus topics.
+          </p>
+        </header>
 
         {isLoading ? (
-           <div className="flex items-center justify-center py-20">
-             <div className="w-12 h-12 border-4 border-orange-500 border-t-transparent rounded-full animate-spin"></div>
+           <div className="flex flex-col items-center justify-center py-20 gap-4">
+             <div className="w-8 h-8 border-2 border-[#D97706] border-t-transparent rounded-full animate-spin"></div>
+             <span className="text-[10px] font-mono font-bold text-[#666666] uppercase tracking-widest">Parsing Hierarchy...</span>
            </div>
         ) : (
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-4 pb-20">
             {categories.map((cat, i) => <CategoryNode key={cat.id} cat={cat} items={categories} index={i} />)}
           </div>
         )}
 
-        <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)} title={`${modalConfig.mode} ${modalConfig.type}`}>
-          <form onSubmit={handleFormSubmit} className="flex flex-col gap-6">
-            <AnimatedInput 
-              label="Name (English)" type="text" name="name" placeholder="Enter name"
-              value={modalConfig.data.name || ""} onChange={(val) => handleInputChange("name", val)} required 
-            />
-            <AnimatedInput 
-              label="Name (Telugu)" type="text" name="nameTe" placeholder="తెలుగు పేరు"
-              value={modalConfig.data.nameTe || ""} onChange={(val) => handleInputChange("nameTe", val)} required 
-            />
-            <div className="flex flex-col gap-2">
-              <label className="text-sm font-semibold text-[#FAFAF9]/60 ml-1">Description</label>
+        {/* Modal Logic */}
+        <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)} title={`${modalConfig.mode}_NODE // TYPE: ${modalConfig.type}`}>
+          <form onSubmit={handleFormSubmit} className="space-y-6 pt-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <AnimatedInput 
+                label="Label (English)" type="text" name="name" placeholder="..."
+                value={modalConfig.data.name || ""} onChange={(val) => handleInputChange("name", val)} required 
+              />
+              <AnimatedInput 
+                label="Label (Telugu)" type="text" name="nameTe" placeholder="..."
+                value={modalConfig.data.nameTe || ""} onChange={(val) => handleInputChange("nameTe", val)} required 
+              />
+            </div>
+            
+            <div className="space-y-2">
+              <label className="text-[10px] font-mono font-bold text-[#666666] uppercase tracking-widest ml-1">Structural Meta</label>
               <textarea 
-                className="w-full bg-white/5 border border-[#57534E]/40 rounded-xl p-4 text-[#FAFAF9] focus:outline-none focus:border-orange-500/50 min-h-[100px]"
-                placeholder="Description"
+                className="w-full bg-[#141414] border border-[#3A3A3A] rounded p-4 text-[#A0A0A0] font-mono text-xs focus:outline-none focus:border-[#D97706]/50 transition-colors min-h-[100px] resize-none"
+                placeholder="Entry description metadata..."
                 value={modalConfig.data.description || ""} onChange={(e) => handleInputChange("description", e.target.value)}
               />
             </div>
 
             {modalConfig.type === "CATEGORY" && (
-               <div className="flex flex-col gap-2">
-                  <label className="text-sm font-semibold text-[#FAFAF9]/60 ml-1">Commission ID</label>
-                  <input type="number" className="w-full bg-white/5 border border-[#57534E]/40 rounded-xl p-4 text-[#FAFAF9]" value={modalConfig.data.commissionId || 1} onChange={(e) => handleInputChange("commissionId", e.target.value)} />
+               <div className="grid grid-cols-2 gap-6">
+                 <div className="space-y-2">
+                   <label className="text-[10px] font-mono font-bold text-[#666666] uppercase tracking-widest ml-1">Entity Reference ID</label>
+                   <input type="number" className="w-full bg-[#141414] border border-[#3A3A3A] rounded p-4 text-[#E8E8E8] font-mono text-sm" value={modalConfig.data.commissionId || 1} onChange={(e) => handleInputChange("commissionId", e.target.value)} />
+                 </div>
+                 <AnimatedInput 
+                  label="Surface Asset URL" type="text" name="imageUrl" placeholder="https://..."
+                  value={modalConfig.data.imageUrl || ""} onChange={(val) => handleInputChange("imageUrl", val)} 
+                />
                </div>
-            )}
-
-            {modalConfig.type === "CATEGORY" && (
-              <AnimatedInput 
-                label="Image URL" type="text" name="imageUrl" placeholder="Image URL"
-                value={modalConfig.data.imageUrl || ""} onChange={(val) => handleInputChange("imageUrl", val)} 
-              />
             )}
 
             {modalConfig.type === "TOPIC" && (
               <AnimatedInput 
-                label="Topic Code" type="text" name="topicCode" placeholder="Topic Code"
+                label="Atomic Node Code" type="text" name="topicCode" placeholder="MT_REF_00"
                 value={modalConfig.data.topicCode || ""} onChange={(val) => handleInputChange("topicCode", val)} 
               />
             )}
 
-            <motion.button type="submit" whileHover={{ scale: 1.02 }} className="mt-4 w-full py-4 rounded-xl bg-[#EA580C] font-bold">
-              Save changes
-            </motion.button>
+            <button type="submit" className="w-full py-4 rounded bg-[#D97706] text-white font-bold text-sm hover:bg-[#F59E0B] transition-colors">
+              Commit Entry Configuration
+            </button>
           </form>
         </Modal>
       </div>

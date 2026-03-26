@@ -21,13 +21,18 @@ public interface QuestionRepository extends JpaRepository<Question, Long> {
     long countByMicroTopicIdAndIsDeletedFalse(String microTopicId);
     
     long countByIsDeletedFalse();
+    
+    java.util.List<Question> findByBatchIdAndIsDeletedFalse(Long batchId);
+    
+    long countByBatchIdAndIsDeletedFalse(Long batchId);
 
     @Query("SELECT q FROM Question q WHERE q.isDeleted = false " +
            "AND (:subject IS NULL OR q.subject = :subject) " +
            "AND (:difficulty IS NULL OR q.difficulty = :difficulty) " +
            "AND (:questionType IS NULL OR q.questionType = :questionType) " +
            "AND (:sprintId IS NULL OR q.sprintId = :sprintId) " +
-           "AND (:search IS NULL OR (LOWER(q.questionTextEn) LIKE LOWER(CONCAT('%', :search, '%')) OR LOWER(q.questionTextTe) LIKE LOWER(CONCAT('%', :search, '%'))))")
+           "AND (:search IS NULL OR (LOWER(COALESCE(q.questionTextEn, '')) LIKE LOWER(CONCAT('%', :search, '%')) OR " +
+           "                         LOWER(COALESCE(q.questionTextTe, '')) LIKE LOWER(CONCAT('%', :search, '%'))))")
     Page<Question> findQuestionsWithFilters(
             @Param("subject") String subject,
             @Param("difficulty") String difficulty,

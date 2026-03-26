@@ -52,6 +52,8 @@ public class Question {
     private String questionType; // STATIC/ANALYTICAL/STMT/ELIM/etc.
     private String sprintId; // e.g., S11.1
     
+    private Long batchId; // FK to QuestionBatch (nullable — existing questions have no batch)
+    
     private Double penalty = 0.25;
 
     private Boolean isDeleted = false;
