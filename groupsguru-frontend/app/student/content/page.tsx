@@ -3,9 +3,16 @@
 import ProtectedLayout from "@/components/layout/ProtectedLayout";
 import { contentApi } from "@/lib/content";
 import { StudyMaterial } from "@/lib/types";
-import { Multilang } from "@/components/ui/Multilang";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { BookOpen, Download, Search, ChevronRight, Home, Filter, Clock, FileText, Sparkles, LayoutGrid, List, ArrowRight } from "lucide-react";
+import Link from "next/link";
+import { clsx, type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
 
 function formatFileSize(bytes?: number): string {
   if (!bytes || bytes <= 0) return "-";
@@ -20,27 +27,22 @@ function formatFileSize(bytes?: number): string {
 }
 
 export default function StudentContentPage() {
+  const router = useRouter();
   const searchParams = useSearchParams();
   const [materials, setMaterials] = useState<StudyMaterial[]>([]);
   const [subjects, setSubjects] = useState<string[]>([]);
-  const [selectedSubject, setSelectedSubject] = useState("ALL");
-  const [isLoading, setIsLoading] = useState(true);
+  const [selectedSubject, setSelectedSubject] = useState(searchParams.get("subject") || "ALL");
   const [searchTerm, setSearchTerm] = useState("");
-  
-  // Reader Modal State
-  const [isReaderOpen, setIsReaderOpen] = useState(false);
-  const [readingContent, setReadingContent] = useState<string | null>(null);
-  const [readingTitle, setReadingTitle] = useState("");
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   const fetchData = useCallback(async () => {
     setIsLoading(true);
     try {
       const all = await contentApi.getAllPublished(0, 500);
-      // Handle both Page object and direct List response
       const data = Array.isArray(all) ? all : (all.content || []);
       setMaterials(data);
       
-      // Extract unique subjects for filtering
       const uniqueSubjects = Array.from(new Set(data.map((m: StudyMaterial) => m.subject).filter(Boolean))) as string[];
       setSubjects(uniqueSubjects);
     } catch (error) {
@@ -58,146 +60,206 @@ export default function StudentContentPage() {
     return materials.filter(m => {
       const matchSubject = selectedSubject === "ALL" || m.subject === selectedSubject;
       const matchSearch = m.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
-                          (m.description?.toLowerCase().includes(searchTerm.toLowerCase()));
+                         (m.description?.toLowerCase().includes(searchTerm.toLowerCase()));
       return matchSubject && matchSearch;
     });
   }, [materials, selectedSubject, searchTerm]);
 
-  const handleView = async (material: StudyMaterial) => {
-    try {
-      setReadingTitle(material.title);
-      setIsReaderOpen(true);
-      setReadingContent("Loading content...");
-      
-      const content = await contentApi.getContent(material.id);
-      setReadingContent(content);
-    } catch (error) {
-      setReadingContent("Failed to load content. Please try downloading instead.");
-    }
-  };
-
   return (
     <ProtectedLayout requiredRole="STUDENT">
-      <div className="max-w-[1200px] mx-auto py-12 px-6">
-        <header className="mb-10 text-center border-b border-[#3A3A3A] pb-8">
-          <div className="inline-block px-2 py-0.5 rounded border border-[#D97706]/30 bg-[#D97706]/10 text-[#D97706] text-[10px] font-mono font-bold uppercase tracking-widest mb-4">
-            Knowledge Access v3
-          </div>
-          <h1 className="text-4xl md:text-5xl font-serif text-[#E8E8E8] mb-4">
-            Study <span className="text-[#D97706]">Materials</span>
-          </h1>
-          <p className="text-[#A0A0A0] max-w-xl mx-auto leading-relaxed text-sm">
-            Access curated study notes, guides, and learning assets to accelerate your preparation.
-          </p>
+      <div className="min-h-screen bg-[#111110] text-[#E8E8E8] flex flex-col">
+        {/* Refined Industrial Workspace Header */}
+        <header className="relative pt-12 pb-10 px-8 border-b border-[#2A2A28] bg-gradient-to-b from-[#141413] to-[#111110] overflow-hidden">
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#D97706]/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2 pointer-events-none" />
 
-          {/* Filtering Tools */}
-          <div className="mt-8 flex flex-col md:flex-row gap-4 justify-center items-center">
-            <div className="w-full max-w-[300px] relative">
-               <input 
-                 type="text" 
-                 placeholder="Search materials..."
-                 value={searchTerm}
-                 onChange={(e) => setSearchTerm(e.target.value)}
-                 className="w-full bg-[#141414] border border-[#3A3A3A] rounded-full px-5 py-2.5 text-sm text-[#E8E8E8] focus:border-[#D97706]/50 outline-none transition-all"
-               />
+          <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row lg:items-center justify-between gap-10 relative z-10">
+            <div className="flex-1">
+              <nav className="flex items-center gap-2.5 text-[10px] font-mono font-bold uppercase tracking-[0.3em] text-[#444444] mb-6">
+                <Link href="/student/dashboard" className="hover:text-[#D97706] transition-all flex items-center gap-1.5 focus:outline-none">
+                  <Home size={12} /> Root
+                </Link>
+                <div className="w-1 h-1 rounded-full bg-[#2A2A28]" />
+                <span className="text-[#D97706] bg-[#D97706]/10 px-2 py-0.5 border border-[#D97706]/20 rounded text-[9px]">Vault</span>
+              </nav>
+
+              <div className="flex items-center gap-4 mb-4 group">
+                 <div className="p-2.5 bg-[#D97706] rounded-xl shadow-xl shadow-[#D97706]/10 transition-all group-hover:bg-[#F59E0B]">
+                   <Sparkles size={20} className="text-white" />
+                 </div>
+                 <div>
+                    <h1 className="text-3xl md:text-5xl font-serif text-white tracking-tight leading-none mb-2">
+                       Knowledge <span className="text-[#D97706]">Vault</span>
+                    </h1>
+                    <div className="h-0.5 w-24 bg-gradient-to-r from-[#D97706] to-transparent rounded-full opacity-40" />
+                 </div>
+              </div>
+              <p className="text-[#666666] max-w-lg text-sm md:text-base font-light leading-relaxed">
+                High-density registry of predictive study modules and synchronized exam dictionary assets.
+              </p>
             </div>
-            <div className="flex gap-2 bg-[#1C1C1C] p-1 rounded-full border border-[#3A3A3A] overflow-x-auto max-w-full">
-               <button 
-                 onClick={() => setSelectedSubject("ALL")}
-                 className={`px-4 py-1.5 rounded-full text-[10px] font-mono font-bold uppercase tracking-widest transition-all ${selectedSubject === "ALL" ? 'bg-[#D97706] text-white' : 'text-[#666666] hover:text-[#E8E8E8]'}`}
-               >
-                 All
-               </button>
-               {subjects.map(subject => (
-                 <button 
-                   key={subject}
-                   onClick={() => setSelectedSubject(subject)}
-                   className={`px-4 py-1.5 rounded-full text-[10px] font-mono font-bold uppercase tracking-widest whitespace-nowrap transition-all ${selectedSubject === subject ? 'bg-[#D97706] text-white' : 'text-[#666666] hover:text-[#E8E8E8]'}`}
-                 >
-                   {subject}
-                 </button>
-               ))}
+
+            {/* Standard Registry Search Node */}
+            <div className="w-full lg:max-w-md group">
+               <div className="relative">
+                  <Search className="absolute left-5 text-[#444444] group-focus-within:text-[#D97706] transition-colors" size={18} />
+                  <input 
+                    type="text" 
+                    placeholder="Retrieve data node..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full bg-[#191918] border border-[#2A2A28] rounded-xl pl-12 pr-6 py-3.5 text-sm text-white placeholder:text-[#3A3A3A] focus:border-[#D97706]/50 outline-none transition-all shadow-lg"
+                  />
+               </div>
             </div>
           </div>
         </header>
 
-        {isLoading ? (
-          <div className="py-20 flex flex-col items-center gap-4">
-            <div className="w-10 h-10 border-4 border-[#D97706] border-t-transparent rounded-full animate-spin"></div>
-            <span className="text-[10px] font-mono font-bold text-[#666666] uppercase tracking-widest">Querying Global Library...</span>
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredMaterials.map((material) => (
-              <div key={material.id} className="group bg-[#1C1C1C] border border-[#3A3A3A] rounded-lg p-6 hover:border-[#D97706]/50 transition-all flex flex-col justify-between">
-                <div>
-                  <div className="flex justify-between items-start mb-4">
-                    <span className="text-[9px] font-mono font-bold text-[#666666] px-2 py-0.5 border border-[#3A3A3A] rounded bg-[#141414] uppercase tracking-widest">
-                      {material.fileType || 'Asset'}
-                    </span>
-                    {material.subject && (
-                      <span className="text-[9px] font-mono font-bold text-[#D97706] uppercase tracking-widest">
-                         {material.subject}
-                      </span>
-                    )}
-                  </div>
-                  <h3 className="text-lg font-bold text-[#E8E8E8] group-hover:text-[#D97706] transition-colors line-clamp-2">{material.title}</h3>
-                  <p className="text-sm text-[#A0A0A0] mt-2 line-clamp-3 font-light leading-relaxed">
-                    {material.description || "No description provided."}
-                  </p>
-                </div>
-
-                <div className="mt-8 flex gap-3">
-                  <button 
-                    onClick={() => handleView(material)}
-                    className="flex-1 px-4 py-2 rounded border border-[#3A3A3A] text-xs font-mono font-bold uppercase tracking-widest text-[#E8E8E8] hover:bg-[#3A3A3A] transition-all"
-                  >
-                    View
-                  </button>
-                  <button 
-                    onClick={() => {
-                        const url = contentApi.downloadUrl(material.id);
-                        window.open(url, '_blank');
-                    }}
-                    className="px-4 py-2 rounded bg-[#D97706]/10 border border-[#D97706]/30 text-xs font-mono font-bold uppercase tracking-widest text-[#D97706] hover:bg-[#D97706] hover:text-white transition-all"
-                  >
-                    Download
-                  </button>
-                </div>
+        {/* Docked Taxonomy Registry Bar */}
+        <div className="sticky top-0 z-40 bg-[#111110]/95 backdrop-blur-3xl border-b border-[#2A2A28] px-8 py-3 shadow-md">
+           <div className="max-w-[1400px] mx-auto flex items-center gap-8">
+              <div className="flex items-center gap-2 text-[9px] font-mono font-bold text-[#444444] uppercase tracking-[0.3em] shrink-0 border-r border-[#2A2A28] pr-6 hidden md:flex">
+                <Filter size={12} /> Index
               </div>
-            ))}
-            {filteredMaterials.length === 0 && (
-                <div className="col-span-full py-20 text-center text-[#666666] font-mono text-[10px] uppercase tracking-widest">
-                    No materials found for the current selection.
-                </div>
-            )}
-          </div>
-        )}
+              
+              <div className="relative">
+                 <button 
+                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                   className="bg-[#191918] border border-[#2A2A28] rounded-lg px-5 py-2 pr-10 text-[10px] font-mono font-bold text-[#CCCCCC] uppercase tracking-widest outline-none hover:border-[#D97706]/40 transition-all shadow-xl min-w-[200px] text-left group"
+                 >
+                    <span className="text-[#D97706]/50 mr-2">#</span>
+                    <span className="truncate">{selectedSubject === "ALL" ? "GLOBAL REGISTRY" : selectedSubject}</span>
+                    <div className="absolute right-3 top-1/2 -translate-y-1/2 text-[#444444] group-hover:text-[#D97706] transition-colors">
+                      <ChevronRight size={12} className={cn("transition-transform duration-300", isDropdownOpen ? "-rotate-90" : "rotate-90")} />
+                    </div>
+                 </button>
 
-        {/* Reader Modal */}
-        {isReaderOpen && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-10">
-             <div className="absolute inset-0 bg-black/95 backdrop-blur-md" onClick={() => setIsReaderOpen(false)}></div>
-             <div className="relative bg-[#141414] border border-[#3A3A3A] w-full h-full max-w-5xl rounded-xl overflow-hidden shadow-2xl flex flex-col z-10 transition-all">
-                <div className="p-6 border-b border-[#3A3A3A] flex justify-between items-center bg-[#1C1C1C]">
-                   <div>
-                      <div className="text-[10px] font-mono font-bold text-[#666666] uppercase tracking-widest mb-1">Knowledge Node Reader</div>
-                      <h2 className="text-xl font-bold text-[#E8E8E8]">{readingTitle}</h2>
-                   </div>
-                   <button 
-                     onClick={() => setIsReaderOpen(false)}
-                     className="p-2 text-[#666666] hover:text-[#E8E8E8] transition-colors"
-                   >
-                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                   </button>
+                 {isDropdownOpen && (
+                   <>
+                     <div className="fixed inset-0 z-10" onClick={() => setIsDropdownOpen(false)} />
+                     <div className="absolute top-full left-0 mt-2 w-full bg-[#191918] border border-[#2A2A28] rounded-xl shadow-[0_24px_64px_rgba(0,0,0,0.6)] z-20 overflow-hidden animate-in fade-in slide-in-from-top-1 duration-200">
+                       <button 
+                         onClick={() => { setSelectedSubject("ALL"); setIsDropdownOpen(false); }}
+                         className={cn(
+                           "w-full text-left px-5 py-2.5 text-[9px] font-mono font-bold uppercase tracking-widest transition-colors border-b border-[#2A2A28]/30",
+                           selectedSubject === "ALL" ? "text-[#D97706] bg-[#D97706]/5" : "text-[#777777] hover:bg-[#1C1C1C] hover:text-[#E8E8E8]"
+                         )}
+                       >
+                         00. GLOBAL REGISTRY
+                       </button>
+                       <div className="max-h-[250px] overflow-y-auto custom-scrollbar">
+                         {subjects.sort().map(subject => (
+                           <button 
+                             key={subject}
+                             onClick={() => { setSelectedSubject(subject); setIsDropdownOpen(false); }}
+                             className={cn(
+                               "w-full text-left px-5 py-2.5 text-[9px] font-mono font-bold uppercase tracking-widest transition-colors",
+                               selectedSubject === subject ? "text-[#D97706] bg-[#D97706]/5" : "text-[#777777] hover:bg-[#1C1C1C] hover:text-[#E8E8E8]"
+                             )}
+                           >
+                             {subject}
+                           </button>
+                         ))}
+                       </div>
+                     </div>
+                   </>
+                 )}
+              </div>
+           </div>
+        </div>
+
+        {/* Registry Scroller */}
+        <main className="flex-1 max-w-[1400px] mx-auto w-full px-8 py-10 flex flex-col">
+          {isLoading ? (
+            <div className="flex-1 flex flex-col items-center justify-center gap-6 opacity-30 grayscale">
+               <div className="w-12 h-12 border border-[#D97706]/10 border-t-[#D97706] rounded-full animate-spin" />
+               <span className="text-[10px] font-mono font-bold text-[#666666] uppercase tracking-[0.4em] animate-pulse">Syncing Registry...</span>
+            </div>
+          ) : (
+            <>
+              <div className="flex items-center justify-between mb-8">
+                 <h2 className="text-xl font-serif text-white tracking-tight flex items-center gap-4">
+                    {selectedSubject === 'ALL' ? 'Complete Index' : selectedSubject}
+                    <span className="text-[10px] font-mono font-bold text-[#D97706] bg-[#D97706]/10 px-2 py-0.5 border border-[#D97706]/20 rounded-md">
+                       {filteredMaterials.length} Nodes
+                    </span>
+                 </h2>
+              </div>
+
+              {filteredMaterials.length > 0 ? (
+                <div className="flex flex-col gap-2">
+                  {filteredMaterials.map((material, idx) => (
+                    <div 
+                      key={material.id}
+                      className="group flex items-center gap-5 bg-[#141413] border border-[#2A2A28] hover:border-[#D97706]/40 p-3 pl-6 rounded-xl transition-all cursor-pointer shadow-sm"
+                      onClick={() => router.push(`/student/content/${material.id}`)}
+                      style={{ animation: `nodeAppear 0.3s ease-out ${idx * 0.01}s both` }}
+                    >
+                       <div className="w-9 h-9 bg-[#191918] border border-[#2A2A28] rounded-lg flex items-center justify-center text-[#444444] group-hover:bg-[#D97706] group-hover:text-white transition-all shadow-inner shrink-0">
+                          <FileText size={16} />
+                       </div>
+
+                       <div className="flex-1 min-w-0">
+                          <div className="flex items-center gap-3 mb-0.5">
+                             <h3 className="text-sm font-bold text-white group-hover:text-[#D97706] transition-colors truncate">
+                                {material.title}
+                             </h3>
+                             {material.subject && material.subject !== selectedSubject && (
+                               <span className="px-1.5 py-0.5 bg-[#191918] border border-[#2A2A28] rounded text-[8px] font-mono font-bold text-[#666666] uppercase tracking-wider shrink-0">
+                                  {material.subject}
+                               </span>
+                             )}
+                          </div>
+                          <p className="text-[#666666] text-xs line-clamp-1 font-light leading-none">
+                             {material.description || "Intelligence data node optimized for predictive exam domain coverage."}
+                          </p>
+                       </div>
+
+                       <div className="flex items-center gap-6 pr-2 shrink-0 hidden sm:flex">
+                          <div className="flex flex-col items-end w-20">
+                             <span className="text-[7px] font-mono font-bold text-[#333333] uppercase tracking-widest leading-none">Weight</span>
+                             <span className="text-[10px] text-[#555555] font-mono">{formatFileSize(material.fileSize)}</span>
+                          </div>
+                          <Link 
+                            href={contentApi.downloadUrl(material.id)} 
+                            target="_blank"
+                            onClick={(e) => e.stopPropagation()}
+                            className="p-2 text-[#444444] hover:text-[#D97706] transition-colors focus:outline-none"
+                          >
+                             <Download size={16} />
+                          </Link>
+                          <ArrowRight size={14} className="text-[#2A2A28] group-hover:text-[#D97706] group-hover:translate-x-1 transition-all" />
+                       </div>
+                    </div>
+                  ))}
                 </div>
-                <div className="flex-1 overflow-y-auto p-8 md:p-12 text-[#E8E8E8] font-light leading-relaxed whitespace-pre-wrap">
-                   {readingContent}
+              ) : (
+                <div className="flex-1 flex flex-col items-center justify-center gap-8 bg-[#141413]/50 border border-dashed border-[#2A2A28] rounded-3xl py-32 text-center">
+                  <Search size={48} className="text-[#2A2A28] mb-2" />
+                  <div>
+                    <p className="text-xl font-serif text-white mb-2">Registry Entry Missing</p>
+                    <button 
+                      onClick={() => {setSearchTerm(""); setSelectedSubject("ALL");}}
+                      className="text-[#D97706] text-[10px] font-mono font-bold uppercase tracking-widest hover:text-white hover:bg-[#D97706]/10 px-5 py-2.5 border border-[#D97706]/20 rounded-lg transition-all"
+                    >
+                      Reset Directory
+                    </button>
+                  </div>
                 </div>
-             </div>
-          </div>
-        )}
+              )}
+            </>
+          )}
+        </main>
       </div>
+
+      <style jsx global>{`
+        @keyframes nodeAppear {
+          from { opacity: 0; transform: translateX(-10px); }
+          to { opacity: 1; transform: translateX(0); }
+        }
+        .custom-scrollbar::-webkit-scrollbar { width: 3px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #2A2A28; border-radius: 10px; }
+      `}</style>
     </ProtectedLayout>
   );
 }
