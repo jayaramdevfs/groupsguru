@@ -184,6 +184,7 @@ export interface StudyMaterial {
   fileType: string;
   mimeType: string;
   fileSize: number;
+  subject?: string;
   accessType: string;
   priceInr?: number;
   isPublished: boolean;

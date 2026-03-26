@@ -11,6 +11,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 interface User {
   role: "ADMIN" | "STUDENT";
   email: string;
+  name?: string;
 }
 
 interface AuthContextType {
@@ -46,6 +47,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         setUser({
           role: backendUser.role === "ADMIN" ? "ADMIN" : "STUDENT",
           email: backendUser.email,
+          name: backendUser.name,
         });
       } catch (error) {
         // Token expired or invalid — clear it
@@ -99,6 +101,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       setUser({
         role: backendUser.role === "ADMIN" ? "ADMIN" : "STUDENT",
         email: backendUser.email,
+        name: backendUser.name,
       });
     } catch (error: any) {
       // Token was set but /me failed — clear state

@@ -1,9 +1,14 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { View, Text, StyleSheet, SafeAreaView, StatusBar, FlatList, ActivityIndicator, TouchableOpacity, TextInput } from "react-native";
 import { useLanguage } from "../context/LanguageContext";
+import { useRoute, RouteProp } from "@react-navigation/native";
 import { questionService } from "../api/questionService";
 import { Question } from "../api/types";
 import { colors, spacing, radii, typography } from "../theme/tokens";
+
+type RootStackParamList = {
+  QuestionList: { microTopicId?: string; entityName?: string };
+};
 
 const QuestionListScreen = () => {
   const { language } = useLanguage();
@@ -12,17 +17,26 @@ const QuestionListScreen = () => {
   const [search, setSearch] = useState("");
   const [expandedId, setExpandedId] = useState<number | null>(null);
 
+  const route = useRoute<RouteProp<RootStackParamList, "QuestionList">>();
+  const microTopicId = route.params?.microTopicId;
+  const entityName = route.params?.entityName;
+
   const fetchQuestions = useCallback(async () => {
     setLoading(true);
     try {
-      const data = await questionService.getAll(0, 100, undefined, search || undefined);
+      const data = await questionService.getAll(
+        0, 
+        100, 
+        microTopicId || undefined, 
+        search || undefined
+      );
       setQuestions(data.content);
     } catch (error) {
       console.error("Failed to load questions:", error);
     } finally {
       setLoading(false);
     }
-  }, [search]);
+  }, [search, microTopicId]);
 
   useEffect(() => {
     fetchQuestions();

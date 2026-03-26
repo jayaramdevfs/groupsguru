@@ -14,7 +14,9 @@ spring:
         format_sql: true
 
 server:
-  port: 8080
+  port: ${SERVER_PORT:8080}
+  forward-headers-strategy: native
+
 jwt:
   secret: ${JWT_SECRET:mysupersecretkeymysupersecretkey}
   expiration: ${JWT_EXPIRATION:86400000}
@@ -23,11 +25,12 @@ app:
   storage:
     location: ./uploads
   cors:
-    allowed-origins: ${APP_CORS_ALLOWED_ORIGINS:http://localhost:3000,http://localhost:3006}
+    allowed-origins: ${APP_CORS_ALLOWED_ORIGINS:http://localhost:3000,https://groupsguru.in,http://localhost:3006}
   auth:
     cookie:
       secure: ${APP_AUTH_COOKIE_SECURE:false}
       same-site: ${APP_AUTH_COOKIE_SAME_SITE:Lax}
+      domain: .groupsguru.in
 razorpay:
   key-id: ${RAZORPAY_KEY_ID:rzp_test_SU3wy02Xv8CfbL}
   key-secret: ${RAZORPAY_KEY_SECRET:EDBCJRnOqOmB82tP88ny0u3f}

@@ -8,6 +8,7 @@ import {
   ActivityIndicator,
   SafeAreaView,
   StatusBar,
+  TextInput,
 } from "react-native";
 import { useNavigation, useRoute, RouteProp } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
@@ -15,7 +16,7 @@ import { studyMaterialService } from "../api/studyMaterialService";
 import { StudyMaterial } from "../api/types";
 import { useLanguage } from "../context/LanguageContext";
 import { colors, spacing, radii, typography } from "../theme/tokens";
-import { PriceBadge } from "../components/PriceBadge";
+import { ScreenHeader } from "../components/ScreenHeader";
 
 type RootStackParamList = {
   StudyMaterial: { entityType: string; entityId: number; entityName: string };
@@ -27,6 +28,7 @@ type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
 const StudyMaterialScreen = () => {
   const [materials, setMaterials] = useState<StudyMaterial[]>([]);
   const [loading, setLoading] = useState(true);
+  const [search, setSearch] = useState("");
   const { language } = useLanguage();
   const navigation = useNavigation<NavigationProp>();
 
@@ -36,8 +38,13 @@ const StudyMaterialScreen = () => {
   const fetchMaterials = useCallback(async () => {
     setLoading(true);
     try {
-      const data = await studyMaterialService.getByEntity(entityType, entityId);
-      setMaterials(data);
+      let data: StudyMaterial[];
+      if (entityType === "GLOBAL") {
+        data = await studyMaterialService.getAll();
+      } else {
+        data = await studyMaterialService.getByEntity(entityType, entityId);
+      }
+      setMaterials(data || []);
     } catch (error) {
       console.error("Failed to fetch study materials", error);
     } finally {
@@ -48,6 +55,13 @@ const StudyMaterialScreen = () => {
   useEffect(() => {
     fetchMaterials();
   }, [fetchMaterials]);
+
+  const filteredMaterials = (materials || []).filter(m => {
+    const query = search.toLowerCase();
+    const title = (language === 'en' ? m.title : (m.titleTe || m.title)).toLowerCase();
+    const subject = (m.subject || "").toLowerCase();
+    return title.includes(query) || subject.includes(query);
+  });
 
   const renderMaterial = ({ item }: { item: StudyMaterial }) => (
     <TouchableOpacity 
@@ -60,23 +74,29 @@ const StudyMaterialScreen = () => {
           <Text style={styles.icon}>{item.fileType === 'MD' ? '📄' : '📚'}</Text>
         </View>
         <View style={styles.titleContainer}>
+          <View style={styles.breadcrumbCard}>
+             <Text style={styles.breadcrumbText}>{item.subject?.toUpperCase() || "GENERAL"}</Text>
+          </View>
           <Text style={styles.cardTitle}>
-            {language === 'en' ? item.title : item.titleTe}
+            {language === 'en' ? item.title : (item.titleTe || item.title)}
           </Text>
-          <PriceBadge accessType={item.accessType} priceInr={item.priceInr} />
         </View>
       </View>
       
-      <Text style={styles.cardDesc} numberOfLines={2}>
-        {language === 'en' ? item.description : item.descriptionTe}
-      </Text>
+      {item.description && (
+        <Text style={styles.cardDesc} numberOfLines={2}>
+            {language === 'en' ? item.description : (item.descriptionTe || item.description)}
+        </Text>
+      )}
       
       <View style={styles.cardFooter}>
-        <Text style={styles.fileInfo}>
-          {item.fileType} • {(item.fileSize / 1024).toFixed(1)} KB
-        </Text>
+        <View style={styles.fileMetadata}>
+           <Text style={styles.fileInfo}>
+             {item.fileType} • {(item.fileSize / 1024).toFixed(1)} KB
+           </Text>
+        </View>
         <Text style={styles.readLink}>
-          {language === 'en' ? "READ NOW →" : "ఇప్పుడే చదవండి →"}
+          {language === 'en' ? "RETRIEVE NODE →" : "నోడ్ చూడండి →"}
         </Text>
       </View>
     </TouchableOpacity>
@@ -84,27 +104,38 @@ const StudyMaterialScreen = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar barStyle="light-content" />
-      <View style={styles.header}>
-        <View>
-          <Text style={styles.label}>
-            {language === 'en' ? "STUDY MATERIALS" : "అధ్యయన సామగ్రి"}
-          </Text>
-          <Text style={styles.title}>{entityName}</Text>
-        </View>
+      <StatusBar barStyle="light-content" backgroundColor="#191919" />
+      <ScreenHeader 
+        title={entityType === "GLOBAL" ? (language === 'en' ? "Knowledge Vault" : "నాలెడ్జ్ వాల్ట్") : entityName} 
+        showBack={true} 
+      />
+
+      <View style={styles.searchBar}>
+         <View style={styles.searchContainer}>
+           <TextInput 
+             style={styles.searchInput}
+             placeholder={language === "en" ? "Filter by node title..." : "నోడ్ టైటిల్ ద్వారా ఫిల్టర్ చేయండి..."}
+             placeholderTextColor="#666"
+             value={search}
+             onChangeText={setSearch}
+           />
+         </View>
       </View>
 
       {loading ? (
         <View style={styles.center}>
-          <ActivityIndicator size="small" color={colors.accent} />
+          <ActivityIndicator size="small" color="#D97706" />
         </View>
-      ) : materials.length === 0 ? (
+      ) : filteredMaterials.length === 0 ? (
         <View style={styles.center}>
-          <Text style={styles.emptyText}>No materials available for this section.</Text>
+          <Text style={styles.emptyText}>No knowledge nodes detected at this frequency.</Text>
+          <TouchableOpacity onPress={fetchMaterials} style={styles.retryBtn}>
+             <Text style={styles.retryBtnText}>RETRY SYNC</Text>
+          </TouchableOpacity>
         </View>
       ) : (
         <FlatList
-          data={materials}
+          data={filteredMaterials}
           renderItem={renderMaterial}
           keyExtractor={(item) => item.id.toString()}
           contentContainerStyle={styles.list}
@@ -212,9 +243,41 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   emptyText: {
-    color: colors.fgMuted,
-    fontSize: 14,
+    color: "#666",
+    fontSize: 13,
     textAlign: 'center',
     paddingHorizontal: 40,
+    marginBottom: spacing.xl,
   },
+  retryBtn: {
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    borderWidth: 1,
+    borderColor: "#D9770633",
+    borderRadius: 8,
+    backgroundColor: "#D9770611",
+  },
+  retryBtnText: {
+    color: "#D97706",
+    fontSize: 10,
+    fontWeight: "700",
+    letterSpacing: 2,
+  },
+  backBtn: { padding: spacing.xs, marginRight: spacing.sm },
+  backIcon: { color: colors.fgPrimary, fontSize: 24, fontWeight: "300" },
+  headerText: { flex: 1 },
+  searchBar: { paddingHorizontal: spacing.xl, paddingVertical: spacing.md, backgroundColor: "#111" },
+  searchContainer: {
+    height: 48,
+    backgroundColor: "#191919",
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: "#2A2A28",
+    paddingHorizontal: spacing.md,
+    justifyContent: "center",
+  },
+  searchInput: { fontSize: 13, color: "#E8E8E8" },
+  breadcrumbCard: { backgroundColor: "#D9770622", paddingHorizontal: 6, paddingVertical: 2, borderRadius: 4, alignSelf: 'flex-start', marginBottom: 4 },
+  breadcrumbText: { fontSize: 8, fontWeight: 'bold', color: "#D97706", letterSpacing: 0.5 },
+  fileMetadata: { backgroundColor: "#191919", paddingHorizontal: 6, paddingVertical: 2, borderRadius: 4, borderWidth: 1, borderColor: "#2A2A28" },
 });

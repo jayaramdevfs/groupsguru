@@ -6,7 +6,7 @@ services:
     environment:
       POSTGRES_DB: groupsguru_db
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: password
+      POSTGRES_PASSWORD: gg_prod_sec_2026_!@#
     ports:
       - "5432:5432"
     volumes:

@@ -7,6 +7,11 @@ export const studyMaterialService = {
     return response.data;
   },
 
+  getAll: async (): Promise<StudyMaterial[]> => {
+    const response = await api.get<StudyMaterial[]>("/api/student/content/all");
+    return response.data;
+  },
+
   getDownloadUrl: (id: number): string => {
     // This returns the full URL with the authentication token potentially handled by the interceptor
     const baseURL = api.defaults.baseURL;

@@ -36,10 +36,8 @@ public class DataInitializer implements CommandLineRunner {
             userRepository.save(admin);
             System.out.println("Default ADMIN user created.");
         } else {
-            // Force update password to match what we expect in production
-            admin.setPassword(passwordEncoder.encode(adminPassword));
-            userRepository.save(admin);
-            System.out.println("Default ADMIN password synced.");
+            // Log that admin exists but don't overwrite password
+            System.out.println("Default ADMIN user verified.");
         }
 
         String studentEmail = "student@lms.com";

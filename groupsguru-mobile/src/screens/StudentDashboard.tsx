@@ -7,6 +7,7 @@ import { useLanguage } from "../context/LanguageContext";
 import { ProfessionalLogo } from "../components/ProfessionalLogo";
 import { LanguageToggle } from "../components/LanguageToggle";
 import { PriceBadge } from "../components/PriceBadge";
+import { ScreenHeader } from "../components/ScreenHeader";
 import { colors, spacing, radii, typography } from "../theme/tokens";
 import { commissionService } from "../api/commissionService";
 import { Commission } from "../api/types";
@@ -18,7 +19,7 @@ const StudentDashboard = () => {
   const { logout, user } = useAuth();
   const { language } = useLanguage();
   const navigation = useNavigation<NavigationProp>();
-  const name = user?.email?.split("@")[0] ?? "Student";
+  const name = user?.name ?? user?.email?.split("@")[0] ?? "Student";
   const [commissions, setCommissions] = useState<Commission[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -40,39 +41,74 @@ const StudentDashboard = () => {
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="light-content" />
       
-      <View style={styles.header}>
-        <ProfessionalLogo size={28} />
-        <LanguageToggle />
-      </View>
+      {/* Refined Mirror Header */}
+      <ScreenHeader title={language === 'en' ? 'Dashboard' : 'డ్యాష్‌బోర్డ్'} />
 
       <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
+        {/* Synapsing Hero Node */}
         <View style={styles.welcomeSection}>
-          <View style={styles.badge}>
-            <Text style={styles.badgeText}>
-              {language === "en" ? "PREPARATION_PORTAL" : "ప్రిపరేషన్_పోర్టల్"}
-            </Text>
-          </View>
-          <Text style={styles.title}>
-            {language === "en" ? `Welcome, ${name}` : `స్వాగతం, ${name}`}
-          </Text>
-          <Text style={styles.userText}>
-            {language === "en" ? "Select a commission to begin." : "ప్రారంభించడానికి ఒక కమిషన్‌ను ఎంచుకోండి."}
-          </Text>
+           <View style={styles.vaultBadge}>
+              <Text style={styles.vaultBadgeText}>
+                {language === "en" ? "INTELLIGENCE_LAYER_V2.6" : "ఇంటెలిజెన్స్_లేయర్_V2.6"}
+              </Text>
+           </View>
+           <Text style={styles.title}>
+             {language === "en" ? `Syncing, ${name}` : `సింకింగ్, ${name}`}
+           </Text>
+           <Text style={styles.subtitle}>
+             {language === "en" 
+               ? "Synchronize your target syllabus and retrieve predictive exam nodes." 
+               : "మీ సిలబస్‌ను సింక్ చేయండి మరియు పరీక్ష నోడ్స్‌ను పొందండి."}
+           </Text>
         </View>
 
+        {/* Global Access Dock */}
+        <View style={styles.dock}>
+           <TouchableOpacity 
+             style={styles.dockNode}
+             onPress={() => navigation.navigate("StudyMaterial", { entityType: "GLOBAL", entityId: 0, entityName: "Global Registry" })}
+           >
+              <View style={[styles.dockIcon, { backgroundColor: colors.accentSubtle }]}>
+                 <Text style={{fontSize: 20}}>📚</Text>
+              </View>
+              <Text style={styles.dockText}>{language === "en" ? "VAULT" : "వాల్ట్"}</Text>
+           </TouchableOpacity>
+
+           <TouchableOpacity 
+             style={styles.dockNode}
+             onPress={() => navigation.navigate("ExamList")}
+           >
+              <View style={[styles.dockIcon, { backgroundColor: colors.fgFaint }]}>
+                 <Text style={{fontSize: 20}}>📝</Text>
+              </View>
+              <Text style={styles.dockText}>{language === "en" ? "EXAMS" : "పరీక్షలు"}</Text>
+           </TouchableOpacity>
+
+           <TouchableOpacity 
+             style={styles.dockNode}
+             onPress={() => navigation.navigate("Intelligence")}
+           >
+              <View style={[styles.dockIcon, { backgroundColor: colors.inset }]}>
+                 <Text style={{fontSize: 20}}>📊</Text>
+              </View>
+              <Text style={styles.dockText}>{language === "en" ? "RANK" : "ర్యాంక్"}</Text>
+           </TouchableOpacity>
+        </View>
+
+        {/* Target Commissions Registry */}
         <View style={styles.sectionHeader}>
-          <Text style={styles.sectionTitle}>TARGET COMMISSIONS</Text>
+          <Text style={styles.sectionTitle}>SYLLABUS_REGISTRY</Text>
           <View style={styles.sectionLine} />
         </View>
 
-        <View style={styles.grid}>
-          {loading ? (
-            <ActivityIndicator size="large" color={colors.accent} style={{ marginVertical: 40 }} />
-          ) : commissions.length > 0 ? (
-            commissions.map((comm) => (
+        {loading ? (
+             <ActivityIndicator size="small" color={colors.accent} style={{ marginVertical: 40 }} />
+        ) : commissions.length > 0 ? (
+          <View style={styles.grid}>
+            {commissions.map((comm) => (
               <TouchableOpacity
                 key={comm.id}
-                activeOpacity={0.7}
+                activeOpacity={0.8}
                 style={styles.navCard}
                 onPress={() => navigation.navigate("Category", { commissionId: comm.id, commissionName: comm.code })}
               >
@@ -80,51 +116,38 @@ const StudentDashboard = () => {
                   <View style={styles.iconBox}>
                     <Text style={styles.iconText}>{comm.code.charAt(0)}</Text>
                   </View>
-                  <PriceBadge accessType={comm.accessType} priceInr={comm.priceInr} />
+                  <View style={styles.cardStatus}>
+                    <PriceBadge accessType={comm.accessType} priceInr={comm.priceInr} />
+                  </View>
                 </View>
-                <Text style={styles.cardTitle}>{comm.name}</Text>
-                <Text style={styles.cardDesc} numberOfLines={2}>
-                  {language === "en" ? comm.description : (comm.descriptionTe || comm.description)}
-                </Text>
+                
+                <View style={styles.cardBody}>
+                  <Text style={styles.cardTitle}>{comm.name}</Text>
+                  <Text style={styles.cardDesc} numberOfLines={2}>
+                    {language === "en" ? comm.description : (comm.descriptionTe || comm.description)}
+                  </Text>
+                </View>
+
+                <View style={styles.cardFooter}>
+                   <View style={styles.metadataPill}>
+                      <Text style={styles.metadataText}>#{comm.code}</Text>
+                   </View>
+                   <Text style={styles.actionPrompt}>{language === "en" ? "ACCESS ARCHIVE →" : "ఆర్కైవ్ చూడండి →"}</Text>
+                </View>
               </TouchableOpacity>
-            ))
-          ) : (
-            <Text style={styles.emptyText}>
-              {language === "en" ? "No commissions available." : "కమిషన్లు అందుబాటులో లేవు."}
-            </Text>
-          )}
-        </View>
-
-        <View style={[styles.sectionHeader, { marginTop: spacing["3xl"] }]}>
-          <Text style={styles.sectionTitle}>ADDITIONAL TOOLS</Text>
-          <View style={styles.sectionLine} />
-        </View>
-
-        <TouchableOpacity 
-          activeOpacity={0.7} 
-          style={styles.navCard}
-          onPress={() => navigation.navigate("ExamList")}
-        >
-          <View style={styles.cardHeader}>
-            <View style={[styles.iconBox, { backgroundColor: colors.overlay }]}>
-              <Text style={styles.iconText}>📝</Text>
-            </View>
+            ))}
           </View>
-          <Text style={styles.cardTitle}>
-            {language === "en" ? "Practice Exams" : "ప్రాక్టీస్ పరీక్షలు"}
-          </Text>
-          <Text style={styles.cardDesc}>
-            {language === "en"
-              ? "Take topic-wise, section-wise & full-length tests"
-              : "టాపిక్ వారీగా మరియు పూర్తి స్థాయి పరీక్షలు రాయండి"}
-          </Text>
-        </TouchableOpacity>
+        ) : (
+          <View style={styles.emptyState}>
+             <Text style={styles.emptyText}>
+               {language === "en" ? "No SYLLABUS active in your region." : "ఈ ప్రాంతంలో సిలబస్ ఏదీ అందుబాటులో లేదు."}
+             </Text>
+          </View>
+        )}
 
-        <TouchableOpacity style={styles.logoutBtn} onPress={logout}>
-          <Text style={styles.logoutText}>
-            {language === "en" ? "Logout" : "లాగౌట్"}
-          </Text>
-        </TouchableOpacity>
+        <View style={styles.footerBranding}>
+           <Text style={styles.footerTag}>GroupsGuru Intelligence Engine • v2.6</Text>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
@@ -138,22 +161,42 @@ const styles = StyleSheet.create({
     backgroundColor: colors.base,
   },
   header: {
+    paddingHorizontal: spacing.xl,
+    paddingVertical: spacing.md,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.border,
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    paddingHorizontal: spacing.lg,
-    paddingVertical: spacing.md,
-    borderBottomWidth: 1,
-    borderBottomColor: colors.fgFaint,
+    backgroundColor: colors.base,
+  },
+  headerActions: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: spacing.md,
+  },
+  secondaryBtn: {
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: radii.sm,
+    borderWidth: 1,
+    borderColor: colors.border,
+  },
+  secondaryBtnText: {
+    fontSize: 9,
+    fontWeight: "bold",
+    color: colors.error,
+    letterSpacing: 1,
   },
   scrollContent: {
-    padding: spacing.lg,
     paddingBottom: spacing["5xl"],
   },
   welcomeSection: {
-    marginBottom: spacing.xl,
+    paddingHorizontal: spacing.xl,
+    paddingTop: spacing["3xl"],
+    paddingBottom: spacing.xl,
   },
-  badge: {
+  vaultBadge: {
     alignSelf: "flex-start",
     backgroundColor: colors.accentSubtle,
     borderWidth: 1,
@@ -161,101 +204,178 @@ const styles = StyleSheet.create({
     paddingHorizontal: 8,
     paddingVertical: 2,
     borderRadius: 4,
-    marginBottom: spacing.sm,
+    marginBottom: spacing.md,
+    shadowColor: colors.accent,
+    shadowOpacity: 0.1,
+    shadowRadius: 10,
   },
-  badgeText: {
+  vaultBadgeText: {
     color: colors.accent,
-    fontSize: 10,
-    fontWeight: "700",
-    letterSpacing: 1,
+    fontSize: 9,
+    fontWeight: "bold",
+    letterSpacing: 2,
   },
   title: {
-    ...typography.displayMd,
-    color: colors.fgPrimary,
+    fontSize: 28,
     fontWeight: "400",
+    color: colors.fgPrimary,
+    fontFamily: 'serif',
+    marginBottom: 4,
   },
-  userText: {
-    ...typography.bodySm,
+  subtitle: {
+    fontSize: 13,
     color: colors.fgSecondary,
-    marginTop: 4,
+    lineHeight: 18,
+    maxWidth: '85%',
+  },
+  dock: {
+    flexDirection: "row",
+    paddingHorizontal: spacing.xl,
+    paddingBottom: spacing["2xl"],
+    gap: spacing.md,
+  },
+  dockNode: {
+    flex: 1,
+    backgroundColor: colors.surface,
+    borderRadius: radii.md,
+    padding: spacing.md,
+    alignItems: "center",
+    borderWidth: 1,
+    borderColor: colors.border,
+  },
+  dockIcon: {
+    width: 44,
+    height: 44,
+    borderRadius: radii.sm,
+    justifyContent: "center",
+    alignItems: "center",
+    marginBottom: spacing.xs,
+    borderWidth: 1,
+    borderColor: colors.border,
+  },
+  dockText: {
+    fontSize: 9,
+    fontWeight: "bold",
+    color: colors.fgMuted,
+    letterSpacing: 1.5,
   },
   sectionHeader: {
     flexDirection: "row",
     alignItems: "center",
-    marginBottom: spacing.md,
+    paddingHorizontal: spacing.xl,
+    marginBottom: spacing.lg,
     gap: spacing.sm,
   },
   sectionTitle: {
     color: colors.fgMuted,
-    fontSize: 10,
-    fontWeight: "700",
+    fontSize: 9,
+    fontWeight: "bold",
     letterSpacing: 2,
   },
   sectionLine: {
     flex: 1,
     height: 1,
-    backgroundColor: colors.fgFaint,
+    backgroundColor: colors.border,
+    opacity: 0.5,
   },
   grid: {
+    paddingHorizontal: spacing.xl,
     gap: spacing.md,
   },
   navCard: {
     backgroundColor: colors.surface,
     borderRadius: radii.md,
     borderWidth: 1,
-    borderColor: colors.fgFaint,
-    padding: spacing.lg,
-    marginBottom: spacing.md,
+    borderColor: colors.border,
+    padding: spacing.xl,
+    marginBottom: spacing.sm,
   },
   cardHeader: {
     flexDirection: "row",
     justifyContent: "space-between",
-    alignItems: "flex-start",
-    marginBottom: spacing.md,
+    alignItems: "center",
+    marginBottom: spacing.lg,
   },
   iconBox: {
-    width: 40,
-    height: 40,
-    borderRadius:radii.sm,
+    width: 36,
+    height: 36,
+    borderRadius: radii.sm,
     backgroundColor: colors.inset,
     borderWidth: 1,
-    borderColor: colors.fgFaint,
+    borderColor: colors.border,
     justifyContent: "center",
     alignItems: "center",
   },
   iconText: {
-    fontSize: 18,
-    fontWeight: "700",
+    fontSize: 16,
+    fontWeight: "bold",
     color: colors.accent,
   },
   cardTitle: {
-    ...typography.heading,
+    fontSize: 18,
+    fontWeight: "600",
     color: colors.fgPrimary,
     marginBottom: 4,
   },
   cardDesc: {
-    ...typography.bodySm,
+    fontSize: 13,
     color: colors.fgSecondary,
     lineHeight: 18,
+    marginBottom: spacing.xl,
+  },
+  cardFooter: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    borderTopWidth: 1,
+    borderTopColor: colors.border,
+    paddingTop: spacing.md,
+  },
+  metadataPill: {
+    backgroundColor: colors.inset,
+    borderWidth: 1,
+    borderColor: colors.border,
+    paddingHorizontal: 6,
+    paddingVertical: 2,
+    borderRadius: 4,
+  },
+  metadataText: {
+    fontSize: 8,
+    fontFamily: 'monospace',
+    fontWeight: "bold",
+    color: colors.fgMuted,
+  },
+  actionPrompt: {
+    fontSize: 10,
+    fontWeight: "bold",
+    color: colors.accent,
+    letterSpacing: 1,
+  },
+  emptyState: {
+    paddingVertical: spacing["5xl"],
+    alignItems: "center",
   },
   emptyText: {
-    ...typography.body,
+    fontSize: 13,
     color: colors.fgMuted,
     textAlign: "center",
-    marginTop: 20,
   },
-  logoutBtn: {
-    marginTop: spacing["3xl"],
-    paddingVertical: spacing.md,
+  footerBranding: {
+    marginTop: spacing["5xl"],
     alignItems: "center",
-    borderWidth: 1,
-    borderColor: colors.fgFaint,
-    borderRadius: radii.md,
+    opacity: 0.3,
   },
-  logoutText: {
-    ...typography.bodySm,
-    color: colors.fgSecondary,
-    fontWeight: "600",
+  footerTag: {
+    fontSize: 10,
+    fontWeight: "bold",
+    color: colors.fgMuted,
+    letterSpacing: 1,
+  },
+  cardStatus: {
+    paddingHorizontal: 4,
+  },
+  cardBody: {
+    paddingVertical: 4,
   },
 });
 

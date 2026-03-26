@@ -49,9 +49,34 @@ export type RootStackParamList = {
   ExamResult: { attemptId: number; examId: number };
   StudyMaterial: { entityType: string; entityId: number; entityName: string };
   StudyMaterialView: { material: StudyMaterial };
+  Main: undefined;
 };
 
+import { createDrawerNavigator } from "@react-navigation/drawer";
+import { SidebarDrawer } from "../components/SidebarDrawer";
+
 const Stack = createNativeStackNavigator<RootStackParamList>();
+const Drawer = createDrawerNavigator();
+
+const StudentDrawer = () => (
+  <Drawer.Navigator 
+    drawerContent={(props) => <SidebarDrawer {...props} />}
+    screenOptions={{ 
+      headerShown: false,
+      drawerStyle: { width: 260 },
+    }}
+  >
+    <Drawer.Screen name="StudentDashboard" component={StudentDashboard} />
+    <Drawer.Screen name="Category" component={CategoryScreen} />
+    <Drawer.Screen name="SubCategory" component={SubCategoryScreen} />
+    <Drawer.Screen name="Section" component={SectionScreen} />
+    <Drawer.Screen name="Topic" component={TopicScreen} />
+    <Drawer.Screen name="MicroTopic" component={MicroTopicScreen} />
+    <Drawer.Screen name="ExamList" component={ExamListScreen} />
+    <Drawer.Screen name="Intelligence" component={IntelligenceScreen} />
+    <Drawer.Screen name="StudyMaterial" component={StudyMaterialScreen} />
+  </Drawer.Navigator>
+);
 
 const AppNavigator = () => {
   const { user, loading } = useAuth();
@@ -74,52 +99,25 @@ const AppNavigator = () => {
           </>
         ) : user.role === "ADMIN" ? (
           <>
-            <Stack.Screen
-              name="AdminDashboard"
-              component={AdminDashboard}
-            />
+            <Stack.Screen name="AdminDashboard" component={AdminDashboard} />
             <Stack.Screen name="Category" component={CategoryScreen} />
-            <Stack.Screen
-              name="SubCategory"
-              component={SubCategoryScreen}
-            />
+            <Stack.Screen name="SubCategory" component={SubCategoryScreen} />
             <Stack.Screen name="Section" component={SectionScreen} />
             <Stack.Screen name="Topic" component={TopicScreen} />
             <Stack.Screen name="MicroTopic" component={MicroTopicScreen} />
-            <Stack.Screen
-              name="Intelligence"
-              component={IntelligenceScreen}
-            />
-            <Stack.Screen
-              name="QuestionList"
-              component={QuestionListScreen}
-            />
+            <Stack.Screen name="Intelligence" component={IntelligenceScreen} />
+            <Stack.Screen name="QuestionList" component={QuestionListScreen} />
             <Stack.Screen name="StudyMaterial" component={StudyMaterialScreen} />
             <Stack.Screen name="StudyMaterialView" component={StudyMaterialViewScreen} />
           </>
         ) : (
           <>
-            <Stack.Screen
-              name="StudentDashboard"
-              component={StudentDashboard}
-            />
-            <Stack.Screen name="Category" component={CategoryScreen} />
-            <Stack.Screen
-              name="SubCategory"
-              component={SubCategoryScreen}
-            />
-            <Stack.Screen name="Section" component={SectionScreen} />
-            <Stack.Screen name="Topic" component={TopicScreen} />
-            <Stack.Screen name="MicroTopic" component={MicroTopicScreen} />
-            <Stack.Screen name="ExamList" component={ExamListScreen} />
+            <Stack.Screen name="Main" component={StudentDrawer} />
             <Stack.Screen name="ExamDetail" component={ExamDetailScreen} />
-            <Stack.Screen
-              name="ExamAttempt"
-              component={ExamAttemptScreen}
-            />
+            <Stack.Screen name="ExamAttempt" component={ExamAttemptScreen} />
             <Stack.Screen name="ExamResult" component={ExamResultScreen} />
-            <Stack.Screen name="StudyMaterial" component={StudyMaterialScreen} />
             <Stack.Screen name="StudyMaterialView" component={StudyMaterialViewScreen} />
+            <Stack.Screen name="QuestionList" component={QuestionListScreen} />
           </>
         )}
       </Stack.Navigator>

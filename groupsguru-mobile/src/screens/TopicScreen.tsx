@@ -17,6 +17,7 @@ import { Topic } from "../api/types";
 import { useLanguage } from "../context/LanguageContext";
 import { LanguageToggle } from "../components/LanguageToggle";
 import { PriceBadge } from "../components/PriceBadge";
+import { ScreenHeader } from "../components/ScreenHeader";
 import { accessService } from "../api/accessService";
 import { AccessCheckResponse } from "../api/accessTypes";
 import { PaywallModal } from "../components/PaywallModal";
@@ -129,20 +130,10 @@ const TopicScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="light-content" />
-      <View style={styles.header}>
-        <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backBtn}>
-          <Text style={styles.backIcon}>←</Text>
-        </TouchableOpacity>
-        <View style={styles.headerTitleContainer}>
-          <Text style={styles.label}>
-            {language === 'en' ? sectionName : sectionNameTe}
-          </Text>
-          <Text style={styles.title}>
-            {language === 'en' ? "Topics" : "టాపిక్‌లు"}
-          </Text>
-        </View>
-        <LanguageToggle />
-      </View>
+      <ScreenHeader 
+        title={language === 'en' ? "Topics" : "టాపిక్‌లు"} 
+        subtitle={language === 'en' ? sectionName : sectionNameTe}
+      />
 
       {loading && topics.length === 0 ? (
         <View style={styles.center}>
@@ -189,12 +180,6 @@ export default TopicScreen;
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.base },
-  header: { paddingHorizontal: spacing.xl, paddingVertical: spacing.xl, borderBottomWidth: 1, borderBottomColor: colors.border, flexDirection: "row", alignItems: "center" },
-  backBtn: { padding: spacing.xs, marginRight: spacing.sm },
-  backIcon: { color: colors.fgPrimary, fontSize: 24, fontWeight: "300" },
-  headerTitleContainer: { flex: 1 },
-  label: { fontSize: 10, color: colors.fgMuted, fontWeight: "bold", letterSpacing: 1.5, textTransform: "uppercase", marginBottom: 2 },
-  title: { fontSize: 22, fontWeight: "400", color: colors.fgPrimary, fontFamily: 'serif' },
   list: { padding: spacing.xl },
   card: { backgroundColor: colors.surface, borderRadius: radii.md, padding: spacing.md, marginBottom: spacing.md, borderWidth: 1, borderColor: colors.border },
   contentHeader: { flexDirection: 'row', alignItems: 'center', marginBottom: spacing.md },

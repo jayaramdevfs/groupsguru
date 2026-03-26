@@ -16,6 +16,7 @@ import { SubCategory } from "../api/types";
 import { useLanguage } from "../context/LanguageContext";
 import { LanguageToggle } from "../components/LanguageToggle";
 import { PriceBadge } from "../components/PriceBadge";
+import { ScreenHeader } from "../components/ScreenHeader";
 import { colors, spacing, radii, typography } from "../theme/tokens";
 
 type RootStackParamList = {
@@ -102,20 +103,10 @@ const SubCategoryScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="light-content" />
-      <View style={styles.header}>
-        <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backBtn}>
-            <Text style={styles.backIcon}>←</Text>
-        </TouchableOpacity>
-        <View style={styles.headerTitleContainer}>
-          <Text style={styles.label}>
-              {language === 'en' ? categoryName : categoryNameTe}
-          </Text>
-          <Text style={styles.title}>
-              {language === 'en' ? "Subjects" : "విషయాలు"}
-          </Text>
-        </View>
-        <LanguageToggle />
-      </View>
+      <ScreenHeader 
+        title={language === 'en' ? "Subjects" : "విషయాలు"} 
+        subtitle={language === 'en' ? categoryName : categoryNameTe}
+      />
 
       {loading ? (
         <View style={styles.center}>
@@ -146,40 +137,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.base,
-  },
-  header: {
-    paddingHorizontal: spacing.xl,
-    paddingVertical: spacing.xl,
-    borderBottomWidth: 1,
-    borderBottomColor: colors.border,
-    flexDirection: "row",
-    alignItems: "center",
-  },
-  backBtn: {
-    padding: spacing.xs,
-    marginRight: spacing.sm,
-  },
-  backIcon: {
-    color: colors.fgPrimary,
-    fontSize: 24,
-    fontWeight: "300",
-  },
-  headerTitleContainer: {
-    flex: 1,
-  },
-  label: {
-    fontSize: 10,
-    color: colors.fgMuted,
-    fontWeight: "bold",
-    letterSpacing: 1.5,
-    textTransform: "uppercase",
-    marginBottom: 2,
-  },
-  title: {
-    fontSize: 22,
-    fontWeight: "400",
-    color: colors.fgPrimary,
-    fontFamily: 'serif',
   },
   list: {
     padding: spacing.xl,

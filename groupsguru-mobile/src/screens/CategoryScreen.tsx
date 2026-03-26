@@ -16,9 +16,9 @@ import { categoryService } from "../api/categoryService";
 import { Category } from "../api/types";
 import { useAuth } from "../context/AuthContext";
 import { useLanguage } from "../context/LanguageContext";
-import { LanguageToggle } from "../components/LanguageToggle";
 import { PriceBadge } from "../components/PriceBadge";
 import { colors, spacing, radii, typography } from "../theme/tokens";
+import { ScreenHeader } from "../components/ScreenHeader";
 
 type RootStackParamList = {
   Category: { commissionId?: number; commissionName?: string };
@@ -119,23 +119,8 @@ const CategoryScreen = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar barStyle="light-content" />
-      <View style={styles.header}>
-        <View>
-          <Text style={styles.label}>
-            {language === 'en' ? "BROWSE CATALOGUE" : "కేటలాగ్ బ్రౌజ్ చేయండి"}
-          </Text>
-          <Text style={styles.title}>
-            {language === 'en' ? commissionName : commissionName}
-          </Text>
-        </View>
-        <View style={styles.headerRight}>
-          <LanguageToggle />
-          <TouchableOpacity onPress={logout} style={styles.logoutBtn}>
-            <Text style={styles.logoutText}>Logout</Text>
-          </TouchableOpacity>
-        </View>
-      </View>
+      <StatusBar barStyle="light-content" backgroundColor="#191919" />
+      <ScreenHeader title={commissionName} showBack={true} />
 
       {loading ? (
         <View style={styles.center}>

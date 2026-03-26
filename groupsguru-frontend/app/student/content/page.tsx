@@ -4,7 +4,7 @@ import ProtectedLayout from "@/components/layout/ProtectedLayout";
 import { contentApi } from "@/lib/content";
 import { StudyMaterial } from "@/lib/types";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { Suspense, useCallback, useEffect, useMemo, useState } from "react";
 import { BookOpen, Download, Search, ChevronRight, Home, Filter, Clock, FileText, Sparkles, LayoutGrid, List, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { clsx, type ClassValue } from "clsx";
@@ -26,7 +26,7 @@ function formatFileSize(bytes?: number): string {
   return `${value.toFixed(idx === 0 ? 0 : 1)} ${units[idx]}`;
 }
 
-export default function StudentContentPage() {
+function ContentRegistry() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [materials, setMaterials] = useState<StudyMaterial[]>([]);
@@ -66,7 +66,6 @@ export default function StudentContentPage() {
   }, [materials, selectedSubject, searchTerm]);
 
   return (
-    <ProtectedLayout requiredRole="STUDENT">
       <div className="min-h-screen bg-[#111110] text-[#E8E8E8] flex flex-col">
         {/* Refined Industrial Workspace Header */}
         <header className="relative pt-12 pb-10 px-8 border-b border-[#2A2A28] bg-gradient-to-b from-[#141413] to-[#111110] overflow-hidden">
@@ -249,17 +248,30 @@ export default function StudentContentPage() {
             </>
           )}
         </main>
-      </div>
 
-      <style jsx global>{`
-        @keyframes nodeAppear {
-          from { opacity: 0; transform: translateX(-10px); }
-          to { opacity: 1; transform: translateX(0); }
-        }
-        .custom-scrollbar::-webkit-scrollbar { width: 3px; }
-        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
-        .custom-scrollbar::-webkit-scrollbar-thumb { background: #2A2A28; border-radius: 10px; }
-      `}</style>
+        <style jsx global>{`
+          @keyframes nodeAppear {
+            from { opacity: 0; transform: translateX(-10px); }
+            to { opacity: 1; transform: translateX(0); }
+          }
+          .custom-scrollbar::-webkit-scrollbar { width: 3px; }
+          .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+          .custom-scrollbar::-webkit-scrollbar-thumb { background: #2A2A28; border-radius: 10px; }
+        `}</style>
+      </div>
+  );
+}
+
+export default function StudentContentPage() {
+  return (
+    <ProtectedLayout requiredRole="STUDENT">
+      <Suspense fallback={
+        <div className="min-h-screen bg-[#111110] flex items-center justify-center">
+           <div className="w-12 h-12 border border-[#D97706]/10 border-t-[#D97706] rounded-full animate-spin" />
+        </div>
+      }>
+        <ContentRegistry />
+      </Suspense>
     </ProtectedLayout>
   );
 }
