@@ -25,8 +25,8 @@ public class StudyMaterialService {
     }
 
     @Transactional(readOnly = true)
-    public List<StudyMaterial> getEverythingIncludingUnpublishedForTest() {
-        return repository.findAll();
+    public List<StudyMaterial> getPublishedForStudent() {
+        return repository.findByIsPublishedTrueAndIsDeletedFalseAndStoredFileNameIsNotNullOrderByDisplayOrder();
     }
 
     @Transactional(readOnly = true)

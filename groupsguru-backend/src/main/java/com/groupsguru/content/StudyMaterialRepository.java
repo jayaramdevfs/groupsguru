@@ -20,6 +20,8 @@ public interface StudyMaterialRepository extends JpaRepository<StudyMaterial, Lo
 
     List<StudyMaterial> findByEntityTypeAndEntityIdAndIsPublishedTrueAndIsDeletedFalseOrderByDisplayOrder(String entityType, Long entityId);
 
+    List<StudyMaterial> findByIsPublishedTrueAndIsDeletedFalseAndStoredFileNameIsNotNullOrderByDisplayOrder();
+    
     java.util.Optional<StudyMaterial> findByTitleAndIsDeletedFalse(String title);
 
     long countByIsDeletedFalse();

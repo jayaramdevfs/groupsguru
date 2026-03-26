@@ -17,6 +17,7 @@ public class DataInitializer implements CommandLineRunner {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
     private final CommissionRepository commissionRepository;
+    private final com.groupsguru.migration.MaterialMigrationService materialMigrationService;
 
     @Override
     public void run(String... args) {
@@ -68,5 +69,9 @@ public class DataInitializer implements CommandLineRunner {
             commissionRepository.save(Commission.builder().code("UPSC").name("UPSC").nameTe("UPSC (Telugu)").displayOrder(3).build());
             System.out.println("Commission UPSC seeded");
         }
+
+        System.out.println(">>> STARTING STUDY MATERIAL SYNC...");
+        String syncResult = materialMigrationService.syncMaterialsFromDisk();
+        System.out.println(">>> SYNC RESULT: " + syncResult);
     }
 }

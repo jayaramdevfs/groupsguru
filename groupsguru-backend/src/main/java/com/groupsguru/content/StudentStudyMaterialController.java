@@ -28,9 +28,10 @@ public class StudentStudyMaterialController {
 
     @GetMapping({"", "/all"})
     public ResponseEntity<java.util.List<StudyMaterial>> getAllPublished() {
-        System.out.println(">>> STUDENT REQUEST: Fetching all materials (Nuclear Bypass)...");
-        java.util.List<StudyMaterial> materials = studyMaterialService.getEverythingIncludingUnpublishedForTest();
-        System.out.println(">>> SUCCESS: Found " + materials.size() + " materials in database.");
+        System.out.println(">>> STUDENT REQUEST: Fetching published materials...");
+        // Use the filter for published and non-deleted
+        java.util.List<StudyMaterial> materials = studyMaterialService.getPublishedForStudent();
+        System.out.println(">>> SUCCESS: Found " + materials.size() + " published materials.");
         return ResponseEntity.ok(materials);
     }
 
@@ -92,7 +93,10 @@ public class StudentStudyMaterialController {
         // Return the file content as a string
         try {
             Resource resource = studyMaterialService.getFile(id);
-            String content = new String(java.nio.file.Files.readAllBytes(java.nio.file.Paths.get(resource.getURI())));
+            String content = org.springframework.util.StreamUtils.copyToString(
+                    resource.getInputStream(), 
+                    java.nio.charset.StandardCharsets.UTF_8
+            );
             return ResponseEntity.ok(content);
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to read content: " + e.getMessage());
