@@ -10,6 +10,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
+import org.springframework.jdbc.core.JdbcTemplate;
+
 @Component
 @RequiredArgsConstructor
 public class DataInitializer implements CommandLineRunner {
@@ -18,9 +20,14 @@ public class DataInitializer implements CommandLineRunner {
     private final PasswordEncoder passwordEncoder;
     private final CommissionRepository commissionRepository;
     private final com.groupsguru.migration.MaterialMigrationService materialMigrationService;
+    private final JdbcTemplate jdbcTemplate;
 
     @Override
     public void run(String... args) {
+        
+        // FIX: Map all unlinked categories to APPSC (Commission 1)
+        jdbcTemplate.execute("UPDATE categories SET commission_id = 1 WHERE commission_id IS NULL");
+
 
         String adminEmail = "admin@lms.com";
         String adminPassword = "Rama@1994";

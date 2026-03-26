@@ -25,8 +25,9 @@ import { StudyMaterial } from "../api/types";
 
 export type RootStackParamList = {
   Login: undefined;
-  Register: undefined;
-  AdminDashboard: undefined;
+    Register: undefined;
+    AdminMain: undefined;
+    AdminDashboard: undefined;
   StudentDashboard: undefined;
   Category: { commissionId?: number; commissionName?: string };
   SubCategory: {
@@ -78,6 +79,27 @@ const StudentDrawer = () => (
   </Drawer.Navigator>
 );
 
+const AdminDrawer = () => (
+  <Drawer.Navigator 
+    drawerContent={(props) => <SidebarDrawer {...props} />}
+    screenOptions={{ 
+      headerShown: false,
+      drawerStyle: { width: 260 },
+    }}
+  >
+    <Drawer.Screen name="AdminDashboard" component={AdminDashboard} />
+    <Drawer.Screen name="Category" component={CategoryScreen} />
+    <Drawer.Screen name="SubCategory" component={SubCategoryScreen} />
+    <Drawer.Screen name="Section" component={SectionScreen} />
+    <Drawer.Screen name="Topic" component={TopicScreen} />
+    <Drawer.Screen name="MicroTopic" component={MicroTopicScreen} />
+    <Drawer.Screen name="ExamList" component={ExamListScreen} />
+    <Drawer.Screen name="Intelligence" component={IntelligenceScreen} />
+    <Drawer.Screen name="QuestionList" component={QuestionListScreen} />
+    <Drawer.Screen name="StudyMaterial" component={StudyMaterialScreen} />
+  </Drawer.Navigator>
+);
+
 const AppNavigator = () => {
   const { user, loading } = useAuth();
 
@@ -99,15 +121,7 @@ const AppNavigator = () => {
           </>
         ) : user.role === "ADMIN" ? (
           <>
-            <Stack.Screen name="AdminDashboard" component={AdminDashboard} />
-            <Stack.Screen name="Category" component={CategoryScreen} />
-            <Stack.Screen name="SubCategory" component={SubCategoryScreen} />
-            <Stack.Screen name="Section" component={SectionScreen} />
-            <Stack.Screen name="Topic" component={TopicScreen} />
-            <Stack.Screen name="MicroTopic" component={MicroTopicScreen} />
-            <Stack.Screen name="Intelligence" component={IntelligenceScreen} />
-            <Stack.Screen name="QuestionList" component={QuestionListScreen} />
-            <Stack.Screen name="StudyMaterial" component={StudyMaterialScreen} />
+            <Stack.Screen name="AdminMain" component={AdminDrawer} />
             <Stack.Screen name="StudyMaterialView" component={StudyMaterialViewScreen} />
           </>
         ) : (

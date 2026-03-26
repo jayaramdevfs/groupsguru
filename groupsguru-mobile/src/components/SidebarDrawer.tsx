@@ -7,10 +7,44 @@ import { colors, spacing, radii } from "../theme/tokens";
 
 const studentLinks = [
   { name: "Dashboard", target: "StudentDashboard", icon: "🏠" },
-  { name: "Subjects Registry", target: "Category", icon: "📚" },
-  { name: "Knowledge Vault", target: "StudyMaterial", params: { entityType: "GLOBAL", entityId: 0, entityName: "Global Archive" }, icon: "💎" },
+  { name: "Categories", target: "Category", icon: "📚" },
+  { name: "Study Materials", target: "StudyMaterial", params: { entityType: "GLOBAL", entityId: 0, entityName: "Global Archive" }, icon: "💎" },
   { name: "Test Series", target: "ExamList", icon: "📝" },
-  { name: "Intelligence Layer", target: "Intelligence", icon: "📊" },
+  { name: "Exams", target: "ExamList", icon: "📑" },
+];
+
+const adminSections = [
+  {
+    label: "CONTENT",
+    links: [
+      { name: "Dashboard", target: "AdminDashboard", icon: "🏠" },
+      { name: "Study Materials", target: "StudyMaterial", params: { entityType: "GLOBAL", entityId: 0, entityName: "Global" }, icon: "📚" },
+      { name: "Content Tree", target: "Category", icon: "🌳" },
+      { name: "Categories", target: "Category", icon: "📁" },
+      { name: "Subcategories", target: "Category", icon: "📂" },
+      { name: "Sections", target: "Category", icon: "📑" },
+      { name: "Topics", target: "Category", icon: "📄" },
+      { name: "Micro-Topics", target: "Category", icon: "🔬" },
+    ],
+  },
+  {
+    label: "TOOLS",
+    links: [
+      { name: "Questions", target: "QuestionList", icon: "❓" },
+      { name: "Bulk Upload", target: "Category", icon: "📤" },
+      { name: "Exams", target: "ExamList", icon: "📝" },
+      { name: "Test Series", target: "ExamList", icon: "📝" },
+      { name: "Intelligence", target: "Intelligence", icon: "⚛️" },
+      { name: "Pricing", target: "Category", icon: "💰" },
+      { name: "Commissions", target: "Category", icon: "🏛️" },
+    ],
+  },
+  {
+    label: "SYSTEM",
+    links: [
+      { name: "Migration", target: "Category", icon: "🔄" },
+    ],
+  },
 ];
 
 export const SidebarDrawer = (props: DrawerContentComponentProps) => {
@@ -19,35 +53,55 @@ export const SidebarDrawer = (props: DrawerContentComponentProps) => {
 
   return (
     <View style={styles.container}>
-      {/* Drawer Header */}
       <View style={styles.header}>
         <ProfessionalLogo size={24} />
       </View>
 
       <DrawerContentScrollView {...props} contentContainerStyle={styles.scroll}>
-        <View style={styles.navSection}>
-           <Text style={styles.sectionLabel}>CAPABILITIES</Text>
-           {studentLinks.map((link) => {
-             const isActive = currentRoute === link.target;
-             return (
-               <TouchableOpacity
-                 key={link.name}
-                 style={[styles.link, isActive && styles.linkActive]}
-                 onPress={() => props.navigation.navigate(link.target, link.params)}
-               >
-                 <Text style={styles.linkIcon}>{link.icon}</Text>
-                 <Text style={[styles.linkText, isActive && styles.linkTextActive]}>
-                   {link.name}
-                 </Text>
-               </TouchableOpacity>
-             );
-           })}
-        </View>
+        {user?.role === "ADMIN" ? (
+          adminSections.map((section) => (
+            <View key={section.label} style={styles.navSection}>
+              <Text style={styles.sectionLabel}>{section.label}</Text>
+              {section.links.map((link) => {
+                const isActive = currentRoute === link.target;
+                return (
+                  <TouchableOpacity
+                    key={link.name}
+                    style={[styles.link, isActive && styles.linkActive]}
+                    onPress={() => props.navigation.navigate(link.target, link.params)}
+                  >
+                    <Text style={styles.linkIcon}>{link.icon}</Text>
+                    <Text style={[styles.linkText, isActive && styles.linkTextActive]}>{link.name}</Text>
+                  </TouchableOpacity>
+                );
+              })}
+            </View>
+          ))
+        ) : (
+          <View style={styles.navSection}>
+             <Text style={styles.sectionLabel}>CAPABILITIES</Text>
+             {studentLinks.map((link) => {
+               const isActive = currentRoute === link.target;
+               return (
+                 <TouchableOpacity
+                   key={link.name}
+                   style={[styles.link, isActive && styles.linkActive]}
+                   onPress={() => props.navigation.navigate(link.target, link.params)}
+                 >
+                   <Text style={styles.linkIcon}>{link.icon}</Text>
+                   <Text style={[styles.linkText, isActive && styles.linkTextActive]}>
+                     {link.name}
+                   </Text>
+                 </TouchableOpacity>
+               );
+             })}
+          </View>
+        )}
 
         <View style={[styles.navSection, { marginTop: 40 }]}>
            <Text style={styles.sectionLabel}>ACCOUNT</Text>
            <View style={styles.userBox}>
-              <Text style={styles.userName}>{user?.name || "Student"}</Text>
+              <Text style={styles.userName}>{user?.name || (user?.role === "ADMIN" ? "Administrator" : "Student")}</Text>
               <Text style={styles.userEmail}>{user?.email}</Text>
            </View>
            <TouchableOpacity style={styles.logoutBtn} onPress={logout}>

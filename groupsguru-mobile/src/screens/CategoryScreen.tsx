@@ -42,10 +42,12 @@ const CategoryScreen = () => {
   const fetchCategories = useCallback(async () => {
     setLoading(true);
     try {
+      console.log("MOBILE: Fetching categories for commissionId:", commissionId);
       const data = await categoryService.getAll(commissionId);
+      console.log("MOBILE: Received categories:", JSON.stringify(data, null, 2));
       setCategories(data);
     } catch (error) {
-      console.error(error);
+      console.error("MOBILE: Failed to fetch categories:", error);
     } finally {
       setLoading(false);
     }
