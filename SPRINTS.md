@@ -20,7 +20,7 @@ Every sprint **MUST** conclude with the following steps BEFORE being marked as d
 
 | Platform | Stack | Port |
 |----------|-------|------|
-| **Backend** | Spring Boot 3.2.5 Â· Java 17 Â· H2 (dev) / PostgreSQL (prod) Â· JWT | 8080 |
+| **Backend** | Spring Boot 3.2.5 Â· Java 17 Â· H2 (dev & prod natively) Â· JWT | 8080 |
 | **Frontend** | Next.js 16 Â· React 19 Â· Tailwind CSS 4 Â· Framer Motion | 3000 |
 | **Mobile** | React Native 0.84 Â· React Navigation 7 Â· Axios | â€” |
 
@@ -56,7 +56,7 @@ C:\GroupsGuru\Lms\
 | 11 | Student Exam Flow | âœ… Done | âœ… Done | âœ… Done |
 | 12 | Results & Analytics | âœ… Done | âœ… Done | âœ… Done |
 | 12a | UX Polish (Exam UI) | âœ… Done | âœ… Done | âœ… Done |
-| 13 | Data Migration + PostgreSQL | âœ… Done | âœ… Done | âž– N/A |
+| 13 | Data Migration + H2 Persistent Storage | âœ… Done | âœ… Done | âž– N/A |
 | 14 | Commission + Hierarchy Restructure | âœ… Done | âœ… Done | âœ… Done |
 | 15 | Pricing + Access Control | âœ… Done | âœ… Done | âœ… Done |
 | 15a | Post-Sprint Fix: H2 Migration + Cache Bug | ✅ Done | ✅ Done | ➖ N/A |
@@ -79,7 +79,7 @@ C:\GroupsGuru\Lms\
 | 23 | Question Bulk Upload (CSV/JSON/XML) | ✅ Done | ✅ Done | ➖ N/A |
 | 24 | Test Series & Practice Mode | ✅ Done | ✅ Done | ➖ N/A |
 | 25 | Production Readiness | ✅ Done | ✅ Done | ✅ Done |
-| 26 | PostgreSQL Migration + Go Live | ✅ Done | ✅ Done | ✅ Done |
+| 26 | Native H2 Enforcement + Go Live | ✅ Done | ✅ Done | ✅ Done |
 
 **Resume Point:** PRODUCTION LIVE. All initial sprints complete.
 
