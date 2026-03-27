@@ -12,11 +12,13 @@ import {
 } from "react-native";
 import { useAuth } from "../context/AuthContext";
 import { ProfessionalLogo } from "../components/ProfessionalLogo";
+import { CinematicLogo } from "../components/CinematicLogo";
 import { LanguageToggle } from "../components/LanguageToggle";
 import { colors, radii, spacing, typography } from "../theme/tokens";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../navigation/AppNavigator";
+import { User, Mail, Lock } from "lucide-react-native";
 
 type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
 
@@ -66,6 +68,9 @@ const RegisterScreen = () => {
       >
         <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
           <View style={styles.titleSection}>
+            <View style={{ marginBottom: 16 }}>
+              <CinematicLogo size={100} />
+            </View>
             <Text style={styles.title}>Create Account</Text>
             <Text style={styles.subtitle}>
               Join GroupsGuru for exam excellence
@@ -74,31 +79,38 @@ const RegisterScreen = () => {
 
           <View style={styles.card}>
             <Text style={styles.label}>Full Name</Text>
-            <TextInput
-              style={styles.input}
-              placeholder="John Doe"
-              placeholderTextColor={colors.fgMuted}
-              value={name}
-              onChangeText={setName}
-            />
+            <View style={styles.inputContainer}>
+              <User size={18} color={colors.accent} style={styles.inputIcon} />
+              <TextInput
+                style={styles.input}
+                placeholder="John Doe"
+                placeholderTextColor={colors.fgMuted}
+                value={name}
+                onChangeText={setName}
+              />
+            </View>
 
             <Text style={[styles.label, { marginTop: spacing.lg }]}>
               Email Address
             </Text>
-            <TextInput
-              style={styles.input}
-              placeholder="you@example.com"
-              placeholderTextColor={colors.fgMuted}
-              value={email}
-              onChangeText={setEmail}
-              autoCapitalize="none"
-              keyboardType="email-address"
-            />
+            <View style={styles.inputContainer}>
+              <Mail size={18} color={colors.accent} style={styles.inputIcon} />
+              <TextInput
+                style={styles.input}
+                placeholder="you@example.com"
+                placeholderTextColor={colors.fgMuted}
+                value={email}
+                onChangeText={setEmail}
+                autoCapitalize="none"
+                keyboardType="email-address"
+              />
+            </View>
 
             <Text style={[styles.label, { marginTop: spacing.lg }]}>
               Create Password
             </Text>
             <View style={styles.passwordContainer}>
+              <Lock size={18} color={colors.accent} style={styles.inputIcon} />
               <TextInput
                 style={styles.passwordInput}
                 placeholder="Enter password"
@@ -116,6 +128,7 @@ const RegisterScreen = () => {
               Confirm Password
             </Text>
             <View style={styles.passwordContainer}>
+              <Lock size={18} color={colors.accent} style={styles.inputIcon} />
               <TextInput
                 style={styles.passwordInput}
                 placeholder="Re-enter password"
@@ -204,16 +217,23 @@ const styles = StyleSheet.create({
     color: colors.fgSecondary,
     marginBottom: spacing.sm,
   },
-  input: {
-    width: "100%",
+  inputContainer: {
+    flexDirection: "row",
+    alignItems: "center",
     backgroundColor: colors.inset,
+    borderRadius: radii.md,
+    borderWidth: 1,
+    borderColor: colors.border,
+  },
+  input: {
+    flex: 1,
     color: colors.fgPrimary,
     fontSize: 15,
     fontWeight: "500",
     padding: spacing.lg,
-    borderRadius: radii.md,
-    borderWidth: 1,
-    borderColor: colors.border,
+  },
+  inputIcon: {
+    marginLeft: spacing.lg,
   },
   passwordContainer: {
     flexDirection: "row",

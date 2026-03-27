@@ -12,35 +12,11 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguageState] = useState<Language>('en');
+  const [language] = useState<Language>('en');
 
-  useEffect(() => {
-    // Load saved language on mount
-    const loadLanguage = async () => {
-      try {
-        const savedLang = await AsyncStorage.getItem('user_language');
-        if (savedLang && (savedLang === 'en' || savedLang === 'te')) {
-          setLanguageState(savedLang as Language);
-        }
-      } catch (error) {
-        console.error('Error loading language:', error);
-      }
-    };
-    loadLanguage();
-  }, []);
-
-  const setLanguage = async (lang: Language) => {
-    try {
-      setLanguageState(lang);
-      await AsyncStorage.setItem('user_language', lang);
-    } catch (error) {
-      console.error('Error saving language:', error);
-    }
-  };
-
-  const toggleLanguage = () => {
-    setLanguage(language === 'en' ? 'te' : 'en');
-  };
+  // Multi-language support disabled per user request
+  const setLanguage = async () => {};
+  const toggleLanguage = () => {};
 
   return (
     <LanguageContext.Provider value={{ language, toggleLanguage, setLanguage }}>

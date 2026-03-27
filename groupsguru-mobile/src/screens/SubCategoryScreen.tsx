@@ -12,12 +12,16 @@ import {
 import { useNavigation, useRoute, RouteProp } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { subCategoryService } from "../api/subCategoryService";
-import { SubCategory } from "../api/types";
+import { categoryService } from "../api/categoryService";
+import { paymentService } from "../api/paymentService";
+import { SubCategory, Category } from "../api/types";
+import RazorpayCheckout from "react-native-razorpay";
 import { useLanguage } from "../context/LanguageContext";
 import { LanguageToggle } from "../components/LanguageToggle";
 import { PriceBadge } from "../components/PriceBadge";
 import { ScreenHeader } from "../components/ScreenHeader";
 import { colors, spacing, radii, typography } from "../theme/tokens";
+import { ScrollView, Alert } from "react-native";
 
 type RootStackParamList = {
   Category: undefined;
@@ -31,7 +35,9 @@ type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
 
 const SubCategoryScreen = () => {
   const [subCategories, setSubCategories] = useState<SubCategory[]>([]);
+  const [category, setCategory] = useState<Category | null>(null);
   const [loading, setLoading] = useState(true);
+  const [isProcessing, setIsProcessing] = useState(false);
   const [activeTab, setActiveTab] = useState<string>("PRELIMS");
   const { language } = useLanguage();
   const navigation = useNavigation<NavigationProp>();
@@ -41,8 +47,12 @@ const SubCategoryScreen = () => {
   const fetchSubCategories = useCallback(async () => {
     setLoading(true);
     try {
-      const data = await subCategoryService.getByCategoryId(categoryId);
-      setSubCategories(data);
+      const [subs, cat] = await Promise.all([
+        subCategoryService.getByCategoryId(categoryId),
+        categoryService.getById(categoryId)
+      ]);
+      setSubCategories(subs);
+      setCategory(cat);
     } catch (error) {
       console.error(error);
     } finally {
@@ -53,6 +63,46 @@ const SubCategoryScreen = () => {
   useEffect(() => {
     fetchSubCategories();
   }, [fetchSubCategories]);
+
+  const handlePackagePayment = async (type: string, id: number, name: string, amount: number, packageType?: string) => {
+    setIsProcessing(true);
+    try {
+      const orderId = await paymentService.createOrder(type, id, packageType);
+
+      const options = {
+        description: `Purchase access to ${name} (${packageType})`,
+        image: '',
+        currency: 'INR',
+        key: 'rzp_test_SU3wy02Xv8CfbL',
+        amount: (amount * 100).toString(),
+        name: 'GroupsGuru',
+        order_id: orderId,
+        prefill: {
+          email: '',
+          contact: '',
+          name: '',
+        },
+        theme: { color: colors.accent },
+      };
+
+      const response = await RazorpayCheckout.open(options);
+
+      await paymentService.verifyPayment(
+        response.razorpay_order_id,
+        response.razorpay_payment_id,
+        response.razorpay_signature,
+      );
+
+      Alert.alert('Success', 'Payment successful! Content unlocked.');
+      fetchSubCategories();
+    } catch (error: any) {
+      if (error?.code !== 'PAYMENT_CANCELLED') {
+        Alert.alert('Error', 'Payment failed. Please try again.');
+      }
+    } finally {
+      setIsProcessing(false);
+    }
+  };
 
   const filteredSubs = subCategories.filter(s => 
     !s.phase || s.phase === activeTab || s.phase === "BOTH"
@@ -112,6 +162,60 @@ const SubCategoryScreen = () => {
         title={language === 'en' ? "Subjects" : "విషయాలు"} 
         subtitle={language === 'en' ? categoryName : categoryNameTe}
       />
+
+      {/* Package Selection */}
+      {!loading && category && (category.priceInr || category.prelimsPriceInr || category.mainsPriceInr) && (
+        <View style={{ marginBottom: 20 }}>
+          <Text style={[styles.label, { marginHorizontal: 20, marginBottom: 10 }]}>SUBSCRIPTION PLANS</Text>
+          <ScrollView 
+            horizontal 
+            showsHorizontalScrollIndicator={false} 
+            contentContainerStyle={{ paddingHorizontal: 20 }}
+          >
+            {category.prelimsPriceInr && (
+              <TouchableOpacity 
+                style={styles.pkgCard}
+                onPress={() => handlePackagePayment("CATEGORY", categoryId, category.name, category.prelimsPriceInr!, "PRELIMS")}
+                disabled={isProcessing}
+              >
+                <Text style={styles.pkgLabel}>Standard</Text>
+                <Text style={styles.pkgName}>Prelims Only</Text>
+                <Text style={styles.pkgPrice}>₹{category.prelimsPriceInr}</Text>
+                <Text style={styles.pkgAction}>SELECT</Text>
+              </TouchableOpacity>
+            )}
+            
+            {category.mainsPriceInr && (
+              <TouchableOpacity 
+                style={styles.pkgCard}
+                onPress={() => handlePackagePayment("CATEGORY", categoryId, category.name, category.mainsPriceInr!, "MAINS")}
+                disabled={isProcessing}
+              >
+                <Text style={styles.pkgLabel}>Advanced</Text>
+                <Text style={styles.pkgName}>Mains Only</Text>
+                <Text style={styles.pkgPrice}>₹{category.mainsPriceInr}</Text>
+                <Text style={styles.pkgAction}>SELECT</Text>
+              </TouchableOpacity>
+            )}
+
+            {category.priceInr && (
+              <TouchableOpacity 
+                style={[styles.pkgCard, { borderColor: colors.accent, borderWidth: 2 }]}
+                onPress={() => handlePackagePayment("CATEGORY", categoryId, category.name, category.priceInr!, "COMPLETE")}
+                disabled={isProcessing}
+              >
+                <View style={styles.recommendTag}>
+                  <Text style={styles.recommendText}>BEST</Text>
+                </View>
+                <Text style={styles.pkgLabel}>Full Access</Text>
+                <Text style={styles.pkgName}>Complete</Text>
+                <Text style={styles.pkgPrice}>₹{category.priceInr}</Text>
+                <Text style={[styles.pkgAction, { color: colors.accent }]}>BUY NOW</Text>
+              </TouchableOpacity>
+            )}
+          </ScrollView>
+        </View>
+      )}
 
       {/* Phase Tabs */}
       {!loading && subCategories.length > 0 && (
@@ -258,5 +362,65 @@ const styles = StyleSheet.create({
   },
   activeTabText: {
     color: colors.accent,
+  },
+  label: {
+    fontSize: 10,
+    color: colors.fgMuted,
+    fontWeight: "bold",
+    letterSpacing: 2,
+  },
+  pkgCard: {
+    backgroundColor: colors.surface,
+    borderRadius: radii.md,
+    padding: spacing.lg,
+    marginRight: spacing.md,
+    width: 140,
+    borderWidth: 1,
+    borderColor: colors.border,
+    position: 'relative',
+    overflow: 'hidden',
+  },
+  pkgLabel: {
+    fontSize: 8,
+    color: colors.fgMuted,
+    fontWeight: "bold",
+    textTransform: "uppercase",
+    marginBottom: 2,
+  },
+  pkgName: {
+    fontSize: 14,
+    fontWeight: "bold",
+    color: colors.fgPrimary,
+    marginBottom: 8,
+  },
+  pkgPrice: {
+    fontSize: 18,
+    fontWeight: "bold",
+    color: colors.accent,
+    fontFamily: typography.mono.fontFamily,
+    marginBottom: 12,
+  },
+  pkgAction: {
+    fontSize: 10,
+    fontWeight: "bold",
+    color: colors.fgSecondary,
+    textAlign: 'center',
+    borderTopWidth: 1,
+    borderTopColor: colors.border,
+    paddingTop: 8,
+  },
+  recommendTag: {
+    position: 'absolute',
+    top: 0,
+    right: 0,
+    backgroundColor: colors.accent,
+    paddingHorizontal: 6,
+    paddingVertical: 2,
+    borderBottomLeftRadius: 4,
+  },
+  recommendText: {
+    color: '#fff',
+    fontSize: 7,
+    fontWeight: 'bold',
   },
 });

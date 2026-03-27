@@ -24,6 +24,8 @@ export interface Category {
   commissionId: number;
   accessType?: string;
   priceInr?: number;
+  prelimsPriceInr?: number;
+  mainsPriceInr?: number;
 }
 
 export interface SubCategory {

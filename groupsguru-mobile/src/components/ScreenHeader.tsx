@@ -4,6 +4,7 @@ import { useNavigation, DrawerActions } from "@react-navigation/native";
 import { useLanguage } from "../context/LanguageContext";
 import { useAuth } from "../context/AuthContext";
 import { LanguageToggle } from "./LanguageToggle";
+import { CinematicLogo } from "./CinematicLogo";
 import { colors, spacing, radii } from "../theme/tokens";
 
 interface ScreenHeaderProps {
@@ -14,28 +15,36 @@ interface ScreenHeaderProps {
 
 export const ScreenHeader = ({ title, subtitle, showBack = true }: ScreenHeaderProps) => {
   const navigation = useNavigation<any>();
-  const { logout } = useAuth();
+  const { user, logout } = useAuth();
   const { language } = useLanguage();
 
   return (
     <View style={styles.header}>
       <View style={styles.left}>
-        {showBack && navigation.canGoBack() ? (
-          <TouchableOpacity onPress={() => navigation.goBack()} style={styles.menuBtn}>
+        <TouchableOpacity 
+          style={styles.menuBtn}
+          onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())}
+        >
+          <View style={styles.menuIcon}>
+             <View style={styles.menuLine} />
+             <View style={[styles.menuLine, { width: 14 }]} />
+             <View style={styles.menuLine} />
+          </View>
+        </TouchableOpacity>
+
+        {showBack && navigation.canGoBack() && (
+          <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backBtn}>
             <Text style={{ color: "#A0A0A0", fontSize: 20 }}>←</Text>
           </TouchableOpacity>
-        ) : (
-          <TouchableOpacity 
-            style={styles.menuBtn}
-            onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())}
-          >
-            <View style={styles.menuIcon}>
-               <View style={styles.menuLine} />
-               <View style={[styles.menuLine, { width: 14 }]} />
-               <View style={styles.menuLine} />
-            </View>
-          </TouchableOpacity>
         )}
+
+        <TouchableOpacity 
+          onPress={() => navigation.navigate(user?.role === "ADMIN" ? "AdminDashboard" : "StudentDashboard")}
+          style={styles.logoContainer}
+        >
+           <CinematicLogo size={32} />
+        </TouchableOpacity>
+
         <View style={styles.titleContainer}>
            {subtitle && (
              <Text style={styles.subtitle}>{subtitle}</Text>
@@ -50,7 +59,7 @@ export const ScreenHeader = ({ title, subtitle, showBack = true }: ScreenHeaderP
       <View style={styles.right}>
         <LanguageToggle />
         <TouchableOpacity onPress={logout} style={styles.logoutBtn}>
-          <Text style={styles.logoutText}>{language === 'en' ? 'LOGOUT' : 'లాగ్అవుట్'}</Text>
+          <Text style={styles.logoutText}>LOGOUT</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -74,11 +83,17 @@ const styles = StyleSheet.create({
     gap: 12,
   },
   menuBtn: {
-    width: 32,
+    width: 28,
     height: 32,
-    borderRadius: 8,
     justifyContent: "center",
-    alignItems: "center",
+  },
+  backBtn: {
+    width: 24,
+    height: 32,
+    justifyContent: "center",
+  },
+  logoContainer: {
+    marginRight: 8,
   },
   menuIcon: {
     width: 18,

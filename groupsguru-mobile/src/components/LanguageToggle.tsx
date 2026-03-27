@@ -4,29 +4,8 @@ import { useLanguage } from "../context/LanguageContext";
 import { colors, radii } from "../theme/tokens";
 
 export const LanguageToggle: React.FC = () => {
-  const { language, toggleLanguage } = useLanguage();
-
-  return (
-    <TouchableOpacity style={styles.button} onPress={toggleLanguage}>
-      <Text
-        style={[
-          styles.text,
-          { color: language === "en" ? colors.accent : colors.fgMuted },
-        ]}
-      >
-        EN
-      </Text>
-      <View style={styles.divider} />
-      <Text
-        style={[
-          styles.text,
-          { color: language === "te" ? colors.accent : colors.fgMuted },
-        ]}
-      >
-        తెలుగు
-      </Text>
-    </TouchableOpacity>
-  );
+  // Multi-language support disabled per user request
+  return null;
 };
 
 const styles = StyleSheet.create({

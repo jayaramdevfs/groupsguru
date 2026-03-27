@@ -4,37 +4,38 @@ import { DrawerContentComponentProps, DrawerContentScrollView } from "@react-nav
 import { useAuth } from "../context/AuthContext";
 import { ProfessionalLogo } from "./ProfessionalLogo";
 import { colors, spacing, radii } from "../theme/tokens";
+import { Home, Layers, BookOpen, ClipboardList, FileText, Network, PenTool, Cpu, Wallet, RefreshCw } from "lucide-react-native";
 
 const studentLinks = [
-  { name: "Dashboard", target: "StudentDashboard", icon: "🏠" },
-  { name: "Categories", target: "Category", icon: "📚" },
-  { name: "Study Materials", target: "StudyMaterial", params: { entityType: "GLOBAL", entityId: 0, entityName: "Global Archive" }, icon: "💎" },
-  { name: "Test Series", target: "ExamList", icon: "📝" },
-  { name: "Exams", target: "ExamList", icon: "📑" },
+  { name: "Dashboard", target: "StudentDashboard", icon: Home },
+  { name: "Categories", target: "Category", icon: Layers },
+  { name: "Study Materials", target: "StudyMaterial", params: { entityType: "GLOBAL", entityId: 0, entityName: "Global Archive" }, icon: BookOpen },
+  { name: "Test Series", target: "ExamList", icon: ClipboardList },
+  { name: "Exams", target: "ExamList", icon: FileText },
 ];
 
 const adminSections = [
   {
     label: "CORE",
     links: [
-      { name: "Dashboard", target: "AdminDashboard", icon: "🏠" },
-      { name: "Exam Categories", target: "Category", icon: "🌳" },
-      { name: "Knowledge Assets", target: "StudyMaterial", params: { entityType: "GLOBAL", entityId: 0, entityName: "Global" }, icon: "📚" },
+      { name: "Dashboard", target: "AdminDashboard", icon: Home },
+      { name: "Exam Categories", target: "Category", icon: Network },
+      { name: "Knowledge Assets", target: "StudyMaterial", params: { entityType: "GLOBAL", entityId: 0, entityName: "Global" }, icon: BookOpen },
     ],
   },
   {
     label: "ASSESSMENT",
     links: [
-      { name: "Question Forge", target: "QuestionList", icon: "❓" },
-      { name: "Active Exams", target: "ExamList", icon: "📝" },
-      { name: "Intelligence", target: "Intelligence", icon: "⚛️" },
+      { name: "Question Forge", target: "QuestionList", icon: PenTool },
+      { name: "Active Exams", target: "ExamList", icon: ClipboardList },
+      { name: "Intelligence", target: "Intelligence", icon: Cpu },
     ],
   },
   {
     label: "SYSTEM",
     links: [
-      { name: "Access & Pricing", target: "Category", icon: "💰" },
-      { name: "Engine Migration", target: "Category", icon: "🔄" },
+      { name: "Access & Pricing", target: "Category", icon: Wallet },
+      { name: "Engine Migration", target: "Category", icon: RefreshCw },
     ],
   },
 ];
@@ -56,13 +57,14 @@ export const SidebarDrawer = (props: DrawerContentComponentProps) => {
               <Text style={styles.sectionLabel}>{section.label}</Text>
               {section.links.map((link) => {
                 const isActive = currentRoute === link.target;
+                const Icon = link.icon;
                 return (
                   <TouchableOpacity
                     key={link.name}
                     style={[styles.link, isActive && styles.linkActive]}
                     onPress={() => props.navigation.navigate(link.target, link.params)}
                   >
-                    <Text style={styles.linkIcon}>{link.icon}</Text>
+                    <Icon size={20} color={isActive ? "#D97706" : "#A0A0A0"} />
                     <Text style={[styles.linkText, isActive && styles.linkTextActive]}>{link.name}</Text>
                   </TouchableOpacity>
                 );
@@ -74,13 +76,14 @@ export const SidebarDrawer = (props: DrawerContentComponentProps) => {
              <Text style={styles.sectionLabel}>CAPABILITIES</Text>
              {studentLinks.map((link) => {
                const isActive = currentRoute === link.target;
+               const Icon = link.icon;
                return (
                  <TouchableOpacity
                    key={link.name}
                    style={[styles.link, isActive && styles.linkActive]}
                    onPress={() => props.navigation.navigate(link.target, link.params)}
                  >
-                   <Text style={styles.linkIcon}>{link.icon}</Text>
+                   <Icon size={20} color={isActive ? "#D97706" : "#A0A0A0"} />
                    <Text style={[styles.linkText, isActive && styles.linkTextActive]}>
                      {link.name}
                    </Text>

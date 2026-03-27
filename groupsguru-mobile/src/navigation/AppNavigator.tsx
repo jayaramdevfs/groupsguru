@@ -76,6 +76,11 @@ const StudentDrawer = () => (
     <Drawer.Screen name="ExamList" component={ExamListScreen} />
     <Drawer.Screen name="Intelligence" component={IntelligenceScreen} />
     <Drawer.Screen name="StudyMaterial" component={StudyMaterialScreen} />
+    <Drawer.Screen name="ExamDetail" component={ExamDetailScreen} />
+    <Drawer.Screen name="ExamAttempt" component={ExamAttemptScreen} />
+    <Drawer.Screen name="ExamResult" component={ExamResultScreen} />
+    <Drawer.Screen name="StudyMaterialView" component={StudyMaterialViewScreen} />
+    <Drawer.Screen name="QuestionList" component={QuestionListScreen} />
   </Drawer.Navigator>
 );
 
@@ -97,6 +102,10 @@ const AdminDrawer = () => (
     <Drawer.Screen name="Intelligence" component={IntelligenceScreen} />
     <Drawer.Screen name="QuestionList" component={QuestionListScreen} />
     <Drawer.Screen name="StudyMaterial" component={StudyMaterialScreen} />
+    <Drawer.Screen name="ExamDetail" component={ExamDetailScreen} />
+    <Drawer.Screen name="ExamAttempt" component={ExamAttemptScreen} />
+    <Drawer.Screen name="ExamResult" component={ExamResultScreen} />
+    <Drawer.Screen name="StudyMaterialView" component={StudyMaterialViewScreen} />
   </Drawer.Navigator>
 );
 
@@ -122,16 +131,10 @@ const AppNavigator = () => {
         ) : user.role === "ADMIN" ? (
           <>
             <Stack.Screen name="AdminMain" component={AdminDrawer} />
-            <Stack.Screen name="StudyMaterialView" component={StudyMaterialViewScreen} />
           </>
         ) : (
           <>
             <Stack.Screen name="Main" component={StudentDrawer} />
-            <Stack.Screen name="ExamDetail" component={ExamDetailScreen} />
-            <Stack.Screen name="ExamAttempt" component={ExamAttemptScreen} />
-            <Stack.Screen name="ExamResult" component={ExamResultScreen} />
-            <Stack.Screen name="StudyMaterialView" component={StudyMaterialViewScreen} />
-            <Stack.Screen name="QuestionList" component={QuestionListScreen} />
           </>
         )}
       </Stack.Navigator>
