@@ -19,6 +19,18 @@ import { useLanguage } from "../context/LanguageContext";
 import { PriceBadge } from "../components/PriceBadge";
 import { colors, spacing, radii, typography } from "../theme/tokens";
 import { ScreenHeader } from "../components/ScreenHeader";
+import Svg, { Line, Polygon } from 'react-native-svg';
+
+const LandmarkIcon = ({ size = 24, color = colors.accent }) => (
+  <Svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <Line x1="3" x2="21" y1="22" y2="22" />
+    <Line x1="6" x2="6" y1="18" y2="11" />
+    <Line x1="10" x2="10" y1="18" y2="11" />
+    <Line x1="14" x2="14" y1="18" y2="11" />
+    <Line x1="18" x2="18" y1="18" y2="11" />
+    <Polygon points="12 2 20 7 4 7" />
+  </Svg>
+);
 
 type RootStackParamList = {
   Category: { commissionId?: number; commissionName?: string };
@@ -69,7 +81,9 @@ const CategoryScreen = () => {
     >
       <View style={styles.contentHeader}>
         <View style={styles.imageContainer}>
-          {item.imageUrl ? (
+          {item.name.includes("APPSC") ? (
+             <LandmarkIcon size={24} color={colors.accent} />
+          ) : item.imageUrl ? (
             <Image source={{ uri: item.imageUrl }} style={styles.image} />
           ) : (
             <Text style={styles.initial}>{item.name.charAt(0)}</Text>

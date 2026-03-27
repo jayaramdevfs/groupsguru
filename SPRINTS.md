@@ -80,8 +80,12 @@ C:\GroupsGuru\Lms\
 | 24 | Test Series & Practice Mode | ✅ Done | ✅ Done | ➖ N/A |
 | 25 | Production Readiness | ✅ Done | ✅ Done | ✅ Done |
 | 26 | Native H2 Enforcement + Go Live | ✅ Done | ✅ Done | ✅ Done |
+| 27 | Architecture Foundation & Pricing | ⏳ Pending | ⏳ Pending | ⏳ Pending |
+| 28 | Intelligence Integration & Reader | ⏳ Pending | ⏳ Pending | ⏳ Pending |
+| 29 | The Concept Mock Loop | ⏳ Pending | ⏳ Pending | ⏳ Pending |
+| 30 | Full-Length Mastery & Tracking | ⏳ Pending | ⏳ Pending | ⏳ Pending |
 
-**Resume Point:** PRODUCTION LIVE. All initial sprints complete.
+**Resume Point:** Sprint 27 starts the APPSC Group 1 Era (Vertical Slicing: Native + Web concurrently).
 
 ### Execution Order:
 ```

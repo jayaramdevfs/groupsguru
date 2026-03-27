@@ -6,6 +6,7 @@ import { categoryApi } from "@/lib/categories";
 import { Category } from "@/lib/types";
 import Link from "next/link";
 import { Multilang } from "@/components/ui/Multilang";
+import { Landmark } from "lucide-react";
 
 export default function StudentCategories() {
   const [categories, setCategories] = useState<Category[]>([]);
@@ -62,7 +63,9 @@ export default function StudentCategories() {
               >
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 rounded border border-[#3A3A3A] bg-[#141414] flex items-center justify-center text-xl font-bold text-[#D97706]">
-                    {cat.imageUrl ? (
+                    {cat.name.includes("APPSC") ? (
+                      <Landmark className="w-6 h-6 text-[#D97706]" />
+                    ) : cat.imageUrl ? (
                       <img src={cat.imageUrl} alt={cat.name} className="w-full h-full object-cover rounded" />
                     ) : (
                       cat.name.charAt(0)
