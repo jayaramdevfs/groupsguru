@@ -12,7 +12,9 @@
 
 This is the **Web Frontend** for GroupsGuru — the APPSC Group 1/2/3/4 intelligent exam preparation engine. Built with Next.js App Router, it provides:
 
-- A premium **dark violet/indigo** glassmorphism UI
+- A premium **dark violet/indigo** glassmorphism UI with a **Global Grid** background
+- **Cinematic "Living Radar" Logo**: Physics-based canvas animation with phosphor sweep
+- **3-Tier Package Model**: Prelims, Mains, and Complete bundles for all categories
 - **Bilingual** support (English ↔ Telugu) on all dynamic content
 - **Role-based** views: Admin panel and Student dashboard
 - Smooth animations via **Framer Motion** and **GSAP**
