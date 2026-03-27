@@ -8,12 +8,14 @@ import com.groupsguru.commission.CommissionRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 
 @Component
 @RequiredArgsConstructor
+@Order(1)
 public class DataInitializer implements CommandLineRunner {
 
     private final UserRepository userRepository;

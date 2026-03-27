@@ -47,15 +47,6 @@ public class DataSeeder implements CommandLineRunner {
                 .description("Andhra Pradesh Public Service Commission Exams")
                 .commissionId(appscId)
                 .imageUrl("https://images.unsplash.com/photo-1521737604893-d14cc237f11d")
-                .build());
-
-        // Level 2: CATEGORY (Group 1) - with pricing
-        Category group1 = categoryRepository.save(Category.builder()
-                .name("Group 1 Services")
-                .nameTe("గ్రూప్ 1 సర్వీసెస్")
-                .description("Premium preparation for APPSC Group 1 services")
-                .commissionId(appscId)
-                .imageUrl("https://images.unsplash.com/photo-1521737604893-d14cc237f11d")
                 .priceInr(1300.0)
                 .prelimsPriceInr(700.0)
                 .mainsPriceInr(900.0)
@@ -66,21 +57,21 @@ public class DataSeeder implements CommandLineRunner {
                 .name("History & Culture")
                 .nameTe("చరిత్ర")
                 .phase("PRELIMS")
-                .category(group1)
+                .category(appsc)
                 .build());
 
         SubCategory polity = subCategoryRepository.save(SubCategory.builder()
                 .name("Constitution & Polity")
                 .nameTe("రాజ్యాంగం")
                 .phase("PRELIMS")
-                .category(group1)
+                .category(appsc)
                 .build());
 
         SubCategory paper2 = subCategoryRepository.save(SubCategory.builder()
                 .name("Paper II: History, Culture and Geography")
                 .nameTe("పేపర్ II")
                 .phase("MAINS")
-                .category(group1)
+                .category(appsc)
                 .build());
 
         // Level 4: SECTION (Blueprint Sections)
