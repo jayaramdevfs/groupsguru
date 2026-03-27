@@ -13,24 +13,11 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguageState] = useState<Language>("en");
+  const [language] = useState<Language>("en");
 
-  useEffect(() => {
-    const saved = localStorage.getItem("gg_lang") as Language;
-    if (saved && (saved === "en" || saved === "te")) {
-      setLanguageState(saved);
-    }
-  }, []);
-
-  const setLanguage = (lang: Language) => {
-    setLanguageState(lang);
-    localStorage.setItem("gg_lang", lang);
-    document.documentElement.lang = lang;
-  };
-
-  const toggleLanguage = () => {
-    setLanguage(language === "en" ? "te" : "en");
-  };
+  // Multi-language support disabled per user request
+  const setLanguage = () => {};
+  const toggleLanguage = () => {};
 
   return (
     <LanguageContext.Provider value={{ language, toggleLanguage, setLanguage }}>

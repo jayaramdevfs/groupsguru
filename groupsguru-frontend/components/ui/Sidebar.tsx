@@ -3,6 +3,18 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Logo } from "./Logo";
+import { 
+  Home, 
+  Layers, 
+  BookOpen, 
+  ClipboardList, 
+  FileText, 
+  Network, 
+  PenTool, 
+  Cpu, 
+  Wallet, 
+  RefreshCw 
+} from "lucide-react";
 
 interface SidebarProps {
   role: "ADMIN" | "STUDENT";
@@ -11,35 +23,35 @@ interface SidebarProps {
 }
 
 const studentLinks = [
-  { name: "Dashboard", href: "/student/dashboard" },
-  { name: "Categories", href: "/student/categories" },
-  { name: "Study Materials", href: "/student/content" },
-  { name: "Test Series", href: "/student/test-series" },
-  { name: "Exams", href: "/student/exams" },
+  { name: "Dashboard", href: "/student/dashboard", icon: Home },
+  { name: "Categories", href: "/student/categories", icon: Layers },
+  { name: "Study Materials", href: "/student/content", icon: BookOpen },
+  { name: "Test Series", href: "/student/test-series", icon: ClipboardList },
+  { name: "Exams", href: "/student/exams", icon: FileText },
 ];
 
 const adminSections = [
   {
     label: "CORE",
     links: [
-      { name: "Dashboard", href: "/admin/dashboard" },
-      { name: "Exam Categories", href: "/admin/content-tree" },
-      { name: "Knowledge Assets", href: "/admin/study-materials" },
+      { name: "Dashboard", href: "/admin/dashboard", icon: Home },
+      { name: "Exam Categories", href: "/admin/content-tree", icon: Network },
+      { name: "Knowledge Assets", href: "/admin/study-materials", icon: BookOpen },
     ],
   },
   {
     label: "ASSESSMENT",
     links: [
-      { name: "Question Forge", href: "/admin/questions" },
-      { name: "Active Exams", href: "/admin/exams" },
-      { name: "Intelligence", href: "/admin/intelligence" },
+      { name: "Question Forge", href: "/admin/questions", icon: PenTool },
+      { name: "Active Exams", href: "/admin/exams", icon: ClipboardList },
+      { name: "Intelligence", href: "/admin/intelligence", icon: Cpu },
     ],
   },
   {
     label: "SYSTEM",
     links: [
-      { name: "Access & Pricing", href: "/admin/pricing" },
-      { name: "Engine Migration", href: "/admin/migration" },
+      { name: "Access & Pricing", href: "/admin/pricing", icon: Wallet },
+      { name: "Engine Migration", href: "/admin/migration", icon: RefreshCw },
     ],
   },
 ];
@@ -47,19 +59,23 @@ const adminSections = [
 export function Sidebar({ role, isCollapsed }: SidebarProps) {
   const pathname = usePathname();
 
-  const renderLink = (link: { name: string; href: string }) => {
+  const renderLink = (link: { name: string; href: string; icon: any }) => {
+    const Icon = link.icon;
     const isActive = pathname.startsWith(link.href);
     return (
       <Link
         key={link.name}
         href={link.href}
-        className={`block px-4 py-2 text-[13px] font-medium rounded-[8px] transition-colors duration-150 ${
+        className={`flex items-center gap-3 px-4 py-2 text-[13px] font-medium rounded-[8px] transition-colors duration-150 ${
           isActive
             ? "text-[#E8E8E8] bg-[#2D2D2D] border-l-2 border-[#D97706] pl-3.5"
-            : "text-[#A0A0A0] hover:text-[#E8E8E8] hover:bg-[#2D2D2D]"
+            : "text-[#A0A0A0] hover:text-[#E8E8E8] hover:bg-[#2D2D2D] group"
         }`}
       >
-        {link.name}
+        <span className="flex-shrink-0">
+          <Icon className={`w-[18px] h-[18px] transition-colors duration-150 ${isActive ? "text-[#D97706]" : "text-[#707070] group-hover:text-[#A0A0A0]"}`} />
+        </span>
+        <span>{link.name}</span>
       </Link>
     );
   };

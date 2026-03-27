@@ -6,6 +6,7 @@ import { useAuth } from "../context/AuthContext";
 import { useRouter } from "next/navigation";
 import { LanguageToggle } from "../../components/ui/LanguageToggle";
 import { Logo } from "../../components/ui/Logo";
+import { CinematicLogo } from "../../components/ui/CinematicLogo";
 
 export default function LoginPage() {
   const { isAuthenticated, role, loading } = useAuth();
@@ -31,7 +32,10 @@ export default function LoginPage() {
       <div className="flex-1 flex items-center justify-center px-4">
         <div className="w-full max-w-[400px]">
           {/* Logo + Title */}
-          <div className="text-center mb-8">
+          <div className="text-center mb-8 flex flex-col items-center">
+            <div className="mb-4">
+              <CinematicLogo width={100} height={100} />
+            </div>
             <h1
               className="text-[28px] text-[#E8E8E8] mb-2"
               style={{ fontFamily: "var(--font-serif)" }}

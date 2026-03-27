@@ -37,6 +37,8 @@ export interface Category {
   commissionId: number;
   accessType: string;
   priceInr?: number;
+  prelimsPriceInr?: number;
+  mainsPriceInr?: number;
   isPublished?: boolean;
   displayOrder?: number;
   createdAt?: string;

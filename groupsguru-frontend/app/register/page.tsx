@@ -1,14 +1,18 @@
 "use client";
 
 import RegisterForm from "../../components/auth/RegisterForm";
+import { CinematicLogo } from "../../components/ui/CinematicLogo";
 
 export default function RegisterPage() {
   return (
-    <div className="min-h-screen flex items-center justify-center p-6">
+    <div className="min-h-screen flex items-center justify-center p-6 bg-[#191919]">
       <div className="w-full max-w-xl bg-[#1C1C1C] border border-[#3A3A3A] rounded p-12 shadow-2xl relative overflow-hidden">
         
         {/* Header Section */}
         <header className="mb-10 text-center">
+          <div className="flex justify-center mb-6">
+            <CinematicLogo width={120} height={120} />
+          </div>
           <div className="inline-block px-2 py-0.5 rounded border border-[#D97706]/30 bg-[#D97706]/10 text-[#D97706] text-[10px] font-mono font-bold uppercase tracking-widest mb-4">
             REGISTRATION_V2.0
           </div>

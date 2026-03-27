@@ -6,6 +6,7 @@ import { useAuth } from "../../app/context/AuthContext";
 import { LanguageToggle } from "../ui/LanguageToggle";
 import { Sidebar } from "../ui/Sidebar";
 import { Skeleton } from "../ui/Skeleton";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const MenuIcon = (props: any) => (
   <svg
@@ -113,6 +114,24 @@ export default function ProtectedLayout({
             <span className="text-[13px] font-medium text-[#A0A0A0]">
               {pageName}
             </span>
+
+            {/* Navigation Buttons */}
+            <div className="flex items-center gap-1 ml-2 border-l border-[#3A3A3A] pl-4">
+              <button
+                onClick={() => router.back()}
+                className="p-1 text-[#666666] hover:text-[#E8E8E8] hover:bg-[#2D2D2D] rounded-[6px] transition-colors"
+                title="Go Back"
+              >
+                <ChevronLeft className="w-4 h-4" />
+              </button>
+              <button
+                onClick={() => router.forward()}
+                className="p-1 text-[#666666] hover:text-[#E8E8E8] hover:bg-[#2D2D2D] rounded-[6px] transition-colors"
+                title="Go Forward"
+              >
+                <ChevronRight className="w-4 h-4" />
+              </button>
+            </div>
           </div>
 
           <div className="flex items-center gap-3">

@@ -5,6 +5,7 @@ import { useEffect, useState, useCallback } from "react";
 import { useParams } from "next/navigation";
 import { subCategoryApi } from "@/lib/subcategories";
 import { categoryApi } from "@/lib/categories";
+import { paymentApi } from "@/lib/payment";
 import { SubCategory, Category } from "@/lib/types";
 import { useLanguage } from "@/app/context/LanguageContext";
 import { LanguageToggle } from "@/components/ui/LanguageToggle";
@@ -20,6 +21,58 @@ export default function StudentSubCategories() {
   const [category, setCategory] = useState<Category | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [activeTab, setActiveTab] = useState<string>("PRELIMS");
+  const [isProcessing, setIsProcessing] = useState(false);
+
+  useEffect(() => {
+    // Load Razorpay Script
+    const script = document.createElement("script");
+    script.src = "https://checkout.razorpay.com/v1/checkout.js";
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
+  const handlePayment = async (type: string, id: number, name: string, price: number, packageType?: string) => {
+    setIsProcessing(true);
+    try {
+      const orderId = await paymentApi.createOrder(type, id, packageType);
+
+      const options = {
+        key: "rzp_test_SU3wy02Xv8CfbL", // Test Key
+        amount: price * 100,
+        currency: "INR",
+        name: "GroupsGuru",
+        description: `Purchase access to ${name} (${packageType || 'COMPLETE'})`,
+        order_id: orderId,
+        handler: async (response: any) => {
+          try {
+            await paymentApi.verifyPayment(
+              response.razorpay_order_id,
+              response.razorpay_payment_id,
+              response.razorpay_signature
+            );
+            alert("Payment successful! Refreshing access...");
+            window.location.reload();
+          } catch (err) {
+            alert("Payment verification failed. Please contact support.");
+          }
+        },
+        theme: {
+          color: "#D97706",
+        },
+      };
+
+      const rzp = new (window as any).Razorpay(options);
+      rzp.open();
+    } catch (err) {
+      console.error(err);
+      alert("Failed to initiate payment. Please try again.");
+    } finally {
+      setIsProcessing(false);
+    }
+  };
 
   const filteredSubs = subCategories.filter(s => 
     !s.phase || s.phase === activeTab || s.phase === "BOTH"
@@ -75,6 +128,97 @@ export default function StudentSubCategories() {
             <LanguageToggle />
           </div>
         </header>
+
+        {/* 3-Tier Package Selection */}
+        {!isLoading && category && (category.priceInr || category.prelimsPriceInr || category.mainsPriceInr) && (
+          <div className="mb-12">
+            <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#666666] mb-6">Subscription Plans</div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {/* Prelims Package */}
+              {category.prelimsPriceInr && (
+                <div className="bg-[#141414] border border-[#3A3A3A] p-6 rounded-lg flex flex-col">
+                  <div className="text-[10px] text-[#A0A0A0] font-bold uppercase mb-1">Standard</div>
+                  <h3 className="text-xl font-bold text-white mb-2">Prelims Only</h3>
+                  <div className="text-2xl font-mono font-bold text-[#D97706] mb-4">₹{category.prelimsPriceInr}</div>
+                  <ul className="text-xs text-[#666666] space-y-2 mb-6 flex-grow">
+                    <li className="flex items-center">
+                      <svg className="w-3 h-3 mr-2 text-[#D97706]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      All Prelims Subjects
+                    </li>
+                    <li className="flex items-center">
+                      <svg className="w-3 h-3 mr-2 text-[#D97706]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      Topic-wise tests
+                    </li>
+                  </ul>
+                  <button 
+                    onClick={() => handlePayment("CATEGORY", categoryId, category.name, category.prelimsPriceInr!, "PRELIMS")}
+                    disabled={isProcessing}
+                    className="w-full py-2 bg-transparent border border-[#D97706] text-[#D97706] rounded hover:bg-[#D97706] hover:text-white transition-all text-xs font-bold uppercase tracking-widest"
+                  >
+                    SELECT PRELIMS
+                  </button>
+                </div>
+              )}
+
+              {/* Mains Package */}
+              {category.mainsPriceInr && (
+                <div className="bg-[#141414] border border-[#3A3A3A] p-6 rounded-lg flex flex-col">
+                  <div className="text-[10px] text-[#A0A0A0] font-bold uppercase mb-1">Advanced</div>
+                  <h3 className="text-xl font-bold text-white mb-2">Mains Only</h3>
+                  <div className="text-2xl font-mono font-bold text-[#D97706] mb-4">₹{category.mainsPriceInr}</div>
+                  <ul className="text-xs text-[#666666] space-y-2 mb-6 flex-grow">
+                    <li className="flex items-center">
+                      <svg className="w-3 h-3 mr-2 text-[#D97706]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      All Mains Papers
+                    </li>
+                    <li className="flex items-center">
+                      <svg className="w-3 h-3 mr-2 text-[#D97706]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      Detailed Study Notes
+                    </li>
+                  </ul>
+                  <button 
+                    onClick={() => handlePayment("CATEGORY", categoryId, category.name, category.mainsPriceInr!, "MAINS")}
+                    disabled={isProcessing}
+                    className="w-full py-2 bg-transparent border border-[#D97706] text-[#D97706] rounded hover:bg-[#D97706] hover:text-white transition-all text-xs font-bold uppercase tracking-widest"
+                  >
+                    SELECT MAINS
+                  </button>
+                </div>
+              )}
+
+              {/* Complete Package */}
+              {category.priceInr && (
+                <div className="bg-[#1E1E1E] border-2 border-[#D97706] p-6 rounded-lg flex flex-col relative overflow-hidden">
+                  <div className="absolute top-0 right-0 bg-[#D97706] text-white text-[8px] font-bold px-3 py-1 rounded-bl uppercase tracking-tighter">Recommended</div>
+                  <div className="text-[10px] text-[#A0A0A0] font-bold uppercase mb-1">Full Access</div>
+                  <h3 className="text-xl font-bold text-white mb-2">Complete Course</h3>
+                  <div className="text-2xl font-mono font-bold text-[#D97706] mb-4">₹{category.priceInr}</div>
+                  <ul className="text-xs text-[#A0A0A0] space-y-2 mb-6 flex-grow">
+                    <li className="flex items-center">
+                      <svg className="w-3 h-3 mr-2 text-[#D97706]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      Prelims + Mains Combined
+                    </li>
+                    <li className="flex items-center">
+                      <svg className="w-3 h-3 mr-2 text-[#D97706]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      Full Test Series
+                    </li>
+                    <li className="flex items-center">
+                      <svg className="w-3 h-3 mr-2 text-[#D97706]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      Mentorship Materials
+                    </li>
+                  </ul>
+                  <button 
+                    onClick={() => handlePayment("CATEGORY", categoryId, category.name, category.priceInr!, "COMPLETE")}
+                    disabled={isProcessing}
+                    className="w-full py-2 bg-[#D97706] text-white rounded hover:bg-[#F59E0B] transition-all text-xs font-bold uppercase tracking-widest border border-[#D97706]"
+                  >
+                    BUY COMPLETE
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
 
         {/* Phase Tabs */}
         {!isLoading && subCategories.length > 0 && (

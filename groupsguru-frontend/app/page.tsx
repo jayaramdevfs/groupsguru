@@ -4,6 +4,7 @@ import React from "react";
 import { Multilang } from "@/components/ui/Multilang";
 import { LanguageToggle } from "@/components/ui/LanguageToggle";
 import { Logo } from "@/components/ui/Logo";
+import { CinematicLogo } from "@/components/ui/CinematicLogo";
 import Link from "next/link";
 
 export default function LandingPage() {
@@ -11,7 +12,13 @@ export default function LandingPage() {
     <div className="min-h-screen bg-[#191919] text-[#E8E8E8]">
       {/* Navigation */}
       <nav className="flex items-center justify-between px-6 md:px-8 py-5 max-w-[900px] mx-auto">
-        <Logo size="md" />
+        <div className="flex items-center gap-2">
+          <CinematicLogo width={40} height={40} />
+          <div className="text-xl tracking-tight" style={{ fontFamily: "var(--font-serif)" }}>
+            <span className="text-[#E8E8E8]">Groups</span>
+            <span className="text-[#D97706]">Guru</span>
+          </div>
+        </div>
         <div className="flex items-center gap-3">
           <LanguageToggle />
           <div className="w-px h-4 bg-[#3A3A3A] hidden md:block" />
@@ -32,35 +39,43 @@ export default function LandingPage() {
 
       {/* Hero */}
       <main className="max-w-[900px] mx-auto px-6 md:px-8">
-        <section className="pt-20 md:pt-32 pb-20">
-          <h1
-            className="text-[40px] md:text-[56px] leading-[1.1] mb-6 text-[#E8E8E8]"
-            style={{ fontFamily: "var(--font-serif)" }}
-          >
-            <Multilang
-              en="Predictive preparation for government exams"
-              te="ప్రభుత్వ పరీక్షలకు ముందస్తు ప్రిపరేషన్"
-            />
-          </h1>
-          <p className="text-[17px] md:text-[19px] text-[#A0A0A0] max-w-[640px] leading-relaxed mb-10 font-medium">
-            <Multilang
-              en="GroupsGuru maps APPSC Group 1, 2, 3, 4 syllabi into atomic micro-topics, analyzes PYQ patterns, and predicts what matters most for your preparation."
-              te="GroupsGuru APPSC గ్రూప్ 1, 2, 3, 4 సిలబస్‌ను అటామిక్ మైక్రో-టాపిక్‌లుగా మ్యాప్ చేస్తుంది, PYQ నమూనాలను విశ్లేషిస్తుంది."
-            />
-          </p>
-          <div className="flex items-center gap-3">
-            <Link
-              href="/login"
-              className="px-5 py-2.5 rounded-[8px] bg-[#D97706] hover:bg-[#F59E0B] text-[15px] font-semibold text-white transition-colors duration-150"
+        <section className="pt-20 md:pt-32 pb-20 flex flex-col md:flex-row items-start md:items-center gap-12">
+          <div className="flex-1">
+            <h1
+              className="text-[40px] md:text-[56px] leading-[1.1] mb-6 text-[#E8E8E8]"
+              style={{ fontFamily: "var(--font-serif)" }}
             >
-              <Multilang en="Start preparing" te="ప్రిపరేషన్ మొదలుపెట్టండి" />
-            </Link>
-            <Link
-              href="/login"
-              className="px-5 py-2.5 rounded-[8px] border border-[#3A3A3A] hover:border-[#666666] text-[15px] font-medium text-[#A0A0A0] hover:text-[#E8E8E8] transition-colors duration-150"
-            >
-              <Multilang en="Sign in" te="లాగిన్" />
-            </Link>
+              <Multilang
+                en="Predictive preparation for government exams"
+                te="ప్రభుత్వ పరీక్షలకు ముందస్తు ప్రిపరేషన్"
+              />
+            </h1>
+            <p className="text-[17px] md:text-[19px] text-[#A0A0A0] max-w-[640px] leading-relaxed mb-10 font-medium">
+              <Multilang
+                en="GroupsGuru maps APPSC Group 1, 2, 3, 4 syllabi into atomic micro-topics, analyzes PYQ patterns, and predicts what matters most for your preparation."
+                te="GroupsGuru APPSC గ్రూప్ 1, 2, 3, 4 సిలబస్‌ను అటామిక్ మైక్రో-టాపిక్‌లుగా మ్యాప్ చేస్తుంది, PYQ నమూనాలను విశ్లేషిస్తుంది."
+              />
+            </p>
+            <div className="flex items-center gap-3">
+              <Link
+                href="/login"
+                className="px-5 py-2.5 rounded-[8px] bg-[#D97706] hover:bg-[#F59E0B] text-[15px] font-semibold text-white transition-colors duration-150"
+              >
+                <Multilang en="Start preparing" te="ప్రిపరేషన్ మొదలుపెట్టండి" />
+              </Link>
+              <Link
+                href="/login"
+                className="px-5 py-2.5 rounded-[8px] border border-[#3A3A3A] hover:border-[#666666] text-[15px] font-medium text-[#A0A0A0] hover:text-[#E8E8E8] transition-colors duration-150"
+              >
+                <Multilang en="Sign in" te="లాగిన్" />
+              </Link>
+            </div>
+          </div>
+          <div className="hidden md:block">
+            <CinematicLogo width={320} height={320} />
+          </div>
+          <div className="md:hidden w-full flex justify-center mb-8">
+            <CinematicLogo width={200} height={200} />
           </div>
         </section>
 
