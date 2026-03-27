@@ -15,34 +15,26 @@ const studentLinks = [
 
 const adminSections = [
   {
-    label: "CONTENT",
+    label: "CORE",
     links: [
       { name: "Dashboard", target: "AdminDashboard", icon: "🏠" },
-      { name: "Study Materials", target: "StudyMaterial", params: { entityType: "GLOBAL", entityId: 0, entityName: "Global" }, icon: "📚" },
-      { name: "Content Tree", target: "Category", icon: "🌳" },
-      { name: "Categories", target: "Category", icon: "📁" },
-      { name: "Subcategories", target: "Category", icon: "📂" },
-      { name: "Sections", target: "Category", icon: "📑" },
-      { name: "Topics", target: "Category", icon: "📄" },
-      { name: "Micro-Topics", target: "Category", icon: "🔬" },
+      { name: "Exam Categories", target: "Category", icon: "🌳" },
+      { name: "Knowledge Assets", target: "StudyMaterial", params: { entityType: "GLOBAL", entityId: 0, entityName: "Global" }, icon: "📚" },
     ],
   },
   {
-    label: "TOOLS",
+    label: "ASSESSMENT",
     links: [
-      { name: "Questions", target: "QuestionList", icon: "❓" },
-      { name: "Bulk Upload", target: "Category", icon: "📤" },
-      { name: "Exams", target: "ExamList", icon: "📝" },
-      { name: "Test Series", target: "ExamList", icon: "📝" },
+      { name: "Question Forge", target: "QuestionList", icon: "❓" },
+      { name: "Active Exams", target: "ExamList", icon: "📝" },
       { name: "Intelligence", target: "Intelligence", icon: "⚛️" },
-      { name: "Pricing", target: "Category", icon: "💰" },
-      { name: "Commissions", target: "Category", icon: "🏛️" },
     ],
   },
   {
     label: "SYSTEM",
     links: [
-      { name: "Migration", target: "Category", icon: "🔄" },
+      { name: "Access & Pricing", target: "Category", icon: "💰" },
+      { name: "Engine Migration", target: "Category", icon: "🔄" },
     ],
   },
 ];

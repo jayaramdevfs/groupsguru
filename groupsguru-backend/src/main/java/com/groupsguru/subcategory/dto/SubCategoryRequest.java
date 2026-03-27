@@ -18,4 +18,7 @@ public class SubCategoryRequest {
     private Long categoryId;
     private Boolean isPublished;
     private Integer displayOrder;
+    
+    private String accessType;
+    private Double priceInr;
 }

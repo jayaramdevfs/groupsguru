@@ -53,6 +53,8 @@ public class TopicService {
                 .section(section)
                 .isPublished(request.getIsPublished() != null ? request.getIsPublished() : true)
                 .displayOrder(request.getDisplayOrder() != null ? request.getDisplayOrder() : 0)
+                .accessType(request.getAccessType() != null ? request.getAccessType() : "FREE")
+                .priceInr(request.getPriceInr() != null ? request.getPriceInr() : 0.0)
                 .build();
 
         return mapToResponse(topicRepository.save(topic));
@@ -73,6 +75,12 @@ public class TopicService {
         }
         if (request.getDisplayOrder() != null) {
             topic.setDisplayOrder(request.getDisplayOrder());
+        }
+        if (request.getAccessType() != null) {
+            topic.setAccessType(request.getAccessType());
+        }
+        if (request.getPriceInr() != null) {
+            topic.setPriceInr(request.getPriceInr());
         }
 
         if (!topic.getSection().getId().equals(request.getSectionId())) {

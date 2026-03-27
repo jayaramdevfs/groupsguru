@@ -17,4 +17,9 @@ public class ExamRequest {
     private Double penaltyPerWrong;
     private Double marksPerQuestion;
     private Boolean isActive;
+    
+    private Long categoryId;
+    private Long subCategoryId;
+    private Long sectionId;
+    private Long topicId;
 }

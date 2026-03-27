@@ -20,34 +20,26 @@ const studentLinks = [
 
 const adminSections = [
   {
-    label: "CONTENT",
+    label: "CORE",
     links: [
       { name: "Dashboard", href: "/admin/dashboard" },
-      { name: "Study Materials", href: "/admin/study-materials" },
-      { name: "Content Tree", href: "/admin/content-tree" },
-      { name: "Categories", href: "/admin/categories" },
-      { name: "Subcategories", href: "/admin/subcategories" },
-      { name: "Sections", href: "/admin/sections" },
-      { name: "Topics", href: "/admin/topics" },
-      { name: "Micro-Topics", href: "/admin/micro-topics" },
+      { name: "Exam Categories", href: "/admin/content-tree" },
+      { name: "Knowledge Assets", href: "/admin/study-materials" },
     ],
   },
   {
-    label: "TOOLS",
+    label: "ASSESSMENT",
     links: [
-      { name: "Questions", href: "/admin/questions" },
-      { name: "Bulk Upload", href: "/admin/bulk-upload" },
-      { name: "Exams", href: "/admin/exams" },
-      { name: "Test Series", href: "/admin/test-series" },
+      { name: "Question Forge", href: "/admin/questions" },
+      { name: "Active Exams", href: "/admin/exams" },
       { name: "Intelligence", href: "/admin/intelligence" },
-      { name: "Pricing", href: "/admin/pricing" },
-      { name: "Commissions", href: "/admin/commissions" },
     ],
   },
   {
     label: "SYSTEM",
     links: [
-      { name: "Migration", href: "/admin/migration" },
+      { name: "Access & Pricing", href: "/admin/pricing" },
+      { name: "Engine Migration", href: "/admin/migration" },
     ],
   },
 ];

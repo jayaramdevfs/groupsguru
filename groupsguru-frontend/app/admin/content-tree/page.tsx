@@ -153,6 +153,12 @@ export default function ContentTreePage() {
       >
         {item.isPublished ? 'PUB' : 'HID'}
       </button>
+
+      <div className="w-[1px] h-3 bg-[#3A3A3A] mx-1"></div>
+      
+      <span className={`text-[9px] font-mono font-bold uppercase tracking-widest px-2 py-0.5 rounded ${item.accessType === 'PAID' ? 'text-[#D97706] border border-[#D97706]/30 bg-[#D97706]/5' : 'text-[#10B981] border border-[#10B981]/30 bg-[#10B981]/5'}`}>
+        {item.accessType === 'PAID' ? `₹${item.priceInr}` : 'FREE'}
+      </span>
       
       <div className="flex gap-1 ml-1">
         <button 
@@ -172,19 +178,40 @@ export default function ContentTreePage() {
           className="text-[9px] font-mono font-bold uppercase tracking-widest text-[#D97706] border border-[#D97706]/30 px-2 py-0.5 rounded hover:bg-[#D97706]/10 transition-colors ml-2" 
           onClick={(e) => { e.stopPropagation(); setModalConfig(isExpandedConfig); setModalOpen(true); }}
         >
-          {isExpandedConfig.btnText.split(' ')[2]}++
+          {isExpandedConfig.btnText.split(' ').slice(1).join(' ')}++
         </button>
       )}
     </div>
   );
 
-  const TopicNode = ({ topic, items, index, parentId }: { topic: Topic; items: Topic[]; index: number; parentId: number }) => {
+  const MicroTopicNode = ({ mt }: { mt: any; }) => {
     return (
       <div className="flex items-center gap-2 py-2 border-l border-[#3A3A3A] pl-6 ml-4 relative group">
         <div className="absolute left-0 top-1/2 w-4 h-[1px] bg-[#3A3A3A]" />
-        <span className="text-[10px] font-mono font-bold text-[#666666] uppercase tracking-widest">L4</span>
-        <span className={`text-sm font-medium ${topic.isPublished !== false ? 'text-[#E8E8E8]' : 'text-[#666666] italic'}`}>{topic.name}</span>
-        <ActionButtons type="TOPIC" item={topic} items={items} index={index} />
+        <span className="text-[10px] font-mono font-bold text-[#666666] uppercase tracking-widest">L5_MICRO</span>
+        <span className="text-sm font-medium text-[#A0A0A0]">{mt.name}</span>
+      </div>
+    );
+  };
+
+  const TopicNode = ({ topic, items, index, parentId }: { topic: Topic; items: Topic[]; index: number; parentId: number }) => {
+    const [expanded, setExpanded] = useState(false);
+    const [children, setChildren] = useState<any[]>([]);
+    const load = async () => { setExpanded(!expanded); };
+
+    return (
+      <div className="border-l border-[#3A3A3A] pl-6 ml-4 relative group">
+        <div className="absolute left-0 top-5 w-4 h-[1px] bg-[#3A3A3A]" />
+        <div className="flex items-center gap-2 py-2 cursor-pointer" onClick={load}>
+          <span className="text-[10px] font-mono font-bold text-[#666666] uppercase tracking-widest">L4_SUBJECT</span>
+          <span className={`text-sm font-medium transition-colors ${expanded ? 'text-[#D97706]' : (topic.isPublished !== false ? 'text-[#E8E8E8]' : 'text-[#666666] italic')}`}>
+            {topic.name}
+          </span>
+          <ActionButtons type="TOPIC" item={topic} items={items} index={index} />
+          <a href="/admin/intelligence" onClick={(e) => e.stopPropagation()} className="ml-2 text-[9px] font-mono font-bold uppercase tracking-widest text-[#D97706] hover:underline">
+            Manage Micro-Nodes →
+          </a>
+        </div>
       </div>
     );
   };
@@ -204,13 +231,13 @@ export default function ContentTreePage() {
       <div className="border-l border-[#3A3A3A] pl-6 ml-4 relative group">
         <div className="absolute left-0 top-5 w-4 h-[1px] bg-[#3A3A3A]" />
         <div className="flex items-center gap-2 py-2 cursor-pointer" onClick={load}>
-          <span className="text-[10px] font-mono font-bold text-[#D97706] uppercase tracking-widest">L3</span>
+          <span className="text-[10px] font-mono font-bold text-[#D97706] uppercase tracking-widest">L3_PHASE</span>
           <span className={`font-bold transition-colors ${expanded ? 'text-[#D97706]' : 'text-[#E8E8E8]'} ${section.isPublished === false ? 'opacity-50' : ''}`}>
-             {section.name} <span className="text-[10px] font-mono font-bold text-[#666666] ml-2 tracking-widest">[{children.length > 0 ? children.length : '...'}_NODES]</span>
+             {section.name} <span className="text-[10px] font-mono font-bold text-[#666666] ml-2 tracking-widest">[{children.length > 0 ? children.length : '...'}_SUBJ]</span>
           </span>
           <ActionButtons 
             type="SECTION" item={section} items={items} index={index} 
-            isExpandedConfig={{ type: "TOPIC", mode: "CREATE", parentId: section.id, data: { name: "", nameTe: "", description: "", topicCode: "", displayOrder: children.length, isPublished: true }, btnText: "+ Add Topic" }} 
+            isExpandedConfig={{ type: "TOPIC", mode: "CREATE", parentId: section.id, data: { name: "", nameTe: "", description: "", topicCode: "", accessType: "FREE", priceInr: 0, displayOrder: children.length, isPublished: true }, btnText: "+ Add Subject" }} 
           />
         </div>
         {expanded && (
@@ -237,13 +264,13 @@ export default function ContentTreePage() {
       <div className="border-l border-[#3A3A3A] pl-6 ml-4 relative group">
         <div className="absolute left-0 top-5 w-4 h-[1px] bg-[#3A3A3A]" />
         <div className="flex items-center gap-2 py-2 cursor-pointer" onClick={load}>
-          <span className="text-[10px] font-mono font-bold text-[#D97706] uppercase tracking-widest">L2</span>
+          <span className="text-[10px] font-mono font-bold text-[#D97706] uppercase tracking-widest">L2_EXAM</span>
           <span className={`font-bold text-lg transition-colors ${expanded ? 'text-[#D97706]' : 'text-[#E8E8E8]'} ${sub.isPublished === false ? 'opacity-50' : ''}`}>
-            {sub.name} <span className="text-[10px] font-mono font-bold text-[#666666] ml-2 tracking-widest">[{children.length > 0 ? children.length : '...'}_SECT]</span>
+            {sub.name} <span className="text-[10px] font-mono font-bold text-[#666666] ml-2 tracking-widest">[{children.length > 0 ? children.length : '...'}_PHASE]</span>
           </span>
           <ActionButtons 
             type="SUBCATEGORY" item={sub} items={items} index={index} 
-            isExpandedConfig={{ type: "SECTION", mode: "CREATE", parentId: sub.id, data: { name: "", nameTe: "", description: "", displayOrder: children.length, isPublished: true }, btnText: "+ Add Section" }}
+            isExpandedConfig={{ type: "SECTION", mode: "CREATE", parentId: sub.id, data: { name: "", nameTe: "", description: "", accessType: "FREE", priceInr: 0, displayOrder: children.length, isPublished: true }, btnText: "+ Add Phase" }}
           />
         </div>
         {expanded && (
@@ -270,12 +297,12 @@ export default function ContentTreePage() {
       <div className={`mb-4 border border-[#3A3A3A] rounded bg-[#1C1C1C] p-4 group transition-colors ${expanded ? 'border-[#D97706]/30' : 'hover:border-[#D97706]/50'}`}>
         <div className="flex items-center gap-4 cursor-pointer" onClick={load}>
           <div className="flex items-center gap-2">
-            <span className="text-[10px] font-mono font-bold text-[#D97706] uppercase tracking-widest">L1 CORE</span>
+            <span className="text-[10px] font-mono font-bold text-[#D97706] uppercase tracking-widest">L1_COMMISSION</span>
             <span className="text-2xl font-serif text-[#E8E8E8] group-hover:text-[#D97706] transition-colors">{cat.name}</span>
           </div>
           <ActionButtons 
             type="CATEGORY" item={cat} items={items} index={index} 
-            isExpandedConfig={{ type: "SUBCATEGORY", mode: "CREATE", parentId: cat.id, data: { name: "", nameTe: "", description: "", imageUrl: "", displayOrder: children.length, isPublished: true }, btnText: "+ Add Subject" }}
+            isExpandedConfig={{ type: "SUBCATEGORY", mode: "CREATE", parentId: cat.id, data: { name: "", nameTe: "", description: "", imageUrl: "", accessType: "FREE", priceInr: 0, displayOrder: children.length, isPublished: true }, btnText: "+ Add Exam" }}
           />
         </div>
         {expanded && (
@@ -338,11 +365,44 @@ export default function ContentTreePage() {
               />
             </div>
 
+            {/* Pricing Engine */}
+            <div className="bg-[#1C1C1C] border border-[#D97706]/30 p-4 rounded-lg space-y-4">
+               <div>
+                  <h4 className="text-[#D97706] text-xs font-mono font-bold uppercase tracking-widest mb-1">Monetization Settings</h4>
+                  <p className="text-[10px] text-[#A0A0A0]">Lock this node entirely to only paid students via Razorpay.</p>
+               </div>
+               
+               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                     <label className="text-[10px] font-mono font-bold text-[#666666] uppercase tracking-widest ml-1">Access Type</label>
+                     <select 
+                        className="w-full bg-[#141414] border border-[#3A3A3A] rounded p-3 text-[#E8E8E8] font-mono text-sm focus:outline-none focus:border-[#D97706]/50"
+                        value={modalConfig.data.accessType || "FREE"}
+                        onChange={(e) => {
+                          handleInputChange("accessType", e.target.value);
+                          if (e.target.value === "FREE") handleInputChange("priceInr", 0);
+                        }}
+                     >
+                       <option value="FREE">FREE (Unrestricted)</option>
+                       <option value="PAID">PAID (Razorpay Paywall)</option>
+                     </select>
+                  </div>
+
+                  {modalConfig.data.accessType === "PAID" && (
+                    <AnimatedInput 
+                        label="Price in INR (₹)" type="number" name="priceInr" placeholder="499"
+                        value={modalConfig.data.priceInr || 0} onChange={(val) => handleInputChange("priceInr", Number(val))} 
+                        required 
+                    />
+                  )}
+               </div>
+            </div>
+
             {modalConfig.type === "CATEGORY" && (
                <div className="grid grid-cols-2 gap-6">
                  <div className="space-y-2">
-                   <label className="text-[10px] font-mono font-bold text-[#666666] uppercase tracking-widest ml-1">Entity Reference ID</label>
-                   <input type="number" className="w-full bg-[#141414] border border-[#3A3A3A] rounded p-4 text-[#E8E8E8] font-mono text-sm" value={modalConfig.data.commissionId || 1} onChange={(e) => handleInputChange("commissionId", e.target.value)} />
+                   <label className="text-[10px] font-mono font-bold text-[#666666] uppercase tracking-widest ml-1">Virtual Map Parent</label>
+                   <input type="number" disabled className="w-full bg-[#141414] border border-[#3A3A3A] rounded p-4 text-[#666666] font-mono text-sm opacity-50 cursor-not-allowed" value={0} />
                  </div>
                  <AnimatedInput 
                   label="Surface Asset URL" type="text" name="imageUrl" placeholder="https://..."
@@ -358,8 +418,8 @@ export default function ContentTreePage() {
               />
             )}
 
-            <button type="submit" className="w-full py-4 rounded bg-[#D97706] text-white font-bold text-sm hover:bg-[#F59E0B] transition-colors">
-              Commit Entry Configuration
+            <button type="submit" className="w-full py-4 rounded bg-[#D97706] text-white font-bold text-sm hover:bg-[#F59E0B] transition-colors uppercase tracking-widest">
+              Deploy Node Configurations
             </button>
           </form>
         </Modal>

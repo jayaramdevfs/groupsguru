@@ -52,6 +52,8 @@ public class SubCategoryService {
                 .category(category)
                 .isPublished(request.getIsPublished() != null ? request.getIsPublished() : true)
                 .displayOrder(request.getDisplayOrder() != null ? request.getDisplayOrder() : 0)
+                .accessType(request.getAccessType() != null ? request.getAccessType() : "FREE")
+                .priceInr(request.getPriceInr() != null ? request.getPriceInr() : 0.0)
                 .build();
 
         return mapToResponse(subCategoryRepository.save(subCategory));
@@ -76,6 +78,12 @@ public class SubCategoryService {
         }
         if (request.getDisplayOrder() != null) {
             subCategory.setDisplayOrder(request.getDisplayOrder());
+        }
+        if (request.getAccessType() != null) {
+            subCategory.setAccessType(request.getAccessType());
+        }
+        if (request.getPriceInr() != null) {
+            subCategory.setPriceInr(request.getPriceInr());
         }
 
         return mapToResponse(subCategoryRepository.save(subCategory));

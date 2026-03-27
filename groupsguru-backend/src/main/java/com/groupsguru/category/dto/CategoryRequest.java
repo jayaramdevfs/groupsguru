@@ -20,4 +20,7 @@ public class CategoryRequest {
     private Long commissionId;
     private Boolean isPublished;
     private Integer displayOrder;
+    
+    private String accessType;
+    private Double priceInr;
 }

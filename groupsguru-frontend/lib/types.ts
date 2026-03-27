@@ -288,6 +288,10 @@ export interface Exam {
   penaltyPerWrong: number;
   marksPerQuestion: number;
   isActive: boolean;
+  categoryId?: number;
+  subCategoryId?: number;
+  sectionId?: number;
+  topicId?: number;
   createdAt?: string;
   updatedAt?: string;
 }
@@ -305,6 +309,10 @@ export interface ExamRequest {
   penaltyPerWrong?: number;
   marksPerQuestion?: number;
   isActive?: boolean;
+  categoryId?: number;
+  subCategoryId?: number;
+  sectionId?: number;
+  topicId?: number;
 }
 
 export type AttemptStatus = 'IN_PROGRESS' | 'SUBMITTED' | 'EVALUATED';

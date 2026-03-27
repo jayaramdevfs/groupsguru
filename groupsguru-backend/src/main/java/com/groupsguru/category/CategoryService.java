@@ -47,6 +47,8 @@ public class CategoryService {
                 .isDeleted(false)
                 .isPublished(request.getIsPublished() != null ? request.getIsPublished() : true)
                 .displayOrder(request.getDisplayOrder() != null ? request.getDisplayOrder() : 0)
+                .accessType(request.getAccessType() != null ? request.getAccessType() : "FREE")
+                .priceInr(request.getPriceInr() != null ? request.getPriceInr() : 0.0)
                 .build();
         
         Category saved = categoryRepository.save(category);
@@ -79,6 +81,12 @@ public class CategoryService {
         }
         if (request.getDisplayOrder() != null) {
             category.setDisplayOrder(request.getDisplayOrder());
+        }
+        if (request.getAccessType() != null) {
+            category.setAccessType(request.getAccessType());
+        }
+        if (request.getPriceInr() != null) {
+            category.setPriceInr(request.getPriceInr());
         }
         
         Category updated = categoryRepository.save(category);

@@ -52,6 +52,8 @@ public class SectionService {
                 .subCategory(subCategory)
                 .isPublished(request.getIsPublished() != null ? request.getIsPublished() : true)
                 .displayOrder(request.getDisplayOrder() != null ? request.getDisplayOrder() : 0)
+                .accessType(request.getAccessType() != null ? request.getAccessType() : "FREE")
+                .priceInr(request.getPriceInr() != null ? request.getPriceInr() : 0.0)
                 .build();
 
         Section savedSection = sectionRepository.save(section);
@@ -73,6 +75,12 @@ public class SectionService {
         }
         if (request.getDisplayOrder() != null) {
             section.setDisplayOrder(request.getDisplayOrder());
+        }
+        if (request.getAccessType() != null) {
+            section.setAccessType(request.getAccessType());
+        }
+        if (request.getPriceInr() != null) {
+            section.setPriceInr(request.getPriceInr());
         }
 
         // Update subcategory if changed

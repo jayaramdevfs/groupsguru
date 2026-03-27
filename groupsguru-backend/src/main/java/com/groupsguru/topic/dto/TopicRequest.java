@@ -18,4 +18,7 @@ public class TopicRequest {
     private Long sectionId;
     private Boolean isPublished;
     private Integer displayOrder;
+    
+    private String accessType;
+    private Double priceInr;
 }

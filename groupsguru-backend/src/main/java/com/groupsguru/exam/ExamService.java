@@ -94,5 +94,10 @@ public class ExamService {
         if (req.getPenaltyPerWrong() != null) exam.setPenaltyPerWrong(req.getPenaltyPerWrong());
         if (req.getMarksPerQuestion() != null) exam.setMarksPerQuestion(req.getMarksPerQuestion());
         if (req.getIsActive() != null) exam.setIsActive(req.getIsActive());
+        
+        if (req.getCategoryId() != null) exam.setCategoryId(req.getCategoryId());
+        if (req.getSubCategoryId() != null) exam.setSubCategoryId(req.getSubCategoryId());
+        if (req.getSectionId() != null) exam.setSectionId(req.getSectionId());
+        if (req.getTopicId() != null) exam.setTopicId(req.getTopicId());
     }
 }
