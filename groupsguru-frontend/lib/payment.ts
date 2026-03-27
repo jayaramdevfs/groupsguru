@@ -1,8 +1,8 @@
 import backendApi from "./api";
 
 export const paymentApi = {
-  createOrder: async (entityType: string, entityId: number): Promise<string> => {
-    const res = await backendApi.post("/payments/create-order", { entityType, entityId });
+  createOrder: async (entityType: string, entityId: number, packageType?: string): Promise<string> => {
+    const res = await backendApi.post("/payments/create-order", { entityType, entityId, packageType });
     return res.data.data;
   },
   verifyPayment: async (orderId: string, paymentId: string, signature: string): Promise<void> => {

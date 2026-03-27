@@ -1,6 +1,6 @@
 # GroupsGuru â€” Master Sprint Plan (Vertical Slices)
 
-**Updated**: 2026-03-25 (Sprint 22 closed)
+**Updated**: 2026-03-27 (Sprint 27 closed)
 **Architecture**: Vertical Slicing â€” each sprint delivers Backend + Frontend + Mobile together
 
 ---
@@ -80,12 +80,12 @@ C:\GroupsGuru\Lms\
 | 24 | Test Series & Practice Mode | ✅ Done | ✅ Done | ➖ N/A |
 | 25 | Production Readiness | ✅ Done | ✅ Done | ✅ Done |
 | 26 | Native H2 Enforcement + Go Live | ✅ Done | ✅ Done | ✅ Done |
-| 27 | Architecture Foundation & Pricing | ⏳ Pending | ⏳ Pending | ⏳ Pending |
+| 27 | Architecture Foundation & Pricing | ✅ Done | ✅ Done | ✅ Done |
 | 28 | Intelligence Integration & Reader | ⏳ Pending | ⏳ Pending | ⏳ Pending |
 | 29 | The Concept Mock Loop | ⏳ Pending | ⏳ Pending | ⏳ Pending |
 | 30 | Full-Length Mastery & Tracking | ⏳ Pending | ⏳ Pending | ⏳ Pending |
 
-**Resume Point:** Sprint 27 starts the APPSC Group 1 Era (Vertical Slicing: Native + Web concurrently).
+**Resume Point:** Sprint 28 — Intelligence Integration & Reader (Vertical Slicing: Native + Web concurrently).
 
 ### Execution Order:
 ```

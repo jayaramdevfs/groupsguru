@@ -49,42 +49,59 @@ public class DataSeeder implements CommandLineRunner {
                 .imageUrl("https://images.unsplash.com/photo-1521737604893-d14cc237f11d")
                 .build());
 
-        // Level 2: SUBCATEGORY (Group 1)
-        SubCategory group1 = subCategoryRepository.save(SubCategory.builder()
+        // Level 2: CATEGORY (Group 1) - with pricing
+        Category group1 = categoryRepository.save(Category.builder()
                 .name("Group 1 Services")
                 .nameTe("గ్రూప్ 1 సర్వీసెస్")
                 .description("Premium preparation for APPSC Group 1 services")
-                .category(appsc)
+                .commissionId(appscId)
+                .imageUrl("https://images.unsplash.com/photo-1521737604893-d14cc237f11d")
+                .priceInr(1300.0)
+                .prelimsPriceInr(700.0)
+                .mainsPriceInr(900.0)
                 .build());
 
-        // Level 3: SECTION (Prelims)
-        Section prelims = sectionRepository.save(Section.builder()
-                .name("Prelims (Screening Test)")
-                .nameTe("ప్రిలిమ్స్ (స్క్రీనింగ్ టెస్ట్)")
-                .sectionCode("G1-PRE")
-                .subCategory(group1)
+        // Level 3: SUBCATEGORY (Subjects with Phase)
+        SubCategory history = subCategoryRepository.save(SubCategory.builder()
+                .name("History & Culture")
+                .nameTe("చరిత్ర")
+                .phase("PRELIMS")
+                .category(group1)
                 .build());
 
-        // Level 3: SECTION (Mains)
-        Section mains = sectionRepository.save(Section.builder()
-                .name("Mains (Written Exam)")
-                .nameTe("మెయిన్స్ (రాత పరీక్ష)")
-                .sectionCode("G1-MAINS")
-                .subCategory(group1)
+        SubCategory polity = subCategoryRepository.save(SubCategory.builder()
+                .name("Constitution & Polity")
+                .nameTe("రాజ్యాంగం")
+                .phase("PRELIMS")
+                .category(group1)
                 .build());
 
-        // Level 4: TOPIC (History & Culture - Prelims)
-        topicRepository.save(Topic.builder().name("History & Culture").nameTe("చరిత్ర").topicCode("PRE-HIST").section(prelims).displayOrder(1).isPublished(true).build());
-        topicRepository.save(Topic.builder().name("Constitution & Polity").nameTe("రాజ్యాంగం").topicCode("PRE-POL").section(prelims).displayOrder(2).isPublished(true).build());
-        topicRepository.save(Topic.builder().name("Indian & AP Economy").nameTe("ఆర్థిక వ్యవస్థ").topicCode("PRE-ECO").section(prelims).displayOrder(3).isPublished(true).build());
-        topicRepository.save(Topic.builder().name("Geography").nameTe("భూగోళశాస్త్రం").topicCode("PRE-GEO").section(prelims).displayOrder(4).isPublished(true).build());
+        SubCategory paper2 = subCategoryRepository.save(SubCategory.builder()
+                .name("Paper II: History, Culture and Geography")
+                .nameTe("పేపర్ II")
+                .phase("MAINS")
+                .category(group1)
+                .build());
 
-        // Level 4: TOPIC (Mains Papers)
-        topicRepository.save(Topic.builder().name("Paper I: General Essay").nameTe("పేపర్ I").topicCode("MAIN-P1").section(mains).displayOrder(1).isPublished(true).build());
-        topicRepository.save(Topic.builder().name("Paper II: History, Culture and Geography").nameTe("పేపర్ II").topicCode("MAIN-P2").section(mains).displayOrder(2).isPublished(true).build());
-        topicRepository.save(Topic.builder().name("Paper III: Polity, Constitution, Governance").nameTe("పేపర్ III").topicCode("MAIN-P3").section(mains).displayOrder(3).isPublished(true).build());
-        topicRepository.save(Topic.builder().name("Paper IV: Economy and Development").nameTe("పేపర్ IV").topicCode("MAIN-P4").section(mains).displayOrder(4).isPublished(true).build());
-        topicRepository.save(Topic.builder().name("Paper V: Science, Technology").nameTe("పేపర్ V").topicCode("MAIN-P5").section(mains).displayOrder(5).isPublished(true).build());
+        // Level 4: SECTION (Blueprint Sections)
+        Section ancientIndia = sectionRepository.save(Section.builder()
+                .name("Ancient India")
+                .nameTe("ప్రాచీన భారతదేశం")
+                .sectionCode("HIST-ANC")
+                .subCategory(history)
+                .build());
+                
+        Section modernIndia = sectionRepository.save(Section.builder()
+                .name("Modern India")
+                .nameTe("ఆధునిక భారతదేశం")
+                .sectionCode("HIST-MOD")
+                .subCategory(history)
+                .build());
+
+        // Level 5: TOPIC (Chapters)
+        topicRepository.save(Topic.builder().name("Pre-Historic Cultures in India").nameTe("చరిత్ర").topicCode("PRE-HIST").section(ancientIndia).displayOrder(1).isPublished(true).build());
+        topicRepository.save(Topic.builder().name("Indus Valley Civilization").nameTe("సింధు నది").topicCode("H1-02").section(ancientIndia).displayOrder(2).isPublished(true).build());
+        topicRepository.save(Topic.builder().name("Vedic Society").nameTe("వేద సమాజం").topicCode("H1-03").section(ancientIndia).displayOrder(3).isPublished(true).build());
 
         System.out.println("✅ Seeded APPSC -> Group 1 -> Prelims/Mains hierarchical standard structure.");
     }

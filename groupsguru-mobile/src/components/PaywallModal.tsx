@@ -38,10 +38,10 @@ export const PaywallModal = ({
 }: PaywallModalProps) => {
   const [loading, setLoading] = useState(false);
 
-  const handlePayment = async (type: string, id: number, name: string, amount: number) => {
+  const handlePayment = async (type: string, id: number, name: string, amount: number, packageType?: string) => {
     setLoading(true);
     try {
-      const orderId = await paymentService.createOrder(type, id);
+      const orderId = await paymentService.createOrder(type, id, packageType);
 
       const options = {
         description: `Purchase access to ${name}`,
@@ -137,9 +137,9 @@ export const PaywallModal = ({
               <Text style={styles.bundleHeader}>Recommended Bundles</Text>
               {parentOptions.map((opt) => (
                 <TouchableOpacity
-                  key={`${opt.entityType}-${opt.entityId}`}
+                  key={`${opt.entityType}-${opt.entityId}-${opt.packageType || 'COMPLETE'}`}
                   style={styles.bundleCard}
-                  onPress={() => handlePayment(opt.entityType, opt.entityId, opt.name, opt.price)}
+                  onPress={() => handlePayment(opt.entityType, opt.entityId, opt.name, opt.price, opt.packageType)}
                   disabled={loading}
                   activeOpacity={0.7}
                 >

@@ -63,6 +63,7 @@ export interface SubCategory {
   syllabusCode?: string;
   categoryId: number;
   categoryName: string;
+  phase?: string;
   accessType: string;
   priceInr?: number;
   isPublished?: boolean;

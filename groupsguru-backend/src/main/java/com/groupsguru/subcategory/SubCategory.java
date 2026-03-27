@@ -45,6 +45,10 @@ public class SubCategory {
     @Column(name = "price_inr")
     private Double priceInr;
 
+    @Column(name = "phase", length = 20)
+    @Builder.Default
+    private String phase = "PRELIMS"; // PRELIMS, MAINS, BOTH
+
     @Column(name = "is_published", nullable = false, columnDefinition = "boolean default true")
     @Builder.Default
     private boolean isPublished = true;

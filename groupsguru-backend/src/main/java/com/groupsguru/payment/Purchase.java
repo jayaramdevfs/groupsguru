@@ -24,6 +24,8 @@ public class Purchase {
 
     private Long entityId;
 
+    private String packageType; // COMPLETE, PRELIMS, MAINS
+
     private String razorpayOrderId;
 
     private String razorpayPaymentId;

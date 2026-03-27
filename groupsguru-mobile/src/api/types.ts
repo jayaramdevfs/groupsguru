@@ -34,6 +34,7 @@ export interface SubCategory {
   descriptionTe: string;
   syllabusCode: string;
   categoryId: number;
+  phase?: string;
   accessType?: string;
   priceInr?: number;
 }

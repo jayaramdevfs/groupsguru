@@ -39,10 +39,10 @@ export default function PaywallModal({
     };
   }, []);
 
-  const handlePayment = async (type: string, id: number, name: string, price: number) => {
+  const handlePayment = async (type: string, id: number, name: string, price: number, packageType?: string) => {
     setLoading(true);
     try {
-      const orderId = await paymentApi.createOrder(type, id);
+      const orderId = await paymentApi.createOrder(type, id, packageType);
 
       const options = {
         key: "rzp_test_SU3wy02Xv8CfbL", // Test Key
@@ -140,8 +140,8 @@ export default function PaywallModal({
             </div>
             {accessInfo.parentOptions.map((parent: ParentOption) => (
               <button
-                key={`${parent.entityType}-${parent.entityId}`}
-                onClick={() => handlePayment(parent.entityType, parent.entityId, parent.name, parent.price)}
+                key={`${parent.entityType}-${parent.entityId}-${parent.packageType || 'COMPLETE'}`}
+                onClick={() => handlePayment(parent.entityType, parent.entityId, parent.name, parent.price, parent.packageType)}
                 disabled={loading}
                 className="w-full p-4 rounded-lg bg-[#141414] border border-[#3A3A3A] hover:bg-[#363636] transition-colors flex items-center justify-between group"
               >

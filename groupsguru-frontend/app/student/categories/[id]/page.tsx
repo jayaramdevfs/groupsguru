@@ -19,6 +19,11 @@ export default function StudentSubCategories() {
   const [subCategories, setSubCategories] = useState<SubCategory[]>([]);
   const [category, setCategory] = useState<Category | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [activeTab, setActiveTab] = useState<string>("PRELIMS");
+
+  const filteredSubs = subCategories.filter(s => 
+    !s.phase || s.phase === activeTab || s.phase === "BOTH"
+  );
 
   const fetchData = useCallback(async () => {
     setIsLoading(true);
@@ -71,6 +76,25 @@ export default function StudentSubCategories() {
           </div>
         </header>
 
+        {/* Phase Tabs */}
+        {!isLoading && subCategories.length > 0 && (
+          <div className="flex space-x-2 mb-8 border-b border-[#3A3A3A]">
+            {["PRELIMS", "MAINS"].map(tab => (
+              <button
+                key={tab}
+                onClick={() => setActiveTab(tab)}
+                className={`px-6 py-3 text-[11px] font-bold tracking-[0.2em] uppercase transition-colors border-b-2 ${
+                  activeTab === tab 
+                    ? "border-[#D97706] text-[#D97706]" 
+                    : "border-transparent text-[#666666] hover:text-[#A0A0A0]"
+                }`}
+              >
+                {tab}
+              </button>
+            ))}
+          </div>
+        )}
+
         {/* SubCategory Grid */}
         {isLoading ? (
           <div className="flex items-center justify-center py-20">
@@ -78,7 +102,7 @@ export default function StudentSubCategories() {
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {subCategories.map((sub) => (
+            {filteredSubs.map((sub) => (
               <Link
                 key={sub.id}
                 href={`/student/categories/${categoryId}/${sub.id}`}
@@ -118,9 +142,9 @@ export default function StudentSubCategories() {
           </div>
         )}
 
-        {subCategories.length === 0 && !isLoading && (
+        {filteredSubs.length === 0 && !isLoading && (
           <div className="text-center py-20 bg-[#1E1E1E] border border-[#3A3A3A] rounded-lg">
-            <p className="text-[#666666] font-mono text-sm uppercase tracking-widest">No subjects available yet</p>
+            <p className="text-[#666666] font-mono text-sm uppercase tracking-widest">No subjects available for this phase</p>
           </div>
         )}
       </div>

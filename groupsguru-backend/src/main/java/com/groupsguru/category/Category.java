@@ -43,6 +43,12 @@ public class Category {
     @Column(name = "price_inr")
     private Double priceInr;
 
+    @Column(name = "prelims_price_inr")
+    private Double prelimsPriceInr;
+
+    @Column(name = "mains_price_inr")
+    private Double mainsPriceInr;
+
     @Column(name = "is_published", nullable = false, columnDefinition = "boolean default true")
     @Builder.Default
     private boolean isPublished = true;

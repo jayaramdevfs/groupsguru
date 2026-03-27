@@ -20,6 +20,7 @@ public class SubCategoryResponse {
     private String categoryName;
     private String accessType;
     private Double priceInr;
+    private String phase;
     private boolean isPublished;
     private Integer displayOrder;
 }

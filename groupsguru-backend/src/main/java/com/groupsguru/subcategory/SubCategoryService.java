@@ -109,6 +109,7 @@ public class SubCategoryService {
                 .categoryName(subCategory.getCategory().getName())
                 .accessType(subCategory.getAccessType())
                 .priceInr(subCategory.getPriceInr())
+                .phase(subCategory.getPhase())
                 .isPublished(subCategory.isPublished())
                 .displayOrder(subCategory.getDisplayOrder())
                 .build();

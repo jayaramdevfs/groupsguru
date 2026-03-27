@@ -18,5 +18,6 @@ public class AccessCheckResponse {
         private Long entityId;
         private String name;
         private Double price;
+        private String packageType;
     }
 }

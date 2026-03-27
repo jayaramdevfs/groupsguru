@@ -5,6 +5,7 @@ export interface ParentOption {
   entityId: number;
   name: string;
   price: number;
+  packageType?: string;
 }
 
 export interface AccessCheckResponse {

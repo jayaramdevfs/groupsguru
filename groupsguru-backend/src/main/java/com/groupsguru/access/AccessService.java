@@ -31,6 +31,7 @@ public class AccessService {
         
         Long parentId = null;
         String parentType = null;
+        String requiredPhase = null;
         
         switch(entityType.toUpperCase()) {
             case "COMMISSION":
@@ -55,6 +56,7 @@ public class AccessService {
                 name = sub.getName();
                 parentId = sub.getCategory().getId();
                 parentType = "CATEGORY";
+                requiredPhase = sub.getPhase();
                 break;
             case "SECTION":
                 Section sec = sectionRepo.findById(entityId).orElseThrow();
@@ -63,6 +65,7 @@ public class AccessService {
                 name = sec.getName();
                 parentId = sec.getSubCategory().getId();
                 parentType = "SUB_CATEGORY";
+                requiredPhase = sec.getSubCategory().getPhase();
                 break;
             case "TOPIC":
                 Topic top = topicRepo.findById(entityId).orElseThrow();
@@ -71,6 +74,7 @@ public class AccessService {
                 name = top.getName();
                 parentId = top.getSection().getId();
                 parentType = "SECTION";
+                requiredPhase = top.getSection().getSubCategory().getPhase();
                 break;
             case "MICRO_TOPIC":
                 MicroTopic mt = microTopicRepo.findById(entityId).orElseThrow();
@@ -80,6 +84,8 @@ public class AccessService {
                 parentId = mt.getTopicId();
                 if (parentId != null) {
                     parentType = "TOPIC";
+                    Topic pTop = topicRepo.findById(parentId).orElse(null);
+                    if (pTop != null) requiredPhase = pTop.getSection().getSubCategory().getPhase();
                 }
                 break;
             default:
@@ -91,14 +97,19 @@ public class AccessService {
         }
 
         // 2. Check purchases in DB
-        boolean purchased = purchaseRepository.findByUserIdAndEntityTypeAndEntityIdAndStatus(userId, entityType, entityId, "SUCCESS").isPresent();
+        boolean purchased = false;
+        List<com.groupsguru.payment.Purchase> directPurchases = purchaseRepository.findAllByUserIdAndEntityTypeAndEntityIdAndStatus(userId, entityType, entityId, "SUCCESS");
+        for (com.groupsguru.payment.Purchase p : directPurchases) {
+            String pt = p.getPackageType();
+            if (pt == null || "COMPLETE".equals(pt) || "BOTH".equals(requiredPhase) || pt.equals(requiredPhase) || requiredPhase == null) {
+                purchased = true;
+                break;
+            }
+        }
         
-        // 3. Fallback: Check if any parent is purchased (recursive check not strictly needed if we check direct parents, but let's check one level up for now if needed, or rely on frontend to offer bundles)
-        // Actually, the current logic is: if you buy a Category, you get all SubCategories.
-        // So I should check if any parent is purchased.
-        
+        // 3. Fallback: Check if any parent is purchased
         if (!purchased && parentType != null && parentId != null) {
-            purchased = hasPurchasedParent(userId, parentType, parentId);
+            purchased = hasPurchasedParent(userId, parentType, parentId, requiredPhase);
         }
         
         List<AccessCheckResponse.ParentOption> parentOptions = new ArrayList<>();
@@ -121,13 +132,19 @@ public class AccessService {
             case "COMMISSION":
                 Commission comm = commissionRepo.findById(id).orElse(null);
                 if (comm != null) {
-                    addOption(options, type, id, comm.getName(), comm.getPriceInr());
+                    addOption(options, type, id, comm.getName(), comm.getPriceInr(), "COMPLETE");
                 }
                 break;
             case "CATEGORY":
                 Category cat = categoryRepo.findById(id).orElse(null);
                 if (cat != null) {
-                    addOption(options, type, id, cat.getName(), cat.getPriceInr());
+                    addOption(options, type, id, cat.getName() + " (Complete)", cat.getPriceInr(), "COMPLETE");
+                    if (cat.getPrelimsPriceInr() != null && cat.getPrelimsPriceInr() > 0) {
+                        addOption(options, type, id, cat.getName() + " (Prelims)", cat.getPrelimsPriceInr(), "PRELIMS");
+                    }
+                    if (cat.getMainsPriceInr() != null && cat.getMainsPriceInr() > 0) {
+                        addOption(options, type, id, cat.getName() + " (Mains)", cat.getMainsPriceInr(), "MAINS");
+                    }
                     nextParentId = cat.getCommissionId();
                     nextParentType = "COMMISSION";
                 }
@@ -135,7 +152,7 @@ public class AccessService {
             case "SUB_CATEGORY":
                 SubCategory sub = subCategoryRepo.findById(id).orElse(null);
                 if (sub != null) {
-                    addOption(options, type, id, sub.getName(), sub.getPriceInr());
+                    addOption(options, type, id, sub.getName(), sub.getPriceInr(), "COMPLETE");
                     nextParentId = sub.getCategory().getId();
                     nextParentType = "CATEGORY";
                 }
@@ -143,7 +160,7 @@ public class AccessService {
             case "SECTION":
                 Section sec = sectionRepo.findById(id).orElse(null);
                 if (sec != null) {
-                    addOption(options, type, id, sec.getName(), sec.getPriceInr());
+                    addOption(options, type, id, sec.getName(), sec.getPriceInr(), "COMPLETE");
                     nextParentId = sec.getSubCategory().getId();
                     nextParentType = "SUB_CATEGORY";
                 }
@@ -151,7 +168,7 @@ public class AccessService {
             case "TOPIC":
                 Topic top = topicRepo.findById(id).orElse(null);
                 if (top != null) {
-                    addOption(options, type, id, top.getName(), top.getPriceInr());
+                    addOption(options, type, id, top.getName(), top.getPriceInr(), "COMPLETE");
                     nextParentId = top.getSection().getId();
                     nextParentType = "SECTION";
                 }
@@ -163,20 +180,26 @@ public class AccessService {
         }
     }
     
-    private void addOption(List<AccessCheckResponse.ParentOption> options, String type, Long id, String name, Double price) {
+    private void addOption(List<AccessCheckResponse.ParentOption> options, String type, Long id, String name, Double price, String packageType) {
         if (price != null && price > 0) {
             options.add(AccessCheckResponse.ParentOption.builder()
                     .entityType(type)
                     .entityId(id)
                     .name(name)
                     .price(price)
+                    .packageType(packageType)
                     .build());
         }
     }
 
-    private boolean hasPurchasedParent(Long userId, String parentType, Long parentId) {
-        boolean purchased = purchaseRepository.findByUserIdAndEntityTypeAndEntityIdAndStatus(userId, parentType, parentId, "SUCCESS").isPresent();
-        if (purchased) return true;
+    private boolean hasPurchasedParent(Long userId, String parentType, Long parentId, String requiredPhase) {
+        List<com.groupsguru.payment.Purchase> parentPurchases = purchaseRepository.findAllByUserIdAndEntityTypeAndEntityIdAndStatus(userId, parentType, parentId, "SUCCESS");
+        for (com.groupsguru.payment.Purchase p : parentPurchases) {
+            String pt = p.getPackageType();
+            if (pt == null || "COMPLETE".equals(pt) || "BOTH".equals(requiredPhase) || pt.equals(requiredPhase) || requiredPhase == null) {
+                return true;
+            }
+        }
 
         // Recursively check parents
         // Get parent's parent
@@ -215,7 +238,7 @@ public class AccessService {
         }
 
         if (nextParentType != null && nextParentId != null) {
-            return hasPurchasedParent(userId, nextParentType, nextParentId);
+            return hasPurchasedParent(userId, nextParentType, nextParentId, requiredPhase);
         }
 
         return false;

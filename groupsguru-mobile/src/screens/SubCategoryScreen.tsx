@@ -32,6 +32,7 @@ type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
 const SubCategoryScreen = () => {
   const [subCategories, setSubCategories] = useState<SubCategory[]>([]);
   const [loading, setLoading] = useState(true);
+  const [activeTab, setActiveTab] = useState<string>("PRELIMS");
   const { language } = useLanguage();
   const navigation = useNavigation<NavigationProp>();
   const route = useRoute<SubCategoryScreenRouteProp>();
@@ -52,6 +53,10 @@ const SubCategoryScreen = () => {
   useEffect(() => {
     fetchSubCategories();
   }, [fetchSubCategories]);
+
+  const filteredSubs = subCategories.filter(s => 
+    !s.phase || s.phase === activeTab || s.phase === "BOTH"
+  );
 
   const renderSubCategory = ({ item }: { item: SubCategory }) => (
     <TouchableOpacity 
@@ -108,17 +113,34 @@ const SubCategoryScreen = () => {
         subtitle={language === 'en' ? categoryName : categoryNameTe}
       />
 
+      {/* Phase Tabs */}
+      {!loading && subCategories.length > 0 && (
+        <View style={styles.tabContainer}>
+          {["PRELIMS", "MAINS"].map(tab => (
+            <TouchableOpacity 
+              key={tab} 
+              onPress={() => setActiveTab(tab)}
+              style={[styles.tabButton, activeTab === tab && styles.activeTabButton]}
+            >
+              <Text style={[styles.tabText, activeTab === tab && styles.activeTabText]}>
+                {tab}
+              </Text>
+            </TouchableOpacity>
+          ))}
+        </View>
+      )}
+
       {loading ? (
         <View style={styles.center}>
           <ActivityIndicator size="small" color={colors.accent} />
         </View>
-      ) : subCategories.length === 0 ? (
+      ) : filteredSubs.length === 0 ? (
         <View style={styles.center}>
-          <Text style={styles.emptyText}>No subjects found for this category.</Text>
+          <Text style={styles.emptyText}>No subjects available for this phase.</Text>
         </View>
       ) : (
         <FlatList
-          data={subCategories}
+          data={filteredSubs}
           renderItem={renderSubCategory}
           keyExtractor={(item) => item.id.toString()}
           contentContainerStyle={styles.list}
@@ -212,5 +234,29 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: "500",
     fontFamily: typography.mono.fontFamily,
+  },
+  tabContainer: {
+    flexDirection: "row",
+    borderBottomWidth: 1,
+    borderBottomColor: colors.border,
+  },
+  tabButton: {
+    paddingVertical: spacing.md,
+    paddingHorizontal: spacing.lg,
+    borderBottomWidth: 2,
+    borderBottomColor: "transparent",
+  },
+  activeTabButton: {
+    borderBottomColor: colors.accent,
+  },
+  tabText: {
+    color: colors.fgMuted,
+    fontSize: 12,
+    fontWeight: "bold",
+    letterSpacing: 2,
+    fontFamily: typography.mono.fontFamily,
+  },
+  activeTabText: {
+    color: colors.accent,
   },
 });

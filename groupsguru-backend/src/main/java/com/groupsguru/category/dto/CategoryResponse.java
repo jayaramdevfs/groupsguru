@@ -20,6 +20,8 @@ public class CategoryResponse {
     private Long commissionId;
     private String accessType;
     private Double priceInr;
+    private Double prelimsPriceInr;
+    private Double mainsPriceInr;
     private boolean isPublished;
     private Integer displayOrder;
     private LocalDateTime createdAt;
@@ -36,6 +38,8 @@ public class CategoryResponse {
                 .commissionId(category.getCommissionId())
                 .accessType(category.getAccessType())
                 .priceInr(category.getPriceInr())
+                .prelimsPriceInr(category.getPrelimsPriceInr())
+                .mainsPriceInr(category.getMainsPriceInr())
                 .isPublished(category.isPublished())
                 .displayOrder(category.getDisplayOrder())
                 .createdAt(category.getCreatedAt())

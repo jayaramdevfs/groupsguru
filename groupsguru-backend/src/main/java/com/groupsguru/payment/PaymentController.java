@@ -26,6 +26,24 @@ public class PaymentController {
         var accessInfo = accessService.checkAccess(userId, request.getEntityType(), request.getEntityId());
         Double price = accessInfo.getPrice();
         
+        // If they specify a packageType for a CATEGORY, we need to find that exact parentOption price
+        if (request.getPackageType() != null && !request.getPackageType().isEmpty()) {
+            boolean foundPackage = false;
+            for (var opt : accessInfo.getParentOptions()) {
+                if (opt.getEntityType().equalsIgnoreCase(request.getEntityType()) 
+                    && opt.getEntityId().equals(request.getEntityId())
+                    && request.getPackageType().equalsIgnoreCase(opt.getPackageType())) {
+                    price = opt.getPrice();
+                    foundPackage = true;
+                    break;
+                }
+            }
+            if (!foundPackage && "CATEGORY".equalsIgnoreCase(request.getEntityType())) {
+                // strict check, if packageType didn't match an option (e.g., they asked for MAINS but no mains price exists)
+                return ResponseEntity.badRequest().body(ApiResponse.error("Invalid package type for this category"));
+            }
+        }
+
         if (price == null || price <= 0) {
             return ResponseEntity.badRequest().body(ApiResponse.error("Invalid price or entity is free"));
         }
@@ -37,6 +55,7 @@ public class PaymentController {
                 .userId(userId)
                 .entityType(request.getEntityType())
                 .entityId(request.getEntityId())
+                .packageType(request.getPackageType() != null && !request.getPackageType().isEmpty() ? request.getPackageType().toUpperCase() : "COMPLETE")
                 .razorpayOrderId(orderId)
                 .amount(price)
                 .currency("INR")
