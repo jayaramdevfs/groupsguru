@@ -7,6 +7,7 @@ import com.razorpay.RazorpayException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/payments")
@@ -19,7 +20,7 @@ public class PaymentController {
     private final AccessService accessService;
 
     @PostMapping("/create-order")
-    public ResponseEntity<ApiResponse<String>> createOrder(@RequestBody CreateOrderRequest request) throws RazorpayException {
+    public ResponseEntity<ApiResponse<String>> createOrder(@Valid @RequestBody CreateOrderRequest request) throws RazorpayException {
         Long userId = authService.getCurrentUser().getId();
         
         // Use AccessService to get the price
@@ -68,7 +69,7 @@ public class PaymentController {
     }
 
     @PostMapping("/verify")
-    public ResponseEntity<ApiResponse<String>> verifyPayment(@RequestBody VerifyPaymentRequest request) {
+    public ResponseEntity<ApiResponse<String>> verifyPayment(@Valid @RequestBody VerifyPaymentRequest request) {
         boolean isValid = razorpayService.verifySignature(
                 request.getRazorpayOrderId(),
                 request.getRazorpayPaymentId(),

@@ -17,7 +17,7 @@ public interface QuestionRepository extends JpaRepository<Question, Long> {
     java.util.List<Question> findBySubjectAndIsDeletedFalse(String subject);
     
     java.util.List<Question> findByMicroTopicIdAndIsDeletedFalse(String microTopicId);
-    
+
     long countByMicroTopicIdAndIsDeletedFalse(String microTopicId);
     
     long countByIsDeletedFalse();

@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.security.Key;
 import java.util.Date;
+import jakarta.annotation.PostConstruct;
 
 @Service
 public class JwtService {
@@ -18,6 +19,16 @@ public class JwtService {
 
     @Value("${jwt.expiration}")
     private long expiration;
+
+    @PostConstruct
+    public void validateSecret() {
+        if (secret == null || secret.isBlank()) {
+            throw new IllegalStateException("JWT_SECRET must be configured. Set the JWT_SECRET environment variable.");
+        }
+        if (secret.length() < 32) {
+            throw new IllegalStateException("JWT_SECRET must be at least 32 characters for HS256 security.");
+        }
+    }
 
     private Key getSigningKey() {
         return Keys.hmacShaKeyFor(secret.getBytes());

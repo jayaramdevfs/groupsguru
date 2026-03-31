@@ -1,24 +1,24 @@
 package com.groupsguru.question.dto;
 
 import lombok.Data;
-
+import jakarta.validation.constraints.*;
 @Data
 public class QuestionRequest {
     private String questionCode;
-    private String questionTextEn;
+    @NotBlank private String questionTextEn;
     private String questionTextTe;
-    private String optionAEn;
+    @NotBlank private String optionAEn;
     private String optionATe;
-    private String optionBEn;
+    @NotBlank private String optionBEn;
     private String optionBTe;
-    private String optionCEn;
+    @NotBlank private String optionCEn;
     private String optionCTe;
-    private String optionDEn;
+    @NotBlank private String optionDEn;
     private String optionDTe;
-    private String correctOption;
+    @NotBlank private String correctOption;
     private String explanationEn;
     private String explanationTe;
-    private String microTopicId;
+    @NotBlank private String microTopicId;
     private String subject;
     private String difficulty;
     private String cognitiveLevel;

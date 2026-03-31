@@ -20,12 +20,19 @@ public class RateLimitFilter extends OncePerRequestFilter {
     private static final int MAX_REQUESTS_PER_MINUTE = 10;
     private final Map<String, UserRequests> requestCache = new ConcurrentHashMap<>();
 
+    private boolean shouldRateLimit(String path) {
+        return path.equals("/api/auth/login")
+            || path.equals("/api/auth/register")
+            || path.startsWith("/api/admin/questions/bulk")
+            || path.startsWith("/api/payments");
+    }
+
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
 
         String path = request.getRequestURI();
-        if (path.equals("/api/auth/login") || path.equals("/api/auth/register")) {
+        if (shouldRateLimit(path)) {
             String clientIp = getClientIp(request);
             if (isRateLimited(clientIp)) {
                 response.setStatus(HttpStatus.TOO_MANY_REQUESTS.value());

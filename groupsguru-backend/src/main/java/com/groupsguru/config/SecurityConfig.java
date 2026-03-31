@@ -27,7 +27,17 @@ public class SecurityConfig {
         http
                 .cors(cors -> {}) // use CorsConfig bean
                 .csrf(csrf -> csrf.disable())
-                .headers(headers -> headers.frameOptions(frame -> frame.sameOrigin())) // For H2 console
+                .headers(headers -> {
+                    if (isProduction) {
+                        headers.frameOptions(frame -> frame.deny());
+                        headers.httpStrictTransportSecurity(hsts -> hsts
+                            .includeSubDomains(true)
+                            .maxAgeInSeconds(31536000));
+                    } else {
+                        headers.frameOptions(frame -> frame.sameOrigin());
+                    }
+                    headers.contentTypeOptions(contentType -> {});
+                })
                 .sessionManagement(session ->
                         session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> {
@@ -35,7 +45,8 @@ public class SecurityConfig {
                             auth.requestMatchers("/h2-console/**").permitAll();
                         }
                         auth.requestMatchers("/api/health").permitAll()
-                        .requestMatchers("/api/auth/login", "/api/auth/register", "/api/auth/logout", "/api/access/**", "/api/commissions/**", "/api/categories/**", "/api/subcategories/**", "/api/sections/**", "/api/topics/**", "/api/registry/**", "/api/questions/**").permitAll()
+                        .requestMatchers("/api/auth/login", "/api/auth/register", "/api/auth/logout").permitAll()
+                        .requestMatchers(org.springframework.http.HttpMethod.GET, "/api/access/**", "/api/commissions/**", "/api/categories/**", "/api/subcategories/**", "/api/sections/**", "/api/topics/**", "/api/registry/**", "/api/questions/**").permitAll()
                         .requestMatchers(org.springframework.http.HttpMethod.GET, "/api/content/**").permitAll()
                         .requestMatchers(org.springframework.http.HttpMethod.GET, "/api/exams", "/api/exams/*").permitAll()
                         .requestMatchers("/api/exams/**").authenticated()

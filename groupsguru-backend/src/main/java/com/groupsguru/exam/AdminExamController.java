@@ -5,6 +5,7 @@ import com.groupsguru.exam.dto.AssignQuestionsRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import jakarta.validation.Valid;
 
 import java.util.List;
 
@@ -21,12 +22,12 @@ public class AdminExamController {
     }
 
     @PostMapping
-    public ResponseEntity<Exam> create(@RequestBody ExamRequest request) {
+    public ResponseEntity<Exam> create(@Valid @RequestBody ExamRequest request) {
         return ResponseEntity.ok(service.create(request));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Exam> update(@PathVariable Long id, @RequestBody ExamRequest request) {
+    public ResponseEntity<Exam> update(@PathVariable Long id, @Valid @RequestBody ExamRequest request) {
         return ResponseEntity.ok(service.update(id, request));
     }
 

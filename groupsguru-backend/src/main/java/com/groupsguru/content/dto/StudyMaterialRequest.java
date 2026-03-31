@@ -1,15 +1,15 @@
 package com.groupsguru.content.dto;
 
 import lombok.Data;
-
+import jakarta.validation.constraints.*;
 @Data
 public class StudyMaterialRequest {
-    private String title;
+    @NotBlank private String title;
     private String titleTe;
     private String description;
     private String descriptionTe;
     private String entityType;
-    private Long entityId;
+    @NotNull private Long entityId;
     private String fileType;
     private String subject;
     private String accessType;

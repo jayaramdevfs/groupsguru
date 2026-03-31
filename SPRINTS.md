@@ -1414,5 +1414,33 @@ Prediction_Confidence = 0.30 * Frequency + 0.15 * Depth + 0.25 * SyllabusPriorit
 > Hardening, security, and deployment preparation. Externalized secrets, rate limiting, health checks, SEO metadata, branded error pages, and production launcher.
 > **Documentation:** `docs/sprints/S25-closure.md`
 
+---
+
+## Sprint 28 â€” Security Audit & Hardening âœ… DONE
+> Comprehensive 15-point security audit performed and all fixes applied.
+
+### Changes Applied:
+1. **Secrets Management** â€” Removed hardcoded JWT_SECRET, RAZORPAY_KEY_ID, RAZORPAY_KEY_SECRET defaults from `application.yaml`. Dev profile provides safe defaults; production requires explicit env vars. App fails to start without them (PostConstruct validation on JwtService).
+2. **Cookie Security** â€” Production profile enforces `secure: true` and `same-site: Strict`.
+3. **Endpoint Permissions** â€” Public content endpoints restricted to GET-only. POST/PUT/DELETE require authentication.
+4. **Security Headers** â€” Production adds HSTS (1 year, includeSubDomains), X-Frame-Options: DENY, X-Content-Type-Options: nosniff.
+5. **Input Validation** â€” Added `@NotBlank`, `@NotNull`, `@Positive`, `@Size` to QuestionRequest, ExamRequest, StudyMaterialRequest, CreateOrderRequest, VerifyPaymentRequest, RegisterRequest (min 8 char password). `@Valid` enforced on all controller `@RequestBody` params.
+6. **Hibernate DDL** â€” Production changed from `update` to `validate` (no auto-schema changes).
+7. **File Upload Security** â€” MIME type whitelist (PDF, images, CSV, JSON, XML), path traversal protection.
+8. **Rate Limiting** â€” Extended to `/api/admin/questions/bulk` and `/api/payments` (was only auth endpoints).
+9. **Validation Error Handler** â€” `GlobalExceptionHandler` returns structured JSON for validation failures.
+10. **SQL Logging** â€” Disabled in production (`show-sql: false`, `format_sql: false`).
+11. **Frontend 401 Interceptor** â€” Axios interceptor auto-redirects to `/login` on expired tokens.
+12. **.env.example** â€” Created in backend with required/optional env var documentation.
+13. **.gitignore** â€” Comprehensive ignore rules for env files, build artifacts, IDE files, uploads.
+
+### Bug Fixes During Audit:
+- **Question.microTopicId type** â€” Fixed to `String` (business key like “S11.1-MT01”) across entity, DTO, repository, controller, service, and ExamAttemptService. Was causing compilation failures in CsvQuestionParser, MoodleXmlParser, PredictionEngineService.
+- **JWT startup** â€” Base `application.yaml` uses `${JWT_SECRET:#{null}}` to allow Spring to start (dev profile overrides with real value). PostConstruct validation catches null/short secrets.
+
+### Files Changed (23 files):
+**Backend (21):** application.yaml, application-dev.yaml, application-prod.yaml, JwtService.java, SecurityConfig.java, RegisterRequest.java, QuestionRequest.java, ExamRequest.java, StudyMaterialRequest.java, CreateOrderRequest.java, VerifyPaymentRequest.java, AdminQuestionController.java, AdminExamController.java, AdminStudyMaterialController.java, PaymentController.java, Question.java, QuestionRepository.java, ExamAttemptService.java, FileStorageService.java, RateLimitFilter.java, GlobalExceptionHandler.java
+**Frontend (1):** lib/api.ts
+**Root (1):** .gitignore
 
 

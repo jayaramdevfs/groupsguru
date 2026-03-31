@@ -2,17 +2,18 @@ package com.groupsguru.exam.dto;
 
 import com.groupsguru.exam.ExamType;
 import lombok.Data;
+import jakarta.validation.constraints.*;
 
 @Data
 public class ExamRequest {
-    private String name;
+    @NotBlank private String name;
     private String nameTe;
     private String description;
     private String descriptionTe;
-    private ExamType examType;
+    @NotNull private ExamType examType;
     private String subject;
     private Integer totalQuestions;
-    private Integer durationMinutes;
+    @Positive private Integer durationMinutes;
     private Boolean negativeMarking;
     private Double penaltyPerWrong;
     private Double marksPerQuestion;

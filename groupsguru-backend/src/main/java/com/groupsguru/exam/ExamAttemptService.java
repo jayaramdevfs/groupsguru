@@ -167,12 +167,12 @@ public class ExamAttemptService {
         Map<Long, Question> questionMap = questionRepository.findAllById(qIds).stream()
                 .collect(Collectors.toMap(Question::getId, q -> q));
 
-        // Get MicroTopics to group by topic name
+        // Get MicroTopics to group by topic name (Question.microTopicId stores MicroTopic business key)
         Set<String> microTopicIds = questionMap.values().stream()
                 .map(Question::getMicroTopicId)
                 .filter(Objects::nonNull)
                 .collect(Collectors.toSet());
-        
+
         Map<String, MicroTopic> microTopicMap = microTopicRepository.findAllByMicroTopicIdIn(microTopicIds).stream()
                 .collect(Collectors.toMap(MicroTopic::getMicroTopicId, mt -> mt));
 

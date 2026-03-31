@@ -5,6 +5,8 @@ import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.util.StringUtils;
+import java.util.Set;
 
 import jakarta.annotation.PostConstruct;
 import java.io.IOException;
@@ -38,7 +40,26 @@ public class FileStorageService {
             if (file.isEmpty()) {
                 throw new RuntimeException("Failed to store empty file.");
             }
-            String originalFileName = file.getOriginalFilename();
+
+            Set<String> ALLOWED_CONTENT_TYPES = Set.of(
+                "application/pdf",
+                "image/jpeg",
+                "image/png",
+                "image/gif",
+                "text/csv",
+                "application/json",
+                "application/xml",
+                "text/xml"
+            );
+
+            if (file.getContentType() == null || !ALLOWED_CONTENT_TYPES.contains(file.getContentType())) {
+                throw new IllegalArgumentException("File type not allowed: " + file.getContentType());
+            }
+
+            String originalFileName = StringUtils.cleanPath(file.getOriginalFilename());
+            if (originalFileName.contains("..")) {
+                throw new IllegalArgumentException("Filename contains invalid path sequence: " + originalFileName);
+            }
             String fileExtension = "";
             if (originalFileName != null && originalFileName.contains(".")) {
                 fileExtension = originalFileName.substring(originalFileName.lastIndexOf("."));

@@ -7,6 +7,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/admin/questions")
@@ -29,12 +30,12 @@ public class AdminQuestionController {
     }
 
     @PostMapping
-    public ResponseEntity<Question> create(@RequestBody QuestionRequest request) {
+    public ResponseEntity<Question> create(@Valid @RequestBody QuestionRequest request) {
         return ResponseEntity.ok(service.create(request));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Question> update(@PathVariable Long id, @RequestBody QuestionRequest request) {
+    public ResponseEntity<Question> update(@PathVariable Long id, @Valid @RequestBody QuestionRequest request) {
         return ResponseEntity.ok(service.update(id, request));
     }
 

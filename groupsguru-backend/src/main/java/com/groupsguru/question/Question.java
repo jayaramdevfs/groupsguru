@@ -45,7 +45,7 @@ public class Question {
     @Column(length = 8000)
     private String explanationTe;
 
-    private String microTopicId; 
+    private String microTopicId;
     private String subject;
     private String difficulty; // easy/medium/hard/very_hard
     private String cognitiveLevel; // L1/L2/L3/L4

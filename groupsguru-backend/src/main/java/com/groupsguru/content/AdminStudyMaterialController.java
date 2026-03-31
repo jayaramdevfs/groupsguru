@@ -9,6 +9,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import jakarta.validation.Valid;
 
 import java.util.List;
 
@@ -46,7 +47,7 @@ public class AdminStudyMaterialController {
 
     @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<StudyMaterial> create(
-            @RequestPart("metadata") StudyMaterialRequest request,
+            @Valid @RequestPart("metadata") StudyMaterialRequest request,
             @RequestPart("file") MultipartFile file) {
         return ResponseEntity.ok(service.create(request, file));
     }
@@ -54,7 +55,7 @@ public class AdminStudyMaterialController {
     @PutMapping("/{id}")
     public ResponseEntity<StudyMaterial> update(
             @PathVariable Long id,
-            @RequestBody StudyMaterialRequest request) {
+            @Valid @RequestBody StudyMaterialRequest request) {
         return ResponseEntity.ok(service.update(id, request));
     }
 

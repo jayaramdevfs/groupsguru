@@ -18,7 +18,7 @@ server:
   forward-headers-strategy: native
 
 jwt:
-  secret: ${JWT_SECRET:mysupersecretkeymysupersecretkey}
+  secret: ${JWT_SECRET:#{null}}
   expiration: ${JWT_EXPIRATION:86400000}
 
 app:
@@ -32,5 +32,5 @@ app:
       same-site: ${APP_AUTH_COOKIE_SAME_SITE:Lax}
       domain: ${APP_AUTH_COOKIE_DOMAIN:}
 razorpay:
-  key-id: ${RAZORPAY_KEY_ID:rzp_test_SU3wy02Xv8CfbL}
-  key-secret: ${RAZORPAY_KEY_SECRET:EDBCJRnOqOmB82tP88ny0u3f}
+  key-id: ${RAZORPAY_KEY_ID:#{null}}
+  key-secret: ${RAZORPAY_KEY_SECRET:#{null}}

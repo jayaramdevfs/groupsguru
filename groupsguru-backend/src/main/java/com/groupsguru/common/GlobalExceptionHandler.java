@@ -51,16 +51,15 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ApiResponse<Object>> handleValidationException(MethodArgumentNotValidException ex) {
 
-        String errorMessage = ex.getBindingResult()
-                .getFieldErrors()
-                .stream()
-                .findFirst()
-                .map(error -> error.getDefaultMessage())
-                .orElse("Validation error");
+        java.util.List<String> errors = ex.getBindingResult()
+            .getFieldErrors()
+            .stream()
+            .map(error -> error.getField() + ": " + error.getDefaultMessage())
+            .toList();
 
         ApiResponse<Object> response = ApiResponse.builder()
                 .success(false)
-                .message(errorMessage)
+                .message("Validation failed: " + String.join(", ", errors))
                 .data(null)
                 .build();
 
